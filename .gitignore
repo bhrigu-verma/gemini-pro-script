@@ -1,0 +1,10 @@
+.venv
+.venv-1
+chrome-profile/
+gemini_loop_output/
+screenshots/
+storage_state.json
+__pycache__/
+*.pyc
+
+.env
