@@ -275,3 +275,5 @@ Covered areas:
 - JSON parser/repair fallback logic.
 
 - 2026-03-30 note 01: clarify setup for maintainability and team handoff.
+
+- 2026-03-30 note 07: document naming for maintainability and team handoff.
