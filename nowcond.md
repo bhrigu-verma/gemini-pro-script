@@ -88,3 +88,5 @@ ls -lah mainhh_output
 - 2026-03-30 note 21: clarify setup for maintainability and team handoff.
 
 - 2026-03-30 note 27: document naming for maintainability and team handoff.
+
+- 2026-03-30 note 33: polish analysis notes for maintainability and team handoff.
