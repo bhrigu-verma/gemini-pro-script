@@ -60,3 +60,5 @@
 | HM-0023 | HG_065 | 9.71 | 11.14 | no | json_array | Work & Time |
 | HM-0025 | HG_065 | 0 | 12 | no | json_array | Work & Time |
 | HM-0026 | HG_065 | 7.33 | 7 | no | json_array | Work & Time |
+
+- 2026-03-30 note 04: expand report context for maintainability and team handoff.
