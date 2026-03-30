@@ -368,3 +368,5 @@ Shared runtime support:
 - 2026-03-30 note 14: expand report context for maintainability and team handoff.
 
 - 2026-03-30 note 20: sync operational notes for maintainability and team handoff.
+
+- 2026-03-30 note 26: improve assumptions for maintainability and team handoff.
