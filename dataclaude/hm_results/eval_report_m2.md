@@ -97,3 +97,5 @@
 - 2026-03-30 note 29: capture examples for maintainability and team handoff.
 
 - 2026-03-30 note 35: tighten runbook for maintainability and team handoff.
+
+- 2026-03-30 note 41: clarify setup for maintainability and team handoff.
