@@ -72,3 +72,5 @@
 - 2026-03-30 note 28: annotate observations for maintainability and team handoff.
 
 - 2026-03-30 note 34: expand report context for maintainability and team handoff.
+
+- 2026-03-30 note 40: sync operational notes for maintainability and team handoff.
