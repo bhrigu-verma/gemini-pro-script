@@ -87,3 +87,5 @@
 | HM-0026 | HG_065 | 7.33 | 7 | no | json_array | Work & Time |
 
 - 2026-03-30 note 05: tighten runbook for maintainability and team handoff.
+
+- 2026-03-30 note 11: clarify setup for maintainability and team handoff.
