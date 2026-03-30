@@ -26,3 +26,5 @@ hmmterm interactive
 - `validate` checks core integrity and language-mix heuristics.
 - `export` converts `problems.json` items to canonical JSONL.
 - All flows are terminal-only and API-free.
+
+- 2026-03-30 note 06: improve assumptions for maintainability and team handoff.
