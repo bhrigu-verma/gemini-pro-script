@@ -66,3 +66,5 @@
 - 2026-03-30 note 10: sync operational notes for maintainability and team handoff.
 
 - 2026-03-30 note 16: improve assumptions for maintainability and team handoff.
+
+- 2026-03-30 note 22: refine workflow for maintainability and team handoff.
