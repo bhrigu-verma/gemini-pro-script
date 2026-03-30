@@ -68,3 +68,5 @@ List output artifacts:
 ```bash
 ls -lah mainhh_output
 ```
+
+- Commit note 01 on 2026-03-30: minor documentation touch.
