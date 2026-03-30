@@ -38,3 +38,5 @@ hmmterm interactive
 - 2026-03-30 note 30: sync operational notes for maintainability and team handoff.
 
 - 2026-03-30 note 36: improve assumptions for maintainability and team handoff.
+
+- 2026-03-30 note 42: refine workflow for maintainability and team handoff.
