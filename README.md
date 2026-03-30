@@ -273,3 +273,5 @@ Covered areas:
 - URL normalization and dedupe key behavior.
 - Completion controller stop conditions.
 - JSON parser/repair fallback logic.
+
+- 2026-03-30 note 01: clarify setup for maintainability and team handoff.
