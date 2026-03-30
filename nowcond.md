@@ -82,3 +82,5 @@ ls -lah mainhh_output
 - 2026-03-30 note 03: polish analysis notes for maintainability and team handoff.
 
 - 2026-03-30 note 09: capture examples for maintainability and team handoff.
+
+- 2026-03-30 note 15: tighten runbook for maintainability and team handoff.
