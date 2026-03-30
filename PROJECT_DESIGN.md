@@ -360,3 +360,5 @@ Shared runtime support:
   - research loop options and examples
   - job completion loop options and examples
   - runtime mode (ui/api) usage and outputs
+
+- 2026-03-30 note 02: refine workflow for maintainability and team handoff.
