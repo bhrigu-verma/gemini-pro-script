@@ -291,3 +291,5 @@ Covered areas:
 - 2026-03-30 note 37: document naming for maintainability and team handoff.
 
 - 2026-03-30 note 43: polish analysis notes for maintainability and team handoff.
+
+- 2026-03-30 note 49: capture examples for maintainability and team handoff.
