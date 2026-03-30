@@ -30,3 +30,5 @@ hmmterm interactive
 - 2026-03-30 note 06: improve assumptions for maintainability and team handoff.
 
 - 2026-03-30 note 12: refine workflow for maintainability and team handoff.
+
+- 2026-03-30 note 18: annotate observations for maintainability and team handoff.
