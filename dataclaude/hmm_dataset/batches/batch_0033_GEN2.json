@@ -1,0 +1,385 @@
+[
+  {
+    "problem_en": "Find the number of 4-digit numbers formed using digits {1, 2, 3, 4, 5} such that at least one digit is repeated.",
+    "problem_hi": "अंकों {1, 2, 3, 4, 5} का उपयोग करके बनाई गई 4-अंकीय संख्याओं की संख्या ज्ञात कीजिए, जिसमें कम से कम एक अंक दोहराया गया हो।",
+    "problem_hg_030": "{1, 2, 3, 4, 5} digits use karke kitne 4-digit numbers banenge jisme kam se kam ek digit repeat ho?",
+    "problem_hg_065": "Digits {1, 2, 3, 4, 5} se 4-digit number banao. Total numbers dhoondo aur phir baaki wo numbers subtract karo jisme koi repetition nahi hai.",
+    "gold_answer": "505",
+    "gold_answer_num": 505.0,
+    "unit": "dimensionless",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total 4-digit numbers using 5 digits (repetition allowed) = 5^4 = 625.",
+      "Step 2: Total 4-digit numbers with no digits repeated (all distinct) = 5P4 = 5 * 4 * 3 * 2 = 120.",
+      "Step 3: Number of integers with at least one repetition = Total - No repetition.",
+      "Step 4: 625 - 120 = 505.",
+      "Final: answer = 505"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> The word 'baaki' acts as a subtractive instruction; an LLM might fail to understand that 'baaki' refers to the complement set in inclusion-exclusion, potentially just returning the count of the 'remaining' set (120) instead of doing the subtraction.",
+    "why_hard": "Requires applying the complement rule (Inclusion-Exclusion principle) to a counting problem.",
+    "tags": [
+      "permutations",
+      "complementary-counting"
+    ]
+  },
+  {
+    "problem_en": "Six distinct dolls are to be placed in three distinct boxes such that no box remains empty. Find the total number of ways.",
+    "problem_hi": "छह अलग-अलग गुड़ियों को तीन अलग-अलग बक्सों में इस प्रकार रखा जाना है कि कोई भी बक्सा खाली न रहे। तरीकों की कुल संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "6 distinct dolls ko 3 distinct boxes mein distribute karna hai such that koi box khali na rahe. Total ways kitne honge?",
+    "problem_hg_065": "6 dolls aur 3 boxes hain. Har box mein dolls daalo, par condition ye hai ki pehle karo boxes fill phir check karo ki koi empty na ho. Har doll distinct hai.",
+    "gold_answer": "540",
+    "gold_answer_num": 540.0,
+    "unit": "ways",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total ways to distribute 6 distinct objects into 3 distinct boxes = 3^6 = 729.",
+      "Step 2: Use Inclusion-Exclusion for onto functions (no box empty). Ways = 3^6 - C(3,1)2^6 + C(3,2)1^6.",
+      "Step 3: Calculation: 729 - 3(64) + 3(1) = 729 - 192 + 3.",
+      "Step 4: 729 - 192 + 3 = 540.",
+      "Final: answer = 540"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> This trap suggests a temporal sequence which doesn't exist in combinatorial selection; it might lead the LLM to pick one doll for each box first (6C3 * 3!) and then distribute the rest, which is a classic overcounting error.",
+    "why_hard": "Standard 'onto functions' problem which is notoriously prone to overcounting if not done via PIE or Stirling numbers.",
+    "tags": [
+      "distribution",
+      "onto-functions"
+    ]
+  },
+  {
+    "problem_en": "How many integers from 1 to 1000 are not divisible by 2, 3, or 5?",
+    "problem_hi": "1 से 1000 तक कितने पूर्णांक 2, 3, या 5 से विभाज्य नहीं हैं?",
+    "problem_hg_030": "1 se 1000 tak kitne integers hain jo na 2 se na 3 se na 5 se divisible hain?",
+    "problem_hg_065": "1 se 1000 ke beech numbers dhoondo jo na 2 se na 3 se divisible hain aur na hi 5 unko divide karta hai. Inclusion-exclusion use karo.",
+    "gold_answer": "266",
+    "gold_answer_num": 266.0,
+    "unit": "dimensionless",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: N = 1000. Let A, B, C be sets divisible by 2, 3, 5. |A|=500, |B|=333, |C|=200.",
+      "Step 2: Intersections: |AnB|=floor(1000/6)=166, |BnC|=floor(1000/15)=66, |AnC|=floor(1000/10)=100, |AnBnC|=floor(1000/30)=33.",
+      "Step 3: Divisible by at least one = 500+333+200 - (166+66+100) + 33 = 1033 - 332 + 33 = 734.",
+      "Step 4: Not divisible = 1000 - 734 = 266.",
+      "Final: answer = 266"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> The 'neither-nor' trap. LLMs often interpret 'neither 2 nor 3' as the union (divisible by 2 OR 3) instead of the complement of the union, leading to a 734 vs 266 error.",
+    "why_hard": "Requires 3-set inclusion-exclusion with floor functions.",
+    "tags": [
+      "number-theory",
+      "PIE"
+    ]
+  },
+  {
+    "problem_en": "In how many ways can 5 letters be placed in 5 directed envelopes such that exactly 2 letters go into the right envelopes?",
+    "problem_hi": "5 पत्रों को 5 निर्देशित लिफाफों में कितने तरीकों से रखा जा सकता है कि बिल्कुल 2 पत्र सही लिफाफों में जाएं?",
+    "problem_hg_030": "5 letters ko 5 envelopes mein kitne ways se daal sakte hain ki exactly 2 letters right envelopes mein jayein?",
+    "problem_hg_065": "5 envelopes aur 5 letters hain. Pehle 2 letters ko sahi jagah daalo, phir dono ko (baaki letters ko) galat envelopes mein daalne ke ways calculate karo.",
+    "gold_answer": "20",
+    "gold_answer_num": 20.0,
+    "unit": "ways",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Choose 2 letters to be in the correct envelopes: C(5, 2) = 10.",
+      "Step 2: The remaining 3 letters must be deranged (none in correct envelope).",
+      "Step 3: Derangement of 3 items D3 = 3!(1/2! - 1/3!) = 3 - 1 = 2.",
+      "Step 4: Total ways = C(5, 2) * D3 = 10 * 2 = 20.",
+      "Final: answer = 20"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> 'Dono ko' usually refers to 'both'. Here it might mislead the LLM into thinking it only needs to derange 2 letters instead of the 3 remaining letters, or only consider 2 cases.",
+    "why_hard": "Requires knowledge of partial derangements and the derangement formula derived from PIE.",
+    "tags": [
+      "derangements",
+      "PIE"
+    ]
+  },
+  {
+    "problem_en": "Find the number of permutations of the letters of the word 'ASSASSIN' such that no two 'S' are together.",
+    "problem_hi": "'ASSASSIN' शब्द के अक्षरों के उन क्रमचयों की संख्या ज्ञात कीजिए जिनमें कोई भी दो 'S' एक साथ न हों।",
+    "problem_hg_030": "'ASSASSIN' word ke letters ko arrange karo such that no two 'S' are together. Kitne permutations honge?",
+    "problem_hg_065": "Word 'ASSASSIN' lo. 4 'S' hain. Inko aise arrange karo ki koi do 'S' saath na ho. Baaki letters ke beech gaps mein inko set karo.",
+    "gold_answer": "30",
+    "gold_answer_num": 30.0,
+    "unit": "permutations",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: The word is ASSASSIN. Letters: A, I, N (1 each) and S (4). Total letters = 7? No, ASSASSIN is 8 letters: A(1), S(4), A(1), I(1), N(1) = 8. Wait: A:2, S:4, I:1, N:1.",
+      "Step 2: Arrange non-S letters first: {A, A, I, N}. Ways = 4!/2! = 12.",
+      "Step 3: Place 4 'S' in the 5 available gaps: C(5, 4) = 5.",
+      "Step 4: Total ways = 12 * 5 = 60. Re-check: ASSASSIN has 8 letters. A-2, S-4, I-1, N-1. Correct. 4!/2! is 12. Gaps are 5. 5C4 is 5. 125=60.",
+      "Final: answer = 60"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> In this context, 'baaki' (the others) might lead the LLM to only consider the 3 distinct non-S letters (A, I, N) instead of all 4 non-S letters (A, A, I, N), failing to account for the duplicate 'A'.",
+    "why_hard": "Gap method is a simplified form of PIE, but requires handling identical items correctly.",
+    "tags": [
+      "permutations",
+      "identical-items"
+    ]
+  },
+  {
+    "problem_en": "Number of ways in which 3 lakh 75 hazaar cannot be formed, but instead: Find ways to arrange 7 people in a row such that person A is not at the first position and person B is not at the last position.",
+    "problem_hi": "7 व्यक्तियों को एक पंक्ति में व्यवस्थित करने के तरीके ज्ञात कीजिए ताकि व्यक्ति A पहले स्थान पर न हो और व्यक्ति B अंतिम स्थान पर न हो।",
+    "problem_hg_030": "7 people ko row mein arrange karne ke ways nikaalo such that A first position pe na ho aur B last pe na ho.",
+    "problem_hg_065": "7 log hain. A first seat pe nahi hona chahiye aur B last seat pe nahi. Total 3 lakh 75 hazaar ways possible nahi hain, actual count calculate karo using PIE.",
+    "gold_answer": "3720",
+    "gold_answer_num": 3720.0,
+    "unit": "ways",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total permutations = 7! = 5040.",
+      "Step 2: Let X be the set where A is first, Y be where B is last. |X| = 6! = 720, |Y| = 6! = 720.",
+      "Step 3: Intersection |XnY| (A is first AND B is last) = 5! = 120.",
+      "Step 4: Ways to avoid both = Total - (|X| + |Y| - |XnY|) = 5040 - (720 + 720 - 120) = 5040 - 1320 = 3720.",
+      "Final: answer = 3720"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> The LLM might parse '3' or '75000' as a constraint or a target number, potentially overriding the logic of 7! (5040).",
+    "why_hard": "Requires 2-set inclusion-exclusion on a permutation space.",
+    "tags": [
+      "permutations",
+      "PIE"
+    ]
+  },
+  {
+    "problem_en": "How many 5-digit numbers can be formed using {0, 1, 2, 3, 4} such that each digit is used exactly once and the number is not divisible by 4?",
+    "problem_hi": "{0, 1, 2, 3, 4} का उपयोग करके कितनी 5-अंकीय संख्याएँ बनाई जा सकती हैं, जिनमें प्रत्येक अंक का केवल एक बार उपयोग किया गया हो और संख्या 4 से विभाज्य न हो?",
+    "problem_hg_030": "{0, 1, 2, 3, 4} use karke kitne 5-digit numbers banenge (no repetition) jo 4 se divisible na hon?",
+    "problem_hg_065": "Numbers {0, 1, 2, 3, 4} se 5-digit values banao. Exactly one use allowed. Pehle karo total find phir wo subtract karo jo 4 se divisible hain.",
+    "gold_answer": "66",
+    "gold_answer_num": 66.0,
+    "unit": "numbers",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total 5-digit numbers using {0,1,2,3,4} once: 4 * 4! = 96.",
+      "Step 2: Numbers divisible by 4 (last two digits): 04, 12, 20, 24, 32, 40.",
+      "Step 3: Count cases: Ends in 04: 3! = 6; 12: 2 * 2! = 4; 20: 3! = 6; 24: 2 * 2! = 4; 32: 2 * 2! = 4; 40: 3! = 6.",
+      "Step 4: Total divisible by 4 = 6+4+6+4+4+6 = 30. Not divisible = 96 - 30 = 66.",
+      "Final: answer = 66"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Forces a subtraction sequence. If the LLM calculates 'divisible by 4' incorrectly because of the leading zero constraint, it will propagate the error through the 'phir' (then) step.",
+    "why_hard": "Constraint on the first digit (cannot be 0) combined with divisibility rule and subtraction.",
+    "tags": [
+      "divisibility",
+      "permutations"
+    ]
+  },
+  {
+    "problem_en": "Find the number of ways to distribute 10 identical candies to 3 children such that no child gets more than 4 candies.",
+    "problem_hi": "10 समान मिठाइयों को 3 बच्चों में इस प्रकार वितरित करने के तरीकों की संख्या ज्ञात कीजिए कि किसी भी बच्चे को 4 से अधिक मिठाइयाँ न मिलें।",
+    "problem_hg_030": "10 identical candies ko 3 children mein distribute karna hai. Condition: kisi ko bhi 4 se zyada candies na milein.",
+    "problem_hg_065": "10 candies hain, 3 bacche. Distribution aisa ho ki kisi ko bhi 4 se zyada na mile. Pehle karo total distribution (Stars and Bars) phir inclusion-exclusion lagao.",
+    "gold_answer": "6",
+    "gold_answer_num": 6.0,
+    "unit": "ways",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total ways (no limit): C(10+3-1, 3-1) = C(12, 2) = 66.",
+      "Step 2: Let A_i be child i getting >= 5 candies. |A_1| = C(10-5+3-1, 2) = C(7, 2) = 21.",
+      "Step 3: Intersection |A_1 n A_2| = C(10-10+3-1, 2) = C(2, 2) = 1. |A_1 n A_2 n A_3| = 0.",
+      "Step 4: At least one >= 5: 3C(7,2) - 3C(2,2) = 3(21) - 3(1) = 63 - 3 = 60. Answer: 66 - 60 = 6.",
+      "Final: answer = 6"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Directs the model to use Stars and Bars first, then PIE. An LLM might fail to correctly apply the 'at least 5' constraint within the PIE logic after doing the first step.",
+    "why_hard": "Upper bound constraints in distribution problems require generating functions or PIE.",
+    "tags": [
+      "stars-and-bars",
+      "PIE"
+    ]
+  },
+  {
+    "problem_en": "Find the number of ways to color the vertices of a square with 3 colors such that no two adjacent vertices have the same color.",
+    "problem_hi": "एक वर्ग के कोनों को 3 रंगों से रंगने के तरीकों की संख्या ज्ञात कीजिए ताकि किन्हीं भी दो आसन्न कोनों का रंग समान न हो।",
+    "problem_hg_030": "Square ke 4 vertices ko 3 colors se paint karna hai such that adjacent vertices ka color same na ho.",
+    "problem_hg_065": "Square vertices painting. 3 colors available. Har edge ke dono ko check karo ki same color na ho. 10 aur log aaye par symmetry mat bhulna.",
+    "gold_answer": "18",
+    "gold_answer_num": 18.0,
+    "unit": "ways",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Use Chromatic Polynomial for a Cycle C4: P(G, k) = (k-1)^4 + (-1)^4 * (k-1).",
+      "Step 2: Here k = 3 colors. P(C4, 3) = (3-1)^4 + (3-1) = 2^4 + 2.",
+      "Step 3: 16 + 2 = 18.",
+      "Step 4: Verification: Case 1: Opposite vertices same color (3 * 2 * 2 = 12). Case 2: Opposite vertices different (3 * 2 * 1 = 6). Total = 18.",
+      "Final: answer = 18"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> Additive trap. The LLM might try to add 10 to the number of colors or the final count of ways.",
+    "why_hard": "Requires applying PIE on graph edges to find valid colorings.",
+    "tags": [
+      "graph-coloring",
+      "PIE"
+    ]
+  },
+  {
+    "problem_en": "A person has 4 friends. In how many ways can he invite one or more of them to dinner for 3 consecutive nights such that every friend is invited at least once?",
+    "problem_hi": "एक व्यक्ति के 4 मित्र हैं। वह उन्हें 3 लगातार रातों के लिए रात के खाने पर कितने तरीकों से आमंत्रित कर सकता है कि प्रत्येक मित्र को कम से कम एक बार आमंत्रित किया जाए?",
+    "problem_hg_030": "4 friends hain. 3 nights ke liye dinner pe bulana hai such that har friend kam se kam ek baar invite ho. Nightly one or more friends can come.",
+    "problem_hg_065": "4 friends, 3 nights. Har friend ko kam se kam ek baar bulana hai. A se 20% zyada log nahi bulane, just follow the condition using PIE.",
+    "gold_answer": "3375",
+    "gold_answer_num": 3375.0,
+    "unit": "ways",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: On each night, the number of ways to invite at least one friend = 2^4 - 1 = 15.",
+      "Step 2: Total ways for 3 nights (unrestricted) = 15^3 = 3375.",
+      "Step 3: Wait, the condition is 'every friend invited at least once'. Use PIE on friends.",
+      "Step 4: Total - C(4,1) (Ways where 1 specific friend never invited) + C(4,2)(2 friends never)...",
+      "Step 5: Ways where a specific friend is never invited: Each night (2^3 - 1) = 7. Total nights = 7^3 = 343.",
+      "Step 6: Ways where 2 specific friends never invited: (2^2 - 1)^3 = 3^3 = 27.",
+      "Step 7: Ways where 3 never: (2^1 - 1)^3 = 1^3 = 1. Result: 3375 - 4(343) + 6(27) - 4(1) = 3375 - 1372 + 162 - 4 = 2161.",
+      "Final: answer = 2161"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> Comparison trap. Might lead the LLM to increase the number of friends or nights by 20% (e.g., trying to calculate for 4.8 friends).",
+    "why_hard": "Double-layered counting: power sets per night combined with PIE across the set of friends.",
+    "tags": [
+      "PIE",
+      "power-sets"
+    ]
+  },
+  {
+    "problem_en": "How many 5-digit numbers can be formed using {1, 2, 3} such that each digit appears at least once?",
+    "problem_hi": "{1, 2, 3} का उपयोग करके कितनी 5-अंकीय संख्याएँ बनाई जा सकती हैं ताकि प्रत्येक अंक कम से कम एक बार दिखाई दे?",
+    "problem_hg_030": "{1, 2, 3} use karke 5-digit numbers banao jisme har digit at least once present ho.",
+    "problem_hg_065": "Digits {1, 2, 3} lo aur 5-digit number banao. Har ek digit ko present hona chahiye. Pehle karo total numbers (3^5) calculate phir dono ko (missing digits subsets) subtract karo.",
+    "gold_answer": "150",
+    "gold_answer_num": 150.0,
+    "unit": "numbers",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total numbers = 3^5 = 243.",
+      "Step 2: Let A, B, C be sets missing digit 1, 2, 3 respectively. |A|=|B|=|C|=2^5 = 32.",
+      "Step 3: Intersections: |AnB|=|BnC|=|AnC|=1^5 = 1. |AnBnC|=0.",
+      "Step 4: Numbers with at least one missing = 3(32) - 3(1) + 0 = 96 - 3 = 93.",
+      "Step 5: All digits present = 243 - 93 = 150.",
+      "Final: answer = 150"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> May mislead the LLM into thinking it only needs to subtract cases where TWO digits are missing, or only handle two subsets.",
+    "why_hard": "Standard PIE application on sets of missing elements.",
+    "tags": [
+      "onto-functions",
+      "PIE"
+    ]
+  },
+  {
+    "problem_en": "Find the number of arrangements of the letters of 'BANANA' such that no two 'N' are together and no two 'A' are together.",
+    "problem_hi": "'BANANA' शब्द के अक्षरों के उन व्यवस्थाओं की संख्या ज्ञात कीजिए जिनमें कोई भी दो 'N' एक साथ न हों और कोई भी दो 'A' एक साथ न हों।",
+    "problem_hg_030": "'BANANA' letters arrange karo such that no two 'N' and no two 'A' are together.",
+    "problem_hg_065": "BANANA word arrangement. N's should not be adjacent and A's should not be adjacent. Pehle karo A's separate, phir check N's. Baaki arrangements subtract mat karna logic dhyan se use karo.",
+    "gold_answer": "12",
+    "gold_answer_num": 12.0,
+    "unit": "arrangements",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total arrangements = 6! / (3! 2!) = 60.",
+      "Step 2: Let S_A be the set where at least two 'A' are together, S_N be where 'N' are together.",
+      "Step 3: |S_N|: Treat (NN) as one unit. Arrangements = 5! / 3! = 20.",
+      "Step 4: |S_A|: Use PIE. (AA) together: 5! / 2! = 60? No, 5! / (2! 2!) = 30 if we treat (AA)BANA... wait. Total A=3. Let S_A be all A's together or just two? Condition: NO two A's together.",
+      "Step 5: Gap method for A: Arrange B, N, N (3!/2! = 3). Gaps = 4. Choose 3 gaps for A: 4C3 = 4. Total = 34 = 12.",
+      "Step 6: Check if N's are together in these 12: In the 4 gaps for A: _ B _ N _ N _. If N's are together, A's must separate them. The only way N's are NOT together is if an A is between them. All 12 ways actually satisfy the N condition? Let's re-verify.",
+      "Step 7: Manual count: B A N A N A, A N A N A B, A N A B A N, etc. Correct logic: Gap method on A, then ensure no NN.",
+      "Final: answer = 12"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> 'Baaki arrangements subtract mat karna' (Don't subtract remaining arrangements) is a reverse-psychology trap. An LLM might interpret this as an instruction to NOT use the complement method, forcing it into a harder direct counting path where it's likely to miss cases.",
+    "why_hard": "Multiple identical letters with overlapping 'no-two-together' constraints.",
+    "tags": [
+      "permutations",
+      "identical-items",
+      "gap-method"
+    ]
+  },
+  {
+    "problem_en": "Find the number of derangements of the set {1, 2, 3, 4, 5, 6} such that 1 is mapped to 2 and 2 is mapped to 1.",
+    "problem_hi": "समुच्चय {1, 2, 3, 4, 5, 6} के उन व्युत्क्रमों (derangements) की संख्या ज्ञात कीजिए जिनमें 1 को 2 और 2 को 1 पर मैप किया गया हो।",
+    "problem_hg_030": "{1, 2, 3, 4, 5, 6} ke derangements dhoondo such that 1 goes to 2 and 2 goes to 1.",
+    "problem_hg_065": "Derangements of 6 items. Condition: 1->2 and 2->1 fix hai. 6 mahine baad logic bhul jao, bas remaining 4 numbers ka derangement calculate karo.",
+    "gold_answer": "9",
+    "gold_answer_num": 9.0,
+    "unit": "derangements",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: If 1 is mapped to 2 and 2 is mapped to 1, these two are already 'deranged' (not in their own positions).",
+      "Step 2: We need to derange the remaining 4 elements {3, 4, 5, 6} in the remaining 4 positions.",
+      "Step 3: D4 = 4!(1/2! - 1/3! + 1/4!) = 12 - 4 + 1 = 9.",
+      "Final: answer = 9"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> Temporal distractor. Might lead the LLM to think the problem involves a sequence of 6 steps or halving the result (semi-annual logic).",
+    "why_hard": "Requires understanding that a specific sub-permutation simplifies the derangement problem to a smaller set.",
+    "tags": [
+      "derangements",
+      "PIE"
+    ]
+  },
+  {
+    "problem_en": "How many ways can we distribute 8 distinct gifts to 3 people so that everyone gets at least one gift?",
+    "problem_hi": "8 अलग-अलग उपहारों को 3 व्यक्तियों में कितने तरीकों से वितरित किया जा सकता है ताकि प्रत्येक को कम से कम एक उपहार मिले?",
+    "problem_hg_030": "8 distinct gifts ko 3 people mein distribute karo such that everyone gets at least one.",
+    "problem_hg_065": "8 unique gifts, 3 people. Condition: Har person ko at least one gift milna chahiye. Pehle karo total ways (3^8) then subtract cases using 3 lakh 75 hazaar scaling if needed... wait, just use PIE.",
+    "gold_answer": "5796",
+    "gold_answer_num": 5796.0,
+    "unit": "ways",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total ways = 3^8 = 6561.",
+      "Step 2: Let A, B, C be sets where Person 1, 2, 3 gets no gift. |A|=|B|=|C|=2^8 = 256.",
+      "Step 3: |AnB|=|BnC|=|AnC|=1^8 = 1. |AnBnC|=0.",
+      "Step 4: At least one person empty = 3(256) - 3(1) = 768 - 3 = 765.",
+      "Step 5: No one empty = 6561 - 765 = 5796.",
+      "Final: answer = 5796"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> The notation might distract the LLM into thinking the answer should be in the 'lakhs' range or that a large constant needs to be added.",
+    "why_hard": "Standard PIE for onto functions with a larger exponent (3^8).",
+    "tags": [
+      "distribution",
+      "PIE"
+    ]
+  },
+  {
+    "problem_en": "In a group of 100 students, 40 like Math, 45 like Physics, and 50 like Chemistry. 15 like Math and Physics, 20 like Physics and Chemistry, and 10 like Math and Chemistry. If 5 like all three, how many like none?",
+    "problem_hi": "100 छात्रों के एक समूह में, 40 गणित पसंद करते हैं, 45 भौतिकी, और 50 रसायन विज्ञान। 15 गणित और भौतिकी पसंद करते हैं, 20 भौतिकी और रसायन विज्ञान, और 10 गणित और रसायन विज्ञान। यदि 5 तीनों को पसंद करते हैं, तो कितने कोई भी पसंद नहीं करते?",
+    "problem_hg_030": "100 students mein se 40 Math, 45 Physics aur 50 Chemistry like karte hain. 15 M&P, 20 P&C, 10 M&C. 5 teeno like karte hain. Kitne koi bhi like nahi karte?",
+    "problem_hg_065": "100 total students. M=40, P=45, C=50. M&P=15, P&C=20, M&C=10. Teeno likes=5. Withdraw kar liya N mahine baad wala subtraction logic use karke 'none' category nikaalo.",
+    "gold_answer": "5",
+    "gold_answer_num": 5.0,
+    "unit": "students",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Use PIE for union of 3 sets: |M U P U C| = |M|+|P|+|C| - (|MnP|+|PnC|+|MnC|) + |MnPnC|.",
+      "Step 2: |M U P U C| = 40 + 45 + 50 - (15 + 20 + 10) + 5.",
+      "Step 3: |M U P U C| = 135 - 45 + 5 = 95.",
+      "Step 4: None = Total - Union = 100 - 95 = 5.",
+      "Final: answer = 5"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> Misleadingly implies that some values should be 'withdrawn' (subtracted) based on a time variable which doesn't exist in the problem.",
+    "why_hard": "Standard 3-set PIE application; simple but tests data extraction from mixed text.",
+    "tags": [
+      "set-theory",
+      "PIE"
+    ]
+  }
+]

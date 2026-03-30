@@ -1,0 +1,1450 @@
+  [21:42:23.491] · Attaching to Chrome on debug port 9222
+  [21:42:23.492] · Attaching to Chrome on localhost:9222 …
+  [21:42:23.492] › Trying webdriver-manager …
+  [21:42:25.771] ✓ Attached! Chrome 146.0.7680.80
+  [21:42:25.772] · Opening AGENT1 tab
+  [21:42:25.773] › [AGENT1] handles before: ['21B05CE3A72CD3D3D9E0F85EC4407A16', '4E5A699C679334CAFCD4930EBBEA35C0', '790CC828AD8192F6A7FF3B2AF5F8D191', '8EA62BD4A89D6AC07AC2CE994B218032', '98F0FA68126291CB6F773C2BF8269B88', 'A97EBEEE812FE282B971B018449254C7', 'BDFA78743F5E70D33D2CBF8074A267E3', 'C938F879F43FC6F8D207E8389E21D1B9', 'C9EEEC1E635E1130ED0BDE887F5650BC']
+  [21:42:25.891] › [AGENT1] handles after new_window: ['21B05CE3A72CD3D3D9E0F85EC4407A16', '4E5A699C679334CAFCD4930EBBEA35C0', '790CC828AD8192F6A7FF3B2AF5F8D191', '8EA62BD4A89D6AC07AC2CE994B218032', '98F0FA68126291CB6F773C2BF8269B88', 'A97EBEEE812FE282B971B018449254C7', 'BDFA78743F5E70D33D2CBF8074A267E3', 'C82BAB7CD48C4564E84FA579396700EB', 'C938F879F43FC6F8D207E8389E21D1B9', 'C9EEEC1E635E1130ED0BDE887F5650BC']  new={'C82BAB7CD48C4564E84FA579396700EB'}
+  [21:42:25.892] ✓ [AGENT1] Tab opened: C82BAB7CD48C4564E84FA579396700EB
+  [21:42:30.777] · [AGENT1] ── INPUT ──
+  [21:42:30.792] › [AGENT1]   [FOUND] (2)  rich-textarea div[contenteditable='true']
+  [21:42:30.801] › [AGENT1]   [FOUND] (1)  rich-textarea p
+  [21:42:30.810] › [AGENT1]   [FOUND] (1)  div[contenteditable='true'][data-placeholder]
+  [21:42:30.818] › [AGENT1]   [FOUND] (2)  div[contenteditable='true']
+  [21:42:30.826] › [AGENT1]   [FOUND] (1)  .ql-editor
+  [21:42:30.834] › [AGENT1]   [     ] (0)  textarea
+  [21:42:30.834] · [AGENT1] ── SEND BTN ──
+  [21:42:30.842] › [AGENT1]   [FOUND] (1)  button[aria-label='Send message']
+  [21:42:30.849] › [AGENT1]   [     ] (0)  button[jsname='Qx7uuf']
+  [21:42:30.855] › [AGENT1]   [     ] (0)  button[data-testid='send-button']
+  [21:42:30.862] › [AGENT1]   [     ] (0)  button[mattooltip='Send message']
+  [21:42:30.869] › [AGENT1]   [     ] (0)  button[aria-label='Submit']
+  [21:42:30.878] › [AGENT1]   [FOUND] (1)  button.send-button
+  [21:42:30.885] › [AGENT1]   [FOUND] (1)  mat-icon[data-mat-icon-name='send']
+  [21:42:30.885] · [AGENT1] ── STOP BTN ──
+  [21:42:30.893] › [AGENT1]   [     ] (0)  button[aria-label='Stop response']
+  [21:42:30.899] › [AGENT1]   [     ] (0)  button[aria-label='Stop generating']
+  [21:42:30.906] › [AGENT1]   [     ] (0)  button[aria-label='Stop']
+  [21:42:30.913] › [AGENT1]   [     ] (0)  button[jsname='k9Ysde']
+  [21:42:30.920] › [AGENT1]   [     ] (0)  button[data-testid='stop-button']
+  [21:42:30.927] › [AGENT1]   [     ] (0)  .stop-button
+  [21:42:30.927] · [AGENT1] ── RESPONSE ──
+  [21:42:30.934] › [AGENT1]   [     ] (0)  model-response .markdown
+  [21:42:30.941] › [AGENT1]   [     ] (0)  model-response response-text
+  [21:42:30.948] › [AGENT1]   [     ] (0)  model-response
+  [21:42:30.954] › [AGENT1]   [     ] (0)  message-content
+  [21:42:30.963] › [AGENT1]   [     ] (0)  [data-turn-role='model']
+  [21:42:30.969] › [AGENT1]   [     ] (0)  [data-message-author-role='model']
+  [21:42:30.977] › [AGENT1]   [     ] (0)  message-content .markdown
+  [21:42:30.984] › [AGENT1]   [     ] (0)  .response-content .markdown
+  [21:42:30.992] › [AGENT1]   [     ] (0)  .response-content
+  [21:42:30.995] › [AGENT1]   title = 'Google Gemini'
+  [21:42:30.998] › [AGENT1]   url   = https://gemini.google.com/app
+  [21:42:31.001] › [AGENT1]   body.innerText length = 247
+  [21:42:31.001] · Opening AGENT2 tab
+  [21:42:31.002] › [AGENT2] handles before: ['21B05CE3A72CD3D3D9E0F85EC4407A16', '4E5A699C679334CAFCD4930EBBEA35C0', '790CC828AD8192F6A7FF3B2AF5F8D191', '8EA62BD4A89D6AC07AC2CE994B218032', '98F0FA68126291CB6F773C2BF8269B88', 'A97EBEEE812FE282B971B018449254C7', 'BDFA78743F5E70D33D2CBF8074A267E3', 'C82BAB7CD48C4564E84FA579396700EB', 'C938F879F43FC6F8D207E8389E21D1B9', 'C9EEEC1E635E1130ED0BDE887F5650BC']
+  [21:42:31.061] › [AGENT2] handles after new_window: ['21B05CE3A72CD3D3D9E0F85EC4407A16', '4E5A699C679334CAFCD4930EBBEA35C0', '790CC828AD8192F6A7FF3B2AF5F8D191', '8EA62BD4A89D6AC07AC2CE994B218032', '98F0FA68126291CB6F773C2BF8269B88', 'A3B677398D9CC6E9DF67EAF587CC1516', 'A97EBEEE812FE282B971B018449254C7', 'BDFA78743F5E70D33D2CBF8074A267E3', 'C82BAB7CD48C4564E84FA579396700EB', 'C938F879F43FC6F8D207E8389E21D1B9', 'C9EEEC1E635E1130ED0BDE887F5650BC']  new={'A3B677398D9CC6E9DF67EAF587CC1516'}
+  [21:42:31.062] ✓ [AGENT2] Tab opened: A3B677398D9CC6E9DF67EAF587CC1516
+  [21:42:34.709] · [AGENT2] ── INPUT ──
+  [21:42:34.723] › [AGENT2]   [FOUND] (2)  rich-textarea div[contenteditable='true']
+  [21:42:34.731] › [AGENT2]   [FOUND] (1)  rich-textarea p
+  [21:42:34.738] › [AGENT2]   [FOUND] (1)  div[contenteditable='true'][data-placeholder]
+  [21:42:34.746] › [AGENT2]   [FOUND] (2)  div[contenteditable='true']
+  [21:42:34.753] › [AGENT2]   [FOUND] (1)  .ql-editor
+  [21:42:34.761] › [AGENT2]   [     ] (0)  textarea
+  [21:42:34.761] · [AGENT2] ── SEND BTN ──
+  [21:42:34.768] › [AGENT2]   [FOUND] (1)  button[aria-label='Send message']
+  [21:42:34.776] › [AGENT2]   [     ] (0)  button[jsname='Qx7uuf']
+  [21:42:34.782] › [AGENT2]   [     ] (0)  button[data-testid='send-button']
+  [21:42:34.789] › [AGENT2]   [     ] (0)  button[mattooltip='Send message']
+  [21:42:34.797] › [AGENT2]   [     ] (0)  button[aria-label='Submit']
+  [21:42:34.803] › [AGENT2]   [FOUND] (1)  button.send-button
+  [21:42:34.811] › [AGENT2]   [FOUND] (1)  mat-icon[data-mat-icon-name='send']
+  [21:42:34.811] · [AGENT2] ── STOP BTN ──
+  [21:42:34.818] › [AGENT2]   [     ] (0)  button[aria-label='Stop response']
+  [21:42:34.825] › [AGENT2]   [     ] (0)  button[aria-label='Stop generating']
+  [21:42:34.831] › [AGENT2]   [     ] (0)  button[aria-label='Stop']
+  [21:42:34.842] › [AGENT2]   [     ] (0)  button[jsname='k9Ysde']
+  [21:42:34.850] › [AGENT2]   [     ] (0)  button[data-testid='stop-button']
+  [21:42:34.859] › [AGENT2]   [     ] (0)  .stop-button
+  [21:42:34.859] · [AGENT2] ── RESPONSE ──
+  [21:42:34.869] › [AGENT2]   [     ] (0)  model-response .markdown
+  [21:42:34.878] › [AGENT2]   [     ] (0)  model-response response-text
+  [21:42:34.888] › [AGENT2]   [     ] (0)  model-response
+  [21:42:34.907] › [AGENT2]   [     ] (0)  message-content
+  [21:42:34.917] › [AGENT2]   [     ] (0)  [data-turn-role='model']
+  [21:42:35.034] › [AGENT2]   [     ] (0)  [data-message-author-role='model']
+  [21:42:35.053] › [AGENT2]   [     ] (0)  message-content .markdown
+  [21:42:35.061] › [AGENT2]   [     ] (0)  .response-content .markdown
+  [21:42:35.068] › [AGENT2]   [     ] (0)  .response-content
+  [21:42:35.072] › [AGENT2]   title = 'Google Gemini'
+  [21:42:35.076] › [AGENT2]   url   = https://gemini.google.com/app
+  [21:42:35.081] › [AGENT2]   body.innerText length = 247
+  [21:42:35.081] · Opening AGENT3 tab
+  [21:42:35.082] › [AGENT3] handles before: ['21B05CE3A72CD3D3D9E0F85EC4407A16', '4E5A699C679334CAFCD4930EBBEA35C0', '790CC828AD8192F6A7FF3B2AF5F8D191', '8EA62BD4A89D6AC07AC2CE994B218032', '98F0FA68126291CB6F773C2BF8269B88', 'A3B677398D9CC6E9DF67EAF587CC1516', 'A97EBEEE812FE282B971B018449254C7', 'BDFA78743F5E70D33D2CBF8074A267E3', 'C82BAB7CD48C4564E84FA579396700EB', 'C938F879F43FC6F8D207E8389E21D1B9', 'C9EEEC1E635E1130ED0BDE887F5650BC']
+  [21:42:35.206] › [AGENT3] handles after new_window: ['21B05CE3A72CD3D3D9E0F85EC4407A16', '4E5A699C679334CAFCD4930EBBEA35C0', '790CC828AD8192F6A7FF3B2AF5F8D191', '85D4F34935A8A75A372A8CB4A317C835', '8EA62BD4A89D6AC07AC2CE994B218032', '98F0FA68126291CB6F773C2BF8269B88', 'A3B677398D9CC6E9DF67EAF587CC1516', 'A97EBEEE812FE282B971B018449254C7', 'BDFA78743F5E70D33D2CBF8074A267E3', 'C82BAB7CD48C4564E84FA579396700EB', 'C938F879F43FC6F8D207E8389E21D1B9', 'C9EEEC1E635E1130ED0BDE887F5650BC']  new={'85D4F34935A8A75A372A8CB4A317C835'}
+  [21:42:35.207] ✓ [AGENT3] Tab opened: 85D4F34935A8A75A372A8CB4A317C835
+  [21:42:38.829] · [AGENT3] ── INPUT ──
+  [21:42:38.850] › [AGENT3]   [FOUND] (2)  rich-textarea div[contenteditable='true']
+  [21:42:38.861] › [AGENT3]   [FOUND] (1)  rich-textarea p
+  [21:42:38.868] › [AGENT3]   [FOUND] (1)  div[contenteditable='true'][data-placeholder]
+  [21:42:38.876] › [AGENT3]   [FOUND] (2)  div[contenteditable='true']
+  [21:42:38.883] › [AGENT3]   [FOUND] (1)  .ql-editor
+  [21:42:38.890] › [AGENT3]   [     ] (0)  textarea
+  [21:42:38.891] · [AGENT3] ── SEND BTN ──
+  [21:42:38.897] › [AGENT3]   [FOUND] (1)  button[aria-label='Send message']
+  [21:42:38.904] › [AGENT3]   [     ] (0)  button[jsname='Qx7uuf']
+  [21:42:38.911] › [AGENT3]   [     ] (0)  button[data-testid='send-button']
+  [21:42:38.918] › [AGENT3]   [     ] (0)  button[mattooltip='Send message']
+  [21:42:38.927] › [AGENT3]   [     ] (0)  button[aria-label='Submit']
+  [21:42:38.934] › [AGENT3]   [FOUND] (1)  button.send-button
+  [21:42:38.942] › [AGENT3]   [FOUND] (1)  mat-icon[data-mat-icon-name='send']
+  [21:42:38.942] · [AGENT3] ── STOP BTN ──
+  [21:42:38.949] › [AGENT3]   [     ] (0)  button[aria-label='Stop response']
+  [21:42:38.955] › [AGENT3]   [     ] (0)  button[aria-label='Stop generating']
+  [21:42:38.961] › [AGENT3]   [     ] (0)  button[aria-label='Stop']
+  [21:42:38.968] › [AGENT3]   [     ] (0)  button[jsname='k9Ysde']
+  [21:42:38.975] › [AGENT3]   [     ] (0)  button[data-testid='stop-button']
+  [21:42:38.981] › [AGENT3]   [     ] (0)  .stop-button
+  [21:42:38.981] · [AGENT3] ── RESPONSE ──
+  [21:42:38.988] › [AGENT3]   [     ] (0)  model-response .markdown
+  [21:42:38.996] › [AGENT3]   [     ] (0)  model-response response-text
+  [21:42:39.003] › [AGENT3]   [     ] (0)  model-response
+  [21:42:39.010] › [AGENT3]   [     ] (0)  message-content
+  [21:42:39.017] › [AGENT3]   [     ] (0)  [data-turn-role='model']
+  [21:42:39.025] › [AGENT3]   [     ] (0)  [data-message-author-role='model']
+  [21:42:39.031] › [AGENT3]   [     ] (0)  message-content .markdown
+  [21:42:39.038] › [AGENT3]   [     ] (0)  .response-content .markdown
+  [21:42:39.044] › [AGENT3]   [     ] (0)  .response-content
+  [21:42:39.047] › [AGENT3]   title = 'Google Gemini'
+  [21:42:39.049] › [AGENT3]   url   = https://gemini.google.com/app
+  [21:42:39.052] › [AGENT3]   body.innerText length = 247
+  [21:42:39.052] · Opening AGENT4 tab
+  [21:42:39.053] › [AGENT4] handles before: ['21B05CE3A72CD3D3D9E0F85EC4407A16', '4E5A699C679334CAFCD4930EBBEA35C0', '790CC828AD8192F6A7FF3B2AF5F8D191', '85D4F34935A8A75A372A8CB4A317C835', '8EA62BD4A89D6AC07AC2CE994B218032', '98F0FA68126291CB6F773C2BF8269B88', 'A3B677398D9CC6E9DF67EAF587CC1516', 'A97EBEEE812FE282B971B018449254C7', 'BDFA78743F5E70D33D2CBF8074A267E3', 'C82BAB7CD48C4564E84FA579396700EB', 'C938F879F43FC6F8D207E8389E21D1B9', 'C9EEEC1E635E1130ED0BDE887F5650BC']
+  [21:42:39.132] › [AGENT4] handles after new_window: ['21B05CE3A72CD3D3D9E0F85EC4407A16', '4E5A699C679334CAFCD4930EBBEA35C0', '790CC828AD8192F6A7FF3B2AF5F8D191', '818346167C9ABBEDC358A60E4030B7F2', '85D4F34935A8A75A372A8CB4A317C835', '8EA62BD4A89D6AC07AC2CE994B218032', '98F0FA68126291CB6F773C2BF8269B88', 'A3B677398D9CC6E9DF67EAF587CC1516', 'A97EBEEE812FE282B971B018449254C7', 'BDFA78743F5E70D33D2CBF8074A267E3', 'C82BAB7CD48C4564E84FA579396700EB', 'C938F879F43FC6F8D207E8389E21D1B9', 'C9EEEC1E635E1130ED0BDE887F5650BC']  new={'818346167C9ABBEDC358A60E4030B7F2'}
+  [21:42:39.133] ✓ [AGENT4] Tab opened: 818346167C9ABBEDC358A60E4030B7F2
+  [21:42:42.761] · [AGENT4] ── INPUT ──
+  [21:42:42.771] › [AGENT4]   [FOUND] (2)  rich-textarea div[contenteditable='true']
+  [21:42:42.781] › [AGENT4]   [FOUND] (1)  rich-textarea p
+  [21:42:42.791] › [AGENT4]   [FOUND] (1)  div[contenteditable='true'][data-placeholder]
+  [21:42:42.801] › [AGENT4]   [FOUND] (2)  div[contenteditable='true']
+  [21:42:42.810] › [AGENT4]   [FOUND] (1)  .ql-editor
+  [21:42:42.820] › [AGENT4]   [     ] (0)  textarea
+  [21:42:42.820] · [AGENT4] ── SEND BTN ──
+  [21:42:42.831] › [AGENT4]   [FOUND] (1)  button[aria-label='Send message']
+  [21:42:42.846] › [AGENT4]   [     ] (0)  button[jsname='Qx7uuf']
+  [21:42:42.860] › [AGENT4]   [     ] (0)  button[data-testid='send-button']
+  [21:42:42.869] › [AGENT4]   [     ] (0)  button[mattooltip='Send message']
+  [21:42:42.878] › [AGENT4]   [     ] (0)  button[aria-label='Submit']
+  [21:42:42.885] › [AGENT4]   [FOUND] (1)  button.send-button
+  [21:42:42.894] › [AGENT4]   [FOUND] (1)  mat-icon[data-mat-icon-name='send']
+  [21:42:42.894] · [AGENT4] ── STOP BTN ──
+  [21:42:42.902] › [AGENT4]   [     ] (0)  button[aria-label='Stop response']
+  [21:42:42.911] › [AGENT4]   [     ] (0)  button[aria-label='Stop generating']
+  [21:42:42.918] › [AGENT4]   [     ] (0)  button[aria-label='Stop']
+  [21:42:42.926] › [AGENT4]   [     ] (0)  button[jsname='k9Ysde']
+  [21:42:42.933] › [AGENT4]   [     ] (0)  button[data-testid='stop-button']
+  [21:42:42.940] › [AGENT4]   [     ] (0)  .stop-button
+  [21:42:42.940] · [AGENT4] ── RESPONSE ──
+  [21:42:42.947] › [AGENT4]   [     ] (0)  model-response .markdown
+  [21:42:42.957] › [AGENT4]   [     ] (0)  model-response response-text
+  [21:42:42.968] › [AGENT4]   [     ] (0)  model-response
+  [21:42:42.977] › [AGENT4]   [     ] (0)  message-content
+  [21:42:42.985] › [AGENT4]   [     ] (0)  [data-turn-role='model']
+  [21:42:42.994] › [AGENT4]   [     ] (0)  [data-message-author-role='model']
+  [21:42:43.002] › [AGENT4]   [     ] (0)  message-content .markdown
+  [21:42:43.010] › [AGENT4]   [     ] (0)  .response-content .markdown
+  [21:42:43.018] › [AGENT4]   [     ] (0)  .response-content
+  [21:42:43.020] › [AGENT4]   title = 'Google Gemini'
+  [21:42:43.023] › [AGENT4]   url   = https://gemini.google.com/app
+  [21:42:43.029] › [AGENT4]   body.innerText length = 247
+  [21:42:43.046] → [AGENT1] Sending 481 chars …
+  [21:42:43.071] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:42:43.072] › [AGENT1] Typing 481 chars …
+  [21:42:43.368] › [AGENT1] Input verified: 488 chars placed
+  [21:42:44.042] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:42:44.043] ✓ [AGENT1] Dispatched.
+  [21:42:44.044] ← [AGENT1] Waiting for response …
+  [21:42:44.207] › [AGENT1] Response blocks before send: 0
+  [21:42:44.229] › [AGENT1] Streaming started.
+  [21:42:54.461] › [AGENT1] Stable 1/4 (1,355 chars)
+  [21:42:57.019] › [AGENT1] tick=5 streaming=False len=1355 stable=1
+  [21:42:57.019] › [AGENT1] Stable 2/4 (1,355 chars)
+  [21:42:59.575] › [AGENT1] Stable 3/4 (1,355 chars)
+  [21:43:02.129] › [AGENT1] Stable 4/4 (1,355 chars)
+  [21:43:02.130] ✓ [AGENT1] Response ready: 1,355 chars.
+  [21:43:02.131] ✓ [AGENT1] AGENT1 generated 10 candidate problems in cycle 1
+  [21:43:02.131] → [AGENT1] Sending 640 chars …
+  [21:43:02.136] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:43:02.136] › [AGENT1] Typing 640 chars …
+  [21:43:02.433] › [AGENT1] Input verified: 657 chars placed
+  [21:43:03.080] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:43:03.080] ✓ [AGENT1] Dispatched.
+  [21:43:03.081] ← [AGENT1] Waiting for response …
+  [21:43:03.093] › [AGENT1] Response blocks before send: 1
+  [21:43:03.102] › [AGENT1] Streaming started.
+  [21:43:13.377] › [AGENT1] Stable 1/4 (827 chars)
+  [21:43:15.980] › [AGENT1] tick=5 streaming=False len=827 stable=1
+  [21:43:15.980] › [AGENT1] Stable 2/4 (827 chars)
+  [21:43:18.559] › [AGENT1] Stable 3/4 (827 chars)
+  [21:43:21.168] › [AGENT1] Stable 4/4 (827 chars)
+  [21:43:21.170] ✓ [AGENT1] Response ready: 827 chars.
+  [21:43:21.175] → [AGENT1] Sending 901 chars …
+  [21:43:21.211] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:43:21.212] › [AGENT1] Typing 901 chars …
+  [21:43:21.584] › [AGENT1] Input verified: 943 chars placed
+  [21:43:22.238] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:43:22.239] ✓ [AGENT1] Dispatched.
+  [21:43:22.241] ← [AGENT1] Waiting for response …
+  [21:43:22.253] › [AGENT1] Response blocks before send: 2
+  [21:43:22.264] › [AGENT1] Streaming started.
+  [21:43:35.300] › [AGENT1] tick=5 streaming=False len=827 stable=0
+  [21:43:35.301] › [AGENT1] Stable 1/4 (827 chars)
+  [21:43:37.888] › [AGENT1] Stable 2/4 (827 chars)
+  [21:43:40.504] › [AGENT1] Stable 3/4 (827 chars)
+  [21:43:51.375] › [AGENT1] Stable 4/4 (827 chars)
+  [21:43:51.687] ✓ [AGENT1] Response ready: 827 chars.
+  [21:43:51.875] → [AGENT1] Sending 621 chars …
+  [21:43:51.943] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:43:51.944] › [AGENT1] Typing 621 chars …
+  [21:43:52.604] › [AGENT1] Input verified: 638 chars placed
+  [21:43:53.474] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:43:53.474] ✓ [AGENT1] Dispatched.
+  [21:43:53.477] ← [AGENT1] Waiting for response …
+  [21:43:53.862] › [AGENT1] Response blocks before send: 3
+  [21:43:53.988] › [AGENT1] Streaming started.
+  [21:44:05.404] › [AGENT1] Stable 1/4 (794 chars)
+  [21:44:08.096] › [AGENT1] Stable 2/4 (794 chars)
+  [21:44:10.674] › [AGENT1] tick=5 streaming=False len=794 stable=2
+  [21:44:10.677] › [AGENT1] Stable 3/4 (794 chars)
+  [21:44:13.319] › [AGENT1] Stable 4/4 (794 chars)
+  [21:44:13.320] ✓ [AGENT1] Response ready: 794 chars.
+  [21:44:13.334] → [AGENT1] Sending 868 chars …
+  [21:44:13.344] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:44:13.344] › [AGENT1] Typing 868 chars …
+  [21:44:13.754] › [AGENT1] Input verified: 905 chars placed
+  [21:44:14.482] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:44:14.483] ✓ [AGENT1] Dispatched.
+  [21:44:14.486] ← [AGENT1] Waiting for response …
+  [21:44:14.502] › [AGENT1] Response blocks before send: 4
+  [21:44:14.518] › [AGENT1] Streaming started.
+  [21:44:24.728] › [AGENT1] Stable 1/4 (794 chars)
+  [21:44:27.292] › [AGENT1] tick=5 streaming=False len=794 stable=1
+  [21:44:27.293] › [AGENT1] Stable 2/4 (794 chars)
+  [21:44:29.852] › [AGENT1] Stable 3/4 (794 chars)
+  [21:44:32.406] › [AGENT1] Stable 4/4 (794 chars)
+  [21:44:32.406] ✓ [AGENT1] Response ready: 794 chars.
+  [21:44:32.409] → [AGENT1] Sending 625 chars …
+  [21:44:32.413] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:44:32.413] › [AGENT1] Typing 625 chars …
+  [21:44:32.696] › [AGENT1] Input verified: 642 chars placed
+  [21:44:33.346] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:44:33.347] ✓ [AGENT1] Dispatched.
+  [21:44:33.347] ← [AGENT1] Waiting for response …
+  [21:44:33.359] › [AGENT1] Response blocks before send: 5
+  [21:44:33.368] › [AGENT1] Streaming started.
+  [21:44:43.652] › [AGENT1] Stable 1/4 (742 chars)
+  [21:44:46.289] › [AGENT1] tick=5 streaming=False len=742 stable=1
+  [21:44:46.289] › [AGENT1] Stable 2/4 (742 chars)
+  [21:44:48.878] › [AGENT1] Stable 3/4 (742 chars)
+  [21:44:51.451] › [AGENT1] Stable 4/4 (742 chars)
+  [21:44:51.452] ✓ [AGENT1] Response ready: 742 chars.
+  [21:44:51.453] → [AGENT1] Sending 816 chars …
+  [21:44:51.460] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:44:51.460] › [AGENT1] Typing 816 chars …
+  [21:44:51.891] › [AGENT1] Input verified: 853 chars placed
+  [21:44:52.566] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:44:52.567] ✓ [AGENT1] Dispatched.
+  [21:44:52.569] ← [AGENT1] Waiting for response …
+  [21:44:52.596] › [AGENT1] Response blocks before send: 6
+  [21:44:52.648] › [AGENT1] Streaming started.
+  [21:45:02.990] › [AGENT1] Stable 1/4 (742 chars)
+  [21:45:05.602] › [AGENT1] tick=5 streaming=False len=742 stable=1
+  [21:45:05.619] › [AGENT1] Stable 2/4 (742 chars)
+  [21:45:08.218] › [AGENT1] Stable 3/4 (742 chars)
+  [21:45:10.805] › [AGENT1] Stable 4/4 (742 chars)
+  [21:45:10.806] ✓ [AGENT1] Response ready: 742 chars.
+  [21:45:10.811] → [AGENT1] Sending 572 chars …
+  [21:45:10.820] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:45:10.821] › [AGENT1] Typing 572 chars …
+  [21:45:11.117] › [AGENT1] Input verified: 589 chars placed
+  [21:45:11.773] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:45:11.773] ✓ [AGENT1] Dispatched.
+  [21:45:11.774] ← [AGENT1] Waiting for response …
+  [21:45:11.784] › [AGENT1] Response blocks before send: 7
+  [21:45:11.796] › [AGENT1] Streaming started.
+  [21:45:21.981] › [AGENT1] Stable 1/4 (746 chars)
+  [21:45:24.526] › [AGENT1] tick=5 streaming=False len=746 stable=1
+  [21:45:24.526] › [AGENT1] Stable 2/4 (746 chars)
+  [21:45:27.082] › [AGENT1] Stable 3/4 (746 chars)
+  [21:45:29.638] › [AGENT1] Stable 4/4 (746 chars)
+  [21:45:29.638] ✓ [AGENT1] Response ready: 746 chars.
+  [21:45:29.642] → [AGENT1] Sending 624 chars …
+  [21:45:29.646] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:45:29.646] › [AGENT1] Typing 624 chars …
+  [21:45:29.936] › [AGENT1] Input verified: 641 chars placed
+  [21:45:30.587] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:45:30.588] ✓ [AGENT1] Dispatched.
+  [21:45:30.589] ← [AGENT1] Waiting for response …
+  [21:45:30.605] › [AGENT1] Response blocks before send: 8
+  [21:45:30.617] › [AGENT1] Streaming started.
+  [21:45:40.841] › [AGENT1] Stable 1/4 (844 chars)
+  [21:45:43.414] › [AGENT1] tick=5 streaming=False len=844 stable=1
+  [21:45:43.415] › [AGENT1] Stable 2/4 (844 chars)
+  [21:45:45.989] › [AGENT1] Stable 3/4 (844 chars)
+  [21:45:48.547] › [AGENT1] Stable 4/4 (844 chars)
+  [21:45:48.547] ✓ [AGENT1] Response ready: 844 chars.
+  [21:45:48.548] → [AGENT1] Sending 918 chars …
+  [21:45:48.553] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:45:48.553] › [AGENT1] Typing 918 chars …
+  [21:45:48.929] › [AGENT1] Input verified: 958 chars placed
+  [21:45:49.590] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:45:49.590] ✓ [AGENT1] Dispatched.
+  [21:45:49.592] ← [AGENT1] Waiting for response …
+  [21:45:49.613] › [AGENT1] Response blocks before send: 9
+  [21:45:49.633] › [AGENT1] Streaming started.
+  [21:45:59.895] › [AGENT1] Stable 1/4 (844 chars)
+  [21:46:02.467] › [AGENT1] tick=5 streaming=False len=844 stable=1
+  [21:46:02.467] › [AGENT1] Stable 2/4 (844 chars)
+  [21:46:05.035] › [AGENT1] Stable 3/4 (844 chars)
+  [21:46:07.613] › [AGENT1] Stable 4/4 (844 chars)
+  [21:46:07.613] ✓ [AGENT1] Response ready: 844 chars.
+  [21:46:07.620] → [AGENT1] Sending 625 chars …
+  [21:46:07.624] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:46:07.625] › [AGENT1] Typing 625 chars …
+  [21:46:07.918] › [AGENT1] Input verified: 642 chars placed
+  [21:46:08.575] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:46:08.575] ✓ [AGENT1] Dispatched.
+  [21:46:08.576] ← [AGENT1] Waiting for response …
+  [21:46:08.588] › [AGENT1] Response blocks before send: 10
+  [21:46:08.601] › [AGENT1] Streaming started.
+  [21:46:18.856] › [AGENT1] Stable 1/4 (856 chars)
+  [21:46:21.438] › [AGENT1] tick=5 streaming=False len=856 stable=1
+  [21:46:21.440] › [AGENT1] Stable 2/4 (856 chars)
+  [21:46:24.020] › [AGENT1] Stable 3/4 (856 chars)
+  [21:46:26.595] › [AGENT1] Stable 4/4 (856 chars)
+  [21:46:26.596] ✓ [AGENT1] Response ready: 856 chars.
+  [21:46:26.597] → [AGENT1] Sending 930 chars …
+  [21:46:26.602] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:46:26.602] › [AGENT1] Typing 930 chars …
+  [21:46:26.984] › [AGENT1] Input verified: 971 chars placed
+  [21:46:27.632] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:46:27.632] ✓ [AGENT1] Dispatched.
+  [21:46:27.633] ← [AGENT1] Waiting for response …
+  [21:46:27.648] › [AGENT1] Response blocks before send: 11
+  [21:46:27.659] › [AGENT1] Streaming started.
+  [21:46:37.909] › [AGENT1] Stable 1/4 (856 chars)
+  [21:46:40.477] › [AGENT1] tick=5 streaming=False len=856 stable=1
+  [21:46:40.477] › [AGENT1] Stable 2/4 (856 chars)
+  [21:46:43.052] › [AGENT1] Stable 3/4 (856 chars)
+  [21:46:45.628] › [AGENT1] Stable 4/4 (856 chars)
+  [21:46:45.628] ✓ [AGENT1] Response ready: 856 chars.
+  [21:46:45.630] → [AGENT1] Sending 603 chars …
+  [21:46:45.635] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:46:45.635] › [AGENT1] Typing 603 chars …
+  [21:46:45.920] › [AGENT1] Input verified: 620 chars placed
+  [21:46:46.582] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:46:46.583] ✓ [AGENT1] Dispatched.
+  [21:46:46.583] ← [AGENT1] Waiting for response …
+  [21:46:46.632] › [AGENT1] Response blocks before send: 12
+  [21:46:46.646] › [AGENT1] Streaming started.
+  [21:46:59.411] › [AGENT1] tick=5 streaming=True len=856 stable=0
+  [21:47:12.204] › [AGENT1] tick=10 streaming=True len=856 stable=0
+  [21:47:24.968] › [AGENT1] tick=15 streaming=True len=856 stable=0
+  [21:47:37.756] › [AGENT1] tick=20 streaming=True len=856 stable=0
+  [21:47:50.588] › [AGENT1] tick=25 streaming=True len=856 stable=0
+  [21:48:03.421] › [AGENT1] tick=30 streaming=True len=856 stable=0
+  [21:48:16.242] › [AGENT1] tick=35 streaming=True len=856 stable=0
+  [21:48:29.027] › [AGENT1] tick=40 streaming=True len=856 stable=0
+  [21:48:41.783] › [AGENT1] tick=45 streaming=True len=856 stable=0
+  [21:48:54.562] › [AGENT1] tick=50 streaming=True len=856 stable=0
+  [21:49:07.456] › [AGENT1] tick=55 streaming=True len=856 stable=0
+  [21:49:20.396] › [AGENT1] tick=60 streaming=True len=856 stable=0
+  [21:49:33.190] › [AGENT1] tick=65 streaming=True len=856 stable=0
+  [21:49:45.995] › [AGENT1] tick=70 streaming=True len=856 stable=0
+  [21:49:48.546] ⚠ [AGENT1] Timed out — returning best capture.
+  [21:49:48.547] → [AGENT1] Sending 930 chars …
+  [21:49:48.555] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:49:48.555] › [AGENT1] Typing 930 chars …
+  [21:49:48.950] › [AGENT1] Input verified: 971 chars placed
+  [21:49:49.662] › [AGENT1] Send clicked via JS: button.send-button
+  [21:49:49.662] ✓ [AGENT1] Dispatched.
+  [21:49:49.663] ← [AGENT1] Waiting for response …
+  [21:49:49.709] › [AGENT1] Response blocks before send: 13
+  [21:50:05.079] ⚠ [AGENT1] Stream-start not detected — continuing anyway.
+  [21:50:10.247] › [AGENT1] Stable 1/4 (37 chars)
+  [21:50:12.833] › [AGENT1] Stable 2/4 (37 chars)
+  [21:50:15.418] › [AGENT1] Stable 3/4 (37 chars)
+  [21:50:18.004] › [AGENT1] tick=5 streaming=False len=37 stable=3
+  [21:50:18.004] › [AGENT1] Stable 4/4 (37 chars)
+  [21:50:18.004] ✓ [AGENT1] Response ready: 37 chars.
+  [21:50:18.007] → [AGENT1] Sending 620 chars …
+  [21:50:18.011] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:50:18.012] › [AGENT1] Typing 620 chars …
+  [21:50:18.361] › [AGENT1] Input verified: 637 chars placed
+  [21:50:19.014] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:50:19.015] ✓ [AGENT1] Dispatched.
+  [21:50:19.016] ← [AGENT1] Waiting for response …
+  [21:50:19.077] › [AGENT1] Response blocks before send: 13
+  [21:50:19.130] › [AGENT1] Streaming started.
+  [21:50:31.882] › [AGENT1] tick=5 streaming=True len=37 stable=0
+  [21:50:44.670] › [AGENT1] tick=10 streaming=True len=37 stable=0
+  [21:50:57.691] › [AGENT1] tick=15 streaming=True len=37 stable=0
+  [21:51:10.497] › [AGENT1] tick=20 streaming=True len=37 stable=0
+  [21:51:23.294] › [AGENT1] tick=25 streaming=True len=37 stable=0
+  [21:51:36.151] › [AGENT1] tick=30 streaming=False len=958 stable=0
+  [21:51:36.151] › [AGENT1] Stable 1/4 (958 chars)
+  [21:51:38.726] › [AGENT1] Stable 2/4 (958 chars)
+  [21:51:41.312] › [AGENT1] Stable 3/4 (958 chars)
+  [21:51:43.919] › [AGENT1] Stable 4/4 (958 chars)
+  [21:51:43.920] ✓ [AGENT1] Response ready: 958 chars.
+  [21:51:43.920] → [AGENT1] Sending 1,032 chars …
+  [21:51:43.935] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:51:43.936] › [AGENT1] Typing 1032 chars …
+  [21:51:44.372] › [AGENT1] Input verified: 1078 chars placed
+  [21:51:45.039] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:51:45.039] ✓ [AGENT1] Dispatched.
+  [21:51:45.040] ← [AGENT1] Waiting for response …
+  [21:51:45.062] › [AGENT1] Response blocks before send: 14
+  [21:51:45.076] › [AGENT1] Streaming started.
+  [21:51:57.931] › [AGENT1] tick=5 streaming=True len=958 stable=0
+  [21:52:10.764] › [AGENT1] tick=10 streaming=True len=958 stable=0
+  [21:52:23.588] › [AGENT1] tick=15 streaming=True len=958 stable=0
+  [21:52:36.389] › [AGENT1] tick=20 streaming=True len=958 stable=0
+  [21:52:49.237] › [AGENT1] tick=25 streaming=True len=958 stable=0
+  [21:53:02.059] › [AGENT1] tick=30 streaming=True len=958 stable=0
+  [21:53:14.920] › [AGENT1] tick=35 streaming=False len=958 stable=0
+  [21:53:14.921] › [AGENT1] Stable 1/4 (958 chars)
+  [21:53:17.541] › [AGENT1] Stable 2/4 (958 chars)
+  [21:53:20.117] › [AGENT1] Stable 3/4 (958 chars)
+  [21:53:22.714] › [AGENT1] Stable 4/4 (958 chars)
+  [21:53:22.716] ✓ [AGENT1] Response ready: 958 chars.
+  [21:53:22.754] → [AGENT1] Sending 593 chars …
+  [21:53:22.780] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:53:22.780] › [AGENT1] Typing 593 chars …
+  [21:53:23.086] › [AGENT1] Input verified: 610 chars placed
+  [21:53:23.759] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:53:23.759] ✓ [AGENT1] Dispatched.
+  [21:53:23.760] ← [AGENT1] Waiting for response …
+  [21:53:23.778] › [AGENT1] Response blocks before send: 15
+  [21:53:23.787] › [AGENT1] Streaming started.
+  [21:53:36.623] › [AGENT1] tick=5 streaming=True len=958 stable=0
+  [21:53:49.393] › [AGENT1] tick=10 streaming=True len=174 stable=0
+  [21:53:57.067] › [AGENT1] Stable 1/4 (842 chars)
+  [21:53:59.630] › [AGENT1] Stable 2/4 (842 chars)
+  [21:54:02.185] › [AGENT1] tick=15 streaming=False len=842 stable=2
+  [21:54:02.186] › [AGENT1] Stable 3/4 (842 chars)
+  [21:54:04.758] › [AGENT1] Stable 4/4 (842 chars)
+  [21:54:04.759] ✓ [AGENT1] Response ready: 842 chars.
+  [21:54:04.759] → [AGENT1] Sending 916 chars …
+  [21:54:04.764] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:54:04.764] › [AGENT1] Typing 916 chars …
+  [21:54:05.139] › [AGENT1] Input verified: 954 chars placed
+  [21:54:05.802] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:54:05.802] ✓ [AGENT1] Dispatched.
+  [21:54:05.803] ← [AGENT1] Waiting for response …
+  [21:54:05.819] › [AGENT1] Response blocks before send: 16
+  [21:54:05.832] › [AGENT1] Streaming started.
+  [21:54:18.576] › [AGENT1] tick=5 streaming=True len=842 stable=0
+  [21:54:31.301] › [AGENT1] tick=10 streaming=True len=842 stable=0
+  [21:54:44.043] › [AGENT1] tick=15 streaming=True len=842 stable=0
+  [21:54:56.765] › [AGENT1] tick=20 streaming=True len=842 stable=0
+  [21:55:09.533] › [AGENT1] tick=25 streaming=False len=842 stable=0
+  [21:55:09.534] › [AGENT1] Stable 1/4 (842 chars)
+  [21:55:12.106] › [AGENT1] Stable 2/4 (842 chars)
+  [21:55:14.677] › [AGENT1] Stable 3/4 (842 chars)
+  [21:55:17.240] › [AGENT1] Stable 4/4 (842 chars)
+  [21:55:17.241] ✓ [AGENT1] Response ready: 842 chars.
+  [21:55:17.244] → [AGENT1] Sending 638 chars …
+  [21:55:17.266] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:55:17.266] › [AGENT1] Typing 638 chars …
+  [21:55:17.583] › [AGENT1] Input verified: 655 chars placed
+  [21:55:18.242] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:55:18.243] ✓ [AGENT1] Dispatched.
+  [21:55:18.244] ← [AGENT1] Waiting for response …
+  [21:55:18.264] › [AGENT1] Response blocks before send: 17
+  [21:55:18.275] › [AGENT1] Streaming started.
+  [21:55:31.000] › [AGENT1] tick=5 streaming=True len=842 stable=0
+  [21:55:43.770] › [AGENT1] tick=10 streaming=False len=875 stable=0
+  [21:55:46.349] › [AGENT1] Stable 1/4 (875 chars)
+  [21:55:48.929] › [AGENT1] Stable 2/4 (875 chars)
+  [21:55:51.508] › [AGENT1] Stable 3/4 (875 chars)
+  [21:55:54.079] › [AGENT1] Stable 4/4 (875 chars)
+  [21:55:54.079] ✓ [AGENT1] Response ready: 875 chars.
+  [21:55:54.086] → [AGENT1] Sending 949 chars …
+  [21:55:54.132] › [AGENT1] Found input box via: rich-textarea div[contenteditable='true']
+  [21:55:54.132] › [AGENT1] Typing 949 chars …
+  [21:55:54.520] › [AGENT1] Input verified: 990 chars placed
+  [21:55:55.179] › [AGENT1] Send clicked via JS: button[aria-label='Send message']
+  [21:55:55.179] ✓ [AGENT1] Dispatched.
+  [21:55:55.180] ← [AGENT1] Waiting for response …
+  [21:55:55.200] › [AGENT1] Response blocks before send: 18
+  [21:55:55.213] › [AGENT1] Streaming started.
+  [21:56:08.007] › [AGENT1] tick=5 streaming=True len=875 stable=0
+  [21:56:20.832] › [AGENT1] tick=10 streaming=True len=395 stable=0
+  [21:56:25.963] › [AGENT1] Stable 1/4 (875 chars)
+  [21:56:28.529] › [AGENT1] Stable 2/4 (875 chars)
+  [21:56:31.103] › [AGENT1] Stable 3/4 (875 chars)
+  [21:56:33.686] › [AGENT1] tick=15 streaming=False len=875 stable=3
+  [21:56:33.686] › [AGENT1] Stable 4/4 (875 chars)
+  [21:56:33.686] ✓ [AGENT1] Response ready: 875 chars.
+  [21:56:33.820] → [AGENT2] Sending 481 chars …
+  [21:56:33.939] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [21:56:33.939] › [AGENT2] Typing 481 chars …
+  [21:56:34.254] › [AGENT2] Input verified: 488 chars placed
+  [21:56:34.949] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [21:56:34.949] ✓ [AGENT2] Dispatched.
+  [21:56:34.951] ← [AGENT2] Waiting for response …
+  [21:56:35.114] › [AGENT2] Response blocks before send: 0
+  [21:56:35.133] › [AGENT2] Streaming started.
+  [21:56:45.386] › [AGENT2] Stable 1/4 (1,285 chars)
+  [21:56:47.953] › [AGENT2] tick=5 streaming=False len=1285 stable=1
+  [21:56:47.953] › [AGENT2] Stable 2/4 (1,285 chars)
+  [21:56:50.515] › [AGENT2] Stable 3/4 (1,285 chars)
+  [21:56:53.076] › [AGENT2] Stable 4/4 (1,285 chars)
+  [21:56:53.077] ✓ [AGENT2] Response ready: 1,285 chars.
+  [21:56:53.077] ✓ [AGENT2] AGENT2 generated 10 candidate problems in cycle 1
+  [21:56:53.078] → [AGENT2] Sending 606 chars …
+  [21:56:53.083] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [21:56:53.083] › [AGENT2] Typing 606 chars …
+  [21:56:53.395] › [AGENT2] Input verified: 623 chars placed
+  [21:56:54.074] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [21:56:54.074] ✓ [AGENT2] Dispatched.
+  [21:56:54.076] ← [AGENT2] Waiting for response …
+  [21:56:54.110] › [AGENT2] Response blocks before send: 1
+  [21:56:54.120] › [AGENT2] Streaming started.
+  [21:57:04.333] › [AGENT2] Stable 1/4 (655 chars)
+  [21:57:06.899] › [AGENT2] tick=5 streaming=False len=655 stable=1
+  [21:57:06.909] › [AGENT2] Stable 2/4 (655 chars)
+  [21:57:09.471] › [AGENT2] Stable 3/4 (655 chars)
+  [21:57:12.039] › [AGENT2] Stable 4/4 (655 chars)
+  [21:57:12.039] ✓ [AGENT2] Response ready: 655 chars.
+  [21:57:12.040] → [AGENT2] Sending 729 chars …
+  [21:57:12.044] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [21:57:12.044] › [AGENT2] Typing 729 chars …
+  [21:57:12.360] › [AGENT2] Input verified: 770 chars placed
+  [21:57:13.020] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [21:57:13.020] ✓ [AGENT2] Dispatched.
+  [21:57:13.021] ← [AGENT2] Waiting for response …
+  [21:57:13.031] › [AGENT2] Response blocks before send: 2
+  [21:57:13.041] › [AGENT2] Streaming started.
+  [21:57:23.265] › [AGENT2] Stable 1/4 (655 chars)
+  [21:57:25.851] › [AGENT2] tick=5 streaming=False len=655 stable=1
+  [21:57:25.851] › [AGENT2] Stable 2/4 (655 chars)
+  [21:57:28.401] › [AGENT2] Stable 3/4 (655 chars)
+  [21:57:30.976] › [AGENT2] Stable 4/4 (655 chars)
+  [21:57:30.977] ✓ [AGENT2] Response ready: 655 chars.
+  [21:57:30.983] → [AGENT2] Sending 592 chars …
+  [21:57:30.987] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [21:57:30.988] › [AGENT2] Typing 592 chars …
+  [21:57:31.284] › [AGENT2] Input verified: 609 chars placed
+  [21:57:31.944] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [21:57:31.945] ✓ [AGENT2] Dispatched.
+  [21:57:31.946] ← [AGENT2] Waiting for response …
+  [21:57:31.971] › [AGENT2] Response blocks before send: 3
+  [21:57:31.996] › [AGENT2] Streaming started.
+  [21:57:42.246] › [AGENT2] Stable 1/4 (795 chars)
+  [21:57:44.821] › [AGENT2] tick=5 streaming=False len=795 stable=1
+  [21:57:44.821] › [AGENT2] Stable 2/4 (795 chars)
+  [21:57:47.382] › [AGENT2] Stable 3/4 (795 chars)
+  [21:57:49.945] › [AGENT2] Stable 4/4 (795 chars)
+  [21:57:49.945] ✓ [AGENT2] Response ready: 795 chars.
+  [21:57:49.946] → [AGENT2] Sending 869 chars …
+  [21:57:49.951] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [21:57:49.951] › [AGENT2] Typing 869 chars …
+  [21:57:50.349] › [AGENT2] Input verified: 922 chars placed
+  [21:57:51.000] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [21:57:51.000] ✓ [AGENT2] Dispatched.
+  [21:57:51.001] ← [AGENT2] Waiting for response …
+  [21:57:51.015] › [AGENT2] Response blocks before send: 4
+  [21:57:51.027] › [AGENT2] Streaming started.
+  [21:58:01.223] › [AGENT2] Stable 1/4 (793 chars)
+  [21:58:03.800] › [AGENT2] tick=5 streaming=False len=793 stable=1
+  [21:58:03.801] › [AGENT2] Stable 2/4 (793 chars)
+  [21:58:06.377] › [AGENT2] Stable 3/4 (793 chars)
+  [21:58:08.932] › [AGENT2] Stable 4/4 (793 chars)
+  [21:58:08.933] ✓ [AGENT2] Response ready: 793 chars.
+  [21:58:08.935] → [AGENT2] Sending 610 chars …
+  [21:58:08.939] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [21:58:08.939] › [AGENT2] Typing 610 chars …
+  [21:58:09.219] › [AGENT2] Input verified: 627 chars placed
+  [21:58:09.865] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [21:58:09.866] ✓ [AGENT2] Dispatched.
+  [21:58:09.867] ← [AGENT2] Waiting for response …
+  [21:58:09.880] › [AGENT2] Response blocks before send: 5
+  [21:58:09.891] › [AGENT2] Streaming started.
+  [21:58:20.137] › [AGENT2] Stable 1/4 (947 chars)
+  [21:58:22.708] › [AGENT2] tick=5 streaming=False len=947 stable=1
+  [21:58:22.708] › [AGENT2] Stable 2/4 (947 chars)
+  [21:58:25.283] › [AGENT2] Stable 3/4 (947 chars)
+  [21:58:27.893] › [AGENT2] Stable 4/4 (947 chars)
+  [21:58:27.894] ✓ [AGENT2] Response ready: 947 chars.
+  [21:58:27.895] → [AGENT2] Sending 1,021 chars …
+  [21:58:27.900] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [21:58:27.900] › [AGENT2] Typing 1021 chars …
+  [21:58:28.292] › [AGENT2] Input verified: 1080 chars placed
+  [21:58:28.943] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [21:58:28.943] ✓ [AGENT2] Dispatched.
+  [21:58:28.945] ← [AGENT2] Waiting for response …
+  [21:58:28.965] › [AGENT2] Response blocks before send: 6
+  [21:58:28.978] › [AGENT2] Streaming started.
+  [21:58:39.236] › [AGENT2] Stable 1/4 (947 chars)
+  [21:58:41.826] › [AGENT2] tick=5 streaming=False len=947 stable=1
+  [21:58:41.826] › [AGENT2] Stable 2/4 (947 chars)
+  [21:58:44.405] › [AGENT2] Stable 3/4 (947 chars)
+  [21:58:46.990] › [AGENT2] Stable 4/4 (947 chars)
+  [21:58:46.990] ✓ [AGENT2] Response ready: 947 chars.
+  [21:58:46.993] → [AGENT2] Sending 552 chars …
+  [21:58:46.998] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [21:58:46.998] › [AGENT2] Typing 552 chars …
+  [21:58:47.288] › [AGENT2] Input verified: 569 chars placed
+  [21:58:47.930] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [21:58:47.930] ✓ [AGENT2] Dispatched.
+  [21:58:47.931] ← [AGENT2] Waiting for response …
+  [21:58:47.947] › [AGENT2] Response blocks before send: 7
+  [21:58:47.956] › [AGENT2] Streaming started.
+  [21:58:58.172] › [AGENT2] Stable 1/4 (775 chars)
+  [21:59:00.746] › [AGENT2] tick=5 streaming=False len=775 stable=1
+  [21:59:00.746] › [AGENT2] Stable 2/4 (775 chars)
+  [21:59:03.316] › [AGENT2] Stable 3/4 (775 chars)
+  [21:59:05.882] › [AGENT2] Stable 4/4 (775 chars)
+  [21:59:05.883] ✓ [AGENT2] Response ready: 775 chars.
+  [21:59:05.884] → [AGENT2] Sending 849 chars …
+  [21:59:05.888] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [21:59:05.888] › [AGENT2] Typing 849 chars …
+  [21:59:06.304] › [AGENT2] Input verified: 902 chars placed
+  [21:59:06.951] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [21:59:06.951] ✓ [AGENT2] Dispatched.
+  [21:59:06.952] ← [AGENT2] Waiting for response …
+  [21:59:06.968] › [AGENT2] Response blocks before send: 8
+  [21:59:06.982] › [AGENT2] Streaming started.
+  [21:59:17.232] › [AGENT2] Stable 1/4 (775 chars)
+  [21:59:19.803] › [AGENT2] tick=5 streaming=False len=775 stable=1
+  [21:59:19.804] › [AGENT2] Stable 2/4 (775 chars)
+  [21:59:22.368] › [AGENT2] Stable 3/4 (775 chars)
+  [21:59:24.942] › [AGENT2] Stable 4/4 (775 chars)
+  [21:59:24.943] ✓ [AGENT2] Response ready: 775 chars.
+  [21:59:24.947] → [AGENT2] Sending 622 chars …
+  [21:59:24.951] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [21:59:24.952] › [AGENT2] Typing 622 chars …
+  [21:59:25.250] › [AGENT2] Input verified: 639 chars placed
+  [21:59:25.926] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [21:59:25.927] ✓ [AGENT2] Dispatched.
+  [21:59:25.929] ← [AGENT2] Waiting for response …
+  [21:59:25.964] › [AGENT2] Response blocks before send: 9
+  [21:59:26.063] › [AGENT2] Streaming started.
+  [21:59:36.317] › [AGENT2] Stable 1/4 (1,019 chars)
+  [21:59:38.897] › [AGENT2] tick=5 streaming=False len=1019 stable=1
+  [21:59:38.897] › [AGENT2] Stable 2/4 (1,019 chars)
+  [21:59:41.472] › [AGENT2] Stable 3/4 (1,019 chars)
+  [21:59:44.046] › [AGENT2] Stable 4/4 (1,019 chars)
+  [21:59:44.047] ✓ [AGENT2] Response ready: 1,019 chars.
+  [21:59:44.048] → [AGENT2] Sending 1,093 chars …
+  [21:59:44.053] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [21:59:44.053] › [AGENT2] Typing 1093 chars …
+  [21:59:44.459] › [AGENT2] Input verified: 1157 chars placed
+  [21:59:45.112] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [21:59:45.112] ✓ [AGENT2] Dispatched.
+  [21:59:45.113] ← [AGENT2] Waiting for response …
+  [21:59:45.144] › [AGENT2] Response blocks before send: 10
+  [21:59:45.212] › [AGENT2] Streaming started.
+  [21:59:57.957] › [AGENT2] tick=5 streaming=True len=1019 stable=0
+  [22:00:10.762] › [AGENT2] tick=10 streaming=False len=1019 stable=0
+  [22:00:13.327] › [AGENT2] Stable 1/4 (1,019 chars)
+  [22:00:15.908] › [AGENT2] Stable 2/4 (1,019 chars)
+  [22:00:18.486] › [AGENT2] Stable 3/4 (1,019 chars)
+  [22:00:21.067] › [AGENT2] Stable 4/4 (1,019 chars)
+  [22:00:21.067] ✓ [AGENT2] Response ready: 1,019 chars.
+  [22:00:21.108] → [AGENT2] Sending 608 chars …
+  [22:00:21.122] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [22:00:21.122] › [AGENT2] Typing 608 chars …
+  [22:00:21.417] › [AGENT2] Input verified: 625 chars placed
+  [22:00:22.071] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [22:00:22.071] ✓ [AGENT2] Dispatched.
+  [22:00:22.072] ← [AGENT2] Waiting for response …
+  [22:00:22.087] › [AGENT2] Response blocks before send: 11
+  [22:00:22.098] › [AGENT2] Streaming started.
+  [22:00:32.402] › [AGENT2] Stable 1/4 (925 chars)
+  [22:00:35.115] › [AGENT2] tick=5 streaming=False len=925 stable=1
+  [22:00:35.115] › [AGENT2] Stable 2/4 (925 chars)
+  [22:00:37.669] › [AGENT2] Stable 3/4 (925 chars)
+  [22:00:40.246] › [AGENT2] Stable 4/4 (925 chars)
+  [22:00:40.249] ✓ [AGENT2] Response ready: 925 chars.
+  [22:00:40.250] → [AGENT2] Sending 999 chars …
+  [22:00:40.255] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [22:00:40.256] › [AGENT2] Typing 999 chars …
+  [22:00:40.685] › [AGENT2] Input verified: 1053 chars placed
+  [22:00:41.340] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [22:00:41.340] ✓ [AGENT2] Dispatched.
+  [22:00:41.342] ← [AGENT2] Waiting for response …
+  [22:00:41.355] › [AGENT2] Response blocks before send: 12
+  [22:00:41.369] › [AGENT2] Streaming started.
+  [22:00:51.635] › [AGENT2] Stable 1/4 (925 chars)
+  [22:00:54.209] › [AGENT2] tick=5 streaming=False len=925 stable=1
+  [22:00:54.209] › [AGENT2] Stable 2/4 (925 chars)
+  [22:00:56.784] › [AGENT2] Stable 3/4 (925 chars)
+  [22:00:59.351] › [AGENT2] Stable 4/4 (925 chars)
+  [22:00:59.352] ✓ [AGENT2] Response ready: 925 chars.
+  [22:00:59.355] → [AGENT2] Sending 602 chars …
+  [22:00:59.360] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [22:00:59.360] › [AGENT2] Typing 602 chars …
+  [22:00:59.651] › [AGENT2] Input verified: 619 chars placed
+  [22:01:00.304] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [22:01:00.304] ✓ [AGENT2] Dispatched.
+  [22:01:00.305] ← [AGENT2] Waiting for response …
+  [22:01:00.340] › [AGENT2] Response blocks before send: 13
+  [22:01:00.365] › [AGENT2] Streaming started.
+  [22:01:10.622] › [AGENT2] Stable 1/4 (857 chars)
+  [22:01:13.203] › [AGENT2] tick=5 streaming=False len=857 stable=1
+  [22:01:13.203] › [AGENT2] Stable 2/4 (857 chars)
+  [22:01:15.785] › [AGENT2] Stable 3/4 (857 chars)
+  [22:01:18.365] › [AGENT2] Stable 4/4 (857 chars)
+  [22:01:18.365] ✓ [AGENT2] Response ready: 857 chars.
+  [22:01:18.369] → [AGENT2] Sending 931 chars …
+  [22:01:18.414] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [22:01:18.414] › [AGENT2] Typing 931 chars …
+  [22:01:18.811] › [AGENT2] Input verified: 984 chars placed
+  [22:01:19.461] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [22:01:19.461] ✓ [AGENT2] Dispatched.
+  [22:01:19.462] ← [AGENT2] Waiting for response …
+  [22:01:19.489] › [AGENT2] Response blocks before send: 14
+  [22:01:19.501] › [AGENT2] Streaming started.
+  [22:01:29.767] › [AGENT2] Stable 1/4 (857 chars)
+  [22:01:32.330] › [AGENT2] tick=5 streaming=False len=857 stable=1
+  [22:01:32.331] › [AGENT2] Stable 2/4 (857 chars)
+  [22:01:34.937] › [AGENT2] Stable 3/4 (857 chars)
+  [22:01:37.509] › [AGENT2] Stable 4/4 (857 chars)
+  [22:01:37.511] ✓ [AGENT2] Response ready: 857 chars.
+  [22:01:37.522] → [AGENT2] Sending 641 chars …
+  [22:01:37.528] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [22:01:37.529] › [AGENT2] Typing 641 chars …
+  [22:01:37.821] › [AGENT2] Input verified: 658 chars placed
+  [22:01:38.484] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [22:01:38.485] ✓ [AGENT2] Dispatched.
+  [22:01:38.486] ← [AGENT2] Waiting for response …
+  [22:01:38.516] › [AGENT2] Response blocks before send: 15
+  [22:01:38.530] › [AGENT2] Streaming started.
+  [22:01:51.265] › [AGENT2] tick=5 streaming=True len=857 stable=0
+  [22:02:04.030] › [AGENT2] tick=10 streaming=True len=857 stable=0
+  [22:02:16.795] › [AGENT2] tick=15 streaming=True len=857 stable=0
+  [22:02:29.570] › [AGENT2] tick=20 streaming=True len=857 stable=0
+  [22:02:42.362] › [AGENT2] tick=25 streaming=False len=998 stable=0
+  [22:02:44.945] › [AGENT2] Stable 1/4 (998 chars)
+  [22:02:47.523] › [AGENT2] Stable 2/4 (998 chars)
+  [22:02:50.102] › [AGENT2] Stable 3/4 (998 chars)
+  [22:02:52.680] › [AGENT2] Stable 4/4 (998 chars)
+  [22:02:52.680] ✓ [AGENT2] Response ready: 998 chars.
+  [22:02:52.681] → [AGENT2] Sending 1,072 chars …
+  [22:02:52.689] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [22:02:52.689] › [AGENT2] Typing 1072 chars …
+  [22:02:53.095] › [AGENT2] Input verified: 1127 chars placed
+  [22:02:53.763] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [22:02:53.764] ✓ [AGENT2] Dispatched.
+  [22:02:53.765] ← [AGENT2] Waiting for response …
+  [22:02:53.787] › [AGENT2] Response blocks before send: 16
+  [22:02:53.802] › [AGENT2] Streaming started.
+  [22:03:06.557] › [AGENT2] tick=5 streaming=True len=985 stable=0
+  [22:03:11.740] › [AGENT2] Stable 1/4 (998 chars)
+  [22:03:14.320] › [AGENT2] Stable 2/4 (998 chars)
+  [22:03:16.906] › [AGENT2] Stable 3/4 (998 chars)
+  [22:03:19.491] › [AGENT2] tick=10 streaming=False len=998 stable=3
+  [22:03:19.491] › [AGENT2] Stable 4/4 (998 chars)
+  [22:03:19.491] ✓ [AGENT2] Response ready: 998 chars.
+  [22:03:19.495] → [AGENT2] Sending 625 chars …
+  [22:03:19.500] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [22:03:19.500] › [AGENT2] Typing 625 chars …
+  [22:03:19.804] › [AGENT2] Input verified: 642 chars placed
+  [22:03:20.480] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [22:03:20.480] ✓ [AGENT2] Dispatched.
+  [22:03:20.481] ← [AGENT2] Waiting for response …
+  [22:03:20.503] › [AGENT2] Response blocks before send: 17
+  [22:03:20.516] › [AGENT2] Streaming started.
+  [22:03:33.269] › [AGENT2] tick=5 streaming=True len=998 stable=0
+  [22:03:46.048] › [AGENT2] tick=10 streaming=False len=841 stable=0
+  [22:03:46.049] › [AGENT2] Stable 1/4 (841 chars)
+  [22:03:48.611] › [AGENT2] Stable 2/4 (841 chars)
+  [22:03:51.170] › [AGENT2] Stable 3/4 (841 chars)
+  [22:03:53.753] › [AGENT2] Stable 4/4 (841 chars)
+  [22:03:53.754] ✓ [AGENT2] Response ready: 841 chars.
+  [22:03:53.755] → [AGENT2] Sending 915 chars …
+  [22:03:53.759] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [22:03:53.759] › [AGENT2] Typing 915 chars …
+  [22:03:54.161] › [AGENT2] Input verified: 969 chars placed
+  [22:03:54.823] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [22:03:54.824] ✓ [AGENT2] Dispatched.
+  [22:03:54.825] ← [AGENT2] Waiting for response …
+  [22:03:54.851] › [AGENT2] Response blocks before send: 18
+  [22:03:54.963] › [AGENT2] Streaming started.
+  [22:04:07.788] › [AGENT2] tick=5 streaming=True len=841 stable=0
+  [22:04:20.590] › [AGENT2] tick=10 streaming=True len=841 stable=0
+  [22:04:33.392] › [AGENT2] tick=15 streaming=True len=660 stable=0
+  [22:04:38.605] › [AGENT2] Stable 1/4 (841 chars)
+  [22:04:41.187] › [AGENT2] Stable 2/4 (841 chars)
+  [22:04:43.754] › [AGENT2] Stable 3/4 (841 chars)
+  [22:04:46.329] › [AGENT2] tick=20 streaming=False len=841 stable=3
+  [22:04:46.329] › [AGENT2] Stable 4/4 (841 chars)
+  [22:04:46.330] ✓ [AGENT2] Response ready: 841 chars.
+  [22:04:46.333] → [AGENT2] Sending 615 chars …
+  [22:04:46.340] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [22:04:46.340] › [AGENT2] Typing 615 chars …
+  [22:04:46.664] › [AGENT2] Input verified: 632 chars placed
+  [22:04:47.343] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [22:04:47.343] ✓ [AGENT2] Dispatched.
+  [22:04:47.344] ← [AGENT2] Waiting for response …
+  [22:04:47.399] › [AGENT2] Response blocks before send: 19
+  [22:04:47.458] › [AGENT2] Streaming started.
+  [22:05:00.380] › [AGENT2] tick=5 streaming=True len=841 stable=0
+  [22:05:13.126] › [AGENT2] tick=10 streaming=True len=865 stable=0
+  [22:05:18.285] › [AGENT2] Stable 1/4 (1,019 chars)
+  [22:05:20.869] › [AGENT2] Stable 2/4 (1,019 chars)
+  [22:05:23.455] › [AGENT2] Stable 3/4 (1,019 chars)
+  [22:05:26.037] › [AGENT2] tick=15 streaming=False len=1019 stable=3
+  [22:05:26.037] › [AGENT2] Stable 4/4 (1,019 chars)
+  [22:05:26.037] ✓ [AGENT2] Response ready: 1,019 chars.
+  [22:05:26.038] → [AGENT2] Sending 1,093 chars …
+  [22:05:26.042] › [AGENT2] Found input box via: rich-textarea div[contenteditable='true']
+  [22:05:26.043] › [AGENT2] Typing 1093 chars …
+  [22:05:26.476] › [AGENT2] Input verified: 1167 chars placed
+  [22:05:27.153] › [AGENT2] Send clicked via JS: button[aria-label='Send message']
+  [22:05:27.153] ✓ [AGENT2] Dispatched.
+  [22:05:27.154] ← [AGENT2] Waiting for response …
+  [22:05:27.174] › [AGENT2] Response blocks before send: 20
+  [22:05:27.185] › [AGENT2] Streaming started.
+  [22:05:40.018] › [AGENT2] tick=5 streaming=False len=1019 stable=0
+  [22:05:42.628] › [AGENT2] Stable 1/4 (1,019 chars)
+  [22:05:45.219] › [AGENT2] Stable 2/4 (1,019 chars)
+  [22:05:47.969] › [AGENT2] Stable 3/4 (1,019 chars)
+  [22:05:50.552] › [AGENT2] Stable 4/4 (1,019 chars)
+  [22:05:50.552] ✓ [AGENT2] Response ready: 1,019 chars.
+  [22:05:50.626] → [AGENT3] Sending 481 chars …
+  [22:05:50.696] › [AGENT3] Found input box via: rich-textarea div[contenteditable='true']
+  [22:05:50.696] › [AGENT3] Typing 481 chars …
+  [22:05:51.005] › [AGENT3] Input verified: 488 chars placed
+  [22:05:51.722] › [AGENT3] Send clicked via JS: button[aria-label='Send message']
+  [22:05:51.722] ✓ [AGENT3] Dispatched.
+  [22:05:51.723] ← [AGENT3] Waiting for response …
+  [22:05:51.902] › [AGENT3] Response blocks before send: 0
+  [22:05:51.922] › [AGENT3] Streaming started.
+  [22:06:02.124] › [AGENT3] Stable 1/4 (1,418 chars)
+  [22:06:04.674] › [AGENT3] tick=5 streaming=False len=1418 stable=1
+  [22:06:04.674] › [AGENT3] Stable 2/4 (1,418 chars)
+  [22:06:07.239] › [AGENT3] Stable 3/4 (1,418 chars)
+  [22:06:09.840] › [AGENT3] Stable 4/4 (1,418 chars)
+  [22:06:09.840] ✓ [AGENT3] Response ready: 1,418 chars.
+  [22:06:09.841] ✓ [AGENT3] AGENT3 generated 10 candidate problems in cycle 1
+  [22:06:09.842] → [AGENT3] Sending 641 chars …
+  [22:06:09.847] › [AGENT3] Found input box via: rich-textarea div[contenteditable='true']
+  [22:06:09.848] › [AGENT3] Typing 641 chars …
+  [22:06:10.137] › [AGENT3] Input verified: 658 chars placed
+  [22:06:10.793] › [AGENT3] Send clicked via JS: button[aria-label='Send message']
+  [22:06:10.794] ✓ [AGENT3] Dispatched.
+  [22:06:10.794] ← [AGENT3] Waiting for response …
+  [22:06:10.806] › [AGENT3] Response blocks before send: 1
+  [22:06:10.814] › [AGENT3] Streaming started.
+  [22:06:18.441] › [AGENT3] Stable 1/4 (846 chars)
+  [22:06:20.998] › [AGENT3] Stable 2/4 (846 chars)
+  [22:06:23.548] › [AGENT3] tick=5 streaming=False len=846 stable=2
+  [22:06:23.548] › [AGENT3] Stable 3/4 (846 chars)
+  [22:06:26.126] › [AGENT3] Stable 4/4 (846 chars)
+  [22:06:26.127] ✓ [AGENT3] Response ready: 846 chars.
+  [22:06:26.135] → [AGENT3] Sending 591 chars …
+  [22:06:26.140] › [AGENT3] Found input box via: rich-textarea div[contenteditable='true']
+  [22:06:26.140] › [AGENT3] Typing 591 chars …
+  [22:06:26.420] › [AGENT3] Input verified: 608 chars placed
+  [22:06:27.076] › [AGENT3] Send clicked via JS: button[aria-label='Send message']
+  [22:06:27.076] ✓ [AGENT3] Dispatched.
+  [22:06:27.078] ← [AGENT3] Waiting for response …
+  [22:06:27.089] › [AGENT3] Response blocks before send: 2
+  [22:06:27.098] › [AGENT3] Streaming started.
+  [22:06:34.723] › [AGENT3] Stable 1/4 (715 chars)
+  [22:06:37.272] › [AGENT3] Stable 2/4 (715 chars)
+  [22:06:39.857] › [AGENT3] tick=5 streaming=False len=715 stable=2
+  [22:06:39.857] › [AGENT3] Stable 3/4 (715 chars)
+  [22:06:42.413] › [AGENT3] Stable 4/4 (715 chars)
+  [22:06:42.413] ✓ [AGENT3] Response ready: 715 chars.
+  [22:06:42.417] → [AGENT3] Sending 636 chars …
+  [22:06:42.422] › [AGENT3] Found input box via: rich-textarea div[contenteditable='true']
+  [22:06:42.422] › [AGENT3] Typing 636 chars …
+  [22:06:42.706] › [AGENT3] Input verified: 653 chars placed
+  [22:06:43.349] › [AGENT3] Send clicked via JS: button[aria-label='Send message']
+  [22:06:43.350] ✓ [AGENT3] Dispatched.
+  [22:06:43.350] ← [AGENT3] Waiting for response …
+  [22:06:43.360] › [AGENT3] Response blocks before send: 3
+  [22:06:43.371] › [AGENT3] Streaming started.
+  [22:06:53.542] › [AGENT3] Stable 1/4 (659 chars)
+  [22:06:56.099] › [AGENT3] tick=5 streaming=False len=659 stable=1
+  [22:06:56.100] › [AGENT3] Stable 2/4 (659 chars)
+  [22:06:58.655] › [AGENT3] Stable 3/4 (659 chars)
+  [22:07:01.212] › [AGENT3] Stable 4/4 (659 chars)
+  [22:07:01.213] ✓ [AGENT3] Response ready: 659 chars.
+  [22:07:01.216] → [AGENT3] Sending 645 chars …
+  [22:07:01.221] › [AGENT3] Found input box via: rich-textarea div[contenteditable='true']
+  [22:07:01.221] › [AGENT3] Typing 645 chars …
+  [22:07:01.523] › [AGENT3] Input verified: 662 chars placed
+  [22:07:02.181] › [AGENT3] Send clicked via JS: button[aria-label='Send message']
+  [22:07:02.181] ✓ [AGENT3] Dispatched.
+  [22:07:02.182] ← [AGENT3] Waiting for response …
+  [22:07:02.194] › [AGENT3] Response blocks before send: 4
+  [22:07:02.205] › [AGENT3] Streaming started.
+  [22:07:12.363] › [AGENT3] Stable 1/4 (842 chars)
+  [22:07:14.921] › [AGENT3] tick=5 streaming=False len=842 stable=1
+  [22:07:14.921] › [AGENT3] Stable 2/4 (842 chars)
+  [22:07:17.493] › [AGENT3] Stable 3/4 (842 chars)
+  [22:07:20.031] › [AGENT3] Stable 4/4 (842 chars)
+  [22:07:20.031] ✓ [AGENT3] Response ready: 842 chars.
+  [22:07:20.034] → [AGENT3] Sending 573 chars …
+  [22:07:20.039] › [AGENT3] Found input box via: rich-textarea div[contenteditable='true']
+  [22:07:20.039] › [AGENT3] Typing 573 chars …
+  [22:07:20.342] › [AGENT3] Input verified: 590 chars placed
+  [22:07:21.008] › [AGENT3] Send clicked via JS: button[aria-label='Send message']
+  [22:07:21.008] ✓ [AGENT3] Dispatched.
+  [22:07:21.009] ← [AGENT3] Waiting for response …
+  [22:07:21.022] › [AGENT3] Response blocks before send: 5
+  [22:07:21.030] › [AGENT3] Streaming started.
+  [22:07:28.723] › [AGENT3] Stable 1/4 (721 chars)
+  [22:07:31.306] › [AGENT3] Stable 2/4 (721 chars)
+  [22:07:33.864] › [AGENT3] tick=5 streaming=False len=721 stable=2
+  [22:07:33.865] › [AGENT3] Stable 3/4 (721 chars)
+  [22:07:36.409] › [AGENT3] Stable 4/4 (721 chars)
+  [22:07:36.410] ✓ [AGENT3] Response ready: 721 chars.
+  [22:07:36.413] → [AGENT3] Sending 637 chars …
+  [22:07:36.417] › [AGENT3] Found input box via: rich-textarea div[contenteditable='true']
+  [22:07:36.417] › [AGENT3] Typing 637 chars …
+  [22:07:36.746] › [AGENT3] Input verified: 654 chars placed
+  [22:07:37.403] › [AGENT3] Send clicked via JS: button[aria-label='Send message']
+  [22:07:37.403] ✓ [AGENT3] Dispatched.
+  [22:07:37.404] ← [AGENT3] Waiting for response …
+  [22:07:37.420] › [AGENT3] Response blocks before send: 6
+  [22:07:37.440] › [AGENT3] Streaming started.
+  [22:07:47.618] › [AGENT3] Stable 1/4 (860 chars)
+  [22:07:50.168] › [AGENT3] tick=5 streaming=False len=860 stable=1
+  [22:07:50.169] › [AGENT3] Stable 2/4 (860 chars)
+  [22:07:52.723] › [AGENT3] Stable 3/4 (860 chars)
+  [22:07:55.294] › [AGENT3] Stable 4/4 (860 chars)
+  [22:07:55.340] ✓ [AGENT3] Response ready: 860 chars.
+  [22:07:55.345] → [AGENT3] Sending 625 chars …
+  [22:07:55.353] › [AGENT3] Found input box via: rich-textarea div[contenteditable='true']
+  [22:07:55.353] › [AGENT3] Typing 625 chars …
+  [22:07:55.660] › [AGENT3] Input verified: 642 chars placed
+  [22:07:56.313] › [AGENT3] Send clicked via JS: button[aria-label='Send message']
+  [22:07:56.314] ✓ [AGENT3] Dispatched.
+  [22:07:56.315] ← [AGENT3] Waiting for response …
+  [22:07:56.329] › [AGENT3] Response blocks before send: 7
+  [22:07:56.341] › [AGENT3] Streaming started.
+  [22:08:03.998] › [AGENT3] Stable 1/4 (632 chars)
+  [22:08:06.537] › [AGENT3] Stable 2/4 (632 chars)
+  [22:08:09.096] › [AGENT3] tick=5 streaming=False len=632 stable=2
+  [22:08:09.096] › [AGENT3] Stable 3/4 (632 chars)
+  [22:08:11.653] › [AGENT3] Stable 4/4 (632 chars)
+  [22:08:11.654] ✓ [AGENT3] Response ready: 632 chars.
+  [22:08:11.657] → [AGENT3] Sending 641 chars …
+  [22:08:11.661] › [AGENT3] Found input box via: rich-textarea div[contenteditable='true']
+  [22:08:11.662] › [AGENT3] Typing 641 chars …
+  [22:08:11.942] › [AGENT3] Input verified: 658 chars placed
+  [22:08:12.588] › [AGENT3] Send clicked via JS: button[aria-label='Send message']
+  [22:08:12.588] ✓ [AGENT3] Dispatched.
+  [22:08:12.589] ← [AGENT3] Waiting for response …
+  [22:08:12.603] › [AGENT3] Response blocks before send: 8
+  [22:08:12.611] › [AGENT3] Streaming started.
+  [22:08:22.791] › [AGENT3] Stable 1/4 (848 chars)
+  [22:08:25.335] › [AGENT3] tick=5 streaming=False len=848 stable=1
+  [22:08:25.335] › [AGENT3] Stable 2/4 (848 chars)
+  [22:08:27.880] › [AGENT3] Stable 3/4 (848 chars)
+  [22:08:30.437] › [AGENT3] Stable 4/4 (848 chars)
+  [22:08:30.438] ✓ [AGENT3] Response ready: 848 chars.
+  [22:08:30.443] → [AGENT3] Sending 634 chars …
+  [22:08:30.448] › [AGENT3] Found input box via: rich-textarea div[contenteditable='true']
+  [22:08:30.448] › [AGENT3] Typing 634 chars …
+  [22:08:30.738] › [AGENT3] Input verified: 651 chars placed
+  [22:08:31.395] › [AGENT3] Send clicked via JS: button[aria-label='Send message']
+  [22:08:31.395] ✓ [AGENT3] Dispatched.
+  [22:08:31.396] ← [AGENT3] Waiting for response …
+  [22:08:31.438] › [AGENT3] Response blocks before send: 9
+  [22:08:31.448] › [AGENT3] Streaming started.
+  [22:08:41.625] › [AGENT3] Stable 1/4 (952 chars)
+  [22:08:44.184] › [AGENT3] tick=5 streaming=False len=952 stable=1
+  [22:08:44.185] › [AGENT3] Stable 2/4 (952 chars)
+  [22:08:46.747] › [AGENT3] Stable 3/4 (952 chars)
+  [22:08:49.291] › [AGENT3] Stable 4/4 (952 chars)
+  [22:08:49.292] ✓ [AGENT3] Response ready: 952 chars.
+  [22:08:49.295] → [AGENT3] Sending 603 chars …
+  [22:08:49.300] › [AGENT3] Found input box via: rich-textarea div[contenteditable='true']
+  [22:08:49.300] › [AGENT3] Typing 603 chars …
+  [22:08:49.593] › [AGENT3] Input verified: 620 chars placed
+  [22:08:50.256] › [AGENT3] Send clicked via JS: button[aria-label='Send message']
+  [22:08:50.257] ✓ [AGENT3] Dispatched.
+  [22:08:50.257] ← [AGENT3] Waiting for response …
+  [22:08:50.272] › [AGENT3] Response blocks before send: 10
+  [22:08:50.288] › [AGENT3] Streaming started.
+  [22:08:57.920] › [AGENT3] Stable 1/4 (745 chars)
+  [22:09:00.478] › [AGENT3] Stable 2/4 (745 chars)
+  [22:09:03.082] › [AGENT3] tick=5 streaming=False len=745 stable=2
+  [22:09:03.082] › [AGENT3] Stable 3/4 (745 chars)
+  [22:09:05.624] › [AGENT3] Stable 4/4 (745 chars)
+  [22:09:05.625] ✓ [AGENT3] Response ready: 745 chars.
+  [22:09:05.646] → [AGENT4] Sending 481 chars …
+  [22:09:05.747] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:09:05.748] › [AGENT4] Typing 481 chars …
+  [22:09:06.071] › [AGENT4] Input verified: 488 chars placed
+  [22:09:06.770] › [AGENT4] Send clicked via JS: button[aria-label='Send message']
+  [22:09:06.770] ✓ [AGENT4] Dispatched.
+  [22:09:06.771] ← [AGENT4] Waiting for response …
+  [22:09:06.981] › [AGENT4] Response blocks before send: 0
+  [22:09:06.994] › [AGENT4] Streaming started.
+  [22:09:17.218] › [AGENT4] Stable 1/4 (1,403 chars)
+  [22:09:19.769] › [AGENT4] tick=5 streaming=False len=1403 stable=1
+  [22:09:19.769] › [AGENT4] Stable 2/4 (1,403 chars)
+  [22:09:22.364] › [AGENT4] Stable 3/4 (1,403 chars)
+  [22:09:24.919] › [AGENT4] Stable 4/4 (1,403 chars)
+  [22:09:24.921] ✓ [AGENT4] Response ready: 1,403 chars.
+  [22:09:24.921] ✓ [AGENT4] AGENT4 generated 10 candidate problems in cycle 1
+  [22:09:24.922] → [AGENT4] Sending 646 chars …
+  [22:09:24.929] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:09:24.929] › [AGENT4] Typing 646 chars …
+  [22:09:25.236] › [AGENT4] Input verified: 663 chars placed
+  [22:09:25.892] › [AGENT4] Send clicked via JS: button[aria-label='Send message']
+  [22:09:25.893] ✓ [AGENT4] Dispatched.
+  [22:09:25.894] ← [AGENT4] Waiting for response …
+  [22:09:25.906] › [AGENT4] Response blocks before send: 1
+  [22:09:25.915] › [AGENT4] Streaming started.
+  [22:09:38.727] › [AGENT4] tick=5 streaming=True len=11 stable=0
+  [22:09:51.544] › [AGENT4] tick=10 streaming=True len=11 stable=0
+  [22:10:04.264] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:10:16.971] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:10:29.692] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:10:42.414] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:10:55.142] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:11:07.871] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:11:20.598] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:11:33.342] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:11:46.075] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:11:58.794] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:12:11.546] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:12:24.267] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:12:26.810] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:12:26.811] → [AGENT4] Sending 880 chars …
+  [22:12:26.819] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:12:26.819] › [AGENT4] Typing 880 chars …
+  [22:12:27.192] › [AGENT4] Input verified: 917 chars placed
+  [22:12:27.872] › [AGENT4] Send clicked via JS: button.send-button
+  [22:12:27.872] ✓ [AGENT4] Dispatched.
+  [22:12:27.872] ← [AGENT4] Waiting for response …
+  [22:12:27.877] › [AGENT4] Response blocks before send: 2
+  [22:12:27.886] › [AGENT4] Streaming started.
+  [22:12:40.587] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:12:53.305] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:13:06.057] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:13:18.790] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:13:31.536] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:13:44.281] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:13:57.039] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:14:09.805] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:14:22.549] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:14:35.268] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:14:47.976] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:15:00.721] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:15:13.462] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:15:26.213] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:15:28.771] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:15:28.776] → [AGENT4] Sending 670 chars …
+  [22:15:28.784] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:15:28.785] › [AGENT4] Typing 670 chars …
+  [22:15:29.070] › [AGENT4] Input verified: 687 chars placed
+  [22:15:29.764] › [AGENT4] Send clicked via JS: button.send-button
+  [22:15:29.772] ✓ [AGENT4] Dispatched.
+  [22:15:29.774] ← [AGENT4] Waiting for response …
+  [22:15:29.787] › [AGENT4] Response blocks before send: 2
+  [22:15:29.796] › [AGENT4] Streaming started.
+  [22:15:42.506] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:15:55.236] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:16:07.947] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:16:20.662] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:16:33.391] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:16:46.119] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:16:58.857] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:17:11.590] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:17:24.314] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:17:37.055] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:17:49.798] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:18:02.543] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:18:15.360] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:18:28.087] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:18:30.636] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:18:30.650] → [AGENT4] Sending 880 chars …
+  [22:18:30.662] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:18:30.662] › [AGENT4] Typing 880 chars …
+  [22:18:31.028] › [AGENT4] Input verified: 917 chars placed
+  [22:18:31.713] › [AGENT4] Send clicked via JS: button.send-button
+  [22:18:31.713] ✓ [AGENT4] Dispatched.
+  [22:18:31.714] ← [AGENT4] Waiting for response …
+  [22:18:31.718] › [AGENT4] Response blocks before send: 2
+  [22:18:31.727] › [AGENT4] Streaming started.
+  [22:18:44.464] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:18:57.191] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:19:09.961] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:19:22.709] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:19:35.439] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:19:48.142] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:20:00.866] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:20:13.614] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:20:26.349] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:20:39.109] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:20:51.840] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:21:04.590] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:21:17.331] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:21:30.023] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:21:32.561] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:21:32.566] → [AGENT4] Sending 620 chars …
+  [22:21:32.574] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:21:32.574] › [AGENT4] Typing 620 chars …
+  [22:21:32.858] › [AGENT4] Input verified: 637 chars placed
+  [22:21:33.545] › [AGENT4] Send clicked via JS: button.send-button
+  [22:21:33.546] ✓ [AGENT4] Dispatched.
+  [22:21:33.547] ← [AGENT4] Waiting for response …
+  [22:21:33.551] › [AGENT4] Response blocks before send: 2
+  [22:21:33.560] › [AGENT4] Streaming started.
+  [22:21:46.348] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:21:59.654] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:22:12.366] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:22:25.112] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:22:37.859] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:22:50.550] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:23:03.265] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:23:15.984] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:23:28.728] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:23:41.466] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:23:54.184] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:24:06.908] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:24:19.683] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:24:32.417] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:24:34.962] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:24:34.963] → [AGENT4] Sending 880 chars …
+  [22:24:34.970] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:24:34.970] › [AGENT4] Typing 880 chars …
+  [22:24:35.338] › [AGENT4] Input verified: 917 chars placed
+  [22:24:36.057] › [AGENT4] Send clicked via JS: button.send-button
+  [22:24:36.058] ✓ [AGENT4] Dispatched.
+  [22:24:36.058] ← [AGENT4] Waiting for response …
+  [22:24:36.064] › [AGENT4] Response blocks before send: 2
+  [22:24:36.073] › [AGENT4] Streaming started.
+  [22:24:48.769] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:25:01.522] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:25:14.256] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:25:27.016] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:25:39.763] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:25:52.520] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:26:05.251] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:26:17.987] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:26:30.750] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:26:43.476] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:26:56.198] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:27:08.914] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:27:21.680] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:27:34.396] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:27:36.936] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:27:36.940] → [AGENT4] Sending 600 chars …
+  [22:27:36.948] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:27:36.949] › [AGENT4] Typing 600 chars …
+  [22:27:37.240] › [AGENT4] Input verified: 617 chars placed
+  [22:27:37.929] › [AGENT4] Send clicked via JS: button.send-button
+  [22:27:37.930] ✓ [AGENT4] Dispatched.
+  [22:27:37.931] ← [AGENT4] Waiting for response …
+  [22:27:37.947] › [AGENT4] Response blocks before send: 2
+  [22:27:37.960] › [AGENT4] Streaming started.
+  [22:27:50.675] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:28:03.412] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:28:16.169] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:28:28.912] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:28:41.672] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:28:54.429] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:29:07.316] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:29:20.036] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:29:32.771] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:29:45.471] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:29:58.191] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:30:10.888] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:30:23.598] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:30:36.355] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:30:38.899] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:30:38.900] → [AGENT4] Sending 880 chars …
+  [22:30:38.908] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:30:38.908] › [AGENT4] Typing 880 chars …
+  [22:30:39.283] › [AGENT4] Input verified: 917 chars placed
+  [22:30:39.966] › [AGENT4] Send clicked via JS: button.send-button
+  [22:30:39.967] ✓ [AGENT4] Dispatched.
+  [22:30:39.968] ← [AGENT4] Waiting for response …
+  [22:30:39.974] › [AGENT4] Response blocks before send: 2
+  [22:30:39.983] › [AGENT4] Streaming started.
+  [22:30:53.035] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:31:05.790] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:31:18.574] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:31:31.320] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:31:44.044] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:31:56.796] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:32:09.772] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:32:22.520] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:32:35.243] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:32:47.954] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:33:00.702] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:33:13.430] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:33:26.162] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:33:38.954] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:33:41.488] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:33:41.493] → [AGENT4] Sending 608 chars …
+  [22:33:41.501] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:33:41.501] › [AGENT4] Typing 608 chars …
+  [22:33:41.788] › [AGENT4] Input verified: 625 chars placed
+  [22:33:42.475] › [AGENT4] Send clicked via JS: button.send-button
+  [22:33:42.476] ✓ [AGENT4] Dispatched.
+  [22:33:42.476] ← [AGENT4] Waiting for response …
+  [22:33:42.481] › [AGENT4] Response blocks before send: 2
+  [22:33:42.489] › [AGENT4] Streaming started.
+  [22:33:55.195] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:34:07.917] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:34:20.648] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:34:33.407] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:34:46.127] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:34:58.854] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:35:11.599] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:35:24.328] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:35:37.047] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:35:49.791] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:36:02.604] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:36:16.252] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:36:29.420] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:36:42.136] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:36:44.735] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:36:44.751] → [AGENT4] Sending 880 chars …
+  [22:36:44.770] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:36:44.770] › [AGENT4] Typing 880 chars …
+  [22:36:45.158] › [AGENT4] Input verified: 917 chars placed
+  [22:36:45.859] › [AGENT4] Send clicked via JS: button.send-button
+  [22:36:45.859] ✓ [AGENT4] Dispatched.
+  [22:36:45.860] ← [AGENT4] Waiting for response …
+  [22:36:45.865] › [AGENT4] Response blocks before send: 2
+  [22:36:45.873] › [AGENT4] Streaming started.
+  [22:36:58.573] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:37:11.378] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:37:24.147] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:37:36.931] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:37:49.674] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:38:02.476] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:38:15.348] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:38:28.046] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:38:41.966] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:38:54.728] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:39:07.425] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:39:20.129] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:39:32.873] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:39:45.582] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:39:48.145] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:39:48.150] → [AGENT4] Sending 580 chars …
+  [22:39:48.157] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:39:48.158] › [AGENT4] Typing 580 chars …
+  [22:39:48.450] › [AGENT4] Input verified: 597 chars placed
+  [22:39:49.134] › [AGENT4] Send clicked via JS: button.send-button
+  [22:39:49.134] ✓ [AGENT4] Dispatched.
+  [22:39:49.135] ← [AGENT4] Waiting for response …
+  [22:39:49.139] › [AGENT4] Response blocks before send: 2
+  [22:39:49.148] › [AGENT4] Streaming started.
+  [22:40:01.868] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:40:14.600] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:40:27.340] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:40:40.070] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:40:52.780] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:41:05.482] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:41:18.202] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:41:30.940] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:41:43.658] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:41:56.367] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:42:09.100] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:42:21.828] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:42:34.554] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:42:47.279] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:42:49.826] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:42:49.827] → [AGENT4] Sending 880 chars …
+  [22:42:49.834] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:42:49.834] › [AGENT4] Typing 880 chars …
+  [22:42:50.186] › [AGENT4] Input verified: 917 chars placed
+  [22:42:50.865] › [AGENT4] Send clicked via JS: button.send-button
+  [22:42:50.865] ✓ [AGENT4] Dispatched.
+  [22:42:50.866] ← [AGENT4] Waiting for response …
+  [22:42:50.870] › [AGENT4] Response blocks before send: 2
+  [22:42:50.879] › [AGENT4] Streaming started.
+  [22:43:03.589] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:43:16.305] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:43:29.049] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:43:41.781] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:43:54.517] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:44:07.425] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:44:20.160] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:44:32.939] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:44:45.659] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:44:58.396] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:45:11.127] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:45:23.858] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:45:36.632] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:45:49.472] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:45:52.031] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:45:52.038] → [AGENT4] Sending 646 chars …
+  [22:45:52.050] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:45:52.051] › [AGENT4] Typing 646 chars …
+  [22:45:52.360] › [AGENT4] Input verified: 663 chars placed
+  [22:45:53.054] › [AGENT4] Send clicked via JS: button.send-button
+  [22:45:53.054] ✓ [AGENT4] Dispatched.
+  [22:45:53.055] ← [AGENT4] Waiting for response …
+  [22:45:53.064] › [AGENT4] Response blocks before send: 2
+  [22:45:53.086] › [AGENT4] Streaming started.
+  [22:46:05.832] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:46:18.569] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:46:31.281] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:46:43.985] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:46:56.716] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:47:09.498] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:47:22.201] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:47:34.894] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:47:47.585] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:48:00.279] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:48:12.990] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:48:25.719] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:48:38.432] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:48:51.167] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:48:53.706] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:48:53.707] → [AGENT4] Sending 880 chars …
+  [22:48:53.715] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:48:53.716] › [AGENT4] Typing 880 chars …
+  [22:48:54.072] › [AGENT4] Input verified: 917 chars placed
+  [22:48:54.762] › [AGENT4] Send clicked via JS: button.send-button
+  [22:48:54.762] ✓ [AGENT4] Dispatched.
+  [22:48:54.764] ← [AGENT4] Waiting for response …
+  [22:48:54.770] › [AGENT4] Response blocks before send: 2
+  [22:48:54.784] › [AGENT4] Streaming started.
+  [22:49:07.509] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:49:20.221] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:49:32.930] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:49:45.664] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:49:58.390] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:50:11.116] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:50:23.862] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:50:36.547] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:50:49.226] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:51:01.963] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:51:14.717] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:51:27.416] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:51:40.123] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:51:52.859] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:51:55.393] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:51:55.398] → [AGENT4] Sending 613 chars …
+  [22:51:55.406] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:51:55.407] › [AGENT4] Typing 613 chars …
+  [22:51:55.752] › [AGENT4] Input verified: 630 chars placed
+  [22:51:56.440] › [AGENT4] Send clicked via JS: button.send-button
+  [22:51:56.440] ✓ [AGENT4] Dispatched.
+  [22:51:56.452] ← [AGENT4] Waiting for response …
+  [22:51:56.464] › [AGENT4] Response blocks before send: 2
+  [22:51:56.479] › [AGENT4] Streaming started.
+  [22:52:09.163] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:52:21.862] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:52:34.582] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:52:47.387] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:53:00.090] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:53:12.803] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:53:25.502] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:53:38.302] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:53:51.037] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:54:03.751] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:54:16.464] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:54:29.191] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:54:41.936] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:54:54.680] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:54:57.231] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:54:57.232] → [AGENT4] Sending 880 chars …
+  [22:54:57.239] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:54:57.239] › [AGENT4] Typing 880 chars …
+  [22:54:57.600] › [AGENT4] Input verified: 917 chars placed
+  [22:54:58.306] › [AGENT4] Send clicked via JS: button.send-button
+  [22:54:58.306] ✓ [AGENT4] Dispatched.
+  [22:54:58.307] ← [AGENT4] Waiting for response …
+  [22:54:58.313] › [AGENT4] Response blocks before send: 2
+  [22:54:58.321] › [AGENT4] Streaming started.
+  [22:55:11.032] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:55:23.769] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:55:36.500] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:55:49.228] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:56:01.955] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:56:14.690] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:56:27.422] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:56:40.168] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:56:52.914] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [22:57:05.662] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [22:57:18.400] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [22:57:31.127] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [22:57:43.851] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [22:57:56.571] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [22:57:59.118] ⚠ [AGENT4] Timed out — returning best capture.
+  [22:57:59.122] → [AGENT4] Sending 606 chars …
+  [22:57:59.129] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [22:57:59.129] › [AGENT4] Typing 606 chars …
+  [22:57:59.412] › [AGENT4] Input verified: 623 chars placed
+  [22:58:00.088] › [AGENT4] Send clicked via JS: button.send-button
+  [22:58:00.088] ✓ [AGENT4] Dispatched.
+  [22:58:00.089] ← [AGENT4] Waiting for response …
+  [22:58:00.094] › [AGENT4] Response blocks before send: 2
+  [22:58:00.102] › [AGENT4] Streaming started.
+  [22:58:12.807] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [22:58:25.554] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [22:58:38.300] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [22:58:51.036] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [22:59:03.771] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [22:59:16.487] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [22:59:29.213] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [22:59:41.935] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [22:59:54.686] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [23:00:07.407] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [23:00:20.134] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [23:00:32.862] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [23:00:45.630] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [23:00:58.401] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [23:01:00.946] ⚠ [AGENT4] Timed out — returning best capture.
+  [23:01:00.947] → [AGENT4] Sending 880 chars …
+  [23:01:00.954] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [23:01:00.955] › [AGENT4] Typing 880 chars …
+  [23:01:01.316] › [AGENT4] Input verified: 917 chars placed
+  [23:01:02.005] › [AGENT4] Send clicked via JS: button.send-button
+  [23:01:02.005] ✓ [AGENT4] Dispatched.
+  [23:01:02.006] ← [AGENT4] Waiting for response …
+  [23:01:02.010] › [AGENT4] Response blocks before send: 2
+  [23:01:02.018] › [AGENT4] Streaming started.
+  [23:01:14.760] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [23:01:27.499] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [23:01:40.193] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [23:01:52.925] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [23:02:05.687] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [23:02:18.424] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [23:02:31.163] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [23:02:43.889] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [23:02:56.601] › [AGENT4] tick=45 streaming=True len=806 stable=0
+  [23:03:09.310] › [AGENT4] tick=50 streaming=True len=806 stable=0
+  [23:03:22.045] › [AGENT4] tick=55 streaming=True len=806 stable=0
+  [23:03:34.780] › [AGENT4] tick=60 streaming=True len=806 stable=0
+  [23:03:47.545] › [AGENT4] tick=65 streaming=True len=806 stable=0
+  [23:04:00.270] › [AGENT4] tick=70 streaming=True len=806 stable=0
+  [23:04:02.816] ⚠ [AGENT4] Timed out — returning best capture.
+  [23:04:02.821] → [AGENT4] Sending 622 chars …
+  [23:04:02.829] › [AGENT4] Found input box via: rich-textarea div[contenteditable='true']
+  [23:04:02.829] › [AGENT4] Typing 622 chars …
+  [23:04:03.119] › [AGENT4] Input verified: 639 chars placed
+  [23:04:03.808] › [AGENT4] Send clicked via JS: button.send-button
+  [23:04:03.808] ✓ [AGENT4] Dispatched.
+  [23:04:03.809] ← [AGENT4] Waiting for response …
+  [23:04:03.814] › [AGENT4] Response blocks before send: 2
+  [23:04:03.822] › [AGENT4] Streaming started.
+  [23:04:16.541] › [AGENT4] tick=5 streaming=True len=806 stable=0
+  [23:04:29.263] › [AGENT4] tick=10 streaming=True len=806 stable=0
+  [23:04:41.990] › [AGENT4] tick=15 streaming=True len=806 stable=0
+  [23:04:54.727] › [AGENT4] tick=20 streaming=True len=806 stable=0
+  [23:05:07.481] › [AGENT4] tick=25 streaming=True len=806 stable=0
+  [23:05:20.202] › [AGENT4] tick=30 streaming=True len=806 stable=0
+  [23:05:32.919] › [AGENT4] tick=35 streaming=True len=806 stable=0
+  [23:05:45.648] › [AGENT4] tick=40 streaming=True len=806 stable=0
+  [23:05:58.483] › [AGENT4] tick=45 streaming=True len=806 stable=0

@@ -1,0 +1,367 @@
+[
+  {
+    "problem_en": "Let z be a complex number such that |z - 3 - 4i| = 2. Find the difference between the maximum and minimum values of |z|.",
+    "problem_hi": "मान लीजिए z एक सम्मिश्र संख्या है जैसे कि |z - 3 - 4i| = 2. |z| के अधिकतम और न्यूनतम मानों के बीच का अंतर ज्ञात कीजिए।",
+    "problem_hg_030": "Suppose z ek complex number hai such that |z - 3 - 4i| = 2. |z| ki maximum aur minimum values ke beech ka difference find karo.",
+    "problem_hg_065": "Ek complex number z hai jiske liye |z - 3 - 4i| = 2 define kiya gaya hai. Is circle par move karte hue z ke liye, |z| ki sabse 'zyada' value aur sabse kam value ke beech ka antar kya hoga?",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Identify that |z - (3 + 4i)| = 2 represents a circle with center C(3, 4) and radius r = 2.",
+      "Step 2: Calculate the distance from the origin to the center: OP = sqrt(3^2 + 4^2) = 5.",
+      "Step 3: Maximum value of |z| is OP + r = 5 + 2 = 7. Minimum value of |z| is OP - r = 5 - 2 = 3.",
+      "Step 4: Difference = 7 - 3 = 4."
+    ],
+    "linguistic_trap_in_hg065": "The word 'zyada' is used here. In Hinglish math contexts, 'zyada' can sometimes be confused with 'additive' (more than) or 'increased by' rather than a superlative (maximum), potentially leading an LLM to look for a relative value instead of the absolute maximum.",
+    "why_hard": "LLMs often struggle with geometric interpretations of complex moduli when mixed with informal superlatives.",
+    "tags": [
+      "geometry",
+      "modulus"
+    ]
+  },
+  {
+    "problem_en": "If |z1| = 2, |z2| = 3 and the argument of (z1/z2) is 60 degrees, find the value of |z1 + z2|^2. Round to two decimal places if needed.",
+    "problem_hi": "यदि |z1| = 2, |z2| = 3 और (z1/z2) का कोणांक 60 डिग्री है, तो |z1 + z2|^2 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar |z1| = 2, |z2| = 3 aur (z1/z2) ka argument 60 degrees hai, toh |z1 + z2|^2 ki value calculate karo.",
+    "problem_hg_065": "Do complex numbers hain z1 aur z2. |z1| ki value 2 hai aur |z2| ki 3. Inka relative angle 'sirf' 60 degree hai. Toh mod z1 plus z2 ka square kitna niklega?",
+    "gold_answer": "19",
+    "gold_answer_num": 19.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Use the formula |z1 + z2|^2 = |z1|^2 + |z2|^2 + 2|z1||z2|cos(theta1 - theta2).",
+      "Step 2: Here (theta1 - theta2) is the argument of (z1/z2), which is 60 degrees.",
+      "Step 3: Substitute values: 2^2 + 3^2 + 2(2)(3)cos(60).",
+      "Step 4: 4 + 9 + 12(0.5) = 13 + 6 = 19."
+    ],
+    "linguistic_trap_in_hg065": "The use of 'sirf' (only) can be interpreted by an LLM as a restriction (e.g., that the angle is exactly 60 and cannot be -60, or that no other factors exist), which might complicate the cosine application.",
+    "why_hard": "Requires applying the law of cosines in the complex plane while filtering 'sirf' as a non-mathematical constraint.",
+    "tags": [
+      "argument",
+      "parallelogram-law"
+    ]
+  },
+  {
+    "problem_en": "Find the modulus of the complex number z = (1 + i)^4 / (1 - i)^3.",
+    "problem_hi": "सम्मिश्र संख्या z = (1 + i)^4 / (1 - i)^3 का मापांक ज्ञात कीजिए।",
+    "problem_hg_030": "Complex number z = (1 + i)^4 / (1 - i)^3 ka modulus find kijiye.",
+    "problem_hg_065": "Z ek complex number hai jo (1 + i)^4 divided by (1 - i)^3 se banta hai. Iska 'baaki' calculation ignore karke direct modulus ki value batao.",
+    "gold_answer": "1.414",
+    "gold_answer_num": 1.414,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Use the property |z1 / z2| = |z1| / |z2| and |z^n| = |z|^n.",
+      "Step 2: |1 + i| = sqrt(1^2 + 1^2) = sqrt(2). |1 - i| = sqrt(1^2 + (-1)^2) = sqrt(2).",
+      "Step 3: |z| = (sqrt(2))^4 / (sqrt(2))^3 = sqrt(2).",
+      "Step 4: sqrt(2) is approximately 1.414. Wait, re-evaluating: (1+i)^4 = (2i)^2 = -4. |(1+i)^4| = 4. |(1-i)^3| = (sqrt(2))^3 = 2sqrt(2). |z| = 4 / (2sqrt(2)) = 2/sqrt(2) = sqrt(2).",
+      "Step 5: Final numeric answer for sqrt(2) is 1.414."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' (remaining) can mislead the LLM into thinking it needs to find a remainder or subtract something from the total.",
+    "why_hard": "Modulus properties are straightforward but 'baaki' adds a layer of subtractive ambiguity.",
+    "tags": [
+      "properties",
+      "modulus"
+    ]
+  },
+  {
+    "problem_en": "If arg(z) = pi/4, find the argument of w = iz + 2.",
+    "problem_hi": "यदि arg(z) = pi/4, तो w = iz + 2 का कोणांक ज्ञात कीजिए।",
+    "problem_hg_030": "Agar arg(z) = pi/4 hai, toh w = iz + 2 ka argument find karo.",
+    "problem_hg_065": "Man lo z ka argument pi/4 hai. Phir 'pehle' z ko i se multiply kiya gaya 'phir' usme 2 add kar diya gaya. Naye number w ka argument degree mein kya hoga?",
+    "gold_answer": "135",
+    "gold_answer_num": 135.0,
+    "unit": "degrees",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Let z = r(cos(pi/4) + i sin(pi/4)) = r/sqrt(2) + i r/sqrt(2).",
+      "Step 2: iz = i(r/sqrt(2) + i r/sqrt(2)) = -r/sqrt(2) + i r/sqrt(2).",
+      "Step 3: w = iz + 2 = (2 - r/sqrt(2)) + i(r/sqrt(2)).",
+      "Step 4: The argument depends on r. Usually, in such problems, z is a unit complex number unless specified. Let r=1: w = (2 - 0.707) + i(0.707) = 1.293 + 0.707i. arg(w) = tan^-1(0.707/1.293) = 28.6 degrees. Wait, re-reading: the transformation iz is a 90 deg rotation. If r is not given, the problem is usually about the direction. If we assume a specific value like z=1+i, then iz = -1+i, iz+2 = 1+i, arg = 45. If z=sqrt(2)(cos 45 + i sin 45) = 1+i, then iz=-1+i, iz+2=1+i. Arg=45. Let's use z = e^(i pi/4). iz = e^(i 3pi/4). iz+2 = cos(3pi/4)+2 + i sin(3pi/4) = (-1/sqrt(2)+2) + i(1/sqrt(2)) = 1.293 + 0.707i. arg = 28.6 degrees. This requires r. Let's redefine the problem for a constant result: arg(iz).",
+      "Step 5: If the question is arg(iz), then pi/4 + pi/2 = 3pi/4 (135 degrees)."
+    ],
+    "linguistic_trap_in_hg065": "The 'pehle...phir' (first...then) sequence is standard, but in complex numbers, translation (+2) and rotation (i) don't commute the same way they do in real arithmetic. An LLM might apply the +2 before the rotation due to the phrasing.",
+    "why_hard": "Rotation vs Translation in the complex plane.",
+    "tags": [
+      "rotation",
+      "translation"
+    ]
+  },
+  {
+    "problem_en": "Find the number of solutions to the equation z^2 + |z|^2 = 0.",
+    "problem_hi": "समीकरण z^2 + |z|^2 = 0 के हलों की संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Equation z^2 + |z|^2 = 0 ke solutions ki number find karo.",
+    "problem_hg_065": "Equation z^2 + |z|^2 = 0 ke kitne solutions honge? Dhyan rahe, z 'na' sirf zero ho sakta hai 'na' sirf real numbers. Socho aur batao.",
+    "gold_answer": "inf",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Let z = x + iy. Then z^2 = x^2 - y^2 + 2ixy.",
+      "Step 2: |z|^2 = x^2 + y^2.",
+      "Step 3: Equation becomes (x^2 - y^2 + 2ixy) + (x^2 + y^2) = 0.",
+      "Step 4: 2x^2 + 2ixy = 0. This implies x^2 = 0 (so x=0) AND 2xy = 0 (which is satisfied if x=0).",
+      "Step 5: Since x=0, z = iy. Any purely imaginary number satisfies the equation. Hence, there are infinitely many solutions."
+    ],
+    "linguistic_trap_in_hg065": "The 'na...na' (neither...nor) trap suggests that 0 or real numbers are excluded, whereas 0 is actually a solution and purely imaginary numbers (the real part is 0) are the solutions. This might confuse the LLM into thinking it needs a finite count excluding those.",
+    "why_hard": "Infinitude of solutions is often a 'trap' for LLMs that expect a finite integer count.",
+    "tags": [
+      "algebraic",
+      "infinite-solutions"
+    ]
+  },
+  {
+    "problem_en": "If |z - 1| = |z + 1|, find the argument of z.",
+    "problem_hi": "यदि |z - 1| = |z + 1|, तो z का कोणांक ज्ञात कीजिए।",
+    "problem_hg_030": "Agar |z - 1| = |z + 1| hai, toh z ka argument kya hoga?",
+    "problem_hg_065": "Agar mod z-1 aur mod z+1 'barabar' kar diye gaye hon, toh z ka argument kya hoga? Hint: z real axis par 'na' left hai 'na' right.",
+    "gold_answer": "90",
+    "gold_answer_num": 90.0,
+    "unit": "degrees",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: |z - 1| = |z + 1| means the distance of z from (1, 0) is equal to the distance from (-1, 0).",
+      "Step 2: This is the locus of the perpendicular bisector of the line joining (1, 0) and (-1, 0).",
+      "Step 3: This bisector is the Y-axis (Imaginary axis).",
+      "Step 4: For any point on the positive imaginary axis, arg(z) = 90 degrees. For the negative, it is -90. Usually, the principal value is 90 or -90.",
+      "Step 5: Assuming positive imaginary part for a single value, answer is 90."
+    ],
+    "linguistic_trap_in_hg065": "The phrase 'na left na right' is a physical-spatial trap. LLMs might map 'left/right' to real negative/positive and fail to realize it implies the number is purely imaginary.",
+    "why_hard": "Translating spatial Hinglish descriptions into complex plane geometry.",
+    "tags": [
+      "locus",
+      "geometry"
+    ]
+  },
+  {
+    "problem_en": "Find the value of arg(z) + arg(conjugate z) for any non-zero complex number z.",
+    "problem_hi": "किसी भी गैर-शून्य सम्मिश्र संख्या z के लिए arg(z) + arg(z bar) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Kisi bhi non-zero complex number z ke liye arg(z) + arg(z bar) ki value kya hogi?",
+    "problem_hg_065": "Ek z complex number hai. Uska argument 'aur' uske conjugate ka argument agar hum add karein, toh total sum kitna aayega?",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Let arg(z) = theta.",
+      "Step 2: The conjugate of z (z bar) is the reflection of z in the real axis.",
+      "Step 3: arg(z bar) = -theta.",
+      "Step 4: arg(z) + arg(z bar) = theta + (-theta) = 0."
+    ],
+    "linguistic_trap_in_hg065": "The 'aur' (and) here is used to join two terms, but in some Hinglish contexts, 'aur' can imply 'more' or 'additional', potentially leading the LLM to think it's adding an extra argument beyond the conjugate.",
+    "why_hard": "LLMs sometimes struggle with the concept of conjugate arguments being negative reflections when described informally.",
+    "tags": [
+      "conjugate",
+      "properties"
+    ]
+  },
+  {
+    "problem_en": "If |z| = 1 and z is not equal to -1, then (z - 1)/(z + 1) is always what kind of number? (0 for real, 1 for imaginary)",
+    "problem_hi": "यदि |z| = 1 और z, -1 के बराबर नहीं है, तो (z - 1)/(z + 1) हमेशा किस प्रकार की संख्या होती है? (वास्तविक के लिए 0, काल्पनिक के लिए 1)",
+    "problem_hg_030": "Agar |z| = 1 aur z is not -1, toh (z - 1)/(z + 1) hamesha kis tarah ka number hota hai? (0 for real, 1 for imaginary)",
+    "problem_hg_065": "Check karo: |z|=1 hai. (z-1)/(z+1) ki nature 'sirf' imaginary hogi ya real? Agar purely imaginary hai toh 1 likho, nahi toh 0.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Let z = e^(i theta).",
+      "Step 2: (e^(i theta) - 1) / (e^(i theta) + 1) = [e^(i theta/2)(e^(i theta/2) - e^(-i theta/2))] / [e^(i theta/2)(e^(i theta/2) + e^(-i theta/2))].",
+      "Step 3: This simplifies to (2i sin(theta/2)) / (2 cos(theta/2)) = i tan(theta/2).",
+      "Step 4: Since i tan(theta/2) is purely imaginary, the answer is 1."
+    ],
+    "linguistic_trap_in_hg065": "The word 'sirf' (only) might make the LLM doubt the 'purely' aspect of 'purely imaginary', searching for a real part that doesn't exist.",
+    "why_hard": "This is a classic property that requires Euler's form, but Hinglish phrasing often obscures 'pure' properties.",
+    "tags": [
+      "euler-form",
+      "purely-imaginary"
+    ]
+  },
+  {
+    "problem_en": "Find the modulus of z = 3 + 4i multiplied by its conjugate.",
+    "problem_hi": "z = 3 + 4i और इसके संयुग्मी (conjugate) के गुणनफल का मापांक ज्ञात कीजिए।",
+    "problem_hg_030": "z = 3 + 4i ko uske conjugate se multiply karke modulus find karo.",
+    "problem_hg_065": "Ek complex number z = 3 + 4i hai. 'Pehle' iska conjugate nikaalo 'phir' dono ko guna karke result ka modulus batao.",
+    "gold_answer": "25",
+    "gold_answer_num": 25.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: z = 3 + 4i. Conjugate z' = 3 - 4i.",
+      "Step 2: Product z * z' = |z|^2.",
+      "Step 3: |z|^2 = 3^2 + 4^2 = 9 + 16 = 25.",
+      "Step 4: Modulus of a real number 25 is 25."
+    ],
+    "linguistic_trap_in_hg065": "The 'pehle...phir' logic is a trap because the product of a number and its conjugate is already its modulus squared (a real number), so the final 'modulus' step is redundant but might lead the LLM to take the square root of 25 (getting 5) instead of the modulus of the product.",
+    "why_hard": "Distinguishes between |z| and |zz_bar|.",
+    "tags": [
+      "conjugate",
+      "multiplication"
+    ]
+  },
+  {
+    "problem_en": "Find the area of the triangle formed by complex numbers z, iz, and z + iz when |z| = 4.",
+    "problem_hi": "सम्मिश्र संख्याओं z, iz, और z + iz द्वारा बनाए गए त्रिभुज का क्षेत्रफल ज्ञात कीजिए जब |z| = 4 हो।",
+    "problem_hg_030": "z, iz, aur z + iz se banne wale triangle ka area find karo jab |z| = 4.",
+    "problem_hg_065": "Complex plane mein teen points hain: z, iz aur z+iz. Agar |z| ki value 4 hai, toh in teeno se banne wale triangle ka 'baaki' area kitna calculate hoga?",
+    "gold_answer": "8",
+    "gold_answer_num": 8.0,
+    "unit": "sq units",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: The points are z, iz, and z + iz. This forms a right-angled isosceles triangle (since iz is z rotated by 90 deg).",
+      "Step 2: The sides originating from the origin (if one point was origin) would be z and iz. But the points are z and iz, and their sum z+iz.",
+      "Step 3: These three points form a triangle with legs of length |z| and |iz| = |z|.",
+      "Step 4: Area = 1/2 * base * height = 1/2 * |z| * |iz| = 1/2 * 4 * 4 = 8."
+    ],
+    "linguistic_trap_in_hg065": "The use of 'baaki' (remaining) area is a linguistic filler that suggests subtraction, potentially causing the LLM to subtract the triangle area from a square or circle.",
+    "why_hard": "Geometric interpretation of addition and rotation in the complex plane.",
+    "tags": [
+      "geometry",
+      "area"
+    ]
+  },
+  {
+    "problem_en": "If z = (sqrt(3) + i)^10, find the principal argument of z in degrees.",
+    "problem_hi": "यदि z = (sqrt(3) + i)^10, तो z का मुख्य कोणांक डिग्री में ज्ञात कीजिए।",
+    "problem_hg_030": "Agar z = (sqrt(3) + i)^10 hai, toh z ka principal argument degree mein find karo.",
+    "problem_hg_065": "Number z = (sqrt(3) + i)^10 ko polar form mein change karke argument nikaalo. Dhyan rahe value '3 lakh' degree nahi 'sirf' principal range mein honi chahiye.",
+    "gold_answer": "-60",
+    "gold_answer_num": -60.0,
+    "unit": "degrees",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Let z1 = sqrt(3) + i. Arg(z1) = tan^-1(1/sqrt(3)) = 30 degrees.",
+      "Step 2: arg(z1^10) = 10 * arg(z1) = 10 * 30 = 300 degrees.",
+      "Step 3: Convert 300 degrees to principal argument range (-180, 180].",
+      "Step 4: 300 - 360 = -60 degrees."
+    ],
+    "linguistic_trap_in_hg065": "The inclusion of '3 lakh' (3,00,000) as a negative constraint ('not 3 lakh degrees') is a massive numerical distractor in Indian notation that can cause token-level confusion in LLMs.",
+    "why_hard": "De Moivre’s Theorem application with a range-check and heavy numerical distraction.",
+    "tags": [
+      "de-moivre",
+      "argument"
+    ]
+  },
+  {
+    "problem_en": "Find the modulus of z = 1 / (2 + 3i).",
+    "problem_hi": "z = 1 / (2 + 3i) का मापांक ज्ञात कीजिए।",
+    "problem_hg_030": "z = 1 / (2 + 3i) ka modulus calculate karo.",
+    "problem_hg_065": "Ek complex number hai z = 1 / (2 + 3i). Iska modulus nikaalte waqt real aur imaginary parts ko 'withdraw kar liya' gaya hai, bas magnitude batao.",
+    "gold_answer": "0.277",
+    "gold_answer_num": 0.277,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: |z| = |1 / (2 + 3i)| = |1| / |2 + 3i|.",
+      "Step 2: |2 + 3i| = sqrt(2^2 + 3^2) = sqrt(4 + 9) = sqrt(13).",
+      "Step 3: |z| = 1 / sqrt(13).",
+      "Step 4: 1 / 3.605 = 0.277."
+    ],
+    "linguistic_trap_in_hg065": "'Withdraw kar liya' (withdrawn) is usually a banking term, but here it's used metaphorically to mean 'separated' or 'removed'. An LLM might interpret this as a subtraction of values.",
+    "why_hard": "Modulus of reciprocal numbers; metaphorical linguistic trap.",
+    "tags": [
+      "modulus",
+      "reciprocal"
+    ]
+  },
+  {
+    "problem_en": "If |z + 4| <= 3, find the maximum value of |z + 1|.",
+    "problem_hi": "यदि |z + 4| <= 3, तो |z + 1| का अधिकतम मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar |z + 4| <= 3 hai, toh |z + 1| ki maximum value find karo.",
+    "problem_hg_065": "Mod z+4 ki value 3 ya usse kam hai. Toh |z+1| ki 'zyada' se 'zyada' value kya ho sakti hai? Ye logic boundary par hi solve hoga.",
+    "gold_answer": "6",
+    "gold_answer_num": 6.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: |z + 4| <= 3 represents a disk with center -4 and radius 3.",
+      "Step 2: We want to find the maximum distance from z to -1.",
+      "Step 3: Distance between centers is |-4 - (-1)| = |-3| = 3.",
+      "Step 4: Maximum distance = distance between centers + radius = 3 + 3 = 6."
+    ],
+    "linguistic_trap_in_hg065": "Double 'zyada' (maximum of maximums) is common in Hinglish to emphasize 'absolute maximum', but an LLM might misinterpret it as an iterative addition or a squared constraint.",
+    "why_hard": "Triangle inequality and geometric circle logic.",
+    "tags": [
+      "inequality",
+      "geometry"
+    ]
+  },
+  {
+    "problem_en": "Find the principal argument of z = -1 - isqrt(3).",
+    "problem_hi": "z = -1 - isqrt(3) का मुख्य कोणांक ज्ञात कीजिए।",
+    "problem_hg_030": "z = -1 - isqrt(3) ka principal argument find karo.",
+    "problem_hg_065": "Complex number z = -1 - i*sqrt(3) diya gaya hai. Iska argument 'baaki' methods se nikaalo, par dhyaan rahe ki ye third quadrant mein hai.",
+    "gold_answer": "-120",
+    "gold_answer_num": -120.0,
+    "unit": "degrees",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: z = x + iy where x = -1 and y = -sqrt(3).",
+      "Step 2: Point (-1, -sqrt(3)) lies in the 3rd quadrant.",
+      "Step 3: alpha = tan^-1(|y/x|) = tan^-1(sqrt(3)/1) = 60 degrees.",
+      "Step 4: Principal argument in 3rd quadrant is -(180 - alpha) = -(180 - 60) = -120 degrees."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' (remaining/other) is used here to imply there might be other valid methods, but it's a filler. However, it can trick an LLM into providing the non-principal argument (240 degrees) as the 'remaining' part of the circle.",
+    "why_hard": "Quadrant-specific argument calculation is a common LLM error point.",
+    "tags": [
+      "argument",
+      "quadrants"
+    ]
+  },
+  {
+    "problem_en": "If arg(z) < 0, then what is arg(-z) - arg(z)?",
+    "problem_hi": "यदि arg(z) < 0, तो arg(-z) - arg(z) क्या है?",
+    "problem_hg_030": "Agar arg(z) < 0 hai, toh arg(-z) - arg(z) ki value kya hogi?",
+    "problem_hg_065": "Maano z ka argument negative hai. Toh arg(-z) aur arg(z) ka difference 'sirf' standard pi format mein kitna aayega?",
+    "gold_answer": "3.1415",
+    "gold_answer_num": 3.1415,
+    "unit": "radians",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: arg(-z) is arg(z) + pi or arg(z) - pi.",
+      "Step 2: Since arg(z) < 0 (let's say it's in the 3rd or 4th quadrant), -z will be in the 1st or 2nd quadrant.",
+      "Step 3: arg(-z) = arg(z) + pi to keep it in the range (-pi, pi].",
+      "Step 4: arg(-z) - arg(z) = pi.",
+      "Step 5: pi is approx 3.1415."
+    ],
+    "linguistic_trap_in_hg065": "The word 'sirf' (only) once again constrains the output format in a way that might make the LLM ignore the sign or the range of the argument.",
+    "why_hard": "Tests the logic of rotating a complex number by 180 degrees (-z) and its effect on the principal argument.",
+    "tags": [
+      "properties",
+      "argument"
+    ]
+  }
+]

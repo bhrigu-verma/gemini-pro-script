@@ -1,0 +1,404 @@
+[
+  {
+    "problem_en": "Find the area of the triangle formed by the tangents to the parabola y² = 12x at the points where the line x - y + 3 = 0 intersects the parabola.",
+    "problem_hi": "परवलय y² = 12x पर उन बिंदुओं पर खींची गई स्पर्शरेखाओं द्वारा बने त्रिभुज का क्षेत्रफल ज्ञात कीजिए जहाँ रेखा x - y + 3 = 0 परवलय को प्रतिच्छेद करती है।",
+    "problem_hg_030": "Parabola y² = 12x ki un points par tangents draw kariye jahan line x - y + 3 = 0 parabola ko intersect karti hai. Isse banne wale triangle ka area calculate karein.",
+    "problem_hg_065": "Ek parabola y² = 12x hai. Line x - y + 3 = 0 jahan intersect karegi, wahan ki tangents se triangle banana hai. Pehle karo intersection points find phir area nikalo sequence wise.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "sq units",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: Compare y² = 12x with y² = 4ax to get a = 3.",
+      "Step 2: The line x - y + 3 = 0 can be written as y = x + 3. This is in the form y = mx + c where m = 1 and c = 3.",
+      "Step 3: Check the condition of tangency c = a/m. Here 3 = 3/1, which is true.",
+      "Step 4: Since the line is already a tangent, it intersects the parabola at only one point (the point of tangency).",
+      "Final: The triangle formed by tangents at a single point (coincident) has area = 0."
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: This trap forces the LLM to search for two distinct intersection points through a quadratic equation, often leading it to ignore the 'tangency' shortcut and get confused by a zero discriminant.",
+    "why_hard": "LLMs often fail to check the condition of tangency first and attempt complex coordinate geometry formulas that result in division by zero or undefined triangles.",
+    "tags": [
+      "tangency_condition",
+      "area_calculation",
+      "geometric_intuition"
+    ]
+  },
+  {
+    "problem_en": "Tangents are drawn from the point (-2, -1) to the parabola y² = 4x. If α is the angle between these tangents, find the value of |tan α|.",
+    "problem_hi": "बिंदु (-2, -1) से परवलय y² = 4x पर स्पर्शरेखाएँ खींची गई हैं। यदि इन स्पर्शरेखाओं के बीच का कोण α है, तो |tan α| का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Point (-2, -1) se parabola y² = 4x par tangents draw ki gayi hain. Agar tangents ke beech ka angle α hai, toh |tan α| ki value find karein.",
+    "problem_hg_065": "Parabola y² = 4x par point (-2, -1) se tangents banayi. Dono ko milakar jo angle α ban raha hai, uske liye |tan α| calculate karo.",
+    "gold_answer": "3",
+    "gold_answer_num": 3.0,
+    "unit": "dimensionless",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: Equation of tangent to y² = 4x is y = mx + 1/m. Since it passes through (-2, -1), -1 = -2m + 1/m.",
+      "Step 2: Multiply by m: -m = -2m² + 1 => 2m² - m - 1 = 0.",
+      "Step 3: Solve for m: (2m + 1)(m - 1) = 0. Slopes are m1 = 1 and m2 = -1/2.",
+      "Step 4: tan α = |(m1 - m2) / (1 + m1m2)| = |(1 - (-1/2)) / (1 + 1(-1/2))| = |(3/2) / (1/2)| = 3.",
+      "Final: 3"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: The phrase 'dono ko milakar' (combining both) can mislead the LLM into adding the slopes or the angles instead of using the relative angle formula.",
+    "why_hard": "Requires solving a quadratic in 'm' and then applying the trigonometric identity for the angle between lines.",
+    "tags": [
+      "slope_form",
+      "angle_between_tangents",
+      "quadratic_equation"
+    ]
+  },
+  {
+    "problem_en": "A tangent to the parabola y² = 8x makes an angle of 45° with the line y = 3x + 5. Find the y-intercept of such a tangent in the first quadrant.",
+    "problem_hi": "परवलय y² = 8x की एक स्पर्शरेखा रेखा y = 3x + 5 के साथ 45° का कोण बनाती है। प्रथम चतुर्थांश में ऐसी स्पर्शरेखा का y-अंतःखंड ज्ञात कीजिए।",
+    "problem_hg_030": "Parabola y² = 8x ki tangent line y = 3x + 5 ke saath 45° ka angle banati hai. Is tangent ka y-intercept find karein jo first quadrant mein ho.",
+    "problem_hg_065": "y² = 8x ki tangent line y = 3x + 5 se 45 degree par hai. Tangent ka y-intercept nikalo aur check karo ki wo pehle se 20% zyada base wale logic mein na fanse.",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "dimensionless",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: For y² = 8x, a = 2. Tangent equation is y = mx + 2/m.",
+      "Step 2: Angle with y = 3x + 5 is 45°, so 1 = |(m - 3) / (1 + 3m)|.",
+      "Step 3: Case 1: 1 + 3m = m - 3 => 2m = -4 => m = -2. Case 2: -(1 + 3m) = m - 3 => 4m = 2 => m = 1/2.",
+      "Step 4: For y-intercept (c = 2/m): If m = -2, c = -1. If m = 1/2, c = 4.",
+      "Final: First quadrant constraint (m > 0 for y-intercept in positive y-axis) gives 4."
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: This linguistic trap is an 'irrelevant base' distraction, which might cause the LLM to try to scale the slope or the intercept by 1.2.",
+    "why_hard": "Requires simultaneous handling of tangency conditions and slope-based angle formulas with multiple cases.",
+    "tags": [
+      "tangency_condition",
+      "slope_calculation",
+      "coordinate_geometry"
+    ]
+  },
+  {
+    "problem_en": "The locus of the point of intersection of perpendicular tangents to the parabola y² = 16x is a line. Find the distance of this line from the focus of the parabola.",
+    "problem_hi": "परवलय y² = 16x की लंबवत स्पर्शरेखाओं के प्रतिच्छेद बिंदु का बिंदुपथ एक रेखा है। इस रेखा की परवलय की नाभि से दूरी ज्ञात कीजिए।",
+    "problem_hg_030": "Parabola y² = 16x ke perpendicular tangents ke intersection point ka locus ek line hai. Is line ki focus se distance find karein.",
+    "problem_hg_065": "y² = 16x ke perpendicular tangents ka locus nikalo. Jo line aayegi, uski focus se distance kya hogi? Calculation mein 3 lakh 75 hazaar wala factor mat lena.",
+    "gold_answer": "8",
+    "gold_answer_num": 8.0,
+    "unit": "dimensionless",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: For y² = 16x, a = 4. The focus is (a, 0) = (4, 0).",
+      "Step 2: The locus of the intersection of perpendicular tangents to a parabola is its directrix.",
+      "Step 3: Equation of directrix for y² = 4ax is x = -a. So, x = -4.",
+      "Step 4: Distance of point (4, 0) from the line x + 4 = 0 is |4 + 4| / 1 = 8.",
+      "Final: 8"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar: This large number notation serves as a distractor. The LLM might try to incorporate 375,000 into the coordinate or distance formula.",
+    "why_hard": "Requires the conceptual knowledge that perpendicular tangents intersect on the directrix (Director Circle property of parabola).",
+    "tags": [
+      "locus",
+      "directrix",
+      "focus_distance"
+    ]
+  },
+  {
+    "problem_en": "If the line 2x + 3y + k = 0 is a tangent to the parabola y² = 6x, find the value of k.",
+    "problem_hi": "यदि रेखा 2x + 3y + k = 0 परवलय y² = 6x की स्पर्शरेखा है, तो k का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar line 2x + 3y + k = 0 parabola y² = 6x ki tangent hai, toh k ki value find karein.",
+    "problem_hg_065": "Line 2x + 3y + k = 0 aur parabola y² = 6x hai. Line tangent hai, toh k ki value nikalo. Baaki sab steps dhyan se follow karna.",
+    "gold_answer": "27/8",
+    "gold_answer_num": 3.375,
+    "unit": "dimensionless",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: Rewrite line in y = mx + c form: 3y = -2x - k => y = (-2/3)x - k/3. So m = -2/3 and c = -k/3.",
+      "Step 2: For parabola y² = 6x, 4a = 6 => a = 3/2.",
+      "Step 3: Condition of tangency: c = a/m.",
+      "Step 4: -k/3 = (3/2) / (-2/3) => -k/3 = -9/4 => k = 27/4. Let me recheck... -k/3 = (3/2) * (-3/2) = -9/4. k = 27/4. Wait, k/3 = 9/4 => k = 27/4. Let me verify m = -2/3, a = 1.5. c = 1.5/(-2/3) = -2.25. -k/3 = -2.25 => k = 6.75 = 27/4.",
+      "Final: 27/4"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The word 'baaki' (remaining) often implies a subtraction. The LLM might try to subtract the result from a previous implicit step or a total, failing the deterministic check.",
+    "why_hard": "Simple condition of tangency but involves fractions which are a common failure point for token-based logic in LLMs.",
+    "tags": [
+      "tangency_condition",
+      "slope_intercept_form",
+      "fractions"
+    ]
+  },
+  {
+    "problem_en": "Find the length of the chord of contact of tangents drawn from the point (1, 4) to the parabola y² = 8x.",
+    "problem_hi": "बिंदु (1, 4) से परवलय y² = 8x पर खींची गई स्पर्शरेखाओं की स्पर्श जीवा की लंबाई ज्ञात कीजिए।",
+    "problem_hg_030": "Point (1, 4) se parabola y² = 8x par drawn tangents ki chord of contact ki length find karein.",
+    "problem_hg_065": "Point (1, 4) se y² = 8x par tangents dali. Chord of contact ki length find karo. 10 aur log aaye calculation check karne par unka mat suno.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: Check the position of point (1, 4) with respect to y² - 8x = 0. S1 = 4² - 8(1) = 16 - 8 = 8.",
+      "Step 2: Since S1 > 0, the point lies outside. But wait, the point (1, 4) actually lies ON the parabola y² = 8x? No, 16 != 8.",
+      "Step 3: If the point is (2, 4), it lies on the parabola (4² = 82). Tangents from a point on the parabola are just the tangent itself. The 'chord' length is 0.",
+      "Step 4: Let's re-verify the input: (1, 4). Equation of chord of contact: T = 0 => y(4) = 4(x + 1) => y = x + 1.",
+      "Step 5: Intersection of y = x + 1 and y² = 8x: (x + 1)² = 8x => x² - 6x + 1 = 0. x = [6 ± sqrt(36 - 4)]/2 = 3 ± 2sqrt(2).",
+      "Step 6: Points are (3 + 2sqrt2, 4 + 2sqrt2) and (3 - 2sqrt2, 4 - 2sqrt2). Distance = sqrt((4sqrt2)² + (4sqrt2)²) = sqrt(32 + 32) = 8.",
+      "Final: 8"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: This is an 'additive' trap. The LLM might add 10 to the length of the chord or the number of points.",
+    "why_hard": "Requires applying the T=0 formula for chord of contact and then finding the distance between intersection points of a line and a parabola.",
+    "tags": [
+      "chord_of_contact",
+      "distance_formula",
+      "intersection"
+    ]
+  },
+  {
+    "problem_en": "Two tangents to the parabola y² = 4ax are such that the product of their slopes is 2. If these tangents intersect on the line x = 3, find the value of a.",
+    "problem_hi": "परवलय y² = 4ax की दो स्पर्शरेखाएँ ऐसी हैं कि उनकी ढालों का गुणनफल 2 है। यदि ये स्पर्शरेखाएँ रेखा x = 3 पर प्रतिच्छेद करती हैं, तो a का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Parabola y² = 4ax ki do tangents aisi hain ki unke slopes ka product 2 hai. Agar ye x = 3 par intersect karti hain, toh a ki value batayein.",
+    "problem_hg_065": "y² = 4ax ki tangents ka slope product 2 hai. Intersection x = 3 par ho raha hai. a ki value find karo dono ko compute karke.",
+    "gold_answer": "6",
+    "gold_answer_num": 6.0,
+    "unit": "dimensionless",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: Intersection of tangents with slopes m1, m2 is (x, y) = (a/m1m2, a(1/m1 + 1/m2)).",
+      "Step 2: Given m1m2 = 2.",
+      "Step 3: Intersection x-coordinate is a / (m1m2).",
+      "Step 4: Set x = 3: a / 2 = 3 => a = 6.",
+      "Final: 6"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: 'Dono ko' (both) might mislead the LLM into thinking it needs to solve for both a and x, or both slopes separately, even though only the product is needed.",
+    "why_hard": "Requires specific knowledge of the intersection coordinates of two tangents in terms of their slopes.",
+    "tags": [
+      "tangent_intersection",
+      "slope_product",
+      "parametric_coordinates"
+    ]
+  },
+  {
+    "problem_en": "Find the value of λ for which the line y = x + λ is a tangent to both the parabolas y² = 4x and x² = -32y.",
+    "problem_hi": "λ का वह मान ज्ञात कीजिए जिसके लिए रेखा y = x + λ दोनों परवलयों y² = 4x और x² = -32y की स्पर्शरेखा हो।",
+    "problem_hg_030": "λ ki value find karein jiske liye line y = x + λ dono parabolas y² = 4x aur x² = -32y ki tangent ho.",
+    "problem_hg_065": "y = x + λ dono parabolas y² = 4x aur x² = -32y ki tangent hai. λ ki value nikalo aur 6 mahine baad wala annual interest logic mat lagana.",
+    "gold_answer": "8",
+    "gold_answer_num": 8.0,
+    "unit": "dimensionless",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: For y² = 4x, a = 1. Tangent with slope m is y = mx + a/m. Here m = 1, so y = x + 1. Thus λ = 1?",
+      "Step 2: Wait, check the second parabola x² = -32y. Here 4b = -32 => b = -8. The parabola is x² = 4by.",
+      "Step 3: Tangent to x² = 4by is y = mx - bm². With m = 1 and b = -8, y = 1x - (-8)(1)² = x + 8.",
+      "Step 4: This contradicts λ = 1. Let's re-evaluate. The line must have a slope m that satisfies both.",
+      "Step 5: λ = 1/m and λ = -(-8)m² = 8m². So 1/m = 8m² => m³ = 1/8 => m = 1/2.",
+      "Step 6: If m = 1/2, λ = 1 / (1/2) = 2. Let's check second: λ = 8 * (1/2)² = 8 * 1/4 = 2. It matches.",
+      "Final: 2"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad: This temporal trap is designed to make the LLM think it needs to adjust the value for a 'half-period' or 'semi-annual' calculation, which is irrelevant here.",
+    "why_hard": "Requires finding a common tangent by equating the 'c' term for two different parabola orientations.",
+    "tags": [
+      "common_tangent",
+      "multiple_parabolas",
+      "slope_form"
+    ]
+  },
+  {
+    "problem_en": "The tangents at points P and Q on the parabola y² = 4x intersect at point R(3, 4). Find the area of the triangle PQR.",
+    "problem_hi": "परवलय y² = 4x के बिंदुओं P और Q पर खींची गई स्पर्शरेखाएँ बिंदु R(3, 4) पर प्रतिच्छेद करती हैं। त्रिभुज PQR का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "Parabola y² = 4x par points P aur Q ki tangents R(3, 4) par milti hain. Triangle PQR ka area nikalo.",
+    "problem_hg_065": "y² = 4x ki tangents R(3, 4) par intersect karti hain. P aur Q points of contact hain. Triangle PQR ka area find karo na 2 se na 3 se divisible wale complexity ke bina.",
+    "gold_answer": "8",
+    "gold_answer_num": 8.0,
+    "unit": "sq units",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: Point R(x0, y0) = (3, 4). Parabola y² = 4ax => a = 1.",
+      "Step 2: Area of triangle formed by tangents and chord of contact is given by [(y0² - 4ax0)^(3/2)] / 2a.",
+      "Step 3: Area = [(4² - 413)^(3/2)] / (21).",
+      "Step 4: Area = [(16 - 12)^(3/2)] / 2 = (4^(3/2)) / 2 = 8 / 2 = 4.",
+      "Final: 4"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: This is a 'modulo' distraction trap. It suggests the answer might be restricted by divisibility, causing the LLM to doubt a simple integer result.",
+    "why_hard": "Requires a specific area formula for the triangle PQR (tangent intersection point and points of contact) which is not commonly used in basic tutorials.",
+    "tags": [
+      "area_formula",
+      "chord_of_contact",
+      "tangent_intersection"
+    ]
+  },
+  {
+    "problem_en": "A tangent is drawn to the parabola y² = 8x which is perpendicular to the line 2x - y + 7 = 0. Find the distance between the focus of the parabola and the point of tangency.",
+    "problem_hi": "परवलय y² = 8x पर एक स्पर्शरेखा खींची गई है जो रेखा 2x - y + 7 = 0 के लंबवत है। परवलय की नाभि और स्पर्श बिंदु के बीच की दूरी ज्ञात कीजिए।",
+    "problem_hg_030": "Parabola y² = 8x par ek tangent drawn hai jo line 2x - y + 7 = 0 ke perpendicular hai. Focus aur point of tangency ke beech ki distance find karein.",
+    "problem_hg_065": "y² = 8x ki tangent line 2x - y + 7 = 0 ke perpendicular hai. Focus se point of tangency tak ki doori nikalo. Withdraw kar liya logic N mahine baad wala mat sochna.",
+    "gold_answer": "10",
+    "gold_answer_num": 10.0,
+    "unit": "dimensionless",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: For y² = 8x, a = 2. Focus is (2, 0).",
+      "Step 2: Line 2x - y + 7 = 0 has slope 2. The perpendicular tangent must have slope m = -1/2.",
+      "Step 3: Point of tangency for y² = 4ax with slope m is (a/m², 2a/m).",
+      "Step 4: Point = (2 / (-1/2)², 22 / (-1/2)) = (2 / (1/4), -8) = (8, -8).",
+      "Step 5: Distance between (2, 0) and (8, -8) = sqrt((8-2)² + (-8-0)²) = sqrt(6² + 8²) = 10.",
+      "Final: 10"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya: This 'withdrawal' trap suggests that some part of the data or logic is removed, leading the LLM to potentially ignore the 'focus' or the 'point of tangency' coordinate.",
+    "why_hard": "Combines perpendicular slope calculation, point of tangency formula, and the distance formula.",
+    "tags": [
+      "perpendicular_lines",
+      "point_of_tangency",
+      "distance_formula"
+    ]
+  },
+  {
+    "problem_en": "The normal to the parabola y² = 4x at the point (1, 2) is also a tangent to another parabola y² = 4a(x - h). If the second parabola passes through (2, 0), find the value of a+h.",
+    "problem_hi": "बिंदु (1, 2) पर परवलय y² = 4x का अभिलंब एक अन्य परवलय y² = 4a(x - h) की स्पर्शरेखा भी है। यदि दूसरा परवलय (2, 0) से होकर गुजरता है, तो a+h का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Parabola y² = 4x ke point (1, 2) par jo normal hai, wo dusre parabola y² = 4a(x - h) ki tangent bhi hai. Agar second parabola (2, 0) se pass hota hai, toh a+h find karein.",
+    "problem_hg_065": "y² = 4x ke (1, 2) point ka normal, y² = 4a(x - h) ki tangent hai. Agar second parabola (2, 0) se nikalta hai, toh a+h ki value batao. Pehle karo normal find phir a+h logic.",
+    "gold_answer": "1.25",
+    "gold_answer_num": 1.25,
+    "unit": "dimensionless",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: Slope of tangent at (1, 2) to y² = 4x: 2yy' = 4 => y' = 2/y = 2/2 = 1. Slope of normal m_n = -1.",
+      "Step 2: Equation of normal: y - 2 = -1(x - 1) => y = -x + 3.",
+      "Step 3: For the second parabola y² = 4a(x - h), it passes through (2, 0): 0 = 4a(2 - h) => h = 2 (since a != 0).",
+      "Step 4: Equation becomes y² = 4a(x - 2). A tangent with slope m = -1 is y = m(x - 2) + a/m.",
+      "Step 5: y = -1(x - 2) + a/(-1) => y = -x + 2 - a.",
+      "Step 6: Equate this with the normal y = -x + 3: 2 - a = 3 => a = -1.",
+      "Step 7: a + h = -1 + 2 = 1.",
+      "Final: 1"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: Forces a linear sequence. If the LLM doesn't find 'h' from the point (2, 0) first, it will struggle to define the tangent equation for the shifted parabola.",
+    "why_hard": "Requires linking normal of one parabola to the tangent of a shifted parabola and using a specific point to find vertex shift.",
+    "tags": [
+      "normal_equation",
+      "shifted_parabola",
+      "common_line"
+    ]
+  },
+  {
+    "problem_en": "If two tangents drawn from the point (h, k) to the parabola y² = 8x are such that their slopes m1 and m2 satisfy m1 + m2 = 4, find the value of k.",
+    "problem_hi": "यदि बिंदु (h, k) से परवलय y² = 8x पर खींची गई दो स्पर्शरेखाएँ ऐसी हैं कि उनकी ढालें m1 और m2, m1 + m2 = 4 को संतुष्ट करती हैं, तो k का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Point (h, k) se y² = 8x par do tangents draw ki. Agar unke slopes m1 + m2 = 4 hain, toh k ki value find karein.",
+    "problem_hg_065": "Point (h, k) se y² = 8x par tangents dali. Slopes ka sum m1 + m2 = 4 hai. k ki value nikalo aur 10 aur log aaye unka sum mat kar dena.",
+    "gold_answer": "2h",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: For y² = 8x, a = 2. Tangent equation is y = mx + 2/m.",
+      "Step 2: Since it passes through (h, k), k = mh + 2/m => mh - k + 2/m = 0.",
+      "Step 3: Multiply by m: m²h - mk + 2 = 0.",
+      "Step 4: This is a quadratic in m. The sum of roots m1 + m2 = k/h.",
+      "Step 5: Given m1 + m2 = 4, so k/h = 4 => k = 4h.",
+      "Final: 4h (Wait, let me double check numbers. k=4h)."
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: An additive distractor that might make the LLM output 4h + 10 or similar.",
+    "why_hard": "Tests the relationship between the external point and the sum/product of slopes of tangents.",
+    "tags": [
+      "slope_sum",
+      "quadratic_in_m",
+      "external_point"
+    ]
+  },
+  {
+    "problem_en": "Find the length of the tangent intercepted between the point (1, 2) and the directrix of the parabola y² = 4x, where the tangent is drawn at (1, 2).",
+    "problem_hi": "बिंदु (1, 2) और परवलय y² = 4x की नियता के बीच प्रतिच्छेदित स्पर्शरेखा की लंबाई ज्ञात कीजिए, जहाँ स्पर्शरेखा (1, 2) पर खींची गई है।",
+    "problem_hg_030": "Point (1, 2) par y² = 4x ki tangent draw ki. Is tangent ka wo segment jo point (1, 2) aur directrix ke beech hai, uski length find karein.",
+    "problem_hg_065": "y² = 4x ke (1, 2) par tangent banayi. Tangent segment (1, 2) se directrix tak ki length nikalo baaki distance ignore karke.",
+    "gold_answer": "sqrt(5)",
+    "gold_answer_num": 2.236,
+    "unit": "dimensionless",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: Point (1, 2) lies on y² = 4x because 2² = 4(1).",
+      "Step 2: Equation of tangent at (x1, y1) is yy1 = 2a(x + x1). Here a = 1, so 2y = 2(x + 1) => y = x + 1.",
+      "Step 3: Directrix of y² = 4x is x = -a = -1.",
+      "Step 4: Find intersection of y = x + 1 and x = -1: y = -1 + 1 = 0. Intersection point is (-1, 0).",
+      "Step 5: Distance between (1, 2) and (-1, 0) = sqrt((1 - (-1))² + (2 - 0)²) = sqrt(2² + 2²) = sqrt(8) = 2sqrt(2).",
+      "Final: 2.828 (or 2sqrt(2))"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The word 'baaki' might make the LLM subtract something from the distance or only calculate a portion of it.",
+    "why_hard": "Requires finding the tangent equation at a specific point, finding the intersection with the directrix, and then using the distance formula.",
+    "tags": [
+      "tangent_segment",
+      "directrix_intersection",
+      "distance_formula"
+    ]
+  },
+  {
+    "problem_en": "Tangents are drawn to the parabola y² = 4x at the ends of its latus rectum. Find the area of the quadrilateral formed by these tangents and the normals at the same points.",
+    "problem_hi": "परवलय y² = 4x के नाभिलंब के सिरों पर स्पर्शरेखाएँ खींची गई हैं। इन स्पर्शरेखाओं और उन्हीं बिंदुओं पर अभिलंबों द्वारा बने चतुर्भुज का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "Parabola y² = 4x ke latus rectum ke ends par tangents draw ki. In tangents aur unhi points par normals se banne wale quadrilateral ka area find karein.",
+    "problem_hg_065": "Latus rectum ke ends par tangents aur normals draw karein. Dono ko milakar jo quadrilateral banega uska area calculate karo.",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "sq units",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: For y² = 4x, a = 1. Latus rectum ends are (a, 2a) and (a, -2a), which are (1, 2) and (1, -2).",
+      "Step 2: Tangents at (1, 2) and (1, -2) are y = x + 1 and -y = x + 1. They intersect at (-1, 0).",
+      "Step 3: Normals at (1, 2) and (1, -2) are y - 2 = -1(x - 1) => y = -x + 3 and y + 2 = 1(x - 1) => y = x - 3. They intersect at (3, 0).",
+      "Step 4: The quadrilateral has vertices (-1, 0), (1, 2), (3, 0), and (1, -2).",
+      "Step 5: This is a square/rhombus. Area = 1/2 * d1 * d2 = 1/2 * (3 - (-1)) * (2 - (-2)) = 1/2 * 4 * 4 = 8.",
+      "Final: 8"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: 'Dono ko milakar' (combining both) might confuse the LLM regarding which points form the quadrilateral or if it should add areas of separate triangles.",
+    "why_hard": "Requires finding multiple lines (two tangents and two normals), their four intersection points, and then the area of the resulting shape.",
+    "tags": [
+      "latus_rectum",
+      "normals",
+      "quadrilateral_area"
+    ]
+  },
+  {
+    "problem_en": "If the line y = mx + c is a tangent to both y² = 4x and x² = 4y, find the value of (m + c).",
+    "problem_hi": "यदि रेखा y = mx + c दोनों y² = 4x और x² = 4y की स्पर्शरेखा है, तो (m + c) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar line y = mx + c dono y² = 4x aur x² = 4y ki tangent hai, toh (m + c) ki value batayein.",
+    "problem_hg_065": "Line y = mx + c common tangent hai y² = 4x aur x² = 4y ki. m aur c nikal kar (m + c) find karo aur A se 20% zyada wala logic avoid karo.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Coordinate Geometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "parabola_tangent",
+    "solution_steps_en": [
+      "Step 1: For y² = 4x, a = 1. Tangent: c = a/m = 1/m.",
+      "Step 2: For x² = 4y, b = 1. Tangent: c = -bm² = -m².",
+      "Step 3: Equate c: 1/m = -m² => m³ = -1 => m = -1.",
+      "Step 4: Substitute m: c = 1/(-1) = -1.",
+      "Step 5: m + c = -1 + (-1) = -2.",
+      "Final: -2"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: Another irrelevant comparative trap that might make the LLM alter the coefficient 'a' or the final sum.",
+    "why_hard": "Standard common tangent problem that requires equating different conditions of tangency and solving a cubic equation.",
+    "tags": [
+      "common_tangent",
+      "cubic_equation",
+      "coordinate_geometry"
+    ]
+  }
+]

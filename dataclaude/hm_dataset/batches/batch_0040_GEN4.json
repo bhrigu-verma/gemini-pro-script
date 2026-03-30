@@ -1,0 +1,374 @@
+[
+  {
+    "problem_en": "The mean of a set of 12 numbers is 40. If one number is removed, the mean of the remaining numbers becomes 38. If the removed number was replaced by two new numbers whose mean is 50, what is the mean of the new set of 13 numbers?",
+    "problem_hi": "12 संख्याओं के एक समूह का माध्य 40 है। यदि एक संख्या हटा दी जाती है, तो शेष संख्याओं का माध्य 38 हो जाता है। यदि हटाई गई संख्या को दो नई संख्याओं से बदल दिया जाता है जिनका माध्य 50 है, तो 13 संख्याओं के नए समूह का माध्य क्या होगा?",
+    "problem_hg_030": "12 numbers ke set ka mean 40 hai. Agar ek number remove kar diya jaye, toh remaining numbers ka mean 38 ho jata hai. Agar removed number ko do new numbers se replace karein jinka mean 50 hai, toh new set of 13 numbers ka mean kya hoga?",
+    "problem_hg_065": "12 numbers ka mean 40 calculate kiya gaya tha. Ek number ko group se 'baaki' nikaal diya gaya, jiske baad mean 38 reh gaya. Ab us nikale hue number ki jagah do aur numbers add kiye gaye jinka mean 50 hai. Batao pure 13 numbers ka mean kya hoga?",
+    "gold_answer": "39.85",
+    "gold_answer_num": 39.85,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Calculate the original total sum: 12 * 40 = 480.",
+      "Step 2: Calculate the sum after one number is removed: 11 * 38 = 418.",
+      "Step 3: Calculate the sum of the two new numbers added: 2 * 50 = 100.",
+      "Step 4: Find the new total sum: 418 + 100 = 518.",
+      "Step 5: Calculate the final mean for 13 numbers: 518 / 13 = 39.846... rounded to 39.85."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' trap. The word 'baaki' is used here to mean 'removed/separated' but usually indicates a remainder. An LLM might confuse this with calculating the remainder of a division or wrongly subtracting the current mean from the total.",
+    "why_hard": "Requires tracking the set size changes (12 to 11 to 13) while interpreting colloquialisms for removal and addition.",
+    "tags": [
+      "mean",
+      "data_adjustment"
+    ]
+  },
+  {
+    "problem_en": "A dataset contains 5 positive integers. The mode is 15, the median is 12, and the mean is 11. What is the value of the smallest integer in the dataset?",
+    "problem_hi": "एक डेटासेट में 5 धनात्मक पूर्णांक हैं। बहुलक 15 है, माध्यिका 12 है, और माध्य 11 है। डेटासेट में सबसे छोटे पूर्णांक का मान क्या है?",
+    "problem_hg_030": "Ek dataset mein 5 positive integers hain. Mode 15 hai, median 12 hai, aur mean 11 hai. Dataset ke sabse chote integer ki value kya hai?",
+    "problem_hg_065": "Paanch positive integers ka set hai jinka mode 15 aur median 12 fix hai. Mean 11 hai. Is set mein 'sirf' wahi numbers hain jo positive hain. Sabse chote number ki value calculate kijiye.",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Identify numbers as x1, x2, x3, x4, x5 in ascending order. Median (x3) = 12.",
+      "Step 2: Since mode is 15 and median is 12, the numbers larger than 12 must be 15. So x4 = 15, x5 = 15.",
+      "Step 3: Total sum = 5 * Mean = 5 * 11 = 55.",
+      "Step 4: x1 + x2 + 12 + 15 + 15 = 55 => x1 + x2 = 13.",
+      "Step 5: To keep mode 15, x1 and x2 must be distinct and less than 12. For x1 to be smallest, x2 must be largest possible (but < 12 and x1 < x2). If x2=9, x1=4. If x2=11, x1=2. However, with x1+x2=13, and integers must be positive. To minimize x1, we maximize x2. Max x2 is 11. 11+2=13. Smallest is 2. Let's check: {2, 11, 12, 15, 15} sum=55, mean=11, med=12, mode=15. Wait, the constraints on mode imply x1/x2 can't be 15. Let's use x1+x2=13. If x1=4, x2=9. If x1=1, x2=12 (not possible as 12 is median). Smallest possible integer is 1.",
+      "Step 6: Re-evaluating: x1 + x2 = 13. Since x2 < x3 (12), max x2 is 11. Thus x1 = 13 - 11 = 2."
+    ],
+    "linguistic_trap_in_hg065": "The 'Sirf' trap. By saying 'sirf positive numbers', the LLM might over-constrain the logic or interpret 'exactly' in a way that excludes certain integer properties or leads to an inclusion-exclusion error.",
+    "why_hard": "Combines mean, median, and mode definitions with a search for the minimum possible value under integer constraints.",
+    "tags": [
+      "logic",
+      "integer_constraints"
+    ]
+  },
+  {
+    "problem_en": "The mean weight of 15 students is 45 kg. Later it was found that the weight of 2 students was wrongly entered as 36 kg and 40 kg instead of 46 kg and 44 kg. Also, 5 more students with a mean weight of 50 kg joined the class. Find the new mean weight of the 20 students.",
+    "problem_hi": "15 छात्रों का औसत वजन 45 किलोग्राम है। बाद में यह पाया गया कि 2 छात्रों का वजन 46 किलोग्राम और 44 किलोग्राम के बजाय गलती से 36 किलोग्राम और 40 किलोग्राम दर्ज किया गया था। साथ ही, 50 किलोग्राम औसत वजन वाले 5 और छात्र कक्षा में शामिल हुए। 20 छात्रों का नया औसत वजन ज्ञात कीजिए।",
+    "problem_hg_030": "15 students ka mean weight 45 kg hai. Baad mein pata chala ki 2 students ka weight 46 kg aur 44 kg ke badle 36 kg aur 40 kg enter ho gaya tha. Also, 5 more students with mean weight 50 kg join karte hain. New mean find karein.",
+    "problem_hg_065": "15 students ka weight 45 kg mean par set tha. Check karne par pata chala do entries galat thi; 46 aur 44 ki jagah 36 aur 40 likh diya gaya tha. Phir class mein '10 aur log' ki jagah sirf 5 new students join hue jinka mean 50 kg hai. Corrected total ka naya mean kya hoga?",
+    "gold_answer": "46.7",
+    "gold_answer_num": 46.7,
+    "unit": "kg",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Original Sum = 15 * 45 = 675.",
+      "Step 2: Correct for errors: 675 - (36 + 40) + (46 + 44) = 675 - 76 + 90 = 689.",
+      "Step 3: Add weight of new students: 5 * 50 = 250.",
+      "Step 4: New Total Sum = 689 + 250 = 939.",
+      "Step 5: New Mean = 939 / 20 = 46.95."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' ambiguity combined with 'Sirf'. '10 aur log ki jagah sirf 5' is a distractor meant to make the LLM consider '10' as a parameter or confuse the increment count.",
+    "why_hard": "Requires correction of existing mean before calculating the combined mean of two groups.",
+    "tags": [
+      "mean_correction",
+      "combined_mean"
+    ]
+  },
+  {
+    "problem_en": "In a factory, the mean salary of 50 workers is ₹20,000. 10 workers leave, and their mean salary was ₹18,000. After they left, the salaries of the remaining workers were increased by 10%. What is the new mean salary of the remaining workers?",
+    "problem_hi": "एक कारखाने में, 50 श्रमिकों का औसत वेतन ₹20,000 है। 10 श्रमिक चले जाते हैं, और उनका औसत वेतन ₹18,000 था। उनके जाने के बाद, शेष श्रमिकों के वेतन में 10% की वृद्धि की गई। शेष श्रमिकों का नया औसत वेतन क्या है?",
+    "problem_hg_030": "Ek factory mein, 50 workers ka mean salary ₹20,000 hai. 10 workers leave karte hain, jinka mean salary ₹18,000 tha. Unke jaane ke baad, remaining workers ki salary 10% increase kar di gayi. New mean salary kya hogi?",
+    "problem_hg_065": "50 workers ki mean salary ₹20,000 thi. 10 workers jinka mean ₹18,000 tha unhe 'band kar diya gaya'. 'Baaki' bache workers ki salary purani salary se 10% zyada kar di gayi. Ab naya average salary figure kya hai?",
+    "gold_answer": "22550",
+    "gold_answer_num": 22550.0,
+    "unit": "rupees",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Total initial salary = 50 * 20,000 = 10,00,000.",
+      "Step 2: Salary of workers who left = 10 * 18,000 = 1,80,000.",
+      "Step 3: Remaining salary = 10,00,000 - 1,80,000 = 8,20,000.",
+      "Step 4: Mean of remaining 40 workers = 8,20,000 / 40 = 20,500.",
+      "Step 5: New mean after 10% increase = 20,500 * 1.1 = 22,550."
+    ],
+    "linguistic_trap_in_hg065": "Passive voice + 'Zyada' trap. 'Unhe band kar diya gaya' is an awkward passive use for leaving/firing. '10% zyada' could be misapplied to the original 50 workers or the total sum instead of the remaining mean.",
+    "why_hard": "Two-stage change: subtraction of a subgroup and then a percentage increase on the remainder.",
+    "tags": [
+      "mean",
+      "percentage_change"
+    ]
+  },
+  {
+    "problem_en": "The median of 7 observations arranged in ascending order is 25. If the first three observations are increased by 2 and the last three observations are decreased by 3, find the new median.",
+    "problem_hi": "आरोही क्रम में व्यवस्थित 7 प्रेक्षणों की माध्यिका 25 है। यदि पहले तीन प्रेक्षणों में 2 की वृद्धि की जाती है और अंतिम तीन प्रेक्षणों में 3 की कमी की जाती है, तो नई माध्यिका ज्ञात कीजिए।",
+    "problem_hg_030": "7 observations ascending order mein hain aur median 25 hai. Agar first three observations 2 se increase ho aur last three observations 3 se decrease ho, toh new median find karein.",
+    "problem_hg_065": "7 observations jo badhte kram mein hain, unka median 25 hai. 'Pehle' teen numbers ko 2 se badhaya gaya 'phir' aakhri teen ko 3 se ghataya gaya. Naya median kya hoga?",
+    "gold_answer": "25",
+    "gold_answer_num": 25.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Median of 7 observations is the 4th term (x4 = 25).",
+      "Step 2: Operation 1: x1, x2, x3 increase. This doesn't affect x4's position.",
+      "Step 3: Operation 2: x5, x6, x7 decrease. As long as they stay >= x4, order is preserved.",
+      "Step 4: Since x4 is unchanged and remains the middle value, the median is still 25."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' ordering trap. This suggests a sequence of operations that might imply the median itself is transformed or that the order of operations matters for the middle value.",
+    "why_hard": "Tests conceptual understanding of median being resistant to changes in extremes that don't cross the middle value.",
+    "tags": [
+      "median",
+      "conceptual"
+    ]
+  },
+  {
+    "problem_en": "The mean of 10 numbers is 15. One of the numbers is '3 lakh 75 hazaar' divided by 25,000. If this number is replaced by 25, what is the new mean?",
+    "problem_hi": "10 संख्याओं का माध्य 15 है। उनमें से एक संख्या '3 लाख 75 हज़ार' को 25,000 से विभाजित करने पर प्राप्त होती है। यदि इस संख्या को 25 से बदल दिया जाए, तो नया माध्य क्या होगा?",
+    "problem_hg_030": "10 numbers ka mean 15 hai. Ek number '3 lakh 75 hazaar' divided by 25,000 hai. Agar is number ko 25 se replace karein, toh new mean kya hoga?",
+    "problem_hg_065": "10 numbers ka average 15 hai. Inme se ek number '3 lakh 75 hazaar' divided by 25,000 hai. Is value ko hatakar 25 add kiya gaya. Naya mean calculation batao.",
+    "gold_answer": "16",
+    "gold_answer_num": 16.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Calculate '3 lakh 75 hazaar': 3,75,000.",
+      "Step 2: Find the specific number: 3,75,000 / 25,000 = 15.",
+      "Step 3: Original sum = 10 * 15 = 150.",
+      "Step 4: Replace 15 with 25: 150 - 15 + 25 = 160.",
+      "Step 5: New mean = 160 / 10 = 16."
+    ],
+    "linguistic_trap_in_hg065": "Indian number notation trap. '3 lakh 75 hazaar' requires standardizing to 3,75,000 before division.",
+    "why_hard": "LLMs often struggle with large Indian numbering system conversions mixed with standard arithmetic operations.",
+    "tags": [
+      "mean",
+      "notation"
+    ]
+  },
+  {
+    "problem_en": "A set of 5 numbers has a median of 18 and a mean of 20. If 4 and 26 are two of the numbers, and the set has no mode, what are the other two numbers? (Provide the sum of the other two numbers).",
+    "problem_hi": "5 संख्याओं के एक समूह की माध्यिका 18 और माध्य 20 है। यदि 4 और 26 दो संख्याएँ हैं, और समूह का कोई बहुलक नहीं है, तो अन्य दो संख्याएँ क्या हैं? (अन्य दो संख्याओं का योग प्रदान करें)।",
+    "problem_hg_030": "5 numbers ke set ka median 18 aur mean 20 hai. Agar 4 aur 26 numbers hain, aur set ka koi mode nahi hai, toh other two numbers ka sum kya hoga?",
+    "problem_hg_065": "Ek set mein 5 numbers hain jahan mean 20 aur median 18 hai. 4 aur 26 bhi is set ke part hain. Set ka koi mode nahi hai, matlab 'sirf' unique numbers hain. Bache hue do numbers ka total sum find karein.",
+    "gold_answer": "52",
+    "gold_answer_num": 52.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Total sum = 5 * 20 = 100.",
+      "Step 2: Known numbers are 4, 18 (median), and 26.",
+      "Step 3: Sum of knowns = 4 + 18 + 26 = 48.",
+      "Step 4: Sum of remaining two numbers = 100 - 48 = 52. Wait, check conditions: {4, x, 18, y, 26}.",
+      "Step 5: Sum = 52. Let's verify sum of all 5: 52 + 48 = 100. Correct."
+    ],
+    "linguistic_trap_in_hg065": "The 'Sirf' trap. Interpreting 'no mode' as 'sirf unique numbers' is correct, but the phrasing might lead the LLM to search for a specific exclusion property that doesn't exist.",
+    "why_hard": "Combines mean/median definitions with the property of uniqueness (no mode) to solve for unknown variables.",
+    "tags": [
+      "mean",
+      "median",
+      "mode"
+    ]
+  },
+  {
+    "problem_en": "In a cricket match, the mean runs of 11 players is 35. The runs of the first 6 players is 32 and that of the last 6 players is 39. What are the runs scored by the 6th player?",
+    "problem_hi": "एक क्रिकेट मैच में, 11 खिलाड़ियों के औसत रन 35 हैं। पहले 6 खिलाड़ियों के रन 32 हैं और अंतिम 6 खिलाड़ियों के रन 39 हैं। छठे खिलाड़ी द्वारा बनाए गए रन क्या हैं?",
+    "problem_hg_030": "Cricket match mein, 11 players ka mean runs 35 hai. First 6 players ka mean 32 hai aur last 6 players ka mean 39 hai. 6th player ke runs find karein.",
+    "problem_hg_065": "Cricket match mein 11 players ka average 35 tha. Pehle 6 players ne 32 average banaya aur aakhri 6 ne 39. 6th player ka score 'na...na' karke calculate karein.",
+    "gold_answer": "41",
+    "gold_answer_num": 41.0,
+    "unit": "runs",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Total runs for 11 players = 11 * 35 = 385.",
+      "Step 2: Sum of first 6 players = 6 * 32 = 192.",
+      "Step 3: Sum of last 6 players = 6 * 39 = 234.",
+      "Step 4: Sum of (First 6 + Last 6) = 192 + 234 = 426.",
+      "Step 5: 6th player runs = 426 - 385 = 41."
+    ],
+    "linguistic_trap_in_hg065": "The 'Na...na' trap. Using 'na...na' as a filler might be interpreted by an LLM as a double negation or a constraint (neither this nor that), confusing the overlapping sum logic.",
+    "why_hard": "Standard overlapping mean problem, but the linguistic filler disrupts the logical flow of inclusion-exclusion.",
+    "tags": [
+      "mean",
+      "overlapping_sets"
+    ]
+  },
+  {
+    "problem_en": "The mean of 5 numbers is 20. If a 6th number is added, the mean increases by 2. What is the value of the 6th number?",
+    "problem_hi": "5 संख्याओं का माध्य 20 है। यदि छठी संख्या जोड़ी जाती है, तो माध्य में 2 की वृद्धि होती है। छठी संख्या का मान क्या है?",
+    "problem_hg_030": "5 numbers ka mean 20 hai. Agar 6th number add karein, toh mean 2 se increase ho jata hai. 6th number ki value kya hai?",
+    "problem_hg_065": "5 numbers ka mean 20 calculate kiya gaya. Phir ek extra number add hua jisse mean purane mean se '2 zyada' ho gaya. Us 6th number ki value nikaalo.",
+    "gold_answer": "32",
+    "gold_answer_num": 32.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Sum of 5 numbers = 5 * 20 = 100.",
+      "Step 2: New mean = 20 + 2 = 22.",
+      "Step 3: Sum of 6 numbers = 6 * 22 = 132.",
+      "Step 4: 6th number = 132 - 100 = 32."
+    ],
+    "linguistic_trap_in_hg065": "The 'Zyada' trap. '2 zyada' can be misinterpreted as the new mean being 2 (reset) or the number itself being 2, rather than an increment of the average.",
+    "why_hard": "Simple but tests the ability to correctly apply an increment to a statistical parameter.",
+    "tags": [
+      "mean",
+      "increments"
+    ]
+  },
+  {
+    "problem_en": "The median of a set of integers {x, 10, 15, 2, 8} is 10. If the mean of the set is 9.4, find the value of x.",
+    "problem_hi": "पूर्णांकों {x, 10, 15, 2, 8} के एक समूह की माध्यिका 10 है। यदि समूह का माध्य 9.4 है, तो x का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Integers {x, 10, 15, 2, 8} ka median 10 hai. Agar mean 9.4 ho, toh x ki value find karein.",
+    "problem_hg_065": "Set {x, 10, 15, 2, 8} ka median 10 fix hai. 'Baaki' statistics dekhein toh mean 9.4 hai. x ki exact value kya honi chahiye?",
+    "gold_answer": "12",
+    "gold_answer_num": 12.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Total sum = 5 * 9.4 = 47.",
+      "Step 2: x + 10 + 15 + 2 + 8 = 47.",
+      "Step 3: x + 35 = 47 => x = 12.",
+      "Step 4: Check median of {2, 8, 10, 12, 15}. Median is 10. Condition satisfied."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' trap. Using 'baaki' as a transition word can lead LLMs to think the mean 9.4 applies to only the remaining numbers excluding x.",
+    "why_hard": "Requires simultaneous satisfaction of median ordering and mean summation.",
+    "tags": [
+      "mean",
+      "median",
+      "logic"
+    ]
+  },
+  {
+    "problem_en": "Find the mode of the following distribution: 10, 12, 10, 15, 12, 18, 12, 10, 15. If one more '15' is added, how does the mode change?",
+    "problem_hi": "निम्नलिखित वितरण का बहुलक ज्ञात कीजिए: 10, 12, 10, 15, 12, 18, 12, 10, 15। यदि एक और '15' जोड़ा जाता है, तो बहुलक कैसे बदलता है?",
+    "problem_hg_030": "Distribution 10, 12, 10, 15, 12, 18, 12, 10, 15 ka mode find karein. Agar ek '15 aur' add ho jaye, toh naya mode kya hoga?",
+    "problem_hg_065": "Ek list hai: 10, 12, 10, 15, 12, 18, 12, 10, 15. Iska mode check karein. Ab ismein '15 aur' log ki tarah add kar diya gaya. Naya mode kya banega?",
+    "gold_answer": "10 and 12, then 10, 12, and 15",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Count original frequencies: 10(3), 12(3), 15(2), 18(1). Original modes are 10 and 12.",
+      "Step 2: Add one '15'.",
+      "Step 3: New frequencies: 10(3), 12(3), 15(3), 18(1).",
+      "Step 4: New modes are 10, 12, and 15."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' ambiguity. '15 aur' could be interpreted as adding 15 to each number or adding the number 15 once.",
+    "why_hard": "Tests the ability to handle multimodal distributions and the effect of single data additions.",
+    "tags": [
+      "mode",
+      "multimodal"
+    ]
+  },
+  {
+    "problem_en": "The mean of 20 observations is 12.5. By mistake, one observation was taken as -15 instead of 15. Find the corrected mean.",
+    "problem_hi": "20 प्रेक्षणों का माध्य 12.5 है। गलती से, एक प्रेक्षण को 15 के बजाय -15 मान लिया गया था। संशोधित माध्य ज्ञात कीजिए।",
+    "problem_hg_030": "20 observations ka mean 12.5 hai. Galti se, ek observation 15 ke badle -15 le li gayi thi. Corrected mean find karein.",
+    "problem_hg_065": "20 figures ka mean 12.5 nikla. Par ek value ko 'na' 15 ki jagah -15 likh diya gaya. Batao sahi mean kya hona chahiye?",
+    "gold_answer": "14",
+    "gold_answer_num": 14.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Original total = 20 * 12.5 = 250.",
+      "Step 2: Correct the sum: 250 - (-15) + 15 = 250 + 15 + 15 = 280.",
+      "Step 3: New mean = 280 / 20 = 14."
+    ],
+    "linguistic_trap_in_hg065": "Double negation trap. 'Na 15 ki jagah -15' can be confusing in Hinglish—it might be read as 'not 15 instead of -15' or vice-versa.",
+    "why_hard": "Standard correction problem, but the negative number makes the arithmetic error-prone under linguistic ambiguity.",
+    "tags": [
+      "mean",
+      "correction"
+    ]
+  },
+  {
+    "problem_en": "The median of x/5, x, x/4, x/2 and x/3 is 10 (where x > 0). Find the mean of these 5 observations.",
+    "problem_hi": "x/5, x, x/4, x/2 और x/3 की माध्यिका 10 है (जहाँ x > 0)। इन 5 प्रेक्षणों का माध्य ज्ञात कीजिए।",
+    "problem_hg_030": "x/5, x, x/4, x/2 aur x/3 ka median 10 hai (x > 0). In 5 observations ka mean find karein.",
+    "problem_hg_065": "Observations x/5, x, x/4, x/2, x/3 ko line mein lagane par median 10 aata hai. 'Zyada' dhyan mean par dekar inka average calculate karein.",
+    "gold_answer": "13.67",
+    "gold_answer_num": 13.67,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Arrange in ascending order: x/5 < x/4 < x/3 < x/2 < x.",
+      "Step 2: Median is x/3 = 10.",
+      "Step 3: x = 30.",
+      "Step 4: Sum = 30(1/5 + 1/4 + 1/3 + 1/2 + 1) = 30(0.2 + 0.25 + 0.333 + 0.5 + 1) = 6 + 7.5 + 10 + 15 + 30 = 68.5.",
+      "Step 5: Mean = 68.5 / 5 = 13.7."
+    ],
+    "linguistic_trap_in_hg065": "The 'Zyada' trap. 'Zyada dhyan mean par' might cause the LLM to prioritize the mean calculation over the necessary step of ordering for the median.",
+    "why_hard": "Requires algebraic ordering of fractions before solving for the variable using the median.",
+    "tags": [
+      "median",
+      "algebraic_mean"
+    ]
+  },
+  {
+    "problem_en": "There are 4 numbers. The mean of the first 3 is 15 and the mean of the last 3 is 16. If the last number is 19, what is the first number?",
+    "problem_hi": "4 संख्याएँ हैं। पहली 3 का माध्य 15 है और अंतिम 3 का माध्य 16 है। यदि अंतिम संख्या 19 है, तो पहली संख्या क्या है?",
+    "problem_hg_030": "4 numbers hain. First 3 ka mean 15 hai aur last 3 ka mean 16 hai. Agar last number 19 ho, toh first number kya hai?",
+    "problem_hg_065": "4 numbers ke sequence mein 'pehle' teen ka average 15 hai, 'phir' aakhri teen ka 16. Agar end wala number 19 hai, toh starting number kya tha?",
+    "gold_answer": "16",
+    "gold_answer_num": 16.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: a+b+c = 3 * 15 = 45.",
+      "Step 2: b+c+d = 3 * 16 = 48.",
+      "Step 3: d = 19.",
+      "Step 4: b+c+19 = 48 => b+c = 29.",
+      "Step 5: a + 29 = 45 => a = 16."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' trap. It creates a false sense of temporal progression which might lead an LLM to try iterative subtraction instead of simultaneous equations.",
+    "why_hard": "Tests the ability to handle systems of equations derived from subgroup means.",
+    "tags": [
+      "mean",
+      "subgroups"
+    ]
+  },
+  {
+    "problem_en": "The mode of 8 observations is 22. Six of the observations are 20, 22, 24, 22, 28, 30. If the remaining two observations are equal, what must their value be to keep the mode 22?",
+    "problem_hi": "8 प्रेक्षणों का बहुलक 22 है। छह प्रेक्षण 20, 22, 24, 22, 28, 30 हैं। यदि शेष दो प्रेक्षण बराबर हैं, तो बहुलक 22 बनाए रखने के लिए उनका मान क्या होना चाहिए?",
+    "problem_hg_030": "8 observations ka mode 22 hai. Six observations 20, 22, 24, 22, 28, 30 hain. Agar remaining two observations equal hon, toh mode 22 rakhne ke liye unki value kya hogi?",
+    "problem_hg_065": "8 data points ka mode 22 hai. Inme se 6 values hain: 20, 22, 24, 22, 28, 30. 'Baaki' do equal values kya honi chahiye taaki mode 'na' 22 se badle?",
+    "gold_answer": "Any value except 20, 24, 28, 30",
+    "gold_answer_num": 21.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Current frequency of 22 is 2. Other frequencies are all 1.",
+      "Step 2: Let the two equal numbers be x.",
+      "Step 3: If x = 22, mode is 22 (freq becomes 4).",
+      "Step 4: If x is anything else (e.g., 20), that freq becomes 3, making it the new mode.",
+      "Step 5: To keep mode 22, x must be 22. If x is not 22, x will become the new mode because its frequency will be 2 (from the two new numbers) + any existing frequency (if x was already in the list). Actually, if x is not in {20, 24, 28, 30}, freq of x is 2, creating a bimodal set. To ensure a UNIQUE mode of 22, x must be 22."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' + 'Na' trap. Using 'na' as a filler in 'na 22 se badle' could be misread as 'should not be 22'.",
+    "why_hard": "Involves constraint satisfaction for maintaining a statistical property.",
+    "tags": [
+      "mode",
+      "constraints"
+    ]
+  }
+]

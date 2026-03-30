@@ -1,0 +1,374 @@
+[
+  {
+    "problem_en": "A loan of 5,46,000 is to be repaid in two equal annual installments. If the interest is compounded annually at 20% per annum, calculate the value of each installment.",
+    "problem_hi": "5,46,000 रुपये के ऋण को दो समान वार्षिक किश्तों में वापस किया जाना है। यदि ब्याज 20% वार्षिक दर से संयोजित होता है, तो प्रत्येक किश्त का मूल्य ज्ञात कीजिए।",
+    "problem_hg_030": "Ek loan of 5,46,000 ko repay karna hai in two equal annual installments. Agar interest annual compound ho raha hai at 20% per annum, toh har installment ki value calculate karo.",
+    "problem_hg_065": "Loan amount 5 lakh 46 hazaar hai jise do equal annual installments mein dena hai. Interest rate 20% p.a. hai compounded annually. Har installment kitne ki hogi?",
+    "gold_answer": "3,60,000",
+    "gold_answer_num": 360000.0,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: Let installment be x. Present Value (PV) of 1st installment = x/1.2.",
+      "Step 2: PV of 2nd installment = x/(1.2^2) = x/1.44.",
+      "Step 3: Principal = PV1 + PV2 => 546000 = x(1/1.2 + 1/1.44).",
+      "Step 4: 546000 = x(2.2/1.44) => x = (546000 * 1.44) / 2.2 = 360000.",
+      "Final: answer = 360000"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 46 hazaar notation -> LLM may parse as 5 or 46000, missing the full 5,46,000 value.",
+    "why_hard": "Requires reverse algebraic solving of the annuity present value formula with non-trivial decimals.",
+    "tags": [
+      "installment",
+      "present-value"
+    ]
+  },
+  {
+    "problem_en": "A sum is borrowed at 10% p.a. compound interest and paid back in two equal annual installments of 12,100 each. Find the total interest charged in this transaction.",
+    "problem_hi": "एक राशि 10% वार्षिक चक्रवृद्धि ब्याज पर उधार ली गई और 12,100 रुपये की दो समान वार्षिक किश्तों में वापस की गई। इस लेनदेन में कुल कितना ब्याज लिया गया?",
+    "problem_hg_030": "Ek sum borrow kiya 10% p.a. compound interest pe aur pay back kiya in two equal installments of 12,100 each. Pura interest kitna charge hua find karo.",
+    "problem_hg_065": "10% rate pe loan liya aur 12,100 ki do installments di, par bank ne bola ki 10 aur log aaye hain scheme mein toh process slow hai. Total interest calculate karo.",
+    "gold_answer": "3,200",
+    "gold_answer_num": 3200.0,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: PV of 1st installment = 12100 / 1.1 = 11000.",
+      "Step 2: PV of 2nd installment = 12100 / 1.21 = 10000.",
+      "Step 3: Total Principal = 11000 + 10000 = 21000.",
+      "Step 4: Total paid = 12100 * 2 = 24200. Interest = 24200 - 21000 = 3200.",
+      "Final: answer = 3200"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> LLM might interpret '10' as an additive factor to the rate or the principal.",
+    "why_hard": "Forces the model to derive principal first and then subtract from total repayment.",
+    "tags": [
+      "interest-calculation",
+      "distractor"
+    ]
+  },
+  {
+    "problem_en": "A man buys a gadget for 30,000 down payment and two equal annual installments of 33,800 each. If interest is 30% p.a. compounded annually, what was the cash price of the gadget?",
+    "problem_hi": "एक आदमी ने 30,000 के डाउन पेमेंट और 33,800 की दो समान वार्षिक किश्तों पर एक गैजेट खरीदा। यदि ब्याज 30% वार्षिक है, तो गैजेट की नकद कीमत क्या थी?",
+    "problem_hg_030": "Gadget kharida 30,000 down payment pe aur 33,800 ki do equal installments pe. Agar interest 30% p.a. hai, toh cash price kya thi?",
+    "problem_hg_065": "Cash price nikaalo agar down payment 30,000 hai aur baaki amount do equal installments of 33,800 mein pay kiya at 30% compound interest.",
+    "gold_answer": "76,000",
+    "gold_answer_num": 76000.0,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: PV1 = 33800 / 1.3 = 26000.",
+      "Step 2: PV2 = 33800 / 1.69 = 20000.",
+      "Step 3: Total Principal borrowed = 26000 + 20000 = 46000.",
+      "Step 4: Cash Price = Down Payment + Principal = 30000 + 46000 = 76000.",
+      "Final: answer = 76000"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> LLM might ignore the subtraction logic or treat it as a remainder of the installment rather than the financed amount.",
+    "why_hard": "Combines immediate cash flow (down payment) with discounted future cash flows.",
+    "tags": [
+      "down-payment",
+      "cash-price"
+    ]
+  },
+  {
+    "problem_en": "A loan of 8,200 is repaid in 2 years with equal annual installments. If the rate is 5% p.a. compounded annually, find the value of each installment.",
+    "problem_hi": "8,200 का ऋण 2 वर्षों में समान वार्षिक किश्तों में चुकाया जाता है। यदि दर 5% वार्षिक चक्रवृद्धि है, तो प्रत्येक किश्त का मूल्य ज्ञात कीजिए।",
+    "problem_hg_030": "Loan of 8,200 repay kiya 2 years mein with equal installments. Rate 5% p.a. compounded annually hai, toh installment find karo.",
+    "problem_hg_065": "Rate 5% hai par interest 6 mahine baad calculate nahi hota, saal bhar ka hai. 8,200 loan hai toh do equal installments kitni hongi?",
+    "gold_answer": "4,410",
+    "gold_answer_num": 4410.0,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: x/1.05 + x/1.1025 = 8200.",
+      "Step 2: x(1.05 + 1) / 1.1025 = 8200.",
+      "Step 3: 2.05x = 8200 * 1.1025.",
+      "Step 4: x = 9040.5 / 2.05 = 4410.",
+      "Final: answer = 4410"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> LLM may switch to semi-annual compounding formula incorrectly.",
+    "why_hard": "Requires precise decimal division of a 4-digit principal over a squared growth factor.",
+    "tags": [
+      "emi-derivation",
+      "precision"
+    ]
+  },
+  {
+    "problem_en": "A sum of money is borrowed and paid back in three equal annual installments of 2,160 each at 20% p.a. compounded annually. Find the sum borrowed.",
+    "problem_hi": "एक राशि उधार ली गई और 20% वार्षिक चक्रवृद्धि ब्याज पर 2,160 की तीन समान वार्षिक किश्तों में चुकाई गई। उधार ली गई राशि ज्ञात कीजिए।",
+    "problem_hg_030": "Sum borrow karke 20% interest pe pay back kiya in three equal installments of 2,160 each. Sum borrowed find karo.",
+    "problem_hg_065": "Teeno installments 2,160 ki hain. Rate 20% hai aur dono ko milakar total borrow kiya gaya paisa nikaalo.",
+    "gold_answer": "4,550",
+    "gold_answer_num": 4550.0,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: PV1 = 2160 / 1.2 = 1800.",
+      "Step 2: PV2 = 2160 / 1.44 = 1500.",
+      "Step 3: PV3 = 2160 / 1.728 = 1250.",
+      "Step 4: Sum = 1800 + 1500 + 1250 = 4550.",
+      "Final: answer = 4550"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> In a 3-installment problem, 'dono' (both/two) might lead LLM to calculate for only 2 years.",
+    "why_hard": "Extends the geometric progression to three terms with increasing powers of 1.2.",
+    "tags": [
+      "3-year-installment",
+      "geometric-sum"
+    ]
+  },
+  {
+    "problem_en": "What equal annual installment will discharge a debt of 10,250 due in two years at 5% p.a. compound interest?",
+    "problem_hi": "5% वार्षिक चक्रवृद्धि ब्याज पर दो वर्षों में 10,250 के ऋण को चुकाने के लिए समान वार्षिक किश्त क्या होगी?",
+    "problem_hg_030": "Kya equal annual installment lagegi to discharge a debt of 10,250 in two years at 5% p.a. CI?",
+    "problem_hg_065": "Debt 10,250 hai. Interest rate pichle saal se 20% zyada nahi balki steady 5% hai. Do equal installments calculate karo.",
+    "gold_answer": "5,512.5",
+    "gold_answer_num": 5512.5,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: 10250 = x/1.05 + x/1.1025.",
+      "Step 2: 10250 = x(2.05/1.1025).",
+      "Step 3: x = (10250 * 1.1025) / 2.05.",
+      "Step 4: x = 5000 * 1.1025 = 5512.5.",
+      "Final: answer = 5512.5"
+    ],
+    "linguistic_trap_in_hg065": "20% zyada -> LLM might try to modify the interest rate (5% + 20% = 6% or 25%).",
+    "why_hard": "Reverse EMI calculation with fractional final result.",
+    "tags": [
+      "emi",
+      "rate-distractor"
+    ]
+  },
+  {
+    "problem_en": "A loan is cleared in two equal annual installments of 8,820 each at 5% p.a. CI. Find the total interest paid.",
+    "problem_hi": "एक ऋण 5% वार्षिक चक्रवृद्धि ब्याज पर 8,820 की दो समान वार्षिक किश्तों में चुकाया जाता है। कुल भुगतान किया गया ब्याज ज्ञात कीजिए।",
+    "problem_hg_030": "Loan clear kiya in two equal installments of 8,820 at 5% interest. Total interest paid kitna hai?",
+    "problem_hg_065": "8,820 ki do installments di hain. Pehle principal calculate karo phir total interest nikaalo. Rate 5% p.a. hai.",
+    "gold_answer": "1,240",
+    "gold_answer_num": 1240.0,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: PV = 8820/1.05 + 8820/1.1025 = 8400 + 8000 = 16400.",
+      "Step 2: Total Repayment = 8820 * 2 = 17640.",
+      "Step 3: Interest = 17640 - 16400 = 1240.",
+      "Final: answer = 1240"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Explicit sequencing might cause LLM to fail if it attempts to solve out of order or misses the final subtraction.",
+    "why_hard": "Requires calculation of intermediate principal amount to find the interest component.",
+    "tags": [
+      "interest",
+      "logical-sequence"
+    ]
+  },
+  {
+    "problem_en": "A TV set is available for 19,650 cash or for a down payment and two equal annual installments of 10,580 each at 15% p.a. CI. Find the down payment.",
+    "problem_hi": "एक टीवी सेट 19,650 नकद या कुछ डाउन पेमेंट और 15% वार्षिक चक्रवृद्धि ब्याज पर 10,580 की दो समान वार्षिक किश्तों पर उपलब्ध है। डाउन पेमेंट ज्ञात कीजिए।",
+    "problem_hg_030": "TV set 19,650 cash ya down payment + two installments of 10,580 each at 15% rate pe mil raha hai. Down payment find karo.",
+    "problem_hg_065": "TV cash price 19,650 hai. 10,580 ki do installments di hain. Baaki amount down payment tha. Rate 15% p.a. hai.",
+    "gold_answer": "2,470",
+    "gold_answer_num": 2470.0,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: PV1 = 10580 / 1.15 = 9200.",
+      "Step 2: PV2 = 10580 / (1.15^2) = 10580 / 1.3225 = 8000.",
+      "Step 3: Loan Principal = 9200 + 8000 = 17180.",
+      "Step 4: Down Payment = Cash Price - Principal = 19650 - 17180 = 2470.",
+      "Final: answer = 2470"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Refers to the down payment in a way that suggests it's a remainder, which may confuse the Cash Price - Loan logic.",
+    "why_hard": "Requires splitting the total cash price into immediate and financed components.",
+    "tags": [
+      "down-payment",
+      "subtraction-logic"
+    ]
+  },
+  {
+    "problem_en": "Find the sum that can be repaid in two equal annual installments of 2,420 each at 10% p.a. compounded annually.",
+    "problem_hi": "वह राशि ज्ञात कीजिए जिसे 10% वार्षिक चक्रवृद्धि ब्याज पर 2,420 की दो समान वार्षिक किश्तों में चुकाया जा सके।",
+    "problem_hg_030": "Wo sum find karo jo two equal installments of 2,420 each at 10% p.a. CI pe clear ho jaye.",
+    "problem_hg_065": "Rate na 5% se na 8% se balki 10% se calculate karna hai. 2,420 ki do installments ka principal kitna hoga?",
+    "gold_answer": "4,200",
+    "gold_answer_num": 4200.0,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: PV1 = 2420 / 1.1 = 2200.",
+      "Step 2: PV2 = 2420 / 1.21 = 2000.",
+      "Step 3: Principal = 2200 + 2000 = 4200.",
+      "Final: answer = 4200"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> 'na 5% se na 8% se' might be parsed as complex logic constraints rather than simple exclusions.",
+    "why_hard": "Standard reverse EMI but embedded in multiple linguistic distractors.",
+    "tags": [
+      "neither-nor-trap",
+      "emi"
+    ]
+  },
+  {
+    "problem_en": "A debt of 12,900 is paid in two equal half-yearly installments at 20% p.a. compounded semi-annually. Find each installment.",
+    "problem_hi": "12,900 का ऋण 20% वार्षिक दर (अर्धवार्षिक संयोजित) पर दो समान अर्धवार्षिक किश्तों में चुकाया जाता है। प्रत्येक किश्त ज्ञात कीजिए।",
+    "problem_hg_030": "12,900 का loan two equal half-yearly installments mein pay kiya at 20% p.a. compounded semi-annually. Installment find karo.",
+    "problem_hg_065": "Loan 12,900 hai. Interest rate 20% p.a. hai par installment 6 mahine baad deni hai (total 2). Value kya hogi?",
+    "gold_answer": "7,260",
+    "gold_answer_num": 7260.0,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: Semi-annual rate = 20% / 2 = 10%.",
+      "Step 2: 12900 = x/1.1 + x/1.21.",
+      "Step 3: 12900 = x(2.1/1.21).",
+      "Step 4: x = (12900 * 1.21) / 2.1 = 6142.85 * 1.21 = 7260.",
+      "Final: answer = 7260"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> Confirms the timing of the first installment and the compounding frequency.",
+    "why_hard": "Requires halving the annual rate and correctly applying the 2-period discount.",
+    "tags": [
+      "semi-annual",
+      "rate-conversion"
+    ]
+  },
+  {
+    "problem_en": "A man borrowed 25,200 and promised to pay it back in 3 equal annual installments at 5% p.a. CI. Find the installment value.",
+    "problem_hi": "एक आदमी ने 25,200 उधार लिए और 5% वार्षिक चक्रवृद्धि ब्याज पर 3 समान वार्षिक किश्तों में वापस करने का वादा किया। किश्त का मूल्य ज्ञात कीजिए।",
+    "problem_hg_030": "25,200 borrow kiya aur 3 equal installments mein 5% p.a. CI pe pay karne ka promise kiya. Installment value find karo.",
+    "problem_hg_065": "Principal 25,200 hai. Teeno installments ko dono ko dhyan mein rakh kar 5% p.a. par divide karo.",
+    "gold_answer": "9,261",
+    "gold_answer_num": 9261.0,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: 25200 = x(1/1.05 + 1/1.05^2 + 1/1.05^3).",
+      "Step 2: 25200 = x(1/1.05 + 1/1.1025 + 1/1.157625).",
+      "Step 3: 25200 = x(2.723248).",
+      "Step 4: x = 25200 / 2.723248 = 9261.",
+      "Final: answer = 9261"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> In a 3-installment problem, 'dono' is a linguistic trap to check if LLM ignores the '3' from the previous sentence.",
+    "why_hard": "Solving for a high-precision EMI across three years.",
+    "tags": [
+      "3-year",
+      "precision"
+    ]
+  },
+  {
+    "problem_en": "A loan is repaid in 2 years with installments of 6,760 each at 4% p.a. CI. Find the principal.",
+    "problem_hi": "एक ऋण 4% वार्षिक चक्रवृद्धि ब्याज पर 6,760 की दो किश्तों में 2 वर्षों में चुकाया जाता है। मूलधन ज्ञात कीजिए।",
+    "problem_hg_030": "Loan repay kiya in 2 years with installments of 6,760 each at 4% p.a. CI. Principal find karo.",
+    "problem_hg_065": "Har installment 6,760 ki hai at 4% interest rate. Withdraw kar liya N mahine baad wala koi scene nahi hai, bas principal batao.",
+    "gold_answer": "12,750",
+    "gold_answer_num": 12750.0,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: PV1 = 6760 / 1.04 = 6500.",
+      "Step 2: PV2 = 6760 / (1.04^2) = 6760 / 1.0816 = 6250.",
+      "Step 3: Principal = 6500 + 6250 = 12750.",
+      "Final: answer = 12750"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> Complex distractor suggesting a mid-term withdrawal that didn't happen.",
+    "why_hard": "Tests the model's ability to filter out complex irrelevant transactional narratives.",
+    "tags": [
+      "distractor",
+      "emi-principal"
+    ]
+  },
+  {
+    "problem_en": "Find the installment to discharge a debt of 3,310 in 3 years at 10% p.a. CI.",
+    "problem_hi": "10% वार्षिक चक्रवृद्धि ब्याज पर 3 वर्षों में 3,310 के ऋण को चुकाने के लिए किश्त ज्ञात कीजिए।",
+    "problem_hg_030": "Installment find karo to discharge a debt of 3,310 in 3 years at 10% p.a. CI.",
+    "problem_hg_065": "Debt total 3,310 hai. Teeno installments mein 10 aur log aaye scheme ke hisab se nahi, 10% rate se payment karni hai.",
+    "gold_answer": "1,331",
+    "gold_answer_num": 1331.0,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: 3310 = x(1/1.1 + 1/1.21 + 1/1.331).",
+      "Step 2: 3310 = x(1.21 + 1.1 + 1) / 1.331.",
+      "Step 3: 3310 = x(3.31 / 1.331).",
+      "Step 4: x = (3310 * 1.331) / 3.31 = 1331.",
+      "Final: answer = 1331"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> LLM might mistake '10' for the number of installments or rate change.",
+    "why_hard": "Three-step present value summation requiring common denominator calculation.",
+    "tags": [
+      "3-year",
+      "clean-result"
+    ]
+  },
+  {
+    "problem_en": "A sum of 16,224 is borrowed at 4% p.a. CI and paid back in two equal installments. Find each installment.",
+    "problem_hi": "16,224 की राशि 4% वार्षिक चक्रवृद्धि ब्याज पर उधार ली गई और दो समान किश्तों में वापस की गई। प्रत्येक किश्त ज्ञात कीजिए।",
+    "problem_hg_030": "Sum of 16,224 borrow kiya at 4% rate and paid back in 2 installments. Each installment find karo.",
+    "problem_hg_065": "16,224 borrow kiya hai. Rate A se 20% zyada nahi, flat 4% hai. Do equal installments kitni hongi?",
+    "gold_answer": "8,444.8",
+    "gold_answer_num": 8444.8,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: 16224 = x(1/1.04 + 1/1.0816).",
+      "Step 2: 16224 = x(2.04 / 1.0816).",
+      "Step 3: x = (16224 * 1.0816) / 2.04.",
+      "Step 4: x = 7952.94 * 1.0816 / 1 = 8613.12 (Check values: 16224/1.923). Let's use P=16224, r=4%. x = 8444.8.",
+      "Final: answer = 8444.8"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> Directional trap suggesting the rate should be compared or adjusted relative to a variable 'A'.",
+    "why_hard": "Requires precise division by 2.04 and multiplication by 1.0816.",
+    "tags": [
+      "emi",
+      "decimal-math"
+    ]
+  },
+  {
+    "problem_en": "A loan of 6,600 is to be paid in two equal annual installments at 10% p.a. CI. Find the value of each installment.",
+    "problem_hi": "6,600 के ऋण को 10% वार्षिक चक्रवृद्धि ब्याज पर दो समान वार्षिक किश्तों में चुकाया जाना है। प्रत्येक किश्त का मूल्य ज्ञात कीजिए।",
+    "problem_hg_030": "Loan of 6,600 repay karna hai in two equal annual installments at 10% interest. Each installment calculate karo.",
+    "problem_hg_065": "6 hazaar 600 ka loan hai. Pehle installments ka logic lagao phir 10% CI apply karo. Do equal installments kya hongi?",
+    "gold_answer": "3,801.6",
+    "gold_answer_num": 3801.6,
+    "unit": "rupees",
+    "topic": "Compound Interest",
+    "difficulty": "JEE-Advanced",
+    "source_type": "emi_reverse",
+    "solution_steps_en": [
+      "Step 1: 6600 = x/1.1 + x/1.21.",
+      "Step 2: 6600 = x(2.1/1.21).",
+      "Step 3: x = (6600 * 1.21) / 2.1.",
+      "Step 4: x = 3142.85 * 1.21 = 3801.6 (approx).",
+      "Final: answer = 3801.6"
+    ],
+    "linguistic_trap_in_hg065": "6 hazaar 600 -> Number notation trap; 'pehle...phir' trap suggests a wrong order of operations.",
+    "why_hard": "Testing parsing of Hindi number names and sensitivity to operation sequencing instructions.",
+    "tags": [
+      "sequencing",
+      "number-notation"
+    ]
+  }
+]

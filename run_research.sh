@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-cd "$SCRIPT_DIR"
+cd "$(dirname "$0")"
 
-CDP_URL="http://127.0.0.1:9222"
 HEADLESS_FLAG=""
 if [[ "${GEMINI_HEADLESS:-0}" == "1" ]]; then
   HEADLESS_FLAG="--headless=new"
@@ -23,22 +21,20 @@ if [[ "${GEMINI_XVFB:-0}" == "1" ]]; then
   fi
 fi
 
-if ! curl -fsS "$CDP_URL/json/version" >/dev/null 2>&1; then
-  echo "Starting Google Chrome with remote debugging on port 9222..."
-  open -na "Google Chrome" --args \
+if ! lsof -i :9222 >/dev/null 2>&1; then
+  echo "Starting Chrome with remote debugging on :9222 ..."
+  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
     --remote-debugging-port=9222 \
-    --user-data-dir="$HOME/chrome-cdp-profile" \
+    --user-data-dir=/tmp/chrome-debug-profile \
     --disable-blink-features=AutomationControlled \
     --disable-focus-on-load \
     --disable-background-networking \
     --disable-infobars \
     --disable-renderer-backgrounding \
     --disable-backgrounding-occluded-windows \
-    ${HEADLESS_FLAG}
-  echo
-  echo "Please sign in to Gemini + ChatGPT in that Chrome window, then press Enter."
-  read -r
+    ${HEADLESS_FLAG} >/dev/null 2>&1 &
+  sleep 3
 fi
 
-echo "Running main.py with existing Chrome session..."
-USE_EXISTING_CHROME=1 /usr/bin/python3 main.py
+echo "Running Gemini research loop ..."
+python3 gemini_research_loop.py

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hmmterm"
+version = "0.1.0"
+description = "Terminal toolkit for synthetic Hinglish dataset generation via Gemini UI automation"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "selenium>=4.20.0",
+  "webdriver-manager>=4.0.2",
+  "rich>=13.7.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+hmmterm = "hmmterm.cli:main"
+
+[tool.setuptools]
+packages = ["hmmterm"]
+py-modules = ["mainpp"]

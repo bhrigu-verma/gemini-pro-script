@@ -1,0 +1,176 @@
+Metadata-Version: 2.4
+Name: hmmterm
+Version: 0.1.0
+Summary: Terminal toolkit for synthetic Hinglish dataset generation via Gemini UI automation
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: selenium>=4.20.0
+Requires-Dist: webdriver-manager>=4.0.2
+Requires-Dist: rich>=13.7.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+
+# Gemini Automation Loops
+
+Modular Gemini automation system with two execution modes:
+- `ui`: Selenium + Chrome remote-debugging workflow.
+- `api`: Official Gemini API workflow with fallback models and retry behavior.
+
+## Scripts
+
+### 1) Self-improvement loop (legacy)
+- Entry: `main.py`
+- Launcher: `./run.sh`
+
+### 2) Research loop
+- Entry: `gemini_research_loop.py`
+- Wrapper: `scripts/idea_research.py`
+- Launcher: `./run_research.sh`
+
+### 3) Job-link completion loop
+- Entry: `scripts/job_link_completion.py`
+- Launcher: `./run_job_completion.sh`
+
+## Runtime modes
+
+Both `gemini_research_loop.py` and `scripts/job_link_completion.py` support:
+- `--runtime-mode ui`
+- `--runtime-mode api`
+
+When using API mode, provide key via:
+- `--api-key <key>` or
+- `GEMINI_API_KEY` environment variable.
+
+## Focus-stealing mitigation
+
+For UI mode, use one of these:
+- Headless Chrome: `GEMINI_HEADLESS=1`
+- Virtual display (Linux): `GEMINI_XVFB=1` (starts `Xvfb :99` if available)
+
+Launch scripts (`run.sh`, `run_research.sh`, `run_job_completion.sh`) include:
+- `--disable-focus-on-load`
+- anti-backgrounding flags
+
+Example:
+
+```bash
+GEMINI_HEADLESS=1 GEMINI_XVFB=1 ./run_job_completion.sh --runtime-mode ui --non-interactive
+```
+
+For long unattended runs, API mode is recommended to avoid browser focus/session issues.
+
+## CLI reference
+
+### Research loop
+
+```bash
+python3 gemini_research_loop.py \
+  --runtime-mode ui \
+  --browser-mode attach \
+  --primary-model gemini-3.1-pro \
+  --fallback-models gemini-3-flash,gemini-3.1-flash-lite
+```
+
+Key options:
+- `--runtime-mode {ui,api}`
+- `--api-key <key>`
+- `--primary-model <model>`
+- `--fallback-models <comma-separated>`
+- `--browser-mode {attach,headless}` (ui mode)
+- `--headless` (ui mode)
+- `--user-data-dir <path>`
+- `--user-agent <ua>`
+
+### Job-link completion loop
+
+```bash
+python3 scripts/job_link_completion.py \
+  --runtime-mode api \
+  --target 100 \
+  --batch-size 25 \
+  --role "AI Engineer" \
+  --location "Remote" \
+  --query "latest AI/ML roles" \
+  --primary-model gemini-3.1-pro \
+  --fallback-models gemini-3-flash,gemini-3.1-flash-lite
+```
+
+Key options:
+- `--runtime-mode {ui,api}`
+- `--target <int>`
+- `--batch-size <int>`
+- `--seed-file <txt|csv|json>`
+- `--resume`
+- `--max-iterations <int>`
+- `--max-empty-streak <int>`
+- `--non-interactive`
+- `--api-key <key>`
+- `--primary-model <model>`
+- `--fallback-models <comma-separated>`
+- `--browser-mode {attach,headless}` (ui mode)
+- `--headless` (ui mode)
+
+### Dedicated long-run orchestrator
+
+Use this wrapper to keep a workflow running unattended and emit heartbeat metrics:
+
+```bash
+python3 scripts/long_run.py \
+  --workflow research \
+  --runtime-mode api \
+  --poll-seconds 20 \
+  --max-minutes 0
+```
+
+Useful options:
+- `--workflow {research,job,legacy}`
+- `--runtime-mode {ui,api}`
+- `--api-key <key>` (or `GEMINI_API_KEY`)
+- `--poll-seconds <int>`
+- `--max-minutes <int>`
+- `--metrics-file <path>`
+- `--extra-args ...` (forwarded to underlying script)
+
+## Outputs
+
+### Research loop
+- `research_loop_output/research_history.json`
+- `research_loop_output/final_report.json`
+- `research_loop_output/run_*.log`
+
+### Job completion loop
+- `job_completion_output/history.json`
+- `job_completion_output/final_report.json`
+- `job_completion_output/records.csv`
+- `job_completion_output/report.md`
+
+### Long-run orchestrator
+- `long_run_output/metrics.csv`
+
+## Long-run tuning knobs
+
+Environment variables used by the loops:
+- `INTER_ROUND_SLEEP_MIN` (default: `45`)
+- `INTER_ROUND_SLEEP_MAX` (default: `90`)
+- `RATE_LIMIT_BACKOFF` (default: `60,120,300`)
+- `CONTEXT_RESET_INTERVAL` (default: `15`)
+- `SCREENSHOT_INTERVAL` (default: `10`)
+- `SCREENSHOT_ON_ERROR` (default: `1`)
+- `MEMORY_CLEAN_INTERVAL` (default: `20`)
+- `AUTO_MAX_ROUNDS` (default: `0`, only used by `main.py`)
+
+These controls help for 100+ iteration stability by reducing rate-limit bursts,
+refreshing UI contexts, and limiting disk growth from screenshots.
+
+## Tests
+
+Run unit tests:
+
+```bash
+python3 -m unittest discover -s tests -p "test_*.py" -v
+```
+
+Covered areas:
+- URL normalization and dedupe key behavior.
+- Completion controller stop conditions.
+- JSON parser/repair fallback logic.

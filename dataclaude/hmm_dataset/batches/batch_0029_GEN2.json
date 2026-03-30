@@ -1,0 +1,389 @@
+[
+  {
+    "problem_en": "Find the value of (1 + cos(pi/8) + i sin(pi/8))^8 / (1 + cos(pi/8) - i sin(pi/8))^8.",
+    "problem_hi": "(1 + cos(pi/8) + i sin(pi/8))^8 / (1 + cos(pi/8) - i sin(pi/8))^8 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "(1 + cos(pi/8) + i sin(pi/8))^8 / (1 + cos(pi/8) - i sin(pi/8))^8 ki value find out karni hai.",
+    "problem_hg_065": "Expression (1 + cos(pi/8) + i sin(pi/8))^8 divide by (1 + cos(pi/8) - i sin(pi/8))^8 solve karo. Isme numerator aur denominator dono ko polar form mein change karke simplify karna.",
+    "gold_answer": "-1",
+    "gold_answer_num": -1.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Use the identity 1 + cos(2x) = 2cos^2(x) and sin(2x) = 2sin(x)cos(x).",
+      "Step 2: Rewrite 1 + cos(pi/8) + i sin(pi/8) as 2cos(pi/16)[cos(pi/16) + i sin(pi/16)].",
+      "Step 3: Similarly, rewrite 1 + cos(pi/8) - i sin(pi/8) as 2cos(pi/16)[cos(pi/16) - i sin(pi/16)].",
+      "Step 4: The expression becomes [cis(pi/16) / cis(-pi/16)]^8 = [cis(pi/8)]^8.",
+      "Step 5: Apply De Moivre's Theorem: cis(pi/8 * 8) = cis(pi) = cos(pi) + i sin(pi) = -1.",
+      "Final: answer = -1"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> Implies that the transformation must be applied to BOTH the numerator and denominator simultaneously, which often causes LLMs to fail in tracking the separate sign differences in the cis(theta) vs cis(-theta) parts.",
+    "why_hard": "Requires half-angle trigonometric substitutions before De Moivre's Theorem can be applied.",
+    "tags": [
+      "trigonometry",
+      "de-moivre"
+    ]
+  },
+  {
+    "problem_en": "If z = (sqrt(3) + i)^12 + (sqrt(3) - i)^12, find the value of z.",
+    "problem_hi": "यदि z = (sqrt(3) + i)^12 + (sqrt(3) - i)^12 है, तो z का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar z = (sqrt(3) + i)^12 + (sqrt(3) - i)^12 hai, toh z ki value calculate karo.",
+    "problem_hg_065": "Complex number z nikaalo jo (sqrt(3) + i)^12 plus (sqrt(3) - i)^12 ke barabar hai. Isme 3 lakh 75 hazaar calculation ki zaroorat nahi hai, bas polar conversion karo.",
+    "gold_answer": "8192",
+    "gold_answer_num": 8192.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Convert sqrt(3) + i to polar form: 2(cos(pi/6) + i sin(pi/6)).",
+      "Step 2: Apply De Moivre: (sqrt(3) + i)^12 = 2^12 * (cos(12pi/6) + i sin(12pi/6)) = 4096 * (cos(2pi) + i sin(2pi)) = 4096.",
+      "Step 3: Convert sqrt(3) - i to polar form: 2(cos(-pi/6) + i sin(-pi/6)).",
+      "Step 4: Apply De Moivre: (sqrt(3) - i)^12 = 2^12 * (cos(-2pi) + i sin(-2pi)) = 4096.",
+      "Step 5: Sum z = 4096 + 4096 = 8192.",
+      "Final: answer = 8192"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> LLMs often get confused by the Indian numbering system notation mixed with math, potentially parsing '3' or '75000' as a scalar coefficient for the exponent or base.",
+    "why_hard": "Tests high-power expansion using polar forms and the addition of complex conjugates.",
+    "tags": [
+      "conjugate",
+      "powers"
+    ]
+  },
+  {
+    "problem_en": "If (1+x)^n = P_0 + P_1 x + P_2 x^2 + ..., find the value of P_0 - P_2 + P_4 - ... for n = 8.",
+    "problem_hi": "यदि (1+x)^n = P_0 + P_1 x + P_2 x^2 + ... है, तो n = 8 के लिए P_0 - P_2 + P_4 - ... का मान ज्ञात कीजिए।",
+    "problem_hg_030": "(1+x)^n expansion mein P_0 - P_2 + P_4 - ... ki value nikaalni hai for n = 8.",
+    "problem_hg_065": "Expansion (1+x)^8 mein alternates coefficients P_0 - P_2 + P_4 calculate karo. Pehle karo x = i substitute phir real part equate karna.",
+    "gold_answer": "16",
+    "gold_answer_num": 16.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Consider the expansion of (1+i)^n. (1+i)^n = C(n,0) + C(n,1)i + C(n,2)i^2 + C(n,3)i^3 + ...",
+      "Step 2: (1+i)^n = (P_0 - P_2 + P_4 - ...) + i(P_1 - P_3 + P_5 - ...).",
+      "Step 3: Convert (1+i) to polar form: sqrt(2)(cos(pi/4) + i sin(pi/4)).",
+      "Step 4: For n=8, (1+i)^8 = (sqrt(2))^8 * (cos(8pi/4) + i sin(8pi/4)) = 2^4 * (cos(2pi) + i sin(2pi)) = 16(1 + 0i).",
+      "Step 5: The real part P_0 - P_2 + P_4 - ... is 16.",
+      "Final: answer = 16"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Forces a sequence of substitution that might lead an LLM to incorrectly simplify the complex binomial before expanding it if the instruction is followed too rigidly/literally.",
+    "why_hard": "Requires linking binomial expansion to the real part of a complex number power.",
+    "tags": [
+      "binomial",
+      "roots-of-unity"
+    ]
+  },
+  {
+    "problem_en": "Solve x^4 - x^3 + x^2 - x + 1 = 0 and find the sum of the absolute values of all roots raised to the power of 10.",
+    "problem_hi": "x^4 - x^3 + x^2 - x + 1 = 0 को हल करें और सभी मूलों (roots) के 10वीं घात के निरपेक्ष मानों का योग ज्ञात करें।",
+    "problem_hg_030": "Equation x^4 - x^3 + x^2 - x + 1 = 0 solve karke roots ki 10th power ke absolute values ka sum nikalo.",
+    "problem_hg_065": "x^5 + 1 = 0 ke roots except -1 dhoondo. Un roots ki power 10 nikaalo, baaki terms ignore karke unka sum find karo.",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Recognize x^4 - x^3 + x^2 - x + 1 = (x^5 + 1)/(x + 1).",
+      "Step 2: Roots are e^{i(2k+1)pi/5} for k=0,1,3,4 (excluding k=2 which is -1).",
+      "Step 3: All roots lie on the unit circle, so |x_i| = 1 for all roots.",
+      "Step 4: Absolute value of any root raised to power 10 is |x_i^10| = |x_i|^10 = 1^10 = 1.",
+      "Step 5: Sum of these for the 4 roots is 1 + 1 + 1 + 1 = 4.",
+      "Final: answer = 4"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Using 'baaki' (the rest/remainder) can trigger the LLM to subtract 1 from the total number of roots or the final sum, assuming the 'remainder' of the operation is requested.",
+    "why_hard": "Requires identifying the cyclotomic polynomial and properties of roots of unity.",
+    "tags": [
+      "roots-of-unity",
+      "cyclotomic"
+    ]
+  },
+  {
+    "problem_en": "If alpha and beta are roots of x^2 - 2x + 4 = 0, find the value of alpha^6 + beta^6.",
+    "problem_hi": "यदि alpha और beta समीकरण x^2 - 2x + 4 = 0 के मूल हैं, तो alpha^6 + beta^6 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar alpha aur beta x^2 - 2x + 4 = 0 ke roots hain, toh alpha^6 + beta^6 nikaalo.",
+    "problem_hg_065": "Quadratic equation x^2 - 2x + 4 = 0 ke roots alpha, beta hain. In dono ko power 6 tak le jaao, 10 aur log aaye par unka sum mat bhulna.",
+    "gold_answer": "128",
+    "gold_answer_num": 128.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Solve x^2 - 2x + 4 = 0 using quadratic formula: x = [2 +/- sqrt(4 - 16)]/2 = 1 +/- isqrt(3).",
+      "Step 2: Convert to polar: alpha = 2(cos(pi/3) + i sin(pi/3)) and beta = 2(cos(-pi/3) + i sin(-pi/3)).",
+      "Step 3: alpha^6 = 2^6 * (cos(6pi/3) + i sin(6pi/3)) = 64 * cos(2pi) = 64.",
+      "Step 4: beta^6 = 2^6 * (cos(-6pi/3) + i sin(-6pi/3)) = 64 * cos(-2pi) = 64.",
+      "Step 5: alpha^6 + beta^6 = 64 + 64 = 128.",
+      "Final: answer = 128"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> This phrase (10 more people came) might cause an LLM to add 10 to the roots, the exponent, or the final result.",
+    "why_hard": "Combines quadratic equations with De Moivre's theorem for power calculation.",
+    "tags": [
+      "quadratic",
+      "powers"
+    ]
+  },
+  {
+    "problem_en": "Find the sum of sin(2kpi/7) from k=1 to 6.",
+    "problem_hi": "k=1 से 6 तक sin(2kpi/7) का योग ज्ञात कीजिए।",
+    "problem_hg_030": "k=1 se 6 tak sin(2kpi/7) ka sum find out karo.",
+    "problem_hg_065": "Series sum calculate karo sin(2kpi/7) for k from 1 to 6. Isme na real part se na imaginary part se divisible hone ka tension lo, bas sum find karo.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Let S = sum_{k=1}^6 sin(2kpi/7). Consider the sum of 7th roots of unity: sum_{k=0}^6 e^{i2kpi/7} = 0.",
+      "Step 2: This sum is (cos(0)+isin(0)) + sum_{k=1}^6 (cos(2kpi/7) + isin(2kpi/7)) = 0.",
+      "Step 3: Separate real and imaginary parts: (1 + sum_{k=1}^6 cos(2kpi/7)) + i(sum_{k=1}^6 sin(2kpi/7)) = 0 + 0i.",
+      "Step 4: Equate imaginary parts: sum_{k=1}^6 sin(2kpi/7) = 0.",
+      "Final: answer = 0"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> Neither/Nor trap. Might lead the LLM to filter out certain terms in the summation based on parity or divisibility of 'k'.",
+    "why_hard": "Requires applying properties of the sum of roots of unity to trigonometric series.",
+    "tags": [
+      "trigonometric-series",
+      "roots-of-unity"
+    ]
+  },
+  {
+    "problem_en": "Find the value of ( (1+isqrt(3))/(1-isqrt(3)) )^6.",
+    "problem_hi": "( (1+isqrt(3))/(1-isqrt(3)) )^6 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "( (1+isqrt(3))/(1-isqrt(3)) )^6 ki value nikaalo.",
+    "problem_hg_065": "Fraction ((1+isqrt(3))/(1-isqrt(3))) ki power 6 solve karni hai. A se 20% zyada complexity assume mat karna, simplify logic lagao.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Simplify inside: 1+isqrt(3) = 2(cos(pi/3) + i sin(pi/3)).",
+      "Step 2: 1-isqrt(3) = 2(cos(-pi/3) + i sin(-pi/3)).",
+      "Step 3: Fraction = cis(pi/3) / cis(-pi/3) = cis(2pi/3).",
+      "Step 4: Apply power 6: [cis(2pi/3)]^6 = cis(4pi).",
+      "Step 5: cis(4pi) = cos(4pi) + i sin(4pi) = 1.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> Percentage trap. May lead the LLM to scale the exponent or the final result by 1.2 or 0.8.",
+    "why_hard": "Tests the ability to perform complex division in polar form before exponentiation.",
+    "tags": [
+      "polar-division",
+      "powers"
+    ]
+  },
+  {
+    "problem_en": "If z + 1/z = 2 cos(theta), find the value of z^5 + 1/z^5.",
+    "problem_hi": "यदि z + 1/z = 2 cos(theta) है, तो z^5 + 1/z^5 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar z + 1/z = 2 cos(theta), toh z^5 + 1/z^5 ki value calculate karo.",
+    "problem_hg_065": "Condition z + 1/z = 2 cos(theta) di hai. Iska use karke z^5 + 1/z^5 nikaalo. Pehle karo z solve phir apply logic.",
+    "gold_answer": "2 cos(5theta)",
+    "gold_answer_num": 2.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Solve z^2 - 2zcos(theta) + 1 = 0 for z.",
+      "Step 2: z = [2cos(theta) +/- sqrt(4cos^2(theta) - 4)]/2 = cos(theta) +/- i sin(theta).",
+      "Step 3: By De Moivre, z^5 = cos(5theta) +/- i sin(5theta).",
+      "Step 4: 1/z^5 = z^{-5} = cos(-5theta) +/- i sin(-5theta) = cos(5theta) -/+ i sin(5theta).",
+      "Step 5: Sum z^5 + 1/z^5 = 2 cos(5theta).",
+      "Final: answer = 2 cos(5theta)"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> May lead LLMs to perform an unnecessary substitution or solve for z explicitly as a real number before realizing the polar shortcut.",
+    "why_hard": "Fundamental identity in complex numbers requiring proof-like derivation steps.",
+    "tags": [
+      "identities",
+      "de-moivre"
+    ]
+  },
+  {
+    "problem_en": "Find the product of all 3rd roots of unity.",
+    "problem_hi": "इकाई (unity) के सभी 3rd मूलों का गुणनफल ज्ञात कीजिए।",
+    "problem_hg_030": "Unity ke saare 3rd roots ka product find out karo.",
+    "problem_hg_065": "1 ke cube roots nikalo. Un dono ko (complex ones) aur 1 ko multiply karo. Withdraw kar liya N mahine baad wala subtraction logic mat lagana.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Roots are 1, w, w^2 where w = e^{i2pi/3}.",
+      "Step 2: Product = 1 * w * w^2 = w^3.",
+      "Step 3: Since w is a cube root of 1, w^3 = 1.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> Financial subtraction trap. Could mislead the LLM into thinking it needs to remove one root from the product calculation.",
+    "why_hard": "Tests the basic property of roots of unity product, which is often confused with sum (=0).",
+    "tags": [
+      "roots-of-unity",
+      "product"
+    ]
+  },
+  {
+    "problem_en": "If x_r = cos(pi/2^r) + i sin(pi/2^r), find the product x_1 * x_2 * x_3 * ... upto infinity.",
+    "problem_hi": "यदि x_r = cos(pi/2^r) + i sin(pi/2^r) है, तो अनंत तक x_1 * x_2 * x_3 * ... का गुणनफल ज्ञात कीजिए।",
+    "problem_hg_030": "Agar x_r = cos(pi/2^r) + i sin(pi/2^r), toh infinite product x_1 * x_2 * x_3 ... nikaalo.",
+    "problem_hg_065": "x_r cis form mein hai. Product x_1 se infinity tak nikaalo. 6 mahine baad waali calculation ke bajaye GP sum ka logic lagao argument mein.",
+    "gold_answer": "-1",
+    "gold_answer_num": -1.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: x_r = e^{ipi/2^r}.",
+      "Step 2: Product = e^{ipi(1/2 + 1/4 + 1/8 + ...)}.",
+      "Step 3: Sum of infinite GP = (1/2) / (1 - 1/2) = 1.",
+      "Step 4: Product = e^{ipi1} = cos(pi) + i sin(pi).",
+      "Step 5: cos(pi) = -1.",
+      "Final: answer = -1"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> Rate-time trap. LLM might interpret the '1/2' factor in the exponents as a semi-annual compounding frequency or adjust the sum of the GP incorrectly.",
+    "why_hard": "Requires evaluating an infinite product using the sum of an infinite Geometric Progression in the argument.",
+    "tags": [
+      "infinite-product",
+      "geometric-progression"
+    ]
+  },
+  {
+    "problem_en": "Find the value of sum_{k=1}^10 (sin(2kpi/11) + i cos(2kpi/11)).",
+    "problem_hi": "sum_{k=1}^10 (sin(2kpi/11) + i cos(2kpi/11)) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "sum_{k=1}^10 (sin(2kpi/11) + i cos(2kpi/11)) solve karo.",
+    "problem_hg_065": "Expression sum k=1 to 10 calculate karo. Sin and Cos swapped position mein hain. Isme pehle karo 'i' common nikaalna phir roots of unity sum lagana.",
+    "gold_answer": "-i",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Let S = sum_{k=1}^10 (sin(2kpi/11) + i cos(2kpi/11)).",
+      "Step 2: Take 'i' common: S = i * sum_{k=1}^10 (cos(2kpi/11) - i sin(2kpi/11)).",
+      "Step 3: This is i * sum_{k=1}^10 e^{-i2kpi/11}.",
+      "Step 4: Let alpha = e^{-i2pi/11}. The sum is i * (alpha^1 + alpha^2 + ... + alpha^10).",
+      "Step 5: The sum of all 11 roots of unity is 1 + alpha + ... + alpha^10 = 0. So sum from 1 to 10 is -1.",
+      "Step 6: S = i * (-1) = -i.",
+      "Final: answer = -i"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> LLMs often fail at the 'i' factoring step when the instruction order is forced, potentially leading them to apply De Moivre directly to sin + i cos which is incorrect.",
+    "why_hard": "The terms are in (sin + i cos) form instead of standard (cos + i sin), requiring an extra transformation step.",
+    "tags": [
+      "roots-of-unity",
+      "complex-manipulation"
+    ]
+  },
+  {
+    "problem_en": "Calculate [(1 + sin(pi/5) + i cos(pi/5)) / (1 + sin(pi/5) - i cos(pi/5))]^5.",
+    "problem_hi": "[(1 + sin(pi/5) + i cos(pi/5)) / (1 + sin(pi/5) - i cos(pi/5))]^5 की गणना करें।",
+    "problem_hg_030": "[(1 + sin(pi/5) + i cos(pi/5)) / (1 + sin(pi/5) - i cos(pi/5))]^5 ko calculate karo.",
+    "problem_hg_065": "Brackets solve karo power 5 ke saath. Baaki elements ignore karke bas simplification par focus rakho. Sin/Cos swapped hain cis form se.",
+    "gold_answer": "-1",
+    "gold_answer_num": -1.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Convert sin(pi/5) to cos(pi/2 - pi/5) = cos(3pi/10) and cos(pi/5) to sin(3pi/10).",
+      "Step 2: The expression is now [ (1 + cos(3pi/10) + i sin(3pi/10)) / (1 + cos(3pi/10) - i sin(3pi/10)) ]^5.",
+      "Step 3: Using the half-angle formula, this simplifies to [ cis(3pi/10) ]^5.",
+      "Step 4: By De Moivre, cis(3pi/10 * 5) = cis(3pi/2) = cos(3pi/2) + i sin(3pi/2).",
+      "Step 5: cos(3pi/2) = 0, sin(3pi/2) = -1. Result is -i. Wait, let me re-verify Step 3.",
+      "Step 6: Step 2 simplification actually gives [cis(3pi/20)/cis(-3pi/20)]^5 = [cis(3pi/10)]^5. Correct. Final is -i.",
+      "Final: answer = -i"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Remainder trap. Might cause the LLM to omit the denominator or the power 5 during intermediate steps.",
+    "why_hard": "Double transformation: first from sin to cos, then half-angle simplification.",
+    "tags": [
+      "trigonometry",
+      "de-moivre"
+    ]
+  },
+  {
+    "problem_en": "Find the sum of (cos(2kpi/9) + i sin(2kpi/9)) for k = 0, 1, 2, ..., 8.",
+    "problem_hi": "k = 0, 1, 2, ..., 8 के लिए (cos(2kpi/9) + i sin(2kpi/9)) का योग ज्ञात कीजिए।",
+    "problem_hg_030": "k = 0, 1, 2, ..., 8 ke liye sum of (cos(2kpi/9) + i sin(2kpi/9)) find karo.",
+    "problem_hg_065": "Unity ke roots ka sum nikalo k=0 se 8 tak. 10 aur log aaye par sum property change nahi hoti.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Recognize that the terms cos(2kpi/9) + i sin(2kpi/9) are the 9th roots of unity.",
+      "Step 2: The sum of all n-th roots of unity for n > 1 is always 0.",
+      "Step 3: Here k ranges from 0 to 8, covering all 9 roots of unity.",
+      "Final: answer = 0"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> Distractor phrase implying an additive change. LLM might add 10 to the total number of roots (making it 19) or add 10 to the final sum.",
+    "why_hard": "Tests knowledge of the sum of roots of unity property.",
+    "tags": [
+      "roots-of-unity",
+      "summation"
+    ]
+  },
+  {
+    "problem_en": "Find the value of (1+i)^100 + (1-i)^100.",
+    "problem_hi": "(1+i)^100 + (1-i)^100 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "(1+i)^100 + (1-i)^100 ki total value calculate karo.",
+    "problem_hg_065": "(1+i) aur (1-i) dono ko power 100 karke add karo. A se 20% zyada base logic mat use karna.",
+    "gold_answer": "-2^51",
+    "gold_answer_num": -2251799800000000.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: Convert (1+i) to polar: sqrt(2) * cis(pi/4).",
+      "Step 2: Apply De Moivre: (1+i)^100 = (2^0.5)^100 * cis(100pi/4) = 2^50 * cis(25pi).",
+      "Step 3: cis(25pi) = cis(pi) = -1. So (1+i)^100 = -2^50.",
+      "Step 4: (1-i)^100 is the conjugate, but since the result is real, it's also -2^50.",
+      "Step 5: Sum = -2^50 - 2^50 = -2 * 2^50 = -2^51.",
+      "Final: answer = -2^51"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> Percentage distractor. LLM might increase the power (100) or the final magnitude by 20%.",
+    "why_hard": "Large exponents require efficient reduction of the argument modulo 2pi.",
+    "tags": [
+      "powers",
+      "argument-reduction"
+    ]
+  },
+  {
+    "problem_en": "Find the value of theta in (0, pi/2) such that (cos(theta) + i sin(theta))^4 = -1/2 + i sqrt(3)/2.",
+    "problem_hi": "(0, pi/2) में theta का मान ज्ञात कीजिए जैसे कि (cos(theta) + i sin(theta))^4 = -1/2 + i sqrt(3)/2 हो।",
+    "problem_hg_030": "(0, pi/2) range mein theta nikalo agar (cos(theta) + i sin(theta))^4 = -1/2 + i sqrt(3)/2.",
+    "problem_hg_065": "Equation cis(theta)^4 = -1/2 + i sqrt(3)/2 solve karo for theta. Pehle karo RHS ko polar form mein phir angle equate karna.",
+    "gold_answer": "pi/6",
+    "gold_answer_num": 0.523598,
+    "unit": "radians",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Advanced",
+    "source_type": "de_moivre",
+    "solution_steps_en": [
+      "Step 1: RHS = -1/2 + i sqrt(3)/2 = cos(2pi/3) + i sin(2pi/3) = cis(2pi/3).",
+      "Step 2: LHS = (cis(theta))^4 = cis(4theta).",
+      "Step 3: Equate: 4theta = 2pi/3 + 2kpi.",
+      "Step 4: For k=0, 4theta = 2pi/3 => theta = pi/6. (In range 0 to pi/2).",
+      "Step 5: For k=1, 4theta = 8pi/3 => theta = 2pi/3. (Outside range).",
+      "Final: answer = pi/6"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Instruction bias. Might cause the LLM to skip the general solution (2k*pi) and only check the first principal value, which is lucky here but mathematically risky.",
+    "why_hard": "Requires solving for multiple possible angles and checking constraints.",
+    "tags": [
+      "complex-equations",
+      "de-moivre"
+    ]
+  }
+]

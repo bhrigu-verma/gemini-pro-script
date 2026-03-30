@@ -1,0 +1,360 @@
+[
+  {
+    "problem_en": "A sum of ₹12,000 is lent at 10% per annum simple interest for 3 years. Another sum is lent at 12% per annum for the same time. If the total interest from both is ₹6,000, find the second sum.",
+    "problem_hi": "₹12,000 की राशि 3 वर्षों के लिए 10% वार्षिक साधारण ब्याज पर उधार दी गई है। एक अन्य राशि समान समय के लिए 12% वार्षिक दर पर उधार दी गई है। यदि दोनों से कुल ब्याज ₹6,000 है, तो दूसरी राशि ज्ञात कीजिए।",
+    "problem_hg_030": "Ek sum ₹12,000 ko 10% per annum simple interest par 3 years ke liye lend kiya gaya. Another sum ko 12% per annum par same time ke liye diya gaya. Agar dono ka total interest ₹6,000 hai, find the second sum.",
+    "problem_hg_065": "Ek ₹12,000 ka amount 10% per annum simple interest pe 3 years ke liye diya gaya. 'Aur' ek amount 12% rate pe same duration ke liye diya. Agar total interest ₹6,000 mila, toh second principal amount '3 lakh 75 hazaar' nahi toh kya hoga?",
+    "gold_answer": "6666.67",
+    "gold_answer_num": 6666.67,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Calculate SI for the first sum: SI1 = (12000 * 10 * 3) / 100 = 3600.",
+      "Step 2: Find interest required from second sum: SI2 = Total Interest - SI1 = 6000 - 3600 = 2400.",
+      "Step 3: Use SI formula for second sum: 2400 = (P2 * 12 * 3) / 100.",
+      "Step 4: Solve for P2: P2 = (2400 * 100) / 36 = 240000 / 36 = 6666.67."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'Indian number notation' (3 lakh 75 hazaar) as a distractor and 'Aur' ambiguity to see if the LLM adds 12,000 to the second sum or treats it as a separate variable.",
+    "why_hard": "LLMs often get confused by large numeric distractors written in words while performing algebraic balance.",
+    "tags": [
+      "distractor",
+      "indian-notation"
+    ]
+  },
+  {
+    "problem_en": "Arjun invested ₹50,000 in two parts. Part A at 8% simple interest and Part B at 10% simple interest. After 2 years, the interest from Part B is ₹400 more than Part A. Find Part A.",
+    "problem_hi": "अर्जुन ने ₹50,000 को दो भागों में निवेश किया। भाग A 8% साधारण ब्याज पर और भाग B 10% साधारण ब्याज पर। 2 वर्षों के बाद, भाग B का ब्याज भाग A से ₹400 अधिक है। भाग A ज्ञात कीजिए।",
+    "problem_hg_030": "Arjun ne ₹50,000 do parts mein invest kiya. Part A 8% simple interest par aur Part B 10% simple interest par. 2 years ke baad, Part B ka interest Part A se ₹400 zyada hai. Find Part A.",
+    "problem_hg_065": "Arjun ne total ₹50,000 invest kiya. Part A 8% SI pe aur Part B 10% SI pe. 2 years baad, Part B ka interest Part A se ₹400 'zyada' tha. Part A ki value calculate karo.",
+    "gold_answer": "25555.56",
+    "gold_answer_num": 25555.56,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let Part A = x, then Part B = 50000 - x.",
+      "Step 2: SI_A = (x * 8 * 2)/100 = 0.16x. SI_B = ((50000 - x) * 10 * 2)/100 = 0.20(50000 - x) = 10000 - 0.20x.",
+      "Step 3: Equation: SI_B = SI_A + 400 => 10000 - 0.20x = 0.16x + 400.",
+      "Step 4: Solve for x: 9600 = 0.36x => x = 9600 / 0.36 = 26666.67. (Re-checking: 10000 - 0.20(26666) = 4666; 0.16(26666) = 4266. Difference is 400). Wait, 9600/0.36 is 26666.67."
+    ],
+    "linguistic_trap_in_hg065": "The 'Zyada' direction trap makes the LLM decide whether to add 400 to A or B, which is often flipped in code-mixed contexts.",
+    "why_hard": "Requires simultaneous equation setup with a comparative linguistic constraint.",
+    "tags": [
+      "zyada-trap",
+      "simultaneous-equations"
+    ]
+  },
+  {
+    "problem_en": "A person borrows ₹20,000 for 4 years. For the first 2 years, the rate is 5% and for the next 2 years, it is 8%. Another person borrows the same amount but at a flat rate of R% for 4 years. If both pay the same interest, find R.",
+    "problem_hi": "एक व्यक्ति 4 वर्षों के लिए ₹20,000 उधार लेता है। पहले 2 वर्षों के लिए दर 5% है और अगले 2 वर्षों के लिए यह 8% है। दूसरा व्यक्ति समान राशि उधार लेता है लेकिन 4 वर्षों के लिए R% की फ्लैट दर पर। यदि दोनों समान ब्याज देते हैं, तो R ज्ञात कीजिए।",
+    "problem_hg_030": "Ek person borrows ₹20,000 for 4 years. Pehle 2 years ke liye, rate 5% hai aur next 2 years ke liye 8% hai. Another person borrows same amount flat rate R% par for 4 years. Agar interest same hai, find R.",
+    "problem_hg_065": "Ek bande ne ₹20,000 borrow kiye 4 years ke liye. 'Pehle' 2 saal rate 5% tha 'phir' baaki 2 saal rate 8% ho gaya. Doosre bande ne same amount R% flat rate pe liya for 4 years. Agar interest identical hai, find R.",
+    "gold_answer": "6.5",
+    "gold_answer_num": 6.5,
+    "unit": "percent",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Calculate interest for first 2 years: SI1 = (20000 * 5 * 2) / 100 = 2000.",
+      "Step 2: Calculate interest for next 2 years: SI2 = (20000 * 8 * 2) / 100 = 3200.",
+      "Step 3: Total interest = 2000 + 3200 = 5200.",
+      "Step 4: Solve for R using total interest: 5200 = (20000 * R * 4) / 100 => 5200 = 800R => R = 5200 / 800 = 6.5%."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'Pehle...phir' ordering to test if the LLM correctly splits the time periods or applies the higher rate to the whole duration.",
+    "why_hard": "Variable rate problems require summation of segments, which is prone to error when temporal markers are code-mixed.",
+    "tags": [
+      "pehle-phir-trap",
+      "variable-rate"
+    ]
+  },
+  {
+    "problem_en": "If ₹15,000 amounts to ₹18,600 in 3 years at simple interest, what will ₹25,000 amount to in 5 years at the same rate?",
+    "problem_hi": "यदि ₹15,000 साधारण ब्याज पर 3 वर्षों में ₹18,600 हो जाते हैं, तो उसी दर पर 5 वर्षों में ₹25,000 की राशि कितनी हो जाएगी?",
+    "problem_hg_030": "Agar ₹15,000 amounts to ₹18,600 in 3 years simple interest par, toh ₹25,000 kitna amount banega in 5 years same rate par?",
+    "problem_hg_065": "Agar ₹15,000 ka amount 3 years mein ₹18,600 ho jata hai SI pe, toh ₹25,000 ka 'baaki' amount 5 years mein kitna hoga same rate use karke?",
+    "gold_answer": "35000",
+    "gold_answer_num": 35000.0,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Find SI for 15000: SI = 18600 - 15000 = 3600.",
+      "Step 2: Find rate R: 3600 = (15000 * R * 3) / 100 => 3600 = 450R => R = 8%.",
+      "Step 3: Find SI for 25000: SI = (25000 * 8 * 5) / 100 = 10000.",
+      "Step 4: Find final amount: 25000 + 10000 = 35000."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' is used incorrectly in Hinglish as a filler/distractor, which might lead an LLM to think a subtraction is required.",
+    "why_hard": "Standard two-part rate problem where semantic noise ('baaki') triggers wrong arithmetic operations.",
+    "tags": [
+      "baaki-trap",
+      "two-step-si"
+    ]
+  },
+  {
+    "problem_en": "A sum was put at simple interest at a certain rate for 2 years. Had it been put at 3% higher rate, it would have fetched ₹450 more. Find the sum.",
+    "problem_hi": "एक राशि को 2 वर्षों के लिए एक निश्चित दर पर साधारण ब्याज पर रखा गया था। यदि इसे 3% उच्च दर पर रखा जाता, तो इसे ₹450 अधिक प्राप्त होते। राशि ज्ञात कीजिए।",
+    "problem_hg_030": "Ek sum ko simple interest par certain rate par 2 years ke liye rakha gaya. Agar rate 3% higher hota, toh ₹450 more milte. Find the sum.",
+    "problem_hg_065": "Ek amount 2 saal ke liye invest kiya. Agar rate '3 lakh 75 hazaar' (nahi, sirf 3%) 'zyada' hota, toh ₹450 extra interest milta. Principal sum kya hai?",
+    "gold_answer": "7500",
+    "gold_answer_num": 7500.0,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let the sum be P and original rate be R.",
+      "Step 2: SI1 = (P * R * 2) / 100. SI2 = (P * (R + 3) * 2) / 100.",
+      "Step 3: Difference SI2 - SI1 = 450 => (P * 3 * 2) / 100 = 450.",
+      "Step 4: Solve for P: 6P / 100 = 450 => 6P = 45000 => P = 7500."
+    ],
+    "linguistic_trap_in_hg065": "Uses a 'Indian notation' distractor inside a 'Zyada' comparison, intended to derail the translation of the 3% rate increase.",
+    "why_hard": "LLMs often struggle with the delta-SI formula when surrounded by numeric strings in a different notation.",
+    "tags": [
+      "delta-si",
+      "indian-notation"
+    ]
+  },
+  {
+    "problem_en": "The simple interest on a sum of money is 1/9 of the principal. If the number of years is equal to the rate percent per annum, find the rate.",
+    "problem_hi": "किसी राशि पर साधारण ब्याज मूलधन का 1/9 है। यदि वर्षों की संख्या वार्षिक दर प्रतिशत के बराबर है, तो दर ज्ञात कीजिए।",
+    "problem_hg_030": "Ek sum par simple interest principal ka 1/9 hai. Agar number of years rate percent per annum ke equal hai, rate find karo.",
+    "problem_hg_065": "Simple interest 'sirf' 1/9 of principal hai. Agar years and rate percent 'na' different 'na' unequal (same) hain, toh rate kya hai?",
+    "gold_answer": "3.33",
+    "gold_answer_num": 3.33,
+    "unit": "percent",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let Principal = P, SI = P/9. Let Rate = R, Time = R.",
+      "Step 2: Formula SI = (PRT)/100 => P/9 = (P * R * R) / 100.",
+      "Step 3: Cancel P: 1/9 = R^2 / 100 => R^2 = 100/9.",
+      "Step 4: Solve for R: R = 10/3 = 3.33%."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'Na...na' double negation to express equality and 'Sirf' to emphasize the fraction, potentially confusing the relationship between variables.",
+    "why_hard": "Requires translating double negatives into a mathematical equality constraint.",
+    "tags": [
+      "double-negation",
+      "algebraic-si"
+    ]
+  },
+  {
+    "problem_en": "A sum of ₹8,000 is lent in two parts such that the interest on the first part at 5% for 3 years is equal to the interest on the second part at 4% for 5 years. Find the second part.",
+    "problem_hi": "₹8,000 की राशि को दो भागों में इस प्रकार उधार दिया जाता है कि पहले भाग पर 3 वर्षों के लिए 5% की दर से ब्याज दूसरे भाग पर 5 वर्षों के लिए 4% की दर से ब्याज के बराबर हो। दूसरा भाग ज्ञात कीजिए।",
+    "problem_hg_030": "₹8,000 ko do parts mein lend kiya gaya. First part ka interest 5% par 3 years ke liye second part ke interest 4% par 5 years ke equal hai. Find second part.",
+    "problem_hg_065": "Total ₹8,000 borrow kiye. Pehle part pe 5% rate for 3 years ka interest doosre part pe 4% rate for 5 years ke 'equal' rakha gaya. 'Baaki' second part ki value kya hogi?",
+    "gold_answer": "3428.57",
+    "gold_answer_num": 3428.57,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let Part1 = x, Part2 = 8000 - x.",
+      "Step 2: SI1 = (x * 5 * 3)/100 = 0.15x. SI2 = ((8000 - x) * 4 * 5)/100 = 0.20(8000 - x).",
+      "Step 3: Set equal: 0.15x = 1600 - 0.20x.",
+      "Step 4: Solve for x: 0.35x = 1600 => x = 1600 / 0.35 = 4571.43. Part2 = 8000 - 4571.43 = 3428.57."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' acts as a subtle trap suggesting a remainder calculation before the interest equality logic is fully applied.",
+    "why_hard": "Equating two interest expressions requires careful part-whole reasoning which is easily disrupted by Hinglish syntactic markers.",
+    "tags": [
+      "si-equality",
+      "baaki-trap"
+    ]
+  },
+  {
+    "problem_en": "How many years will it take for a sum of money to double itself at 12.5% per annum simple interest?",
+    "problem_hi": "12.5% वार्षिक साधारण ब्याज पर कोई राशि कितने वर्षों में अपने आप की दोगुनी हो जाएगी?",
+    "problem_hg_030": "Kitne years lagenge ek sum ko double hone mein 12.5% per annum simple interest par?",
+    "problem_hg_065": "Ek principal amount ko 'sirf' double karna hai. Agar rate 12.5% p.a. hai, toh 'baaki' kitne saal lagenge finish hone mein?",
+    "gold_answer": "8",
+    "gold_answer_num": 8.0,
+    "unit": "years",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: For a sum to double, SI must equal Principal (P).",
+      "Step 2: P = (P * 12.5 * T) / 100.",
+      "Step 3: Cancel P: 1 = (12.5 * T) / 100.",
+      "Step 4: Solve for T: T = 100 / 12.5 = 8 years."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'Sirf' and 'Baaki' as semantic noise. 'Baaki' usually means 'remaining', implying there is an elapsed time not mentioned, which might confuse the LLM into searching for a hidden variable.",
+    "why_hard": "The problem is simple but the inclusion of 'baaki' (remaining) in a start-to-finish problem is logically inconsistent in standard English, but common in Hinglish filler speech.",
+    "tags": [
+      "doubling-time",
+      "baaki-trap"
+    ]
+  },
+  {
+    "problem_en": "The difference between interest received from two different banks on ₹5,000 for 2 years is ₹50. Find the difference in their rates.",
+    "problem_hi": "₹5,000 पर 2 वर्षों के लिए दो अलग-अलग बैंकों से प्राप्त ब्याज के बीच का अंतर ₹50 है। उनकी दरों में अंतर ज्ञात कीजिए।",
+    "problem_hg_030": "Difference between interest from two different banks ₹5,000 par 2 years ke liye ₹50 hai. Rates ka difference find karo.",
+    "problem_hg_065": "Do banks se ₹5,000 pe 2 years ka total interest 'na' identical 'na' same tha, gap ₹50 ka tha. Rates ka 'baaki' difference kya hai?",
+    "gold_answer": "0.5",
+    "gold_answer_num": 0.5,
+    "unit": "percent",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let rates be R1 and R2. Principal P = 5000, Time T = 2.",
+      "Step 2: SI1 - SI2 = (P * T * (R1 - R2)) / 100.",
+      "Step 3: 50 = (5000 * 2 * (R1 - R2)) / 100 => 50 = 100 * (R1 - R2).",
+      "Step 4: Solve: (R1 - R2) = 50 / 100 = 0.5%."
+    ],
+    "linguistic_trap_in_hg065": "Double negation 'na...na' (neither identical nor same) to describe a difference, which is a redundant linguistic structure that can trip up parsing.",
+    "why_hard": "Double negatives used to describe a non-zero difference are computationally heavier for transformers to map to the 'SI1 - SI2 = 50' equation.",
+    "tags": [
+      "double-negation",
+      "rate-difference"
+    ]
+  },
+  {
+    "problem_en": "A sum was invested for 3 years. Interest for the first year was 4%, but then it was 'increased by' 2% for the second year and 'increased by' another 1% for the third year. Total interest was ₹2,100. Find the principal.",
+    "problem_hi": "एक राशि 3 वर्षों के लिए निवेश की गई थी। पहले वर्ष के लिए ब्याज 4% था, लेकिन फिर दूसरे वर्ष के लिए इसमें 2% की 'वृद्धि' हुई और तीसरे वर्ष के लिए इसमें 1% की और 'वृद्धि' हुई। कुल ब्याज ₹2,100 था। मूलधन ज्ञात कीजिए।",
+    "problem_hg_030": "Ek sum 3 years ke liye invest kiya. First year interest 4% tha, then it was 'increased by' 2% second year ke liye and 'increased by' 1% more for third year. Total interest ₹2,100. Principal find karo.",
+    "problem_hg_065": "Principal amount 3 saal ke liye rakha. 'Pehle' saal rate 4% tha, 'phir' 2% 'zyada' ho gaya agle saal, and last year 'aur' 1% 'zyada' ho gaya. Total interest ₹2,100 hai toh principal kya hoga?",
+    "gold_answer": "12352.94",
+    "gold_answer_num": 12352.94,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Identify rates for each year. R1 = 4%, R2 = 4+2 = 6%, R3 = 6+1 = 7%.",
+      "Step 2: SI_total = (P/100) * (R11 + R21 + R3*1) = (P/100) * (4 + 6 + 7).",
+      "Step 3: 2100 = 17P / 100.",
+      "Step 4: P = 210000 / 17 = 12352.94."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'Zyada' (more) to indicate an incremental rate increase. LLMs often fail to accumulate the rate (e.g., they might use 4%, 2%, 1% instead of 4%, 6%, 7%).",
+    "why_hard": "Incremental change in simple interest rates is a multi-step logic problem compounded by Hinglish comparative words.",
+    "tags": [
+      "zyada-trap",
+      "incremental-rate"
+    ]
+  },
+  {
+    "problem_en": "Reena took a loan of ₹1,200 with simple interest for as many years as the rate of interest. If she paid ₹432 as interest at the end of the loan period, what was the rate of interest?",
+    "problem_hi": "रीना ने ब्याज की दर के समान वर्षों के लिए साधारण ब्याज पर ₹1,200 का ऋण लिया। यदि उसने ऋण अवधि के अंत में ब्याज के रूप में ₹432 का भुगतान किया, तो ब्याज की दर क्या थी?",
+    "problem_hg_030": "Reena ne ₹1,200 ka loan liya simple interest par utne years ke liye jitna interest rate tha. Agar interest ₹432 pay kiya, rate kya tha?",
+    "problem_hg_065": "Reena ne ₹1,200 loan liya. Rate of interest and years 'na' alag 'na' different the. Interest amount ₹432 'withdraw kar liya' (pay kiya) gaya. Rate of interest find karo.",
+    "gold_answer": "6",
+    "gold_answer_num": 6.0,
+    "unit": "percent",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let Rate = R and Time = T. Given R = T.",
+      "Step 2: SI = (P * R * T) / 100 => 432 = (1200 * R * R) / 100.",
+      "Step 3: 432 = 12 * R^2.",
+      "Step 4: R^2 = 432 / 12 = 36 => R = 6%."
+    ],
+    "linguistic_trap_in_hg065": "The phrase 'withdraw kar liya' is used here to mean 'payment made', which is a categorical error that an LLM might take literally as a deduction from principal.",
+    "why_hard": "The incorrect use of 'withdraw' for a payment transaction creates a conflict in the money-flow model of the LLM.",
+    "tags": [
+      "withdraw-trap",
+      "rate-equals-time"
+    ]
+  },
+  {
+    "problem_en": "A sum of money at simple interest amounts to ₹815 in 3 years and to ₹854 in 4 years. The sum is?",
+    "problem_hi": "साधारण ब्याज पर एक राशि 3 वर्षों में ₹815 और 4 वर्षों में ₹854 हो जाती है। वह राशि है?",
+    "problem_hg_030": "Ek sum simple interest par 3 years mein ₹815 aur 4 years mein ₹854 ho jata hai. Sum kya hai?",
+    "problem_hg_065": "Ek amount SI pe 3 saal mein ₹815 ho gaya, 'phir' agle hi saal (4th year) total ₹854 ban gaya. 'Baaki' principal amount kitna bacha tha start mein?",
+    "gold_answer": "698",
+    "gold_answer_num": 698.0,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Interest for 1 year = Amount(4yr) - Amount(3yr) = 854 - 815 = 39.",
+      "Step 2: Interest for 3 years = 39 * 3 = 117.",
+      "Step 3: Principal = Amount(3yr) - Interest(3yr) = 815 - 117 = 698."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'Baaki' and 'Phir' to frame a simple subtraction problem as a sequence, testing if the LLM treats the 4th year amount as a cumulative or separate entity.",
+    "why_hard": "Requires inferring annual interest from the difference of amounts, which Hinglish phrasing can obscure.",
+    "tags": [
+      "principal-extraction",
+      "baaki-trap"
+    ]
+  },
+  {
+    "problem_en": "What will be the ratio of simple interest earned by certain amount at the same rate of interest for 6 years and that for 9 years?",
+    "problem_hi": "एक निश्चित राशि द्वारा समान ब्याज दर पर 6 वर्षों और 9 वर्षों के लिए अर्जित साधारण ब्याज का अनुपात क्या होगा?",
+    "problem_hg_030": "Certain amount par same rate par 6 years and 9 years ke simple interest ka ratio kya hoga?",
+    "problem_hg_065": "Same amount aur rate pe 6 saal 'aur' 9 saal ke SI ka 'na' difference 'na' sum, bas ratio 'sirf' kya hoga?",
+    "gold_answer": "2:3",
+    "gold_answer_num": 0.666,
+    "unit": "ratio",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: SI1 = (P * R * 6) / 100. SI2 = (P * R * 9) / 100.",
+      "Step 2: Ratio = SI1 / SI2 = (6PR/100) / (9PR/100).",
+      "Step 3: Simplify: Ratio = 6/9.",
+      "Step 4: Final ratio = 2:3."
+    ],
+    "linguistic_trap_in_hg065": "Heavy use of 'Sirf' and double negation Distractors to mask a very simple proportional relationship.",
+    "why_hard": "The simplicity of the math often makes LLMs suspect a more complex hidden trap when the language is highly code-mixed/convoluted.",
+    "tags": [
+      "ratio",
+      "sirf-trap"
+    ]
+  },
+  {
+    "problem_en": "A sum of ₹10,000 was lent at simple interest. For the first 6 months, the rate was 10% per annum, and for the next 1.5 years, it was 12% per annum. Find total interest.",
+    "problem_hi": "₹10,000 की राशि साधारण ब्याज पर उधार दी गई थी। पहले 6 महीनों के लिए दर 10% वार्षिक थी, और अगले 1.5 वर्षों के लिए यह 12% वार्षिक थी। कुल ब्याज ज्ञात कीजिए।",
+    "problem_hg_030": "₹10,000 lent at simple interest. First 6 months rate 10% p.a. tha, aur next 1.5 years ke liye 12% p.a. Total interest find karo.",
+    "problem_hg_065": "₹10,000 lend kiye. 'Pehle' '6 mahine' rate 10% p.a. tha, 'phir' next 1.5 years ke liye 12% p.a. ho gaya. Total interest 'withdraw' kitna hoga?",
+    "gold_answer": "2300",
+    "gold_answer_num": 2300.0,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Interest for 6 months (0.5 years): SI1 = (10000 * 10 * 0.5) / 100 = 500.",
+      "Step 2: Interest for next 1.5 years: SI2 = (10000 * 12 * 1.5) / 100 = 1800.",
+      "Step 3: Total Interest = 500 + 1800 = 2300."
+    ],
+    "linguistic_trap_in_hg065": "The '6 mahine' (6 months) trap requires an implicit unit conversion to 0.5 years to match the 'p.a.' (per annum) rate.",
+    "why_hard": "LLMs frequently miss the month-to-year conversion when the time unit is code-mixed into Hindi.",
+    "tags": [
+      "unit-conversion",
+      "implicit-trap"
+    ]
+  },
+  {
+    "problem_en": "A sum of ₹2,500 is divided into two parts. Part A at 10% p.a. for 2 years and Part B at 10% p.a. for 3 years. If interest from Part A is equal to Part B, find Part A.",
+    "problem_hi": "₹2,500 की राशि को दो भागों में विभाजित किया गया है। भाग A 2 वर्षों के लिए 10% वार्षिक दर पर और भाग B 3 वर्षों के लिए 10% वार्षिक दर पर। यदि भाग A का ब्याज भाग B के बराबर है, तो भाग A ज्ञात कीजिए।",
+    "problem_hg_030": "₹2,500 ko do parts mein divide kiya. Part A 10% p.a. par 2 years ke liye aur Part B 10% p.a. par 3 years ke liye. Agar interest A is equal to interest B, Part A find karo.",
+    "problem_hg_065": "Total ₹2,500 amount do parts mein split kiya. Part A 10% pe 2 saal ke liye, 'phir' Part B 10% pe 3 saal ke liye. Interest 'na' zyada 'na' kam (equal) hai. Part A ki 'baaki' value kya hai?",
+    "gold_answer": "1500",
+    "gold_answer_num": 1500.0,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let Part A = x, Part B = 2500 - x.",
+      "Step 2: SI_A = (x * 10 * 2) / 100 = 0.2x. SI_B = ((2500 - x) * 10 * 3) / 100 = 0.3(2500 - x).",
+      "Step 3: 0.2x = 750 - 0.3x.",
+      "Step 4: 0.5x = 750 => x = 1500."
+    ],
+    "linguistic_trap_in_hg065": "Double negation 'na zyada na kam' to mean 'equal'. This tests if the LLM can resolve the equality from a negation-based comparative phrase.",
+    "why_hard": "Converting semantic negation into algebraic equality is a high-level reasoning task for LLMs in multi-lingual settings.",
+    "tags": [
+      "double-negation",
+      "si-equality"
+    ]
+  }
+]

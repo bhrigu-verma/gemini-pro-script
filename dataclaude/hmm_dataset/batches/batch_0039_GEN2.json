@@ -1,0 +1,378 @@
+[
+  {
+    "problem_en": "Bag A contains 3 red and 4 black balls, while Bag B contains 5 red and 2 black balls. One ball is transferred from Bag A to Bag B, and then a ball is drawn from Bag B. If the ball drawn from Bag B is red, find the probability that the transferred ball was black.",
+    "problem_hi": "झोला A में 3 लाल और 4 काली गेंदें हैं, जबकि झोला B में 5 लाल और 2 काली गेंदें हैं। एक गेंद को झोला A से झोला B में स्थानांतरित किया जाता है, और फिर झोला B से एक गेंद निकाली जाती है। यदि झोला B से निकाली गई गेंद लाल है, तो स्थानांतरित गेंद के काली होने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Bag A mein 3 red aur 4 black balls hain, aur Bag B mein 5 red aur 2 black balls hain. Ek ball transfer ki jati hai A se B mein, phir B se ek ball draw karte hain. Agar B se nikli ball red hai, toh probability nikaalo ki transferred ball black thi.",
+    "problem_hg_065": "Bag A (3R, 4B) se ek ball nikalo aur Bag B (5R, 2B) mein daal do. Phir Bag B se ek ball pick karo. Agar wo red nikli, toh kya chance hai ki transferred ball black thi? Isme pehle karo transfer phir selection, logic dhyan se lagana.",
+    "gold_answer": "4/14",
+    "gold_answer_num": 0.2857142857,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(Transferred Red) = 3/7, P(Transferred Black) = 4/7.",
+      "Step 2: P(Red from B | Transferred Red) = 6/8, P(Red from B | Transferred Black) = 5/8.",
+      "Step 3: Total Probability P(Red from B) = (3/7 * 6/8) + (4/7 * 5/8) = (18 + 20)/56 = 38/56.",
+      "Step 4: Bayes Theorem P(Transferred Black | Red from B) = (4/7 * 5/8) / (38/56) = 20/38 = 10/19.",
+      "Final: answer = 10/19"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Explicitly ordering the operations might cause the LLM to treat them as independent sequential events or fail to update the denominator of Bag B after the transfer.",
+    "why_hard": "Requires calculating dependent probabilities for the second bag's state based on the first bag's transfer.",
+    "tags": [
+      "Bayes Theorem",
+      "Ball Transfer"
+    ]
+  },
+  {
+    "problem_en": "A doctor is 80% certain that a patient has a specific disease. A test for the disease is 90% accurate if the disease is present and 95% accurate if the disease is absent. If the test result is positive, find the probability that the patient actually has the disease.",
+    "problem_hi": "एक डॉक्टर 80% निश्चित है कि एक मरीज को एक विशिष्ट बीमारी है। यदि बीमारी मौजूद है तो बीमारी का परीक्षण 90% सटीक है और यदि बीमारी अनुपस्थित है तो 95% सटीक है। यदि परीक्षण का परिणाम सकारात्मक है, तो इस बात की प्रायिकता ज्ञात कीजिए कि रोगी को वास्तव में बीमारी है।",
+    "problem_hg_030": "Doctor 80% sure hai ki patient ko disease hai. Test 90% accurate hai agar disease present ho aur 95% accurate agar disease absent ho. Agar test positive aata hai, toh patient ko disease hone ki probability kya hai?",
+    "problem_hg_065": "Patient ko disease hone ka prior chance 80% hai. Test accuracy 90% hai diseased ke liye, par non-diseased ke liye 95% accuracy ka matlab 5% false positive. Test positive aaya toh disease hone ki probality nikaalo, assuming 3 lakh 75 hazaar people population scaling is not needed.",
+    "gold_answer": "144/145",
+    "gold_answer_num": 0.9931034483,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: Let D be Disease, T+ be Positive Test. P(D) = 0.8, P(D') = 0.2.",
+      "Step 2: P(T+|D) = 0.9. P(T+|D') = 1 - 0.95 = 0.05.",
+      "Step 3: Total P(T+) = P(D)P(T+|D) + P(D')P(T+|D') = (0.8 * 0.9) + (0.2 * 0.05) = 0.72 + 0.01 = 0.73.",
+      "Step 4: P(D|T+) = (0.8 * 0.9) / 0.73 = 0.72 / 0.73 = 72/73.",
+      "Final: answer = 72/73"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> The LLM may incorrectly attempt to multiply the probabilities by this large population constant, leading to overflow or precision errors in a purely ratio-based problem.",
+    "why_hard": "The 'accuracy' for absent disease (95%) must be correctly interpreted as a 5% false positive rate.",
+    "tags": [
+      "Medical Test",
+      "False Positive"
+    ]
+  },
+  {
+    "problem_en": "A factory has three machines X, Y, and Z producing 20%, 30%, and 50% of total bolts. The percentage of defective bolts produced by them are 5%, 4%, and 2% respectively. A bolt is drawn and found to be defective. Find the probability it was produced by machine X.",
+    "problem_hi": "एक कारखाने में तीन मशीनें X, Y, और Z हैं जो कुल बोल्टों का क्रमशः 20%, 30%, और 50% उत्पादन करती हैं। उनके द्वारा उत्पादित दोषपूर्ण बोल्टों का प्रतिशत क्रमशः 5%, 4%, और 2% है। एक बोल्ट निकाला जाता है और दोषपूर्ण पाया जाता है। इसकी प्रायिकता ज्ञात कीजिए कि इसे मशीन X द्वारा बनाया गया था।",
+    "problem_hg_030": "Factory mein machines X, Y, Z total bolts ka 20%, 30%, 50% banati hain. Defective rate 5%, 4%, 2% hai. Ek defective bolt nikla, toh probability nikaalo ki wo Machine X se tha.",
+    "problem_hg_065": "Total production ka 20% X, 30% Y aur 50% Z se aata hai. Har machine ka defective output 5%, 4% aur 2% hai respectively. Ek bolt pick kiya jo defective nikla. Check probability for machine X, kyunki 10 aur log aaye checking ke liye par result change nahi hua.",
+    "gold_answer": "5/16",
+    "gold_answer_num": 0.3125,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(X)=0.2, P(Y)=0.3, P(Z)=0.5.",
+      "Step 2: P(D|X)=0.05, P(D|Y)=0.04, P(D|Z)=0.02.",
+      "Step 3: Total P(D) = (0.2 * 0.05) + (0.3 * 0.04) + (0.5 * 0.02) = 0.010 + 0.012 + 0.010 = 0.032.",
+      "Step 4: P(X|D) = (0.2 * 0.05) / 0.032 = 0.010 / 0.032 = 10/32 = 5/16.",
+      "Final: answer = 5/16"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> The LLM might interpret this as adding 10 to the total sample size or to the bolt count, instead of ignoring it as conversational noise.",
+    "why_hard": "Standard 3-machine Bayes' with small decimal percentages requiring high arithmetic accuracy.",
+    "tags": [
+      "Manufacturing",
+      "Quality Control"
+    ]
+  },
+  {
+    "problem_en": "An insurance company insured 2000 scooter drivers, 4000 car drivers and 6000 truck drivers. The probability of an accident is 0.01, 0.03 and 0.15 respectively. One of the insured persons meets with an accident. Find the probability that he is a scooter driver.",
+    "problem_hi": "एक बीमा कंपनी ने 2000 स्कूटर चालकों, 4000 कार चालकों और 6000 ट्रक चालकों का बीमा किया। दुर्घटना की प्रायिकता क्रमशः 0.01, 0.03 और 0.15 है। बीमित व्यक्तियों में से एक दुर्घटना का शिकार हो जाता है। इसकी प्रायिकता ज्ञात कीजिए कि वह स्कूटर चालक है।",
+    "problem_hg_030": "Insurance company ne 2000 scooter, 4000 car, aur 6000 truck drivers insure kiye. Accident probability 0.01, 0.03, 0.15 hai. Ek insured person ka accident hota hai. Probability nikaalo ki wo scooter driver hai.",
+    "problem_hg_065": "2000 Scooter, 4000 Car aur 6000 Truck drivers ka insurance hai. Accident chances 0.01, 0.03, aur 0.15 hain respectively. Accident hone par probability find karo ki driver scooter wala tha. Dono ko (Truck and Car) exclude karke calculation mat karna, Bayes lagao.",
+    "gold_answer": "1/52",
+    "gold_answer_num": 0.0192307692,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: Total drivers = 12000. P(S)=2/12, P(C)=4/12, P(T)=6/12.",
+      "Step 2: P(Acc|S)=0.01, P(Acc|C)=0.03, P(Acc|T)=0.15.",
+      "Step 3: Total P(Acc) = (2/12 * 1/100) + (4/12 * 3/100) + (6/12 * 15/100) = (2 + 12 + 90)/1200 = 104/1200.",
+      "Step 4: P(S|Acc) = (2/1200) / (104/1200) = 2/104 = 1/52.",
+      "Final: answer = 1/52"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> The instruction 'Dono ko exclude karke' (Exclude both) might lead the LLM to simply calculate P(Acc|S) directly without normalizing over the full sample space.",
+    "why_hard": "Large integer counts for groups combined with small decimal likelihoods.",
+    "tags": [
+      "Insurance",
+      "Weighted Probability"
+    ]
+  },
+  {
+    "problem_en": "A student answers a multiple choice question with 4 options. The probability that he knows the answer is 1/2 and the probability that he guesses is 1/2. If he guesses, the probability of being correct is 1/4. If he knows the answer, he is always correct. If he answers correctly, what is the probability he knew the answer?",
+    "problem_hi": "एक छात्र 4 विकल्पों वाले बहुविकल्पीय प्रश्न का उत्तर देता है। इस बात की प्रायिकता कि वह उत्तर जानता है 1/2 है और इस बात की प्रायिकता कि वह अनुमान लगाता है 1/2 है। यदि वह अनुमान लगाता है, तो सही होने की प्रायिकता 1/4 है। यदि वह उत्तर जानता है, तो वह हमेशा सही होता है। यदि वह सही उत्तर देता है, तो उसके उत्तर जानने की प्रायिकता क्या है?",
+    "problem_hg_030": "Ek MCQ ke 4 options hain. Probability ki student answer jaanta hai is 1/2, aur guess karne ki 1/2. Guess pe correct hone ki prob 1/4 hai. Agar uska answer correct hai, toh probability nikaalo ki he knew the answer.",
+    "problem_hg_065": "MCQ with 4 options. P(Know) = 1/2 aur P(Guess) = 1/2. Guess karne par correct hone ka chance 1/4 hai. Agar sahi answer diya, toh probability check karo ki usne guess nahi kiya balki answer pata tha. Pehle karo knowing ka calculation phir guess ka.",
+    "gold_answer": "4/5",
+    "gold_answer_num": 0.8,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(Know)=0.5, P(Guess)=0.5.",
+      "Step 2: P(Correct|Know)=1, P(Correct|Guess)=0.25.",
+      "Step 3: Total P(Correct) = (0.5 * 1) + (0.5 * 0.25) = 0.5 + 0.125 = 0.625.",
+      "Step 4: P(Know|Correct) = 0.5 / 0.625 = 500/625 = 4/5.",
+      "Final: answer = 4/5"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Forcing a sequential calculation often breaks the LLM's ability to maintain the Bayesian ratio, leading it to output P(Know) instead of P(Know|Correct).",
+    "why_hard": "Tests the ability to differentiate between the probability of a state and the conditional probability after an outcome.",
+    "tags": [
+      "Multiple Choice",
+      "Knowledge vs Guess"
+    ]
+  },
+  {
+    "problem_en": "Three urns contain 2 white and 3 black balls; 3 white and 2 black balls; and 4 white and 1 black balls respectively. An urn is chosen at random and a ball is drawn. If the ball is white, find the probability it was from the first urn.",
+    "problem_hi": "तीन कलशों में क्रमशः 2 सफेद और 3 काली गेंदें; 3 सफेद और 2 काली गेंदें; और 4 सफेद और 1 काली गेंदें हैं। एक कलश को यादृच्छिक रूप से चुना जाता है और एक गेंद निकाली जाती है। यदि गेंद सफेद है, तो पहले कलश से होने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "3 urns hain. Urn 1 (2W, 3B), Urn 2 (3W, 2B), Urn 3 (4W, 1B). Randomly ek urn choose karke ball nikali. Agar ball white hai, find probability it was from Urn 1.",
+    "problem_hg_065": "Urn 1 (2W, 3B), Urn 2 (3W, 2B) aur Urn 3 (4W, 1B) hain. Ek urn select karke ball nikaali jo white nikli. Baaki urns ko bhul kar first urn ki probability nikaalo. Isme na white se na black se confusion hona chahiye.",
+    "gold_answer": "2/9",
+    "gold_answer_num": 0.2222222222,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(U1)=P(U2)=P(U3)=1/3.",
+      "Step 2: P(W|U1)=2/5, P(W|U2)=3/5, P(W|U3)=4/5.",
+      "Step 3: Total P(W) = 1/3 * (2/5 + 3/5 + 4/5) = 1/3 * 9/5 = 3/5.",
+      "Step 4: P(U1|W) = (1/3 * 2/5) / (3/5) = 2/15 / 9/15 = 2/9.",
+      "Final: answer = 2/9"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> The phrase 'Baaki urns ko bhul kar' (forgetting the rest) can lead the LLM to ignore the total probability in the denominator.",
+    "why_hard": "Requires uniform prior distribution over three options and correct sum of conditionals.",
+    "tags": [
+      "Urn Problem",
+      "Three Categories"
+    ]
+  },
+  {
+    "problem_en": "A man is known to speak truth 3 out of 4 times. He throws a die and reports that it is a six. Find the probability that it is actually a six.",
+    "problem_hi": "एक आदमी के बारे में जाना जाता है कि वह 4 में से 3 बार सच बोलता है। वह एक पासा फेंकता है और रिपोर्ट करता है कि यह छह है। इसकी प्रायिकता ज्ञात कीजिए कि यह वास्तव में छह है।",
+    "problem_hg_030": "Ek aadmi 4 mein se 3 baar sach bolta hai. Usne die throw kiya aur kaha ki 6 aaya hai. Probability find karo ki actually 6 hi tha.",
+    "problem_hg_065": "Truth rate is 3/4. Aadmi ne die throw kiya aur bola '6 aaya'. Probability nikaalo ki sach mein 6 tha. Isme withdraw kar liya N mahine baad wala koi scene nahi hai, simple Bayes use karo.",
+    "gold_answer": "3/8",
+    "gold_answer_num": 0.375,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(Truth)=3/4, P(Lie)=1/4.",
+      "Step 2: P(Actual 6)=1/6, P(Actual Not 6)=5/6.",
+      "Step 3: P(Report 6) = P(Actual 6)P(Truth) + P(Actual Not 6)P(Lie) = (1/6 * 3/4) + (5/6 * 1/4) = 3/24 + 5/24 = 8/24 = 1/3.",
+      "Step 4: P(Actual 6 | Report 6) = (1/6 * 3/4) / (1/3) = (3/24) / (8/24) = 3/8.",
+      "Final: answer = 3/8"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> A financial distractor that might trigger the LLM to search for a time-decay or subtraction operation where none exists.",
+    "why_hard": "Classic Bayes trap where the likelihood of 'lying about a specific number' must be handled correctly.",
+    "tags": [
+      "Truth and Lie",
+      "Dice"
+    ]
+  },
+  {
+    "problem_en": "In a test, an examinee either guesses or copies or knows the answer to a multiple choice question with 4 options. The probability that he makes a guess is 1/3 and the probability that he copies is 1/6. The probability that his answer is correct given that he copied it is 1/8. Find the probability that he knew the answer to the question given that he correctly answered it.",
+    "problem_hi": "एक परीक्षा में, एक परीक्षार्थी 4 विकल्पों वाले बहुविकल्पीय प्रश्न का उत्तर या तो अनुमान लगाता है या कॉपी करता है या जानता है। इस बात की प्रायिकता कि वह अनुमान लगाता है 1/3 है और इस बात की प्रायिकता कि वह कॉपी करता है 1/6 है। इस बात की प्रायिकता कि उसका उत्तर सही है, यह देखते हुए कि उसने इसे कॉपी किया है, 1/8 है। यदि उसने सही उत्तर दिया है, तो इसकी प्रायिकता ज्ञात कीजिए कि वह प्रश्न का उत्तर जानता था।",
+    "problem_hg_030": "Examinee guesses (1/3), copies (1/6), or knows the answer. Copy karne par correct hone ki prob 1/8 hai. 4 options hain. Agar answer sahi hai, toh probability nikaalo ki he knew the answer.",
+    "problem_hg_065": "P(Guess)=1/3, P(Copy)=1/6. Baaki jo bacha wo knows the answer hai. Copying correct chance 1/8. MCQ 4 options wala hai. Sahi answer par probability check karo for knowing. 6 mahine baad exam ka result aaya par calculation abhi karni hai.",
+    "gold_answer": "24/29",
+    "gold_answer_num": 0.8275862069,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(Guess)=1/3, P(Copy)=1/6. P(Know) = 1 - (1/3 + 1/6) = 1/2.",
+      "Step 2: P(Correct|Know)=1, P(Correct|Guess)=1/4, P(Correct|Copy)=1/8.",
+      "Step 3: Total P(Correct) = (1/2 * 1) + (1/3 * 1/4) + (1/6 * 1/8) = 1/2 + 1/12 + 1/48 = (24 + 4 + 1)/48 = 29/48.",
+      "Step 4: P(Know|Correct) = (1/2) / (29/48) = 24/29.",
+      "Final: answer = 24/29"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> This timing trap might lead the LLM to apply a semi-annual discount or interest rate logic to the probability values.",
+    "why_hard": "Involves partition into three events where one prior probability must be calculated by the 'remaining' (baaki) logic.",
+    "tags": [
+      "Complex Partition",
+      "Multiple States"
+    ]
+  },
+  {
+    "problem_en": "Suppose that 5% of men and 0.25% of women have grey hair. A grey haired person is selected at random. What is the probability of this person being male? Assume there are equal number of males and females.",
+    "problem_hi": "मान लीजिए कि 5% पुरुषों और 0.25% महिलाओं के बाल सफेद हैं। एक सफेद बालों वाले व्यक्ति को यादृच्छिक रूप से चुना जाता है। इस व्यक्ति के पुरुष होने की प्रायिकता क्या है? मान लीजिए कि पुरुषों और महिलाओं की संख्या समान है।",
+    "problem_hg_030": "5% men aur 0.25% women ke grey hair hain. Ek grey haired person select kiya. Probability find karo ki wo male hai. Assume equal males and females.",
+    "problem_hg_065": "Men (5% grey) aur Women (0.25% grey) equal numbers mein hain. Ek grey-haired person pick kiya. Find the probability ki wo male hai. Isme na male se na female se bias karna, bas calculation karo.",
+    "gold_answer": "20/21",
+    "gold_answer_num": 0.9523809524,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(M)=0.5, P(F)=0.5.",
+      "Step 2: P(G|M)=0.05, P(G|F)=0.0025.",
+      "Step 3: Total P(G) = (0.5 * 0.05) + (0.5 * 0.0025) = 0.025 + 0.00125 = 0.02625.",
+      "Step 4: P(M|G) = 0.025 / 0.02625 = 2500 / 2625 = 20/21.",
+      "Final: answer = 20/21"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> Using the 'na-na' (neither-nor) structure can confuse an LLM into applying an 'OR' logic or excluding both groups from the sample space entirely.",
+    "why_hard": "Small decimal differences (5% vs 0.25%) test numerical precision and correct normalization.",
+    "tags": [
+      "Demographics",
+      "Population Probability"
+    ]
+  },
+  {
+    "problem_en": "A card from a pack of 52 cards is lost. From the remaining cards of the pack, two cards are drawn and are found to be hearts. Find the probability of the lost card being a heart.",
+    "problem_hi": "52 ताश के पत्तों की एक गड्डी से एक पत्ता खो गया है। गड्डी के शेष पत्तों में से, दो पत्ते निकाले जाते हैं और वे पान (hearts) के पाए जाते हैं। खोए हुए पत्ते के पान होने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "52 cards mein se 1 card lost ho gaya. Remaining cards mein se 2 cards nikaale jo hearts hain. Lost card heart tha, iski probability nikaalo.",
+    "problem_hg_065": "52 cards ki deck se ek card gum ho gaya. Jo baaki bache cards, unme se 2 hearts nikle. Lost card heart hone ki probability kya hogi? A se 20% zyada logic mat lagana.",
+    "gold_answer": "11/50",
+    "gold_answer_num": 0.22,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: Let E1 = lost card is heart, E2 = lost card is not heart. P(E1) = 13/52 = 1/4, P(E2) = 3/4.",
+      "Step 2: P(2H|E1) = 12C2 / 51C2 = (1211)/(5150). P(2H|E2) = 13C2 / 51C2 = (1312)/(5150).",
+      "Step 3: Total P(2H) = (1/4 * 1211/2550) + (3/4 * 1312/2550) = (132 + 468)/(42550) = 600/10200 = 6/102 = 1/17.",
+      "Step 4: P(E1|2H) = (132/10200) / (600/10200) = 132/600 = 11/50.",
+      "Final: answer = 11/50"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> This percentage comparison trap can mislead the LLM to adjust the number of hearts or the final probability by 20%.",
+    "why_hard": "Requires combinatorics (nCr) within the Bayes' framework and updates to the card count.",
+    "tags": [
+      "Card Deck",
+      "Combinatorics"
+    ]
+  },
+  {
+    "problem_en": "A factory has two machines A and B. Machine A produces 40% of items and Machine B produces 60%. 5% of items from A and 10% from B are defective. An item is selected and found defective. Find the probability it was from Machine A.",
+    "problem_hi": "एक कारखाने में दो मशीनें A और B हैं। मशीन A 40% वस्तुओं का उत्पादन करती है और मशीन B 60%। A से 5% और B से 10% वस्तुएं दोषपूर्ण हैं। एक वस्तु चुनी जाती है और दोषपूर्ण पाई जाती है। प्रायिकता ज्ञात कीजिए कि यह मशीन A से थी।",
+    "problem_hg_030": "Factory mein A and B machines hain. A produces 40% and B produces 60%. Defective rate A ka 5% aur B ka 10% hai. Defective item milne par, check probability ki wo machine A se tha.",
+    "problem_hg_065": "Machine A 40% banati hai, Machine B 60% bolts. A ka 5% defective hai aur B ka 10%. Item defective nikla. Probability nikaalo Machine A ke liye, par 10 aur log aaye par production slow hi raha.",
+    "gold_answer": "1/4",
+    "gold_answer_num": 0.25,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(A)=0.4, P(B)=0.6.",
+      "Step 2: P(D|A)=0.05, P(D|B)=0.10.",
+      "Step 3: Total P(D) = (0.4 * 0.05) + (0.6 * 0.10) = 0.02 + 0.06 = 0.08.",
+      "Step 4: P(A|D) = 0.02 / 0.08 = 1/4.",
+      "Final: answer = 1/4"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> Distracts the LLM by introducing a numerical value that should be ignored, often leading it to add 10 to the total count or percentages.",
+    "why_hard": "Simple Bayes', but highly sensitive to number extraction from code-mixed sentences.",
+    "tags": [
+      "Production",
+      "Binary State"
+    ]
+  },
+  {
+    "problem_en": "Urn A contains 1 white, 2 black and 3 red balls. Urn B contains 2 white, 1 black and 1 red ball. One urn is chosen and two balls are drawn. They happen to be white and red. What is the probability that they came from Urn B?",
+    "problem_hi": "कलश A में 1 सफेद, 2 काली और 3 लाल गेंदें हैं। कलश B में 2 सफेद, 1 काली और 1 लाल गेंद है। एक कलश चुना जाता है और दो गेंदें निकाली जाती हैं। वे सफेद और लाल निकलती हैं। इस बात की प्रायिकता क्या है कि वे कलश B से आई हैं?",
+    "problem_hg_030": "Urn A (1W, 2B, 3R) aur Urn B (2W, 1B, 1R) hain. Ek urn select karke 2 balls nikali jo W aur R nikli. Probability find karo ki wo Urn B se thi.",
+    "problem_hg_065": "Urn A aur B ke contents (1W, 2B, 3R) aur (2W, 1B, 1R) hain. 2 balls drawn are White and Red. B bag ki probability find out karo. Pehle karo Urn selection phir ball extraction.",
+    "gold_answer": "10/13",
+    "gold_answer_num": 0.7692307692,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(A)=0.5, P(B)=0.5.",
+      "Step 2: P(W&R|A) = (1C1 * 3C1) / 6C2 = 3/15. P(W&R|B) = (2C1 * 1C1) / 4C2 = 2/6 = 1/3.",
+      "Step 3: Total P(W&R) = (0.5 * 3/15) + (0.5 * 1/3) = 1/10 + 1/6 = (3 + 5)/30 = 8/30 = 4/15.",
+      "Step 4: P(B|W&R) = (1/6) / (4/15) = 1/6 * 15/4 = 15/24 = 5/8. Wait, recalculate.",
+      "Step 5: P(B|W&R) = (0.5 * 1/3) / (4/15) = (1/6) / (4/15) = 15/24 = 5/8. Re-verify Urn B: 2W, 1B, 1R total 4. 4C2=6. W&R is 21/6 = 2/6 = 1/3. Correct. Total: 1/10 + 1/6 = 16/60 = 4/15. Correct.",
+      "Final: answer = 5/8"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> This trap encourages a forward-only calculation, making the model prone to forgetting the reverse conditional logic of Bayes.",
+    "why_hard": "Requires calculating joint probabilities of multiple ball types using combinations before applying Bayes.",
+    "tags": [
+      "Multi-colored Balls",
+      "Joint Probability"
+    ]
+  },
+  {
+    "problem_en": "A coin is tossed. If head comes, a die is thrown. If tail comes, a ball is drawn from a bag containing 2 red and 3 black balls. If the result is a red ball or a six on the die, find the probability that the coin showed tail.",
+    "problem_hi": "एक सिक्का उछाला जाता है। यदि चित आता है, तो एक पासा फेंका जाता है। यदि पट आता है, तो 2 लाल और 3 काली गेंदों वाले झोले से एक गेंद निकाली जाती है। यदि परिणाम लाल गेंद या पासे पर छह है, तो प्रायिकता ज्ञात कीजिए कि सिक्के ने पट दिखाया था।",
+    "problem_hg_030": "Coin toss par Head aaya toh die phenko, Tail aaya toh bag (2R, 3B) se ball nikalo. Agar result Red ball ya 6 on die hai, toh probability nikaalo ki Tail aaya tha.",
+    "problem_hg_065": "Coin toss: H -> Die, T -> Bag (2R, 3B). Outcome is '6 on die' or 'Red ball'. Probability find karo for Tail. Dono ko correctly calculate karke divide karo denominator se.",
+    "gold_answer": "12/31",
+    "gold_answer_num": 0.3870967742,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(H)=0.5, P(T)=0.5.",
+      "Step 2: P(Success|H) = P(6|Die) = 1/6. P(Success|T) = P(Red|Bag) = 2/5.",
+      "Step 3: Total P(Success) = (1/2 * 1/6) + (1/2 * 2/5) = 1/12 + 1/5 = (5 + 12)/60 = 17/60.",
+      "Step 4: P(T|Success) = (1/5) / (17/60) = 12/17.",
+      "Final: answer = 12/17"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> The instruction 'Dono ko correctly calculate' might make the model focus only on the two numerators and fail to sum them correctly for the total probability.",
+    "why_hard": "Heterogeneous outcomes (die number vs ball color) must be mapped to a single 'success' event.",
+    "tags": [
+      "Mixed Events",
+      "Outcome Mapping"
+    ]
+  },
+  {
+    "problem_en": "Three machines M1, M2, M3 produce 100, 200, 700 items respectively. Defective rates are 5%, 3%, 1%. An item is defective. Find probability it was from M2.",
+    "problem_hi": "तीन मशीनें M1, M2, M3 क्रमशः 100, 200, 700 वस्तुएं बनाती हैं। दोषपूर्ण दरें 5%, 3%, 1% हैं। एक वस्तु दोषपूर्ण है। इसके M2 से होने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "3 machines M1(100), M2(200), M3(700) items banati hain. Defective rates 5%, 3%, 1% hain. Item defective nikla, toh M2 ki probability nikaalo.",
+    "problem_hg_065": "M1(100), M2(200) aur M3(700) ka production hai. Defective rates are 5%, 3%, 1%. Item defective hai. M2 ki probability find karo. Baaki production amounts ko total population mano.",
+    "gold_answer": "6/18",
+    "gold_answer_num": 0.3333333333,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: Total items = 1000. P(M1)=0.1, P(M2)=0.2, P(M3)=0.7.",
+      "Step 2: P(D|M1)=0.05, P(D|M2)=0.03, P(D|M3)=0.01.",
+      "Step 3: Total P(D) = (0.1 * 0.05) + (0.2 * 0.03) + (0.7 * 0.01) = 0.005 + 0.006 + 0.007 = 0.018.",
+      "Step 4: P(M2|D) = 0.006 / 0.018 = 6/18 = 1/3.",
+      "Final: answer = 1/3"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> The word 'Baaki' here might lead the LLM to miscalculate the total production by subtracting from an assumed total instead of summing the three machines.",
+    "why_hard": "Uses absolute counts instead of percentages for the prior, forcing a manual normalization step.",
+    "tags": [
+      "Absolute Counts",
+      "Normalization"
+    ]
+  },
+  {
+    "problem_en": "Bag I contains 4 white and 5 black balls, Bag II contains 9 white and 7 black balls. One ball is transferred from Bag I to Bag II and then a ball is drawn from Bag II. If the drawn ball is white, find the probability that the transferred ball was white.",
+    "problem_hi": "झोला I में 4 सफेद और 5 काली गेंदें हैं, झोला II में 9 सफेद और 7 काली गेंदें हैं। एक गेंद को झोला I से झोला II में स्थानांतरित किया जाता है और फिर झोला II से एक गेंद निकाली जाती है। यदि निकाली गई गेंद सफेद है, तो स्थानांतरित गेंद के सफेद होने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Bag I (4W, 5B) aur Bag II (9W, 7B) hain. Ek ball I se II mein transfer ki aur phir II se ball nikali. Agar drawn ball white hai, find probability ki transferred ball white thi.",
+    "problem_hg_065": "Bag I (4W, 5B) and II (9W, 7B). Ek ball shift kiya Bag I se II mein. Drawing from Bag II gave a white ball. Transferred ball white hone ka kya chance hai? 3 lakh 75 hazaar scaling mat karna calculation mein.",
+    "gold_answer": "40/85",
+    "gold_answer_num": 0.4705882353,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(TransW)=4/9, P(TransB)=5/9.",
+      "Step 2: P(W|TransW) = 10/17. P(W|TransB) = 9/17.",
+      "Step 3: Total P(W) = (4/9 * 10/17) + (5/9 * 9/17) = (40 + 45)/153 = 85/153.",
+      "Step 4: P(TransW|W) = (40/153) / (85/153) = 40/85 = 8/17.",
+      "Final: answer = 8/17"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> Misleads the LLM into thinking this is a frequentist problem with a fixed large population rather than a simple probability ratio.",
+    "why_hard": "Requires sequential probability updates with fractional addition in the final Bayes step.",
+    "tags": [
+      "Sequential Bayes",
+      "Ball Transfer"
+    ]
+  }
+]

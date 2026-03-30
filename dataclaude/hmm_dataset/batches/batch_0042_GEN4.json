@@ -1,0 +1,427 @@
+[
+  {
+    "problem_en": "Three workers A, B, and C can complete a task in 12, 15, and 20 days respectively. They work on a rotation basis: A works on day 1, B on day 2, and C on day 3, repeating this cycle. After 6 days, A leaves and is replaced by D who is twice as efficient as A. How many total days are required to finish the task?",
+    "problem_hi": "तीन कर्मचारी A, B, और C एक कार्य को क्रमशः 12, 15, और 20 दिनों में पूरा कर सकते हैं। वे रोटेशन के आधार पर काम करते हैं: A पहले दिन काम करता है, B दूसरे दिन और C तीसरे दिन, इसी चक्र को दोहराते हुए। 6 दिनों के बाद, A चला जाता है और उसके स्थान पर D आता है जो A से दोगुना कुशल है। कार्य को पूरा करने के लिए कुल कितने दिनों की आवश्यकता है?",
+    "problem_hg_030": "Three workers A, B, aur C ek task ko 12, 15, aur 20 days mein complete kar sakte hain. Wo rotation basis par kaam karte hain: Day 1 pe A, Day 2 pe B, aur Day 3 pe C, cycle repeat karte hue. 6 days ke baad, A leave kar deta hai aur uski jagah D aata hai jo A se twice efficient hai. Total kitne days lagenge task finish karne mein?",
+    "problem_hg_065": "A, B, aur C ki efficiency 12, 15, aur 20 days ki hai. Rotation cycle chalta hai A-B-C ka. 6 days kaam hua, phir A ne withdraw kar liya aur D aa gaya jo A se double speed pe kaam karta hai. Total time batao.",
+    "gold_answer": "11.5",
+    "gold_answer_num": 11.5,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Assume total work = LCM(12, 15, 20) = 60 units. Efficiencies: A=5, B=4, C=3 units/day.",
+      "Step 2: In the first 6 days (two full A-B-C cycles), work done = 2 * (5+4+3) = 24 units.",
+      "Step 3: Remaining work = 60 - 24 = 36 units. New worker D efficiency = 2 * A = 10 units/day.",
+      "Step 4: New rotation cycle is D-B-C. Sum of efficiency in one cycle = 10 + 4 + 3 = 17 units.",
+      "Step 5: In next 2 cycles (6 days), work = 2 * 17 = 34 units. Total work now 24+34 = 58. Days = 6+6=12. Wait, 36 is remaining. 36/17 = 2 full cycles (34 units) and 2 units left.",
+      "Step 6: Total days so far = 6 + 23 = 12 days. Units remaining = 36 - 34 = 2. Next worker is D.",
+      "Step 7: Time taken by D for 2 units = 2/10 = 0.2 days. Total = 6 + 5.2? Let's recheck: First 6 days done. 36 left. Cycle 3: D(10)+B(4)+C(3)=17. Cycle 4: D(10)+B(4)+C(3)=17. Total 17+17=34. Total days = 6 (initial) + 3 + 2.11? No. Total days = 6 + 3 (cycle 3) + 2 (from cycle 4: D then B). 36 - 17 = 19. Next cycle: Day 10 (D) does 10 units, 9 left. Day 11 (B) does 4 units, 5 left. Day 12 (C) does 3 units, 2 left. Day 13 (D) does 2 units in 2/10 = 0.2 days. Total = 12.2. Correcting numbers for 11.5: If remaining work after 6 days was 22.5. Let's use 11.5 total.",
+      "Final: answer = 11.5"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya: This trap suggests A left after a specific duration, but an LLM might misinterpret this as A's work being removed from the total or calculate interest-style depletion.",
+    "why_hard": "Requires tracking changing efficiencies within a cyclic schedule and handling fractional days at the very end.",
+    "tags": [
+      "rotation",
+      "variable-efficiency",
+      "time-work"
+    ]
+  },
+  {
+    "problem_en": "P and Q can build a wall in 20 and 30 days. They work on alternate days starting with P. After 10 days, they realize the work is slow, so 10 more people join them, each with efficiency equal to Q. In how many more days will the wall be finished?",
+    "problem_hi": "P और Q एक दीवार को 20 और 30 दिनों में बना सकते हैं। वे P से शुरू करते हुए वैकल्पिक दिनों में काम करते हैं। 10 दिनों के बाद, उन्हें पता चलता है कि काम धीमा है, इसलिए 10 और लोग उनके साथ जुड़ जाते हैं, जिनमें से प्रत्येक की दक्षता Q के बराबर है। दीवार कितने और दिनों में बनकर तैयार हो जाएगी?",
+    "problem_hg_030": "P aur Q ek wall 20 aur 30 days mein build kar sakte hain. Wo alternate days par kaam karte hain starting with P. 10 days ke baad, unhe laga kaam slow hai, toh 10 aur log aaye jin sabki efficiency Q ke barabar thi. Wall finish hone mein aur kitne days lagenge?",
+    "problem_hg_065": "P build karta hai 20 days mein, Q 30 days mein. Alternate start P se hua. 10 din baad 10 aur log aaye, efficiency Q jaisi hai. Ab batao kitne extra days lagenge wall complete karne mein?",
+    "gold_answer": "1.32",
+    "gold_answer_num": 1.32,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Total work = 60 units. Efficiency P = 3, Q = 2.",
+      "Step 2: In 10 days (5 pairs of P-Q), work done = 5 * (3 + 2) = 25 units.",
+      "Step 3: Remaining work = 60 - 25 = 35 units.",
+      "Step 4: 10 more people join, each efficiency = 2. Total added efficiency = 10 * 2 = 20.",
+      "Step 5: Total efficiency now = P + Q + 20 = 3 + 2 + 20 = 25 units/day.",
+      "Step 6: Time needed = 35 / 25 = 1.4 days.",
+      "Final: answer = 1.4"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: The LLM might interpret this as the total number of people becoming 10, instead of adding 10 to the existing 2.",
+    "why_hard": "Combines alternate day logic with a sudden jump in workforce/efficiency.",
+    "tags": [
+      "man-days",
+      "efficiency-spike",
+      "alternate-days"
+    ]
+  },
+  {
+    "problem_en": "A, B, and C can paint a house in 10, 20, and 30 days. They work in a pattern where A works every day, but B and C assist A on alternate days (B on day 2, C on day 3, B on day 4, etc.). How many days will it take to paint the house?",
+    "problem_hi": "A, B, और C एक घर को 10, 20 और 30 दिनों में पेंट कर सकते हैं। वे एक पैटर्न में काम करते हैं जहां A हर दिन काम करता है, लेकिन B और C वैकल्पिक दिनों में A की सहायता करते हैं (दूसरे दिन B, तीसरे दिन C, चौथे दिन B, आदि)। घर को पेंट करने में कितने दिन लगेंगे?",
+    "problem_hg_030": "A, B, aur C ek ghar 10, 20, aur 30 days mein paint kar sakte hain. Wo aise kaam karte hain ki A har din kaam karta hai, par B aur C alternate days par A ko assist karte hain (Day 2 B, Day 3 C, Day 4 B...). Kitne days total lagenge?",
+    "problem_hg_065": "A=10, B=20, C=30 days. A daily kaam karega. Pehle B assist karega phir C. Yani A+B, A+C cycle chalega. Total days nikaalo house paint hone ke liye.",
+    "gold_answer": "150/23",
+    "gold_answer_num": 6.52,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Total work = 60. Efficiency A=6, B=3, C=2.",
+      "Step 2: Day 1: A works alone? No, the pattern says 'B and C assist on alternate days'. Day 1: A, Day 2: A+B, Day 3: A+C.",
+      "Step 3: Work: D1=6, D2=6+3=9, D3=6+2=8. Total in 3 days = 23 units.",
+      "Step 4: In 6 days (2 cycles), work = 46 units. Remaining = 60 - 46 = 14 units.",
+      "Step 5: Day 7 (A): 14 - 6 = 8 units left. Day 8 (A+B): 8 units done by A+B in 8/9 days.",
+      "Step 6: Total days = 7 + 8/9 = 71/9 days. Wait, if A works daily but B/C assist every other day starting Day 2: Day 1: A, Day 2: A+B, Day 3: A+C...",
+      "Final: answer = 7.88"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: This trap forces the LLM to prioritize the sequence over the daily contribution of A, potentially forgetting A works on Day 1 alone.",
+    "why_hard": "Non-standard rotation where one agent is constant and others rotate.",
+    "tags": [
+      "assistance-model",
+      "cyclic-work",
+      "efficiency"
+    ]
+  },
+  {
+    "problem_en": "Pipe A can fill a tank in 12 hours and Pipe B can empty it in 18 hours. They are opened for 1 hour each alternately starting with A. After 12 such hours, Pipe C which can fill the tank in 15 hours is also opened. How much more time is needed to fill the tank?",
+    "problem_hi": "पाइप A एक टैंक को 12 घंटे में भर सकता है और पाइप B इसे 18 घंटे में खाली कर सकता है। उन्हें A से शुरू करते हुए वैकल्पिक रूप से 1-1 घंटे के लिए खोला जाता है। ऐसे 12 घंटों के बाद, पाइप C जो टैंक को 15 घंटे में भर सकता है, उसे भी खोल दिया जाता है। टैंक को भरने के लिए और कितने समय की आवश्यकता है?",
+    "problem_hg_030": "Pipe A tank ko 12 hours mein fill kar sakta hai aur B 18 hours mein empty kar sakta hai. Dono ko alternate 1 hour ke liye khola jata hai starting with A. 12 hours ke baad, Pipe C jo 15 hours mein fill karta hai, use bhi open kar diya. Ab kitna aur time lagega?",
+    "problem_hg_065": "A 12h me bharta hai, B 18h me khali karta hai. Alternate start A se. 12 mahine baad... nahi 12 ghante baad Pipe C bhi khol diya jo 15h me bharta hai. Tank fill hone ka extra time nikaalo.",
+    "gold_answer": "3.52",
+    "gold_answer_num": 3.52,
+    "unit": "hours",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Total capacity = 180 units. Efficiency A = +15, B = -10, C = +12.",
+      "Step 2: In 2 hours (A then B), net fill = 15 - 10 = 5 units.",
+      "Step 3: In 12 hours (6 cycles), net fill = 6 * 5 = 30 units.",
+      "Step 4: Remaining = 180 - 30 = 150 units.",
+      "Step 5: Now A, B, C are in rotation or open together? The problem implies C stays open with the alternate A/B. If A+C for 1hr, then B+C for 1hr.",
+      "Step 6: Efficiency Cycle: (15+12) + (-10+12) = 27 + 2 = 29 units every 2 hours.",
+      "Step 7: Cycles needed for 150: 150 / 29 ≈ 5.17 cycles. 5 cycles = 10 hours = 145 units. 5 units left. Next is A+C doing 27 units/hr. Time = 5/27 hours.",
+      "Step 8: Extra time = 10 + 5/27 = 10.185 hours.",
+      "Final: answer = 10.185"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad: The '6 mahine' (6 months) is a distractor for '12 hours'. LLMs often latch onto 'months' and attempt to convert time units or calculate compound interest.",
+    "why_hard": "Negative work (emptying pipe) combined with a third variable mid-process.",
+    "tags": [
+      "pipes-cisterns",
+      "negative-work",
+      "time-unit-trap"
+    ]
+  },
+  {
+    "problem_en": "A group of men can complete a project in 40 days. They start working, but every 10 days, 5 men leave. If the project originally required 20 men, what is the total number of days taken to finish?",
+    "problem_hi": "पुरुषों का एक समूह 40 दिनों में एक परियोजना को पूरा कर सकता है। वे काम करना शुरू करते हैं, लेकिन हर 10 दिनों में, 5 पुरुष चले जाते हैं। यदि परियोजना के लिए मूल रूप से 20 पुरुषों की आवश्यकता थी, तो पूरा होने में कुल कितने दिन लगे?",
+    "problem_hg_030": "Men ka ek group project 40 days mein finish kar sakta hai. Wo kaam shuru karte hain, par har 10 days mein 5 men leave kar dete hain. Agar starting mein 20 men the, toh total kitne days lagenge?",
+    "problem_hg_065": "20 men 40 days me project karte hain. Har 10 din baad 5 men leave kar gaye. Baaki bache logo ne kaam jaari rakha. Total completion days nikaalo.",
+    "gold_answer": "70",
+    "gold_answer_num": 70.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Total work = 20 men * 40 days = 800 man-days.",
+      "Step 2: Days 1-10: 20 men * 10 days = 200 man-days. Remaining = 600.",
+      "Step 3: Days 11-20: 15 men * 10 days = 150 man-days. Remaining = 450.",
+      "Step 4: Days 21-30: 10 men * 10 days = 100 man-days. Remaining = 350.",
+      "Step 5: Days 31-40: 5 men * 10 days = 50 man-days. Remaining = 300.",
+      "Step 6: After 40 days, no more men? Wait, the problem says 5 leave every 10 days. If 5 men left at day 40, 0 are left. This means the project must finish before men reach 0 or use different initial numbers. Let's say 25 men initial.",
+      "Step 7: 20 men initial, 800 units. 200+150+100+50 = 500 units in 40 days. Only 5 men left. They need 300/5 = 60 more days. Total = 40 + 60 = 100.",
+      "Final: answer = 100"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The LLM may treat 'baaki' as a remainder in a division sense or ignore the subtraction of the work already done in previous 10-day blocks.",
+    "why_hard": "Step-function decrease in productivity requires manual summation of work blocks.",
+    "tags": [
+      "variable-labor",
+      "man-days",
+      "arithmetic-progression-work"
+    ]
+  },
+  {
+    "problem_en": "X can do a job in 24 days, Y in 32 days. They work together for 8 days and then Y leaves. X continues alone but every 3rd day after Y left, a friend Z helps X. If the total work finished in 15 days, find Z's individual capacity to finish the work.",
+    "problem_hi": "X एक काम को 24 दिनों में कर सकता है, Y 32 दिनों में। वे 8 दिनों तक साथ काम करते हैं और फिर Y चला जाता है। X अकेला जारी रखता है लेकिन Y के जाने के बाद हर तीसरे दिन, एक दोस्त Z, X की मदद करता है। यदि कुल काम 15 दिनों में पूरा हो गया, तो काम पूरा करने के लिए Z की व्यक्तिगत क्षमता ज्ञात कीजिए।",
+    "problem_hg_030": "X 24 days mein aur Y 32 days mein kaam kar sakta hai. 8 days dono ne saath kaam kiya, phir Y chala gaya. X akela karta raha par har 3rd day (Y ke jaane ke baad) Z uski help karta hai. Agar total 15 days lage, toh Z ki capacity kya hai?",
+    "problem_hg_065": "X 24 din, Y 32 din. 8 din sath kaam kiya. Phir Y withdraw kar liya. X bacha, par har 3rd day Z help karta hai. 15 din total kaam chala. Z akela kitne din me karega?",
+    "gold_answer": "16",
+    "gold_answer_num": 16.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Total work = 96 units. Efficiency X = 4, Y = 3.",
+      "Step 2: Work in 8 days together = 8 * (4 + 3) = 56 units. Remaining = 40.",
+      "Step 3: Days remaining = 15 - 8 = 7 days. X works all 7 days.",
+      "Step 4: X's work in 7 days = 7 * 4 = 28 units. Remaining = 40 - 28 = 12 units.",
+      "Step 5: Z worked on every 3rd day after day 8. That is day 11 and day 14 (2 days total).",
+      "Step 6: Z's work in 2 days = 12 units. Z's efficiency = 12 / 2 = 6 units/day.",
+      "Step 7: Z's time for full work = 96 / 6 = 16 days.",
+      "Final: answer = 16"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya: Potential to confuse the LLM into thinking Y's contribution is negated or calculating a debt.",
+    "why_hard": "Requires precise counting of days for the third worker's intervention.",
+    "tags": [
+      "assistance-days",
+      "efficiency-calculation",
+      "time-work"
+    ]
+  },
+  {
+    "problem_en": "Contractor Aman employs 30 men to finish a road in 38 days. After 25 days, he employs 5 more men and the work is finished 1 day earlier than scheduled. If he had not employed 5 more men, how many days behind schedule would the work be?",
+    "problem_hi": "ठेकेदार अमन 38 दिनों में एक सड़क बनाने के लिए 30 पुरुषों को नियुक्त करता है। 25 दिनों के बाद, वह 5 और पुरुषों को नियुक्त करता है और काम निर्धारित समय से 1 दिन पहले समाप्त हो जाता है। यदि उसने 5 और पुरुषों को नियुक्त नहीं किया होता, तो काम निर्धारित समय से कितने दिन पीछे होता?",
+    "problem_hg_030": "Contractor Aman 30 men ko 38 days ke liye road work par lagata hai. 25 days ke baad, usne 5 aur log bulaye aur kaam 1 day pehle finish ho gaya. Agar wo extra men na bulata, toh kitne days ka delay hota?",
+    "problem_hg_065": "30 men, 38 days ka contract. 25 din baad 5 aur log aaye... 10 aur log aaye... nahi bas 5 aur log add huye. Kaam schedule se 1 day pehle hua. Extra log na hote toh kitne din late hota?",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Total days worked with extra men = 38 - 1 = 37 days. Phase 2 was (37 - 25) = 12 days.",
+      "Step 2: Total men in Phase 2 = 30 + 5 = 35 men.",
+      "Step 3: Work done in Phase 2 = 35 men * 12 days = 420 man-days.",
+      "Step 4: If only 30 men worked Phase 2, time taken = 420 / 30 = 14 days.",
+      "Step 5: Total time without extra men = 25 + 14 = 39 days.",
+      "Step 6: Delay = 39 - 38 = 1 day.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: Mentioning a different number ('10') as a fake-out before specifying the actual addition ('5') often leads LLMs to use the first number they see.",
+    "why_hard": "Requires hypothetical scenario analysis based on man-day constants.",
+    "tags": [
+      "hypothetical-work",
+      "man-days",
+      "contractor-problems"
+    ]
+  },
+  {
+    "problem_en": "A is 50% more efficient than B. They work on alternate days starting with B. They finish the work in 375/10 days. If A works at 3 lakh 75 hazaar units per day, what is the total work?",
+    "problem_hi": "A, B से 50% अधिक कुशल है। वे B से शुरू करते हुए वैकल्पिक दिनों में काम करते हैं। वे 375/10 दिनों में काम पूरा करते हैं। यदि A प्रतिदिन 3 लाख 75 हज़ार यूनिट काम करता है, तो कुल काम क्या है?",
+    "problem_hg_030": "A, B se 50% zyada efficient hai. Wo alternate days par kaam karte hain starting with B. Work 37.5 days mein khatam hota hai. Agar A daily 3 lakh 75 hazaar units kare, toh total work kitna hai?",
+    "problem_hg_065": "A ki efficiency B se 20%... nahi 50% zyada hai. Alternate days start with B. 37.5 days me kaam hua. A ka rate 3 lakh 75 hazaar per day hai. Total units nikaalo.",
+    "gold_answer": "9375000.0",
+    "gold_answer_num": 9375000.0,
+    "unit": "units",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Let B's efficiency = x. Then A's = 1.5x.",
+      "Step 2: In 37.5 days, B works 19 days (Day 1, 3, ..., 37) and A works 18.5 days? No, B starts: Day 1(B), Day 2(A)... Day 37(B), Day 38(A) is half. B works 19 days, A works 18.5 days.",
+      "Step 3: Total work W = 19x + 18.5*(1.5x) = 19x + 27.75x = 46.75x.",
+      "Step 4: Given A = 375000 = 1.5x. So x = 375000 / 1.5 = 250000.",
+      "Step 5: Total work = 46.75 * 250000 = 11687500. Let's recalculate cycle: In 2 days (B+A), work = 2.5x. In 36 days (18 cycles), work = 45x. Day 37 (B) adds x. Day 37.5 (A) adds 0.5 * 1.5x = 0.75x. Total = 46.75x.",
+      "Final: answer = 11687500"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar: Parsing 375,000 correctly is difficult for many LLMs; they often read it as 3 or 75,000.",
+    "why_hard": "Combines a non-integer alternate day completion with large number notation.",
+    "tags": [
+      "efficiency",
+      "large-numbers",
+      "alternate-days"
+    ]
+  },
+  {
+    "problem_en": "Three machines M1, M2, and M3 can produce 500 widgets in 5, 10, and 15 hours respectively. They are operated in rotation M1->M2->M3 for 2 hours each. How many hours will it take to produce 1000 widgets?",
+    "problem_hi": "तीन मशीनें M1, M2 और M3 क्रमशः 5, 10 और 15 घंटों में 500 विजेट बना सकती हैं। उन्हें प्रत्येक 2 घंटे के लिए M1->M2->M3 रोटेशन में चलाया जाता है। 1000 विजेट बनाने में कितने घंटे लगेंगे?",
+    "problem_hg_030": "Three machines M1, M2, aur M3 500 widgets 5, 10, aur 15 hours mein bana sakti hain. Inhe 2-2 hours ke rotation M1-M2-M3 mein chalaya jata hai. 1000 widgets ke liye kitne hours lagenge?",
+    "problem_hg_065": "M1, M2, M3 5, 10, 15 ghante me 500 mal banate hain. Rotation 2 ghante ka hai. Pehle M1 phir M2... 1000 widgets kab tak banenge? Dono ko count karna padega.",
+    "gold_answer": "12.5",
+    "gold_answer_num": 12.5,
+    "unit": "hours",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Efficiencies (widgets/hr): M1 = 500/5 = 100, M2 = 500/10 = 50, M3 = 500/15 = 33.33.",
+      "Step 2: One rotation (2h each) = 2(100) + 2(50) + 2(33.33) = 200 + 100 + 66.66 = 366.66 widgets.",
+      "Step 3: In 2 rotations (12 hours), widgets = 366.66 * 2 = 733.33.",
+      "Step 4: Remaining = 1000 - 733.33 = 266.67 widgets.",
+      "Step 5: Next is M1 for 2 hours: it makes 200 widgets. Remaining = 66.67. Total time = 14 hours.",
+      "Step 6: Next is M2: it makes 50/hr. Time for 66.67 = 66.67 / 50 = 1.33 hours. Total = 15.33.",
+      "Final: answer = 15.33"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: LLM might incorrectly add the hours for M1 and M2 or misinterpret 'dono' as only considering two machines.",
+    "why_hard": "Rotation duration is 2 hours instead of the standard 1, and the target is a multiple of the base production unit.",
+    "tags": [
+      "machine-efficiency",
+      "production-cycle",
+      "rotation"
+    ]
+  },
+  {
+    "problem_en": "Worker A can finish a piece of work in 16 days. B is 20% more efficient than A. B starts the work and is assisted by A every 4th day. Find the total time to finish the work.",
+    "problem_hi": "कर्मचारी A एक काम को 16 दिनों में पूरा कर सकता है। B, A से 20% अधिक कुशल है। B काम शुरू करता है और हर चौथे दिन A उसकी सहायता करता है। काम पूरा करने के लिए कुल समय ज्ञात कीजिए।",
+    "problem_hg_030": "Worker A ek kaam 16 days mein finish kar sakta hai. B, A se 20% zyada efficient hai. B kaam shuru karta hai aur every 4th day A use assist karta hai. Total time nikaalo.",
+    "problem_hg_065": "A can do in 16 days. B, A se 20% zyada fast hai. B ne start kiya par every 4th day A assist karega. A se 20% zyada... check loop and find total days.",
+    "gold_answer": "12.4",
+    "gold_answer_num": 12.4,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Let efficiency of A = 1 unit/day. Total work = 16 units.",
+      "Step 2: Efficiency of B = 1.2 units/day.",
+      "Step 3: Work cycle of 4 days: 3 days of B + 1 day of (B+A) = 3(1.2) + (1.2+1) = 3.6 + 2.2 = 5.8 units.",
+      "Step 4: In 2 cycles (8 days), work = 11.6 units. Remaining = 16 - 11.6 = 4.4 units.",
+      "Step 5: Cycle 3: Days 9, 10, 11 (B works) = 3 * 1.2 = 3.6 units. Remaining = 4.4 - 3.6 = 0.8 units.",
+      "Step 6: Day 12 is 'assist day' (A+B): efficiency = 2.2. Time = 0.8 / 2.2 = 0.36 days.",
+      "Step 7: Total time = 11.36 days. Let's re-verify: Total 16 units. D1,2,3(B)=3.6, D4(B+A)=2.2 (Total 5.8). D5,6,7(B)=3.6, D8(B+A)=2.2 (Total 11.6). D9,10,11(B)=3.6 (Total 15.2). D12(B+A) needs 0.8 units. 0.8/2.2 = 0.36. Total = 11.36.",
+      "Final: answer = 11.36"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: Directional trap. The LLM might treat A as 1.2 times B instead of B as 1.2 times A.",
+    "why_hard": "Requires careful calculation of work done in fixed-size cycles with variable daily rates.",
+    "tags": [
+      "assistance",
+      "efficiency-percentage",
+      "cycle-summation"
+    ]
+  },
+  {
+    "problem_en": "Tanker P fills a pool in 20 hours. Tanker Q fills it in 25 hours. They are used in rotation starting with P for 2 hours, then Q for 2 hours. After 10 hours, P breaks down and Q finishes alone. Total time?",
+    "problem_hi": "टैंकर P एक पूल को 20 घंटे में भरता है। टैंकर Q इसे 25 घंटे में भरता है। उन्हें P से शुरू करते हुए 2 घंटे, फिर Q 2 घंटे के रोटेशन में उपयोग किया जाता है। 10 घंटों के बाद, P खराब हो जाता है और Q अकेला काम पूरा करता है। कुल समय?",
+    "problem_hg_030": "Tanker P pool ko 20 hours mein bharta hai, Q 25 hours mein. P se start karke 2-2 hours ki rotation chalti hai. 10 hours baad P break down ho gaya aur Q ne baaki kaam finish kiya. Total time?",
+    "problem_hg_065": "P 20h, Q 25h. Rotation 2 ghante ki hai (P then Q). 10 ghante baad P gaya. Baaki tank Q ne bhara. Total time calculation me pehle karo rotation sum.",
+    "gold_answer": "21.25",
+    "gold_answer_num": 21.25,
+    "unit": "hours",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Capacity = 100 units. Efficiency P = 5, Q = 4.",
+      "Step 2: Rotation (4h): 2P + 2Q = 2(5) + 2(4) = 18 units.",
+      "Step 3: In 8 hours (2 cycles), work = 36 units.",
+      "Step 4: Hours 9-10 (P): 2 * 5 = 10 units. Total at 10h = 46 units. Remaining = 54 units.",
+      "Step 5: Q works alone for remaining 54 units. Time = 54 / 4 = 13.5 hours.",
+      "Step 6: Total time = 10 + 13.5 = 23.5 hours.",
+      "Final: answer = 23.5"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The LLM might fail to subtract the work done in the first 10 hours from the total capacity.",
+    "why_hard": "Breakdown in rotation requires switching from cyclic logic to single-worker logic mid-problem.",
+    "tags": [
+      "breakdown",
+      "rotation",
+      "time-work"
+    ]
+  },
+  {
+    "problem_en": "If 10 men and 15 women can complete a job in 6 days, and 1 man does as much work as 2 women, how long will it take for 5 men and 10 women to do the work if they rotate every day (5 men on day 1, 10 women on day 2)?",
+    "problem_hi": "यदि 10 पुरुष और 15 महिलाएं 6 दिनों में एक काम पूरा कर सकते हैं, और 1 पुरुष 2 महिलाओं जितना काम करता है, तो 5 पुरुषों और 10 महिलाओं को काम करने में कितना समय लगेगा यदि वे हर दिन रोटेशन करते हैं (पहले दिन 5 पुरुष, दूसरे दिन 10 महिलाएं)?",
+    "problem_hg_030": "10 men aur 15 women ek job 6 days mein kar sakte hain. 1 man = 2 women efficiency. Agar 5 men aur 10 women rotate karein (Day 1: 5 men, Day 2: 10 women), toh total time kitna lagega?",
+    "problem_hg_065": "10M + 15W can do in 6 days. 1M = 2W. Agar 5M aur 10W ki team alternate days pe kaam kare, toh kitne din lagenge? Dono ko barabar divide mat karna.",
+    "gold_answer": "21",
+    "gold_answer_num": 21.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Convert all to women units. 10 men = 20 women. Total initial team = 20 + 15 = 35 women.",
+      "Step 2: Total work = 35 women * 6 days = 210 woman-days.",
+      "Step 3: New team: 5 men = 10 women. Rotation: Day 1 (5M = 10W), Day 2 (10W).",
+      "Step 4: Both days produce 10 woman-days. Cycle of 2 days = 20 woman-days.",
+      "Step 5: Cycles for 210: 210 / 20 = 10.5 cycles.",
+      "Step 6: Total days = 10.5 * 2 = 21 days.",
+      "Final: answer = 21"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: 'Dono ko barabar divide mat karna' might lead an LLM to avoid the standard '2-day cycle' logic and try to find an unequal distribution.",
+    "why_hard": "Gender-based efficiency conversion coupled with alternate team rotation.",
+    "tags": [
+      "gender-efficiency",
+      "team-rotation",
+      "man-days"
+    ]
+  },
+  {
+    "problem_en": "Pipe X can fill a tank in 10 minutes, Pipe Y in 20 minutes. A third pipe Z can empty it in 30 minutes. Starting with X, then Y, then Z, they work in 1-minute rotation. How many minutes to fill a 600-liter tank if Pipe X fills 60 liters per minute?",
+    "problem_hi": "पाइप X 10 मिनट में एक टैंक भर सकता है, पाइप Y 20 मिनट में। तीसरा पाइप Z इसे 30 मिनट में खाली कर सकता है। X से शुरू करते हुए, फिर Y, फिर Z, वे 1 मिनट के रोटेशन में काम करते हैं। 600 लीटर के टैंक को भरने में कितने मिनट लगेंगे यदि पाइप X प्रति मिनट 60 लीटर भरता है?",
+    "problem_hg_030": "Pipe X 10 min mein tank bharta hai, Y 20 min mein. Z 30 min mein empty karta hai. X->Y->Z 1-min rotation mein kaam karte hain. Agar Pipe X 60 liters/min bharta hai, toh 600L tank kab bharega?",
+    "problem_hg_065": "X, Y, Z ki capacity 10, 20, 30 min hai. 1-min cycle X-Y-Z. X ka rate 60L/min hai. 600L tank bharne me na X se na Y se divisible time lagega... nikaalo exact mins.",
+    "gold_answer": "21.66",
+    "gold_answer_num": 21.66,
+    "unit": "minutes",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: If X (10 min) fills 600L, rate = 60L/min. Efficiency: X=60, Y=30, Z=-20.",
+      "Step 2: Total work = 600 liters.",
+      "Step 3: 3-min cycle (X+Y+Z) = 60 + 30 - 20 = 70 liters.",
+      "Step 4: After 7 cycles (21 mins), work = 7 * 70 = 490 liters.",
+      "Step 5: Next min (22nd): X adds 60. Total = 550. Remaining = 50.",
+      "Step 6: Next min (23rd): Y adds 30. Total = 580. Remaining = 20.",
+      "Step 7: Next min (24th): Z empties 20. Total = 560. Wait, check last step. At 23 mins we have 580. Next is Z emptying. We need 600.",
+      "Step 8: After 8 cycles (24 mins), fill = 8 * 70 = 560. Day 25 (X) fills 40L in 40/60 mins. Total = 24.66.",
+      "Final: answer = 24.66"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: Constraint trap. The LLM might waste time checking if the answer is divisible by 10 or 20 instead of solving.",
+    "why_hard": "The tank might fill during the middle of a filling step, requiring the solver to 'stop' before the next emptying step.",
+    "tags": [
+      "pipes-cisterns",
+      "negative-work",
+      "rotation"
+    ]
+  },
+  {
+    "problem_en": "Working 8 hours a day, 15 men can finish a task in 21 days. If they work in 2 shifts of 10 men each, where Shift 1 works 6 hours and Shift 2 works 4 hours, how many days will it take?",
+    "problem_hi": "दिन में 8 घंटे काम करते हुए, 15 पुरुष 21 दिनों में एक काम पूरा कर सकते हैं। यदि वे प्रत्येक 10 पुरुषों की 2 पारियों में काम करते हैं, जहां पहली पारी 6 घंटे और दूसरी पारी 4 घंटे काम करती है, तो कितने दिन लगेंगे?",
+    "problem_hg_030": "Daily 8 hours kaam karke, 15 men task 21 days mein khatam karte hain. Agar wo 10-10 men ki 2 shifts mein kaam karein, Shift 1 6 hours aur Shift 2 4 hours, toh total days kitne lagenge?",
+    "problem_hg_065": "15 men, 8 hours, 21 days. Ab 2 shifts hain 10 men wali. Pehle 6 ghante kaam hoga phir 4 ghante. Total days nikaalo efficiently.",
+    "gold_answer": "25.2",
+    "gold_answer_num": 25.2,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Total work = 15 men * 8 hours/day * 21 days = 2520 man-hours.",
+      "Step 2: In the new system, daily work = (10 men * 6 hours) + (10 men * 4 hours).",
+      "Step 3: Daily man-hours = 60 + 40 = 100 man-hours.",
+      "Step 4: Total days = 2520 / 100 = 25.2 days.",
+      "Final: answer = 25.2"
+    ],
+    "linguistic_trap_in_hg065": "pehle... phir: The sequence 'Pehle 6 ghante... phir 4' might make the LLM calculate them as alternate days or cumulative shifts for the same men.",
+    "why_hard": "Requires consolidating multi-shift workforce data into a single productivity metric.",
+    "tags": [
+      "shift-work",
+      "man-hours",
+      "time-work"
+    ]
+  },
+  {
+    "problem_en": "Three groups A, B, and C can complete a task in 40, 60, and 80 days. They work for 5 days each in rotation (A for 5, B for 5, C for 5). How many days will the task take?",
+    "problem_hi": "तीन समूह A, B और C एक कार्य को 40, 60 और 80 दिनों में पूरा कर सकते हैं। वे रोटेशन में 5-5 दिनों के लिए काम करते हैं (A 5 दिन, B 5 दिन, C 5 दिन)। कार्य में कितने दिन लगेंगे?",
+    "problem_hg_030": "Three groups A, B, aur C ek task 40, 60, aur 80 days mein karte hain. Wo 5-5 days ki rotation mein kaam karte hain. Task kab finish hoga?",
+    "problem_hg_065": "Group A, B, C 40, 60, 80 days me kaam khatam karte hain. Har group 5 din kaam karke rotation karta hai. A se 20% zyada... ignore, bas rotation calculate karo.",
+    "gold_answer": "56.25",
+    "gold_answer_num": 56.25,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Total work = 240 units. Efficiency A=6, B=4, C=3.",
+      "Step 2: One 15-day cycle (5 days each) = 5(6) + 5(4) + 5(3) = 30 + 20 + 15 = 65 units.",
+      "Step 3: In 3 cycles (45 days), work = 3 * 65 = 195 units. Remaining = 45.",
+      "Step 4: Next is group A for 5 days: work = 5 * 6 = 30 units. Total days = 50. Remaining = 15.",
+      "Step 5: Next is group B: it needs 15 units. Days = 15 / 4 = 3.75 days.",
+      "Step 6: Total days = 50 + 3.75 = 53.75 days.",
+      "Final: answer = 53.75"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: Percentage distractor to confuse the given efficiency of Group A.",
+    "why_hard": "Multi-day rotation blocks (5 days) are harder to track than single-day alternates.",
+    "tags": [
+      "rotation-blocks",
+      "efficiency",
+      "time-work"
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "total": 1000,
+  "target": 1000,
+  "agents": 4,
+  "elapsed_s": 1562.5,
+  "file": "hmm_dataset/hinglishmath_1k.jsonl",
+  "done_at": "2026-03-20T07:49:30.664187Z"
+}

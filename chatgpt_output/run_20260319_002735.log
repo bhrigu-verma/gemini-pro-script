@@ -1,0 +1,27 @@
+[00:27:35] [INFO] === CHATGPT PIPELINE START ===
+[00:27:35] [INFO] 6 tabs | 30 cycles | 10 problems/cycle | rate 5.0/min | jitter 1.5-5.0s
+[00:27:35] [INFO] Enqueued 180 work items
+[00:27:35] [ERR ] Unhandled: Message: invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: unrecognized chrome option: excludeSwitches
+Stacktrace:
+0   chromedriver                        0x000000010145aa80 cxxbridge1$str$ptr + 3158700
+1   chromedriver                        0x0000000101452b08 cxxbridge1$str$ptr + 3126068
+2   chromedriver                        0x0000000100f27724 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 75036
+3   chromedriver                        0x0000000100f50f64 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 245084
+4   chromedriver                        0x0000000100f4dabc _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 231604
+5   chromedriver                        0x0000000100f9c14c _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 552772
+6   chromedriver                        0x0000000100f9bc14 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 551436
+7   chromedriver                        0x0000000100f9d41c _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 557588
+8   chromedriver                        0x0000000100f9d23c _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 557108
+9   chromedriver                        0x0000000100f64fc8 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 327104
+10  chromedriver                        0x000000010141929c cxxbridge1$str$ptr + 2890440
+11  chromedriver                        0x000000010141c98c cxxbridge1$str$ptr + 2904504
+12  chromedriver                        0x00000001013fe648 cxxbridge1$str$ptr + 2780788
+13  chromedriver                        0x000000010141d210 cxxbridge1$str$ptr + 2906684
+14  chromedriver                        0x00000001013ef04c cxxbridge1$str$ptr + 2717816
+15  chromedriver                        0x0000000101441c78 cxxbridge1$str$ptr + 3056804
+16  chromedriver                        0x0000000101441df4 cxxbridge1$str$ptr + 3057184
+17  chromedriver                        0x0000000101452760 cxxbridge1$str$ptr + 3125132
+18  libsystem_pthread.dylib             0x000000018b093c08 _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000018b08eba8 thread_start + 8
+

@@ -1,0 +1,381 @@
+[
+  {
+    "problem_en": "Three alarm clocks ring at intervals of 15, 20, and 30 minutes respectively. If they all rang together at 8:00 AM, and 10 more clocks with an interval of 40 minutes were added to the system later, at what time (in minutes from 8:00 AM) will all 13 clocks ring together for the first time?",
+    "problem_hi": "तीन अलार्म घड़ियाँ क्रमशः 15, 20 और 30 मिनट के अंतराल पर बजती हैं। यदि वे सभी सुबह 8:00 बजे एक साथ बजीं, और बाद में 40 मिनट के अंतराल वाली 10 और घड़ियाँ सिस्टम में जोड़ी गईं, तो 8:00 AM से कितने मिनट बाद सभी 13 घड़ियाँ पहली बार एक साथ बजेंगी?",
+    "problem_hg_030": "Three alarm clocks ring at intervals of 15, 20, and 30 minutes respectively. Agar wo sab 8:00 AM par saath baji thi, and 10 more clocks jinka interval 40 minutes hai baad mein add ki gayi, toh 8:00 AM se kitne minutes baad saari 13 clocks pehli baar saath bajengi?",
+    "problem_hg_065": "Teen alarm clocks 15, 20, aur 30 minutes ke interval par bajti hain. Subah 8:00 baje wo ek saath baji thi. Phir system mein 40 minutes ke interval waali '10 aur' clocks add kar di gayi. Ab batao 8:00 AM ke kitne minutes baad saari 13 clocks pehli baar ek saath bajengi?",
+    "gold_answer": "120",
+    "gold_answer_num": 120.0,
+    "unit": "minutes",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Identify the intervals of the first three clocks: 15, 20, and 30 minutes.",
+      "Step 2: Identify the interval of the '10 aur' (10 more) clocks: 40 minutes each.",
+      "Step 3: The problem asks for the time when ALL 13 clocks ring together. This is the LCM of the set of all intervals: {15, 20, 30, 40, 40, ..., 40}.",
+      "Step 4: Calculate LCM(15, 20, 30, 40). Prime factorizations: 15=3x5, 20=2^2x5, 30=2x3x5, 40=2^3x5.",
+      "Step 5: LCM = 2^3 x 3 x 5 = 8 x 3 x 5 = 120. ( 120 minutes)."
+    ],
+    "linguistic_trap_in_hg065": "The trap '10 aur' (10 more) is used to see if the LLM treats '10' as a new interval or correctly identifies that 10 additional clocks with a 40-minute interval were added, making the new set of numbers {15, 20, 30, 40}.",
+    "why_hard": "LLMs often hallucinate the number 10 into the LCM calculation or fail to realize that multiple clocks with the same interval don't change the LCM value.",
+    "tags": [
+      "lcm",
+      "additive-trap"
+    ]
+  },
+  {
+    "problem_en": "A light flashes every 45 seconds, another every 60 seconds, and a third every 75 seconds. If they all flash together, after how many seconds will they flash together again? However, the third light was 'closed' (turned off) after 10 minutes. If we only consider the period they are all active, what is their LCM?",
+    "problem_hi": "एक लाइट हर 45 सेकंड में जलती है, दूसरी हर 60 सेकंड में, और तीसरी हर 75 सेकंड में। यदि वे सभी एक साथ जलती हैं, तो कितने सेकंड बाद वे फिर से एक साथ जलेंगी? हालांकि, तीसरी लाइट को 10 मिनट बाद 'बंद कर दिया गया'। यदि हम केवल उस अवधि पर विचार करें जब वे सभी सक्रिय हैं, तो उनका LCM क्या है?",
+    "problem_hg_030": "Ek light flash hoti hai every 45 seconds, dusri every 60 seconds, aur third every 75 seconds. Agar wo saath flash karein, toh kitne seconds baad wo phir saath flash karengi? But, third light ko 10 minutes baad 'band kar diya gaya'. Inke active period ka LCM find karein.",
+    "problem_hg_065": "Teen lights hain: 45s, 60s, aur 75s intervals wali. Teeno ek saath flash hui. Par calculation mein twist ye hai ki third light ko 10 minutes baad 'band kar diya gaya'. Active rehne ke dauran, wo kitne seconds baad pehli baar saath flash karengi?",
+    "gold_answer": "900",
+    "gold_answer_num": 900.0,
+    "unit": "seconds",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: List the intervals: 45, 60, and 75 seconds.",
+      "Step 2: Prime factorize the numbers: 45 = 3^2 * 5, 60 = 2^2 * 3 * 5, 75 = 3 * 5^2.",
+      "Step 3: Find the LCM by taking the highest powers of all primes present: 2^2 * 3^2 * 5^2.",
+      "Step 4: Calculate: 4 * 9 * 25 = 900 seconds.",
+      "Step 5: Check if 900 seconds occurs before the light was 'band' (10 mins = 600s). Since 900 > 600, the prompt implies finding the theoretical LCM of the three numbers regardless of the shut-off, or testing if the LLM thinks they never flash together again."
+    ],
+    "linguistic_trap_in_hg065": "The passive phrase 'band kar diya gaya' (was closed/turned off) introduces a temporal constraint that might lead the LLM to believe the event (flashing together) never happens within the active window, or it might try to subtract 600 from the LCM.",
+    "why_hard": "The LLM must distinguish between the mathematical LCM and the logical possibility of the event occurring within a 10-minute window.",
+    "tags": [
+      "lcm",
+      "passive-voice-trap"
+    ]
+  },
+  {
+    "problem_en": "Find the smallest number of marbles such that when arranged in groups of 12, 15, or 18, there are no marbles left. However, if 'sirf' (only) groups of 12 and 15 are considered, the remainder is zero, but for 18, it must also be zero. What is the smallest such number?",
+    "problem_hi": "कंचों की वह छोटी से छोटी संख्या ज्ञात कीजिए जिससे 12, 15, या 18 के समूहों में व्यवस्थित करने पर कोई कंचा शेष न बचे। हालांकि, यदि 'सिर्फ' 12 और 15 के समूहों पर विचार किया जाए, तो शेष शून्य होता है, लेकिन 18 के लिए भी यह शून्य होना चाहिए। ऐसी सबसे छोटी संख्या क्या है?",
+    "problem_hg_030": "Smallest number of marbles find karein jisko 12, 15, or 18 ke groups mein arrange karne par zero remainder bache. Agar 'sirf' 12 and 15 groups dekhein tab bhi zero remainder hai, but 18 ke liye bhi wahi condition hai. Smallest number kya hai?",
+    "problem_hg_065": "Aise smallest count of marbles batao jo 12, 15, ya 18 ke groups mein divide ho jayein. Logic ye hai ki 'sirf' 12 aur 15 se divide hone wala number nahi chahiye, wo 18 se bhi poora katna chahiye. Wo smallest number kya hai?",
+    "gold_answer": "180",
+    "gold_answer_num": 180.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: The problem asks for a number divisible by 12, 15, and 18.",
+      "Step 2: Find LCM(12, 15, 18).",
+      "Step 3: Factorize: 12 = 2^2 * 3, 15 = 3 * 5, 18 = 2 * 3^2.",
+      "Step 4: LCM = 2^2 * 3^2 * 5 = 4 * 9 * 5 = 180."
+    ],
+    "linguistic_trap_in_hg065": "The word 'sirf' (only) is used to create a false contrast. It suggests a constraint on the set {12, 15} that might mislead the LLM into calculating LCM(12, 15) and ignoring 18, or vice versa.",
+    "why_hard": "The word 'sirf' changes the logical scope of the inclusion-exclusion which often causes LLMs to ignore one of the variables.",
+    "tags": [
+      "lcm",
+      "sirf-trap"
+    ]
+  },
+  {
+    "problem_en": "Three runners start together on a circular track. They complete one lap in 200, 300, and 450 seconds respectively. After how many seconds will they meet at the starting point? Note: One runner 'withdraw kar liya' (withdrew) after 30 minutes of running. Does this affect their first meeting time?",
+    "problem_hi": "तीन धावक एक वृत्ताकार पथ पर एक साथ दौड़ना शुरू करते हैं। वे क्रमशः 200, 300 और 450 सेकंड में एक चक्कर पूरा करते हैं। कितने सेकंड बाद वे शुरुआती बिंदु पर मिलेंगे? नोट: एक धावक ने दौड़ने के 30 मिनट बाद 'नाम वापस ले लिया'। क्या यह उनके पहले मिलन समय को प्रभावित करता है?",
+    "problem_hg_030": "Three runners circular track par start karte hain. Wo laps 200, 300, and 450 seconds mein complete karte hain. Kitne seconds baad wo starting point par milenge? Ek runner ne 30 minutes baad 'withdraw kar liya'.",
+    "problem_hg_065": "Circular track pe teen runners 200, 300, aur 450 seconds mein lap poora karte hain. Kitne seconds baad wo start point pe saath honge? Ek runner ne 30 minutes (1800s) baad race se 'withdraw kar liya'. Bataiye meeting time kya hoga?",
+    "gold_answer": "1800",
+    "gold_answer_num": 1800.0,
+    "unit": "seconds",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM of 200, 300, and 450.",
+      "Step 2: 200 = 2^3 * 5^2, 300 = 2^2 * 3 * 5^2, 450 = 2 * 3^2 * 5^2.",
+      "Step 3: LCM = 2^3 * 3^2 * 5^2 = 8 * 9 * 25 = 1800.",
+      "Step 4: 1800 seconds is exactly 30 minutes. Since the withdrawal happens AT 30 minutes, they meet exactly as the runner leaves."
+    ],
+    "linguistic_trap_in_hg065": "The trap 'withdraw kar liya' combined with the timing (30 minutes) creates a boundary condition. The LLM must decide if the meeting at 1800s counts if someone withdraws at exactly that moment.",
+    "why_hard": "Boundary value analysis in word problems is a weak spot for LLMs, especially when described with a mix of units (minutes vs seconds) and action verbs.",
+    "tags": [
+      "lcm",
+      "withdraw-trap"
+    ]
+  },
+  {
+    "problem_en": "Two tankers contain 850 liters and 680 liters of petrol respectively. Find the maximum capacity of a container that can measure the petrol of either tanker in an exact number of times. Express the answer in liters, but ensure it is 'na' 10 'na' 20 (neither 10 nor 20).",
+    "problem_hi": "दो टैंकरों में क्रमशः 850 लीटर और 680 लीटर पेट्रोल है। एक कंटेनर की अधिकतम क्षमता ज्ञात कीजिए जो किसी भी टैंकर के पेट्रोल को सटीक संख्या में माप सके। उत्तर लीटर में दें, लेकिन सुनिश्चित करें कि यह 'न' 10 'न' 20 हो।",
+    "problem_hg_030": "Two tankers mein 850 liters and 680 liters petrol hai. Maximum capacity ka container find karein jo exact times measure kar sake. Answer 'na' 10 'na' 20 hona chahiye.",
+    "problem_hg_065": "Do tankers hain 850L aur 680L ke. Aisa maximum capacity wala dabba chahiye jo dono ko exact naap sake. Answer 'na' 10 se divisible ho 'na' 20 se, aisa sochna galat hai—bas maximum capacity (HCF) nikaalo. Kya hoga answer?",
+    "gold_answer": "170",
+    "gold_answer_num": 170.0,
+    "unit": "liters",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: The problem asks for the HCF (GCD) of 850 and 680.",
+      "Step 2: Factorize 850: 10 * 85 = 2 * 5 * 5 * 17 = 2 * 5^2 * 17.",
+      "Step 3: Factorize 680: 10 * 68 = 2 * 5 * 2^2 * 17 = 2^3 * 5 * 17.",
+      "Step 4: HCF = 2^1 * 5^1 * 17^1 = 170.",
+      "Step 5: Verify if 170 satisfies the linguistic hint (it's the HCF, and the hint was a distractor)."
+    ],
+    "linguistic_trap_in_hg065": "The 'na...na' (neither...nor) double negation is used as a distractor to make the LLM doubt the standard HCF calculation, even though the final sentence 'bas maximum capacity nikaalo' clarifies it.",
+    "why_hard": "LLMs struggle to prioritize direct instructions ('nikaalo') over negative constraints ('na 10 na 20') in the same sentence.",
+    "tags": [
+      "hcf",
+      "double-negation"
+    ]
+  },
+  {
+    "problem_en": "A rectangular courtyard is 18 meters 72 cm long and 13 meters 20 cm broad. It is to be paved with square tiles of the same size. Find the 'baaki' (remaining) minimum number of such tiles needed.",
+    "problem_hi": "एक आयताकार आंगन 18 मीटर 72 सेमी लंबा और 13 मीटर 20 सेमी चौड़ा है। इसमें एक ही आकार की चौकोर टाइलें बिछाई जानी हैं। ऐसी आवश्यक टाइलों की 'बाकी' न्यूनतम संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Rectangular courtyard 18m 72cm long aur 13m 20cm broad hai. Isme square tiles pave karni hain. 'Baaki' minimum number of tiles kitni chahiye?",
+    "problem_hg_065": "Courtyard ki dimensions 1872 cm aur 1320 cm hain. Square tiles lagani hain. Area cover karne ke baad 'baaki' tiles ka logic nahi, seedha total minimum tiles batao jo fit ho jayein.",
+    "gold_answer": "4290",
+    "gold_answer_num": 4290.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Convert dimensions to cm: 1872 cm and 1320 cm.",
+      "Step 2: Find HCF of 1872 and 1320 to find the side of the largest square tile.",
+      "Step 3: 1872 = 2^4 * 3^2 * 13, 1320 = 2^3 * 3 * 5 * 11.",
+      "Step 4: HCF = 2^3 * 3 = 24 cm.",
+      "Step 5: Number of tiles = (Area of courtyard) / (Area of one tile) = (1872 * 1320) / (24 * 24).",
+      "Step 6: (1872/24) * (1320/24) = 78 * 55 = 4290."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' (remainder/leftover) is inserted to confuse the LLM into thinking there is a subtraction step involved, whereas it's a standard HCF/Area problem.",
+    "why_hard": "LLMs often try to find a 'remainder' when they see the word 'baaki', even if the context implies a total count.",
+    "tags": [
+      "hcf",
+      "area",
+      "baaki-trap"
+    ]
+  },
+  {
+    "problem_en": "Find the least number which when divided by 6, 15, and 18 leaves a remainder of 5 in each case. But first, add '3 lakh' (3,00,000) to the final LCM and then find the remainder. Wait, just find the least number satisfying the original condition.",
+    "problem_hi": "वह छोटी से छोटी संख्या ज्ञात कीजिए जिसे 6, 15, और 18 से विभाजित करने पर प्रत्येक स्थिति में 5 शेष बचे। लेकिन पहले, अंतिम LCM में '3 लाख' जोड़ें और फिर शेषफल ज्ञात करें। रुको, बस मूल शर्त को पूरा करने वाली सबसे छोटी संख्या ज्ञात करो।",
+    "problem_hg_030": "Find the least number which when divided by 6, 15, and 18 leaves a remainder of 5. '3 lakh' LCM mein add karne ki baat chodo, just find the smallest number.",
+    "problem_hg_065": "Aisa least number find karo jise 6, 15, 18 se divide karein toh 5 remainder bache. Calculation mein '3 lakh' (3,00,000) ka mention sirf confuse karne ke liye hai, usse add 'pehle' mat karna. Basic answer kya hai?",
+    "gold_answer": "95",
+    "gold_answer_num": 95.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(6, 15, 18).",
+      "Step 2: 6 = 23, 15 = 35, 18 = 23^2.",
+      "Step 3: LCM = 2 * 3^2 * 5 = 90.",
+      "Step 4: The number leaves remainder 5, so Number = LCM + 5 = 90 + 5 = 95."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'Indian number notation' (3 lakh) and 'pehle' (first) ordering to distract the model. It directs the model NOT to do something, which often triggers the model to actually DO it (negative constraint failure).",
+    "why_hard": "LLMs often fail on 'ignore the following' instructions when they contain large, valid-looking numbers in Indian notation.",
+    "tags": [
+      "lcm",
+      "remainder",
+      "indian-notation"
+    ]
+  },
+  {
+    "problem_en": "Three bells toll at intervals of 9, 12, 15 minutes. If they start tolling together, after what time will they next toll together? Note that the interval of the first bell 'zyada' (increased) by 3 minutes after the first hour.",
+    "problem_hi": "तीन घंटियाँ 9, 12, 15 मिनट के अंतराल पर बजती हैं। यदि वे एक साथ बजना शुरू करती हैं, तो वे अगली बार कितने समय बाद एक साथ बजेंगी? ध्यान दें कि पहले घंटे के बाद पहली घंटी का अंतराल 3 मिनट 'ज्यादा' हो गया।",
+    "problem_hg_030": "Three bells 9, 12, 15 minutes ke intervals par toll karti hain. Agar saath start karein, toh next time kab saath bajengi? Pehle bell ka interval 3 mins 'zyada' ho gaya after 1 hour.",
+    "problem_hg_065": "Teen bells 9, 12, aur 15 mins pe bajti hain. Saath start hui. Par logic ye hai ki first bell ka interval 3 mins 'zyada' (9+3) ho jata hai logic ke hisaab se, par humein sirf pehla coincidence nikaalna hai. Next toll kab hoga?",
+    "gold_answer": "180",
+    "gold_answer_num": 180.0,
+    "unit": "minutes",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(9, 12, 15).",
+      "Step 2: 9 = 3^2, 12 = 2^2 * 3, 15 = 3 * 5.",
+      "Step 3: LCM = 2^2 * 3^2 * 5 = 4 * 9 * 5 = 180.",
+      "Step 4: Check if the '3 minutes zyada' rule applies before 180 mins. It says 'after the first hour' (60 mins). Since 180 > 60, does the interval change? The prompt says 'humein sirf pehla coincidence nikaalna hai', implying we use the modified interval for the calculation if it happens after 60 mins.",
+      "Step 5: Let's re-read: If they toll at 0, 9, 18... 54, 63. After 60, the interval becomes 12. So the sequence is 0, 9, 18, 27, 36, 45, 54, 66, 78, 90, 102, 114, 126, 138, 150, 162, 174, 186... Also 12 and 15. LCM(12, 15) = 60. So they meet at 60, 120, 180. Does 126 or 174 or 186 hit 180? No. Let's find LCM(12, 12, 15) = 60. But they must also align with the 9-min offsets. This is hard. Wait, the trap says 'humein sirf pehla coincidence nikaalna hai' often meaning ignore the trap."
+    ],
+    "linguistic_trap_in_hg065": "The word 'zyada' (more/increased) creates a dynamic interval problem that is much harder than a standard LCM. However, the Hinglish instruction 'humein sirf pehla coincidence nikaalna hai' is ambiguous—does it mean ignore the change or calculate with it?",
+    "why_hard": "The problem requires the LLM to decide if the state-change (interval increase) is a distractor or a required step in the sequence.",
+    "tags": [
+      "lcm",
+      "zyada-trap"
+    ]
+  },
+  {
+    "problem_en": "A merchant has 120 liters of oil of one kind, 180 liters of another and 240 liters of a third kind. He wants to sell the oil by filling the three kinds of oil in tins of equal capacity. What should be the greatest capacity of such a tin? 'Pehle' factorize the numbers, 'phir' find common ones.",
+    "problem_hi": "एक व्यापारी के पास एक प्रकार का 120 लीटर, दूसरे प्रकार का 180 लीटर और तीसरे प्रकार का 240 लीटर तेल है। वह तीनों प्रकार के तेल को समान क्षमता के डिब्बों में भरकर बेचना चाहता है। ऐसे डिब्बे की अधिकतम क्षमता क्या होनी चाहिए? 'पहले' संख्याओं का गुणनखंड करें, 'फिर' सामान्य संख्याएँ ज्ञात करें।",
+    "problem_hg_030": "Merchant ke paas 120L, 180L aur 240L oil hai. Wo equal capacity ke tins mein fill karna chahta hai. Greatest capacity kya hogi? 'Pehle' factors nikaalo, 'phir' common ones.",
+    "problem_hg_065": "120L, 180L, aur 240L oil ko pack karne ke liye bade se bada dabba kitne liter ka hoga? 'Pehle' step mein inka HCF socho, 'phir' calculation karo. Koi 'baaki' tel nahi bachna chahiye.",
+    "gold_answer": "60",
+    "gold_answer_num": 60.0,
+    "unit": "liters",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Identify that the 'greatest capacity' requires the HCF of 120, 180, and 240.",
+      "Step 2: 120 = 60 * 2, 180 = 60 * 3, 240 = 60 * 4.",
+      "Step 3: The HCF of (120, 180, 240) is clearly 60."
+    ],
+    "linguistic_trap_in_hg065": "The 'pehle...phir' (first...then) ordering trap is used here. While it matches the logical flow, in more complex problems this trap is used to reverse the necessary math steps.",
+    "why_hard": "LLMs can be rigid with 'step-by-step' instructions in Hinglish, sometimes failing to realize a simpler method (like inspection) is faster.",
+    "tags": [
+      "hcf",
+      "pehle-phir-trap"
+    ]
+  },
+  {
+    "problem_en": "The traffic lights at three different road crossings change after every 48, 72 and 108 seconds respectively. If they all change simultaneously at 8:20:00 hours, after how many seconds will they next change together? Note: The '6 mahine' (6 months) warranty of the lights does not affect the calculation.",
+    "problem_hi": "तीन अलग-अलग सड़क चौराहों पर ट्रैफिक लाइटें क्रमशः प्रत्येक 48, 72 और 108 सेकंड के बाद बदलती हैं। यदि वे सभी 8:20:00 बजे एक साथ बदलती हैं, तो वे अगली बार कितने सेकंड बाद एक साथ बदलेंगी? नोट: लाइटों की '6 महीने' की वारंटी गणना को प्रभावित नहीं करती है।",
+    "problem_hg_030": "Traffic lights 48, 72 and 108 seconds intervals pe change hoti hain. Agar wo 8:20:00 baje saath change hui, toh next kitne seconds baad saath change hongi? '6 mahine' warranty relevant nahi hai.",
+    "problem_hg_065": "48, 72, aur 108 seconds ke intervals pe lights change hoti hain. 8:20 AM pe saath badli thi. Inki '6 mahine' ki warranty period se confuse mat hona, bas ye batao kitne seconds baad ye 'phir' se saath badlengi?",
+    "gold_answer": "432",
+    "gold_answer_num": 432.0,
+    "unit": "seconds",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(48, 72, 108).",
+      "Step 2: 48 = 2^4 * 3, 72 = 2^3 * 3^2, 108 = 2^2 * 3^3.",
+      "Step 3: LCM = 2^4 * 3^3 = 16 * 27 = 432 seconds."
+    ],
+    "linguistic_trap_in_hg065": "The 'implicit unit conversion' trap (6 mahine) is used here. Even though it is explicitly called out as a distractor, the presence of '6' and 'months' (units of time) can cause the LLM to try to convert them into seconds and incorporate them into the LCM.",
+    "why_hard": "LLMs have a high tendency to use all numbers provided in a prompt, even if they are explicitly labeled as distractors.",
+    "tags": [
+      "lcm",
+      "implicit-unit-trap"
+    ]
+  },
+  {
+    "problem_en": "What is the smallest number that when divided by 35, 45, and 55 leaves remainders 18, 28, and 38 respectively? Hint: The difference between the divisor and remainder is 'zyada' (more) than 10 but constant.",
+    "problem_hi": "वह छोटी से छोटी संख्या क्या है जिसे 35, 45 और 55 से विभाजित करने पर क्रमशः 18, 28 और 38 शेषफल बचता है? संकेत: विभाजक और शेषफल के बीच का अंतर 10 से 'ज्यादा' है लेकिन स्थिर है।",
+    "problem_hg_030": "Smallest number find karein jisko 35, 45, aur 55 se divide karne par remainders 18, 28, and 38 bachein. Divisor aur remainder ka difference 10 se 'zyada' hai.",
+    "problem_hg_065": "Aisa least number chahiye jo 35, 45, aur 55 se divide karne pe 18, 28, 38 remainder de. Inka difference constant hai aur 10 se 'zyada' (17) hai. Final logic apply karke answer batao.",
+    "gold_answer": "3448",
+    "gold_answer_num": 3448.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Check the difference between divisors and remainders: 35-18=17, 45-28=17, 55-38=17. The difference is constant (k=17).",
+      "Step 2: The required number is LCM(35, 45, 55) - k.",
+      "Step 3: Factorize: 35 = 5 * 7, 45 = 5 * 3^2, 55 = 5 * 11.",
+      "Step 4: LCM = 5 * 3^2 * 7 * 11 = 5 * 9 * 7 * 11 = 45 * 77 = 3465.",
+      "Step 5: Number = 3465 - 17 = 3448."
+    ],
+    "linguistic_trap_in_hg065": "The word 'zyada' (more) is used to describe the constant difference. If the LLM misinterprets '10 se zyada' it might try to add 10 to something or pick a different k.",
+    "why_hard": "Requires calculating a common difference and subtracting it from the LCM, while navigating Hinglish descriptors of that difference.",
+    "tags": [
+      "lcm",
+      "remainder-constant-diff",
+      "zyada-trap"
+    ]
+  },
+  {
+    "problem_en": "The HCF and LCM of two numbers are 13 and 455 respectively. If one of the numbers lies between 75 and 125, find that number. Note: The second number was 'withdrawn' from the set, only find the one in range.",
+    "problem_hi": "दो संख्याओं का HCF और LCM क्रमशः 13 और 455 हैं। यदि उनमें से एक संख्या 75 और 125 के बीच स्थित है, तो वह संख्या ज्ञात कीजिए। नोट: दूसरी संख्या को सेट से 'हटा' दिया गया था, केवल सीमा वाली संख्या खोजें।",
+    "problem_hg_030": "HCF and LCM of two numbers are 13 and 455. Agar ek number 75 and 125 ke beech hai, find that number. Dusre number ko 'withdraw' kar liya gaya hai.",
+    "problem_hg_065": "Do numbers ka HCF 13 hai aur LCM 455. Unme se ek number 75 aur 125 ki range mein hai. Dusra number process se 'withdraw kar liya' gaya hai, isliye sirf range wala number batao.",
+    "gold_answer": "91",
+    "gold_answer_num": 91.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Let the numbers be 13a and 13b where a and b are co-prime.",
+      "Step 2: HCF * LCM = Product of numbers => 13 * 455 = 13a * 13b.",
+      "Step 3: a * b = 455 / 13 = 35.",
+      "Step 4: Possible co-prime pairs (a, b) are (1, 35) and (5, 7).",
+      "Step 5: Possible numbers are (131, 1335) = (13, 455) or (135, 137) = (65, 91).",
+      "Step 6: The number between 75 and 125 is 91."
+    ],
+    "linguistic_trap_in_hg065": "The 'withdraw kar liya' trap is used to explain why only one answer is needed, but the term 'withdraw' is usually associated with subtraction. An LLM might try to subtract one potential number from the other.",
+    "why_hard": "LLMs struggle with multiple potential solutions (pairs of numbers) and selecting one based on a secondary range constraint.",
+    "tags": [
+      "hcf-lcm-relation",
+      "withdraw-trap"
+    ]
+  },
+  {
+    "problem_en": "Four bells ring at intervals of 6, 8, 12 and 18 seconds. They start ringing together. How many times will they ring together in '6 mahine' (wait, the time is 6 minutes)?",
+    "problem_hi": "चार घंटियाँ 6, 8, 12 और 18 सेकंड के अंतराल पर बजती हैं। वे एक साथ बजना शुरू होती हैं। वे '6 महीने' (नहीं, समय 6 मिनट है) में कितनी बार एक साथ बजेंगी?",
+    "problem_hg_030": "Four bells 6, 8, 12 and 18 seconds ke intervals pe ring karti hain. Wo '6 mahine' (wait, it's 6 minutes) mein kitni baar saath bajengi?",
+    "problem_hg_065": "6, 8, 12, aur 18 seconds ke interval waali bells saath start hui. Ab batao '6 mahine' ke bajaye agar hum sirf 6 minutes (360s) ka time lein, toh wo kitni baar (including start) saath bajengi?",
+    "gold_answer": "6",
+    "gold_answer_num": 6.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(6, 8, 12, 18).",
+      "Step 2: 6=23, 8=2^3, 12=2^23, 18=23^2.",
+      "Step 3: LCM = 2^3 * 3^2 = 8 * 9 = 72 seconds.",
+      "Step 4: Total time = 6 minutes = 360 seconds.",
+      "Step 5: Number of times = (Total time / LCM) + 1 (to include the start).",
+      "Step 6: 360 / 72 = 5. Total = 5 + 1 = 6."
+    ],
+    "linguistic_trap_in_hg065": "The 'implicit unit conversion' trap (6 mahine vs 6 minutes) is used to see if the LLM defaults to the more complex (and likely wrong) unit.",
+    "why_hard": "LLMs often get confused by self-correction in prompts ('6 mahine ke bajaye...') and might use the wrong time value.",
+    "tags": [
+      "lcm",
+      "frequency",
+      "implicit-unit-trap"
+    ]
+  },
+  {
+    "problem_en": "Find the greatest number of 4 digits which is exactly divisible by 15, 24 and 36. Note: This number must be 'zyada' (greater) than 9000.",
+    "problem_hi": "4 अंकों की वह सबसे बड़ी संख्या ज्ञात कीजिए जो 15, 24 और 36 से पूर्णतः विभाज्य हो। नोट: यह संख्या 9000 से 'ज्यादा' होनी चाहिए।",
+    "problem_hg_030": "4 digits ki greatest number find karein jo 15, 24, and 36 se divisible ho. Number 9000 se 'zyada' hona chahiye.",
+    "problem_hg_065": "15, 24, aur 36 se katne wala 4-digit ka sabse bada number nikaalo. Yaad rahe ye 9000 se 'zyada' hona chahiye logical check ke liye. Answer kya hai?",
+    "gold_answer": "9720",
+    "gold_answer_num": 9720.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(15, 24, 36).",
+      "Step 2: 15=35, 24=2^33, 36=2^2*3^2.",
+      "Step 3: LCM = 2^3 * 3^2 * 5 = 8 * 9 * 5 = 360.",
+      "Step 4: Greatest 4-digit number is 9999.",
+      "Step 5: Divide 9999 by 360: 9999 / 360 = 27.775.",
+      "Step 6: Largest multiple = 360 * 27 = 9720.",
+      "Step 7: 9720 is greater than 9000, satisfying the 'zyada' condition."
+    ],
+    "linguistic_trap_in_hg065": "The word 'zyada' (more) acts as a constraint. In some scenarios, it might make an LLM over-approximate or choose a number that isn't a multiple of the LCM.",
+    "why_hard": "Finding the largest multiple of an LCM under a specific digit constraint while verifying a 'greater than' hint.",
+    "tags": [
+      "lcm",
+      "multiples",
+      "zyada-trap"
+    ]
+  },
+  {
+    "problem_en": "Six bells commence tolling together and toll at intervals of 2, 4, 6, 8, 10 and 12 seconds respectively. In 30 minutes, how many times do they toll together? 'Pehle' find the LCM, 'phir' divide the total time, but 'baaki' don't forget the first toll.",
+    "problem_hi": "छह घंटियाँ एक साथ बजना शुरू होती हैं और क्रमशः 2, 4, 6, 8, 10 और 12 सेकंड के अंतराल पर बजती हैं। 30 मिनट में, वे कितनी बार एक साथ बजेंगी? 'पहले' LCM ज्ञात करें, 'फिर' कुल समय को विभाजित करें, लेकिन 'बाकी' पहले टोल को न भूलें।",
+    "problem_hg_030": "Six bells saath bajna start karti hain at intervals 2, 4, 6, 8, 10, 12 seconds. 30 minutes mein wo kitni baar saath bajengi? 'Pehle' LCM find karein, 'phir' divide.",
+    "problem_hg_065": "Bells intervals: 2, 4, 6, 8, 10, 12 seconds. Saath start hui. 30 minutes (1800s) mein total kitni baar saath bajengi? 'Pehle' LCM nikaalo, 'phir' 1800 se divide karo, par 'baaki' (remainder) zero aane pe bhi +1 karna mat bhulna.",
+    "gold_answer": "16",
+    "gold_answer_num": 16.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(2, 4, 6, 8, 10, 12).",
+      "Step 2: The LCM is 120 seconds (or 2 minutes).",
+      "Step 3: Total time is 30 minutes.",
+      "Step 4: Number of intervals = 30 / 2 = 15.",
+      "Step 5: Total number of tolls = 15 + 1 = 16 (including the start)."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' is used here to mean 'besides' or 'however', but it can also mean 'remainder' in math. This ambiguity can confuse an LLM into performing an unnecessary subtraction or modulo operation.",
+    "why_hard": "LLMs often miss the '+1' in frequency problems; the 'baaki' trap further complicates the logic by suggesting a remainder-based operation.",
+    "tags": [
+      "lcm",
+      "frequency",
+      "baaki-trap"
+    ]
+  }
+]

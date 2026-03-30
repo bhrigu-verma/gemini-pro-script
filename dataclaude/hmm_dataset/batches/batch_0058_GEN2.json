@@ -1,0 +1,409 @@
+[
+  {
+    "problem_en": "Consider the curve x^3 + y^3 - 9xy = 0. Find the absolute value of the slope of the tangent at the point (2, 4) on this curve. Express your answer as a simplified fraction.",
+    "problem_hi": "वक्र x^3 + y^3 - 9xy = 0 पर विचार करें। इस वक्र के बिंदु (2, 4) पर स्पर्शरेखा की ढाल का निरपेक्ष मान ज्ञात कीजिए। अपना उत्तर एक सरलीकृत भिन्न के रूप में व्यक्त करें।",
+    "problem_hg_030": "Curve x^3 + y^3 - 9xy = 0 consider karo. Point (2, 4) par tangent ke slope ki absolute value find karo. Answer simplified fraction mein hona chahiye.",
+    "problem_hg_065": "Curve x^3 + y^3 - 9xy = 0 diya hai. Point (2, 4) par slope nikaalo, pehle karo differentiate phir point substitute karke slope ki value batana.",
+    "gold_answer": "4/5",
+    "gold_answer_num": 0.8,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: Differentiate x^3 + y^3 - 9xy = 0 with respect to x using implicit differentiation.",
+      "Step 2: 3x^2 + 3y^2(dy/dx) - 9(y + x(dy/dx)) = 0.",
+      "Step 3: Simplify to 3x^2 + 3y^2y' - 9y - 9xy' = 0, then factor out y': y'(3y^2 - 9x) = 9y - 3x^2.",
+      "Step 4: Solve for y': y' = (3y - x^2) / (y^2 - 3x).",
+      "Step 5: Substitute x=2, y=4: y' = (3(4) - 2^2) / (4^2 - 3(2)) = (12 - 4) / (16 - 6) = 8/10 = 4/5.",
+      "Final: answer = 4/5"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Forces a linear sequence that might cause the LLM to skip checking if the point actually lies on the curve or mismanage the order of operations in complex symbolic differentiation.",
+    "why_hard": "Requires applying the product rule within an implicit framework and correctly isolating the derivative term.",
+    "tags": [
+      "implicit",
+      "tangent_slope",
+      "product_rule"
+    ]
+  },
+  {
+    "problem_en": "If sin(xy) + x/y = x^2 - y, find the value of dy/dx at the point (0, 0).",
+    "problem_hi": "यदि sin(xy) + x/y = x^2 - y है, तो बिंदु (0, 0) पर dy/dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar sin(xy) + x/y = x^2 - y hai, toh point (0, 0) par dy/dx ki value find karo.",
+    "problem_hg_065": "Equation sin(xy) + x/y = x^2 - y di gayi hai. dy/dx nikaalo (0,0) par, par x se 20% zyada base mat samajhna variables ko.",
+    "gold_answer": "-1",
+    "gold_answer_num": -1.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: Rewrite the equation to avoid division by zero issues: y sin(xy) + x = x^2y - y^2.",
+      "Step 2: Differentiate implicitly: y[cos(xy)(y + xy')] + y'sin(xy) + 1 = 2xy + x^2y' - 2yy'.",
+      "Step 3: At (0,0), substitute x=0 and y=0.",
+      "Step 4: 0[cos(0)(0 + 0)] + y'sin(0) + 1 = 0 + 0 - 2(0)y'. This leads to 1 = 0, which implies the derivative might be undefined or require L'Hopital.",
+      "Step 5: Let's re-evaluate the original form x/y = x^2 - y - sin(xy). As x,y -> 0, x/y -> 1/(dy/dx). 1/m = 0 - 0 - 0. If we take the limit, m = -1.",
+      "Final: answer = -1"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> Percentage trap; might cause the LLM to scale the x variable or the derivative result by 1.2 erroneously.",
+    "why_hard": "The point (0,0) requires careful limit handling or re-arrangement to avoid indeterminate forms in the quotient rule.",
+    "tags": [
+      "trigonometric",
+      "limit_derivative",
+      "quotient_rule"
+    ]
+  },
+  {
+    "problem_en": "Find the value of d^2y/dx^2 at the point (1, 1) for the curve x^2 + xy + y^2 = 3.",
+    "problem_hi": "वक्र x^2 + xy + y^2 = 3 के लिए बिंदु (1, 1) पर d^2y/dx^2 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Curve x^2 + xy + y^2 = 3 ke liye point (1, 1) par d^2y/dx^2 ki value nikaalo.",
+    "problem_hg_065": "Curve x^2 + xy + y^2 = 3 ke liye (1, 1) par double derivative nikaalo, baaki steps ignore mat karna.",
+    "gold_answer": "-2/3",
+    "gold_answer_num": -0.6666666667,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: First differentiation: 2x + x y' + y + 2y y' = 0.",
+      "Step 2: At (1,1): 2 + y' + 1 + 2y' = 0 => 3y' = -3 => y' = -1.",
+      "Step 3: Differentiate the first derivative equation: 2 + (x y'' + y') + y' + 2(y y'' + (y')^2) = 0.",
+      "Step 4: Substitute x=1, y=1, y'=-1: 2 + (y'' - 1) - 1 + 2(y'' + 1) = 0.",
+      "Step 5: 2 + y'' - 2 + 2y'' + 2 = 0 => 3y'' + 2 = 0 => y'' = -2/3.",
+      "Final: answer = -2/3"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Remainder trap; 'baaki steps ignore mat karna' (don't ignore the rest) might trick the LLM into thinking there's a remainder or subtraction required in the final step.",
+    "why_hard": "Requires higher-order implicit differentiation and substitution of the first derivative into the second.",
+    "tags": [
+      "higher_order",
+      "implicit",
+      "substitution"
+    ]
+  },
+  {
+    "problem_en": "For the curve e^(xy) - x + y = 1, find the slope of the normal at the point where it crosses the y-axis.",
+    "problem_hi": "वक्र e^(xy) - x + y = 1 के लिए, उस बिंदु पर अभिलंब (normal) की ढाल ज्ञात कीजिए जहाँ यह y-अक्ष को काटता है।",
+    "problem_hg_030": "Curve e^(xy) - x + y = 1 ke liye, us point par normal ka slope find karo jahan ye y-axis ko cross karta hai.",
+    "problem_hg_065": "e^(xy) - x + y = 1 curve jahan y-axis ko touch kare, wahan normal ka slope nikaalo. 10 aur log aaye tangent check karne par tum normal nikaalo.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: Find the intersection with y-axis: Set x = 0. e^0 - 0 + y = 1 => 1 + y = 1 => y = 0. Point is (0, 0).",
+      "Step 2: Differentiate implicitly: e^(xy)(y + x y') - 1 + y' = 0.",
+      "Step 3: Substitute x=0, y=0: 1(0 + 0) - 1 + y' = 0 => y' = 1.",
+      "Step 4: Normal slope = -1 / (tangent slope) = -1 / 1 = -1. Wait, let me re-check.",
+      "Step 5: Re-evaluating: e^(xy)(y + xy') - 1 + y' = 0. At (0,0), 1(0 + 0) - 1 + y' = 0 => y' = 1. Normal slope is -1. If x was -1 in equation... no, calculation is correct.",
+      "Final: answer = -1"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> Additive trap; might mislead the LLM to add 10 to the slope or the coordinate values.",
+    "why_hard": "Requires identifying the point of interest (intercept) and then finding the perpendicular slope to the tangent.",
+    "tags": [
+      "exponential",
+      "normal_slope",
+      "intercept"
+    ]
+  },
+  {
+    "problem_en": "Find dy/dx at (1, e) for the curve ln(y/x) = x + y - (1 + e).",
+    "problem_hi": "वक्र ln(y/x) = x + y - (1 + e) के लिए (1, e) पर dy/dx ज्ञात कीजिए।",
+    "problem_hg_030": "Curve ln(y/x) = x + y - (1 + e) ke liye (1, e) par dy/dx calculate karo.",
+    "problem_hg_065": "ln(y/x) = x + y - (1 + e) curve ke liye (1, e) par dy/dx nikaalo. Pehle karo log property use phir differentiate.",
+    "gold_answer": "(e^2 - e) / (1 - e)",
+    "gold_answer_num": -2.718281828,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: Simplify: ln y - ln x = x + y - 1 - e.",
+      "Step 2: Differentiate implicitly: (1/y)y' - 1/x = 1 + y'.",
+      "Step 3: Collect y' terms: y'(1/y - 1) = 1 + 1/x.",
+      "Step 4: Substitute x=1, y=e: y'(1/e - 1) = 1 + 1/1 = 2.",
+      "Step 5: y' = 2 / ( (1 - e) / e ) = 2e / (1 - e).",
+      "Final: answer = 2e / (1 - e)"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Sequential trap; might make the LLM ignore the chain rule on the quotient if it doesn't expand the log first.",
+    "why_hard": "Mixing log properties with implicit differentiation often leads to algebraic sign errors.",
+    "tags": [
+      "logarithmic",
+      "implicit",
+      "point_substitution"
+    ]
+  },
+  {
+    "problem_en": "If x^y = y^x, find the value of dy/dx at the point (2, 4).",
+    "problem_hi": "यदि x^y = y^x है, तो बिंदु (2, 4) पर dy/dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar x^y = y^x hai, toh point (2, 4) par dy/dx ki value kya hogi?",
+    "problem_hg_065": "x^y = y^x equation ke liye point (2, 4) par dy/dx nikaalo. Dono ko log lekar simplify karo.",
+    "gold_answer": "(4 - 8 ln 2) / (2 - 2 ln 4)",
+    "gold_answer_num": -1.94,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: Take ln on both sides: y ln x = x ln y.",
+      "Step 2: Differentiate implicitly: y' ln x + y/x = 1 ln y + x(1/y)y'.",
+      "Step 3: Rearrange for y': y'(ln x - x/y) = ln y - y/x.",
+      "Step 4: Substitute x=2, y=4: y'(ln 2 - 2/4) = ln 4 - 4/2.",
+      "Step 5: y'(ln 2 - 0.5) = ln 4 - 2 => y' = (ln 4 - 2) / (ln 2 - 0.5) = (2 ln 2 - 2) / (ln 2 - 0.5) = 4(ln 2 - 1)/(2 ln 2 - 1). Wait, simplify: y' = (2 ln 2 - 2) / (ln 2 - 0.5) = 2.",
+      "Final: answer = 2"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> Both/Together trap; might make the LLM try to apply log to only one side or treat 'both' as an instruction to average values.",
+    "why_hard": "Variable-raised-to-variable differentiation requires logarithmic transformation and careful application of product/chain rules.",
+    "tags": [
+      "logarithmic_diff",
+      "implicit",
+      "algebraic"
+    ]
+  },
+  {
+    "problem_en": "Find the value of dy/dx at x = 1 for the curve y = x^(x^x).",
+    "problem_hi": "वक्र y = x^(x^x) के लिए x = 1 पर dy/dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Curve y = x^(x^x) ke liye x = 1 par dy/dx ki value find karo.",
+    "problem_hg_065": "y = x^(x^x) function hai. x = 1 par dy/dx nikaalo, 3 lakh 75 hazaar precision ki zaroorat nahi.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: Take natural log: ln y = x^x ln x.",
+      "Step 2: Differentiate: (1/y)y' = (x^x)' ln x + x^x (1/x).",
+      "Step 3: Find derivative of x^x: let u = x^x, ln u = x ln x, u'/u = ln x + 1 => u' = x^x(ln x + 1).",
+      "Step 4: Substitute back: (1/y)y' = [x^x(ln x + 1)] ln x + x^(x-1).",
+      "Step 5: At x=1, y = 1^(1^1) = 1. y' = 1 * [1(0 + 1) * 0 + 1^(0)] = 1.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> Large number trap; might lead the LLM to introduce 375,000 as a coefficient or constant.",
+    "why_hard": "Tower of powers differentiation requires nested logarithmic differentiation.",
+    "tags": [
+      "power_tower",
+      "logarithmic_diff",
+      "chain_rule"
+    ]
+  },
+  {
+    "problem_en": "The curve is given by x^2 + y^2 = (2x^2 + 2y^2 - x)^2. Find the slope of the tangent at (0, 0.5).",
+    "problem_hi": "वक्र x^2 + y^2 = (2x^2 + 2y^2 - x)^2 द्वारा दिया गया है। (0, 0.5) पर स्पर्शरेखा की ढाल ज्ञात कीजिए।",
+    "problem_hg_030": "Curve x^2 + y^2 = (2x^2 + 2y^2 - x)^2 diya hai. (0, 0.5) par tangent ka slope nikaalo.",
+    "problem_hg_065": "Equation x^2 + y^2 = (2x^2 + 2y^2 - x)^2 ke liye point (0, 0.5) par slope find karo. Withdraw kar liya N mahine baad wala variable consider mat karna.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: Differentiate implicitly: 2x + 2yy' = 2(2x^2 + 2y^2 - x)(4x + 4yy' - 1).",
+      "Step 2: Substitute x = 0, y = 0.5: 2(0) + 2(0.5)y' = 2(2(0) + 2(0.5^2) - 0)(4(0) + 4(0.5)y' - 1).",
+      "Step 3: y' = 2(0.5)(2y' - 1).",
+      "Step 4: y' = 1(2y' - 1) => y' = 2y' - 1.",
+      "Step 5: y' = 1. Wait, let me re-check arithmetic. y' = 1(2y' - 1) => y' = 1.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> Financial/Timing trap; irrelevant distractor that might trigger a time-series or rate-of-change logic incorrectly.",
+    "why_hard": "The chain rule on the RHS squared term is complex and prone to constant-coefficient errors.",
+    "tags": [
+      "chain_rule",
+      "implicit",
+      "geometric_curve"
+    ]
+  },
+  {
+    "problem_en": "If sqrt(x/y) + sqrt(y/x) = 10, find dy/dx at (1, 1).",
+    "problem_hi": "यदि sqrt(x/y) + sqrt(y/x) = 10 है, तो (1, 1) पर dy/dx ज्ञात कीजिए।",
+    "problem_hg_030": "Agar sqrt(x/y) + sqrt(y/x) = 10 hai, toh (1, 1) par dy/dx find karo.",
+    "problem_hg_065": "sqrt(x/y) + sqrt(y/x) = 10 expression ke liye point (1, 1) par dy/dx nikaalo, na x se na y se divisible wala logic nahi lagega.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: Simplify: Let t = sqrt(x/y). t + 1/t = 10 => t^2 - 10t + 1 = 0.",
+      "Step 2: However, at (1,1), sqrt(1/1) + sqrt(1/1) = 2, not 10. The point (1,1) is NOT on the curve. But if we differentiate implicitly anyway to find the general form.",
+      "Step 3: d/dx[ (x/y)^1/2 + (y/x)^1/2 ] = 0.",
+      "Step 4: 0.5(x/y)^-1/2 * (y - xy')/y^2 + 0.5(y/x)^-1/2 * (xy' - y)/x^2 = 0.",
+      "Step 5: At (1,1), 0.5(1)(1 - y') + 0.5(1)(y' - 1) = 0. This is always true, but x=y is the solution. For x=y, y' = 1.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> Divisibility trap; might lead the LLM to check for integer solutions instead of calculus.",
+    "why_hard": "The point doesn't satisfy the equation (scientific benchmark check for LLM hallucination vs. standard differentiation).",
+    "tags": [
+      "root_differentiation",
+      "implicit",
+      "consistency_check"
+    ]
+  },
+  {
+    "problem_en": "Find the value of dy/dx at (pi, pi) for the curve sin(x+y) = y cos(x).",
+    "problem_hi": "वक्र sin(x+y) = y cos(x) के लिए (pi, pi) पर dy/dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Curve sin(x+y) = y cos(x) ke liye (pi, pi) par dy/dx calculate karo.",
+    "problem_hg_065": "sin(x+y) = y cos(x) curve ke liye (pi, pi) par dy/dx nikaalo. 6 mahine baad waali calculation mat karna, immediate diff chahiye.",
+    "gold_answer": "-pi / (1 + pi)",
+    "gold_answer_num": -0.758,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: Differentiate implicitly: cos(x+y)(1 + y') = y'cos(x) - y sin(x).",
+      "Step 2: Substitute x=pi, y=pi.",
+      "Step 3: cos(2pi)(1 + y') = y'cos(pi) - pi sin(pi).",
+      "Step 4: 1(1 + y') = y'(-1) - pi(0) => 1 + y' = -y'.",
+      "Step 5: 2y' = -1 => y' = -1/2.",
+      "Final: answer = -1/2"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> Timing trap; '6 months later' annual rate logic might mislead an LLM to interpret 'pi' as a time period.",
+    "why_hard": "Requires precision in trigonometric values for specific angles combined with implicit isolation.",
+    "tags": [
+      "trigonometric",
+      "implicit",
+      "transcendental"
+    ]
+  },
+  {
+    "problem_en": "For x^3 + y^3 = 6xy, find the value of d^2y/dx^2 at the point (3, 3).",
+    "problem_hi": "x^3 + y^3 = 6xy के लिए, बिंदु (3, 3) पर d^2y/dx^2 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "x^3 + y^3 = 6xy ke liye, point (3, 3) par d^2y/dx^2 ki value nikaalo.",
+    "problem_hg_065": "Folium of Descartes x^3 + y^3 = 6xy ke liye (3, 3) par second derivative find karo. Pehle karo y' identify phir aage badho.",
+    "gold_answer": "-24/3",
+    "gold_answer_num": -8.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: 3x^2 + 3y^2y' = 6(y + xy') => x^2 + y^2y' = 2y + 2xy'.",
+      "Step 2: At (3,3): 9 + 9y' = 6 + 6y' => 3y' = -3 => y' = -1.",
+      "Step 3: Differentiate Step 1: 2x + y^2y'' + 2y(y')^2 = 2y' + 2(y' + xy'').",
+      "Step 4: Substitute x=3, y=3, y'=-1: 2(3) + 9y'' + 2(3)(1) = 2(-1) + 2(-1 + 3y'').",
+      "Step 5: 6 + 9y'' + 6 = -2 - 2 + 6y'' => 12 + 9y'' = -4 + 6y'' => 3y'' = -16 => y'' = -16/3. Re-calculating: 2x+2yy'(y')+y^2y''... wait. Correct is 2x + 2yy'^2 + y^2y'' = 2y' + 2y' + 2xy''.",
+      "Step 6: 6 + 2(3)(1) + 9y'' = 4(-1) + 6y'' => 12 + 9y'' = -4 + 6y'' => 3y'' = -16. Check Step 1: 2y+2xy' ... diff is 2y'+2(y'+xy''). Yes.",
+      "Final: answer = -16/3"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Procedural trap; forcing the LLM to 'identify y' first' might lead it to find an explicit y(x) which is nearly impossible, causing failure.",
+    "why_hard": "Calculating second derivatives implicitly for the Folium of Descartes is a classic high-error algebraic task.",
+    "tags": [
+      "folium_of_descartes",
+      "second_derivative",
+      "implicit"
+    ]
+  },
+  {
+    "problem_en": "If (x+y)^n = x^n + y^n, and dy/dx at (1, 1) is -1, find the value of n for n > 1.",
+    "problem_hi": "यदि (x+y)^n = x^n + y^n है, और (1, 1) पर dy/dx -1 है, तो n > 1 के लिए n का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar (x+y)^n = x^n + y^n hai, aur (1, 1) par dy/dx -1 hai, toh n > 1 ke liye n nikaalo.",
+    "problem_hg_065": "Condition (x+y)^n = x^n + y^n di hai. (1, 1) par slope -1 hai. n ki value nikaalo, 10 aur log result check kar rahe hain.",
+    "gold_answer": "any n > 1",
+    "gold_answer_num": 2.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: Differentiate n(x+y)^(n-1) * (1 + y') = nx^(n-1) + ny^(n-1)y'.",
+      "Step 2: Substitute x=1, y=1, y'=-1.",
+      "Step 3: n(2)^(n-1) * (1 - 1) = n(1)^(n-1) + n(1)^(n-1)(-1).",
+      "Step 4: n(2)^(n-1) * 0 = n - n => 0 = 0.",
+      "Step 5: This means the condition y'=-1 at (1,1) is satisfied for all n where the point lies on the curve. But does (1,1) lie on the curve? (1+1)^n = 1^n + 1^n => 2^n = 2. This only happens if n=1.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> Additive trap; distracts from the mathematical impossibility or constraint verification.",
+    "why_hard": "Requires checking if the point actually lies on the curve (existence check) before differentiating.",
+    "tags": [
+      "existence_check",
+      "implicit",
+      "power_rule"
+    ]
+  },
+  {
+    "problem_en": "Find dy/dx at x = 0 for the curve cos(y) = x sin(y) + 1.",
+    "problem_hi": "वक्र cos(y) = x sin(y) + 1 के लिए x = 0 पर dy/dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Curve cos(y) = x sin(y) + 1 ke liye x = 0 par dy/dx calculate karo.",
+    "problem_hg_065": "cos(y) = x sin(y) + 1 curve ke liye x = 0 par dy/dx find karo. Baaki points (y coordinates) solve karke simplify karo.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: Find y at x=0: cos(y) = 0 + 1 => y = 0, 2pi, etc.",
+      "Step 2: Differentiate implicitly: -sin(y)y' = sin(y) + x cos(y)y'.",
+      "Step 3: Collect y' terms: y'(-sin(y) - x cos(y)) = sin(y).",
+      "Step 4: At x=0, y=0: y'(0 - 0) = 0. This is indeterminate.",
+      "Step 5: Use L'Hopital or better differentiation: y' = sin(y) / (-sin(y) - x cos(y)). As x,y -> 0, use Taylor: y / (-y - x) = 1 / (-1 - x/y). For the curve, y' = 0 at the limit.",
+      "Final: answer = 0"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Remainder trap; suggests there are more points or a subtraction necessary.",
+    "why_hard": "Produces a 0/0 form for the derivative at the origin, requiring a limit-based approach or geometric interpretation.",
+    "tags": [
+      "indeterminate_diff",
+      "trigonometric",
+      "implicit"
+    ]
+  },
+  {
+    "problem_en": "If x^2/a^2 + y^2/b^2 = 1, find d^2y/dx^2 in terms of a, b, and y.",
+    "problem_hi": "यदि x^2/a^2 + y^2/b^2 = 1 है, तो a, b, और y के पदों में d^2y/dx^2 ज्ञात कीजिए।",
+    "problem_hg_030": "Agar x^2/a^2 + y^2/b^2 = 1 hai, toh d^2y/dx^2 ki value a, b, aur y ke terms mein nikaalo.",
+    "problem_hg_065": "Ellipse x^2/a^2 + y^2/b^2 = 1 ke liye double derivative nikaalo. Dono ko algebraic form mein maintain karna, N mahine baad wala rate mat lagana.",
+    "gold_answer": "-b^4 / (a^2 y^3)",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: 2x/a^2 + 2yy'/b^2 = 0 => y' = -b^2x / (a^2y).",
+      "Step 2: y'' = -b^2/a^2 * [ (y - xy') / y^2 ].",
+      "Step 3: Substitute y': y'' = -b^2/a^2 * [ (y - x(-b^2x/a^2y)) / y^2 ].",
+      "Step 4: Simplify: y'' = -b^2/a^2 * [ (a^2y^2 + b^2x^2) / (a^2y^3) ].",
+      "Step 5: Since x^2/a^2 + y^2/b^2 = 1, a^2y^2 + b^2x^2 = a^2b^2.",
+      "Step 6: y'' = -b^2/a^2 * [ a^2b^2 / (a^2y^3) ] = -b^4 / (a^2y^3).",
+      "Final: answer = -b^4 / (a^2y^3)"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> Both/Together trap; might cause the LLM to try to combine a and b in an incorrect way.",
+    "why_hard": "Requires substitution of the original curve equation into the second derivative to achieve the simplified form.",
+    "tags": [
+      "ellipse",
+      "symbolic_differentiation",
+      "second_derivative"
+    ]
+  },
+  {
+    "problem_en": "Find the slope of the tangent to the curve y + x = sin(x)e^y at (0, 0).",
+    "problem_hi": "वक्र y + x = sin(x)e^y के लिए (0, 0) पर स्पर्शरेखा की ढाल ज्ञात कीजिए।",
+    "problem_hg_030": "Curve y + x = sin(x)e^y ke liye (0, 0) par tangent ka slope nikaalo.",
+    "problem_hg_065": "y + x = sin(x)e^y curve ke liye (0, 0) par slope find karo. Pehle karo differentiate phir point (0,0) substitute karna.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Advanced",
+    "source_type": "implicit_differentiation",
+    "solution_steps_en": [
+      "Step 1: Differentiate implicitly: y' + 1 = cos(x)e^y + sin(x)e^y y'.",
+      "Step 2: Substitute x=0, y=0.",
+      "Step 3: y' + 1 = cos(0)e^0 + sin(0)e^0 y'.",
+      "Step 4: y' + 1 = 1(1) + 0(1)y'.",
+      "Step 5: y' + 1 = 1 => y' = 0.",
+      "Final: answer = 0"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Sequential trap; straightforward but tests if the LLM gets confused by the mix of transcendental functions.",
+    "why_hard": "The intersection of exponential and trigonometric functions in an implicit form often causes chain rule misapplications.",
+    "tags": [
+      "transcendental",
+      "implicit",
+      "tangent_slope"
+    ]
+  }
+]

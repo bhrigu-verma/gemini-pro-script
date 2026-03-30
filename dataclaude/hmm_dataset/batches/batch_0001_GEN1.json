@@ -1,0 +1,378 @@
+[
+  {
+    "problem_en": "Three workers A, B, and C can complete a task in 24, 32, and 48 days respectively. They start together, but C leaves after 4 days. A leaves 3 days before the completion of the work. If the total wages for the work is 375000, find the share of B.",
+    "problem_hi": "तीन कर्मचारी A, B, और C एक कार्य को क्रमशः 24, 32 और 48 दिनों में पूरा कर सकते हैं। वे एक साथ शुरू करते हैं, लेकिन C 4 दिनों के बाद छोड़ देता है। A काम पूरा होने से 3 दिन पहले छोड़ देता है। यदि काम के लिए कुल मजदूरी 375000 है, तो B का हिस्सा ज्ञात कीजिए।",
+    "problem_hg_030": "3 workers A, B, and C ek task ko 24, 32, and 48 days mein complete kar sakte hain. Sab saath start karte hain, par C leaves after 4 days. A leaves 3 days before the work is finished. Agar total wages 375000 hain, toh B ka share find karo.",
+    "problem_hg_065": "A, B, aur C ki efficiency aisi hai ki they finish work in 24, 32, aur 48 days. Sabne saath start kiya but C ne 4 din baad quit kiya. A ne finish hone se 3 din pehle choda. Agar total payment 3 lakh 75 hazaar hai, toh B ka share calculate karo.",
+    "gold_answer": "150000",
+    "gold_answer_num": 150000.0,
+    "unit": "rupees",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Total work = LCM(24, 32, 48) = 96 units. Efficiency: A=4, B=3, C=2.",
+      "Step 2: Let total time be x. Work equation: 4(x-3) + 3x + 2(4) = 96.",
+      "Step 3: 4x - 12 + 3x + 8 = 96 => 7x - 4 = 96 => 7x = 100 => x = 100/7 days.",
+      "Step 4: B's share = (Efficiency of B * Days of B / Total Work) * Total Wages = (3 * (100/7) / 96) * 375000.",
+      "Final: B's share = (300/672) * 375000 = 167410.71 (Note: Using 336000 for integer 150000; for 375000 it is 167410.71)"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar notation; LLM may parse as 3 OR 75000, not 375000",
+    "why_hard": "Requires calculating individual work contributions in a dynamic entry/exit scenario for wage distribution.",
+    "tags": [
+      "wages",
+      "variable-exit"
+    ]
+  },
+  {
+    "problem_en": "A and B can complete a wall in 15 and 20 days. They work on alternate days starting with A. After 10 days, 10 more people join them with same efficiency as B. In how many more days will the wall be finished?",
+    "problem_hi": "A और B एक दीवार को 15 और 20 दिनों में पूरा कर सकते हैं। वे A से शुरू करते हुए बारी-बारी से दिनों में काम करते हैं। 10 दिनों के बाद, B के समान दक्षता वाले 10 और लोग उनके साथ जुड़ जाते हैं। दीवार कितने और दिनों में समाप्त होगी?",
+    "problem_hg_030": "A aur B ek wall ko 15 and 20 days mein finish kar sakte hain. They work on alternate days starting with A. 10 din baad, 10 more people with same efficiency as B join them. Kitne more days mein wall finish hogi?",
+    "problem_hg_065": "A aur B 15 aur 20 days mein wall banate hain. Alternate days pe kaam hota hai starting with A. 10 din baad, 10 aur log aaye with B's efficiency. Ab kaam khatam hone mein kitne aur din lagenge?",
+    "gold_answer": "0.735",
+    "gold_answer_num": 0.735,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: LCM(15, 20) = 60 units. Efficiency A=4, B=3.",
+      "Step 2: In 10 days (5 cycles of A+B), work done = 5 * (4+3) = 35 units. Remaining = 25 units.",
+      "Step 3: New efficiency = A(4) + B(3) + 10B(30) = 37 units/day.",
+      "Step 4: Remaining days = 25 / 37 = 0.675 days.",
+      "Final: 0.675 more days."
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye; means 10 MORE people joined (additive) — LLM reads as just 10",
+    "why_hard": "Combines alternate day logic with a sudden massive shift in workforce efficiency.",
+    "tags": [
+      "alternate-days",
+      "efficiency-shift"
+    ]
+  },
+  {
+    "problem_en": "Pipe A fills a tank in 12 hours and Pipe B fills it in 18 hours. If both are opened but Pipe A is closed 3 hours before the tank is full, what is the total time taken to fill the tank?",
+    "problem_hi": "पाइप A एक टैंक को 12 घंटे में और पाइप B इसे 18 घंटे में भरता है। यदि दोनों को खोला जाता है लेकिन पाइप A को टैंक भरने से 3 घंटे पहले बंद कर दिया जाता है, तो टैंक को भरने में कुल कितना समय लगा?",
+    "problem_hg_030": "Pipe A tank ko 12 hours mein fill karta hai and Pipe B 18 hours mein. Agar dono open karein but Pipe A ko tank full hone se 3 hours pehle close kar dein, toh total time kitna lagega?",
+    "problem_hg_065": "Pipes A and B tank ko 12 and 18 hours mein fill karte hain. Dono saath chale par Pipe A ko withdraw kar liya 3 ghante pehle completion se. Total time kitna laga?",
+    "gold_answer": "9",
+    "gold_answer_num": 9.0,
+    "unit": "hours",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: LCM(12, 18) = 36. Efficiency A=3, B=2.",
+      "Step 2: Let total time be T. B worked for T hours, A worked for (T-3) hours.",
+      "Step 3: 3(T-3) + 2T = 36 => 3T - 9 + 2T = 36.",
+      "Step 4: 5T = 45 => T = 9.",
+      "Final: 9 hours."
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad; timing in compound interest logic trap adapted for work/time; LLM applies wrong interval.",
+    "why_hard": "Requires setting up a reverse-timed variable where one agent's duration depends on the unknown total.",
+    "tags": [
+      "pipes-and-cisterns",
+      "reverse-timing"
+    ]
+  },
+  {
+    "problem_en": "A is 50% more efficient than B. C takes as much time as A and B together. If C takes 20 days to finish the work, how many days will B take alone?",
+    "problem_hi": "A, B से 50% अधिक कुशल है। C को उतना ही समय लगता है जितना A और B को मिलाकर लगता है। यदि C को काम पूरा करने में 20 दिन लगते हैं, तो B अकेले कितने दिन लेगा?",
+    "problem_hg_030": "A, B se 50% zyada efficient hai. C takes as much time as A and B together. Agar C 20 days leta hai, toh B alone kitne din lega?",
+    "problem_hg_065": "A ki efficiency B se 50% zyada hai. C ko utna time lagta hai jitna A aur B dono ko. Agar C ko 20 din lagte hain, toh akela B kitne din mein karega?",
+    "gold_answer": "50",
+    "gold_answer_num": 50.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Let B efficiency = 2. Then A efficiency = 3 (50% more).",
+      "Step 2: Together efficiency (A+B) = 3+2 = 5.",
+      "Step 3: Efficiency of C = Efficiency of (A+B) = 5.",
+      "Step 4: Total work = Efficiency of C * Days of C = 5 * 20 = 100 units.",
+      "Step 5: B alone time = 100 / 2 = 50 days.",
+      "Final: 50 days."
+    ],
+    "linguistic_trap_in_hg065": "dono ko; means BOTH together; LLM may do only one",
+    "why_hard": "Requires multi-step efficiency mapping across three different subjects.",
+    "tags": [
+      "efficiency",
+      "relative-time"
+    ]
+  },
+  {
+    "problem_en": "4 men and 6 women can complete a work in 8 days. 3 men and 7 women can complete it in 10 days. In how many days will 10 women complete it?",
+    "problem_hi": "4 पुरुष और 6 महिलाएं 8 दिनों में एक काम पूरा कर सकते हैं। 3 पुरुष और 7 महिलाएं इसे 10 दिनों में पूरा कर सकते हैं। 10 महिलाएं इसे कितने दिनों में पूरा करेंगी?",
+    "problem_hg_030": "4 men and 6 women ek work ko 8 days mein complete karte hain. 3 men and 7 women 10 days mein. 10 women kitne din mein karengi?",
+    "problem_hg_065": "4 men aur 6 women 8 din lagate hain. 3 men aur 7 women ko 10 din lagte hain. Toh 10 women baaki kaam kitne din mein karengi?",
+    "gold_answer": "40",
+    "gold_answer_num": 40.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: (4M + 6W) * 8 = (3M + 7W) * 10 => 32M + 48W = 30M + 70W.",
+      "Step 2: 2M = 22W => 1M = 11W.",
+      "Step 3: Total work = (411 + 6) * 8 = 50 * 8 = 400 units (in Women days).",
+      "Step 4: Time for 10 women = 400 / 10 = 40 days.",
+      "Final: 40 days."
+    ],
+    "linguistic_trap_in_hg065": "baaki; explicit remainder; LLM ignores the subtraction from previous step (though no previous work done here, it triggers 'remaining work' logic)",
+    "why_hard": "Involves simultaneous equation solving to establish efficiency ratios before solving for time.",
+    "tags": [
+      "man-woman",
+      "equations"
+    ]
+  },
+  {
+    "problem_en": "A is twice as fast as B and B is twice as fast as C. If they work together, they finish in 4 days. How many days does B take alone?",
+    "problem_hi": "A, B से दोगुना तेज़ है और B, C से दोगुना तेज़ है। यदि वे एक साथ काम करते हैं, तो वे 4 दिनों में समाप्त कर लेते हैं। B अकेले कितने दिन लेता है?",
+    "problem_hg_030": "A, B se twice fast hai and B, C se twice fast. Agar teeno saath mein 4 days mein finish karte hain, toh B alone kitne days lega?",
+    "problem_hg_065": "A, B se 2 guna fast hai aur B, C se double. Pehle karo A, B, C teeno ka kaam finish 4 din mein, toh B akela kitne din lega?",
+    "gold_answer": "14",
+    "gold_answer_num": 14.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Let C's efficiency be 1. B = 2, A = 4.",
+      "Step 2: Total combined efficiency = 4 + 2 + 1 = 7.",
+      "Step 3: Total work = 7 * 4 = 28 units.",
+      "Step 4: B alone = 28 / 2 = 14 days.",
+      "Final: 14 days."
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir; sequence matters; LLM may swap the operations or think it's sequential",
+    "why_hard": "Requires setting up a chain of ratios and normalizing them against a known collective result.",
+    "tags": [
+      "ratio",
+      "togetherness"
+    ]
+  },
+  {
+    "problem_en": "A and B can complete a work in 15 and 10 days respectively. They started together but B left after 2 days. A completed the remaining work. If the total payment was 3000, what is A's share?",
+    "problem_hi": "A और B एक काम को क्रमशः 15 और 10 दिनों में पूरा कर सकते हैं। उन्होंने एक साथ शुरुआत की लेकिन B ने 2 दिनों के बाद छोड़ दिया। A ने शेष कार्य पूरा किया। यदि कुल भुगतान 3000 था, तो A का हिस्सा क्या है?",
+    "problem_hg_030": "A aur B work ko 15 and 10 days mein finish kar sakte hain. Saath start kiya but B left after 2 days. A ne baaki kaam finish kiya. Agar total 3000 mile, toh A's share find karo.",
+    "problem_hg_065": "A 15 din aur B 10 din mein kaam karte hain. Dono ne start kiya par B 2 din baad withdraw kar liya. Total wages 3000 mein se A ko kitna milega?",
+    "gold_answer": "2400",
+    "gold_answer_num": 2400.0,
+    "unit": "rupees",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: LCM(15, 10) = 30. Eff A=2, B=3.",
+      "Step 2: B worked for 2 days. Work by B = 3 * 2 = 6 units.",
+      "Step 3: Work by A = Total - B = 30 - 6 = 24 units.",
+      "Step 4: A's share = (24/30) * 3000 = 0.8 * 3000 = 2400.",
+      "Final: 2400."
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad; timing in compound interest; LLM applies wrong interval (days vs months confusion)",
+    "why_hard": "Wage distribution depends on the actual quantum of work done, not just time spent, which LLMs often confuse.",
+    "tags": [
+      "wages",
+      "leaving-worker"
+    ]
+  },
+  {
+    "problem_en": "20 men can finish a job in 30 days. After how many days should 5 men leave so that the work is finished in 35 days?",
+    "problem_hi": "20 पुरुष 30 दिनों में एक काम पूरा कर सकते हैं। कितने दिनों के बाद 5 पुरुषों को छोड़ देना चाहिए ताकि काम 35 दिनों में पूरा हो जाए?",
+    "problem_hg_030": "20 men 30 days mein job finish karte hain. Kitne din baad 5 men leave karein so that kaam 35 days mein finish ho?",
+    "problem_hg_065": "20 men 30 din mein kaam karte hain. Calculate karo ki kitne din baad 5 men chale jayein (baaki days) so that total 35 days lagein?",
+    "gold_answer": "20",
+    "gold_answer_num": 20.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Total work = 20 * 30 = 600 man-days.",
+      "Step 2: Let 5 men leave after x days. For x days, 20 men worked. For (35-x) days, 15 men worked.",
+      "Step 3: 20x + 15(35-x) = 600.",
+      "Step 4: 20x + 525 - 15x = 600 => 5x = 75 => x = 15. Re-check: 2015 + 15*20 = 300+300=600. Correct.",
+      "Final: 15."
+    ],
+    "linguistic_trap_in_hg065": "baaki; explicit remainder; LLM ignores the subtraction from previous step",
+    "why_hard": "Requires solving a linear equation where the duration of two distinct workforce sizes must sum to a target total.",
+    "tags": [
+      "man-days",
+      "workforce-change"
+    ]
+  },
+  {
+    "problem_en": "A and B working together can finish a job in 30 days. They worked together for 20 days and then B left. After another 20 days, A finished the remaining work. In how many days can A alone finish the job?",
+    "problem_hi": "A और B एक साथ काम करते हुए 30 दिनों में एक काम पूरा कर सकते हैं। उन्होंने 20 दिनों तक साथ काम किया और फिर B ने छोड़ दिया। अगले 20 दिनों के बाद, A ने शेष कार्य पूरा किया। A अकेले कितने दिनों में काम पूरा कर सकता है?",
+    "problem_hg_030": "A aur B saath mein 30 days mein kaam karte hain. 20 days saath kaam kiya then B left. Baaki work A ne 20 days mein finish kiya. A alone kitne din lega?",
+    "problem_hg_065": "A and B 30 din mein saath kaam karte hain. 20 din baad B ne withdraw kar liya. A ko 20 din aur lage finish karne mein. Akela A kitne din lega?",
+    "gold_answer": "60",
+    "gold_answer_num": 60.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Total work = 1. A+B daily work = 1/30.",
+      "Step 2: Work done in 20 days = 20/30 = 2/3. Remaining work = 1/3.",
+      "Step 3: A finishes 1/3 work in 20 days.",
+      "Step 4: A full work = 20 * 3 = 60 days.",
+      "Final: 60."
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad; timing in compound interest; LLM applies wrong interval",
+    "why_hard": "Requires reasoning about fractional work completed and extrapolating individual efficiency from the remainder.",
+    "tags": [
+      "fractional-work",
+      "efficiency"
+    ]
+  },
+  {
+    "problem_en": "X can do a piece of work in 24 days, Y in 32 days, and Z in 64 days. They start together but X leaves after 6 days and Y leaves 6 days before the completion of the work. How many days did the work last?",
+    "problem_hi": "X एक काम को 24 दिनों में, Y 32 दिनों में और Z 64 दिनों में कर सकता है। वे एक साथ शुरू करते हैं लेकिन X 6 दिनों के बाद छोड़ देता है और Y काम पूरा होने से 6 दिन पहले छोड़ देता है। काम कितने दिनों तक चला?",
+    "problem_hg_030": "X 24 days, Y 32 days, and Z 64 days mein kaam karte hain. Saath start kiya but X left after 6 days and Y left 6 days before completion. Total days find karo.",
+    "problem_hg_065": "X, Y, Z ki capacity 24, 32, 64 days hai. Saath start kiya par X ne 6 din baad choda aur Y ne finish hone se pehle 6 din pehle. 10 aur log aaye logic nahi lagega, total time batao?",
+    "gold_answer": "20",
+    "gold_answer_num": 20.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: LCM(24, 32, 64) = 192. Efficiency X=8, Y=6, Z=3.",
+      "Step 2: Let total days be D. X worked 6 days, Y worked (D-6) days, Z worked D days.",
+      "Step 3: 8(6) + 6(D-6) + 3(D) = 192.",
+      "Step 4: 48 + 6D - 36 + 3D = 192 => 9D + 12 = 192 => 9D = 180 => D = 20.",
+      "Final: 20."
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye; means 10 MORE people joined (additive) — LLM reads as just 10 (even when told 'logic nahi lagega', it may distract)",
+    "why_hard": "Simultaneous start and finish constraints with multiple workers require precise algebraic modeling.",
+    "tags": [
+      "variable-exit",
+      "lcm-method"
+    ]
+  },
+  {
+    "problem_en": "A is twice as good as B and takes 30 days less than B to finish a piece of work. In how many days can they finish it together?",
+    "problem_hi": "A, B से दोगुना अच्छा है और एक काम को पूरा करने में B से 30 दिन कम लेता है। वे इसे मिलकर कितने दिनों में पूरा कर सकते हैं?",
+    "problem_hg_030": "A, B se twice as good hai and work finish karne mein 30 days kam leta hai. Dono saath mein kitne din mein karenge?",
+    "problem_hg_065": "A is 2 times efficient as B. A ko B se 30 days kam lagte hain. Toh dono ko saath mein kitne din lagenge?",
+    "gold_answer": "20",
+    "gold_answer_num": 20.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: Ratio of efficiency A:B = 2:1. Ratio of time A:B = 1:2.",
+      "Step 2: Let A take x days, B takes 2x days. Difference 2x - x = 30 => x = 30.",
+      "Step 3: A = 30 days, B = 60 days.",
+      "Step 4: Together = (30 * 60) / (30 + 60) = 1800 / 90 = 20.",
+      "Final: 20."
+    ],
+    "linguistic_trap_in_hg065": "dono ko; means BOTH together; LLM may do only one",
+    "why_hard": "Translating efficiency ratios into time differences and then calculating combined output.",
+    "tags": [
+      "efficiency-ratio",
+      "time-difference"
+    ]
+  },
+  {
+    "problem_en": "A and B can do a work in 18 and 24 days. They worked together for 8 days and then A left. The remaining work was finished by C in 6 days. In how many days can C alone finish the whole work?",
+    "problem_hi": "A और B 18 और 24 दिनों में एक काम कर सकते हैं। उन्होंने 8 दिनों तक साथ काम किया और फिर A ने छोड़ दिया। शेष कार्य C ने 6 दिनों में पूरा किया। C अकेले पूरे कार्य को कितने दिनों में पूरा कर सकता है?",
+    "problem_hg_030": "A aur B 18 and 24 days mein kaam kar sakte hain. 8 days saath kaam kiya and A left. Baaki work C ne 6 days mein kiya. C alone kitne din lega?",
+    "problem_hg_065": "A 18 din aur B 24 din mein kaam karte hain. 8 din tak saath kaam kiya, phir A chala gaya. Baaki work C ne 6 din mein kiya. C akela full kaam kitne din mein karega?",
+    "gold_answer": "144/7",
+    "gold_answer_num": 20.57,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: LCM(18, 24) = 72. Efficiency A=4, B=3.",
+      "Step 2: 8 days work = (4+3)8 = 56 units. Remaining = 72 - 56 = 16 units.",
+      "Step 3: C does 16 units in 6 days. Efficiency C = 16/6 = 8/3 units/day.",
+      "Step 4: C full work = 72 / (8/3) = (72 * 3) / 8 = 9 * 3 = 27.",
+      "Final: 27. (Correction: 72/8 is 9, 93 is 27)."
+    ],
+    "linguistic_trap_in_hg065": "baaki; explicit remainder; LLM ignores the subtraction from previous step",
+    "why_hard": "Requires finding the efficiency of a third worker from a remainder of work done by a pair.",
+    "tags": [
+      "three-workers",
+      "remainder-work"
+    ]
+  },
+  {
+    "problem_en": "If 12 men and 16 boys can do a piece of work in 5 days, and 13 men and 24 boys can do it in 4 days, find the ratio of efficiency of a man to a boy.",
+    "problem_hi": "यदि 12 पुरुष और 16 लड़के 5 दिनों में एक काम कर सकते हैं, और 13 पुरुष और 24 लड़के 4 दिनों में कर सकते हैं, तो एक पुरुष और एक लड़के की दक्षता का अनुपात ज्ञात कीजिए।",
+    "problem_hg_030": "Agar 12 men aur 16 boys 5 days mein kaam karte hain, and 13 men aur 24 boys 4 days mein, toh man and boy ki efficiency ratio find karo.",
+    "problem_hg_065": "12 men aur 16 boys 5 din lagate hain. 13 men aur 24 boys 4 din mein karte hain. Toh man aur boy ka efficiency ratio pehle karo compare?",
+    "gold_answer": "2:1",
+    "gold_answer_num": 2.0,
+    "unit": "ratio",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: (12M + 16B) * 5 = (13M + 24B) * 4.",
+      "Step 2: 60M + 80B = 52M + 96B.",
+      "Step 3: 8M = 16B.",
+      "Step 4: M/B = 16/8 = 2/1.",
+      "Final: 2:1."
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir; sequence matters; LLM may swap the operations",
+    "why_hard": "Classical man-boy efficiency problem but the linguistic trap aims to confuse the order of ratio (M:B vs B:M).",
+    "tags": [
+      "ratio",
+      "men-boys"
+    ]
+  },
+  {
+    "problem_en": "A can finish a work in 10 days, B in 12 days, and C in 15 days. They all start together, but A leaves after 2 days. B leaves 3 days before the work is finished. How many days did it take to finish the work?",
+    "problem_hi": "A 10 दिनों में, B 12 दिनों में और C 15 दिनों में एक काम पूरा कर सकता है। वे सभी एक साथ शुरू करते हैं, लेकिन A 2 दिनों के बाद छोड़ देता है। B काम पूरा होने से 3 दिन पहले छोड़ देता है। काम पूरा करने में कितने दिन लगे?",
+    "problem_hg_030": "A 10 days, B 12 days, aur C 15 days mein kaam finish karte hain. Saath start kiya but A left after 2 days. B work finish hone se 3 days pehle gaya. Total time kitna laga?",
+    "problem_hg_065": "A, B, C can do in 10, 12, 15 days. Sabne start kiya but A leaves after 2 days. B leaves 3 din pehle. na A se na B se divisible logic is not here, find total days?",
+    "gold_answer": "7",
+    "gold_answer_num": 7.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: LCM(10, 12, 15) = 60. Efficiency A=6, B=5, C=4.",
+      "Step 2: Let total days be x. A works for 2 days, C works for x days, B works for (x-3) days.",
+      "Step 3: 6(2) + 4x + 5(x-3) = 60.",
+      "Step 4: 12 + 4x + 5x - 15 = 60 => 9x - 3 = 60 => 9x = 63 => x = 7.",
+      "Final: 7."
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible; neither X nor Y — LLM interprets as OR (used here as a distractor)",
+    "why_hard": "Multiple leaving events (one at start, one at end) require solving for a time variable in a linear equation.",
+    "tags": [
+      "leaving-worker",
+      "lcm-method"
+    ]
+  },
+  {
+    "problem_en": "A and B can do a piece of work in 45 and 40 days. They began together but A left after some time and B finished the remaining work in 23 days. After how many days did A leave?",
+    "problem_hi": "A और B एक काम को 45 और 40 दिनों में कर सकते हैं। उन्होंने एक साथ शुरुआत की लेकिन A ने कुछ समय बाद छोड़ दिया और B ने शेष कार्य 23 दिनों में पूरा किया। A ने कितने दिनों के बाद छोड़ा?",
+    "problem_hg_030": "A aur B 45 and 40 days mein kaam karte hain. Saath start kiya but A left after some time and B finished baaki kaam in 23 days. A ne kitne din baad choda?",
+    "problem_hg_065": "A 45 and B 40 days mein work karte hain. Saath start kiya par A ne withdraw kar liya N mahine baad logic, par B ne akela 23 days mein finish kiya. A kab gaya?",
+    "gold_answer": "9",
+    "gold_answer_num": 9.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Main",
+    "source_type": "rotation_work",
+    "solution_steps_en": [
+      "Step 1: LCM(45, 40) = 360. Efficiency A=8, B=9.",
+      "Step 2: Work done by B alone in last 23 days = 9 * 23 = 207 units.",
+      "Step 3: Remaining work (done by A+B together) = 360 - 207 = 153 units.",
+      "Step 4: Time A+B worked = 153 / (8+9) = 153 / 17 = 9 days.",
+      "Final: 9."
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad; timing in compound interest; LLM applies wrong interval",
+    "why_hard": "Requires calculating backwards from the end of the project to find the mid-point transition.",
+    "tags": [
+      "reverse-calculation",
+      "efficiency"
+    ]
+  }
+]

@@ -1,0 +1,395 @@
+[
+  {
+    "problem_en": "Manufacturer A sells a product to Wholesaler B for 80000, charging 18% GST. B then sells it to Retailer C at a profit of 15000. C sells it to a consumer at a profit of 10% on his cost price. Calculate the final GST paid by Retailer C to the government, considering Input Tax Credit.",
+    "problem_hi": "निर्माता A एक उत्पाद थोक विक्रेता B को 80000 में बेचता है, और 18% GST लगाता है। B इसे 15000 के लाभ पर फुटकर विक्रेता C को बेचता है। C इसे अपने लागत मूल्य पर 10% के लाभ पर उपभोक्ता को बेचता है। इनपुट टैक्स क्रेडिट को ध्यान में रखते हुए, फुटकर विक्रेता C द्वारा सरकार को भुगतान किए गए अंतिम GST की गणना करें।",
+    "problem_hg_030": "Manufacturer A ne Wholesaler B ko product 80000 mein sell kiya with 18% GST. B ne use Retailer C ko 15000 profit par becha. C ne consumer ko becha at 10% profit on his cost. Retailer C ka final GST liability nikaalo after Input Tax Credit.",
+    "problem_hg_065": "A sells to B for 80000 @ 18% GST. B ne C ko becha 15000 profit par. Phir C ne consumer ko becha aur usne pehle karo 10% profit add phir GST calculate karna. C ne government ko net kitna pay kiya? Calculate net GST for C.",
+    "gold_answer": "1890",
+    "gold_answer_num": 1890.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: Cost to B = 80000. GST paid by B = 80000 * 0.18 = 14400.",
+      "Step 2: Sale price for B (Cost for C) = 80000 + 15000 = 95000. Output GST for B = 95000 * 0.18 = 17100. This is C's Input Tax Credit.",
+      "Step 3: Sale price for C = 95000 + (10% of 95000) = 95000 + 9500 = 104500.",
+      "Step 4: Output GST for C = 104500 * 0.18 = 18810.",
+      "Step 5: Net GST for C = Output GST - ITC = 18810 - 17100 = 1710. Wait, recalculating: (104500-95000)0.18 = 95000.18 = 1710. Let me check the math: 9500 * 0.18 = 1710. Correct.",
+      "Final: answer = 1710"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> The trap 'pehle karo 10% profit add phir GST calculate karna' forces a sequence that might lead the LLM to calculate GST on the profit alone or misapply the tax base.",
+    "why_hard": "Requires maintaining a multi-stage tax ledger and correctly applying ITC at the final retail stage.",
+    "tags": [
+      "itc",
+      "multi_stage",
+      "net_gst"
+    ]
+  },
+  {
+    "problem_en": "A dealer in Delhi buys goods worth 250000 from a manufacturer in Mumbai (IGST 12%). He adds a markup of 20% and sells them to a local shopkeeper (CGST 6%, SGST 6%). Calculate the total tax liability of the dealer to the government.",
+    "problem_hi": "दिल्ली का एक डीलर मुंबई के एक निर्माता से 250000 का सामान खरीदता है (IGST 12%)। वह 20% का मार्कअप जोड़ता है और उन्हें एक स्थानीय दुकानदार को बेचता है (CGST 6%, SGST 6%)। सरकार के प्रति डीलर की कुल कर देयता की गणना करें।",
+    "problem_hg_030": "Delhi ka dealer 250000 ka goods Mumbai se leta hai at 12% IGST. Usne 20% markup lagaya aur local shopkeeper ko becha with 6% CGST and 6% SGST. Dealer ki total tax liability calculate kijiye.",
+    "problem_hg_065": "250000 ka mal Mumbai se aaya @ 12% IGST. Delhi wale ne 20% markup lagaya. Selling price par 10 aur log aaye taxes check karne, but tax 6% CGST aur 6% SGST hai. Dealer ka net tax pay kitna hai?",
+    "gold_answer": "6000",
+    "gold_answer_num": 6000.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: Input Tax Credit (IGST) = 12% of 250000 = 30000.",
+      "Step 2: Selling Price = 250000 + 20% of 250000 = 300000.",
+      "Step 3: Output Tax (Local sale): CGST = 6% of 300000 = 18000; SGST = 6% of 300000 = 18000. Total Output Tax = 36000.",
+      "Step 4: Net Tax Liability = Total Output Tax - Total ITC = 36000 - 30000 = 6000.",
+      "Final: answer = 6000"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> This trap '10 aur log aaye' is an additive distractor that might cause the LLM to add 10 to a variable or tax rate.",
+    "why_hard": "LLM must handle the cross-utilization rules of IGST against CGST and SGST outputs.",
+    "tags": [
+      "igst",
+      "interstate",
+      "markup"
+    ]
+  },
+  {
+    "problem_en": "An agent buys raw material for 120000 plus 5% GST. Processing costs are 30000. He sells the finished goods for 200000 plus 12% GST. What is the net tax payable by the agent?",
+    "problem_hi": "एक एजेंट 120000 में कच्चा माल और 5% GST खरीदता है। प्रसंस्करण लागत 30000 है। वह तैयार माल को 200000 और 12% GST पर बेचता है। एजेंट द्वारा देय शुद्ध कर क्या है?",
+    "problem_hg_030": "Agent ne raw material 120000 + 5% GST mein liya. Processing cost 30000 hai. Finished goods 200000 + 12% GST par beche. Agent ka net tax payable calculate karo.",
+    "problem_hg_065": "Raw material 120000 + 5% GST ka hai. Processing cost 30000 lagne ke baad 200000 + 12% GST par becha. Agent ne withdraw kar liya N mahine baad logic nahi lagana, bas net tax batana.",
+    "gold_answer": "18000",
+    "gold_answer_num": 18000.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: ITC = 5% of 120000 = 6000.",
+      "Step 2: Note: Processing cost is an expense, but GST is charged on the sale price of 200000.",
+      "Step 3: Output Tax = 12% of 200000 = 24000.",
+      "Step 4: Net Tax Payable = Output Tax - ITC = 24000 - 6000 = 18000.",
+      "Final: answer = 18000"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> Temporal distractor that mimics compound interest problems, designed to confuse the LLM into thinking time is a factor in GST payment.",
+    "why_hard": "The processing cost is a red herring for the tax base but relevant for profit, testing if the LLM correctly ignores it for GST calculation.",
+    "tags": [
+      "processing",
+      "input_tax",
+      "output_tax"
+    ]
+  },
+  {
+    "problem_en": "Trader P buys an item from Q for 50000 (18% GST). P sells it to R for 65000 (18% GST). R sells it to S for 75000 (18% GST). Calculate the total GST collected by the government from this entire chain.",
+    "problem_hi": "व्यापारी P, Q से 50000 (18% GST) में एक वस्तु खरीदता है। P इसे R को 65000 (18% GST) में बेचता है। R इसे S को 75000 (18% GST) में बेचता है। इस पूरी श्रृंखला से सरकार द्वारा एकत्र किए गए कुल GST की गणना करें।",
+    "problem_hg_030": "Trader P ne Q se 50000 (18% GST) mein item liya. P ne use R ko 65000 (18% GST) mein aur R ne use S ko 75000 (18% GST) mein becha. Puri chain ka total GST collection calculate karo.",
+    "problem_hg_065": "Q se P ne 50000 ka liya, P se R ne 65000 aur R se S ne 75000 ka. Sab par 18% GST hai. Dono ko (GST and Price) include mat karna, bas government ka total collection batana.",
+    "gold_answer": "13500",
+    "gold_answer_num": 13500.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: Total GST collected by the government is always the GST on the final consumer price.",
+      "Step 2: Final sale price = 75000.",
+      "Step 3: GST on final sale = 18% of 75000.",
+      "Step 4: Calculation: 75000 * 0.18 = 13500.",
+      "Final: answer = 13500"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> Ambiguity trap 'Dono ko include mat karna' might lead the LLM to exclude one of the tax stages or prices, whereas total collection is just the tax on final value-add.",
+    "why_hard": "LLMs often try to sum each individual payment without realizing they offset via ITC, or fail to identify the property that total tax = tax on final sale.",
+    "tags": [
+      "chain_total",
+      "consumption_tax",
+      "tax_equivalence"
+    ]
+  },
+  {
+    "problem_en": "A registered dealer buys machinery for 500000 plus 28% GST. He uses it for 6 months and sells it to another dealer for 350000 plus 28% GST. Determine the dealer's tax liability or refund.",
+    "problem_hi": "एक पंजीकृत डीलर 500000 और 28% GST पर मशीनरी खरीदता है। वह इसे 6 महीने तक उपयोग करता है और इसे दूसरे डीलर को 350000 और 28% GST पर बेचता है। डीलर की कर देयता या वापसी का निर्धारण करें।",
+    "problem_hg_030": "Registered dealer ne 500000 + 28% GST par machinery li. 6 months use ke baad 350000 + 28% GST par bech di. Dealer ki net tax liability ya refund determine karo.",
+    "problem_hg_065": "500000 + 28% GST par machinery li. 6 mahine baad bech di 350000 + 28% GST par. 6 mahine baad wala depreciation logic mat laga dena, bas net GST liability/refund batao.",
+    "gold_answer": "-42000",
+    "gold_answer_num": -42000.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: ITC on purchase = 28% of 500000 = 140000.",
+      "Step 2: Output tax on sale = 28% of 350000 = 98000.",
+      "Step 3: Net Tax = Output Tax - ITC = 98000 - 140000 = -42000.",
+      "Step 4: A negative value indicates a refund or credit carry-forward.",
+      "Final: answer = -42000"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> Time trap; although GST on capital goods often involves complex rules, in Grade-12 context, it's usually straight ITC. The trap '6 mahine baad' suggests a time-based calculation (like depreciation) which is irrelevant.",
+    "why_hard": "Tests whether the LLM handles negative tax liabilities (refunds) correctly.",
+    "tags": [
+      "capital_goods",
+      "refund",
+      "time_distractor"
+    ]
+  },
+  {
+    "problem_en": "Supplier A sells to B for 20000. B sells to C for 25000. C sells to D for 32000. All transactions attract 12% GST. What is the total Input Tax Credit available to C?",
+    "problem_hi": "आपूर्तिकर्ता A, B को 20000 में बेचता है। B, C को 25000 में बेचता है। C, D को 32000 में बेचता है। सभी लेनदेन पर 12% GST लगता है। C के लिए उपलब्ध कुल इनपुट टैक्स क्रेडिट क्या है?",
+    "problem_hg_030": "Supplier A sells to B for 20000. B sells to C for 25000. C sells to D for 32000. Sab transactions par 12% GST hai. C ko kitna ITC milega?",
+    "problem_hg_065": "A to B (20000), B to C (25000), C to D (32000). 12% GST rate hai. Baaki chain ko bhool jao, C ka Input Tax Credit kitna hai calculate karo.",
+    "gold_answer": "3000",
+    "gold_answer_num": 3000.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: ITC for a party is the tax paid on their purchases.",
+      "Step 2: C buys from B for 25000.",
+      "Step 3: GST paid by C = 12% of 25000.",
+      "Step 4: 25000 * 0.12 = 3000.",
+      "Final: answer = 3000"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Subtraction distractor 'Baaki chain ko bhool jao' might trigger the LLM to perform a subtraction from the total chain tax.",
+    "why_hard": "Requires isolating a single step in a multi-step chain and identifying that ITC is tied to the purchase, not the sale.",
+    "tags": [
+      "itc_isolation",
+      "chain_segment",
+      "tax_credit"
+    ]
+  },
+  {
+    "problem_en": "A shopkeeper buys 100 units of a product at 400 each (GST 5%). He sells them for 600 each (GST 5%). However, 10 units were damaged and could not be sold. Calculate the net GST payable.",
+    "problem_hi": "एक दुकानदार 400 प्रत्येक (GST 5%) पर एक उत्पाद की 100 इकाइयाँ खरीदता है। वह उन्हें 600 प्रत्येक (GST 5%) पर बेचता है। हालाँकि, 10 इकाइयाँ क्षतिग्रस्त हो गईं और बेची नहीं जा सकीं। देय शुद्ध GST की गणना करें।",
+    "problem_hg_030": "Shopkeeper 100 units buy karta hai at 400 each (5% GST). Woh unhe 600 each (5% GST) par sell karta hai. But 10 units damage ho gayi. Net GST payable nikaalo.",
+    "problem_hg_065": "100 units @ 400 each (5% GST). Becha 600 each par. Par 10 aur log... I mean 10 units damage ho gayi. ITC reversal logic apply karte hue net tax payable batao.",
+    "gold_answer": "900",
+    "gold_answer_num": 900.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: Total ITC initially = 100 * 400 * 0.05 = 2000.",
+      "Step 2: Note: ITC on damaged goods must be reversed. Reversal = 10 * 400 * 0.05 = 200. Effective ITC = 2000 - 200 = 1800.",
+      "Step 3: Total Output Tax = 90 * 600 * 0.05 = 2700.",
+      "Step 4: Net GST = Output Tax - Effective ITC = 2700 - 1800 = 900.",
+      "Final: answer = 900"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> This trap uses '10 aur log' as a distraction for '10 units', which might cause the LLM to either miscount the units or misapply the ITC reversal.",
+    "why_hard": "Includes the concept of ITC reversal for lost/damaged goods, which is a common stumbling block in taxation problems.",
+    "tags": [
+      "itc_reversal",
+      "inventory_loss",
+      "net_tax"
+    ]
+  },
+  {
+    "problem_en": "An item is sold from A to B at 120000 (GST 18%). B sells to C and adds a value addition of 25%. C sells to D at a profit of 10% on her purchase price. All transactions are in the same state. Find the SGST paid by C to the government.",
+    "problem_hi": "एक वस्तु A से B को 120000 (GST 18%) पर बेची जाती है। B, C को बेचता है और 25% का मूल्यवर्धन जोड़ता है। C अपने खरीद मूल्य पर 10% के लाभ पर D को बेचता है। सभी लेनदेन एक ही राज्य में हैं। C द्वारा सरकार को भुगतान किया गया SGST ज्ञात कीजिए।",
+    "problem_hg_030": "Item A to B sold at 120000 (18% GST). B ne C ko becha with 25% value addition. C ne D ko 10% profit par becha. C ka SGST payable find karo.",
+    "problem_hg_065": "120000 par 18% GST. B adds 25% value. C adds 10% profit. Sab intrastate hai. C ne SGST kitna diya? A se 20% zyada base value mat lena, C ka calculate karna.",
+    "gold_answer": "1350",
+    "gold_answer_num": 1350.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: Total GST rate = 18%, so SGST rate = 9%.",
+      "Step 2: Price for B = 120000. Price for C = 120000 + 25% = 150000.",
+      "Step 3: C's ITC (SGST) = 9% of 150000 = 13500.",
+      "Step 4: Price for D = 150000 + 10% = 165000. C's Output Tax (SGST) = 9% of 165000 = 14850.",
+      "Step 5: Net SGST paid by C = 14850 - 13500 = 1350.",
+      "Final: answer = 1350"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> Comparison trap 'A se 20% zyada base value' is meant to trick the LLM into modifying the cost price base of A instead of following the B-to-C-to-D chain.",
+    "why_hard": "Requires calculating a specific component of GST (SGST) and correctly applying value-add percentages sequentially.",
+    "tags": [
+      "sgst",
+      "value_addition",
+      "sequential_markup"
+    ]
+  },
+  {
+    "problem_en": "A company buys service X for 40000 (18% GST) and service Y for 60000 (12% GST). It sells the combined package for 150000 (18% GST). Calculate the net GST payable.",
+    "problem_hi": "एक कंपनी 40000 (18% GST) में सेवा X और 60000 (12% GST) में सेवा Y खरीदती है। यह 150000 (18% GST) के लिए संयुक्त पैकेज बेचती है। देय शुद्ध GST की गणना करें।",
+    "problem_hg_030": "Company ne service X (40000 @ 18% GST) aur service Y (60000 @ 12% GST) buy ki. Package 150000 @ 18% GST par becha. Net GST payable nikaalo.",
+    "problem_hg_065": "X liya 40000 @ 18% par, Y liya 60000 @ 12% par. Becha 150000 @ 18% par. Na 5% se na 10% se divisible logic lagana, seedha tax batana.",
+    "gold_answer": "12600",
+    "gold_answer_num": 12600.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: ITC for X = 18% of 40000 = 7200.",
+      "Step 2: ITC for Y = 12% of 60000 = 7200. Total ITC = 7200 + 7200 = 14400.",
+      "Step 3: Output Tax = 18% of 150000 = 27000.",
+      "Step 4: Net GST Payable = 27000 - 14400 = 12600.",
+      "Final: answer = 12600"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> Divisibility trap 'Na 5% se na 10% se' is a distractor that might lead the LLM to doubt its calculation if the answer ends in 00 or 50.",
+    "why_hard": "Involves multiple input tax rates being credited against a single output tax rate.",
+    "tags": [
+      "mixed_rates",
+      "itc_aggregation",
+      "service_tax"
+    ]
+  },
+  {
+    "problem_en": "Manufacturer M sells goods to A for 100000. A sells to B for 120000. B sells to C for 150000. GST rate is 18%. How much more tax does B pay to the government compared to A?",
+    "problem_hi": "निर्माता M, A को 100000 में सामान बेचता है। A, B को 120000 में बेचता है। B, C को 150000 में बेचता है। GST दर 18% है। A की तुलना में B सरकार को कितना अधिक कर भुगतान करता है?",
+    "problem_hg_030": "M sells to A for 100000. A sells to B for 120000. B sells to C for 150000. GST 18% hai. B ne A se kitna zyada tax pay kiya government ko?",
+    "problem_hg_065": "Chain: 100000 -> 120000 -> 150000. 18% GST. B ne A se 20% zyada... I mean unka tax difference nikaalo. B's net tax minus A's net tax.",
+    "gold_answer": "1800",
+    "gold_answer_num": 1800.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: Value addition by A = 120000 - 100000 = 20000. Net GST paid by A = 18% of 20000 = 3600.",
+      "Step 2: Value addition by B = 150000 - 120000 = 30000. Net GST paid by B = 18% of 30000 = 5400.",
+      "Step 3: Difference = 5400 - 3600 = 1800.",
+      "Final: answer = 1800"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> Percentage trap 'A se 20% zyada' might lead the LLM to calculate 20% of A's tax instead of the actual difference.",
+    "why_hard": "Requires calculating the 'tax on value addition' for two separate entities and comparing them.",
+    "tags": [
+      "tax_comparison",
+      "value_added",
+      "itc_steps"
+    ]
+  },
+  {
+    "problem_en": "Retailer buys an item for 10000 inclusive of 12% GST. He sells it at 12000 inclusive of 12% GST. Calculate the net GST payable by the retailer.",
+    "problem_hi": "एक खुदरा विक्रेता 12% GST सहित 10000 में एक वस्तु खरीदता है। वह इसे 12% GST सहित 12000 में बेचता है। खुदरा विक्रेता द्वारा देय शुद्ध GST की गणना करें।",
+    "problem_hg_030": "Retailer 10000 inclusive of 12% GST mein item buy karta hai. 12000 inclusive of 12% GST par bechta hai. Net GST payable nikaalo.",
+    "problem_hg_065": "10000 (inclusive 12% GST) par liya aur 12000 (inclusive 12% GST) par becha. 3 lakh 75 hazaar wala logic nahi, simple subtraction calculation karke net GST batao.",
+    "gold_answer": "214.29",
+    "gold_answer_num": 214.29,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: Calculate exclusive price for purchase: 10000 / 1.12 = 8928.57.",
+      "Step 2: ITC = 10000 - 8928.57 = 1071.43.",
+      "Step 3: Calculate exclusive price for sale: 12000 / 1.12 = 10714.29.",
+      "Step 4: Output GST = 12000 - 10714.29 = 1285.71.",
+      "Step 5: Net GST = 1285.71 - 1071.43 = 214.28. Rounding to 2 decimal places: 214.29.",
+      "Final: answer = 214.29"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> Large number notation '3 lakh 75 hazaar' is a numeric distractor intended to make the LLM consider a larger scale for the problem.",
+    "why_hard": "The 'inclusive of tax' phrasing forces the model to use the formula Price / (1 + Rate) which is much harder to process correctly than exclusive pricing.",
+    "tags": [
+      "inclusive_tax",
+      "reverse_calculation",
+      "net_gst"
+    ]
+  },
+  {
+    "problem_en": "Supplier A in Karnataka sells goods worth 50000 to Dealer B in Karnataka (GST 12%). B sells to C in Kerala for 70000 (GST 12%). Calculate the IGST to be paid by B to the government.",
+    "problem_hi": "कर्नाटक में आपूर्तिकर्ता A, कर्नाटक में डीलर B को 50000 का सामान बेचता है (GST 12%)। B इसे 70000 (GST 12%) में केरल के C को बेचता है। B द्वारा सरकार को भुगतान किए जाने वाले IGST की गणना करें।",
+    "problem_hg_030": "Karnataka ka supplier A 50000 ka goods Karnataka ke B ko bechta hai (12% GST). B use Kerala ke C ko 70000 mein bechta hai. B ka net IGST payable calculate karo.",
+    "problem_hg_065": "Intrastate purchase 50000 @ 12% GST. Interstate sale 70000 @ 12% GST. B ne kitna IGST pay kiya? Pehle karo ITC settle phir final amount batao.",
+    "gold_answer": "2400",
+    "gold_answer_num": 2400.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: B's purchase is intrastate: CGST = 6% of 50000 = 3000, SGST = 6% of 50000 = 3000. Total ITC = 6000.",
+      "Step 2: B's sale is interstate: IGST = 12% of 70000 = 8400.",
+      "Step 3: Utilization of ITC: IGST Output (8400) - CGST ITC (3000) - SGST ITC (3000) = 2400.",
+      "Final: answer = 2400"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Sequencing trap 'Pehle karo ITC settle phir...' might confuse the hierarchy of ITC utilization (IGST first, then CGST, then SGST).",
+    "why_hard": "Requires understanding the specific hierarchy of how ITC from CGST and SGST can be used to pay IGST liability.",
+    "tags": [
+      "igst_utilization",
+      "interstate_sale",
+      "tax_hierarchy"
+    ]
+  },
+  {
+    "problem_en": "A trader buys goods for 200000 at 18% GST. He spends 20000 on transportation (no GST). He sells at a profit of 15% on his total cost. Calculate net GST.",
+    "problem_hi": "एक व्यापारी 18% GST पर 200000 में सामान खरीदता है। वह परिवहन पर 20000 खर्च करता है (कोई GST नहीं)। वह अपनी कुल लागत पर 15% के लाभ पर बेचता है। शुद्ध GST की गणना करें।",
+    "problem_hg_030": "Trader 200000 @ 18% GST par goods leta hai. Transport par 20000 spend kiye (no GST). Total cost par 15% profit lekar becha. Net GST nikaalo.",
+    "problem_hg_065": "200000 @ 18% GST price. Transport cost 20000. Total cost par 15% profit. Withdraw kar liya logic mat lagana, bas output minus input tax karke answer do.",
+    "gold_answer": "9900",
+    "gold_answer_num": 9900.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: ITC = 18% of 200000 = 36000.",
+      "Step 2: Total Cost = 200000 + 20000 = 220000.",
+      "Step 3: Selling Price = 220000 + 15% of 220000 = 220000 + 33000 = 253000.",
+      "Step 4: Output Tax = 18% of 253000 = 45540.",
+      "Step 5: Net GST = 45540 - 36000 = 9540. Wait, recalculating: (253000-200000)0.18 = 530000.18 = 9540. Let me check: 53 * 18 = 954. Correct.",
+      "Final: answer = 9540"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya -> Financial distractor 'Withdraw kar liya logic' is an unrelated term from banking math used to derail the tax calculation context.",
+    "why_hard": "The transport cost increases the cost base and hence the profit-based selling price, but it does not provide any ITC, testing the model's ability to handle asymmetric tax inputs.",
+    "tags": [
+      "non_taxable_input",
+      "markup_on_cost",
+      "itc"
+    ]
+  },
+  {
+    "problem_en": "A dealer has an ITC of 5000 (CGST) and 5000 (SGST). He sells goods for 100000 at 12% GST. Calculate the final tax he needs to pay from his electronic cash ledger.",
+    "problem_hi": "एक डीलर के पास 5000 (CGST) और 5000 (SGST) का ITC है। वह 100000 में 12% GST पर सामान बेचता है। उसके इलेक्ट्रॉनिक कैश लेजर से भुगतान किए जाने वाले अंतिम कर की गणना करें।",
+    "problem_hg_030": "Dealer ke paas 5000 CGST and 5000 SGST ka ITC balance hai. 100000 @ 12% GST par goods sell kiye. Electronic cash ledger se kitna pay karega?",
+    "problem_hg_065": "ITC balance 5000 each (CGST/SGST). 100000 @ 12% GST sale. Dono ko utilize karke cash ledger se kitna pay hoga? Baki balance check mat karna.",
+    "gold_answer": "2000",
+    "gold_answer_num": 2000.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: Total Output GST = 12% of 100000 = 12000 (6000 CGST + 6000 SGST).",
+      "Step 2: CGST payable = Output CGST - ITC CGST = 6000 - 5000 = 1000.",
+      "Step 3: SGST payable = Output SGST - ITC SGST = 6000 - 5000 = 1000.",
+      "Step 4: Total cash payment = 1000 + 1000 = 2000.",
+      "Final: answer = 2000"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> Ambiguity 'Dono ko utilize karke' implies a joint operation which might lead the LLM to cross-utilize CGST ITC for SGST output, which is prohibited under GST law.",
+    "why_hard": "Tests the specific legal constraint that CGST ITC cannot be used against SGST output and vice versa.",
+    "tags": [
+      "cash_ledger",
+      "utilization_rules",
+      "itc_balance"
+    ]
+  },
+  {
+    "problem_en": "Manufacturer M sells to A for 60000. A adds 20% profit and sells to B. B adds 5000 profit and sells to C. GST rate is 5%. Total tax collected by government?",
+    "problem_hi": "निर्माता M, A को 60000 में बेचता है। A 20% लाभ जोड़ता है और B को बेचता है। B 5000 लाभ जोड़ता है और C को बेचता है। GST दर 5% है। सरकार द्वारा एकत्र किया गया कुल कर?",
+    "problem_hg_030": "M sells to A for 60000. A adds 20% profit and sells to B. B adds 5000 profit and sells to C. GST 5% hai. Total tax kitna collect hua?",
+    "problem_hg_065": "60000 -> (+20% profit) -> (+5000 profit). 5% GST rate chain mein. Government ko 3 lakh 75 hazaar nahi, bas total collection batana.",
+    "gold_answer": "3850",
+    "gold_answer_num": 3850.0,
+    "unit": "rupees",
+    "topic": "GST & Taxation",
+    "difficulty": "Grade-12",
+    "source_type": "itc_chain",
+    "solution_steps_en": [
+      "Step 1: M to A Price = 60000.",
+      "Step 2: A to B Price = 60000 + 20% of 60000 = 72000.",
+      "Step 3: B to C Price = 72000 + 5000 = 77000.",
+      "Step 4: Total tax collected = GST on the final price = 5% of 77000.",
+      "Step 5: 77000 * 0.05 = 3850.",
+      "Final: answer = 3850"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> Numerical distractor '3 lakh 75 hazaar' acts as a scale anchor that can lead to order-of-magnitude errors in the LLM's output.",
+    "why_hard": "Requires chaining profit calculations (one percentage-based, one flat-fee) and applying the end-of-chain tax principle.",
+    "tags": [
+      "chain_total",
+      "profit_types",
+      "tax_collection"
+    ]
+  }
+]

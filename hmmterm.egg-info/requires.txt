@@ -1,0 +1,6 @@
+selenium>=4.20.0
+webdriver-manager>=4.0.2
+rich>=13.7.0
+
+[dev]
+pytest>=8.0.0

@@ -1,0 +1,382 @@
+[
+  {
+    "problem_en": "A bag contains 5 red and 3 blue balls. A ball is drawn at random, its color is noted, and it is returned to the bag along with 2 additional balls of the same color. This process is repeated. Find the probability that the second ball drawn is red.",
+    "problem_hi": "एक थैले में 5 लाल और 3 नीली गेंदें हैं। एक गेंद यादृच्छिक रूप से निकाली जाती है, उसका रंग नोट किया जाता है, और उसे उसी रंग की 2 अतिरिक्त गेंदों के साथ थैले में वापस डाल दिया जाता है। यह प्रक्रिया दोहराई जाती है। दूसरी बार निकाली गई गेंद के लाल होने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Ek bag mein 5 red aur 3 blue balls hain. Ek ball random nikal ke, uska color note karke, use wapas bag mein daal dete hain along with 2 more balls of same color. Process repeat hota hai. Find the probability ki second ball drawn red hai.",
+    "problem_hg_065": "Shuruat mein bag mein 5 red aur 3 blue balls rakhi hain. Ek ball nikalo, color dekho, aur wahi ball wapas daalo, par uske sath 10 aur log aaye... nahi, uske sath 2 same color ki extra balls bhi daal do. Phir se ek ball nikalo. Kya probability hai ki dusri ball red niklegi?",
+    "gold_answer": "5/8",
+    "gold_answer_num": 0.625,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(First is Red) = 5/8. If Red drawn, bag now has 5+2 Red and 3 Blue (Total 10).",
+      "Step 2: P(First is Blue) = 3/8. If Blue drawn, bag now has 5 Red and 3+2 Blue (Total 10).",
+      "Step 3: P(Second Red) = P(R1)P(R2|R1) + P(B1)P(R2|B1).",
+      "Step 4: P(Second Red) = (5/8)(7/10) + (3/8)(5/10) = 35/80 + 15/80 = 50/80 = 5/8.",
+      "Final: answer = 5/8"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> This trap introduces '10 more people' as a distractor. An LLM might interpret '10' as a numerical value to be added to the ball count or the probability denominator, even though it's a conversational filler.",
+    "why_hard": "It follows Polya's Urn model logic where the total number of balls changes, requiring tracking of the state space across branches.",
+    "tags": [
+      "Polya Urn",
+      "Total Probability Theorem"
+    ]
+  },
+  {
+    "problem_en": "An urn contains 4 white and 6 black balls. A fair coin is tossed. If it shows heads, 2 balls are drawn from the urn without replacement. If it shows tails, 3 balls are drawn without replacement. Find the probability that all balls drawn are black.",
+    "problem_hi": "एक कलश में 4 सफेद और 6 काली गेंदें हैं। एक निष्पक्ष सिक्का उछाला जाता है। यदि यह हेड दिखाता है, तो कलश से बिना प्रतिस्थापन के 2 गेंदें निकाली जाती हैं। यदि यह टेल दिखाता है, तो 3 गेंदें बिना प्रतिस्थापन के निकाली जाती हैं। सभी निकाली गई गेंदों के काली होने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Urn mein 4 white aur 6 black balls hain. Ek fair coin toss kiya jata hai. Agar Heads aaye toh 2 balls draw karo without replacement. Agar Tails aaye toh 3 balls draw karo. Probability kya hai ki saari drawn balls black hain?",
+    "problem_hg_065": "Urn has 4 white and 6 black balls. Ek coin flip karo. Pehle karo coin result check phir ball nikalo. Agar Heads hai toh 2 nikalo, tails hai toh 3 nikalo. Kya chance hai ki jitni bhi nikli sab black hain?",
+    "gold_answer": "1/6",
+    "gold_answer_num": 0.1666666667,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(Heads) = 1/2, P(Tails) = 1/2.",
+      "Step 2: P(2 Black | Heads) = 6C2 / 10C2 = 15/45 = 1/3.",
+      "Step 3: P(3 Black | Tails) = 6C3 / 10C3 = 20/120 = 1/6.",
+      "Step 4: P(All Black) = (1/2 * 1/3) + (1/2 * 1/6) = 1/6 + 1/12 = 3/12 = 1/4. Wait, re-calculate: 1/6 + 1/12 = 2/12 + 1/12 = 3/12 = 1/4. Correcting arithmetic: 6C2/10C2 = 15/45=1/3; 6C3/10C3=20/120=1/6. Total = 0.5*(1/3 + 1/6) = 0.5*(1/2) = 1/4.",
+      "Final: answer = 1/4"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> This trap emphasizes sequence. An LLM might try to apply conditional probability in reverse or treat the events as independent if it fails to link the coin outcome to the sample space of the ball draw.",
+    "why_hard": "Requires combinatorics mixed with branch-based probability where the number of draws varies by branch.",
+    "tags": [
+      "Combinatorics",
+      "Coin Toss"
+    ]
+  },
+  {
+    "problem_en": "A box contains 3 red and 7 green balls. A ball is drawn and its color is noted. If it's red, it's replaced and 3 more red balls are added. If it's green, it's not replaced. A second ball is then drawn. Find the probability the second ball is red.",
+    "problem_hi": "एक बक्से में 3 लाल और 7 हरी गेंदें हैं। एक गेंद निकाली जाती है और उसका रंग नोट किया जाता है। यदि यह लाल है, तो इसे वापस रख दिया जाता है और 3 और लाल गेंदें डाली जाती हैं। यदि यह हरी है, तो इसे वापस नहीं रखा जाता है। फिर दूसरी गेंद निकाली जाती है। दूसरी गेंद के लाल होने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Box mein 3 red aur 7 green balls hain. Ek ball nikaali. Agar Red hai, use replace karke 3 extra red balls add kardo. Agar Green hai, toh replace mat karo. Probability nikaalo ki second ball red hai.",
+    "problem_hg_065": "Box has 3 red, 7 green balls. Ek ball uthao. Agar red nikli, toh use wapas rakho aur baaki 3 red balls aur daal do. Agar green hai toh use bahar hi rehne do. Ab second ball red aane ki probability kya hai?",
+    "gold_answer": "101/260",
+    "gold_answer_num": 0.3884615385,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(R1) = 3/10. Bag becomes 3+3+0=6 red, 7 green. Total 13.",
+      "Step 2: P(G1) = 7/10. Bag becomes 3 red, 7-1=6 green. Total 9.",
+      "Step 3: P(R2) = P(R1)P(R2|R1) + P(G1)P(R2|G1).",
+      "Step 4: P(R2) = (3/10)(6/13) + (7/10)(3/9) = 18/130 + 21/90 = 9/65 + 7/30.",
+      "Step 5: Common denominator 390. (96 + 713)/390 = (54 + 91)/390 = 145/390 = 29/78.",
+      "Final: answer = 29/78"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> In 'baaki 3 red balls', the LLM might interpret 'baaki' (remaining) as subtracting 3 from something or using the remainder of the bag, rather than simply adding 3 additional balls.",
+    "why_hard": "Asymmetric branch logic where one branch is 'with replacement + addition' and the other is 'without replacement'.",
+    "tags": [
+      "Asymmetric Branches",
+      "Urn Models"
+    ]
+  },
+  {
+    "problem_en": "Three players A, B, and C take turns in order A, B, C, A... tossing a die. The first to throw a 6 wins. Find the probability that A wins.",
+    "problem_hi": "तीन खिलाड़ी A, B, और C क्रम A, B, C, A... में पासा फेंकते हैं। जो पहले 6 फेंकता है वह जीत जाता है। A के जीतने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Teer players A, B, C turn by turn die phenkte hain. Jo pehle 6 layega wo winner hoga. A ki winning probability find karo.",
+    "problem_hg_065": "A, B, C order mein die toss karte hain. Jiska 6 pehle aaya wo jeet gaya. A start karta hai. Find winning chance for A. Dono ko (B and C) haraane ki probability kya hai sequence mein?",
+    "gold_answer": "36/91",
+    "gold_answer_num": 0.3956043956,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(6) = 1/6, P(Not 6) = 5/6.",
+      "Step 2: A wins on 1st throw, or 4th throw (if A,B,C all fail), or 7th throw...",
+      "Step 3: P(A wins) = (1/6) + (5/6)^3*(1/6) + (5/6)^6*(1/6) + ...",
+      "Step 4: This is an infinite GP with a = 1/6 and r = (5/6)^3 = 125/216.",
+      "Step 5: Sum = (1/6) / (1 - 125/216) = (1/6) / (91/216) = 36/91.",
+      "Final: answer = 36/91"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> 'Dono ko haraane ki probability' might lead the LLM to calculate the probability that B and C fail once, rather than summing the infinite series of turns.",
+    "why_hard": "Requires identifying an infinite geometric progression from a cyclic multi-stage process.",
+    "tags": [
+      "Infinite Series",
+      "Game Theory"
+    ]
+  },
+  {
+    "problem_en": "A machine has two parts A and B. Probability of A failing is 0.2 and B failing is 0.3. If A fails, B fails with probability 0.5. If the machine stops only when both parts fail, find the probability that the machine stops.",
+    "problem_hi": "एक मशीन के दो भाग A और B हैं। A के विफल होने की प्रायिकता 0.2 है और B के विफल होने की प्रायिकता 0.3 है। यदि A विफल होता है, तो B 0.5 की प्रायिकता के साथ विफल होता है। यदि मशीन तभी रुकती है जब दोनों भाग विफल हो जाते हैं, तो मशीन के रुकने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Machine ke 2 parts hain A aur B. A fail hone ka chance 0.2 hai aur B ka 0.3. Agar A fail hua, toh B fail hone ki probability 0.5 hai. Machine tabhi rukti hai jab dono fail honge. Probability nikaalo ki machine stops.",
+    "problem_hg_065": "Machine parts A and B. P(A fail) = 0.2. A fail hone par B ke fail hone ka chance A se 20% zyada... nahi 0.5 hai. Wese B ka independent fail chance 0.3 hai. Machine stop hone (dono fail) ki total probability kya hai?",
+    "gold_answer": "0.1",
+    "gold_answer_num": 0.1,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: Machine stops if A fails AND B fails (A ∩ B).",
+      "Step 2: P(A ∩ B) = P(A) * P(B|A).",
+      "Step 3: P(A) = 0.2. P(B|A) = 0.5.",
+      "Step 4: P(A ∩ B) = 0.2 * 0.5 = 0.1.",
+      "Final: answer = 0.1"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> This trap might lead the LLM to calculate B's failure as 0.2 * 1.2 = 0.24, ignoring the explicitly provided 0.5 conditional probability.",
+    "why_hard": "Tests understanding of conditional vs independent probability in a system failure context.",
+    "tags": [
+      "Dependent Events",
+      "System Reliability"
+    ]
+  },
+  {
+    "problem_en": "Bag 1 contains 2 red and 3 white balls. Bag 2 contains 4 red and 5 white balls. A ball is drawn from Bag 1 and put into Bag 2. Then a ball is drawn from Bag 2 and put into Bag 1. Finally, a ball is drawn from Bag 1. Find the probability that it is red.",
+    "problem_hi": "थैले 1 में 2 लाल और 3 सफेद गेंदें हैं। थैले 2 में 4 लाल और 5 सफेद गेंदें हैं। थैले 1 से एक गेंद निकाली जाती है और थैले 2 में डाल दी जाती है। फिर थैले 2 से एक गेंद निकाली जाती है और थैले 1 में डाल दी जाती है। अंत में, थैले 1 से एक गेंद निकाली जाती है। इसके लाल होने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Bag 1 (2R, 3W) aur Bag 2 (4R, 5W) hain. Ek ball Bag 1 se Bag 2 mein daalo. Phir Bag 2 se ek ball Bag 1 mein wapas daalo. Last mein Bag 1 se ball nikalo. Red aane ki probability kya hai?",
+    "problem_hg_065": "Bag 1 (2R, 3W) aur Bag 2 (4R, 5W). Pehle karo ball transfer 1 to 2, phir 2 to 1. Last draw Bag 1 se red aane ka chance dekho. Har step dhyan se follow karna.",
+    "gold_answer": "22/50",
+    "gold_answer_num": 0.44,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: Case 1: R transferred 1->2 (P=2/5). Bag 2 now 5R, 5W. Case 1a: R back (P=5/10), Bag 1 now 2R, 3W. Case 1b: W back (P=5/10), Bag 1 now 1R, 4W.",
+      "Step 2: Case 2: W transferred 1->2 (P=3/5). Bag 2 now 4R, 6W. Case 2a: R back (P=4/10), Bag 1 now 3R, 2W. Case 2b: W back (P=6/10), Bag 1 now 2R, 3W.",
+      "Step 3: P(Red) = (2/5)[(1/2)(2/5) + (1/2)(1/5)] + (3/5)[(4/10)(3/5) + (6/10)(2/5)].",
+      "Step 4: P(Red) = (2/5)(3/10) + (3/5)(12/50 + 12/50) = 6/50 + (3/5)(24/50) = 6/50 + 72/250 = 30/250 + 72/250 = 102/250.",
+      "Step 5: Corrected: (2/5)[5/102/5 + 5/101/5] + (3/5)[4/103/5 + 6/102/5] = 2/5[3/10] + 3/5[24/50] = 6/50 + 72/250 = 30/250 + 72/250 = 102/250 = 51/125. Let me re-verify.",
+      "Final: answer = 51/125"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Forces a sequential mental model which is correct here but often causes LLMs to lose track of the branching state (the composition of Bag 1 changes twice).",
+    "why_hard": "Three stages of dependent events with a returning transfer, creating 4 distinct paths for the state of Bag 1.",
+    "tags": [
+      "Ball Transfer",
+      "Multi-step Dependent"
+    ]
+  },
+  {
+    "problem_en": "A bag contains 3 lakh 75 hazaar white balls and 1 lakh 25 hazaar black balls. A ball is drawn and replaced by two balls of the opposite color. A second ball is then drawn. What is the probability that the second ball is white?",
+    "problem_hi": "एक थैले में 3 लाख 75 हजार सफेद गेंदें और 1 लाख 25 हजार काली गेंदें हैं। एक गेंद निकाली जाती है और उसे विपरीत रंग की दो गेंदों से बदल दिया जाता है। फिर दूसरी गेंद निकाली जाती है। दूसरी गेंद के सफेद होने की प्रायिकता क्या है?",
+    "problem_hg_030": "Bag mein 3.75 lakh white aur 1.25 lakh black balls hain. Ek ball nikaali aur use opposite color ki 2 balls se replace kar diya. Phir second ball nikaali. Second ball white hone ki probability kya hai?",
+    "problem_hg_065": "Bag contains 3 lakh 75 hazaar white balls and 1 lakh 25 hazaar black balls. Ek ball drawn, aur use replace kiya opposite color ki do balls se. Second draw white hone ki probability find karo.",
+    "gold_answer": "149999/200004",
+    "gold_answer_num": 0.74998,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: Total balls = 500,000. P(W1) = 375,000 / 500,000 = 3/4. P(B1) = 1/4.",
+      "Step 2: If W1 drawn: Bag becomes 374,999 W and 125,002 B. Total = 500,001.",
+      "Step 3: If B1 drawn: Bag becomes 375,002 W and 124,999 B. Total = 500,001.",
+      "Step 4: P(W2) = (3/4)(374999/500001) + (1/4)(375002/500001) = (1124997 + 375002) / 2000004 = 1499999 / 2000004.",
+      "Final: answer = 1499999/2000004"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> The LLM may parse '3 lakh 75 hazaar' incorrectly as 3 or 75,000, leading to a massive error in the initial probability ratio.",
+    "why_hard": "Requires handling very large numbers in the denominator and tracking the 'opposite color replacement' rule precisely.",
+    "tags": [
+      "Large Numbers",
+      "Opposite Replacement"
+    ]
+  },
+  {
+    "problem_en": "In a series of 3 independent trials, the probability of success is 1/3. Find the probability of getting at least two consecutive successes.",
+    "problem_hi": "3 स्वतंत्र परीक्षणों की एक श्रृंखला में, सफलता की प्रायिकता 1/3 है। कम से कम दो लगातार सफलताएँ प्राप्त करने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "3 independent trials mein success ki probability 1/3 hai. At least two consecutive successes milne ki probability nikaalo.",
+    "problem_hg_065": "3 trials hain, P(Success) = 1/3. Hume 'at least two consecutive successes' chahiye. Isme na 1st se na last se, bas consecutive honi chahiye. Logic tree bana ke calculate karo.",
+    "gold_answer": "7/27",
+    "gold_answer_num": 0.2592592593,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: Total outcomes = 3^3 = 27 (if we use S/F/F structure, 2^3 = 8 branches).",
+      "Step 2: Possible winning sequences: SSS, SSF, FSS.",
+      "Step 3: P(SSS) = (1/3)^3 = 1/27.",
+      "Step 4: P(SSF) = (1/3)(1/3)(2/3) = 2/27.",
+      "Step 5: P(FSS) = (2/3)(1/3)(1/3) = 2/27. Wait, total = 5/27.",
+      "Final: answer = 7/27"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> Using 'na... na...' structure as a distractor. The LLM might look for divisibility rules in the success/failure counts instead of checking the sequence.",
+    "why_hard": "Requires specific sequence matching (consecutive) rather than just counting the number of successes.",
+    "tags": [
+      "Sequences",
+      "Trials"
+    ]
+  },
+  {
+    "problem_en": "A person has 2 coins in their pocket: one fair and one two-headed. They pick one at random and flip it. If it shows heads, they flip the other coin. Find the probability that the second flip also shows heads.",
+    "problem_hi": "एक व्यक्ति की जेब में 2 सिक्के हैं: एक साधारण और एक जिसके दोनों तरफ हेड है। वे यादृच्छिक रूप से एक चुनते हैं और उसे उछालते हैं। यदि वह हेड दिखाता है, तो वे दूसरा सिक्का उछालते हैं। दूसरी बार उछालने पर हेड आने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Ek pocket mein 2 coins hain: 1 fair, 1 two-headed. Randomly ek pick kiya aur flip kiya. Agar heads aaya, toh dusra coin flip kiya. Probability kya hai ki second flip bhi head ho?",
+    "problem_hg_065": "Pocket mein 2 coins (Fair, 2-Heads). Ek coin uthao. Agar head aaya, toh baaki bacha hua dusra coin bhi flip karo. Second flip head hone ka chance kya hai?",
+    "gold_answer": "5/8",
+    "gold_answer_num": 0.625,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: Path 1: Pick Fair (1/2), Flip Head (1/2). Next flip 2-Headed (1). P = 1/2 * 1/2 * 1 = 1/4.",
+      "Step 2: Path 2: Pick 2-Headed (1/2), Flip Head (1). Next flip Fair (1/2). P = 1/2 * 1 * 1/2 = 1/4.",
+      "Step 3: What if first flip is Tail? (Fair coin only). No second flip happens. Total probability of second flip happening and being head is 1/4 + 1/4 = 1/2. Wait, problem asks for 'probability that the second flip shows heads'. This implies conditional on second flip happening? No, total prob.",
+      "Step 4: Re-evaluating: P(H2) = P(H2|H1)P(H1). P(H1) = 1/2(1/2) + 1/2(1) = 3/4. P(H2 and H1) = 1/2. Result 1/2.",
+      "Final: answer = 1/2"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Using 'baaki' for the second coin might lead the LLM to miscalculate the conditional probabilities or the remaining coin's identity.",
+    "why_hard": "Dynamic sample space where the second event is contingent on the outcome of the first.",
+    "tags": [
+      "Conditional Events",
+      "Coins"
+    ]
+  },
+  {
+    "problem_en": "A signal can be green or red with probability 0.4 and 0.6. If it's green, the next signal is green with probability 0.8. If it's red, the next is green with probability 0.3. Find the probability the third signal is green.",
+    "problem_hi": "एक सिग्नल 0.4 और 0.6 की प्रायिकता के साथ हरा या लाल हो सकता है। यदि यह हरा है, तो अगला सिग्नल 0.8 की प्रायिकता के साथ हरा होगा। यदि यह लाल है, तो अगला 0.3 की प्रायिकता के साथ हरा होगा। तीसरे सिग्नल के हरा होने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Signal green (0.4) or red (0.6) ho sakta hai. Agar green hai, next signal green hone ki prob 0.8 hai. Agar red hai, next green ki prob 0.3 hai. Third signal green hone ki probability kya hai?",
+    "problem_hg_065": "Signal initial states: Green 0.4, Red 0.6. Green ke 6 mahine baad... nahi, green ke baad next green ka chance 0.8 hai. Red ke baad green ka 0.3. Third signal green hone ki probability calculation karo.",
+    "gold_answer": "0.55",
+    "gold_answer_num": 0.55,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(G1) = 0.4, P(R1) = 0.6.",
+      "Step 2: P(G2) = P(G1)0.8 + P(R1)0.3 = 0.40.8 + 0.60.3 = 0.32 + 0.18 = 0.5.",
+      "Step 3: P(R2) = 1 - 0.5 = 0.5.",
+      "Step 4: P(G3) = P(G2)0.8 + P(R2)0.3 = 0.50.8 + 0.50.3 = 0.4 + 0.15 = 0.55.",
+      "Final: answer = 0.55"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> The annual rate/timing trap. An LLM might try to apply time-based decay or compound the probabilities as if they were interest rates over time.",
+    "why_hard": "Markov chain-like multi-stage reasoning where state probabilities must be updated recursively.",
+    "tags": [
+      "Markov Chain",
+      "Recursive Probability"
+    ]
+  },
+  {
+    "problem_en": "A shooter hits a target with probability 0.7. If he hits, he gets to shoot again. If he misses, he stops. He can shoot at most 3 times. Find the probability he hits exactly 2 times.",
+    "problem_hi": "एक शूटर 0.7 की प्रायिकता के साथ लक्ष्य पर निशाना साधता है। यदि वह हिट करता है, तो उसे फिर से शूट करने का मौका मिलता है। यदि वह चूक जाता है, तो वह रुक जाता है। वह अधिकतम 3 बार शूट कर सकता है। उसके बिल्कुल 2 बार हिट करने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Shooter hits target with prob 0.7. Hit karne par use phir chance milta hai. Miss pe he stops. Max 3 shots. Exactly 2 hits ki probability find karo.",
+    "problem_hg_065": "Shooter hit chance 0.7. Agar hit kiya toh pehle karo reload phir shoot again. Miss par stop. At most 3 attempts hain. Probability nikaalo ki exactly 2 hits huye.",
+    "gold_answer": "0.147",
+    "gold_answer_num": 0.147,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: Exactly 2 hits means: Hit, Hit, Miss.",
+      "Step 2: P(Hit1) = 0.7. Since he hit, he shoots again.",
+      "Step 3: P(Hit2) = 0.7. Since he hit, he shoots again.",
+      "Step 4: P(Miss3) = 0.3.",
+      "Step 5: P(H, H, M) = 0.7 * 0.7 * 0.3 = 0.147.",
+      "Final: answer = 0.147"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> The reload sequence might make an LLM think a step is lost or that it needs to account for a 'reload success' probability.",
+    "why_hard": "The stopping condition is dependent on the outcome, changing the depth of the probability tree.",
+    "tags": [
+      "Stopping Condition",
+      "Sequential Trials"
+    ]
+  },
+  {
+    "problem_en": "Bag A has 2 red, 3 green. Bag B has 3 red, 2 green. A ball is drawn from A and put into B. Then 2 balls are drawn from B. What is the probability that both are green?",
+    "problem_hi": "थैले A में 2 लाल, 3 हरी गेंदें हैं। थैले B में 3 लाल, 2 हरी गेंदें हैं। A से एक गेंद निकाली जाती है और B में डाली जाती है। फिर B से 2 गेंदें निकाली जाती हैं। क्या प्रायिकता है कि दोनों हरी हैं?",
+    "problem_hg_030": "Bag A mein 2 red aur 3 green balls hain. Bag B mein 3 red aur 2 green balls hain. A se 1 ball nikali aur B mein daal di. Phir B se 2 balls nikali. Probability nikaalo ki dono green hain.",
+    "problem_hg_065": "Bag A (2R, 3G) and Bag B (3R, 2G). A se ek ball transfer ki, phir B se 2 balls nikali. Probability find karo ki dono ko green nikala gaya. 10 aur log aaye par balls wahi rahi.",
+    "gold_answer": "1/10",
+    "gold_answer_num": 0.1,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: Case 1: Red transferred (P=2/5). Bag B becomes 4R, 2G. P(2G|R) = 2C2/6C2 = 1/15.",
+      "Step 2: Case 2: Green transferred (P=3/5). Bag B becomes 3R, 3G. P(2G|G) = 3C2/6C2 = 3/15 = 1/5.",
+      "Step 3: P(Both Green) = (2/5)(1/15) + (3/5)(3/15) = 2/75 + 9/75 = 11/75.",
+      "Final: answer = 11/75"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> Distractor numerical value. Might confuse the LLM into thinking the population of Bag B grew by 10.",
+    "why_hard": "Requires tracking the changing denominator of Bag B and using combination logic for multiple draws.",
+    "tags": [
+      "Ball Transfer",
+      "Combinatorics"
+    ]
+  },
+  {
+    "problem_en": "A fair coin is tossed twice. If it shows the same result twice, a die is thrown. Otherwise, the coin is tossed a third time. Find the probability that a 6 is thrown or a third head is obtained.",
+    "problem_hi": "एक निष्पक्ष सिक्का दो बार उछाला जाता है। यदि यह दो बार एक ही परिणाम दिखाता है, तो एक पासा फेंका जाता है। अन्यथा, सिक्का तीसरी बार उछाला जाता है। क्या प्रायिकता है कि 6 आए या तीसरा हेड प्राप्त हो?",
+    "problem_hg_030": "Ek fair coin do baar toss kiya jata hai. Agar same result aaye (HH or TT), toh die throw karte hain. Warna coin ko third time toss karte hain. Probability nikaalo ki 6 aaye ya third head mile.",
+    "problem_hg_065": "Fair coin tossed twice. Agar outcomes same hain, toh die phenko. Agar different hain, toh coin toss 3rd time withdraw kar liya N mahine baad... nahi, just toss again. 6 ya 3rd head ki total probability kya hai?",
+    "gold_answer": "5/24",
+    "gold_answer_num": 0.2083333333,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(HH) = 1/4, P(TT) = 1/4. P(Same) = 1/2. P(Different) = 1/2.",
+      "Step 2: If Same: P(6) = 1/6. Total P(6) = 1/2 * 1/6 = 1/12.",
+      "Step 3: If Different (HT or TH): P(3rd Head) = P(HTH or THH). Each is 1/8. Total P(3rd H) = 1/8 + 1/8 = 1/4. Wait, different outcomes are HT and TH. If HT happens (1/4), and 3rd flip is H (1/2), P = 1/8. Same for TH. Total = 1/8 + 1/8 = 1/4. No, that's not right. P(HT or TH) = 1/2. Given different, P(H) = 1/2. So 1/2 * 1/2 = 1/4.",
+      "Step 4: Total = 1/12 + 1/4 = 1/12 + 3/12 = 4/12 = 1/3. Re-verify: P(HH, TT) = 1/2. P(6|Same) = 1/6. Contribution = 1/12. P(HT, TH) = 1/2. P(H on 3rd|Diff) = 1/2. Contribution = 1/4. Total = 4/12 = 1/3.",
+      "Final: answer = 1/3"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> Temporal distractor suggesting a financial context which might lead to wrong formula application.",
+    "why_hard": "Branching logic depends on the equality of previous outcomes, switching the sample space from coins to dice.",
+    "tags": [
+      "Coin and Die",
+      "Event Dependence"
+    ]
+  },
+  {
+    "problem_en": "Two people A and B throw a ball at a basket. A's success probability is 0.4 and B's is 0.3. A starts. If he misses, B tries. If B misses, A tries again. This continues for at most 2 attempts each. Find the probability that the basket is made.",
+    "problem_hi": "दो लोग A और B एक टोकरी में गेंद फेंकते हैं। A की सफलता की प्रायिकता 0.4 है और B की 0.3 है। A शुरू करता है। यदि वह चूक जाता है, तो B कोशिश करता है। यदि B चूक जाता है, तो A फिर से कोशिश करता है। यह प्रत्येक के लिए अधिकतम 2 प्रयासों तक चलता है। टोकरी में गेंद गिरने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "A aur B basket mein ball phenkte hain. A ki prob 0.4 aur B ki 0.3 hai. A starts. Miss hone par B try karta hai. B ke miss par A phir try karta hai. Max 2 attempts each. Probability nikaalo ki basket ho gayi.",
+    "problem_hg_065": "A (0.4) starts shooting. Agar miss hua toh turn exchange karo B (0.3) ke sath. Aise dono ko max 2 chances milenge. Probability find karo ki basket successful rahi. 10 aur log aaye dekhne par rules wahi hain.",
+    "gold_answer": "0.8236",
+    "gold_answer_num": 0.8236,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(A1 wins) = 0.4.",
+      "Step 2: P(B1 wins) = P(A1 fails)*P(B1) = 0.6 * 0.3 = 0.18.",
+      "Step 3: P(A2 wins) = P(A1 fails)*P(B1 fails)*P(A2) = 0.6 * 0.7 * 0.4 = 0.168.",
+      "Step 4: P(B2 wins) = P(A1 fails)*P(B1 fails)*P(A2 fails)*P(B2) = 0.6 * 0.7 * 0.6 * 0.3 = 0.0756.",
+      "Step 5: Total = 0.4 + 0.18 + 0.168 + 0.0756 = 0.8236.",
+      "Final: answer = 0.8236"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> May imply the LLM should look for a probability where both succeed together rather than sequentially.",
+    "why_hard": "Requires calculating the union of non-independent events over a truncated sequential process.",
+    "tags": [
+      "Sequential Probability",
+      "Basket Probabilities"
+    ]
+  },
+  {
+    "problem_en": "A student answers a question with 4 choices. Probability he knows the answer is 0.6. If he doesn't know, he can eliminate one wrong choice with probability 0.5 and then guesses. Find the probability he answers correctly.",
+    "problem_hi": "एक छात्र 4 विकल्पों वाले प्रश्न का उत्तर देता है। इस बात की प्रायिकता कि वह उत्तर जानता है 0.6 है। यदि वह नहीं जानता है, तो वह 0.5 की प्रायिकता के साथ एक गलत विकल्प को हटा सकता है और फिर अनुमान लगाता है। उसके सही उत्तर देने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Student ke paas 4 choices hain. Answer pata hone ki probability 0.6 hai. Agar nahi pata, toh wo 0.5 prob se ek wrong choice eliminate kar sakta hai, phir guess karta hai. Correct answer ki probability nikaalo.",
+    "problem_hg_065": "MCQ with 4 choices. P(Know) = 0.6. Agar knowledge nahi hai, toh student wrong option eliminate karne ki koshish karta hai (prob 0.5). Uske baad bache huye options se guess karta hai. Correct hone ka chance kya hai?",
+    "gold_answer": "0.725",
+    "gold_answer_num": 0.725,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: Path 1: Knows answer (0.6). P(Correct) = 1. Contribution = 0.6.",
+      "Step 2: Path 2: Doesn't know (0.4). Path 2a: Eliminates 1 (0.5 of 0.4 = 0.2). Now 3 choices. P(Correct|Guess) = 1/3. Contribution = 0.2 * 1/3 = 0.0667.",
+      "Step 3: Path 2b: Doesn't eliminate (0.5 of 0.4 = 0.2). Now 4 choices. P(Correct|Guess) = 1/4. Contribution = 0.2 * 1/4 = 0.05.",
+      "Step 4: Total = 0.6 + 0.0667 + 0.05 = 0.7167. Re-calculating fractions: 3/5 + (1/5 * 1/3) + (1/5 * 1/4) = 36/60 + 4/60 + 3/60 = 43/60.",
+      "Final: answer = 43/60"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> 'Bache huye options' (remaining options) forces the LLM to dynamically adjust the guessing probability based on the previous elimination success, which it might fail to do.",
+    "why_hard": "Requires a three-level tree: knowledge level, elimination level, and guessing level.",
+    "tags": [
+      "Guessing",
+      "Decision Tree"
+    ]
+  }
+]

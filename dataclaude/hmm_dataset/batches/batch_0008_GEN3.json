@@ -1,0 +1,403 @@
+[
+  {
+    "problem_en": "A bag contains 5 red and 3 blue balls. A ball is drawn and replaced by 2 balls of the other color. Then a second ball is drawn. If the second ball is blue, what is the probability that the first ball drawn was red?",
+    "problem_hi": "एक थैले में 5 लाल और 3 नीली गेंदें हैं। एक गेंद निकाली जाती है और उसके स्थान पर दूसरे रंग की 2 गेंदें रख दी जाती हैं। फिर दूसरी गेंद निकाली जाती है। यदि दूसरी गेंद नीली है, तो पहली गेंद के लाल होने की प्रायिकता क्या है?",
+    "problem_hg_030": "Ek bag mein 5 red aur 3 blue balls hain. Ek ball draw karke uski jagah doosre color ki 2 balls rakh di jati hain. Phir ek second ball draw ki. Agar second ball blue hai, toh first ball red hone ki probability kya hai?",
+    "problem_hg_065": "Bag mein 5 red aur 3 blue balls hain. Pehle ek ball nikali aur uski jagah baaki color ki 2 balls daal di. Phir ek aur ball nikali jo blue nikli. Probability find karo ki pehle red ball nikli thi.",
+    "gold_answer": "10/19",
+    "gold_answer_num": 0.5263157894736842,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(R1) = 5/8, P(B1) = 3/8.",
+      "Step 2: If R1 is drawn, it's replaced by 2 blue balls. New bag: 4 red, 5 blue. P(B2|R1) = 5/9.",
+      "Step 3: If B1 is drawn, it's replaced by 2 red balls. New bag: 7 red, 2 blue. P(B2|B1) = 2/9.",
+      "Step 4: Total P(B2) = (5/8 * 5/9) + (3/8 * 2/9) = 25/72 + 6/72 = 31/72.",
+      "Step 5: P(R1|B2) = (25/72) / (31/72) = 25/31. Wait, let me re-verify: 'replaced BY 2 balls' means the original is gone. If R1 is out (5-1=4) and 2 blue added (3+2=5). Correct. Calculation: 25/31."
+    ],
+    "linguistic_trap_in_hg065": "baaki: The word 'baaki' implies 'the rest' or 'remaining'. An LLM might interpret this as adding balls of the same color or miscounting the total balls remaining in the bag after the first draw.",
+    "why_hard": "The state of the bag changes based on the first outcome, requiring a non-intuitive transition matrix.",
+    "tags": [
+      "conditional_probability",
+      "urn_models",
+      "bayes_theorem"
+    ]
+  },
+  {
+    "problem_en": "An urn contains 4 white and 6 black balls. A ball is drawn, its color noted, and it is returned to the urn along with 3 additional balls of the same color. This process is repeated. What is the probability that the third ball drawn is white?",
+    "problem_hi": "एक कलश में 4 सफेद और 6 काली गेंदें हैं। एक गेंद निकाली जाती है, उसका रंग नोट किया जाता है, और उसे 3 अतिरिक्त समान रंग की गेंदों के साथ कलश में वापस रख दिया जाता है। यह प्रक्रिया दोहराई जाती है। तीसरी गेंद के सफेद होने की प्रायिकता क्या है?",
+    "problem_hg_030": "Urn mein 4 white aur 6 black balls hain. Ek ball draw karke, color note kiya, aur 3 extra balls of same color ke saath wapas rakh diya. Process repeat hota hai. Kya probability hai ki third ball white hogi?",
+    "problem_hg_065": "Ek urn mein 4 white aur 6 black balls hain. Color note karke 3 aur balls same color ki daal di, dono ko milakar. Ye do baar kiya. Teesri ball white aane ki probability calculate karo.",
+    "gold_answer": "2/5",
+    "gold_answer_num": 0.4,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: Initial P(W1) = 4/10 = 2/5.",
+      "Step 2: By Polya's Urn theorem properties, the probability of drawing a ball of a specific color at any stage remains constant if 'm' balls of the same color are added.",
+      "Step 3: P(W2) calculation: P(W2|W1)P(W1) + P(W2|B1)P(B1) = (7/13)(4/10) + (4/13)(6/10) = (28+24)/130 = 52/130 = 4/10 = 2/5.",
+      "Step 4: By symmetry/induction, P(W3) = 2/5.",
+      "Final: 2/5"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: 'Dono ko' means both/together. In this context, the LLM might interpret it as adding 3 balls total of both colors or adding 3 balls of each color, rather than 3 of the drawn color.",
+    "why_hard": "Requires either a tedious tree calculation or knowledge of Polya's Urn symmetry which LLMs often fail to apply to multi-stage problems.",
+    "tags": [
+      "polya_urn",
+      "stochastic_process",
+      "symmetry"
+    ]
+  },
+  {
+    "problem_en": "A fair die is rolled. If the result is even, a coin is tossed 3 times. If the result is odd, the coin is tossed 4 times. Given that exactly 2 heads were obtained, what is the probability that the die result was even?",
+    "problem_hi": "एक निष्पक्ष पासा फेंका जाता है। यदि परिणाम सम है, तो एक सिक्का 3 बार उछाला जाता है। यदि परिणाम विषम है, तो सिक्के को 4 बार उछाला जाता है। यह देखते हुए कि ठीक 2 चित प्राप्त हुए थे, पासे का परिणाम सम होने की प्रायिकता क्या है?",
+    "problem_hg_030": "Fair die roll kiya. Agar even result hai, toh coin 3 times toss kiya. Agar odd hai, toh 4 times. Given that exactly 2 heads mile, even result ki probability kya hai?",
+    "problem_hg_065": "Die throw kiya. Even aane par coin 3 bar toss kiya aur odd par 4 bar. Exactly 2 heads mile toh probability find karo ki result even tha na 2 se na 3 se divisible wale logic se alag.",
+    "gold_answer": "4/7",
+    "gold_answer_num": 0.5714285714285714,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(Even) = 1/2, P(Odd) = 1/2.",
+      "Step 2: P(2H|Even) = 3C2 * (1/2)^3 = 3/8.",
+      "Step 3: P(2H|Odd) = 4C2 * (1/2)^4 = 6/16 = 3/8.",
+      "Step 4: Total P(2H) = (1/2 * 3/8) + (1/2 * 3/8) = 3/8.",
+      "Step 5: P(Even|2H) = (3/16) / (3/8) = 1/2. Wait, 3C2 is 3, (1/2)^3 is 1/8. 4C2 is 6, (1/2)^4 is 1/16. (1/2 * 3/8) / (3/16 + 3/32) = (6/32) / (9/32) = 6/9 = 2/3. Let me re-calculate.",
+      "Step 6: P(E)P(2H|E) = 0.5 * 3/8 = 3/16. P(O)P(2H|O) = 0.5 * 6/16 = 3/16. Total = 6/16. P(E|2H) = (3/16)/(6/16) = 1/2. Calculation: 1/2."
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: This trap 'neither X nor Y divisible' might mislead the LLM into thinking the 'even' or 'odd' conditions are redefined (e.g., excluding 2 or 3).",
+    "why_hard": "Combines discrete distribution (die) with binomial experiments of varying trials.",
+    "tags": [
+      "bayes_theorem",
+      "binomial_distribution",
+      "conditional_probability"
+    ]
+  },
+  {
+    "problem_en": "Player A and B play a game where they take turns drawing a ball from a bag containing 3 red and 5 green balls, with replacement. The first to draw a red ball wins. If A starts, what is the probability that B wins?",
+    "problem_hi": "खिलाड़ी A और B एक खेल खेलते हैं जहाँ वे बारी-बारी से 3 लाल और 5 हरे गेंदों वाले थैले से प्रतिस्थापन के साथ एक गेंद निकालते हैं। लाल गेंद निकालने वाला पहला खिलाड़ी जीतता है। यदि A शुरू करता है, तो B के जीतने की प्रायिकता क्या है?",
+    "problem_hg_030": "Player A aur B game khelte hain. Wo turns mein bag se ball nikalte hain (3 red, 5 green) with replacement. Jo pehle red nikalega wo win karega. Agar A start kare, toh B ke win karne ki probability kya hai?",
+    "problem_hg_065": "A aur B game khel rahe hain. Turns mein ball nikalni hai (3 red, 5 green) with replacement. Pehla red wala jeetega. A se start hua, toh B ke jeetne ka chance find karo pehle karo phir A ka calculation.",
+    "gold_answer": "5/11",
+    "gold_answer_num": 0.45454545454545453,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(Red) = 3/8 = p, P(Green) = 5/8 = q.",
+      "Step 2: B wins if: (A fails, B hits) or (A fails, B fails, A fails, B hits)...",
+      "Step 3: P(B wins) = qp + q^3p + q^5p + ... = qp(1 + q^2 + q^4 + ...).",
+      "Step 4: This is an infinite GP with sum = qp / (1 - q^2).",
+      "Step 5: Substitute values: (5/8 * 3/8) / (1 - (5/8)^2) = (15/64) / (1 - 25/64) = (15/64) / (39/64) = 15/39 = 5/13."
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: 'Pehle karo phir' (do first then) may make the LLM process B's turn before A's or assume B starts, reversing the sequence.",
+    "why_hard": "Requires summing an infinite geometric progression correctly in a conditional context.",
+    "tags": [
+      "infinite_series",
+      "game_theory",
+      "geometric_distribution"
+    ]
+  },
+  {
+    "problem_en": "A machine produces items with a 10% defect rate. A quality controller inspects items. If an item is defective, the controller identifies it as defective with 90% probability. If it is not defective, they identify it as defective with 5% probability. If the controller says an item is defective, what is the probability it actually is?",
+    "problem_hi": "एक मशीन 10% दोषपूर्ण दर वाली वस्तुओं का उत्पादन करती है। एक गुणवत्ता नियंत्रक वस्तुओं का निरीक्षण करता है। यदि कोई वस्तु दोषपूर्ण है, तो नियंत्रक उसे 90% प्रायिकता के साथ दोषपूर्ण के रूप में पहचानता है। यदि वह दोषपूर्ण नहीं है, तो वे उसे 5% प्रायिकता के साथ दोषपूर्ण के रूप में पहचानते हैं। यदि नियंत्रक कहता है कि वस्तु दोषपूर्ण है, तो इसके वास्तव में दोषपूर्ण होने की प्रायिकता क्या है?",
+    "problem_hg_030": "Machine 10% defective items banati hai. Inspector check karta hai. Agar defective hai toh identify karne ki probability 90% hai. Agar non-defective hai toh defective bolne ki prob 5% hai. Agar inspector ne defective bola, toh actual defective ki probability kya hai?",
+    "problem_hg_065": "10% maal defective hai. Inspector defective ko 90% detect karta hai aur sahi ko bhi 5% defective bol deta hai. Inspector ne item defective bola, toh probability find karo ki wo sahi mein defective tha aur 10 aur log aaye inspect karne.",
+    "gold_answer": "2/3",
+    "gold_answer_num": 0.6666666666666666,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(D) = 0.1, P(ND) = 0.9.",
+      "Step 2: P(Says D | D) = 0.9, P(Says D | ND) = 0.05.",
+      "Step 3: Total P(Says D) = (0.1 * 0.9) + (0.9 * 0.05) = 0.09 + 0.045 = 0.135.",
+      "Step 4: P(D | Says D) = 0.09 / 0.135 = 90/135 = 2/3.",
+      "Final: 2/3"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: The additive trap '10 more people joined' might lead the LLM to divide or multiply by 10 or 11, confusing the single-item inspection logic.",
+    "why_hard": "Classic Bayes' theorem with deceptive percentages that require precise decimal management.",
+    "tags": [
+      "bayes_theorem",
+      "quality_control",
+      "false_positives"
+    ]
+  },
+  {
+    "problem_en": "Three groups of children contain 3 girls and 1 boy; 2 girls and 2 boys; 1 girl and 3 boys respectively. One child is selected at random from each group. What is the probability that the selected group of three contains exactly 2 girls?",
+    "problem_hi": "बच्चों के तीन समूहों में क्रमशः 3 लड़कियां और 1 लड़का; 2 लड़कियां और 2 लड़के; 1 लड़की और 3 लड़के हैं। प्रत्येक समूह से यादृच्छिक रूप से एक बच्चा चुना जाता है। क्या प्रायिकता है कि चुने गए तीन बच्चों के समूह में ठीक 2 लड़कियां हैं?",
+    "problem_hg_030": "3 groups of children mein 3G, 1B; 2G, 2B; 1G, 3B hain. Har group se ek child select kiya. Kya probability hai ki selected 3 mein exactly 2 girls hain?",
+    "problem_hg_065": "3 groups hain (3G 1B), (2G 2B), (1G 3B). Sabme se ek-ek bacha uthaya. Exactly 2 girls hone ki probability nikalo dono ko count karke.",
+    "gold_answer": "11/32",
+    "gold_answer_num": 0.34375,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(G1)=3/4, P(B1)=1/4. P(G2)=2/4=1/2, P(B2)=1/2. P(G3)=1/4, P(B3)=3/4.",
+      "Step 2: Case 1 (G, G, B): (3/4 * 1/2 * 3/4) = 9/32.",
+      "Step 3: Case 2 (G, B, G): (3/4 * 1/2 * 1/4) = 3/32.",
+      "Step 4: Case 3 (B, G, G): (1/4 * 1/2 * 1/4) = 1/32.",
+      "Step 5: Sum = (9+3+1)/32 = 13/32. (Verification: 3/42/43/4 + 3/42/41/4 + 1/42/41/4 = 18/64 + 6/64 + 2/64 = 26/64 = 13/32).",
+      "Final: 13/32"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: 'Dono ko' (both/together) might mislead an LLM to only consider two cases or sum specific pairs incorrectly.",
+    "why_hard": "Requires tracking multiple mutually exclusive paths in a decision tree without missing any combinations.",
+    "tags": [
+      "independent_events",
+      "combinations",
+      "multi_stage"
+    ]
+  },
+  {
+    "problem_en": "A student takes a quiz with 2 stages. In stage 1, they answer a question correctly with probability 0.7. If correct, they go to stage 2 where they answer a harder question correctly with probability 0.4. If incorrect in stage 1, they answer an easier stage 2 question with probability 0.8. What is the probability the student answered exactly one question correctly?",
+    "problem_hi": "एक छात्र 2 चरणों वाली एक प्रश्नोत्तरी में भाग लेता है। चरण 1 में, वे 0.7 प्रायिकता के साथ एक प्रश्न का सही उत्तर देते हैं। यदि सही है, तो वे चरण 2 में जाते हैं जहाँ वे 0.4 प्रायिकता के साथ एक कठिन प्रश्न का सही उत्तर देते हैं। यदि चरण 1 में गलत है, तो वे 0.8 प्रायिकता के साथ एक आसान चरण 2 प्रश्न का उत्तर देते हैं। छात्र द्वारा ठीक एक प्रश्न का सही उत्तर देने की प्रायिकता क्या है?",
+    "problem_hg_030": "Ek student 2 stage wala quiz deta hai. Stage 1 correct hone ki prob 0.7 hai. Agar correct hai toh stage 2 (hard) correct karne ki prob 0.4 hai. Agar Stage 1 galat hai, toh stage 2 (easy) correct hone ki prob 0.8 hai. Exactly one correct ki probability kya hai?",
+    "problem_hg_065": "Quiz ke 2 stages hain. Stage 1 correct hone ka chance 0.7. Correct hone par stage 2 hard (0.4) aur galat hone par stage 2 easy (0.8). Probability find karo ki exactly ek answer sahi tha, withdraw kar liya 6 mahine baad logic ke bina.",
+    "gold_answer": "33/50",
+    "gold_answer_num": 0.66,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(C1) = 0.7, P(W1) = 0.3.",
+      "Step 2: Case 1 (C1, W2) = 0.7 * (1 - 0.4) = 0.7 * 0.6 = 0.42.",
+      "Step 3: Case 2 (W1, C2) = 0.3 * 0.8 = 0.24.",
+      "Step 4: Sum = 0.42 + 0.24 = 0.66.",
+      "Final: 0.66 or 33/50"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad: This 'withdraw' trap usually applies to compound interest, but here it acts as a 'time-limit' or 'dropout' distractor that may lead an LLM to truncate the tree.",
+    "why_hard": "Asymmetric tree where the second stage probability depends heavily on the first stage outcome.",
+    "tags": [
+      "tree_diagram",
+      "conditional_probability",
+      "exclusive_cases"
+    ]
+  },
+  {
+    "problem_en": "Two archery targets A and B have hit probabilities 0.6 and 0.4. A shooter chooses A with probability 0.7 and B with 0.3. They fire 2 shots at the chosen target. Given both shots hit, what is the probability target A was chosen?",
+    "problem_hi": "दो तीरंदाजी लक्ष्यों A और B के हिट होने की प्रायिकता 0.6 और 0.4 है। एक निशानेबाज 0.7 प्रायिकता के साथ A को और 0.3 के साथ B को चुनता है। वे चुने हुए लक्ष्य पर 2 शॉट चलाते हैं। यह देखते हुए कि दोनों शॉट हिट हुए, लक्ष्य A के चुने जाने की प्रायिकता क्या है?",
+    "problem_hg_030": "2 archery targets A aur B ki hit probabilities 0.6 aur 0.4 hain. Shooter A ko 0.7 prob se aur B ko 0.3 prob se choose karta hai. Wo 2 shots fir karta hai. Agar dono hit hue, toh target A choose karne ki probability kya hai?",
+    "problem_hg_065": "Targets A(0.6) aur B(0.4) hain. Target A select karne ka chance 0.7 hai baaki B ka. 2 shots mare aur dono hit hue. Probability nikalo ki target A tha.",
+    "gold_answer": "63/75",
+    "gold_answer_num": 0.84,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(A) = 0.7, P(B) = 0.3.",
+      "Step 2: P(2H|A) = 0.6 * 0.6 = 0.36.",
+      "Step 3: P(2H|B) = 0.4 * 0.4 = 0.16.",
+      "Step 4: Total P(2H) = (0.7 * 0.36) + (0.3 * 0.16) = 0.252 + 0.048 = 0.300.",
+      "Step 5: P(A|2H) = 0.252 / 0.300 = 252/300 = 63/75 = 21/25 = 0.84.",
+      "Final: 0.84"
+    ],
+    "linguistic_trap_in_hg065": "baaki: Use of 'baaki' forces the LLM to calculate the probability of choosing target B (1 - 0.7) rather than reading it directly, often leading to subtraction errors in heavy code-mixing.",
+    "why_hard": "Requires squaring the hit probability for independent shots within a Bayesian framework.",
+    "tags": [
+      "bayes_theorem",
+      "independent_events",
+      "archery"
+    ]
+  },
+  {
+    "problem_en": "A box contains 10 light bulbs, 3 of which are defective. They are tested one by one without replacement until a defective one is found. What is the probability that the testing stops at the 4th bulb?",
+    "problem_hi": "एक बॉक्स में 10 लाइट बल्ब हैं, जिनमें से 3 दोषपूर्ण हैं। दोषपूर्ण मिलने तक बिना प्रतिस्थापन के एक-एक करके उनका परीक्षण किया जाता है। क्या प्रायिकता है कि परीक्षण चौथे बल्ब पर रुक जाए?",
+    "problem_hg_030": "Box mein 10 bulbs hain, 3 defective. One by one check karte hain without replacement jab tak defective na mile. Testing 4th bulb par stop hone ki probability kya hai?",
+    "problem_hg_065": "10 bulbs mein se 3 kharab hain. Bina badle check kiya jab tak kharab na mile. 4th bulb par process rukne ki probability find karo pehle karo phir step skip mat karna.",
+    "gold_answer": "7/40",
+    "gold_answer_num": 0.175,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: Stop at 4th means: G1, G2, G3, D4.",
+      "Step 2: P(G1) = 7/10.",
+      "Step 3: P(G2|G1) = 6/9.",
+      "Step 4: P(G3|G1, G2) = 5/8.",
+      "Step 5: P(D4|G1, G2, G3) = 3/7.",
+      "Step 6: P = (7/10) * (6/9) * (5/8) * (3/7) = (653) / (1098) = 90 / 720 = 1/8. Let me check: (7/10)(2/3)(5/8)(3/7) = (103) / (1038) = 1/8. No, 7s cancel, 33=9, 6/9 is 2/3. 25 is 10. 10/10 cancels. 1/8 remaining.",
+      "Step 7: Calculation verify: 7/10 * 6/9 * 5/8 * 3/7 = (7653)/(10987) = 630/5040 = 1/8.",
+      "Final: 1/8"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: 'Pehle karo phir' (do first then) acts as a sequence inhibitor, making the LLM perhaps stop at the first defective or calculate the 4th independently.",
+    "why_hard": "Standard 'without replacement' tree path calculation where the sample space decreases each step.",
+    "tags": [
+      "without_replacement",
+      "conditional_probability",
+      "sequential_sampling"
+    ]
+  },
+  {
+    "problem_en": "In a town, 3.75 lakh people are divided into two wards. Ward A has 60% of people and 5% are smokers. Ward B has 40% of people and 10% are smokers. A person is selected and found to be a smoker. What is the probability they belong to Ward B?",
+    "problem_hi": "एक शहर में 3.75 लाख लोग दो वार्डों में विभाजित हैं। वार्ड A में 60% लोग हैं और 5% धूम्रपान करने वाले हैं। वार्ड B में 40% लोग हैं और 10% धूम्रपान करने वाले हैं। एक व्यक्ति चुना जाता है और धूम्रपान करने वाला पाया जाता है। उसके वार्ड B से होने की प्रायिकता क्या है?",
+    "problem_hg_030": "Town mein 3.75 lakh log 2 wards mein divided hain. Ward A mein 60% aur 5% smokers. Ward B mein 40% aur 10% smokers. Ek smoker mila, probability kya hai ki wo Ward B se hai?",
+    "problem_hg_065": "Ek sheher mein 3 lakh 75 hazaar log hain. Ward A mein 60% log hain aur 5% smokers, baaki Ward B mein 10% smokers. Smoker milne par probability nikalo ki wo Ward B ka tha.",
+    "gold_answer": "4/7",
+    "gold_answer_num": 0.5714285714285714,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(A) = 0.6, P(B) = 0.4.",
+      "Step 2: P(S|A) = 0.05, P(S|B) = 0.10.",
+      "Step 3: Total P(S) = (0.6 * 0.05) + (0.4 * 0.10) = 0.03 + 0.04 = 0.07.",
+      "Step 4: P(B|S) = 0.04 / 0.07 = 4/7.",
+      "Final: 4/7"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar: This notation trap '3 lakh 75 hazaar' (375,000) is irrelevant to the probability but may distract the LLM into using the raw population count in the denominator.",
+    "why_hard": "Tests whether the LLM can ignore large irrelevant numbers and use proportions correctly.",
+    "tags": [
+      "bayes_theorem",
+      "demographics",
+      "irrelevant_data"
+    ]
+  },
+  {
+    "problem_en": "A biased coin (Heads with probability 0.6) is tossed. If it shows Heads, a ball is drawn from Bag 1 (4R, 2B). If Tails, a ball is drawn from Bag 2 (2R, 4B). If the ball drawn is red, what is the probability the coin showed Tails?",
+    "problem_hi": "एक पक्षपाती सिक्का (0.6 प्रायिकता के साथ चित) उछाला जाता है। यदि यह चित दिखाता है, तो बैग 1 (4R, 2B) से एक गेंद निकाली जाती है। यदि पट दिखाता है, तो बैग 2 (2R, 4B) से एक गेंद निकाली जाती है। यदि निकाली गई गेंद लाल है, तो सिक्के द्वारा पट दिखाए जाने की प्रायिकता क्या है?",
+    "problem_hg_030": "Biased coin (Heads prob 0.6) toss kiya. Agar heads hai, toh Bag 1 (4R, 2B) se ball nikali. Agar tails, toh Bag 2 (2R, 4B) se. Agar ball red hai, toh tails ki probability kya hai?",
+    "problem_hg_065": "Biased coin (H: 0.6) toss kiya. Heads aane par Bag 1 (4R, 2B) aur tails par Bag 2 (2R, 4B). Red ball nikalne ke baad, tails aane ki probability find karo A se 20% zyada logic ke bina.",
+    "gold_answer": "4/22",
+    "gold_answer_num": 0.18181818181818182,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(H) = 0.6, P(T) = 0.4.",
+      "Step 2: P(R|H) = 4/6 = 2/3.",
+      "Step 3: P(R|T) = 2/6 = 1/3.",
+      "Step 4: Total P(R) = (0.6 * 2/3) + (0.4 * 1/3) = 1.2/3 + 0.4/3 = 1.6/3.",
+      "Step 5: P(T|R) = (0.4/3) / (1.6/3) = 0.4 / 1.6 = 1/4 = 0.25.",
+      "Final: 0.25"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: The 'A se 20% zyada' (20% more than A) is a distractor phrase that might make the LLM adjust the probabilities of Bag 1 or Bag 2 selection.",
+    "why_hard": "Combines a biased binomial outcome with distinct urn outcomes.",
+    "tags": [
+      "conditional_probability",
+      "urn_models",
+      "biased_coin"
+    ]
+  },
+  {
+    "problem_en": "A gambler has two decks. Deck 1 is standard. Deck 2 has only red cards. He picks a deck at random and draws 2 cards without replacement. Given both are red, what is the probability he picked Deck 2?",
+    "problem_hi": "एक जुआरी के पास दो गड्डियां हैं। गड्डी 1 मानक है। गड्डी 2 में केवल लाल कार्ड हैं। वह यादृच्छिक रूप से एक गड्डी चुनता है और बिना प्रतिस्थापन के 2 कार्ड निकालता है। यह देखते हुए कि दोनों लाल हैं, उसके द्वारा गड्डी 2 चुने जाने की प्रायिकता क्या है?",
+    "problem_hg_030": "Gambler ke paas 2 decks hain. Deck 1 standard hai. Deck 2 mein sirf red cards hain. Randomly ek deck choose karke 2 cards nikale without replacement. Agar dono red hain, toh Deck 2 ki probability kya hai?",
+    "problem_hg_065": "2 decks hain: ek standard aur doosra full red. Ek deck se 2 card nikale aur dono red nikle. Probability nikalo ki wo full red deck tha aur 10 aur log line mein khade the.",
+    "gold_answer": "102/127",
+    "gold_answer_num": 0.8031496062992126,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(D1) = 1/2, P(D2) = 1/2.",
+      "Step 2: P(2R|D1) = (26/52) * (25/51) = 1/2 * 25/51 = 25/102.",
+      "Step 3: P(2R|D2) = 1 (all cards are red).",
+      "Step 4: Total P(2R) = (1/2 * 25/102) + (1/2 * 1) = 25/204 + 1/2 = (25 + 102)/204 = 127/204.",
+      "Step 5: P(D2|2R) = (1/2) / (127/204) = 102/127.",
+      "Final: 102/127"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: '10 aur log' (10 more people) is an additive trap that might lead the LLM to think 10 cards were drawn or adjust the deck size.",
+    "why_hard": "Requires calculating without-replacement probabilities for a standard deck and comparing against a certain event.",
+    "tags": [
+      "bayes_theorem",
+      "cards",
+      "without_replacement"
+    ]
+  },
+  {
+    "problem_en": "An investment has a 60% chance of success in year 1. If it succeeds, it has a 70% chance of success in year 2. If it fails, it has only 20% chance of success in year 2. What is the probability it succeeds in year 2?",
+    "problem_hi": "एक निवेश के पहले वर्ष में सफल होने की 60% संभावना है। यदि यह सफल होता है, तो दूसरे वर्ष में इसके सफल होने की 70% संभावना है। यदि यह विफल रहता है, तो दूसरे वर्ष में इसके सफल होने की केवल 20% संभावना है। इसके दूसरे वर्ष में सफल होने की प्रायिकता क्या है?",
+    "problem_hg_030": "Ek investment ka year 1 mein success chance 60% hai. Agar success hua, toh year 2 mein 70% chance hai. Agar fail hua, toh year 2 mein 20% chance hai. Year 2 mein success ki probability kya hai?",
+    "problem_hg_065": "Investment success ka chance pehle saal 60% hai. Agar success ho gaya, toh agle saal 70% chance, warna fail hone par 20% chance. 6 mahine baad logic ke bina year 2 success probability nikalo.",
+    "gold_answer": "1/2",
+    "gold_answer_num": 0.5,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(S1) = 0.6, P(F1) = 0.4.",
+      "Step 2: P(S2|S1) = 0.7, P(S2|F1) = 0.2.",
+      "Step 3: Total P(S2) = P(S1)P(S2|S1) + P(F1)P(S2|F1).",
+      "Step 4: P(S2) = (0.6 * 0.7) + (0.4 * 0.2) = 0.42 + 0.08 = 0.50.",
+      "Final: 0.5"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad: In annual rate problems, '6 mahine baad' (after 6 months) often implies semi-annual compounding. Here, it is used to trick the LLM into splitting the year 1 to year 2 transition.",
+    "why_hard": "Multi-stage dependency where failure doesn't end the process but alters the future probability.",
+    "tags": [
+      "markov_chain_basics",
+      "conditional_probability",
+      "investment"
+    ]
+  },
+  {
+    "problem_en": "Two people A and B throw a die. A wins if he throws a 6. B wins if he throws a 5 or 6. They alternate turns with A starting. What is the probability that A wins?",
+    "problem_hi": "दो लोग A और B पासा फेंकते हैं। A जीतता है यदि वह 6 फेंकता है। B जीतता है यदि वह 5 या 6 फेंकता है। वे A के साथ शुरुआत करते हुए बारी-बारी से पासा फेंकते हैं। A के जीतने की प्रायिकता क्या है?",
+    "problem_hg_030": "A aur B die throw karte hain. A tab jeetega jab 6 aaye. B tab jeetega jab 5 ya 6 aaye. A start karta hai aur alternate turns hote hain. A ke jeetne ki probability kya hai?",
+    "problem_hg_065": "A aur B die throw kar rahe hain. A ko 6 chahiye jeetne ke liye, B ko 5 aur 6 dono ko. A ne start kiya. A ki win probability find karo.",
+    "gold_answer": "18/43",
+    "gold_answer_num": 0.4186046511627907,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(A wins turn) = 1/6, P(A fails) = 5/6.",
+      "Step 2: P(B wins turn) = 2/6 = 1/3, P(B fails) = 2/3.",
+      "Step 3: A wins on 1st, 3rd, 5th... turns.",
+      "Step 4: P(A wins) = (1/6) + (5/6 * 2/3 * 1/6) + (5/6 * 2/3 * 5/6 * 2/3 * 1/6) + ...",
+      "Step 5: Infinite GP with a = 1/6 and r = (5/6 * 2/3) = 10/18 = 5/9.",
+      "Step 6: Sum = (1/6) / (1 - 5/9) = (1/6) / (4/9) = 9/24 = 3/8. Let me re-check.",
+      "Step 7: Sum = (1/6) / (1 - (5/6)*(2/3)) = (1/6) / (1 - 10/18) = (1/6) / (8/18) = (1/6) * (18/8) = 3/8.",
+      "Final: 3/8"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: 'Dono ko' (both) implies B needs both 5 AND 6 in the same throw (impossible) or either. LLMs often get stuck on the logical AND vs OR for 'dono'.",
+    "why_hard": "Infinite series with different failure probabilities for each player in the sequence.",
+    "tags": [
+      "infinite_series",
+      "game_theory",
+      "probability_of_winning"
+    ]
+  },
+  {
+    "problem_en": "A car either hits a pothole or not. Probability of hitting a pothole is 0.2. If it hits, the probability of a flat tire is 0.8. If it doesn't hit, the probability of a flat tire is 0.05. Given the car has a flat tire, what is the probability it hit a pothole?",
+    "problem_hi": "एक कार या तो गड्ढे से टकराती है या नहीं। गड्ढे से टकराने की प्रायिकता 0.2 है। यदि यह टकराती है, तो टायर फटने की प्रायिकता 0.8 है। यदि यह नहीं टकराती है, तो टायर फटने की प्रायिकता 0.05 है। यह देखते हुए कि कार का टायर फट गया है, गड्ढे से टकराने की प्रायिकता क्या है?",
+    "problem_hg_030": "Car pothole se takrati hai ya nahi. Takrane ki prob 0.2 hai. Agar takrati hai, toh flat tire ki prob 0.8 hai. Agar nahi takrati, toh flat tire ki prob 0.05 hai. Tire flat hone par pothole hit hone ki probability kya hai?",
+    "problem_hg_065": "Gadda (pothole) hit hone ki prob 0.2 hai. Hit hua toh flat tire ka chance 0.8, warna na hit hone par 0.05. Tire flat nikla, toh probability find karo ki gadda hit hua tha na 2 se na 5 se divisible logic se.",
+    "gold_answer": "16/20",
+    "gold_answer_num": 0.8,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "multi_stage_tree",
+    "solution_steps_en": [
+      "Step 1: P(H) = 0.2, P(NH) = 0.8.",
+      "Step 2: P(F|H) = 0.8, P(F|NH) = 0.05.",
+      "Step 3: Total P(F) = (0.2 * 0.8) + (0.8 * 0.05) = 0.16 + 0.04 = 0.20.",
+      "Step 4: P(H|F) = 0.16 / 0.20 = 16/20 = 0.8.",
+      "Final: 0.8"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: Distractor logic that might lead the LLM to filter out certain probability values (like 0.2 or 0.05) incorrectly.",
+    "why_hard": "Simple Bayes problem where the 'no-hit' path contributes significantly to the total probability, testing baseline logical flow.",
+    "tags": [
+      "bayes_theorem",
+      "conditional_probability",
+      "flat_tire"
+    ]
+  }
+]

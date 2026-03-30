@@ -1,0 +1,360 @@
+[
+  {
+    "problem_en": "A vessel contains 100 liters of pure milk. 20 liters of milk is replaced by water. This process is repeated two more times. Finally, what is the ratio of milk to water in the vessel?",
+    "problem_hi": "एक बर्तन में 100 लीटर शुद्ध दूध है। 20 लीटर दूध को पानी से बदल दिया जाता है। यह प्रक्रिया दो बार और दोहराई जाती है। अंत में, बर्तन में दूध और पानी का अनुपात क्या है?",
+    "problem_hg_030": "Ek vessel mein 100 liters pure milk hai. 20 liters milk ko water se replace kiya jata hai. Ye process two more times repeat kiya jata hai. Finally, vessel mein milk aur water ka ratio kya hai?",
+    "problem_hg_065": "Vessel mein 100 liters pure milk hai. 'Pehle' 20 liters milk nikaal kar water daala, 'phir' ye process '2 aur' baar repeat kiya gaya. Final mixture mein milk aur water ka ratio calculate karo.",
+    "gold_answer": "64:61",
+    "gold_answer_num": 1.049,
+    "unit": "ratio",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Use the formula for remaining liquid: Final = Initial(1 - x/V)^n. Here V=100, x=20, n=3 (initial + 2 more).",
+      "Step 2: Remaining Milk = 100(1 - 20/100)^3 = 100(4/5)^3 = 100(64/125) = 51.2 liters.",
+      "Step 3: Remaining Water = 100 - 51.2 = 48.8 liters.",
+      "Step 4: Ratio Milk:Water = 51.2 : 48.8 = 512 : 488. Dividing by 8 gives 64 : 61."
+    ],
+    "linguistic_trap_in_hg065": "The '2 aur' trap: In Hinglish, '2 aur' means '2 more' (total 3 operations). LLMs often assume only 2 operations total or ignore the 'aur' additive property.",
+    "why_hard": "LLMs often struggle with the total count of operations when 'n more times' is phrased using additive Hinglish markers.",
+    "tags": [
+      "repeated_dilution",
+      "ratio"
+    ]
+  },
+  {
+    "problem_en": "A container holds 80 liters of wine. 8 liters are withdrawn and replaced by water. Again 8 liters of the mixture are withdrawn and replaced by water. After one more such operation, find the quantity of wine left in the container.",
+    "problem_hi": "एक कंटेनर में 80 लीटर वाइन है। 8 लीटर निकाली जाती है और पानी से बदल दी जाती है। फिर से 8 लीटर मिश्रण निकाला जाता है और पानी से बदल दिया जाता है। एक और ऐसी प्रक्रिया के बाद, कंटेनर में बची हुई वाइन की मात्रा ज्ञात कीजिए।",
+    "problem_hg_030": "Container mein 80 liters wine hai. 8 liters withdraw karke water se replace kiya. Again 8 liters mixture withdraw karke water se replace kiya. After one more operation, wine ki quantity find karein.",
+    "problem_hg_065": "80 liters wine mein se 8 liters 'withdraw kar liya' aur water daal diya. Ye cheez total 3 baar 'baaki' rahi mixture ke saath. Container mein kitni wine bachi?",
+    "gold_answer": "58.32",
+    "gold_answer_num": 58.32,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Initial = 80, x = 8, n = 3.",
+      "Step 2: Amount left = 80(1 - 8/80)^3.",
+      "Step 3: Calculation: 80(0.9)^3 = 80(0.729).",
+      "Step 4: Result = 58.32 liters."
+    ],
+    "linguistic_trap_in_hg065": "The 'Withdraw kar liya' timing trap: The phrasing 'withdraw kar liya' used with 'baaki' (remaining) can confuse the LLM into thinking the withdrawal happened after the mixture was already diluted in a specific sequence.",
+    "why_hard": "The prompt uses 'baaki' in a temporal sense (remaining steps) rather than a mathematical sense (remaining volume).",
+    "tags": [
+      "wine_water",
+      "subtraction"
+    ]
+  },
+  {
+    "problem_en": "A cask is full of spirit. 10 liters are drawn out and the cask is filled with water. This is done a second time. The ratio of the quantity of spirit now left to that of the water is 144:25. Find the capacity of the cask.",
+    "problem_hi": "एक पीपा स्पिरिट से भरा है। 10 लीटर निकाला जाता है और पीपे को पानी से भर दिया जाता है। ऐसा दूसरी बार किया जाता है। अब बचे हुए स्पिरिट और पानी का अनुपात 144:25 है। पीपे की क्षमता ज्ञात कीजिए।",
+    "problem_hg_030": "Cask spirit se full hai. 10 liters draw karke water fill kiya. Ye second time bhi kiya gaya. Spirit aur water ka ratio 144:25 hai. Cask ki capacity find karein.",
+    "problem_hg_065": "Spirit ka cask hai. 10 liters nikala 'phir' water daala. Ye 'na 1 baar na 3 baar' balki total 2 baar kiya. Ratio spirit to water 144:25 hai. Total capacity kitni hai?",
+    "gold_answer": "130",
+    "gold_answer_num": 130.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Let capacity be V. Spirit/Total = (1 - 10/V)^2.",
+      "Step 2: Spirit/(Spirit+Water) = 144/(144+25) = 144/169.",
+      "Step 3: (1 - 10/V)^2 = (12/13)^2 => 1 - 10/V = 12/13.",
+      "Step 4: 10/V = 1/13 => V = 130."
+    ],
+    "linguistic_trap_in_hg065": "The 'Na...na' double negation trap: 'na 1 baar na 3 baar' (neither 1 nor 3 times) is a specific way to say 2 times. LLMs often fail to parse the numeric constraint from this negative phrasing.",
+    "why_hard": "Double negation in natural language often causes LLMs to choose one of the mentioned numbers (1 or 3) instead of the implied 2.",
+    "tags": [
+      "cask_capacity",
+      "ratio_inverse"
+    ]
+  },
+  {
+    "problem_en": "From a tank of 200 liters of acid, a certain amount is replaced by water. The process is repeated once more. If the final quantity of acid is 162 liters, how much acid was replaced each time?",
+    "problem_hi": "200 लीटर एसिड के टैंक से, एक निश्चित मात्रा को पानी से बदल दिया जाता है। यह प्रक्रिया एक बार और दोहराई जाती है। यदि एसिड की अंतिम मात्रा 162 लीटर है, तो प्रत्येक बार कितना एसिड बदला गया था?",
+    "problem_hg_030": "200 liters acid ke tank se, certain amount water se replace kiya jata hai. Process one more time repeat hota hai. Final acid 162 liters hai, toh replacement amount find karein.",
+    "problem_hg_065": "200 liters acid tank mein se kuch amount 'withdraw kar liya' gaya. Ye 'phir' se ek baar aur hua. Final acid volume 'sirf' 162 liters hai. Har baar kitna liters nikala?",
+    "gold_answer": "20",
+    "gold_answer_num": 20.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Final = Initial(1 - x/V)^n. 162 = 200(1 - x/200)^2.",
+      "Step 2: 162/200 = 81/100 = (1 - x/200)^2.",
+      "Step 3: Taking square root: 9/10 = 1 - x/200.",
+      "Step 4: x/200 = 1/10 => x = 20."
+    ],
+    "linguistic_trap_in_hg065": "The 'Sirf' trap: 'Sirf 162 liters' means 'exactly' or 'only', but when coupled with 'withdraw', LLMs often mistake the final quantity for the amount removed.",
+    "why_hard": "The word 'sirf' changes the logic of the final value from 'amount remaining' to potentially 'amount lost' if the LLM mis-associates the adverb.",
+    "tags": [
+      "acid_dilution",
+      "variable_replacement"
+    ]
+  },
+  {
+    "problem_en": "A vessel has 400 liters of milk. 40 liters are replaced by water. Next, 80 liters of mixture are replaced by water. Finally, 100 liters of mixture are replaced by water. Find the final amount of milk.",
+    "problem_hi": "एक बर्तन में 400 लीटर दूध है। 40 लीटर को पानी से बदल दिया जाता है। इसके बाद, 80 लीटर मिश्रण को पानी से बदल दिया जाता है। अंत में, 100 लीटर मिश्रण को पानी से बदल दिया जाता है। दूध की अंतिम मात्रा ज्ञात कीजिए।",
+    "problem_hg_030": "Vessel mein 400 liters milk hai. 40 liters water se replace kiya. Next, 80 liters mixture replace kiya. Finally, 100 liters mixture replace kiya. Final milk find karein.",
+    "problem_hg_065": "400 liters milk mein se 40 liters nikal kar water dala, 'phir' 80 liters 'aur' nikal kar water dala. 'Baaki' bache mixture mein se 100 liters water se replace kiya. Milk kitna bacha?",
+    "gold_answer": "216",
+    "gold_answer_num": 216.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Remaining = 400(1 - 40/400)(1 - 80/400)(1 - 100/400).",
+      "Step 2: 400(360/400)(320/400)(300/400) = 400(9/10)(4/5)(3/4).",
+      "Step 3: 400 * 0.9 * 0.8 * 0.75.",
+      "Step 4: 360 * 0.6 = 216 liters."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' ambiguity: '80 liters aur' (80 liters more) can be confused as additive (40+80) rather than a separate sequential replacement step of 80L.",
+    "why_hard": "Non-uniform replacement volumes are harder, and 'aur' adds ambiguity to whether the second volume is 80 or 120.",
+    "tags": [
+      "non_uniform_replacement",
+      "sequential"
+    ]
+  },
+  {
+    "problem_en": "8 liters are drawn from a cask full of wine and replaced with water. This operation is performed three more times. The ratio of the quantity of wine now left in the cask to that of water is 16:65. How much wine did the cask hold originally?",
+    "problem_hi": "वाइन से भरे एक पीपे से 8 लीटर निकाली जाती है और पानी से बदल दी जाती है। यह प्रक्रिया तीन बार और की जाती है। अब पीपे में बची वाइन और पानी का अनुपात 16:65 है। पीपे में मूल रूप से कितनी वाइन थी?",
+    "problem_hg_030": "8 liters draw karke water se replace kiya. Ye operation three more times perform kiya. Wine aur water ka ratio 16:65 hai. Original wine find karein.",
+    "problem_hg_065": "8 liters wine nikaal kar water daala, 'phir' ye process '3 aur' baar kiya gaya. Final ratio 16:65 'baaki' raha. Shuruat mein kitna wine tha?",
+    "gold_answer": "24",
+    "gold_answer_num": 24.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Total operations n = 1 + 3 = 4.",
+      "Step 2: Wine/Total = (1 - 8/V)^4. Ratio Wine:Water is 16:65, so Wine:Total is 16:81.",
+      "Step 3: (1 - 8/V)^4 = 16/81 = (2/3)^4.",
+      "Step 4: 1 - 8/V = 2/3 => 8/V = 1/3 => V = 24."
+    ],
+    "linguistic_trap_in_hg065": "The '3 aur' trap: '3 aur' means n=4. LLMs often take the number seen (3) and use it as n=3, missing the first step.",
+    "why_hard": "Exponent calculation from a ratio where the total volume is the sum of components is a common failure point.",
+    "tags": [
+      "fourth_power",
+      "original_volume"
+    ]
+  },
+  {
+    "problem_en": "A jar contains a mixture of two liquids A and B in the ratio 4:1. When 10 liters of the mixture are taken out and 10 liters of liquid B are poured into the jar, the ratio becomes 2:3. How many liters of liquid A was contained in the jar initially?",
+    "problem_hi": "एक जार में दो तरल पदार्थों A और B का मिश्रण 4:1 के अनुपात में है। जब 10 लीटर मिश्रण निकाला जाता है और 10 लीटर तरल B जार में डाला जाता है, तो अनुपात 2:3 हो जाता है। प्रारंभ में जार में तरल A की कितनी मात्रा थी?",
+    "problem_hg_030": "Jar mein liquids A aur B ka ratio 4:1 hai. 10 liters mixture nikaal kar 10 liters liquid B daala, ratio 2:3 ho gaya. Initially A kitna tha?",
+    "problem_hg_065": "A aur B ka ratio 4:1 hai. Mixture se 10 liters 'withdraw kar liya' aur 'sirf' B daal diya. Ratio 'pehle' se badal kar 2:3 ho gaya. Shuruat mein A ki quantity kya thi?",
+    "gold_answer": "16",
+    "gold_answer_num": 16.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Let A = 4x, B = x. Total = 5x. 10L removed contains 8L of A and 2L of B.",
+      "Step 2: New A = 4x - 8. New B = x - 2 + 10 = x + 8.",
+      "Step 3: (4x - 8)/(x + 8) = 2/3 => 12x - 24 = 2x + 16.",
+      "Step 4: 10x = 40 => x = 4. Initial A = 4(4) = 16."
+    ],
+    "linguistic_trap_in_hg065": "The 'Sirf' trap: 'Sirf B' indicates only B was added to replace the mixture. 'Pehle' is used to define the initial state, testing if the model tracks the change correctly.",
+    "why_hard": "Requires simultaneous understanding of ratio subtraction and replacement logic.",
+    "tags": [
+      "mixture_replacement",
+      "ratio_change"
+    ]
+  },
+  {
+    "problem_en": "A 500 liter container is full of pure chemical. 'x' liters are replaced with water. Then 'x' liters of the mixture are replaced with water. If the ratio of chemical to water is 9:16, find 'x'.",
+    "problem_hi": "500 लीटर का कंटेनर शुद्ध रसायन से भरा है। 'x' लीटर को पानी से बदल दिया जाता है। फिर 'x' लीटर मिश्रण को पानी से बदल दिया जाता है। यदि रसायन और पानी का अनुपात 9:16 है, तो 'x' ज्ञात कीजिए।",
+    "problem_hg_030": "500 liter container pure chemical se full hai. 'x' liters water se replace kiya. Then 'x' liters mixture replace kiya. Chemical to water ratio 9:16 hai, x find karein.",
+    "problem_hg_065": "500 liters pure chemical mein se 'x' liters nikala 'phir' water daala. Ye 'baaki' baar bhi repeat hua. Ratio 'sirf' 9:16 'baaki' bacha. x ki value kya hai?",
+    "gold_answer": "200",
+    "gold_answer_num": 200.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: n = 2 operations. Chemical/Total = (1 - x/500)^2.",
+      "Step 2: 9/(9+16) = 9/25 = (1 - x/500)^2.",
+      "Step 3: 3/5 = 1 - x/500.",
+      "Step 4: x/500 = 2/5 => x = 200."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' trap: 'Baaki baar' is used to denote the remaining/second operation. LLMs often get confused if 'baaki' refers to volume or time.",
+    "why_hard": "Ambiguity in iteration count and variable substitution using 'baaki'.",
+    "tags": [
+      "chemical_water",
+      "sqrt_ratio"
+    ]
+  },
+  {
+    "problem_en": "A vessel of 120 liters is filled with milk. 12 liters of milk are replaced by water. Again, 24 liters of the mixture are replaced by water. Find the ratio of water to milk in the final mixture.",
+    "problem_hi": "120 लीटर का एक बर्तन दूध से भरा है। 12 लीटर दूध को पानी से बदल दिया जाता है। फिर से, 24 लीटर मिश्रण को पानी से बदल दिया जाता है। अंतिम मिश्रण में पानी और दूध का अनुपात ज्ञात कीजिए।",
+    "problem_hg_030": "120 liters vessel milk se bhara hai. 12 liters milk water se replace kiya. Again, 24 liters mixture replace kiya. Final mixture mein water to milk ratio find karein.",
+    "problem_hg_065": "120 liters milk mein se 'pehle' 12 liters nikal kar water dala. 'Phir' 24 liters 'zyada' nikal kar water dala (nahi, total 24 liters). Final mixture mein water aur milk ka ratio batao.",
+    "gold_answer": "7:18",
+    "gold_answer_num": 0.388,
+    "unit": "ratio",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Final Milk = 120(1 - 12/120)(1 - 24/120).",
+      "Step 2: 120(9/10)(4/5) = 120(36/50) = 86.4 liters.",
+      "Step 3: Water = 120 - 86.4 = 33.6 liters.",
+      "Step 4: Water:Milk = 33.6 : 86.4 = 7:18."
+    ],
+    "linguistic_trap_in_hg065": "The 'Zyada' trap: '24 liters zyada' suggests 12+24=36, but the prompt self-corrects '(nahi, total 24)'. LLMs often fail to handle parenthetical self-corrections.",
+    "why_hard": "Self-correction logic and non-uniform dilution steps.",
+    "tags": [
+      "non_uniform",
+      "self_correction"
+    ]
+  },
+  {
+    "problem_en": "A container contains 64 liters of pure milk. One-fourth of the milk is replaced by water. Again, one-fourth of the mixture is replaced by water. This is done for a total of 3 times. What is the final quantity of water in the container?",
+    "problem_hi": "एक कंटेनर में 64 लीटर शुद्ध दूध है। दूध का एक-चौथाई हिस्सा पानी से बदल दिया जाता है। फिर से, मिश्रण का एक-चौथाई हिस्सा पानी से बदल दिया जाता है। यह कुल 3 बार किया जाता है। कंटेनर में पानी की अंतिम मात्रा क्या है?",
+    "problem_hg_030": "Container mein 64 liters pure milk hai. One-fourth water se replace kiya. Again, one-fourth mixture replace kiya. Ye total 3 times kiya. Final water quantity kya hai?",
+    "problem_hg_065": "64 liters milk ka container hai. Har baar '1/4' withdraw karke water daal dete hain. Aise '3 lakh 75 hazaar' bar toh nahi, par total 3 baar kiya. Final mixture mein water kitna hai?",
+    "gold_answer": "37",
+    "gold_answer_num": 37.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Final Milk = 64(1 - 1/4)^3 = 64(27/64) = 27 liters.",
+      "Step 2: Final Water = Total - Milk = 64 - 27 = 37 liters.",
+      "Step 3: Final answer is 37."
+    ],
+    "linguistic_trap_in_hg065": "Indian number notation distractor: '3 lakh 75 hazaar' is used as a numerical distractor even though it is negated. LLMs often get distracted by large figures.",
+    "why_hard": "Fractional dilution with large numerical distractors in Indian notation.",
+    "tags": [
+      "fractional_replacement",
+      "distractor"
+    ]
+  },
+  {
+    "problem_en": "A mixture of 70 liters of wine and water contains 10% water. How many liters of water must be added to make it 25% of the new mixture?",
+    "problem_hi": "70 लीटर वाइन और पानी के मिश्रण में 10% पानी है। नए मिश्रण में इसे 25% बनाने के लिए कितने लीटर पानी मिलाया जाना चाहिए?",
+    "problem_hg_030": "70 liters wine-water mixture mein 10% water hai. Water kitna add karein ki new mixture mein 25% water ho jaye?",
+    "problem_hg_065": "70 liters wine aur water ke mixture mein 'sirf' 10% pani hai. 'Aur' kitna pani milaun taaki naye mixture mein 25% pani 'baaki' bache?",
+    "gold_answer": "14",
+    "gold_answer_num": 14.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Initial Water = 10% of 70 = 7L. Initial Wine = 63L.",
+      "Step 2: In the new mixture, Wine (63L) represents 75% (100-25).",
+      "Step 3: Total new volume = 63 / 0.75 = 84L.",
+      "Step 4: Water to be added = 84 - 70 = 14L."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' trap: 'Aur kitna pani' (how much more) asks for the additive change, whereas 'sirf' and 'baaki' act as boundary constraints.",
+    "why_hard": "Requires component-wise stability analysis (wine remains constant).",
+    "tags": [
+      "percentage_change",
+      "additive_volume"
+    ]
+  },
+  {
+    "problem_en": "A vessel is full of a mixture of kerosene and petrol in which there is 18% kerosene. Eight liters are drawn off and then the vessel is filled with petrol. If the kerosene is now 15%, how much does the vessel hold?",
+    "problem_hi": "एक बर्तन केरोसिन और पेट्रोल के मिश्रण से भरा है जिसमें 18% केरोसिन है। आठ लीटर निकाला जाता है और फिर बर्तन पेट्रोल से भर दिया जाता है। यदि केरोसिन अब 15% है, तो बर्तन में कितना तरल आता है?",
+    "problem_hg_030": "Vessel kerosene aur petrol mixture se full hai (18% kerosene). 8 liters draw karke petrol fill kiya. Agar kerosene ab 15% hai, toh vessel capacity kya hai?",
+    "problem_hg_065": "Ek vessel mein kerosene 18% hai. 8 liters mixture 'withdraw kar liya' gaya 'phir' 'sirf' petrol daala. Ab kerosene 'baaki' 15% hai. Total capacity batao.",
+    "gold_answer": "48",
+    "gold_answer_num": 48.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: 15% = 18%(1 - 8/V).",
+      "Step 2: 15/18 = 1 - 8/V => 5/6 = 1 - 8/V.",
+      "Step 3: 8/V = 1/6.",
+      "Step 4: V = 48 liters."
+    ],
+    "linguistic_trap_in_hg065": "The 'Withdraw' and 'Sirf' trap: Mapping 'withdraw' to the dilution formula parameter 'x' and 'sirf' to the purity of the replacement liquid.",
+    "why_hard": "Relating the percentage change to the volume replacement in a fixed-size container.",
+    "tags": [
+      "concentration_reduction",
+      "vessel_capacity"
+    ]
+  },
+  {
+    "problem_en": "Pure milk is worth $10 per liter. After 5 liters of water are added to a certain quantity of milk, the mixture is worth $8 per liter. What was the original quantity of milk?",
+    "problem_hi": "शुद्ध दूध की कीमत ₹10 प्रति लीटर है। दूध की एक निश्चित मात्रा में 5 लीटर पानी मिलाने के बाद, मिश्रण की कीमत ₹8 प्रति लीटर हो जाती है। दूध की मूल मात्रा क्या थी?",
+    "problem_hg_030": "Pure milk $10/liter hai. 5 liters water add karne ke baad, price $8/liter ho jati hai. Original milk quantity find karein.",
+    "problem_hg_065": "Pure milk ₹10 ka hai. Usme '5 liters aur' pani dala 'phir' price ₹8 ho gaya. 'Pehle' kitna doodh tha?",
+    "gold_answer": "20",
+    "gold_answer_num": 20.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Cost of Milk = 10, Cost of Water = 0. Mean Price = 8.",
+      "Step 2: Ratio of Milk:Water = (8-0) : (10-8) = 8 : 2 = 4 : 1.",
+      "Step 3: Since Water = 5L (which is 1 part), Milk (4 parts) = 5 * 4 = 20L.",
+      "Step 4: Initial milk = 20L."
+    ],
+    "linguistic_trap_in_hg065": "The '5 liters aur' trap: 'Aur' implies addition to the unknown 'pehle' (initial) quantity. LLMs might confuse the price-based alligation weights.",
+    "why_hard": "Alligation with an unknown initial volume but known additive volume.",
+    "tags": [
+      "alligation_price",
+      "milk_water"
+    ]
+  },
+  {
+    "problem_en": "A container contains 1000 liters of ethanol. 100 liters is removed and replaced with water. Next, 200 liters is removed and replaced with water. Finally, 300 liters is removed and replaced with water. Find the final percentage of ethanol.",
+    "problem_hi": "एक कंटेनर में 1000 लीटर इथेनॉल है। 100 लीटर निकाला जाता है और पानी से बदल दिया जाता है। इसके बाद, 200 लीटर निकाला जाता है और पानी से बदल दिया जाता है। अंत में, 300 लीटर निकाला जाता है और पानी से बदल दिया जाता है। इथेनॉल का अंतिम प्रतिशत ज्ञात कीजिए।",
+    "problem_hg_030": "Container mein 1000 liters ethanol hai. 100 replace kiya, then 200, then 300. Final percentage find karein.",
+    "problem_hg_065": "1000 liters ethanol hai. 'Pehle' 100 nikal kar water dala. 'Phir' 200 'aur' nikal kar pani dala. Last mein 300 liters 'withdraw kar liya' aur water dala. Ethanol kitne % 'baaki' hai?",
+    "gold_answer": "50.4",
+    "gold_answer_num": 50.4,
+    "unit": "percent",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Final ethanol = 1000(1 - 100/1000)(1 - 200/1000)(1 - 300/1000).",
+      "Step 2: 1000(0.9)(0.8)(0.7) = 1000(0.504).",
+      "Step 3: Ethanol remaining = 504 liters.",
+      "Step 4: Percentage = (504/1000) * 100 = 50.4%."
+    ],
+    "linguistic_trap_in_hg065": "The 'Withdraw' vs 'Replace' trap: The prompt says 'withdraw' for the last step; LLMs might forget to account for the water replacement in the final step of a multi-step Hinglish sequence.",
+    "why_hard": "Compounded dilution with different replacement volumes.",
+    "tags": [
+      "compounded_dilution",
+      "percentage"
+    ]
+  },
+  {
+    "problem_en": "A vessel contains 60 liters of milk. 12 liters of milk are taken out and replaced by water. Again 12 liters of mixture are taken out and replaced by water. Find the final quantity of milk in the vessel.",
+    "problem_hi": "एक बर्तन में 60 लीटर दूध है। 12 लीटर दूध निकाला जाता है और पानी से बदल दिया जाता है। फिर से 12 लीटर मिश्रण निकाला जाता है और पानी से बदल दिया जाता है। बर्तन में दूध की अंतिम मात्रा ज्ञात कीजिए।",
+    "problem_hg_030": "Vessel mein 60 liters milk hai. 12 liters replace kiya water se, again 12 liters mixture replace kiya. Final milk find karein.",
+    "problem_hg_065": "60 liters milk mein se 'pehle' 12 liters 'withdraw kar liya' gaya. Ye 'phir' se ek baar aur 'baaki' raha. 'Sirf' milk kitna bacha vessel mein?",
+    "gold_answer": "38.4",
+    "gold_answer_num": 38.4,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Advanced",
+    "source_type": "repeated_dilution",
+    "solution_steps_en": [
+      "Step 1: Final milk = 60(1 - 12/60)^2.",
+      "Step 2: 60(4/5)^2 = 60(16/25) = 60(0.64).",
+      "Step 3: 60 * 0.64 = 38.4 liters."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' trap: 'Baaki' refers to the remaining iteration, but if the LLM interprets it as 'remaining volume' (60-12), the calculation will fail.",
+    "why_hard": "Standard dilution but with confusing Hinglish markers for state and process.",
+    "tags": [
+      "simple_repeated",
+      "milk_volume"
+    ]
+  }
+]

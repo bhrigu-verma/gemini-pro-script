@@ -1,0 +1,375 @@
+[
+  {
+    "problem_en": "A manufacturer increases the price of a car by 25%. Then, the dealer increases this new price by 20%. During a sale, a discount of 15% is offered on the dealer's price. If the final price paid by the customer is 12,75,000, find the original manufacturing cost.",
+    "problem_hi": "एक निर्माता कार की कीमत में 25% की वृद्धि करता है। फिर, डीलर इस नई कीमत में 20% की वृद्धि करता है। सेल के दौरान, डीलर की कीमत पर 15% की छूट दी जाती है। यदि ग्राहक द्वारा भुगतान की गई अंतिम कीमत 12,75,000 है, तो मूल निर्माण लागत ज्ञात कीजिए।",
+    "problem_hg_030": "Ek manufacturer car ki price ko 25% se badhata hai. Phir, dealer is new price ko 20% increase karta hai. Sale ke time, dealer's price par 15% discount milta hai. Agar final price 12,75,000 hai, toh original manufacturing cost kya thi?",
+    "problem_hg_065": "Manufacturer ne price 25% badhaya, phir dealer ne uspar 20% increase kiya. Phir discount ke baad final price 10 lakh aur log aaye logic se hatkar 12 lakh 75 hazaar ho gayi. Original cost batao?",
+    "gold_answer": "1000000",
+    "gold_answer_num": 1000000.0,
+    "unit": "rupees",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let original cost be P. After manufacturer increase: 1.25P.",
+      "Step 2: After dealer increase: 1.25P * 1.2 = 1.5P.",
+      "Step 3: After 15% discount: 1.5P * 0.85 = 1.275P.",
+      "Step 4: Solve 1.275P = 12,75,000. P = 12,75,000 / 1.275 = 10,00,000.",
+      "Final: answer = 1000000"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar notation; specifically using '12 lakh 75 hazaar'. The LLM may parse this as 12 or 75,000 separately, or fail to convert the Indian numbering system to 1,275,000.",
+    "why_hard": "Requires reversing a three-stage compound percentage change with large numbers in non-standard notation.",
+    "tags": [
+      "successive-percentage",
+      "reverse-calculation"
+    ]
+  },
+  {
+    "problem_en": "The population of a city increases by 10% in the first year and 20% in the second year. In the third year, it decreases by 25% due to emigration. If the population at the end of three years is 1,58,400, what was the population at the beginning of the first year?",
+    "problem_hi": "पहले वर्ष में एक शहर की जनसंख्या में 10% की वृद्धि होती है और दूसरे वर्ष में 20% की वृद्धि होती है। तीसरे वर्ष में, प्रवासन के कारण इसमें 25% की कमी आती है। यदि तीन वर्षों के अंत में जनसंख्या 1,58,400 है, तो पहले वर्ष के प्रारंभ में जनसंख्या क्या थी?",
+    "problem_hg_030": "City ki population first year 10% increase hoti hai aur second year 20% badhti hai. Third year mein emigration ki wajah se 25% decrease ho jati hai. Agar 3 years baad population 1,58,400 hai, toh start mein kitni thi?",
+    "problem_hg_065": "Pehle saal 10% badhi, second year 20% aur badhi. Third year 25% ghat gayi. End mein population 1 lakh 58 hazaar 400 hai. Shuruat ki population kitni thi?",
+    "gold_answer": "160000",
+    "gold_answer_num": 160000.0,
+    "unit": "dimensionless",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let initial population be X. After Year 1: 1.1X.",
+      "Step 2: After Year 2: 1.1X * 1.2 = 1.32X.",
+      "Step 3: After Year 3: 1.32X * 0.75 = 0.99X.",
+      "Step 4: Solve 0.99X = 1,58,400. X = 1,58,400 / 0.99 = 1,60,000.",
+      "Final: answer = 160000"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar notation; applied to 1,58,400 as '1 lakh 58 hazaar 400'. The LLM might struggle with the place value of the trailing 400 after the 'hazaar' keyword.",
+    "why_hard": "Involves multiple growth and decay rates that result in a final multiplier very close to 1, making rounding errors or parsing errors fatal.",
+    "tags": [
+      "population-growth",
+      "chain-rule"
+    ]
+  },
+  {
+    "problem_en": "A's income is 25% more than B's. B's income is 20% more than C's. If C's income increases by 10%, by what total percentage is A's income more than the new income of C?",
+    "problem_hi": "A की आय B से 25% अधिक है। B की आय C से 20% अधिक है। यदि C की आय में 10% की वृद्धि होती है, तो A की आय C की नई आय से कुल कितने प्रतिशत अधिक है?",
+    "problem_hg_030": "A ki income B se 25% zyada hai. B ki income C se 20% zyada hai. Agar C ki income 10% increase ho jaye, toh A ki income C ki new income se kitne percent zyada hogi?",
+    "problem_hg_065": "Income wise, A is B se 25% zyada. Aur B ki income C se 20% zyada hai. Ab C ki income 10% badh gayi. A ki income C se kitni zyada hai?",
+    "gold_answer": "36.36",
+    "gold_answer_num": 36.36,
+    "unit": "percent",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let C = 100. Then B = 100 * 1.2 = 120.",
+      "Step 2: A = 120 * 1.25 = 150.",
+      "Step 3: New C = 100 * 1.1 = 110.",
+      "Step 4: Percentage difference = ((150 - 110) / 110) * 100 = (40 / 110) * 100 = 36.3636...",
+      "Final: answer = 36.36"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada; The trap lies in the relative base. In the final step, the LLM may use the old C or incorrectly use A as the base for the percentage calculation.",
+    "why_hard": "Requires establishing a baseline and propagating changes through three different entities.",
+    "tags": [
+      "relative-comparison",
+      "multi-base"
+    ]
+  },
+  {
+    "problem_en": "In an examination, 40% of the students failed in Math, 30% failed in Science, and 15% failed in both. If 40 aur log (40 more people) had passed, the total pass percentage would have been 50%. Find the total number of students who appeared for the exam.",
+    "problem_hi": "एक परीक्षा में, 40% छात्र गणित में अनुत्तीर्ण हुए, 30% विज्ञान में अनुत्तीर्ण हुए और 15% दोनों में अनुत्तीर्ण हुए। यदि 40 और लोग उत्तीर्ण होते, तो कुल उत्तीर्ण प्रतिशत 50% होता। परीक्षा में बैठने वाले छात्रों की कुल संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Exam mein, 40% students Math mein fail huye, 30% Science mein, aur 15% dono mein. Agar 40 more students pass hote, toh total pass percentage 50% hota. Total students kitne the?",
+    "problem_hg_065": "Maths mein 40% fail, Science mein 30% fail aur 15% dono mein. Agar 10 aur log aaye logic ki tarah yahan 40 aur log pass ho jate, toh pass % 50 hota. Total students calculate karo.",
+    "gold_answer": "800",
+    "gold_answer_num": 800.0,
+    "unit": "dimensionless",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Total fail % = 40 + 30 - 15 = 55%.",
+      "Step 2: Current pass % = 100 - 55 = 45%.",
+      "Step 3: Target pass % = 50%. Difference = 50% - 45% = 5%.",
+      "Step 4: 5% of Total (T) = 40. T = 40 / 0.05 = 800.",
+      "Final: answer = 800"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye; means 10 MORE people joined (additive). The LLM might read '40 aur log' as just 40 being the total number of students who passed, rather than an addition to the existing pass count.",
+    "why_hard": "Combines set theory (Venn diagrams) with linear equations based on percentages.",
+    "tags": [
+      "venn-diagram",
+      "linear-equation"
+    ]
+  },
+  {
+    "problem_en": "A fruit seller had some apples. He sells 40% apples and still has 420 apples. From the remaining, he gives 20% to a charity. Baaki (Remainder) apples are then sold at a 10% profit. How many apples did he have initially?",
+    "problem_hi": "एक फल विक्रेता के पास कुछ सेब थे। वह 40% सेब बेचता है और उसके पास अभी भी 420 सेब बचे हैं। शेष में से, वह 20% दान में देता है। बाकी सेब फिर 10% लाभ पर बेचे जाते हैं। प्रारंभ में उसके पास कितने सेब थे?",
+    "problem_hg_030": "Fruit seller ke paas kuch apples the. Woh 40% apples sell karta hai aur phir bhi 420 apples bache hain. Remaining mein se 20% charity ko deta hai. Baaki apples 10% profit par beche gaye. Start mein kitne apples the?",
+    "problem_hg_065": "Ek seller ne 40% apples beche, uske baad 420 bache. Un bache huye mein se 20% daan diye. Ab jo baaki bache unhe 10% profit par becha. Starting count kya tha?",
+    "gold_answer": "700",
+    "gold_answer_num": 700.0,
+    "unit": "dimensionless",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: 100% - 40% = 60% are left. 60% = 420.",
+      "Step 2: Total apples = 420 / 0.6 = 700.",
+      "Step 3: (Note: The profit part is a distractor for the initial count).",
+      "Final: answer = 700"
+    ],
+    "linguistic_trap_in_hg065": "baaki; explicit remainder. The LLM might get confused between the first remainder (420) and the second remainder after charity, potentially trying to solve for 420 as the final 'baaki' instead of the intermediate one.",
+    "why_hard": "Tests the ability to filter out irrelevant information (the 10% profit) while correctly identifying the base for each percentage.",
+    "tags": [
+      "remainder-logic",
+      "distractor-info"
+    ]
+  },
+  {
+    "problem_en": "A man spends 20% of his income on house rent, 25% of the remaining on food, and 10% of the further remaining on education. If he is left with 10,800, what is his total income?",
+    "problem_hi": "एक व्यक्ति अपनी आय का 20% घर के किराए पर, शेष का 25% भोजन पर और आगे शेष का 10% शिक्षा पर खर्च करता है। यदि उसके पास 10,800 बचते हैं, तो उसकी कुल आय क्या है?",
+    "problem_hg_030": "Ek aadmi apni income ka 20% rent par spend karta hai, remaining ka 25% food par, aur baaki ka 10% education par. Agar uske paas 10,800 bache, toh total income kya hai?",
+    "problem_hg_065": "Income ka 20% rent mein gaya. Phir jo bacha uska 25% khane mein. Phir withdraw kar liya N mahine baad wala logic nahi, par jo bacha uska 10% education mein. Ab 10,800 bache hain. Total income?",
+    "gold_answer": "20000",
+    "gold_answer_num": 20000.0,
+    "unit": "rupees",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let income be I. After rent: 0.8I.",
+      "Step 2: After food: 0.8I * 0.75 = 0.6I.",
+      "Step 3: After education: 0.6I * 0.9 = 0.54I.",
+      "Step 4: 0.54I = 10,800. I = 10,800 / 0.54 = 20,000.",
+      "Final: answer = 20000"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad; The inclusion of 'withdraw' and 'mahine' is used as a distractor to make the LLM search for a compound interest or time-based formula instead of simple successive percentages.",
+    "why_hard": "Standard 'remaining of remaining' problem that requires careful chaining of decimal multipliers.",
+    "tags": [
+      "successive-discount",
+      "expenditure"
+    ]
+  },
+  {
+    "problem_en": "The price of a commodity increases by 20% and then decreases by 10%. If the new price is 2,160, find the original price. After finding it, if the price increases by 10% aur log (10% more), what is the final price?",
+    "problem_hi": "एक वस्तु की कीमत में 20% की वृद्धि होती है और फिर 10% की कमी होती है। यदि नई कीमत 2,160 है, तो मूल कीमत ज्ञात कीजिए। इसे खोजने के बाद, यदि कीमत में 10% और वृद्धि होती है, तो अंतिम कीमत क्या है?",
+    "problem_hg_030": "Price pehle 20% badhta hai, phir 10% kam hota hai. Agar new price 2,160 hai, toh original price kya tha? Uske baad agar price 10% aur badh jaye, toh final price kya hogi?",
+    "problem_hg_065": "Commodity ka price 20% up gaya, phir 10% down. Current price 2,160 hai. Pehle original price nikalo, phir usme 10 aur log aaye logic ke bajaye 10% increase karo.",
+    "gold_answer": "2200",
+    "gold_answer_num": 2200.0,
+    "unit": "rupees",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let original price be X. X * 1.2 * 0.9 = 1.08X.",
+      "Step 2: 1.08X = 2,160. X = 2,000.",
+      "Step 3: New price increase on original: 2,000 * 1.1 = 2,200.",
+      "Final: answer = 2200"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir; sequence matters. The LLM must find the original price before applying the final 10% increase. The '10 aur log' phrasing also acts as a distractor.",
+    "why_hard": "Requires a two-step process: solving for an initial value and then using that value for a subsequent calculation.",
+    "tags": [
+      "price-variation",
+      "multi-step"
+    ]
+  },
+  {
+    "problem_en": "A sum of money is divided between A, B, and C. A gets 30%, B gets 40% of the remaining, and C gets the rest. If the difference between A's and B's share is 600, find the total sum.",
+    "problem_hi": "A, B और C के बीच एक राशि विभाजित की जाती है। A को 30% मिलता है, B को शेष का 40% मिलता है, और C को शेष मिलता है। यदि A और B के हिस्से के बीच का अंतर 600 है, तो कुल राशि ज्ञात कीजिए।",
+    "problem_hg_030": "Kuch paise A, B, aur C mein divide kiye gaye. A ko 30% mila, B ko remaining ka 40% mila, aur C ko rest. Agar A aur B ke share ka difference 600 hai, toh total sum kya hai?",
+    "problem_hg_065": "A ko total ka 30% mila. B ko baaki ka 40% mila. Dono ko milne wale amounts ka difference 600 hai. Total sum kitna tha?",
+    "gold_answer": "30000",
+    "gold_answer_num": 30000.0,
+    "unit": "rupees",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let total be T. A = 0.3T.",
+      "Step 2: Remaining = 0.7T. B = 0.4 * 0.7T = 0.28T.",
+      "Step 3: A - B = 0.3T - 0.28T = 0.02T.",
+      "Step 4: 0.02T = 600. T = 600 / 0.02 = 30,000.",
+      "Final: answer = 30000"
+    ],
+    "linguistic_trap_in_hg065": "dono ko; means BOTH together. In this context, 'Dono ko milne wale amounts ka difference' is used. An LLM might mistakenly add the shares of A and B because of the trigger 'dono ko' (both together).",
+    "why_hard": "Requires comparing percentages calculated from different bases (total vs. remaining).",
+    "tags": [
+      "distribution",
+      "difference-analysis"
+    ]
+  },
+  {
+    "problem_en": "A student has to secure 40% marks to pass. He gets 178 marks and fails by 22 marks. If the total marks are increased by 20% for the next year, what would be the pass marks then?",
+    "problem_hi": "एक छात्र को उत्तीर्ण होने के लिए 40% अंक प्राप्त करने होते हैं। उसे 178 अंक मिलते हैं और वह 22 अंकों से अनुत्तीर्ण हो जाता है। यदि अगले वर्ष के लिए कुल अंक 20% बढ़ जाते हैं, तो उत्तीर्ण अंक क्या होंगे?",
+    "problem_hg_030": "Ek student ko pass hone ke liye 40% marks chahiye. Use 178 marks mile aur woh 22 marks se fail ho gaya. Agar total marks next year 20% badh jayein, toh pass marks kya honge?",
+    "problem_hg_065": "Pass hone ke liye 40% chahiye. Use 178 mile aur 22 se fail hua. Pehle karo calculation total marks ki, phir total 20% badha kar naya pass mark (40%) nikalo.",
+    "gold_answer": "240",
+    "gold_answer_num": 240.0,
+    "unit": "dimensionless",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Pass marks needed = 178 + 22 = 200.",
+      "Step 2: 40% of Total (T) = 200. T = 200 / 0.4 = 500.",
+      "Step 3: New Total = 500 * 1.2 = 600.",
+      "Step 4: New Pass marks = 40% of 600 = 240.",
+      "Final: answer = 240"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir; sequence matters. The LLM might try to increase the current pass marks (200) by 20% directly instead of increasing the total marks and then finding 40% of the new total.",
+    "why_hard": "Multiple logical checkpoints: determining pass marks, calculating the original total, adjusting the total, and finding the final target.",
+    "tags": [
+      "examination",
+      "threshold-adjustment"
+    ]
+  },
+  {
+    "problem_en": "The value of a machine depreciates by 10% annually. If the current value is 7,29,000, find its value 3 years ago. If the rate was 10% semi-annually, would the value be higher or lower?",
+    "problem_hi": "एक मशीन का मूल्य सालाना 10% कम हो जाता है। यदि वर्तमान मूल्य 7,29,000 है, तो 3 वर्ष पहले इसका मूल्य ज्ञात कीजिए। यदि दर 10% अर्ध-वार्षिक होती, तो क्या मूल्य अधिक होता या कम?",
+    "problem_hg_030": "Machine ki value 10% annually depreciate hoti hai. Agar current value 7,29,000 hai, toh 3 years ago value kya thi? Agar rate 10% semi-annually hota, toh value change hoti?",
+    "problem_hg_065": "Depreciation 10% annual hai. Current rate 7 lakh 29 hazaar hai. 3 saal purani value kya thi? Agar rate 6 mahine baad (semi-annual) apply hota, toh result kya hota?",
+    "gold_answer": "1000000",
+    "gold_answer_num": 1000000.0,
+    "unit": "rupees",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let the value 3 years ago be V. V * (0.9)^3 = 7,29,000.",
+      "Step 2: 0.9^3 = 0.729.",
+      "Step 3: V = 7,29,000 / 0.729 = 10,00,000.",
+      "Step 4: (The question asks for the numeric value of the original price).",
+      "Final: answer = 1000000"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad; in annual rate problem. The LLM might try to recalculate the depreciation using semi-annual compounding for the 3-year period instead of solving the primary question.",
+    "why_hard": "Requires backwards compounding (reverse depreciation) over multiple periods.",
+    "tags": [
+      "depreciation",
+      "reverse-compounding"
+    ]
+  },
+  {
+    "problem_en": "In a library, 20% of the books are in Hindi, 50% of the remaining are in English and 30% of the remaining are in French. The rest 6,300 books are in regional languages. Find the number of English books.",
+    "problem_hi": "एक पुस्तकालय में, 20% पुस्तकें हिंदी में हैं, शेष का 50% अंग्रेजी में हैं और शेष का 30% फ्रेंच में हैं। शेष 6,300 पुस्तकें क्षेत्रीय भाषाओं में हैं। अंग्रेजी पुस्तकों की संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Library mein 20% books Hindi mein hain, remaining ka 50% English mein aur further remaining ka 30% French mein. Baaki 6,300 books regional languages mein hain. English books kitni hain?",
+    "problem_hg_065": "Library mein 20% Hindi books hain. Baaki books ka 50% English hai. Phir jo bacha uska 30% French. Ab na X se na Y se divisible books (regional) 6,300 hain. English books kitni hain?",
+    "gold_answer": "11250",
+    "gold_answer_num": 11250.0,
+    "unit": "dimensionless",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let Total be T. Hindi = 0.2T. Remainder 1 = 0.8T.",
+      "Step 2: English = 0.5 * 0.8T = 0.4T. Remainder 2 = 0.4T.",
+      "Step 3: French = 0.3 * 0.4T = 0.12T. Remainder 3 = 0.4T - 0.12T = 0.28T.",
+      "Step 4: 0.28T = 6,300. T = 6,300 / 0.28 = 22,500.",
+      "Step 5: English books = 0.4 * 22,500 = 9,000. Wait, recalculate: 0.5 * 0.8 * 22,500 = 9,000. Let me check regional: 0.7 * 0.5 * 0.8 = 0.28. 6300/0.28 = 22500. 0.4 * 22500 = 9000.",
+      "Final: answer = 9000"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible; neither X nor Y. The LLM might interpret the regional books as a subset that must not be divisible by the previously mentioned percentages, leading to a number theory tangent.",
+    "why_hard": "Requires calculating a specific intermediate value (English books) rather than just the total, using a chain of remainders.",
+    "tags": [
+      "inventory",
+      "fractional-remainder"
+    ]
+  },
+  {
+    "problem_en": "Price of sugar is increased by 20%. By what percentage should a housewife reduce her consumption so that her expenditure increases by only 8%?",
+    "problem_hi": "चीनी की कीमत में 20% की वृद्धि हुई है। एक गृहिणी को अपनी खपत में कितने प्रतिशत की कमी करनी चाहिए ताकि उसका खर्च केवल 8% बढ़े?",
+    "problem_hg_030": "Sugar ki price 20% badh gayi hai. Consumption kitne percent kam karein taaki total expenditure sirf 8% badhe?",
+    "problem_hg_065": "Sugar price 20% up ho gaya. Housewife consumption kitna ghataye ki kharcha A se 20% zyada logic ke bajaye sirf 8% badhe?",
+    "gold_answer": "10",
+    "gold_answer_num": 10.0,
+    "unit": "percent",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Expenditure = Price * Consumption (E = P * C).",
+      "Step 2: New E = 1.08E, New P = 1.2P. 1.08E = 1.2P * New C.",
+      "Step 3: New C = (1.08/1.2) * (E/P) = 0.9 * C.",
+      "Step 4: Reduction = (1 - 0.9) * 100 = 10%.",
+      "Final: answer = 10"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada; which base? The phrase 'A se 20% zyada' refers to the price increase, but its placement might lead the LLM to think the consumption reduction should be 20% relative to the price.",
+    "why_hard": "Involves three related variables where the percentage change of one is constrained by the other two.",
+    "tags": [
+      "consumption-expenditure",
+      "inverse-variation"
+    ]
+  },
+  {
+    "problem_en": "A person gives 10% of his property to his wife, 10% of the remaining to his daughter, and 10% of the further remaining to his son. After these, he gives 50% of the baaki (remainder) to a trust. If the trust receives 7,290, find the initial property.",
+    "problem_hi": "एक व्यक्ति अपनी संपत्ति का 10% अपनी पत्नी को, शेष का 10% अपनी बेटी को और आगे शेष का 10% अपने बेटे को देता है। इनके बाद, वह बाकी का 50% एक ट्रस्ट को देता है। यदि ट्रस्ट को 7,290 मिलते हैं, तो प्रारंभिक संपत्ति ज्ञात कीजिए।",
+    "problem_hg_030": "Ek person 10% property wife ko deta hai, remaining ka 10% daughter ko, aur further remaining ka 10% son ko. Iske baad, remaining ka 50% trust ko deta hai. Agar trust ko 7,290 mile, toh initial property kya thi?",
+    "problem_hg_065": "Property ka 10% wife ko, 10% baaki ka daughter ko, aur phir 10% son ko. End mein jo baaki bacha uska 50% trust ko diya. Trust ko 7,290 mile. Total property kitni thi?",
+    "gold_answer": "20000",
+    "gold_answer_num": 20000.0,
+    "unit": "rupees",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let Total be P. After wife: 0.9P.",
+      "Step 2: After daughter: 0.81P. After son: 0.729P.",
+      "Step 3: Trust gets 50% of 0.729P = 0.3645P.",
+      "Step 4: 0.3645P = 7,290. P = 7,290 / 0.3645 = 20,000.",
+      "Final: answer = 20000"
+    ],
+    "linguistic_trap_in_hg065": "baaki; explicit remainder. By using 'baaki' twice in different contexts, the LLM may skip one of the 10% reduction steps.",
+    "why_hard": "Long chain of successive reductions where the final known quantity is an intermediate part of the last remaining portion.",
+    "tags": [
+      "property-division",
+      "successive-reduction"
+    ]
+  },
+  {
+    "problem_en": "Salary of an officer is increased by 10%, then decreased by 10%. If he now gets 9,900, what was his original salary? If he gets a further increase of 10% on the current salary, is it equal to the original?",
+    "problem_hi": "एक अधिकारी के वेतन में 10% की वृद्धि की जाती है, फिर 10% की कमी की जाती है। यदि उसे अब 9,900 मिलते हैं, तो उसका मूल वेतन क्या था? यदि उसे वर्तमान वेतन पर 10% की और वृद्धि मिलती है, तो क्या यह मूल वेतन के बराबर है?",
+    "problem_hg_030": "Officer ki salary 10% badhaye gayi, phir 10% kam kar di gayi. Agar ab use 9,900 milte hain, toh original salary kya thi? Agar current salary par 10% aur badha dein, toh kya result original ke equal hoga?",
+    "problem_hg_065": "Salary 10% up hui, phir 10% down. Ab value 9,900 hai. Pehle original salary nikalo, phir current par 10% aur log aaye logic se increase karo.",
+    "gold_answer": "10000",
+    "gold_answer_num": 10000.0,
+    "unit": "rupees",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let original be S. S * 1.1 * 0.9 = 0.99S.",
+      "Step 2: 0.99S = 9,900. S = 10,000.",
+      "Step 3: (Question asks for the original salary).",
+      "Final: answer = 10000"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir; sequence matters. The prompt 'pehle original... phir current...' explicitly orders the operations to see if the LLM confuses the bases for the final 10% increase.",
+    "why_hard": "Tests the classic percentage misconception that an increase followed by a decrease of the same percentage returns to the original value.",
+    "tags": [
+      "salary-change",
+      "net-effect"
+    ]
+  },
+  {
+    "problem_en": "In a town, 45% of the population are men and 35% are women. The rest are children. If the number of children is 12,000 and 20% of the men are literate, find the total number of literate men.",
+    "problem_hi": "एक शहर में, 45% जनसंख्या पुरुष हैं और 35% महिलाएं हैं। बाकी बच्चे हैं। यदि बच्चों की संख्या 12,000 है और 20% पुरुष साक्षर हैं, तो साक्षर पुरुषों की कुल संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Ek town mein, 45% population men hain aur 35% women. Baaki children hain. Agar children 12,000 hain aur 20% men literate hain, toh literate men kitne hain?",
+    "problem_hg_065": "Town mein 45% men, 35% women aur baaki children hain. Children ki ginti 12,000 hai. Ab 20% men literate hain, toh unki total count batao.",
+    "gold_answer": "5400",
+    "gold_answer_num": 5400.0,
+    "unit": "dimensionless",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Children % = 100% - (45% + 35%) = 20%.",
+      "Step 2: 20% of Total (T) = 12,000. T = 12,000 / 0.2 = 60,000.",
+      "Step 3: Total men = 45% of 60,000 = 27,000.",
+      "Step 4: Literate men = 20% of 27,000 = 5,400.",
+      "Final: answer = 5400"
+    ],
+    "linguistic_trap_in_hg065": "baaki; explicit remainder. The LLM must correctly assign 'baaki' to the children's percentage before proceeding to find the total population and then the subset of men.",
+    "why_hard": "Requires calculating a subset of a subset, starting from the value of a different subset.",
+    "tags": [
+      "demographics",
+      "subset-calculation"
+    ]
+  }
+]

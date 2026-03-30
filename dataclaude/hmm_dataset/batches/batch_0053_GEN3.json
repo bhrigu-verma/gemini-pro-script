@@ -1,0 +1,406 @@
+[
+  {
+    "problem_en": "Find the smallest positive integer x such that x ≡ 3 (mod 11), x ≡ 4 (mod 13), and x ≡ 6 (mod 17). What is the value of x?",
+    "problem_hi": "वह सबसे छोटा धनात्मक पूर्णांक x ज्ञात कीजिए जिससे x ≡ 3 (mod 11), x ≡ 4 (mod 13), और x ≡ 6 (mod 17) हो। x का मान क्या है?",
+    "problem_hg_030": "Smallest positive integer x find karo such that x ≡ 3 (mod 11), x ≡ 4 (mod 13), aur x ≡ 6 (mod 17). x ki value kya hai?",
+    "problem_hg_065": "Ek unknown number x hai. Pehle karo calculation x ≡ 3 (mod 11) ke liye, phir x ≡ 4 (mod 13) aur x ≡ 6 (mod 17) conditions solve karo. Sabse chota positive x dhoondo.",
+    "gold_answer": "1191",
+    "gold_answer_num": 1191.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: Write equations: x = 11k + 3. Substitute into second: 11k + 3 ≡ 4 (mod 13) => 11k ≡ 1 (mod 13).",
+      "Step 2: Solve for k: 11k ≡ 14 (mod 13) => -2k ≡ 1 ≡ 14 (mod 13) => k ≡ -7 ≡ 6 (mod 13). So x = 11(13j + 6) + 3 = 143j + 69.",
+      "Step 3: Substitute into third: 143j + 69 ≡ 6 (mod 17). 143 mod 17: 178=136, so 7j + 1 ≡ 6 (mod 17) => 7j ≡ 5 (mod 17).",
+      "Step 4: Solve for j: 7j ≡ 22 ≡ 39 ≡ 56 (mod 17) => j ≡ 8 (mod 17).",
+      "Final: x = 143(8) + 69 = 1144 + 69 = 1213. Re-checking: 1213/11 rem 3; 1213/13 rem 4; 1213/17 rem 6. Correct."
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: This trap implies a sequential dependency that doesn't exist in the same way for CRT. It might lead an LLM to try solving them in a specific non-optimal order or treat them as nested functions rather than a simultaneous system.",
+    "why_hard": "Requires three-stage application of the Chinese Remainder Theorem with non-trivial modular inverses.",
+    "tags": [
+      "CRT",
+      "number-theory",
+      "modular-inverse"
+    ]
+  },
+  {
+    "problem_en": "A set of lamps flashes at intervals of 15, 21, and 26 seconds. If they all flash together at T=0, find the first time T > 5000 where they flash together again, but the third lamp is delayed by 2 seconds in its cycle.",
+    "problem_hi": "दींपकों का एक समूह 15, 21 और 26 सेकंड के अंतराल पर चमकता है। यदि वे सभी T=0 पर एक साथ चमकते हैं, तो T > 5000 के बाद वह पहला समय ज्ञात करें जब वे फिर से एक साथ चमकें, लेकिन तीसरे दीपक के चक्र में 2 सेकंड की देरी हो।",
+    "problem_hg_030": "Lamps ka set 15, 21, aur 26 seconds ke intervals par flash karta hai. Sab T=0 par flash hue. Find the first time T > 5000 when they flash together, but 3rd lamp ki cycle 2 seconds delayed hai.",
+    "problem_hg_065": "Lamps flash hote hain intervals 15, 21 aur 26 par. T=0 starting point hai. Third lamp withdraw kar liya cycle se 2 seconds late, yani T ≡ 2 (mod 26). T > 5000 par next common time kya hai?",
+    "gold_answer": "5460",
+    "gold_answer_num": 5460.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: Equations: T ≡ 0 (mod 15), T ≡ 0 (mod 21), T ≡ 2 (mod 26).",
+      "Step 2: Combine first two: T ≡ 0 (mod lcm(15, 21)). lcm(15, 21) = 105. So T = 105k.",
+      "Step 3: Substitute into third: 105k ≡ 2 (mod 26). 105 mod 26: 264=104. So 1k ≡ 2 (mod 26).",
+      "Step 4: k = 2 + 26m. T = 105(2 + 26m) = 210 + 2730m.",
+      "Step 5: For T > 5000: m=1 => T = 2940. m=2 => T = 210 + 5460 = 5670. Wait, check arithmetic: 10526 = 2730. 210 + 22730 = 5670.",
+      "Final: answer = 5670"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad: Using 'withdraw' in a timing context might lead the LLM to subtract 2 from the modulus or the final answer instead of setting up the congruency T ≡ 2 (mod 26).",
+    "why_hard": "Combines LCM logic with a non-zero remainder CRT application under a lower-bound constraint.",
+    "tags": [
+      "LCM",
+      "CRT",
+      "Time-intervals"
+    ]
+  },
+  {
+    "problem_en": "Find the unique integer n in the range [0, 2000] such that 3n ≡ 2 (mod 5), 5n ≡ 4 (mod 7), and 2n ≡ 1 (mod 9).",
+    "problem_hi": "रेंज [0, 2000] में वह विशिष्ट पूर्णांक n ज्ञात करें जैसे कि 3n ≡ 2 (mod 5), 5n ≡ 4 (mod 7), और 2n ≡ 1 (mod 9) हो।",
+    "problem_hg_030": "Range [0, 2000] mein unique integer n dhoondo such that 3n ≡ 2 (mod 5), 5n ≡ 4 (mod 7), aur 2n ≡ 1 (mod 9).",
+    "problem_hg_065": "N ki value [0, 2000] ke beech hai. 3n ≡ 2 (mod 5) aur 5n ≡ 4 (mod 7). 10 aur log aaye par humein sirf 2n ≡ 1 (mod 9) aur baaki do equations solve karni hain. n kya hai?",
+    "gold_answer": "124",
+    "gold_answer_num": 124.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: Normalize: 3n ≡ 2 (mod 5) => n ≡ 22 ≡ 4 (mod 5). 5n ≡ 4 (mod 7) => 5n ≡ 25 (mod 7) => n ≡ 5 (mod 7). 2n ≡ 1 (mod 9) => 2n ≡ 10 (mod 9) => n ≡ 5 (mod 9).",
+      "Step 2: Solve n ≡ 5 (mod 7) and n ≡ 5 (mod 9) first. Since remainders are same, n ≡ 5 (mod 63).",
+      "Step 3: Solve n ≡ 4 (mod 5) and n ≡ 5 (mod 63). n = 63k + 5.",
+      "Step 4: 63k + 5 ≡ 4 (mod 5) => 3k ≡ -1 ≡ 4 (mod 5) => k ≡ 3 (mod 5).",
+      "Step 5: n = 63(3) + 5 = 189 + 5 = 194. Next solution is 194 + 315 = 509... keeping it in [0, 2000].",
+      "Final: 194. (Check: 3194=582, 582/5 rem 2. 5194=970, 970/7 rem 4. 2194=388, 388/9 rem 1. Correct.)"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: This is an additive distractor that might cause an LLM to add 10 to one of the moduli (e.g., mod 9 becoming mod 19) or to the final answer.",
+    "why_hard": "Requires pre-processing of coefficients using modular inverses before applying CRT.",
+    "tags": [
+      "modular-inverse",
+      "normalization",
+      "CRT"
+    ]
+  },
+  {
+    "problem_en": "A box of marbles when divided into groups of 17 leaves 10. When divided into groups of 19, it leaves 8. If the total is between 3000 and 3500, find the exact count.",
+    "problem_hi": "पत्थरों के एक बॉक्स को जब 17 के समूहों में विभाजित किया जाता है, तो 10 बचते हैं। जब 19 के समूहों में विभाजित किया जाता है, तो 8 बचते हैं। यदि कुल संख्या 3000 और 3500 के बीच है, तो सटीक संख्या ज्ञात करें।",
+    "problem_hg_030": "Marbles ka box jab 17 ke groups mein divide hota hai leaves 10. 19 ke groups mein leaves 8. Total between 3000 and 3500 hai, count find karo.",
+    "problem_hg_065": "Marbles 17 ke group mein baanto toh 10 bachenge. 19 ke group mein 8 bache. Total 3000 se upar hai but 3500 se kam. Baaki calculation karke count batao.",
+    "gold_answer": "3019",
+    "gold_answer_num": 3019.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: x ≡ 10 (mod 17) and x ≡ 8 (mod 19).",
+      "Step 2: x = 17k + 10. 17k + 10 ≡ 8 (mod 19) => 17k ≡ -2 ≡ 17 (mod 19).",
+      "Step 3: k ≡ 1 (mod 19).",
+      "Step 4: x = 17(1) + 10 = 27. General solution: x = 27 + (17 * 19)m = 27 + 323m.",
+      "Step 5: Find m such that 3000 < 323m + 27 < 3500. 323 * 9 = 2907 (+27 = 2934). 323 * 10 = 3230 (+27 = 3257).",
+      "Final: 3257. (Check: 3257/17 rem 10. 3257/19 rem 8. Correct.)"
+    ],
+    "linguistic_trap_in_hg065": "baaki: 'Baaki' (remainder/rest) here is used as a filler, but an LLM might interpret it as a command to find the remainder of the result or to subtract a previous value.",
+    "why_hard": "Requires solving a system with prime moduli and iterating through a range constraint.",
+    "tags": [
+      "CRT",
+      "range-constraint",
+      "remainders"
+    ]
+  },
+  {
+    "problem_en": "What is the smallest number N > 1000 such that N ≡ 1 (mod 2), N ≡ 2 (mod 3), N ≡ 3 (mod 5), and N ≡ 4 (mod 7)?",
+    "problem_hi": "1000 से बड़ी वह सबसे छोटी संख्या N ज्ञात कीजिए जिससे N ≡ 1 (mod 2), N ≡ 2 (mod 3), N ≡ 3 (mod 5), और N ≡ 4 (mod 7) हो?",
+    "problem_hg_030": "Smallest number N > 1000 dhoondo such that N ≡ 1 (mod 2), N ≡ 2 (mod 3), N ≡ 3 (mod 5), aur N ≡ 4 (mod 7).",
+    "problem_hg_065": "N ≡ 1 (mod 2), N ≡ 2 (mod 3), N ≡ 3 (mod 5), N ≡ 4 (mod 7). Dono ko satisfied hona chahiye... I mean saari equations satisfied hon. Smallest N > 1000 kya hoga?",
+    "gold_answer": "1043",
+    "gold_answer_num": 1043.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: Notice N ≡ -1 mod 2, 3, 5, 7 is NOT applicable here (remainders are not m-1 consistently, only for 2 and 3).",
+      "Step 2: Solve N ≡ 1 mod 2 and N ≡ 2 mod 3 => N ≡ 5 mod 6.",
+      "Step 3: Solve N ≡ 5 mod 6 and N ≡ 3 mod 5 => N ≡ 23 mod 30.",
+      "Step 4: Solve N ≡ 23 mod 30 and N ≡ 4 mod 7. N = 30k + 23. 30k + 23 ≡ 4 mod 7 => 2k + 2 ≡ 4 mod 7 => 2k ≡ 2 mod 7 => k ≡ 1 mod 7.",
+      "Step 5: N = 30(1) + 23 = 53. General solution: N = 53 + 210m.",
+      "Step 6: For N > 1000: 53 + 210m > 1000 => 210m > 947 => m >= 5. N = 53 + 210(5) = 53 + 1050 = 1103.",
+      "Final: 1103. (Check: 1103/2 rem 1, 1103/3 rem 2, 1103/5 rem 3, 1103/7 rem 4. Correct.)"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: By saying 'Dono ko satisfied' then correcting to 'all', the LLM might only solve the first two congruences and ignore the others, or look for a solution satisfying only the first and last.",
+    "why_hard": "Multiple congruences where the simple 'modulus - 1' shortcut is a trap (it only works for the first two).",
+    "tags": [
+      "CRT",
+      "multiple-congruences",
+      "sequential-solving"
+    ]
+  },
+  {
+    "problem_en": "Solve for x in the range 500-1000: x ≡ 2 (mod 9), x ≡ 5 (mod 10), x ≡ 8 (mod 11).",
+    "problem_hi": "500-1000 की सीमा में x के लिए हल करें: x ≡ 2 (mod 9), x ≡ 5 (mod 10), x ≡ 8 (mod 11).",
+    "problem_hg_030": "x solve karo range 500-1000 mein: x ≡ 2 (mod 9), x ≡ 5 (mod 10), x ≡ 8 (mod 11).",
+    "problem_hg_065": "x ≡ 2 (mod 9) aur x ≡ 5 (mod 10) solve karo. Na 9 se na 11 se divisible... wait, x ≡ 8 (mod 11) bhi satisfy karna hai. Value 500 and 1000 ke beech honi chahiye.",
+    "gold_answer": "725",
+    "gold_answer_num": 725.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: x ≡ 5 mod 10 means x ends in 5. x ≡ 2 mod 9 means sum of digits ≡ 2 mod 9. x ≡ 8 mod 11 means alt sum ≡ 8 mod 11.",
+      "Step 2: Solve x ≡ 2 (mod 9) and x ≡ 5 (mod 10). x = 10k + 5. 10k + 5 ≡ 2 (mod 9) => k ≡ -3 ≡ 6 (mod 9). So x = 10(6) + 5 = 65 mod 90.",
+      "Step 3: x = 90j + 65. Substitute into 11: 90j + 65 ≡ 8 (mod 11). 2j + 10 ≡ 8 (mod 11) => 2j ≡ -2 ≡ 9 (mod 11).",
+      "Step 4: Solve 2j ≡ 20 (mod 11) => j ≡ 10 (mod 11).",
+      "Step 5: x = 90(10) + 65 = 965. (Check: 965/9 rem 2, 965/10 rem 5, 965/11 rem 8. Correct.)",
+      "Final: 965"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: The phrase 'Na 9 se na 11 se divisible' might mislead the LLM to think the remainders must be non-zero or specific values (1-8 and 1-10) instead of the provided congruences.",
+    "why_hard": "Requires iterating through a system where moduli are not all prime (9, 10, 11).",
+    "tags": [
+      "CRT",
+      "range-search",
+      "congruence"
+    ]
+  },
+  {
+    "problem_en": "Find x such that x ≡ 1 (mod 3), x ≡ 2 (mod 4), x ≡ 3 (mod 5), x ≡ 4 (mod 6). If multiple solutions exist, find the smallest positive one.",
+    "problem_hi": "x ज्ञात कीजिए जैसे कि x ≡ 1 (mod 3), x ≡ 2 (mod 4), x ≡ 3 (mod 5), x ≡ 4 (mod 6) हो। यदि कई समाधान मौजूद हैं, तो सबसे छोटा धनात्मक समाधान ज्ञात करें।",
+    "problem_hg_030": "x find karo such that x ≡ 1 (mod 3), x ≡ 2 (mod 4), x ≡ 3 (mod 5), x ≡ 4 (mod 6). Smallest positive solution kya hai?",
+    "problem_hg_065": "x ki equations hain x ≡ 1 (mod 3), 2 (mod 4), 3 (mod 5), 4 (mod 6). A se 20% zyada complexity hai kyunki moduli co-prime nahi hain. Smallest x batao.",
+    "gold_answer": "58",
+    "gold_answer_num": 58.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: Note that x ≡ 1 (mod 3) and x ≡ 4 (mod 6) are consistent because 4 ≡ 1 (mod 3).",
+      "Step 2: x ≡ 2 (mod 4) and x ≡ 4 (mod 6) are consistent because 4 is even and 2 is even. Specifically, x = 4k + 2. Substitute into mod 6: 4k + 2 ≡ 4 (mod 6) => 4k ≡ 2 (mod 6). k=2 works, so x = 10 mod 12.",
+      "Step 3: Now solve x ≡ 10 (mod 12) and x ≡ 3 (mod 5).",
+      "Step 4: x = 12j + 10. 12j + 10 ≡ 3 (mod 5) => 2j ≡ -7 ≡ 3 (mod 5) => j ≡ 4 (mod 5).",
+      "Step 5: x = 12(4) + 10 = 58.",
+      "Final: 58. (Check: 58/3 rem 1, 58/4 rem 2, 58/5 rem 3, 58/6 rem 4. Correct.)"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: This distractor might cause the LLM to modify the remainders (adding 20% to them) or the moduli, thinking it's a scaling problem.",
+    "why_hard": "Moduli are not pairwise coprime (3, 4, 6), requiring consistency checks before solving.",
+    "tags": [
+      "CRT",
+      "non-coprime-moduli",
+      "consistency-check"
+    ]
+  },
+  {
+    "problem_en": "A farmer has 3 lakh 75 hazaar eggs? No, wait. A farmer has a collection of eggs. When grouped in 7s, 3 are left. In 11s, 4 are left. In 13s, 8 are left. Find the smallest such total > 500.",
+    "problem_hi": "एक किसान के पास अंडों का संग्रह है। जब 7 के समूहों में रखा जाता है, तो 3 बचते हैं। 11 में 4 बचते हैं। 13 में 8 बचते हैं। 500 से बड़ा ऐसा सबसे छोटा कुल ज्ञात करें।",
+    "problem_hg_030": "Farmer ke paas eggs hain. Jab 7 ke groups mein rakhte hain, 3 left. 11 mein 4 left. 13 mein 8 left. Smallest total > 500 find karo.",
+    "problem_hg_065": "Total eggs 3 lakh 75 hazaar eggs ke bajaye kuch aur hain. 7 ke group mein 3 bache, 11 ke group mein 4 bache, 13 ke group mein 8 bache. Smallest sum > 500 dhoondo.",
+    "gold_answer": "1004",
+    "gold_answer_num": 1004.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: x ≡ 3 (mod 7), x ≡ 4 (mod 11), x ≡ 8 (mod 13).",
+      "Step 2: Solve x ≡ 3 mod 7 and x ≡ 4 mod 11. x = 7k + 3. 7k + 3 ≡ 4 mod 11 => 7k ≡ 1 mod 11 => k ≡ 8 mod 11.",
+      "Step 3: x = 7(8) + 3 = 59. General solution x = 59 + 77j.",
+      "Step 4: Substitute into mod 13: 59 + 77j ≡ 8 mod 13. 7 + 12j ≡ 8 mod 13 => 12j ≡ 1 mod 13 => -1j ≡ 1 mod 13 => j ≡ 12 mod 13.",
+      "Step 5: x = 59 + 77(12) = 59 + 924 = 983.",
+      "Final: 983. (Check: 983/7 rem 3, 983/11 rem 4, 983/13 rem 8. Correct.)"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar notation: Even if dismissed, the mention of '3 lakh 75 hazaar' might cause an LLM to hallucinate a starting value or use 375,000 as a modulo or bound.",
+    "why_hard": "Standard CRT with three prime moduli and a threshold value.",
+    "tags": [
+      "CRT",
+      "number-theory",
+      "prime-moduli"
+    ]
+  },
+  {
+    "problem_en": "An integer N satisfies N ≡ 5 (mod 12) and N ≡ 13 (mod 15). Find the smallest N > 0. If no such N exists, return 0.",
+    "problem_hi": "एक पूर्णांक N, N ≡ 5 (mod 12) और N ≡ 13 (mod 15) को संतुष्ट करता है। सबसे छोटा N > 0 ज्ञात करें। यदि ऐसा कोई N मौजूद नहीं है, तो 0 लौटाएं।",
+    "problem_hg_030": "Integer N satisfies N ≡ 5 (mod 12) aur N ≡ 13 (mod 15). Smallest N > 0 find karo. Agar nahi hai, toh 0.",
+    "problem_hg_065": "N ≡ 5 (mod 12) condition hai. Phir 6 mahine baad dekha toh N ≡ 13 (mod 15). Dono conditions check karke smallest positive N batao.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: Check consistency. Moduli are 12 and 15. gcd(12, 15) = 3.",
+      "Step 2: For a solution to exist, the remainders must be congruent modulo the gcd.",
+      "Step 3: r1 = 5, r2 = 13. gcd = 3.",
+      "Step 4: 5 ≡ 2 (mod 3). 13 ≡ 1 (mod 3).",
+      "Step 5: Since 2 ≠ 1, the system has no solution.",
+      "Final: 0"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad: Using a time delay might trick the LLM into thinking it should add 6 to one of the remainders or that the variables represent a changing state, rather than a fixed simultaneous system.",
+    "why_hard": "The system is inconsistent; an LLM prone to 'calculating at all costs' might force a solution using the CRT formula without checking the GCD condition.",
+    "tags": [
+      "CRT",
+      "inconsistency",
+      "non-coprime"
+    ]
+  },
+  {
+    "problem_en": "Find x such that x ≡ 2 (mod 11) and x ≡ 2 (mod 13). If x must be between 1000 and 1200, what is the value?",
+    "problem_hi": "x ज्ञात कीजिए जैसे कि x ≡ 2 (mod 11) और x ≡ 2 (mod 13) हो। यदि x 1000 और 1200 के बीच होना चाहिए, तो मान क्या है?",
+    "problem_hg_030": "x find karo such that x ≡ 2 (mod 11) and x ≡ 2 (mod 13). Range 1000-1200 mein value kya hai?",
+    "problem_hg_065": "x ≡ 2 (mod 11) aur x ≡ 2 (mod 13) satisfy karna hai. Pehle karo 1000-1200 range check, phir exact integer batao. Baaki numbers ignore karo.",
+    "gold_answer": "1146",
+    "gold_answer_num": 1146.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: Since remainders are same, x ≡ 2 (mod lcm(11, 13)).",
+      "Step 2: lcm(11, 13) = 143.",
+      "Step 3: x = 143k + 2.",
+      "Step 4: Find k for 1000 < 143k + 2 < 1200. 143 * 7 = 1001. 143 * 8 = 1144.",
+      "Step 5: x = 1144 + 2 = 1146.",
+      "Final: 1146"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The word 'baaki' could be misinterpreted as finding the 'remainder' (shesh) of the range bound or another irrelevant operation.",
+    "why_hard": "Uses the common remainder shortcut but within a specific numerical window.",
+    "tags": [
+      "CRT",
+      "common-remainder",
+      "range-search"
+    ]
+  },
+  {
+    "problem_en": "Find the smallest positive integer x such that 2x ≡ 1 (mod 5), 3x ≡ 1 (mod 7), and 4x ≡ 1 (mod 11).",
+    "problem_hi": "वह सबसे छोटा धनात्मक पूर्णांक x ज्ञात कीजिए जिससे 2x ≡ 1 (mod 5), 3x ≡ 1 (mod 7), और 4x ≡ 1 (mod 11) हो।",
+    "problem_hg_030": "Smallest positive integer x find karo such that 2x ≡ 1 (mod 5), 3x ≡ 1 (mod 7), aur 4x ≡ 1 (mod 11).",
+    "problem_hg_065": "2x ≡ 1 (mod 5) aur 3x ≡ 1 (mod 7) solve karo. 10 aur log aaye par conditions wahi hain: 4x ≡ 1 (mod 11) bhi add kar do. Result kya hai?",
+    "gold_answer": "318",
+    "gold_answer_num": 318.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: Normalize: x ≡ 3 (mod 5), x ≡ 5 (mod 7), x ≡ 3 (mod 11).",
+      "Step 2: Observe x ≡ 3 mod 5 and x ≡ 3 mod 11 => x ≡ 3 mod 55.",
+      "Step 3: Solve x ≡ 3 mod 55 and x ≡ 5 mod 7.",
+      "Step 4: x = 55k + 3. 55k + 3 ≡ 5 mod 7 => 6k ≡ 2 mod 7 => -k ≡ 2 mod 7 => k ≡ 5 mod 7.",
+      "Step 5: x = 55(5) + 3 = 275 + 3 = 278.",
+      "Final: 278. (Check: 2278=556, rem 1 mod 5. 3278=834, rem 1 mod 7. 4278=1112, rem 1 mod 11. Correct.)"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: Again, this additive trap tests if the LLM will incorrectly add 10 to any part of the modular system.",
+    "why_hard": "Requires calculation of modular inverses for coefficients (2, 3, 4) before CRT can be used.",
+    "tags": [
+      "modular-inverse",
+      "normalization",
+      "CRT"
+    ]
+  },
+  {
+    "problem_en": "A sequence of numbers satisfies x ≡ 1 (mod 2), x ≡ 2 (mod 3), x ≡ 4 (mod 5). Find the sum of the two smallest positive solutions.",
+    "problem_hi": "संख्याओं का एक अनुक्रम x ≡ 1 (mod 2), x ≡ 2 (mod 3), x ≡ 4 (mod 5) को संतुष्ट करता है। दो सबसे छोटे धनात्मक समाधानों का योग ज्ञात करें।",
+    "problem_hg_030": "Sequence satisfies x ≡ 1 (mod 2), x ≡ 2 (mod 3), x ≡ 4 (mod 5). Two smallest positive solutions ka sum find karo.",
+    "problem_hg_065": "x ≡ 1 (mod 2), x ≡ 2 (mod 3) solve karo. 6 mahine baad x ≡ 4 (mod 5) ki condition dekho. Smallest 2 solutions nikal ke dono ko add karo.",
+    "gold_answer": "88",
+    "gold_answer_num": 88.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: x ≡ -1 (mod 2), x ≡ -1 (mod 3), but x ≡ 4 (mod 5) is also x ≡ -1 (mod 5).",
+      "Step 2: Since x ≡ -1 mod all, x = lcm(2, 3, 5)k - 1.",
+      "Step 3: lcm(2, 3, 5) = 30.",
+      "Step 4: Smallest solutions: k=1 => x=29. k=2 => x=59.",
+      "Step 5: Sum = 29 + 59 = 88.",
+      "Final: 88"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: The 'dono ko' trap here might lead the LLM to only find the two individual solutions but fail to perform the final summation, or simply return the first one.",
+    "why_hard": "Recognizing the 'modulus - 1' pattern simplifies it, but calculating the sum of multiple solutions adds a layer of potential error.",
+    "tags": [
+      "CRT",
+      "summation",
+      "pattern-recognition"
+    ]
+  },
+  {
+    "problem_en": "What is the smallest x such that x ≡ 7 (mod 13) and x ≡ 11 (mod 17)?",
+    "problem_hi": "वह सबसे छोटा x क्या है जिससे x ≡ 7 (mod 13) और x ≡ 11 (mod 17) हो?",
+    "problem_hg_030": "Smallest x find karo such that x ≡ 7 (mod 13) and x ≡ 11 (mod 17).",
+    "problem_hg_065": "x ≡ 7 (mod 13) value hai. Phir x ≡ 11 (mod 17) check karo. Pehle karo inverse calculate phir x batao. Range 0 to 500 ke beech hai.",
+    "gold_answer": "111",
+    "gold_answer_num": 111.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: x = 13k + 7.",
+      "Step 2: 13k + 7 ≡ 11 (mod 17) => 13k ≡ 4 (mod 17).",
+      "Step 3: Solve for k: Multiply by 4 (since 134 = 52 ≡ 1 mod 17). 52k ≡ 16 (mod 17) => k ≡ 16 (mod 17).",
+      "Step 4: x = 13(16) + 7 = 208 + 7 = 215.",
+      "Final: 215. (Check: 215/13 rem 7; 215/17 rem 11. Correct.)"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: The instruction 'Pehle karo inverse calculate' might actually distract from simpler trial and error or manual substitution for small moduli.",
+    "why_hard": "Requires calculating a modular inverse for a larger prime (17).",
+    "tags": [
+      "CRT",
+      "modular-inverse",
+      "prime-moduli"
+    ]
+  },
+  {
+    "problem_en": "Find x: x ≡ 5 (mod 11), x ≡ 10 (mod 12), x ≡ 15 (mod 13). Smallest positive integer.",
+    "problem_hi": "x ज्ञात कीजिए: x ≡ 5 (mod 11), x ≡ 10 (mod 12), x ≡ 15 (mod 13). सबसे छोटा धनात्मक पूर्णांक।",
+    "problem_hg_030": "x find karo: x ≡ 5 (mod 11), x ≡ 10 (mod 12), x ≡ 15 (mod 13). Smallest positive integer.",
+    "problem_hg_065": "Equations solve karni hain: x ≡ 5 (mod 11) aur x ≡ 10 (mod 12). Baaki x ≡ 15 (mod 13) bhi satisfied hai. Result smallest number kya hoga?",
+    "gold_answer": "142",
+    "gold_answer_num": 142.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: Simplify: x ≡ 5 (mod 11), x ≡ -2 (mod 12), x ≡ 2 (mod 13).",
+      "Step 2: Solve x ≡ 5 mod 11 and x ≡ -2 mod 12. x = 12k - 2. 12k - 2 ≡ 5 mod 11 => k ≡ 7 mod 11.",
+      "Step 3: x = 12(7) - 2 = 82. General solution x = 82 + 132j.",
+      "Step 4: Substitute into mod 13: 82 + 132j ≡ 2 mod 13. 4 + 2j ≡ 2 mod 13 => 2j ≡ -2 ≡ 11 ≡ 24 mod 13 => j ≡ 12 mod 13.",
+      "Step 5: x = 82 + 132(12) = 82 + 1584 = 1666.",
+      "Final: 1666. (Check: 1666/11 rem 5, 1666/12 rem 10, 1666/13 rem 2 [which is 15-13=2]. Correct.)"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The LLM might ignore the 'x ≡ 15 (mod 13)' part entirely or treat 'baaki' as a remainder subtraction of the first two results.",
+    "why_hard": "Involves three congruences where remainders need reduction and moduli are near each other.",
+    "tags": [
+      "CRT",
+      "multiple-congruences",
+      "remainders"
+    ]
+  },
+  {
+    "problem_en": "Find x if x ≡ 1 (mod 5), x ≡ 2 (mod 7), x ≡ 3 (mod 8), and x ≡ 4 (mod 9). Smallest positive x.",
+    "problem_hi": "x ज्ञात कीजिए यदि x ≡ 1 (mod 5), x ≡ 2 (mod 7), x ≡ 3 (mod 8), और x ≡ 4 (mod 9) हो। सबसे छोटा धनात्मक x।",
+    "problem_hg_030": "x find karo if x ≡ 1 (mod 5), x ≡ 2 (mod 7), x ≡ 3 (mod 8), aur x ≡ 4 (mod 9).",
+    "problem_hg_065": "Solve x ≡ 1 (mod 5), x ≡ 2 (mod 7). Withdraw kar liya logic 4th equation se, x ≡ 4 (mod 9) and x ≡ 3 (mod 8). Sabse chota positive x dhoondo.",
+    "gold_answer": "1466",
+    "gold_answer_num": 1466.0,
+    "unit": "dimensionless",
+    "topic": "Modular Arithmetic",
+    "difficulty": "Codeforces-D",
+    "source_type": "crt_system",
+    "solution_steps_en": [
+      "Step 1: Solve x ≡ 1 mod 5 and x ≡ 2 mod 7 => x = 5k+1, 5k+1 ≡ 2 mod 7 => 5k ≡ 1 mod 7 => k ≡ 3 mod 7 => x = 16 mod 35.",
+      "Step 2: Solve x ≡ 3 mod 8 and x ≡ 4 mod 9 => x = 8j+3, 8j+3 ≡ 4 mod 9 => -j ≡ 1 mod 9 => j ≡ 8 mod 9 => x = 67 mod 72.",
+      "Step 3: Solve x ≡ 16 mod 35 and x ≡ 67 mod 72.",
+      "Step 4: x = 72m + 67. 72m + 67 ≡ 16 mod 35 => 2m + 32 ≡ 16 mod 35 => 2m ≡ -16 ≡ 19 ≡ 54 mod 35 => m ≡ 27 mod 35.",
+      "Step 5: x = 72(27) + 67 = 1944 + 67 = 2011.",
+      "Final: 2011. (Check: 2011/5 rem 1, 2011/7 rem 2, 2011/8 rem 3, 2011/9 rem 4. Correct.)"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad: The term 'Withdraw' might make the LLM remove one equation from the set or subtract something from the final modulus product.",
+    "why_hard": "Requires solving two pairs of congruences and then merging them into a final solution, involving higher products.",
+    "tags": [
+      "CRT",
+      "multiple-moduli",
+      "intermediate-steps"
+    ]
+  }
+]

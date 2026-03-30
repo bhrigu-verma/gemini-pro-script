@@ -1,0 +1,366 @@
+[
+  {
+    "problem_en": "A committee of 5 members is to be formed from 6 gentlemen and 4 ladies. In how many ways can this be done if at least 2 ladies must be included?",
+    "problem_hi": "6 पुरुषों और 4 महिलाओं में से 5 सदस्यों की एक समिति बनाई जानी है। यदि कम से कम 2 महिलाओं को शामिल करना आवश्यक है, तो यह कितने तरीकों से किया जा सकता है?",
+    "problem_hg_030": "6 gentlemen aur 4 ladies mein se 5 members ki ek committee form karni hai. Agar committee mein at least 2 ladies include karni hon, toh total ways kitne honge?",
+    "problem_hg_065": "Ek committee banani hai 5 members ki, jiske liye 6 gentlemen aur 4 ladies available hain. Is committee mein 'sirf' 2 ladies se kaam nahi chalega, kam se kam 2 ladies toh honi hi chahiye. Total combinations bataiye.",
+    "gold_answer": "186",
+    "gold_answer_num": 186.0,
+    "unit": "ways",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Case 1: 2 ladies and 3 gentlemen. Ways = 4C2 * 6C3 = 6 * 20 = 120.",
+      "Step 2: Case 2: 3 ladies and 2 gentlemen. Ways = 4C3 * 6C2 = 4 * 15 = 60.",
+      "Step 3: Case 3: 4 ladies and 1 gentleman. Ways = 4C4 * 6C1 = 1 * 6 = 6.",
+      "Step 4: Total ways = 120 + 60 + 6 = 186."
+    ],
+    "linguistic_trap_in_hg065": "The word 'sirf' (only) is used in a conversational negation ('sirf 2 ladies se kaam nahi chalega') which emphasizes the 'at least' constraint. However, an LLM might focus on the word 'sirf' and 2, incorrectly calculating exactly 2 ladies.",
+    "why_hard": "LLMs often struggle with logical constraints when they are presented through conversational negations rather than direct mathematical terms.",
+    "tags": [
+      "committee",
+      "at-least"
+    ]
+  },
+  {
+    "problem_en": "A box contains 5 red and 7 blue balls. A person picks 3 balls. In how many ways can he pick the balls such that they are not all of the same color?",
+    "problem_hi": "एक डिब्बे में 5 लाल और 7 नीली गेंदें हैं। एक व्यक्ति 3 गेंदें चुनता है। वह गेंदों को कितने तरीकों से चुन सकता है कि वे सभी एक ही रंग की न हों?",
+    "problem_hg_030": "Ek box mein 5 red aur 7 blue balls hain. Ek person 3 balls pick karta hai. Kitne ways mein wo balls pick kar sakta hai so that they are not all of the same color?",
+    "problem_hg_065": "Box mein 5 red balls hain aur 7 blue. 3 balls select karni hain, par condition ye hai ki 'na' saari balls red honi chahiye 'na' saari blue. Selection ke total ways kya hain?",
+    "gold_answer": "175",
+    "gold_answer_num": 175.0,
+    "unit": "ways",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Total ways to pick 3 balls from 12 = 12C3 = (12 * 11 * 10) / (3 * 2 * 1) = 220.",
+      "Step 2: Ways to pick all red balls = 5C3 = 10.",
+      "Step 3: Ways to pick all blue balls = 7C3 = 35.",
+      "Step 4: Ways with mixed colors = Total - (All Red + All Blue) = 220 - (10 + 35) = 220 - 45 = 175. Wait, 12C3 is 220. 220 - 45 = 175. Correct.",
+      "Step 5: Let's re-verify 12C3: 121110/6 = 21110 = 220. 5C3 = 10. 7C3 = 35. 220 - 45 = 175."
+    ],
+    "linguistic_trap_in_hg065": "The 'na...na' double negation ('na saari red... na saari blue') is used to express that the selection should not be monochromatic. LLMs sometimes interpret double negations as an affirmative or get confused about the inclusion/exclusion boundaries.",
+    "why_hard": "Requires the model to understand that double negation in this syntactic context implies subtraction from the total sample space.",
+    "tags": [
+      "balls",
+      "negation"
+    ]
+  },
+  {
+    "problem_en": "There are 10 points in a plane, out of which 4 are collinear. Find the number of distinct triangles that can be formed using these points.",
+    "problem_hi": "एक तल में 10 बिंदु हैं, जिनमें से 4 संरेख (collinear) हैं। इन बिंदुओं का उपयोग करके बनाए जा सकने वाले अलग-अलग त्रिभुजों की संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Ek plane mein 10 points hain, jinmein se 4 collinear hain. In points ko use karke kitne distinct triangles banaye ja sakte hain?",
+    "problem_hg_065": "Ek plane par total 10 points hain. Inme se 4 points ek hi line par hain, aur 'baaki' scattered hain. In points ko join karke kitne triangles ban sakte hain?",
+    "gold_answer": "116",
+    "gold_answer_num": 116.0,
+    "unit": "triangles",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Total ways to select 3 points from 10 = 10C3 = (10 * 9 * 8) / (3 * 2 * 1) = 120.",
+      "Step 2: A triangle cannot be formed if all 3 points are chosen from the 4 collinear points.",
+      "Step 3: Number of ways to pick 3 points from 4 collinear points = 4C3 = 4.",
+      "Step 4: Total triangles = 120 - 4 = 116."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' (the rest/remainder) can lead the LLM to focus on the 6 non-collinear points exclusively (6C3) or combinations involving exactly one point from the 'baaki' set, missing the mixed cases.",
+    "why_hard": "Linguistic cues like 'baaki' often trigger subset-only reasoning in models, ignoring the global selection minus illegal cases.",
+    "tags": [
+      "geometry",
+      "collinear"
+    ]
+  },
+  {
+    "problem_en": "A student has to answer 7 questions out of 10 in an examination. If the first 3 questions are compulsory, in how many ways can the student select the questions?",
+    "problem_hi": "एक छात्र को एक परीक्षा में 10 में से 7 प्रश्नों के उत्तर देने हैं। यदि पहले 3 प्रश्न अनिवार्य हैं, तो छात्र कितने तरीकों से प्रश्नों का चयन कर सकता है?",
+    "problem_hg_030": "Ek student ko 10 mein se 7 questions answer karne hain. Agar first 3 questions compulsory hain, toh student kitne ways mein selection kar sakta hai?",
+    "problem_hg_065": "Exam mein 10 questions hain aur attempt 7 karne hain. Pehle 3 questions toh 'pehle' hi fixed kar diye gaye hain (compulsory). 'Phir' bache hue sawalo mein se kitne options honge selection ke liye?",
+    "gold_answer": "35",
+    "gold_answer_num": 35.0,
+    "unit": "ways",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Total questions = 10. Questions to be answered = 7.",
+      "Step 2: Since first 3 are compulsory, they are already selected.",
+      "Step 3: Remaining questions to choose = 7 - 3 = 4.",
+      "Step 4: Remaining questions available = 10 - 3 = 7. Ways = 7C4 = 35."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' (First...then) ordering trap. Even though it mimics the sequence of selection, LLMs sometimes interpret the 'phir' as a secondary independent task (like 10C3 then 7C4), or miscalculate the remaining pool.",
+    "why_hard": "Tests the ability to reduce the n and r values of the combination formula based on fixed constraints.",
+    "tags": [
+      "exam",
+      "compulsory"
+    ]
+  },
+  {
+    "problem_en": "Out of 7 consonants and 4 vowels, how many words of 3 consonants and 2 vowels can be formed (selection only)?",
+    "problem_hi": "7 व्यंजनों और 4 स्वरों में से, 3 व्यंजनों और 2 स्वरों के कितने शब्द (केवल चयन) बनाए जा सकते हैं?",
+    "problem_hg_030": "7 consonants aur 4 vowels mein se, 3 consonants aur 2 vowels ke kitne groups select kiye ja sakte hain?",
+    "problem_hg_065": "Hamare paas 7 consonants aur 4 vowels hain. Inme se 3 consonants 'aur' 2 vowels ki team banani hai. Selection ke kitne possible ways hain?",
+    "gold_answer": "210",
+    "gold_answer_num": 210.0,
+    "unit": "groups",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Ways to select 3 consonants from 7 = 7C3 = (7 * 6 * 5) / (3 * 2 * 1) = 35.",
+      "Step 2: Ways to select 2 vowels from 4 = 4C2 = (4 * 3) / 2 = 6.",
+      "Step 3: Total ways = 35 * 6 = 210.",
+      "Step 4: Final result = 210."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' ambiguity. '3 consonants aur 2 vowels' could be misinterpreted as '3 consonants' and separately '2 vowels' as two distinct answers, or even additive (3+2=5) in a way that ignores the product rule of counting.",
+    "why_hard": "LLMs often struggle with the 'product rule' vs 'addition rule' when the word 'aur' (and) is used.",
+    "tags": [
+      "vowels",
+      "consonants"
+    ]
+  },
+  {
+    "problem_en": "In a cricket tournament, there are 11 players. A team of 6 is to be selected. If the captain is always included, find the number of ways.",
+    "problem_hi": "एक क्रिकेट टूर्नामेंट में 11 खिलाड़ी हैं। 6 खिलाड़ियों की एक टीम चुनी जानी है। यदि कप्तान को हमेशा शामिल किया जाता है, तो तरीकों की संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Cricket tournament mein 11 players hain. 6 players ki team select karni hai. Agar captain hamesha included ho, toh total ways find karein.",
+    "problem_hg_065": "Total 11 players hain, team 6 ki banani hai. Captain ko 'sirf' isliye team mein rakha gaya hai kyunki wo captain hai (fixed selection). 'Baaki' players ko choose karne ke kitne tareeke honge?",
+    "gold_answer": "252",
+    "gold_answer_num": 252.0,
+    "unit": "ways",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Total players = 11. Players to select = 6.",
+      "Step 2: 1 player (captain) is already selected.",
+      "Step 3: Now we need to select 5 more players from the remaining 10 players.",
+      "Step 4: Ways = 10C5 = (10 * 9 * 8 * 7 * 6) / (5 * 4 * 3 * 2 * 1) = 252."
+    ],
+    "linguistic_trap_in_hg065": "The use of 'sirf' and 'baaki' together. 'Sirf' implies the captain's selection is the only fixed part, and 'baaki' refers to the remaining selection. LLMs might misinterpret 'baaki' as the number of people NOT selected.",
+    "why_hard": "Requires simultaneous management of a fixed inclusion and the reduction of the available pool.",
+    "tags": [
+      "sports",
+      "fixed-inclusion"
+    ]
+  },
+  {
+    "problem_en": "Find the number of ways to select 4 letters from the word 'EXAMINATION'.",
+    "problem_hi": "शब्द 'EXAMINATION' से 4 अक्षरों का चयन करने के तरीकों की संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Word 'EXAMINATION' mein se 4 letters select karne ke total ways kitne honge?",
+    "problem_hg_065": "Word 'EXAMINATION' ko dekhiye. Isme se 4 letters select karne hain. 'Baaki' letters ko ignore karte hue, distinct selections kitne honge? Dhyan rakhein letters repeat ho rahe hain.",
+    "gold_answer": "136",
+    "gold_answer_num": 136.0,
+    "unit": "ways",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: EXAMINATION has letters: A(2), I(2), N(2), E(1), X(1), M(1), T(1), O(1). Total 8 distinct letters.",
+      "Step 2: Case 1: 4 distinct letters. 8C4 = 70.",
+      "Step 3: Case 2: 2 same, 2 distinct. Pairs available: A, I, N (3 pairs). Ways = 3C1 (choose a pair) * 7C2 (choose 2 from remaining 7 types) = 3 * 21 = 63.",
+      "Step 4: Case 3: 2 same, 2 same. Pairs available: A, I, N (3 pairs). Ways = 3C2 = 3.",
+      "Step 5: Total ways = 70 + 63 + 3 = 136."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' (the rest). In the context of the word 'EXAMINATION', an LLM might think 'baaki' refers to the letters remaining after a single selection, or it might struggle with the 'distinct' constraint when combined with code-switching.",
+    "why_hard": "Selection from a multiset requires case-based reasoning which is easily disrupted by informal instructions.",
+    "tags": [
+      "word",
+      "multiset"
+    ]
+  },
+  {
+    "problem_en": "A bag contains 3 lakh 50 hazaar tokens, but for our problem, consider a bag with 6 white and 5 black balls. Find the number of ways to select 4 balls such that at least one is white.",
+    "problem_hi": "एक बैग में 6 सफेद और 5 काली गेंदें हैं। 4 गेंदों का चयन करने के तरीकों की संख्या ज्ञात कीजिए ताकि कम से कम एक सफेद हो।",
+    "problem_hg_030": "Bag mein 6 white aur 5 black balls hain. 4 balls select karne ke ways find karein so that at least one is white.",
+    "problem_hg_065": "Maana ki ek bag mein '3 lakh 50 hazaar' total items the, par hum sirf 6 white aur 5 black balls ki baat kar rahe hain. 4 balls pick karni hain, kam se kam ek white honi chahiye. Total combinations kitne honge?",
+    "gold_answer": "325",
+    "gold_answer_num": 325.0,
+    "unit": "ways",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Total balls = 11. Total ways to pick 4 balls = 11C4 = (11 * 10 * 9 * 8) / (4 * 3 * 2 * 1) = 330.",
+      "Step 2: Ways to pick 4 balls such that none are white (all black) = 5C4 = 5.",
+      "Step 3: Ways to pick at least one white = Total - No white = 330 - 5 = 325.",
+      "Step 4: Final result = 325."
+    ],
+    "linguistic_trap_in_hg065": "Indian number notation '3 lakh 50 hazaar' is used as a distractor. LLMs often try to incorporate large numbers into the calculation even when they are explicitly stated to be irrelevant.",
+    "why_hard": "The model must ignore a large, correctly formatted numerical distractor while performing a complementary counting task.",
+    "tags": [
+      "indian-notation",
+      "at-least"
+    ]
+  },
+  {
+    "problem_en": "How many 4-member committees can be formed from 8 people if two specific people refuse to serve together?",
+    "problem_hi": "8 व्यक्तियों में से 4-सदस्यीय कितनी समितियाँ बनाई जा सकती हैं यदि दो विशिष्ट व्यक्ति एक साथ सेवा करने से मना करते हैं?",
+    "problem_hg_030": "8 people mein se 4-member committee kitne ways mein ban sakti hai if two specific people refuse to serve together?",
+    "problem_hg_065": "8 logo ki list hai, team 4 ki banani hai. Par do log aise hain jo bolte hain hum saath kaam 'na' karenge. Unhe ek saath 'na' rakhte hue kitne ways possible hain?",
+    "gold_answer": "55",
+    "gold_answer_num": 55.0,
+    "unit": "committees",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Total ways to form a committee of 4 from 8 = 8C4 = 70.",
+      "Step 2: Ways where the two specific people ARE together = 6C2 (since 2 are fixed, choose 2 more from the remaining 6) = 15.",
+      "Step 3: Ways where they are not together = Total - Together = 70 - 15 = 55.",
+      "Step 4: Final result = 55."
+    ],
+    "linguistic_trap_in_hg065": "The 'na...na' double negation trap in a different context. 'Saath kaam na karenge' and 'Ek saath na rakhte hue' reinforces the exclusion. LLMs sometimes struggle with multiple negative constraints in one sentence.",
+    "why_hard": "Constraint satisfaction in combinations is prone to errors when negative conditions are stacked.",
+    "tags": [
+      "committee",
+      "exclusion"
+    ]
+  },
+  {
+    "problem_en": "A question paper has two parts, A and B, each containing 5 questions. A student has to answer 6 questions in total, selecting at least 2 from each part. In how many ways can he do this?",
+    "problem_hi": "एक प्रश्न पत्र के दो भाग, A और B हैं, जिनमें से प्रत्येक में 5 प्रश्न हैं। एक छात्र को कुल 6 प्रश्नों के उत्तर देने हैं, प्रत्येक भाग से कम से कम 2 का चयन करना है। वह इसे कितने तरीकों से कर सकता है?",
+    "problem_hg_030": "Ek question paper ke do parts hain, A aur B, each having 5 questions. Student ko total 6 questions select karne hain, at least 2 from each part. Kitne ways honge?",
+    "problem_hg_065": "Paper ke Part A mein 5 sawal hain aur Part B mein bhi 5. Student ko total 6 solve karne hain. Condition ye hai ki Part A se kam se kam 2 'aur' Part B se bhi kam se kam 2 questions hone chahiye. Total methods bataiye.",
+    "gold_answer": "200",
+    "gold_answer_num": 200.0,
+    "unit": "ways",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Possible distributions: (Part A, Part B) = (2,4), (3,3), (4,2).",
+      "Step 2: Ways for (2,4) = 5C2 * 5C4 = 10 * 5 = 50.",
+      "Step 3: Ways for (3,3) = 5C3 * 5C3 = 10 * 10 = 100.",
+      "Step 4: Ways for (4,2) = 5C4 * 5C2 = 5 * 10 = 50.",
+      "Step 5: Total ways = 50 + 100 + 50 = 200."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' ambiguity in a constraint list. In Hinglish, 'Part A se... aur Part B se...' might be interpreted as a sequential dependency rather than a simultaneous requirement, or lead to miscounting the total number of items needed.",
+    "why_hard": "Requires splitting the problem into multiple mutually exclusive cases based on a dual lower-bound constraint.",
+    "tags": [
+      "exam",
+      "distribution"
+    ]
+  },
+  {
+    "problem_en": "In how many ways can a team of 5 be selected from 10 players such that two particular players are always included and one particular player is always excluded?",
+    "problem_hi": "10 खिलाड़ियों में से 5 की टीम को कितने तरीकों से चुना जा सकता है ताकि दो विशेष खिलाड़ियों को हमेशा शामिल किया जाए और एक विशेष खिलाड़ी को हमेशा बाहर रखा जाए?",
+    "problem_hg_030": "10 players mein se 5 ki team kitne ways mein select ho sakti hai such that two particular players are always included and one particular player is excluded?",
+    "problem_hg_065": "10 players ki list hai, 5 select karne hain. Do players ko toh 'sirf' isliye rakha gaya hai kyunki wo seniors hain (fixed), par ek player ko team se 'withdraw kar liya' gaya hai (excluded). Selection ke tareeke bataiye.",
+    "gold_answer": "35",
+    "gold_answer_num": 35.0,
+    "unit": "ways",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Total players = 10. Need to select 5.",
+      "Step 2: 2 players are always included (fixed). So we need 5 - 2 = 3 more players.",
+      "Step 3: 1 player is always excluded. Available players from which to choose = 10 - 2 (included) - 1 (excluded) = 7.",
+      "Step 4: Ways = 7C3 = (7 * 6 * 5) / (3 * 2 * 1) = 35."
+    ],
+    "linguistic_trap_in_hg065": "The term 'withdraw kar liya' is usually used for money or participation. In this context, an LLM might think the player was removed after the initial selection process or confusion with the total count (does withdraw mean 10-1 or 9-1?).",
+    "why_hard": "The model must process simultaneous inclusion and exclusion rules stated in non-mathematical, mixed language.",
+    "tags": [
+      "inclusion-exclusion",
+      "sports"
+    ]
+  },
+  {
+    "problem_en": "There are 6 multiple choice questions in an exam. Each question has 4 options. In how many ways can a student fail to get all answers correct, assuming he attempts all?",
+    "problem_hi": "एक परीक्षा में 6 बहुविकल्पीय प्रश्न हैं। प्रत्येक प्रश्न के 4 विकल्प हैं। एक छात्र सभी उत्तर सही पाने में कितने तरीकों से विफल हो सकता है, यह मानते हुए कि वह सभी प्रयास करता है?",
+    "problem_hg_030": "Exam mein 6 MCQs hain, each with 4 options. Kitne ways mein student saare answers correct lane mein fail ho sakta hai, assuming he attempts all?",
+    "problem_hg_065": "6 questions hain, har ek ke 4 options. Ek student saare sahi 'na' kar paye, aise kitne possible ways hain? Maan lijiye usne saare questions attempt kiye hain.",
+    "gold_answer": "4095",
+    "gold_answer_num": 4095.0,
+    "unit": "ways",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Total ways to answer 6 questions (4 options each) = 4^6 = 4096.",
+      "Step 2: There is exactly 1 way to get all answers correct (each question has only 1 correct option).",
+      "Step 3: Ways to fail to get all correct = Total ways - 1 correct way = 4096 - 1 = 4095.",
+      "Step 4: Final result = 4095."
+    ],
+    "linguistic_trap_in_hg065": "The word 'na' (not) in 'saare sahi na kar paye'. This is a subtraction logic ('Total - 1'). LLMs often confuse this with 'at least one correct' or 'none correct'.",
+    "why_hard": "Exponential growth calculations combined with a subtle complementary counting condition.",
+    "tags": [
+      "mcq",
+      "probability-related"
+    ]
+  },
+  {
+    "problem_en": "Out of 12 points, some are collinear. If 185 triangles can be formed, find the number of points that are collinear.",
+    "problem_hi": "12 बिंदुओं में से कुछ संरेख हैं। यदि 185 त्रिभुज बन सकते हैं, तो संरेख बिंदुओं की संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "12 points mein se some are collinear. Agar total 185 triangles ban rahe hain, toh collinear points kitne hain?",
+    "problem_hg_065": "12 points hain plane mein. Kuch points ek line par hain. Agar triangles ka total count 185 hai, toh kitne points line par 'zyada' se 'zyada' ho sakte hain?",
+    "gold_answer": "7",
+    "gold_answer_num": 7.0,
+    "unit": "points",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Total points n = 12. Let m points be collinear.",
+      "Step 2: Number of triangles = 12C3 - mC3 = 185.",
+      "Step 3: 12C3 = (12 * 11 * 10) / 6 = 220.",
+      "Step 4: 220 - mC3 = 185 => mC3 = 35.",
+      "Step 5: Since mC3 = 35, and we know 7C3 = (7 * 6 * 5) / 6 = 35, m = 7."
+    ],
+    "linguistic_trap_in_hg065": "The 'Zyada direction' trap. 'Zyada se zyada' (at most) is used as an intensifier here, but it can trigger inequality reasoning in an LLM (m <= 7) rather than identifying the exact integer solution.",
+    "why_hard": "Inverse problem where the model must solve an equation involving a combination formula.",
+    "tags": [
+      "geometry",
+      "inverse-problem"
+    ]
+  },
+  {
+    "problem_en": "How many ways can 5 people be selected from 9 people such that two specific people are either both included or both excluded?",
+    "problem_hi": "9 व्यक्तियों में से 5 को कितने तरीकों से चुना जा सकता है ताकि दो विशिष्ट व्यक्तियों को या तो दोनों को शामिल किया जाए या दोनों को बाहर रखा जाए?",
+    "problem_hg_030": "9 people mein se 5 select karne ke ways kitne honge such that two specific people are either both included or both excluded?",
+    "problem_hg_065": "9 logo mein se 5 ki team banani hai. Condition ye hai ki do specific log ya toh team mein 'saath' honge 'aur' ya toh 'baaki' sab ke saath bahar honge. Total combinations kitne hain?",
+    "gold_answer": "56",
+    "gold_answer_num": 56.0,
+    "unit": "ways",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Case 1: Both specific people included. We need to choose 3 more from 7. Ways = 7C3 = 35.",
+      "Step 2: Case 2: Both specific people excluded. We need to choose 5 from 7. Ways = 7C5 = 21. Wait, 7C5 = 21.",
+      "Step 3: Total ways = 35 + 21 = 56. Let me re-calculate 9C5 = 126.",
+      "Step 4: Re-calculating: 7C3 = 35. 7C5 = (7 * 6) / 2 = 21. Total = 35 + 21 = 56."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' ambiguity combined with 'baaki'. 'Ya toh team mein saath honge aur ya toh baaki sab ke saath bahar' is syntactically complex and uses 'aur' in a way that might suggest a third case or addition of redundant subsets.",
+    "why_hard": "Requires logically grouping two disjoint cases described in high-density code-mixed speech.",
+    "tags": [
+      "logic",
+      "team-selection"
+    ]
+  },
+  {
+    "problem_en": "A polygons has 44 diagonals. Find the number of its sides.",
+    "problem_hi": "एक बहुभुज में 44 विकर्ण हैं। इसकी भुजाओं की संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Ek polygon mein 44 diagonals hain. Iski sides ka count find karein.",
+    "problem_hg_065": "Ek polygon ke total 44 diagonals hain. 'Pehle' uske points ko consider karo 'phir' ye dekho ki unse diagonals kaise bante hain. Polygon ki sides kitni hain?",
+    "gold_answer": "11",
+    "gold_answer_num": 11.0,
+    "unit": "sides",
+    "topic": "Combinations",
+    "difficulty": "JEE-Main",
+    "source_type": "selection_constraint",
+    "solution_steps_en": [
+      "Step 1: Number of diagonals in an n-sided polygon = nC2 - n = n(n-3)/2.",
+      "Step 2: n(n-3)/2 = 44.",
+      "Step 3: n^2 - 3n - 88 = 0.",
+      "Step 4: (n-11)(n+8) = 0. Since n must be positive, n = 11."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' trap. It suggests a sequence that might lead an LLM to try and derive the formula from first principles (points then lines) and fail at the algebraic step.",
+    "why_hard": "Requires linking a combination formula (nC2) to a geometric property (diagonals) through a quadratic equation.",
+    "tags": [
+      "polygon",
+      "diagonals"
+    ]
+  }
+]

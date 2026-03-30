@@ -1,0 +1,362 @@
+[
+  {
+    "problem_en": "Evaluate the definite integral of f(x) = (x^4 + 1)/(x^6 + 1) from 0 to 1.",
+    "problem_hi": "0 से 1 तक f(x) = (x^4 + 1)/(x^6 + 1) के निश्चित समाकल का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Evaluate karein definite integral f(x) = (x^4 + 1)/(x^6 + 1) ka limits 0 se 1 tak.",
+    "problem_hg_065": "Function f(x) = (x^4 + 1)/(x^6 + 1) ka integration 0 se 1 tak calculate karein. 'Pehle' numerator ko simplify karein 'phir' denominator ke factors ko divide karein.",
+    "gold_answer": "pi/3",
+    "gold_answer_num": 1.0471975512,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Write (x^4 + 1) as (x^4 - x^2 + 1) + x^2.",
+      "Step 2: Note that x^6 + 1 = (x^2 + 1)(x^4 - x^2 + 1).",
+      "Step 3: Split the integral into Integral[(x^4 - x^2 + 1)/(x^6 + 1)] + Integral[x^2/(x^6 + 1)].",
+      "Step 4: This simplifies to Integral[1/(x^2 + 1)] from 0 to 1 + Integral[x^2/(x^6 + 1)] from 0 to 1. The first is arctan(1) = pi/4. The second, using u = x^3, becomes (1/3)arctan(1) = pi/12. pi/4 + pi/12 = pi/3."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' trap forces a specific order of operation which, if followed literally as algebraic steps rather than a hint, can lead to complex partial fractions instead of the elegant split used in the solution.",
+    "why_hard": "The polynomial division is non-trivial and the Hinglish ordering prompt misleads the model into a tedious calculation path.",
+    "tags": [
+      "Algebraic-Manipulation",
+      "Partial-Fractions"
+    ]
+  },
+  {
+    "problem_en": "Calculate the area under the curve y = log(1 + tan(x)) from x = 0 to x = pi/4.",
+    "problem_hi": "x = 0 से x = pi/4 तक वक्र y = log(1 + tan(x)) के नीचे का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "Curve y = log(1 + tan(x)) ke niche ka area find karein limits x = 0 se x = pi/4 tak.",
+    "problem_hg_065": "Integral calculate karein log(1 + tan(x)) ka 0 se pi/4 tak. Isme King's property use karein, 'baaki' log identities ki zarurat nahi padegi.",
+    "gold_answer": "pi/8log(2)",
+    "gold_answer_num": 0.2721982613,
+    "unit": "square units",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Let I = integral from 0 to pi/4 of log(1 + tan(x)) dx.",
+      "Step 2: Apply I = integral from 0 to a of f(a-x): I = integral 0 to pi/4 of log(1 + tan(pi/4 - x)) dx.",
+      "Step 3: Use tan(A-B) formula: 1 + tan(pi/4 - x) = 1 + (1-tan x)/(1+tan x) = 2/(1+tan x).",
+      "Step 4: I = integral 0 to pi/4 of [log 2 - log(1 + tan x)] dx. So I = (pi/4)log 2 - I, which means 2I = (pi/4)log 2, I = (pi/8)log 2."
+    ],
+    "linguistic_trap_in_hg065": "The 'baaki' trap implies that other log identities are prohibited or unnecessary, which can confuse an LLM that might need to verify steps using basic log subtraction rules.",
+    "why_hard": "Classic King's Property application where Hinglish phrasing restricts the reasoning 'toolbox' artificially.",
+    "tags": [
+      "Kings-Property",
+      "Log-Integration"
+    ]
+  },
+  {
+    "problem_en": "Determine the value of the integral from 0 to 2 of |x^2 + 2x - 3| dx.",
+    "problem_hi": "0 से 2 तक |x^2 + 2x - 3| dx के समाकल का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Integral of absolute value |x^2 + 2x - 3| evaluate karein 0 se 2 limits ke beech.",
+    "problem_hg_065": "Function |x^2 + 2x - 3| ka integral 0 se 2 tak evaluate karein. Dhyan rahe x=1 par sign change hota hai, 'sirf' positive part ka area mat nikaal dena.",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Factor x^2 + 2x - 3 = (x+3)(x-1). The expression is negative for x < 1 and positive for x > 1.",
+      "Step 2: Split integral: Integral[0 to 1] of -(x^2 + 2x - 3) dx + Integral[1 to 2] of (x^2 + 2x - 3) dx.",
+      "Step 3: Solve first part: -[x^3/3 + x^2 - 3x] from 0 to 1 = -[1/3 + 1 - 3] = 5/3.",
+      "Step 4: Solve second part: [x^3/3 + x^2 - 3x] from 1 to 2 = (8/3 + 4 - 6) - (1/3 + 1 - 3) = 2/3 + 5/3 = 7/3. Total = 5/3 + 7/3 = 12/3 = 4."
+    ],
+    "linguistic_trap_in_hg065": "The 'sirf' trap suggests focusing on the positive part, which might lead an LLM to ignore the absolute value definition or fail to negate the integral on the [0, 1] interval.",
+    "why_hard": "Absolute value functions require splitting boundaries; the word 'sirf' is used to specifically trigger an inclusion error.",
+    "tags": [
+      "Absolute-Value",
+      "Limit-Splitting"
+    ]
+  },
+  {
+    "problem_en": "Evaluate the integral from 0 to pi of xsin(x)/(1 + cos^2(x)) dx.",
+    "problem_hi": "0 से pi तक xsin(x)/(1 + cos^2(x)) dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Evaluate karein integral xsin(x)/(1 + cos^2(x)) from 0 to pi.",
+    "problem_hg_065": "Integral of xsin(x)/(1 + cos^2(x)) calculate karein 0 se pi tak. Isme King's Property 'band kar diya gaya' nahi hai, toh wahi use karein.",
+    "gold_answer": "pi^2/4",
+    "gold_answer_num": 2.4674011002,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Let I = integral 0 to pi of xsin(x)/(1 + cos^2(x)) dx.",
+      "Step 2: Replace x with pi - x: I = integral 0 to pi of (pi - x)sin(x)/(1 + cos^2(x)) dx.",
+      "Step 3: Add the two equations: 2I = pi * integral 0 to pi of sin(x)/(1 + cos^2(x)) dx.",
+      "Step 4: Substitute u = cos(x), du = -sin(x) dx. Limits 1 to -1. 2I = pi * integral -1 to 1 of du/(1+u^2) = pi * [arctan(u)] from -1 to 1 = pi * (pi/2) = pi^2/2. So I = pi^2/4."
+    ],
+    "linguistic_trap_in_hg065": "The passive phrase 'band kar diya gaya nahi hai' (has not been closed/prohibited) is a convoluted double negative that might cause an LLM to think a certain property is actually disallowed.",
+    "why_hard": "Standard JEE problem where the linguistic phrasing around the methodology ('band kar diya gaya') creates overhead.",
+    "tags": [
+      "Kings-Property",
+      "Substitution"
+    ]
+  },
+  {
+    "problem_en": "Find the value of the integral from 0 to 1 of x(1-x)^99 dx.",
+    "problem_hi": "0 से 1 तक x*(1-x)^99 dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Evaluate karein integral x*(1-x)^99 dx limits 0 se 1 tak.",
+    "problem_hg_065": "Integral of x*(1-x)^99 evaluate karein 0 se 1 tak. Power 99 dekh kar ghabrana nahi, 'baaki' binomial expansion mat lagana, replacement property use karein.",
+    "gold_answer": "1/10100",
+    "gold_answer_num": 9.90099e-05,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Apply replacement property x -> 1-x. I = integral 0 to 1 of (1-x)(1-(1-x))^99 dx.",
+      "Step 2: Simplify: I = integral 0 to 1 of (1-x)x^99 dx.",
+      "Step 3: Distribute: I = integral 0 to 1 of (x^99 - x^100) dx.",
+      "Step 4: Integrate: [x^100/100 - x^101/101] from 0 to 1 = 1/100 - 1/101 = (101-100)/10100 = 1/10100."
+    ],
+    "linguistic_trap_in_hg065": "The 'baaki' trap here is used as 'don't use the remaining/other' method (binomial expansion), which might lead the LLM to doubt its usual reasoning pathway for high powers.",
+    "why_hard": "LLMs often default to expansion or Gamma functions for high powers; the Hinglish instruction specifically targets this.",
+    "tags": [
+      "Power-Rule",
+      "Property-of-Definite-Integrals"
+    ]
+  },
+  {
+    "problem_en": "Evaluate the integral from 0 to pi/2 of dx/(1 + tan^3(x)).",
+    "problem_hi": "0 से pi/2 तक dx/(1 + tan^3(x)) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Evaluate karein integral 0 to pi/2 of dx/(1 + tan^3(x)).",
+    "problem_hg_065": "Integral of 1/(1 + tan^3(x)) calculate karein 0 se pi/2 tak. Isme 'aur' property add karke 2I wala concept lagao.",
+    "gold_answer": "pi/4",
+    "gold_answer_num": 0.7853981633,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Write tan^3(x) as sin^3(x)/cos^3(x). I = integral 0 to pi/2 of cos^3(x)/(sin^3(x) + cos^3(x)) dx.",
+      "Step 2: Apply property x -> pi/2 - x. I = integral 0 to pi/2 of sin^3(x)/(cos^3(x) + sin^3(x)) dx.",
+      "Step 3: Add the two forms: 2I = integral 0 to pi/2 of (sin^3 x + cos^3 x)/(sin^3 x + cos^3 x) dx = integral 0 to pi/2 of 1 dx.",
+      "Step 4: 2I = [x] from 0 to pi/2 = pi/2. Thus I = pi/4."
+    ],
+    "linguistic_trap_in_hg065": "The 'aur' ambiguity: 'aur property add karke' could be interpreted as 'add another property' or 'add the property result to the original', potentially leading to step skipping.",
+    "why_hard": "Requires converting tan to sin/cos first, which models might skip if they take the 'aur' hint as a direct instruction to use the property on the raw tan function.",
+    "tags": [
+      "Trigonometric-Substitution",
+      "Symmetry-Property"
+    ]
+  },
+  {
+    "problem_en": "Compute the integral from 0 to pi of sin^2(x)cos^3(x) dx.",
+    "problem_hi": "0 से pi तक sin^2(x)cos^3(x) dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Evaluate integral of sin^2(x)cos^3(x) from 0 to pi.",
+    "problem_hg_065": "Integral find karein sin^2(x)cos^3(x) ka 0 se pi tak. 'Na' value negative honi chahiye 'na' zero (unless it is actually zero). Check symmetry first.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Check f(pi - x). f(pi-x) = sin^2(pi-x) * cos^3(pi-x).",
+      "Step 2: sin(pi-x) = sin(x), but cos(pi-x) = -cos(x).",
+      "Step 3: So f(pi-x) = sin^2(x) * (-cos(x))^3 = -sin^2(x) * cos^3(x) = -f(x).",
+      "Step 4: For integral 0 to a, if f(a-x) = -f(x), the integral is 0."
+    ],
+    "linguistic_trap_in_hg065": "Double negation 'na...na' (neither negative nor zero) is used to create a cognitive bias. Since the actual answer is zero, the user hint 'na... zero' directly contradicts the truth to see if the LLM hallucinates a non-zero value.",
+    "why_hard": "LLMs tend to follow user hints even if they are wrong; the 'na zero' hint specifically tests if the model will reject the correct mathematical proof in favor of the Hinglish instruction.",
+    "tags": [
+      "Odd-Function",
+      "Trigonometric-Identity"
+    ]
+  },
+  {
+    "problem_en": "Find the integral from 1 to 2 of (sqrt(x))/(sqrt(3-x) + sqrt(x)) dx.",
+    "problem_hi": "1 से 2 तक (sqrt(x))/(sqrt(3-x) + sqrt(x)) dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Integral calculate karein (sqrt(x))/(sqrt(3-x) + sqrt(x)) ka 1 se 2 tak.",
+    "problem_hg_065": "Integration of sqrt(x)/(sqrt(3-x)+sqrt(x)) from 1 to 2. Limits ko 'aur' 1 unit shift mat karna, standard property laga lo.",
+    "gold_answer": "1/2",
+    "gold_answer_num": 0.5,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Let I = integral 1 to 2 of sqrt(x)/(sqrt(3-x) + sqrt(x)) dx.",
+      "Step 2: Apply property integral a to b f(x) dx = integral a to b f(a+b-x) dx. Here a+b = 3.",
+      "Step 3: I = integral 1 to 2 of sqrt(3-x)/(sqrt(3-(3-x)) + sqrt(3-x)) dx = integral 1 to 2 of sqrt(3-x)/(sqrt(x) + sqrt(3-x)) dx.",
+      "Step 4: Add 2I = integral 1 to 2 of 1 dx = [x] from 1 to 2 = 1. So I = 1/2."
+    ],
+    "linguistic_trap_in_hg065": "The 'aur' ambiguity: 'Limits ko aur 1 unit shift mat karna' uses 'aur' as 'more/additional'. This might lead the model to mistakenly change the limits (e.g., to 2 to 3) if it misinterprets the warning.",
+    "why_hard": "Standard 'a+b-x' property problem, but the Hinglish instruction regarding the limits acts as a distractor.",
+    "tags": [
+      "Symmetry-Property",
+      "Rational-Functions"
+    ]
+  },
+  {
+    "problem_en": "Calculate the integral from 0 to pi/4 of tan^2(x) dx.",
+    "problem_hi": "0 से pi/4 तक tan^2(x) dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Integral of tan^2(x) from 0 to pi/4 compute karein.",
+    "problem_hg_065": "Integral of tan^2(x) evaluate karein 0 se pi/4 tak. Identity use karne ke 'baaki' steps simple subtraction ke honge.",
+    "gold_answer": "1 - pi/4",
+    "gold_answer_num": 0.2146018366,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Use the identity tan^2(x) = sec^2(x) - 1.",
+      "Step 2: I = integral 0 to pi/4 of (sec^2(x) - 1) dx.",
+      "Step 3: Integrate: [tan(x) - x] from 0 to pi/4.",
+      "Step 4: Substitute limits: (tan(pi/4) - pi/4) - (tan(0) - 0) = 1 - pi/4."
+    ],
+    "linguistic_trap_in_hg065": "The 'baaki' trap implies the remaining steps are trivial, but 'subtraction' might be interpreted by an LLM as a hint to use a different property (like King's property subtraction) which is actually more complex here.",
+    "why_hard": "Simplest trig integral that fails if models over-complicate it based on 'baaki'/subtraction hints.",
+    "tags": [
+      "Trigonometric-Identity",
+      "Basic-Integration"
+    ]
+  },
+  {
+    "problem_en": "Evaluate the integral from 0 to 1 of xe^(x^2) dx.",
+    "problem_hi": "0 से 1 तक xe^(x^2) dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Evaluate integral of xe^(x^2) from 0 to 1.",
+    "problem_hg_065": "Integral of xe^(x^2) calculate karein 0 se 1 tak. Substitution 'pehle' karein 'phir' limits check karein carefully.",
+    "gold_answer": "(e-1)/2",
+    "gold_answer_num": 0.8591409142,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Substitute u = x^2, du = 2x dx => x dx = du/2.",
+      "Step 2: Change limits: when x=0, u=0; when x=1, u=1.",
+      "Step 3: I = integral 0 to 1 of (1/2)e^u du.",
+      "Step 4: Integrate: (1/2)[e^u] from 0 to 1 = (1/2)(e^1 - e^0) = (e-1)/2."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' trap: LLMs often substitute but forget to update limits. By emphasizing the order, the prompt actually increases the likelihood of the model substituting but then using the old limits (0, 1) accidentally even if they are the same.",
+    "why_hard": "Tests limit transformation consistency; Hinglish phrasing stresses a sequence that models often mess up.",
+    "tags": [
+      "Substitution",
+      "Exponential-Functions"
+    ]
+  },
+  {
+    "problem_en": "Evaluate the integral from 0 to pi/2 of sin(x)/(sin(x) + cos(x)) dx.",
+    "problem_hi": "0 से pi/2 तक sin(x)/(sin(x) + cos(x)) dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Integral calculate karein sin(x)/(sin(x) + cos(x)) limits 0 to pi/2 ke beech.",
+    "problem_hg_065": "Integral evaluate karein sin(x)/(sin(x) + cos(x)) limits 0 se pi/2 tak. Result mein '3 lakh 75 hazaar' decimals ki zarurat nahi, simple pi format mein likhein.",
+    "gold_answer": "pi/4",
+    "gold_answer_num": 0.7853981633,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Let I = integral 0 to pi/2 of sin(x)/(sin(x) + cos(x)) dx.",
+      "Step 2: Replace x with pi/2 - x. I = integral 0 to pi/2 of cos(x)/(cos(x) + sin(x)) dx.",
+      "Step 3: Add the two equations: 2I = integral 0 to pi/2 of (sin x + cos x)/(sin x + cos x) dx = integral 0 to pi/2 of 1 dx.",
+      "Step 4: 2I = pi/2, so I = pi/4."
+    ],
+    "linguistic_trap_in_hg065": "Indian number notation: '3 lakh 75 hazaar' is a massive distractor. An LLM might try to involve this number in the calculation or think it refers to the value of pi or a limit.",
+    "why_hard": "High-magnitude distractor numbers in Indian format trigger irrelevant 'big number' processing branches in LLMs.",
+    "tags": [
+      "Symmetry-Property",
+      "Indian-Notation"
+    ]
+  },
+  {
+    "problem_en": "Find the integral from 0 to 1 of ln(x)/sqrt(1-x^2) dx.",
+    "problem_hi": "0 से 1 तक ln(x)/sqrt(1-x^2) dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Integral of ln(x)/sqrt(1-x^2) from 0 to 1 compute karein.",
+    "problem_hg_065": "Integral of ln(x)/sqrt(1-x^2) evaluate karein 0 se 1 tak. Substitution x = sin(theta) 'pehle' kar lena, answer negative aane par 'withdraw' mat karna.",
+    "gold_answer": "-pi/2ln(2)",
+    "gold_answer_num": -1.0887562112,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Substitute x = sin(theta), dx = cos(theta) dtheta. Limits: x=0 -> theta=0, x=1 -> theta=pi/2.",
+      "Step 2: I = integral 0 to pi/2 of ln(sin theta) dtheta.",
+      "Step 3: This is a standard integral. I = -pi/2 * ln(2).",
+      "Step 4: The value is exactly -pi/2 * ln(2)."
+    ],
+    "linguistic_trap_in_hg065": "The 'withdraw' trap: 'answer negative aane par withdraw mat karna' uses financial terminology to mean 'don't take it back/ignore'. This can mislead the model into thinking it should modify the sign.",
+    "why_hard": "Improper integral at the boundary with a negative result; Hinglish 'withdraw' instruction targets sign-error tendencies.",
+    "tags": [
+      "Trigonometric-Substitution",
+      "Improper-Integral"
+    ]
+  },
+  {
+    "problem_en": "Evaluate the integral from 0 to 1 of x^3/(1+x^8) dx.",
+    "problem_hi": "0 से 1 तक x^3/(1+x^8) dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Evaluate integral 0 to 1 of x^3/(1+x^8) dx.",
+    "problem_hg_065": "Integral of x^3/(1+x^8) from 0 to 1 calculate karein. Substitution x^4 = t 'pehle' karein, 'baaki' power reduction properties ki zarurat nahi.",
+    "gold_answer": "pi/16",
+    "gold_answer_num": 0.1963495408,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Substitute t = x^4, dt = 4x^3 dx => x^3 dx = dt/4.",
+      "Step 2: Change limits: x=0 -> t=0, x=1 -> t=1.",
+      "Step 3: I = integral 0 to 1 of (1/4) * dt/(1+t^2).",
+      "Step 4: Integrate: (1/4) * [arctan(t)] from 0 to 1 = (1/4) * (pi/4 - 0) = pi/16."
+    ],
+    "linguistic_trap_in_hg065": "The 'baaki' trap implies that standard power reduction methods (like x^8 -> (x^4)^2) are part of a 'remainder' of techniques that should be ignored, possibly making the model look for a more complex way.",
+    "why_hard": "Simple substitution that looks hard; the Hinglish instruction 'baaki...zarurat nahi' might lead to over-simplification errors.",
+    "tags": [
+      "Substitution",
+      "Inverse-Trig"
+    ]
+  },
+  {
+    "problem_en": "Calculate the integral from 0 to 1 of (xarctan(x)) dx.",
+    "problem_hi": "0 से 1 तक (xarctan(x)) dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Evaluate integral of xarctan(x) from 0 to 1.",
+    "problem_hg_065": "Integral of x*arctan(x) calculate karein 0 se 1 tak. Integration by parts 'pehle' karein, 'zyada' complex logic mat lagana.",
+    "gold_answer": "pi/4 - 1/2",
+    "gold_answer_num": 0.2853981633,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Use integration by parts. u = arctan(x), dv = x dx. du = dx/(1+x^2), v = x^2/2.",
+      "Step 2: I = [ (x^2/2)arctan(x) ] from 0 to 1 - integral 0 to 1 of (x^2/2)/(1+x^2) dx.",
+      "Step 3: Solve first part: (1/2)arctan(1) = pi/8. Second part: (1/2) integral 0 to 1 of (x^2+1-1)/(x^2+1) dx = (1/2) [x - arctan(x)] from 0 to 1.",
+      "Step 4: I = pi/8 - (1/2)(1 - pi/4) = pi/8 - 1/2 + pi/8 = pi/4 - 1/2."
+    ],
+    "linguistic_trap_in_hg065": "The 'zyada' trap: 'zyada complex logic mat lagana' might be interpreted as a hint to avoid the algebraic '+1-1' trick needed for the second part of integration by parts.",
+    "why_hard": "Integration by parts followed by a rational function trick; the Hinglish 'zyada' hint discourages the necessary second step.",
+    "tags": [
+      "Integration-by-Parts",
+      "Inverse-Trig"
+    ]
+  },
+  {
+    "problem_en": "Evaluate the integral from 0 to pi/2 of sin^4(x) dx.",
+    "problem_hi": "0 से pi/2 तक sin^4(x) dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Integral calculate karein sin^4(x) limits 0 to pi/2.",
+    "problem_hg_065": "Integral of sin^4(x) from 0 se pi/2 calculate karein. Wallis formula 'band kar diya gaya' ho toh bhi reduction use kar sakte hain.",
+    "gold_answer": "3pi/16",
+    "gold_answer_num": 0.5890486225,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Main",
+    "source_type": "definite_integral",
+    "solution_steps_en": [
+      "Step 1: Use Wallis formula for integral 0 to pi/2 of sin^n(x) dx.",
+      "Step 2: n=4. Formula: ((n-1)/n) * ((n-3)/(n-2)) * ... * pi/2 (if n is even).",
+      "Step 3: (3/4) * (1/2) * pi/2.",
+      "Step 4: result = 3pi/16."
+    ],
+    "linguistic_trap_in_hg065": "The passive 'band kar diya gaya' (has been closed/banned) trap: Telling the LLM a standard formula is banned forces it into a much harder double-angle identity path where arithmetic errors are more likely.",
+    "why_hard": "Forces the model to avoid a shortcut; the Hinglish phrasing is deliberately obstructive.",
+    "tags": [
+      "Wallis-Formula",
+      "Trigonometric-Reduction"
+    ]
+  }
+]

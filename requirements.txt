@@ -1,0 +1,5 @@
+selenium>=4.20.0
+webdriver-manager>=4.0.2
+google-genai>=0.6.0
+tenacity>=8.2.3
+rich>=13.7.0

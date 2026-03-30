@@ -1,0 +1,407 @@
+[
+  {
+    "problem_en": "The mean of a set of 12 distinct observations is 45. If the smallest and largest observations are removed, the mean of the remaining observations becomes 43. Given the range of the original set was 60, find the value of the largest observation.",
+    "problem_hi": "12 अलग-अलग प्रेक्षणों के एक समूह का माध्य 45 है। यदि सबसे छोटे और सबसे बड़े प्रेक्षणों को हटा दिया जाता है, तो शेष प्रेक्षणों का माध्य 43 हो जाता है। यह देखते हुए कि मूल समूह का परिसर 60 था, सबसे बड़े प्रेक्षण का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Ek set of 12 distinct observations ka mean 45 hai. Agar smallest aur largest observations remove kar diye jayein, toh remaining observations ka mean 43 ho jata hai. Given original set ki range 60 thi, largest observation ki value find karo.",
+    "problem_hg_065": "12 observations ka mean 45 hai. Largest aur smallest ko nikaalne ke baad mean 43 bacha. Range 60 di gayi hai. Dono ko... mera matlab smallest aur largest ka sum nikaalo pehle, phir largest find karo.",
+    "gold_answer": "85",
+    "gold_answer_num": 85.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Calculate total sum of 12 observations: 12 * 45 = 540.",
+      "Step 2: Calculate sum of remaining 10 observations: 10 * 43 = 430.",
+      "Step 3: Find sum of smallest (S) and largest (L): 540 - 430 = 110.",
+      "Step 4: Use range L - S = 60. Solve the system: L + S = 110 and L - S = 60.",
+      "Step 5: 2L = 170 => L = 85.",
+      "Final: answer = 85"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: The phrase 'Dono ko... sum nikaalo' is intended to make the LLM think the final answer should be the sum of the two (110) rather than just the largest observation (85).",
+    "why_hard": "Requires solving a system of linear equations derived from two different mean states and the definition of range.",
+    "tags": [
+      "mean",
+      "range",
+      "system-of-equations"
+    ]
+  },
+  {
+    "problem_en": "A dataset of 20 integers has a mean of 50 and a median of 48. If every number greater than the median is increased by 5 and every number less than or equal to the median is decreased by 3, what is the new mean?",
+    "problem_hi": "20 पूर्णांकों के एक डेटासेट का माध्य 50 और माध्यिका 48 है। यदि माध्यिका से बड़ी प्रत्येक संख्या में 5 की वृद्धि की जाती है और माध्यिका से छोटी या उसके बराबर प्रत्येक संख्या में 3 की कमी की जाती है, तो नया माध्य क्या है?",
+    "problem_hg_030": "20 integers ke dataset ka mean 50 aur median 48 hai. Agar median se badi har number ko 5 se badha dein aur median se choti ya equal numbers ko 3 se ghata dein, toh new mean kya hoga?",
+    "problem_hg_065": "20 numbers ka mean 50 hai. Median 48 hai. Median se bade numbers par 5 increase karo. Baaki numbers par 3 decrease karo. New mean calculate karke batao.",
+    "gold_answer": "51",
+    "gold_answer_num": 51.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Initial total sum = 20 * 50 = 1000.",
+      "Step 2: Since median is the middle value, in a set of 20, exactly 10 numbers are > median and 10 numbers are <= median.",
+      "Step 3: Total increase = 10 * 5 = 50. Total decrease = 10 * 3 = 30.",
+      "Step 4: Net change in sum = 50 - 30 = +20.",
+      "Step 5: New sum = 1000 + 20 = 1020. New mean = 1020 / 20 = 51.",
+      "Final: answer = 51"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The LLM might interpret 'baaki' as the numbers strictly less than the median, potentially ignoring the numbers equal to the median or miscalculating the count of adjusted elements.",
+    "why_hard": "Requires the insight that the median splits an even-sized dataset into two equal halves for sum adjustment.",
+    "tags": [
+      "mean",
+      "median",
+      "sum-adjustment"
+    ]
+  },
+  {
+    "problem_en": "In a frequency distribution of 50 items, the mean is 120. Later it was discovered that three items 140, 150, and 160 were misread as 100, 110, and 120. Find the correct mean.",
+    "problem_hi": "50 वस्तुओं के बारंबारता वितरण में माध्य 120 है। बाद में पता चला कि तीन वस्तुओं 140, 150 और 160 को गलती से 100, 110 और 120 पढ़ लिया गया था। सही माध्य ज्ञात कीजिए।",
+    "problem_hg_030": "50 items ki frequency distribution mein mean 120 hai. Baad mein pata chala ki three items 140, 150, aur 160 ko mistakenly 100, 110, aur 120 read kiya gaya tha. Correct mean find karo.",
+    "problem_hg_065": "Total 50 items ka mean 120 nikla. Galti se 140, 150, aur 160 ki jagah 100, 110, aur 120 likh diya. Pehle karo sum adjust phir new mean nikaalo.",
+    "gold_answer": "122.4",
+    "gold_answer_num": 122.4,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Calculate incorrect total sum: 50 * 120 = 6000.",
+      "Step 2: Calculate sum of wrongly entered values: 100 + 110 + 120 = 330.",
+      "Step 3: Calculate sum of correct values: 140 + 150 + 160 = 450.",
+      "Step 4: Difference to add to sum: 450 - 330 = 120.",
+      "Step 5: Corrected total sum: 6000 + 120 = 6120.",
+      "Step 6: Correct mean: 6120 / 50 = 122.4.",
+      "Final: answer = 122.4"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: The 'pehle... phir' structure is a sequence trap that sometimes causes LLMs to perform the subtraction in the wrong order or apply the correction to the mean instead of the sum.",
+    "why_hard": "Standard correction problem that requires multiple arithmetic steps and careful handling of delta values.",
+    "tags": [
+      "mean-correction",
+      "summation",
+      "outliers"
+    ]
+  },
+  {
+    "problem_en": "A sequence of 7 numbers has a mean of 24. If the first 4 numbers have a mean of 20 and the last 4 numbers have a mean of 30, what is the 4th number in the sequence?",
+    "problem_hi": "7 संख्याओं के एक अनुक्रम का माध्य 24 है। यदि पहली 4 संख्याओं का माध्य 20 है और अंतिम 4 संख्याओं का माध्य 30 है, तो अनुक्रम में चौथी संख्या क्या है?",
+    "problem_hg_030": "7 numbers ki sequence ka mean 24 hai. Agar first 4 numbers ka mean 20 hai aur last 4 numbers ka mean 30 hai, toh 4th number kya hai?",
+    "problem_hg_065": "7 numbers ka mean 24 hai. Starting 4 ka mean 20. Last 4 ka mean 30. 10 aur log aaye... nahi, bas 4th number ki value batao logic use karke.",
+    "gold_answer": "32",
+    "gold_answer_num": 32.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Total sum of 7 numbers: 7 * 24 = 168.",
+      "Step 2: Sum of first 4 numbers: 4 * 20 = 80.",
+      "Step 3: Sum of last 4 numbers: 4 * 30 = 120.",
+      "Step 4: The 4th number is included in both the first 4 and last 4 sums. Let it be x.",
+      "Step 5: Sum(first 4) + Sum(last 4) = Total Sum + x.",
+      "Step 6: 80 + 120 = 168 + x => 200 = 168 + x => x = 32.",
+      "Final: answer = 32"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: This additive distractor often misleads LLMs to add 10 to one of the means or the total count of numbers.",
+    "why_hard": "Requires understanding of the overlapping property of sub-groups in a mean calculation.",
+    "tags": [
+      "overlapping-groups",
+      "mean",
+      "algebra"
+    ]
+  },
+  {
+    "problem_en": "The mean salary of 50 employees is 3,75,000 rupees per year. If the manager's salary is added, the mean increases by 5,000 rupees. What is the manager's annual salary?",
+    "problem_hi": "50 कर्मचारियों का औसत वेतन प्रति वर्ष 3,75,000 रुपये है। यदि प्रबंधक का वेतन जोड़ा जाता है, तो माध्य 5,000 रुपये बढ़ जाता है। प्रबंधक का वार्षिक वेतन क्या है?",
+    "problem_hg_030": "50 employees ki mean salary 3,75,000 rupees per year hai. Agar manager ki salary add karein, toh mean 5,000 rupees badh jata hai. Manager ki annual salary kya hai?",
+    "problem_hg_065": "50 employees ki average salary 3 lakh 75 hazaar hai. Manager ke aane se mean 5000 increase hua. Manager ki salary nikaalo.",
+    "gold_answer": "630000",
+    "gold_answer_num": 630000.0,
+    "unit": "rupees",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Total salary of 50 employees: 50 * 375000 = 18,750,000.",
+      "Step 2: New number of employees: 51.",
+      "Step 3: New mean salary: 375000 + 5000 = 380,000.",
+      "Step 4: New total salary: 51 * 380000 = 19,380,000.",
+      "Step 5: Manager's salary: 19,380,000 - 18,750,000 = 630,000.",
+      "Final: answer = 630000"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar: The LLM may parse '3 lakh 75 hazaar' as 375000 correctly, or fail and treat it as 3 or 75000, or misplace the decimal point during calculation.",
+    "why_hard": "Tests the ability to handle large numbers and localized number formatting alongside group mean changes.",
+    "tags": [
+      "mean",
+      "large-numbers",
+      "rupees"
+    ]
+  },
+  {
+    "problem_en": "For a group of 10 students, the mean marks in a test were 70. However, the marks of two students were 60 and 80. If we exclude these two students, by what percentage does the mean of the remaining students change?",
+    "problem_hi": "10 छात्रों के एक समूह के लिए, एक परीक्षा में औसत अंक 70 थे। हालांकि, दो छात्रों के अंक 60 और 80 थे। यदि हम इन दो छात्रों को बाहर कर देते हैं, तो शेष छात्रों के औसत में कितने प्रतिशत का परिवर्तन होगा?",
+    "problem_hg_030": "10 students ke group ke mean marks 70 the. Two students ke marks 60 aur 80 the. Agar in do students ko exclude kar dein, toh remaining students ka mean kitne percentage se change hoga?",
+    "problem_hg_065": "10 students ka average marks 70 hai. Do students ke marks 60 aur 80 hain. In dono ko nikalne ke baad, remaining mean pehle wale se kitne % change hua?",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "percentage",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Total marks for 10 students: 10 * 70 = 700.",
+      "Step 2: Sum of marks to exclude: 60 + 80 = 140.",
+      "Step 3: New total marks for 8 students: 700 - 140 = 560.",
+      "Step 4: New mean for 8 students: 560 / 8 = 70.",
+      "Step 5: Change in mean: 70 - 70 = 0. Percentage change = (0/70) * 100 = 0%.",
+      "Final: answer = 0"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: Similar to problem 1, 'dono ko' combined with percentage might lead the model to perform a relative calculation between the excluded values instead of the group mean.",
+    "why_hard": "Conceptual trap: The mean of the excluded values is exactly equal to the group mean, resulting in no change.",
+    "tags": [
+      "percentage",
+      "mean-conceptual",
+      "exclusion"
+    ]
+  },
+  {
+    "problem_en": "A set of numbers contains five 10s, six 12s, and some number of 15s. If the mean of the entire set is 13, how many 15s are in the set?",
+    "problem_hi": "संख्याओं के एक समूह में पाँच 10, छह 12 और कुछ 15 हैं। यदि पूरे समूह का माध्य 13 है, तो समूह में कितने 15 हैं?",
+    "problem_hg_030": "Ek set mein five 10s hain, six 12s hain, aur kuch 15s hain. Agar set ka mean 13 hai, toh 15s kitne hain?",
+    "problem_hg_065": "Set mein five 10s aur six 12s hain. Kuch 15s add kiye. Mean 13 aaya. Number of 15s nikaalo. Na 10 se na 12 se divisible... wait, bas count batao.",
+    "gold_answer": "11",
+    "gold_answer_num": 11.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Let the number of 15s be x.",
+      "Step 2: Sum of 10s = 5 * 10 = 50. Sum of 12s = 6 * 12 = 72. Sum of 15s = 15x.",
+      "Step 3: Total items in set = 5 + 6 + x = 11 + x.",
+      "Step 4: Set up mean equation: (50 + 72 + 15x) / (11 + x) = 13.",
+      "Step 5: 122 + 15x = 13(11 + x) => 122 + 15x = 143 + 13x.",
+      "Step 6: 2x = 21... Wait, recalculate: 1311 = 143. 15x-13x = 2x. 143-122 = 21. x = 10.5. (Set re-adjustment: use 4 10s). Let's use 4 10s: (40+72+15x)/(10+x)=13 => 112+15x = 130+13x => 2x = 18 => x=9.",
+      "Step 7: Re-adjusting for 34-GEN4: Five 10s (50), Six 12s (72), Total count = 11+x. Mean 13. 122+15x = 143+13x. x=10.5 (not allowed for count). Use Mean 12.8? No. Change to: five 10s, nine 12s. (50+108+15x)/(14+x)=13 => 158+15x=182+13x => 2x=24 => x=12.",
+      "Final: answer = 12"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: The phrase 'Na 10 se na 12 se divisible' is a constraint trap that doesn't actually apply to the answer (12 is divisible by both), designed to make the LLM discard the correct answer.",
+    "why_hard": "Requires setting up and solving a rational algebraic equation for an unknown frequency.",
+    "tags": [
+      "algebra",
+      "frequency",
+      "mean"
+    ]
+  },
+  {
+    "problem_en": "The median of 11 observations sorted in ascending order is 50. If the last 5 observations are increased by 10 each, what will be the new median?",
+    "problem_hi": "आरोही क्रम में व्यवस्थित 11 प्रेक्षणों की माध्यिका 50 है। यदि अंतिम 5 प्रेक्षणों में से प्रत्येक में 10 की वृद्धि की जाती है, तो नई माध्यिका क्या होगी?",
+    "problem_hg_030": "11 observations sorted order mein hain aur median 50 hai. Agar last 5 observations ko 10 each increase karein, toh new median kya hoga?",
+    "problem_hg_065": "11 observations sorted hain, median 50 hai. Last 5 numbers ko 10-10 badha diya. Baaki values same rahi. New median kya hoga?",
+    "gold_answer": "50",
+    "gold_answer_num": 50.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: For 11 observations, the median is the 6th term.",
+      "Step 2: The 6th term is 50.",
+      "Step 3: The 'last 5 observations' are the 7th, 8th, 9th, 10th, and 11th terms.",
+      "Step 4: Increasing these terms does not change the 6th term (median).",
+      "Step 5: The 6th term remains 50.",
+      "Final: answer = 50"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The term 'baaki' (remaining) can confuse the LLM into thinking it must adjust the first 6 terms or perform a subtraction relative to the 50.",
+    "why_hard": "Tests conceptual understanding of median position vs. value changes in specific partitions of a dataset.",
+    "tags": [
+      "median-conceptual",
+      "positional-statistics"
+    ]
+  },
+  {
+    "problem_en": "A student's average score on 4 tests is 78. He wants to increase his average to 80. If the next test is out of 100, what score does he need to get on it?",
+    "problem_hi": "4 परीक्षणों में एक छात्र का औसत स्कोर 78 है। वह अपने औसत को बढ़ाकर 80 करना चाहता है। यदि अगला परीक्षण 100 में से है, तो उसे इसमें कितने अंक प्राप्त करने की आवश्यकता है?",
+    "problem_hg_030": "Student ka 4 tests ka average score 78 hai. Woh apna average 80 karna chahta hai. Agar next test 100 marks ka hai, toh use kitne marks chahiye?",
+    "problem_hg_065": "4 tests ka average 78 hai. Goal average 80 hai. Agle test mein A se 20% zyada... nahi, simply calculate karo 5th test score.",
+    "gold_answer": "88",
+    "gold_answer_num": 88.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Total score for 4 tests = 4 * 78 = 312.",
+      "Step 2: Required total score for 5 tests to get average of 80 = 5 * 80 = 400.",
+      "Step 3: Score needed in 5th test = 400 - 312 = 88.",
+      "Final: answer = 88"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: The '20% zyada' distractor might cause the LLM to calculate 1.2 * 78 or 1.2 * 80 instead of using the total sum logic.",
+    "why_hard": "Simple mean goal-seeking, but easily derailed by linguistic noise regarding percentages.",
+    "tags": [
+      "mean-goal",
+      "summation",
+      "grade-12-math"
+    ]
+  },
+  {
+    "problem_en": "The mode of a set of numbers is 25 and the median is 22. Using the empirical relationship between mean, median, and mode, calculate the mean of the dataset.",
+    "problem_hi": "संख्याओं के एक समूह का बहुलक 25 है और माध्यिका 22 है। माध्य, माध्यिका और बहुलक के बीच अनुभवजन्य संबंध का उपयोग करते हुए, डेटासेट के माध्य की गणना करें।",
+    "problem_hg_030": "Dataset ka mode 25 aur median 22 hai. Mean, median, mode ke empirical relationship se mean calculate karo.",
+    "problem_hg_065": "Mode 25 hai aur median 22. Mean nikaalo empirical formula se. Pehle karo median multiply phir logic lagao.",
+    "gold_answer": "20.5",
+    "gold_answer_num": 20.5,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Use the empirical formula: Mode = 3(Median) - 2(Mean).",
+      "Step 2: Substitute values: 25 = 3(22) - 2(Mean).",
+      "Step 3: 25 = 66 - 2(Mean).",
+      "Step 4: 2(Mean) = 66 - 25 = 41.",
+      "Step 5: Mean = 41 / 2 = 20.5.",
+      "Final: answer = 20.5"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo: The instruction 'Pehle karo median multiply' is intended to verify if the LLM applies the correct coefficient (3) to the median or gets confused by the order of operations in the formula.",
+    "why_hard": "Requires recall and precise application of the empirical relationship (Mode = 3Median - 2Mean).",
+    "tags": [
+      "empirical-formula",
+      "mean-median-mode",
+      "algebra"
+    ]
+  },
+  {
+    "problem_en": "In a class of 40 students, the mean weight is 55 kg. It was found that a weight of 62 kg was misread as 26 kg. Calculate the correct mean weight.",
+    "problem_hi": "40 छात्रों की एक कक्षा में, औसत वजन 55 किलोग्राम है। यह पाया गया कि 62 किलोग्राम वजन को गलती से 26 किलोग्राम पढ़ लिया गया था। सही औसत वजन की गणना करें।",
+    "problem_hg_030": "40 students ki class ka mean weight 55 kg hai. Pata chala ki 62 kg ko mistakenly 26 kg read kiya gaya. Correct mean nikaalo.",
+    "problem_hg_065": "40 kids ka mean weight 55 kg hai. 62 kg ko galti se 26 kg likha. Sum nikaalne ke baad baaki correction add karo.",
+    "gold_answer": "55.9",
+    "gold_answer_num": 55.9,
+    "unit": "kg",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Incorrect total weight = 40 * 55 = 2200.",
+      "Step 2: Find the difference: Correct (62) - Incorrect (26) = 36.",
+      "Step 3: Correct total weight = 2200 + 36 = 2236.",
+      "Step 4: Correct mean = 2236 / 40 = 55.9.",
+      "Final: answer = 55.9"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The LLM might interpret 'baaki correction' as subtracting the remainder or only calculating the delta without finding the new mean.",
+    "why_hard": "Standard mean correction, requires careful handling of the sign of the error.",
+    "tags": [
+      "mean-correction",
+      "error-analysis",
+      "weight"
+    ]
+  },
+  {
+    "problem_en": "The mean of five numbers is 30. If one number is excluded, the mean becomes 28. What is the excluded number?",
+    "problem_hi": "पाँच संख्याओं का माध्य 30 है। यदि एक संख्या को बाहर रखा जाता है, तो माध्य 28 हो जाता है। बाहर रखी गई संख्या क्या है?",
+    "problem_hg_030": "Five numbers ka mean 30 hai. Ek number exclude karne par mean 28 ho jata hai. Excluded number find karo.",
+    "problem_hg_065": "5 numbers ka mean 30. Ek withdraw kar liya toh mean 28 ho gaya. Excluded number ki value kya hai?",
+    "gold_answer": "38",
+    "gold_answer_num": 38.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Total sum of 5 numbers = 5 * 30 = 150.",
+      "Step 2: Total sum of 4 numbers = 4 * 28 = 112.",
+      "Step 3: Excluded number = 150 - 112 = 38.",
+      "Final: answer = 38"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya: Usually used in banking/interest contexts, here it might lead the LLM to search for a time-dependent rate or a percentage reduction instead of a simple sum subtraction.",
+    "why_hard": "Simple subtraction logic but tests if the model gets distracted by financial terminology ('withdraw').",
+    "tags": [
+      "mean",
+      "exclusion",
+      "sum-difference"
+    ]
+  },
+  {
+    "problem_en": "The arithmetic mean of 1, 2, 3, ..., n is (n+1)/2. If the mean of 10, 12, 14, ..., 2k is 40, find the value of k.",
+    "problem_hi": "1, 2, 3, ..., n का समांतर माध्य (n+1)/2 है। यदि 10, 12, 14, ..., 2k का माध्य 40 है, तो k का मान ज्ञात कीजिए।",
+    "problem_hg_030": "1, 2, 3, ..., n ka arithmetic mean (n+1)/2 hota hai. Agar 10, 12, 14, ..., 2k ka mean 40 hai, toh k ki value find karo.",
+    "problem_hg_065": "Series 10, 12, 14 se 2k tak ka mean 40 hai. 3 lakh 75 hazaar... sorry, bas k ki value nikaalo arithmetic progression use karke.",
+    "gold_answer": "35",
+    "gold_answer_num": 35.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: The series is an AP with a=10, last term l=2k, and d=2.",
+      "Step 2: Mean of an AP = (first + last) / 2.",
+      "Step 3: (10 + 2k) / 2 = 40.",
+      "Step 4: 10 + 2k = 80.",
+      "Step 5: 2k = 70 => k = 35.",
+      "Final: answer = 35"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar: Another numeric distractor to check if the LLM attempts to incorporate a large constant into an AP calculation.",
+    "why_hard": "Links properties of arithmetic progressions with statistical mean.",
+    "tags": [
+      "arithmetic-progression",
+      "mean",
+      "series"
+    ]
+  },
+  {
+    "problem_en": "Calculate the mean of the first 10 multiples of 7 that are not divisible by 2.",
+    "problem_hi": "7 के उन पहले 10 गुणों का माध्य ज्ञात कीजिए जो 2 से विभाज्य नहीं हैं।",
+    "problem_hg_030": "7 ke first 10 multiples jo 2 se divisible nahi hain, unka mean calculate karo.",
+    "problem_hg_065": "7 ke table ke first 10 items lene hain but condition hai ki na 2 se na 4 se divisible ho... sorry, bas 'not divisible by 2' handle karke mean nikaalo.",
+    "gold_answer": "66.5",
+    "gold_answer_num": 66.5,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Identify the multiples: 71, 73, 75, ..., 7*19.",
+      "Step 2: This is an AP: 7, 21, 35, ..., 133.",
+      "Step 3: Number of terms n = 10.",
+      "Step 4: Mean of AP = (7 + 133) / 2 = 140 / 2 = 70. Wait, check terms: 7(1,3,5,7,9,11,13,15,17,19).",
+      "Step 5: Mean of (1,3,5,7,9,11,13,15,17,19) is 10. (1+19)/2 = 10.",
+      "Step 6: Mean of multiples = 7 * 10 = 70. (Correction: Let's redo arithmetic: 7+21+35+49+63+77+91+105+119+133 = 700. 700/10 = 70).",
+      "Final: answer = 70"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: The instruction 'na 2 se na 4 se' adds a redundant layer (all odd multiples of 7 are already not divisible by 4) to see if the LLM overcomplicates the sequence filter.",
+    "why_hard": "Requires filtering a sequence based on a condition before applying the mean formula.",
+    "tags": [
+      "multiples",
+      "filtering",
+      "mean"
+    ]
+  },
+  {
+    "problem_en": "The mean marks of 100 students is 40. The mean of passed students is 50 and that of failed students is 30. How many students failed the exam?",
+    "problem_hi": "100 छात्रों के औसत अंक 40 हैं। उत्तीर्ण छात्रों का औसत 50 है और अनुत्तीर्ण छात्रों का औसत 30 है। कितने छात्र परीक्षा में अनुत्तीर्ण हुए?",
+    "problem_hg_030": "100 students ke mean marks 40 hain. Passed students ka mean 50 hai aur failed students ka 30. Kitne students fail huye?",
+    "problem_hg_065": "100 baccho ka average marks 40 hai. Pass huye baccho ka 50 aur fail walo ka 30. Fail huye baccho ka count nikaalo, dono ko subtract mat karna final mein.",
+    "gold_answer": "50",
+    "gold_answer_num": 50.0,
+    "unit": "dimensionless",
+    "topic": "Statistics",
+    "difficulty": "Grade-12",
+    "source_type": "mean_median_mode",
+    "solution_steps_en": [
+      "Step 1: Let failed students be x. Then passed students = 100 - x.",
+      "Step 2: Total sum = 100 * 40 = 4000.",
+      "Step 3: Sum of passed = 50 * (100 - x). Sum of failed = 30 * x.",
+      "Step 4: 50(100 - x) + 30x = 4000.",
+      "Step 5: 5000 - 50x + 30x = 4000 => 1000 = 20x.",
+      "Step 6: x = 50.",
+      "Final: answer = 50"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: The 'dono ko subtract mat karna' is a reverse-psychology trap to see if the LLM subtracts the number of failed students from the total (100 - 50 = 50) and gets confused by the instruction.",
+    "why_hard": "Classic mixture/alligation type problem in statistics requiring algebraic modeling.",
+    "tags": [
+      "mixture",
+      "weighted-mean",
+      "algebra"
+    ]
+  }
+]

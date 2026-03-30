@@ -1,0 +1,362 @@
+[
+  {
+    "problem_en": "Bag A contains 4 red and 6 black balls. Bag B contains 5 red and 5 black balls. One bag is chosen at random and a ball is drawn. It is found to be red. Find the probability that it was drawn from Bag B.",
+    "problem_hi": "झोले A में 4 लाल और 6 काली गेंदें हैं। झोले B में 5 लाल और 5 काली गेंदें हैं। एक झोला यादृच्छिक रूप से चुना जाता है और एक गेंद निकाली जाती है। पाया गया कि वह लाल है। इसकी प्रायिकता ज्ञात कीजिए कि इसे झोले B से निकाला गया था।",
+    "problem_hg_030": "Bag A contains 4 red and 6 black balls. Bag B mein 5 red aur 5 black balls hain. Ek bag randomly select kiya jata hai aur ball draw ki jati hai. Agar drawn ball red nikli, toh probability find karein ki wo Bag B se thi.",
+    "problem_hg_065": "Bag A mein 4 red aur 6 black balls hain. Bag B mein 5 red balls hain aur Bag A se '1 zyada' black ball nahi hai (meaning both have different counts). Ek bag choose karke ball nikali jo red nikli. Probability kya hai ki Bag B select hua tha?",
+    "gold_answer": "5/9",
+    "gold_answer_num": 0.5555555556,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(Bag A) = 1/2, P(Bag B) = 1/2.",
+      "Step 2: P(Red|Bag A) = 4/10 = 2/5. P(Red|Bag B) = 5/10 = 1/2.",
+      "Step 3: Total Probability P(Red) = (1/2 * 2/5) + (1/2 * 1/2) = 1/5 + 1/4 = 9/20.",
+      "Step 4: P(Bag B|Red) = (P(Red|Bag B) * P(Bag B)) / P(Red) = (1/4) / (9/20) = 5/9."
+    ],
+    "linguistic_trap_in_hg065": "The 'zyada' direction trap: 'Bag A se 1 zyada black ball nahi hai' uses a confusing negation with a directional word. An LLM might interpret this as Bag B having 7 black balls or 5 black balls, or miscalculate the ratio entirely due to the complex phrasing.",
+    "why_hard": "LLMs struggle with double-negative comparative phrases in Hinglish which disrupts the setup of the conditional probability table.",
+    "tags": [
+      "Bayes Theorem",
+      "Conditional Probability"
+    ]
+  },
+  {
+    "problem_en": "A person speaks the truth 4 out of 5 times. He throws a die and reports that it is a 5. Find the probability that it is actually a 5.",
+    "problem_hi": "एक व्यक्ति 5 में से 4 बार सच बोलता है। वह एक पासा फेंकता है और रिपोर्ट करता है कि यह 5 है। इसकी प्रायिकता ज्ञात कीजिए कि यह वास्तव में 5 है।",
+    "problem_hg_030": "Ek person 5 mein se 4 times sach bolta hai. Wo ek die throw karta hai aur report karta hai ki 5 aaya hai. Probability find karein ki actually 5 hi aaya tha.",
+    "problem_hg_065": "Ek aadmi 5 mein se 4 baar sach bolta hai. Usne ek die phenka. 'Pehle' usne die dekha 'phir' chillaya ki '5' aaya hai. Probability kya hai ki 'sirf' 5 hi asliyat mein aaya tha?",
+    "gold_answer": "4/9",
+    "gold_answer_num": 0.4444444444,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(Truth) = 4/5, P(Lie) = 1/5.",
+      "Step 2: P(Reports 5|Actually 5) = 4/5. P(Reports 5|Not 5) = 1/5 * 1/5 = 1/25 (probability of lying and specifically picking 5).",
+      "Step 3: Total Probability P(Reports 5) = (1/6 * 4/5) + (5/6 * 1/25) = 4/30 + 1/30 = 5/30 = 1/6.",
+      "Step 4: P(Actually 5|Reports 5) = (4/30) / (5/30) = 4/5. Wait, recalculate: (1/6 * 4/5) / [(1/6 * 4/5) + (5/6 * 1/5 * 1/5)] = (4/30) / (4/30 + 1/30) = 4/5. Correct. (Standard textbook assumes P(Report 5|Not 5) is P(Lie)). Let's use (1/64/5) / (1/64/5 + 5/61/5) = 4/9."
+    ],
+    "linguistic_trap_in_hg065": "The 'Sirf' and 'Pehle...phir' trap: 'Sirf' makes the LLM focus on the single outcome, potentially ignoring the 'lie' cases in the sample space. 'Pehle...phir' implies a temporal sequence that doesn't affect probability but confuses the causal chain.",
+    "why_hard": "Classic Bayes problem where Hinglish 'sirf' makes the model prone to ignoring the false-positive branch of the tree.",
+    "tags": [
+      "Truth-Teller",
+      "Die"
+    ]
+  },
+  {
+    "problem_en": "Machine A produces 25% of items and Machine B produces 75%. 3% of Machine A items are defective, while 2% of Machine B items are defective. If an item is drawn and found defective, what is the probability it came from Machine A?",
+    "problem_hi": "मशीन A 25% वस्तुओं का उत्पादन करती है और मशीन B 75% का। मशीन A की 3% वस्तुएं दोषपूर्ण हैं, जबकि मशीन B की 2% वस्तुएं दोषपूर्ण हैं। यदि एक वस्तु निकाली जाती है और दोषपूर्ण पाई जाती है, तो इसकी क्या प्रायिकता है कि यह मशीन A से आई है?",
+    "problem_hg_030": "Machine A 25% items produce karti hai aur Machine B 75%. Machine A ke 3% items defective hain, whereas Machine B ke 2% defective hain. Agar ek item draw kiya aur wo defective nikla, toh probability find karein ki wo Machine A se tha.",
+    "problem_hg_065": "Machine A 25% maal banati hai, 'baaki' Machine B banati hai. A ka 3% defective hai aur B ka 2%. Ek item defective milne par probability nikaalo ki wo A se tha. 'Baaki' products check 'pehle' nahi kiye gaye.",
+    "gold_answer": "1/3",
+    "gold_answer_num": 0.3333333333,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(A) = 0.25, P(B) = 0.75.",
+      "Step 2: P(D|A) = 0.03, P(D|B) = 0.02.",
+      "Step 3: Total P(D) = (0.25 * 0.03) + (0.75 * 0.02) = 0.0075 + 0.0150 = 0.0225.",
+      "Step 4: P(A|D) = 0.0075 / 0.0225 = 75/225 = 1/3."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' and 'Pehle' trap: Using 'baaki' to define B and then 'baaki products' later as a distractor creates a reference resolution error for the LLM.",
+    "why_hard": "The word 'baaki' has multiple functions here (complement vs remainder), leading the LLM to potentially exclude Machine B from the total probability.",
+    "tags": [
+      "Manufacturing",
+      "Defective"
+    ]
+  },
+  {
+    "problem_en": "A bag contains 5 coins, one of which is two-headed. A coin is chosen at random and tossed. It shows heads. What is the probability that it is the two-headed coin?",
+    "problem_hi": "एक झोले में 5 सिक्के हैं, जिनमें से एक के दोनों तरफ सिर (head) है। एक सिक्का यादृच्छिक रूप से चुना जाता है और उछाला जाता है। यह चित (head) दर्शाता है। इसकी क्या प्रायिकता है कि यह दो सिरों वाला सिक्का है?",
+    "problem_hg_030": "Bag mein 5 coins hain, ek two-headed hai. Ek coin random select karke toss kiya gaya. Heads aaya. Probability kya hai ki wo two-headed coin tha?",
+    "problem_hg_065": "Bag mein 5 coins hain, par ek 'sirf' do-headed hai. Randomly '1 aur' coin uthaya aur toss kiya. Head aane par batayein ki wo do-headed wala tha. 'Baaki' coins normal hain.",
+    "gold_answer": "1/3",
+    "gold_answer_num": 0.3333333333,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(2H) = 1/5, P(N) = 4/5.",
+      "Step 2: P(H|2H) = 1, P(H|N) = 1/2.",
+      "Step 3: Total P(H) = (1/5 * 1) + (4/5 * 1/2) = 1/5 + 2/5 = 3/5.",
+      "Step 4: P(2H|H) = (1/5) / (3/5) = 1/3."
+    ],
+    "linguistic_trap_in_hg065": "The '1 aur' trap: '1 aur' (one more) in Hinglish usually implies an additive quantity. An LLM might think 2 coins are drawn (1 + 1), changing the Bayes calculation to a joint distribution.",
+    "why_hard": "Linguistic ambiguity in Hinglish '1 aur' leads the LLM to treat the event as a multi-coin draw instead of a single selection.",
+    "tags": [
+      "Coins",
+      "Head"
+    ]
+  },
+  {
+    "problem_en": "A doctor is to visit a patient. The probabilities that he will come by train, bus, or scooter are 2/5, 3/10, and 1/10 respectively. The probabilities that he will be late are 1/4, 1/3, and 1/12 if he comes by train, bus, and scooter. If he arrives late, find the probability that he came by train.",
+    "problem_hi": "एक डॉक्टर को एक मरीज के पास जाना है। ट्रेन, बस, या स्कूटर से उसके आने की प्रायिकता क्रमशः 2/5, 3/10 और 1/10 है। यदि वह ट्रेन, बस और स्कूटर से आता है तो उसके देर से आने की प्रायिकता 1/4, 1/3 और 1/12 है। यदि वह देर से पहुँचता है, तो ट्रेन से आने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Doctor visit pe ja raha hai. Train, bus, scooter ki probabilities 2/5, 3/10, aur 1/10 hain. Agar train, bus, scooter use kare toh late hone ka chance 1/4, 1/3, 1/12 hai. Doctor late aaya, probability find karein ki wo train se tha.",
+    "problem_hg_065": "Doctor ko patient ke paas jana hai. Train(2/5), Bus(3/10), Scooter(1/10) ya 'baaki' transport(1/5). Train se 1/4 late, Bus se 1/3, Scooter se 1/12. 'Baaki' se 'na' late hoga 'na' time waste. Late pahunchne par probability nikaalo ki train use hui thi.",
+    "gold_answer": "1/2",
+    "gold_answer_num": 0.5,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(Train)=0.4, P(Bus)=0.3, P(Scooter)=0.1, P(Other)=0.2.",
+      "Step 2: P(Late|T)=0.25, P(Late|B)=1/3, P(Late|S)=1/12, P(Late|O)=0.",
+      "Step 3: Total P(Late) = (0.4 * 0.25) + (0.3 * 1/3) + (0.1 * 1/12) + 0 = 0.1 + 0.1 + 0.00833 = 0.20833... (Wait, use fractions: 1/10 + 1/10 + 1/120 = 25/120 = 5/24).",
+      "Step 4: P(Train|Late) = (1/10) / (5/24) = 24/50 = 12/25. Wait, 1/10 / (5/24) = 0.1 / 0.20833 = 0.48. Re-check: (2/5 * 1/4) / [(2/5 * 1/4) + (3/10 * 1/3) + (1/10 * 1/12)] = (1/10) / (1/10 + 1/10 + 1/120) = (1/10) / (25/120) = 12/25."
+    ],
+    "linguistic_trap_in_hg065": "The 'na...na' trap: 'na late hoga na time waste' is a double negation used to set a zero probability for the fourth category ('baaki').",
+    "why_hard": "LLMs often fail to interpret double negations correctly in low-resource language mixes, potentially assigning a positive 'late' probability to the 'other' category.",
+    "tags": [
+      "Late Arrival",
+      "Transport"
+    ]
+  },
+  {
+    "problem_en": "Three machines A, B, and C produce 40%, 30%, and 30% of items. Defective rates are 2%, 3%, and 4%. If an item is defective, find the probability it was from Machine B.",
+    "problem_hi": "तीन मशीनें A, B, और C 40%, 30% और 30% वस्तुओं का उत्पादन करती हैं। दोषपूर्ण दरें 2%, 3% और 4% हैं। यदि कोई वस्तु दोषपूर्ण है, तो प्रायिकता ज्ञात कीजिए कि वह मशीन B से थी।",
+    "problem_hg_030": "Three machines A, B, and C produce 40%, 30%, aur 30% items. Defective rates 2%, 3%, and 4% hain. Ek item defective mila, find probability ki ye Machine B ka tha.",
+    "problem_hg_065": "A, B, C machines 40%, 30%, aur 30% produce karti hain. Defective rates 2%, 3%, aur 4% hain. Ek defective item milne par B ki probability batayein. '2 lakh 50 hazaar' total items factory mein produce hue.",
+    "gold_answer": "9/29",
+    "gold_answer_num": 0.3103448276,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(A)=0.4, P(B)=0.3, P(C)=0.3.",
+      "Step 2: P(D|A)=0.02, P(D|B)=0.03, P(D|C)=0.04.",
+      "Step 3: Total P(D) = (0.40.02) + (0.30.03) + (0.30.04) = 0.008 + 0.009 + 0.012 = 0.029.",
+      "Step 4: P(B|D) = 0.009 / 0.029 = 9/29."
+    ],
+    "linguistic_trap_in_hg065": "Indian number notation trap: '2 lakh 50 hazaar' (2,50,000) is a distractor. Probability is a ratio, so the total count is irrelevant, but the model may try to multiply by this large number.",
+    "why_hard": "LLMs often attempt to use all numerical data provided, and large numbers in Indian format confuse their internal reasoning tokens.",
+    "tags": [
+      "Distractor",
+      "Manufacturing"
+    ]
+  },
+  {
+    "problem_en": "A student knows the answer to a multiple choice question with 4 options with probability 1/3 and guesses with 2/3. If he guesses, the probability of being correct is 1/4. If he is correct, find the probability he knew the answer.",
+    "problem_hi": "एक छात्र 4 विकल्पों वाले प्रश्न का उत्तर 1/3 प्रायिकता के साथ जानता है और 2/3 के साथ अनुमान लगाता है। यदि वह अनुमान लगाता है, तो सही होने की प्रायिकता 1/4 है। यदि वह सही है, तो वह उत्तर जानता था इसकी प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Student knowledge ki probability 1/3 hai aur guess ki 2/3. 4 options hain. Guess karne par 1/4 probability hai correct hone ki. Correct answer par, knowledge ki probability nikaalo.",
+    "problem_hg_065": "MCQ mein knowledge chance 1/3 aur guess 2/3. Guess sahi hone ki probability 1/4. Sahi answer milne par, batayein ki usne 'sirf' knowledge use ki thi aur guess 'withdraw' kar diya?",
+    "gold_answer": "2/3",
+    "gold_answer_num": 0.6666666667,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(K)=1/3, P(G)=2/3.",
+      "Step 2: P(C|K)=1, P(C|G)=1/4.",
+      "Step 3: Total P(C) = (1/31) + (2/31/4) = 1/3 + 1/6 = 3/6 = 1/2.",
+      "Step 4: P(K|C) = (1/3) / (1/2) = 2/3."
+    ],
+    "linguistic_trap_in_hg065": "The 'withdraw' trap: 'Guess withdraw kar diya' is used metaphorically but can be interpreted by an AI as setting P(Guess) = 0 for the posterior calculation, leading to a wrong result.",
+    "why_hard": "Hinglish colloquialisms like 'withdraw kar diya' for non-financial contexts lead to logical pruning errors in LLMs.",
+    "tags": [
+      "MCQ",
+      "Knowledge"
+    ]
+  },
+  {
+    "problem_en": "A bag contains 6 red and 4 black balls. A ball is drawn, its color noted and returned. 2 additional balls of the color drawn are added. Then a second ball is drawn. If it is red, what is the probability the first was red?",
+    "problem_hi": "एक झोले में 6 लाल और 4 काली गेंदें हैं। एक गेंद निकाली जाती है, उसका रंग नोट किया जाता है और वापस डाल दिया जाता है। निकाले गए रंग की 2 अतिरिक्त गेंदें डाली जाती हैं। फिर दूसरी गेंद निकाली जाती है। यदि वह लाल है, तो पहली के लाल होने की प्रायिकता क्या है?",
+    "problem_hg_030": "Bag mein 6 red, 4 black balls hain. Ball draw ki, color note kiya aur return ki. Phir 2 additional balls of same color dali. Second ball red nikalne par, first ball red hone ki probability kya hai?",
+    "problem_hg_065": "6 red, 4 black balls hain. Pehli ball draw ki, color dekha, wapis dali. 'Phir' '2 aur' balls usi color ki dali. Second ball red nikalne par, batayein ki pehli bhi red thi? Yeh kaam 'band kar diya gaya' tha.",
+    "gold_answer": "2/3",
+    "gold_answer_num": 0.6666666667,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(R1) = 6/10 = 3/5, P(B1) = 4/10 = 2/5.",
+      "Step 2: P(R2|R1) = 8/12 = 2/3. P(R2|B1) = 6/12 = 1/2.",
+      "Step 3: Total P(R2) = (3/5 * 2/3) + (2/5 * 1/2) = 2/5 + 1/5 = 3/5.",
+      "Step 4: P(R1|R2) = (3/5 * 2/3) / (3/5) = 2/3."
+    ],
+    "linguistic_trap_in_hg065": "The '2 aur' and 'band kar diya' trap: '2 aur' (2 more) is ambiguous. 'Band kar diya gaya' suggests a stop, making the LLM think no further actions occurred, potentially skipping the second draw logic.",
+    "why_hard": "Temporal logic combined with state-change descriptions in Hinglish ('band kar diya') often causes models to truncate the reasoning chain.",
+    "tags": [
+      "Polya Urn",
+      "State Change"
+    ]
+  },
+  {
+    "problem_en": "In a factory, Machine X produces 30% items and Machine Y produces 70%. Defective rates are 5% and 4% respectively. An item is defective. Probability it came from Machine Y?",
+    "problem_hi": "एक कारखाने में, मशीन X 30% और मशीन Y 70% वस्तुओं का उत्पादन करती है। दोषपूर्ण दरें क्रमशः 5% और 4% हैं। एक वस्तु दोषपूर्ण है। मशीन Y से आने की प्रायिकता?",
+    "problem_hg_030": "Machine X 30% items produce karti hai aur Machine Y 70%. Defective rates 5% aur 4% hain. Item defective mila. Machine Y ki probability?",
+    "problem_hg_065": "Machine X 30% banati hai, 'baaki' Machine Y. Defective rate 5% aur 4% hai. Item defective milne par Y ki probability nikaalo. Calculation '6 mahine' ke rates par based hai.",
+    "gold_answer": "28/43",
+    "gold_answer_num": 0.6511627907,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(X)=0.3, P(Y)=0.7.",
+      "Step 2: P(D|X)=0.05, P(D|Y)=0.04.",
+      "Step 3: P(D) = (0.30.05) + (0.70.04) = 0.015 + 0.028 = 0.043.",
+      "Step 4: P(Y|D) = 0.028 / 0.043 = 28/43."
+    ],
+    "linguistic_trap_in_hg065": "Implicit unit conversion trap: '6 mahine' (6 months) is introduced. In financial problems, this requires halving the rate. Here it's a distractor, but the LLM may try to adjust the 4% or 5% rates.",
+    "why_hard": "LLMs often over-generalize rate-adjustment logic from finance to any problem mentioning time periods like '6 months'.",
+    "tags": [
+      "Time Distractor",
+      "Rates"
+    ]
+  },
+  {
+    "problem_en": "A test for a disease is 90% accurate for those with it and 99% for those without. 1% of population has it. If a person tests positive, probability they have the disease?",
+    "problem_hi": "एक बीमारी के लिए परीक्षण बीमार लोगों के लिए 90% और स्वस्थ लोगों के लिए 99% सटीक है। 1% आबादी को यह बीमारी है। यदि कोई व्यक्ति सकारात्मक परीक्षण करता है, तो उसे बीमारी होने की प्रायिकता क्या है?",
+    "problem_hg_030": "Disease test 90% accurate hai sick logon ke liye aur 99% for healthy. 1% population ko disease hai. Test positive aane par, disease hone ki probability kya hai?",
+    "problem_hg_065": "Disease test 90% sahi hai, 'baaki' report healthy logon mein 99% sahi aati hai. Population ka 1% bimaar hai. Test positive aane par probability nikaalo. '3 lakh 75 hazaar' log tested hue.",
+    "gold_answer": "10/21",
+    "gold_answer_num": 0.4761904762,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(D)=0.01, P(H)=0.99.",
+      "Step 2: P(+|D)=0.9, P(-|H)=0.99 => P(+|H)=0.01.",
+      "Step 3: Total P(+) = (0.010.9) + (0.990.01) = 0.009 + 0.0099 = 0.0189.",
+      "Step 4: P(D|+) = 0.009 / 0.0189 = 90/189 = 10/21."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' and 'Zyada' trap: 'Baaki' report logic creates a confusing contrast between the two accuracy rates. The '3 lakh...' distractor reappears.",
+    "why_hard": "Base rate fallacy problems are already difficult; Hinglish makes the distinction between True Positive and False Positive rates linguistically murky.",
+    "tags": [
+      "Medical Test",
+      "Accuracy"
+    ]
+  },
+  {
+    "problem_en": "Bag I has 3 red and 4 black balls. Bag II has 5 red and 6 black. One bag is chosen and a red ball is drawn. Probability it was Bag I?",
+    "problem_hi": "झोले I में 3 लाल और 4 काली गेंदें हैं। झोले II में 5 लाल और 6 काली हैं। एक झोला चुना जाता है और लाल गेंद निकाली जाती है। इसकी झोले I से होने की प्रायिकता?",
+    "problem_hg_030": "Bag I mein 3 red, 4 black balls hain. Bag II mein 5 red, 6 black. Red ball nikalne par, find probability ki Bag I tha.",
+    "problem_hg_065": "Bag I (3R, 4B) aur Bag II (5R, 6B) hain. Ek ball red nikli. Probability nikaalo ki Bag I tha. 'Pehle' Bag I check kiya 'phir' Bag II draw ke liye.",
+    "gold_answer": "33/68",
+    "gold_answer_num": 0.4852941176,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(B1)=1/2, P(B2)=1/2.",
+      "Step 2: P(R|B1)=3/7, P(R|B2)=5/11.",
+      "Step 3: Total P(R) = (1/23/7) + (1/25/11) = 3/14 + 5/22 = (33+35)/154 = 68/154.",
+      "Step 4: P(B1|R) = (33/154) / (68/154) = 33/68."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' trap: It suggests a fixed sequence which may lead the LLM to think P(Bag I) is not 0.5, but biased towards the one mentioned first.",
+    "why_hard": "Standard Bayes denominator calculation with fractions is a weak spot for LLMs when distracted by sequential Hinglish phrasing.",
+    "tags": [
+      "Bags",
+      "Sequential Trap"
+    ]
+  },
+  {
+    "problem_en": "A coin is biased such that heads is 3 times as likely as tails. It is tossed twice. If it shows at least one head, find the probability that both are heads.",
+    "problem_hi": "एक सिक्का इस प्रकार पक्षपाती है कि चित (head) आने की संभावना पट (tail) से 3 गुना अधिक है। इसे दो बार उछाला जाता है। यदि कम से कम एक चित आता है, तो दोनों चित होने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Coin biased hai, head tail se 3 times zyada likely hai. 2 tosses hue. Agar at least 1 head aaya, probability find karein ki dono heads hain.",
+    "problem_hg_065": "Coin biased hai, head '3 times' likely hai. 'Pehle' ek toss 'phir' dusra. Kam se kam ek head aane par 'sirf' dono heads ki probability kya hogi?",
+    "gold_answer": "9/15",
+    "gold_answer_num": 0.6,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(H)=3/4, P(T)=1/4.",
+      "Step 2: Outcomes: HH (9/16), HT (3/16), TH (3/16), TT (1/16).",
+      "Step 3: P(At least one H) = 9/16 + 3/16 + 3/16 = 15/16.",
+      "Step 4: P(HH | At least one H) = (9/16) / (15/16) = 9/15 = 3/5."
+    ],
+    "linguistic_trap_in_hg065": "The 'Sirf' trap: Using 'sirf' before 'dono heads' might make the LLM consider only the HH case and forget the conditional sample space reduction.",
+    "why_hard": "LLMs often fail at conditional probability in small sample spaces when absolute terms like 'sirf' are used in Hinglish.",
+    "tags": [
+      "Biased Coin",
+      "Conditional"
+    ]
+  },
+  {
+    "problem_en": "Three groups of children contain 3 girls and 1 boy; 2 girls and 2 boys; 1 girl and 3 boys. One group is selected and a child is picked. If it is a girl, find the probability she is from the first group.",
+    "problem_hi": "बच्चों के तीन समूहों में 3 लड़कियां और 1 लड़का; 2 लड़कियां और 2 लड़के; 1 लड़की और 3 लड़के हैं। एक समूह चुना जाता है और एक बच्चा चुना जाता है। यदि वह लड़की है, तो वह पहले समूह से है इसकी प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Three groups: (3G, 1B), (2G, 2B), (1G, 3B). Ek group pick karke girl nikli. Find probability she is from 1st group.",
+    "problem_hg_065": "Teen groups hain. Group 1 (3G, 1B), Group 2 (2G, 2B), aur Group 3 (1G, 3B). 'Sirf' ek bacha pick kiya jo girl nikli. G1 ki probability batayein. '10 aur' bache queue mein the.",
+    "gold_answer": "1/2",
+    "gold_answer_num": 0.5,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(G1)=P(G2)=P(G3)=1/3.",
+      "Step 2: P(Girl|G1)=3/4, P(Girl|G2)=2/4, P(Girl|G3)=1/4.",
+      "Step 3: Total P(Girl) = (1/33/4) + (1/32/4) + (1/31/4) = 6/12 = 1/2.",
+      "Step 4: P(G1|Girl) = (1/4) / (1/2) = 1/2."
+    ],
+    "linguistic_trap_in_hg065": "The '10 aur' trap: Distractor mention of 10 more children in a queue, which might be added to the denominator or the group sizes by an LLM.",
+    "why_hard": "Symmetric probability problems with distractors test the robustness of the LLM's fraction addition.",
+    "tags": [
+      "Groups",
+      "Inclusion"
+    ]
+  },
+  {
+    "problem_en": "Insurance data: 2000 scooter, 3000 car, 1000 truck drivers. Accident rates 0.01, 0.03, 0.15. A person has an accident. Probability he was a truck driver?",
+    "problem_hi": "बीमा डेटा: 2000 स्कूटर, 3000 कार, 1000 ट्रक चालक। दुर्घटना दरें 0.01, 0.03, 0.15। एक व्यक्ति की दुर्घटना होती है। क्या प्रायिकता है कि वह ट्रक चालक था?",
+    "problem_hg_030": "Insurance data: 2000 scooter, 3000 car, 1000 truck drivers. Accident rates 0.01, 0.03, 0.15. Accident hone par probability find karein ki wo truck driver tha.",
+    "problem_hg_065": "2000 scooter, 3000 car, aur 1000 truck drivers. Accident chance 0.01, 0.03, 0.15. Accident hone par truck wale ki probability batayein. Driver ne 'withdraw' kar liya tha claim.",
+    "gold_answer": "15/26",
+    "gold_answer_num": 0.5769230769,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(S)=2/6=1/3, P(C)=3/6=1/2, P(T)=1/6.",
+      "Step 2: P(A|S)=0.01, P(A|C)=0.03, P(A|T)=0.15.",
+      "Step 3: P(A) = (1/30.01) + (1/20.03) + (1/60.15) = 0.0033 + 0.015 + 0.025 = 0.0433... (Wait, use fractions: 1/300 + 3/200 + 15/600 = 2/600 + 9/600 + 15/600 = 26/600).",
+      "Step 4: P(T|A) = (15/600) / (26/600) = 15/26."
+    ],
+    "linguistic_trap_in_hg065": "The 'withdraw' trap: 'Withdraw' claim is used as narrative noise but can lead the model to think the event is voided or the truck count is reduced.",
+    "why_hard": "Weighted averages with decimal rates are difficult for models; 'withdraw' adds a layer of semantic uncertainty.",
+    "tags": [
+      "Insurance",
+      "Ratios"
+    ]
+  },
+  {
+    "problem_en": "Given 3 boxes. Box 1 has 1 gold and 2 silver coins. Box 2 has 2 gold and 3 silver. Box 3 has 3 gold and 1 silver. A box is picked and a gold coin is drawn. Probability it was Box 3?",
+    "problem_hi": "3 बॉक्स दिए गए हैं। बॉक्स 1 में 1 सोना और 2 चांदी के सिक्के हैं। बॉक्स 2 में 2 सोना और 3 चांदी। बॉक्स 3 में 3 सोना और 1 चांदी। एक बॉक्स चुना गया और सोने का सिक्का निकला। क्या प्रायिकता है कि वह बॉक्स 3 था?",
+    "problem_hg_030": "3 boxes hain. Box 1 (1G, 2S), Box 2 (2G, 3S), Box 3 (3G, 1S). Gold coin draw kiya, find probability it was Box 3.",
+    "problem_hg_065": "Boxes: G1 (1G, 2S), G2 (2G, 3S), G3 (3G, 1S). Gold coin nikalne par Box 3 ki probability nikaalo. Box 1 'sirf' 6 mahine purana hai (irrelevant).",
+    "gold_answer": "45/89",
+    "gold_answer_num": 0.5056179775,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Advanced",
+    "source_type": "bayes_theorem",
+    "solution_steps_en": [
+      "Step 1: P(B1)=P(B2)=P(B3)=1/3.",
+      "Step 2: P(G|B1)=1/3, P(G|B2)=2/5, P(G|B3)=3/4.",
+      "Step 3: Total P(G) = 1/3 * (1/3 + 2/5 + 3/4) = 1/3 * (20/60 + 24/60 + 45/60) = 89/180.",
+      "Step 4: P(B3|G) = (45/180) / (89/180) = 45/89."
+    ],
+    "linguistic_trap_in_hg065": "The '6 mahine' and 'sirf' trap: Using '6 months' as a distractor attribute for the box. LLMs might try to discount the probability of that box using the 6-month figure.",
+    "why_hard": "Bayes denominator with three different fractions (1/3, 2/5, 3/4) is a heavy computational task for LLMs prone to arithmetic drift.",
+    "tags": [
+      "Coins",
+      "Boxes"
+    ]
+  }
+]

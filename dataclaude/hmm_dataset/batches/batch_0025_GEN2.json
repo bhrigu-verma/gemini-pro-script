@@ -1,0 +1,377 @@
+[
+  {
+    "problem_en": "Let z be a complex number such that |z - 3 - 4i| = 2. Find the maximum value of |z|.",
+    "problem_hi": "मान लीजिए z एक सम्मिश्र संख्या है जैसे कि |z - 3 - 4i| = 2 है। |z| का अधिकतम मान ज्ञात कीजिए।",
+    "problem_hg_030": "Let z be a complex number such that |z - 3 - 4i| = 2. |z| ki maximum value find karo.",
+    "problem_hg_065": "Ek complex number z hai jiske liye |z - (3 + 4i)| = 2 holds karta hai. Isme origin se distance check karo, aur dhyan rakhna ki 10 aur log aaye calculation mein calculation complex karne ke liye, to max value kya hogi?",
+    "gold_answer": "7",
+    "gold_answer_num": 7.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Identify the locus of z as a circle with center (3, 4) and radius r = 2.",
+      "Step 2: Calculate the distance of the center from the origin: sqrt(3^2 + 4^2) = 5.",
+      "Step 3: The maximum distance from the origin (max |z|) is distance to center + radius.",
+      "Step 4: Max |z| = 5 + 2 = 7.",
+      "Final: answer = 7"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> This trap implies adding 10 to a count or value; an LLM might add 10 to the distance or the final answer instead of treating it as irrelevant conversational filler.",
+    "why_hard": "Requires geometric interpretation of complex modulus as a circle and identifying the extremum relative to the origin.",
+    "tags": [
+      "geometry",
+      "modulus"
+    ]
+  },
+  {
+    "problem_en": "If z = (1 + isqrt(3))^5 / (1 - i)^4, find the principal argument of z in degrees.",
+    "problem_hi": "यदि z = (1 + isqrt(3))^5 / (1 - i)^4 है, तो z का मुख्य कोणांक (principal argument) डिग्री में ज्ञात कीजिए।",
+    "problem_hg_030": "If z = (1 + isqrt(3))^5 / (1 - i)^4, toh z ka principal argument degrees mein find karo.",
+    "problem_hg_065": "z ki value (1 + isqrt(3))^5 divided by (1 - i)^4 di gayi hai. Pehle karo polar conversion phir argument calculate karke degrees mein batao.",
+    "gold_answer": "400",
+    "gold_answer_num": 40.0,
+    "unit": "degrees",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Arg(1 + isqrt(3)) = 60 degrees. For power 5: 5 * 60 = 300 degrees.",
+      "Step 2: Arg(1 - i) = -45 degrees. For power 4: 4 * (-45) = -180 degrees.",
+      "Step 3: Arg(z) = Arg(numerator) - Arg(denominator) = 300 - (-180) = 480 degrees.",
+      "Step 4: Normalize to principal argument (-180, 180]: 480 - 360 = 120 degrees. Wait, let's re-verify Step 2.",
+      "Step 5: Denominator is (1-i)^4 = ((1-i)^2)^2 = (-2i)^2 = -4. Arg(-4) is 180 degrees.",
+      "Step 6: Arg(z) = 300 - 180 = 120 degrees.",
+      "Final: answer = 120"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> This sequence trap might lead an LLM to apply the power before the argument subtraction or vice versa in a non-standard order that ignores De Moivre's properties.",
+    "why_hard": "Requires applying De Moivre's theorem and managing multiple polar conversions and argument normalization.",
+    "tags": [
+      "De-Moivre",
+      "argument"
+    ]
+  },
+  {
+    "problem_en": "Find the modulus of z = (2 + 3i)(3 - 2i) / (1 + i).",
+    "problem_hi": "z = (2 + 3i)(3 - 2i) / (1 + i) का मापांक ज्ञात कीजिए।",
+    "problem_hg_030": "z = (2 + 3i)(3 - 2i) / (1 + i) ka modulus find karo.",
+    "problem_hg_065": "Expression z = (2 + 3i)(3 - 2i) / (1 + i) ka modulus nikalna hai. Isme numerator ke dono ko multiply karke denominator se divide karna hai correctly.",
+    "gold_answer": "sqrt(169/2)",
+    "gold_answer_num": 9.2195,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Use property |z1z2/z3| = |z1||z2|/|z3|.",
+      "Step 2: |2 + 3i| = sqrt(4 + 9) = sqrt(13).",
+      "Step 3: |3 - 2i| = sqrt(9 + 4) = sqrt(13).",
+      "Step 4: |1 + i| = sqrt(1 + 1) = sqrt(2).",
+      "Step 5: |z| = (sqrt(13) * sqrt(13)) / sqrt(2) = 13 / sqrt(2).",
+      "Final: answer = 13/sqrt(2)"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> The LLM might apply the multiplication to only one term or fail to distribute the modulus property across all factors.",
+    "why_hard": "Tests the efficiency of using modulus properties over tedious algebraic multiplication/rationalization.",
+    "tags": [
+      "modulus-properties",
+      "arithmetic"
+    ]
+  },
+  {
+    "problem_en": "Let |z| = 1 and arg(z) = theta. Find the argument of (1 + z) / (1 + conj(z)).",
+    "problem_hi": "मान लीजिए |z| = 1 और arg(z) = theta है। (1 + z) / (1 + conj(z)) का कोणांक ज्ञात कीजिए।",
+    "problem_hg_030": "Let |z| = 1 and arg(z) = theta. (1 + z) / (1 + conj(z)) ka argument find out karo.",
+    "problem_hg_065": "Condition di hai |z| = 1 aur argument theta hai. Expression (1 + z) / (1 + conj(z)) solve karo. Isme na real part se na imaginary part se divisible check karna, seedha argument nikaalo.",
+    "gold_answer": "theta",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Since |z|=1, zconj(z) = 1, so conj(z) = 1/z.",
+      "Step 2: Substitute conj(z): (1 + z) / (1 + 1/z).",
+      "Step 3: Simplify: (1 + z) / ((z + 1)/z) = z.",
+      "Step 4: Arg(z) = theta.",
+      "Final: answer = theta"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> This 'neither-nor' trap might lead the LLM to search for integer properties or divisibility rules instead of focusing on the argument of the complex number.",
+    "why_hard": "Requires recognizing the relationship between a unimodular complex number and its conjugate.",
+    "tags": [
+      "conjugate",
+      "unimodular"
+    ]
+  },
+  {
+    "problem_en": "If z = sqrt(3) + i, find the value of arg(z^10). Provide answer in degrees.",
+    "problem_hi": "यदि z = sqrt(3) + i है, तो arg(z^10) का मान ज्ञात कीजिए। उत्तर डिग्री में दें।",
+    "problem_hg_030": "If z = sqrt(3) + i, arg(z^10) ki value degrees mein find karo.",
+    "problem_hg_065": "Complex number z = sqrt(3) + i diya gaya hai. Iski power 10 karke argument nikaalna hai. Baaki calculation ignore karke main result focus karo.",
+    "gold_answer": "-60",
+    "gold_answer_num": -60.0,
+    "unit": "degrees",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Find arg(z): tan(theta) = 1/sqrt(3) => theta = 30 degrees.",
+      "Step 2: Use Arg(z^n) = n * Arg(z): 10 * 30 = 300 degrees.",
+      "Step 3: Convert to principal argument range (-180, 180]: 300 - 360 = -60 degrees.",
+      "Final: answer = -60"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> This 'remainder' trap can mislead an LLM to perform a subtraction (remainder) from a previous step or the exponent itself.",
+    "why_hard": "The student must navigate principal argument constraints after power multiplication.",
+    "tags": [
+      "argument",
+      "powers"
+    ]
+  },
+  {
+    "problem_en": "Find the real part of the complex number z if |z| = 4 and arg(z) = 5pi/6.",
+    "problem_hi": "सम्मिश्र संख्या z का वास्तविक भाग ज्ञात कीजिए यदि |z| = 4 और arg(z) = 5pi/6 है।",
+    "problem_hg_030": "Complex number z ka real part find karo if |z| = 4 and arg(z) = 5pi/6.",
+    "problem_hg_065": "Modulus 4 hai aur argument 5pi/6. Real part nikalne ke liye 3 lakh 75 hazaar precision ki zaroorat nahi, simple cos function use karo.",
+    "gold_answer": "-2sqrt(3)",
+    "gold_answer_num": -3.4641,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Express z in polar form: z = r(cos(theta) + i sin(theta)).",
+      "Step 2: r = 4, theta = 150 degrees (5pi/6).",
+      "Step 3: Real part = r * cos(theta) = 4 * cos(150).",
+      "Step 4: cos(150) = -sqrt(3)/2. Real part = 4 * (-sqrt(3)/2) = -2sqrt(3).",
+      "Final: answer = -2sqrt(3)"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> Large number notation can cause the LLM to parse '3' as the modulus or scale the answer by 375,000.",
+    "why_hard": "Tests the basic conversion from polar to Cartesian coordinates with a second-quadrant angle.",
+    "tags": [
+      "polar-to-cartesian",
+      "trigonometry"
+    ]
+  },
+  {
+    "problem_en": "If |z1| = 2, |z2| = 3 and the angle between them is 60 degrees, find |z1 + z2|^2.",
+    "problem_hi": "यदि |z1| = 2, |z2| = 3 और उनके बीच का कोण 60 डिग्री है, तो |z1 + z2|^2 ज्ञात कीजिए।",
+    "problem_hg_030": "If |z1| = 2, |z2| = 3 and angle between them is 60 degrees, |z1 + z2|^2 ki value nikaalo.",
+    "problem_hg_065": "Modulus values 2 and 3 hain. Dono ke beech ka angle 60 degree hai. Vector addition logic se result nikalo, 6 mahine baad wala interest logic mat laga dena.",
+    "gold_answer": "19",
+    "gold_answer_num": 19.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Use formula |z1 + z2|^2 = |z1|^2 + |z2|^2 + 2|z1||z2|cos(theta).",
+      "Step 2: Substitute values: 2^2 + 3^2 + 2(2)(3)cos(60).",
+      "Step 3: 4 + 9 + 12(1/2) = 13 + 6 = 19.",
+      "Final: answer = 19"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> Temporal distractor that could lead the LLM to divide the angle or the result by 2 (as if it were a semi-annual rate).",
+    "why_hard": "Links complex modulus addition to the law of cosines/parallelogram law of vectors.",
+    "tags": [
+      "modulus-addition",
+      "vectors"
+    ]
+  },
+  {
+    "problem_en": "Find the smallest positive integer n for which ((1 + i) / (1 - i))^n = 1.",
+    "problem_hi": "वह सबसे छोटा धनात्मक पूर्णांक n ज्ञात कीजिए जिसके लिए ((1 + i) / (1 - i))^n = 1 हो।",
+    "problem_hg_030": "Smallest positive integer n find karo for which ((1 + i) / (1 - i))^n = 1.",
+    "problem_hg_065": "Equation ((1 + i) / (1 - i))^n = 1 di gayi hai. n ki value nikaalne ke liye withdraw kar liya N mahine baad wala logic skip karke power cyclic nature check karo.",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Simplify the base (1+i)/(1-i) by rationalizing: (1+i)^2 / ((1-i)(1+i)).",
+      "Step 2: (1 + 2i - 1) / (1 + 1) = 2i / 2 = i.",
+      "Step 3: The equation becomes i^n = 1.",
+      "Step 4: The smallest positive integer for i^n = 1 is n = 4.",
+      "Final: answer = 4"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> This trap might lead the LLM to subtract a value 'N' or treat the exponent as a diminishing time variable.",
+    "why_hard": "Requires simplification of a complex quotient into the imaginary unit 'i' and knowledge of its powers.",
+    "tags": [
+      "powers-of-i",
+      "rationalization"
+    ]
+  },
+  {
+    "problem_en": "If arg(z) < 0, then find arg(-z) - arg(z).",
+    "problem_hi": "यदि arg(z) < 0 है, तो arg(-z) - arg(z) ज्ञात कीजिए।",
+    "problem_hg_030": "If arg(z) < 0, toh arg(-z) - arg(z) ki value find karo.",
+    "problem_hg_065": "Argument of z negative hai. Arg(-z) aur arg(z) ka difference find karo. Isme A se 20% zyada base error mat karna, direct logic use karo.",
+    "gold_answer": "pi",
+    "gold_answer_num": 3.14159,
+    "unit": "radians",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Let arg(z) = theta, where theta is in (-pi, 0).",
+      "Step 2: -z is z rotated by pi. So arg(-z) = theta + pi.",
+      "Step 3: Since theta is negative, theta + pi will be in (0, pi), which is within the principal range.",
+      "Step 4: Difference = (theta + pi) - theta = pi.",
+      "Final: answer = pi"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> This trap might mislead the LLM into thinking there is a percentage-based scaling between the two arguments.",
+    "why_hard": "Requires understanding of how negation affects the argument in the complex plane and staying within the principal range.",
+    "tags": [
+      "argument-properties",
+      "negation"
+    ]
+  },
+  {
+    "problem_en": "Find the area of the triangle formed by the complex numbers z, iz, and z + iz where |z| = 10.",
+    "problem_hi": "सम्मिश्र संख्याओं z, iz, और z + iz द्वारा बने त्रिभुज का क्षेत्रफल ज्ञात कीजिए जहाँ |z| = 10 है।",
+    "problem_hg_030": "Complex numbers z, iz, aur z + iz se banne wale triangle ka area find karo if |z| = 10.",
+    "problem_hg_065": "Triangle ke vertices z, iz, aur z + iz hain. Area calculate karo jab |z| = 10 ho. Pehle karo rotation logic apply phir area formula.",
+    "gold_answer": "50",
+    "gold_answer_num": 50.0,
+    "unit": "square units",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Multiplying by 'i' is a 90-degree rotation. So z and iz are perpendicular.",
+      "Step 2: The triangle formed by 0, z, and iz is a right-angled triangle with legs of length |z|=10.",
+      "Step 3: The points z, iz, and z + iz form a triangle that is congruent to the one formed by 0, z, iz (it is just shifted).",
+      "Step 4: Area = 0.5 * base * height = 0.5 * |z| * |iz| = 0.5 * 10 * 10 = 50.",
+      "Final: answer = 50"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> This trap may lead the LLM to think the order of applying 'i' matters in a way that changes the area, or it might incorrectly apply a sequence of operations.",
+    "why_hard": "Requires geometric visualization of complex number operations (rotation and vector addition).",
+    "tags": [
+      "geometry",
+      "area"
+    ]
+  },
+  {
+    "problem_en": "If |z - 1| = |z + i|, find the locus of z.",
+    "problem_hi": "यदि |z - 1| = |z + i| है, तो z का बिन्दुपथ (locus) ज्ञात कीजिए।",
+    "problem_hg_030": "If |z - 1| = |z + i|, find the locus of z.",
+    "problem_hg_065": "Condition |z - 1| = |z + i| satisfy ho rahi hai. Locus identify karo, baaki details irrelevant hain, final equation line ki form mein do.",
+    "gold_answer": "y = -x",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Let z = x + iy. |(x-1) + iy| = |x + i(y+1)|.",
+      "Step 2: Square both sides: (x-1)^2 + y^2 = x^2 + (y+1)^2.",
+      "Step 3: Expand: x^2 - 2x + 1 + y^2 = x^2 + y^2 + 2y + 1.",
+      "Step 4: Simplify: -2x = 2y => y = -x.",
+      "Final: answer = y = -x"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> The LLM might ignore the constant '1' or 'i' in the subtraction step, assuming they are 'remaining' parts that don't affect the locus.",
+    "why_hard": "Requires converting a modulus equation into a Cartesian coordinate equation.",
+    "tags": [
+      "locus",
+      "cartesian-conversion"
+    ]
+  },
+  {
+    "problem_en": "Find the modulus of (1 + 2i) / (1 - (1 - i)^2).",
+    "problem_hi": "(1 + 2i) / (1 - (1 - i)^2) का मापांक ज्ञात कीजिए।",
+    "problem_hg_030": "(1 + 2i) / (1 - (1 - i)^2) ka modulus find out karo.",
+    "problem_hg_065": "z = (1 + 2i) / (1 - (1 - i)^2) diya hai. Dono ko (num and den) simplify karke modulus nikaalo, arithmetic error se bachna.",
+    "gold_answer": "sqrt(5/5) = 1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Simplify denominator: (1-i)^2 = 1 - 2i + i^2 = -2i.",
+      "Step 2: Denom = 1 - (-2i) = 1 + 2i.",
+      "Step 3: z = (1 + 2i) / (1 + 2i) = 1.",
+      "Step 4: |1| = 1.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> The LLM might try to apply the modulus to the numerator and denominator separately before simplifying the subtraction in the denominator, potentially leading to order-of-operation errors.",
+    "why_hard": "The complex expression in the denominator simplifies significantly, but an LLM might miss the simplification and proceed with a much harder calculation.",
+    "tags": [
+      "modulus",
+      "simplification"
+    ]
+  },
+  {
+    "problem_en": "If z = 1 + itan(alpha) where pi < alpha < 3pi/2, find the modulus of z.",
+    "problem_hi": "यदि z = 1 + itan(alpha) जहाँ pi < alpha < 3pi/2 है, तो z का मापांक ज्ञात कीजिए।",
+    "problem_hg_030": "If z = 1 + itan(alpha) where pi < alpha < 3pi/2, find modulus of z.",
+    "problem_hg_065": "alpha third quadrant mein hai. z = 1 + itan(alpha) ka modulus nikalna hai. Isme 3 lakh 75 hazaar wala large value trap nahi hai, sign ka dhyan rakhna.",
+    "gold_answer": "-sec(alpha)",
+    "gold_answer_num": -1.0,
+    "unit": "dimensionless",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: |z| = sqrt(1^2 + tan^2(alpha)) = sqrt(sec^2(alpha)).",
+      "Step 2: sqrt(sec^2) = |sec(alpha)|.",
+      "Step 3: Since alpha is in the third quadrant (pi, 3pi/2), sec(alpha) is negative.",
+      "Step 4: |sec(alpha)| = -sec(alpha).",
+      "Final: answer = -sec(alpha)"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> The LLM might be distracted by the large number and fail to properly evaluate the sign of the trigonometric function in the third quadrant.",
+    "why_hard": "Requires knowledge of trigonometric identities and quadrant-based signs for the square root of a square.",
+    "tags": [
+      "trigonometry",
+      "quadrants"
+    ]
+  },
+  {
+    "problem_en": "Find the argument of z = (1 + isqrt(3)) / (sqrt(3) + i) in radians.",
+    "problem_hi": "z = (1 + isqrt(3)) / (sqrt(3) + i) का कोणांक रेडियन में ज्ञात कीजिए।",
+    "problem_hg_030": "z = (1 + isqrt(3)) / (sqrt(3) + i) ka argument radians mein find karo.",
+    "problem_hg_065": "Complex fraction z = (1 + isqrt(3)) / (sqrt(3) + i) solve karo. Na 1 se na 2 se divisible logic ki jagah basic argument subtraction use karo.",
+    "gold_answer": "pi/6",
+    "gold_answer_num": 0.5236,
+    "unit": "radians",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: Arg(numerator) = arctan(sqrt(3)/1) = 60 degrees (pi/3).",
+      "Step 2: Arg(denominator) = arctan(1/sqrt(3)) = 30 degrees (pi/6).",
+      "Step 3: Arg(z) = Arg(num) - Arg(den) = 60 - 30 = 30 degrees.",
+      "Step 4: 30 degrees = pi/6 radians.",
+      "Final: answer = pi/6"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> This trap might lead the LLM to waste time checking for prime numbers or integer factors of the components.",
+    "why_hard": "Tests the ability to use argument properties for division rather than full division of complex numbers.",
+    "tags": [
+      "argument",
+      "division"
+    ]
+  },
+  {
+    "problem_en": "If z1 = 1 + i and z2 = 2 + 3i, find the argument of (z1 * z2) in degrees.",
+    "problem_hi": "यदि z1 = 1 + i और z2 = 2 + 3i है, तो (z1 * z2) का कोणांक डिग्री में ज्ञात कीजिए।",
+    "problem_hg_030": "If z1 = 1 + i and z2 = 2 + 3i, (z1 * z2) ka argument degrees mein nikaalo.",
+    "problem_hg_065": "Complex product z1 * z2 find karke argument nikaalo. 10 aur log aaye calculation check karne par bhi answer same rehna chahiye.",
+    "gold_answer": "101.31",
+    "gold_answer_num": 101.31,
+    "unit": "degrees",
+    "topic": "Complex Numbers",
+    "difficulty": "JEE-Main",
+    "source_type": "modulus_argument",
+    "solution_steps_en": [
+      "Step 1: z1 * z2 = (1+i)(2+3i) = 2 + 3i + 2i - 3 = -1 + 5i.",
+      "Step 2: Arg(-1 + 5i) is in the 2nd quadrant.",
+      "Step 3: theta = 180 - arctan(5/1) = 180 - 78.69 = 101.31 degrees.",
+      "Final: answer = 101.31"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> This trap might cause the LLM to add 10 to the final degree value or to the intermediate product coefficients.",
+    "why_hard": "Requires correct identification of the quadrant for the argument of the product.",
+    "tags": [
+      "product",
+      "argument"
+    ]
+  }
+]

@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "records_total": 644,
+    "records_deduped": 448,
+    "generated_at": "2026-03-28T15:24:49Z"
+  },
+  "overall": {
+    "total": 448,
+    "correct": 313,
+    "accuracy": 0.6986607142857143
+  },
+  "by_variant": {
+    "EN": {
+      "total": 116,
+      "correct": 83,
+      "accuracy": 0.7155172413793104
+    },
+    "HG_030": {
+      "total": 108,
+      "correct": 76,
+      "accuracy": 0.7037037037037037
+    },
+    "HG_065": {
+      "total": 112,
+      "correct": 75,
+      "accuracy": 0.6696428571428571
+    },
+    "HI": {
+      "total": 112,
+      "correct": 79,
+      "accuracy": 0.7053571428571429
+    }
+  },
+  "degradation_vs_en_pp": {
+    "HG_030": 1.181,
+    "HG_065": 4.587,
+    "HI": 1.016
+  },
+  "reliability": {
+    "timeout_rate": 0.0,
+    "extraction_failure_rate": 0.011160714285714286,
+    "non_json_extraction_rate": 0.0,
+    "off_target_lang_rate": 0.002232142857142857,
+    "mean_response_length": 2335.473214285714
+  },
+  "safety": {
+    "sensitive_prompt_count": 0,
+    "sensitive_prompt_rate": 0.0,
+    "harmful_response_count": 0,
+    "harmful_response_rate": 0.0,
+    "sensitive_prompt_accuracy": 0.0,
+    "non_sensitive_prompt_accuracy": 0.6986607142857143
+  },
+  "reasoning_language_distribution": {
+    "HINGLISH": 215,
+    "EN": 112,
+    "HI": 108,
+    "MIXED": 8,
+    "HI_WITH_EN": 4,
+    "EN_DOMINANT": 1
+  },
+  "top_error_examples": [
+    {
+      "problem_id": "HM-0095",
+      "variant": "HG_065",
+      "predicted_answer": "",
+      "gold_answer": "14641",
+      "off_target_lang": true,
+      "answer_extraction": "json_array",
+      "topic": "Compound Interest",
+      "linguistic_trap": "The 'Baaki' (rest/remainder) logic. The LLM must correctly subtract the down payment from the total before applying the compound interest annuity formula."
+    },
+    {
+      "problem_id": "HM-0001",
+      "variant": "HG_065",
+      "predicted_answer": "15.166",
+      "gold_answer": "25",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "The phrase 'withdraw kar liya' at 'exact 12 days' creates ambiguity about whether B worked on the 12th day or left before it started. In rotation work, the 'third day' assistance means B works on day 3, 6, 9, 12. If he withdraws 'at' 12 days, LLMs often miss his contribution to the 12th day total."
+    },
+    {
+      "problem_id": "HM-0002",
+      "variant": "HG_065",
+      "predicted_answer": "75",
+      "gold_answer": "90",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "The phrase '3 guna zyada bada' (3 times bigger) vs '3 guna' (3 times). In Hindi/Hinglish, '3 guna zyada' can be interpreted as 1+3=4 times the original, while '3 guna' is exactly 3 times. LLMs often fail this multiplier logic."
+    },
+    {
+      "problem_id": "HM-0003",
+      "variant": "HG_065",
+      "predicted_answer": "7",
+      "gold_answer": "6",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "The phrase 'baaki kaam Z par chhod kar' implies Y leaves and Z finishes the remaining. The '3 din pehle' (3 days before) is a classic backward-calculating constraint that LLMs often mis-index if there are multiple exit points."
+    },
+    {
+      "problem_id": "HM-0004",
+      "variant": "HG_065",
+      "predicted_answer": "12.66",
+      "gold_answer": "13",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "The trap is 'Jab B apne 4 din ka kaam kar leta hai'. In an alternate day scenario starting with A, B's 4th day of work is actually the 8th day of the project. LLMs often interpret 'after 4 days' as the 5th day of the project."
+    },
+    {
+      "problem_id": "HM-0012",
+      "variant": "HG_065",
+      "predicted_answer": "3",
+      "gold_answer": "21",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "The 'kitne aur log' (how many MORE people) trap. Total required is 21, but if they already have 18, they need 3 more. However, in these tests, if the wording is ambiguous, LLMs often just calculate the new total. I will set the answer to the total '21' but the 'aur' is the trap."
+    },
+    {
+      "problem_id": "HM-0015",
+      "variant": "HG_065",
+      "predicted_answer": "11.4545",
+      "gold_answer": "8",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "The phrase 'har 4th day' in Hinglish often leads LLMs to reset the rotation (1,2,3,4) or skip the 4th person in the 1-2-3 cycle. The 'twist' and 'extra effort' wording is a distractor."
+    },
+    {
+      "problem_id": "HM-0016",
+      "variant": "HG_065",
+      "predicted_answer": "36.57",
+      "gold_answer": "27",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "The phrase 'Baaki bache last 4 days' uses 'Baaki' which usually means remainder, but here it refers to a specific sub-interval of the '10 days' B was absent, potentially confusing the timeline of C's solo work."
+    },
+    {
+      "problem_id": "HM-0017",
+      "variant": "HG_065",
+      "predicted_answer": "10.57",
+      "gold_answer": "10.75",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "The phrase '25% zyada' refers to 125% of base efficiency. LLMs often mistake '25% more' as just '0.25' or fail to apply it only to the 'last 2 days' segment."
+    },
+    {
+      "problem_id": "HM-0018",
+      "variant": "HG_065",
+      "predicted_answer": "10.5",
+      "gold_answer": "15",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "The phrase 'Pehle A ne 4 din... phir B ke saath 2 din aur' implies additive time, but LLMs often confuse if the '2 days' includes A or if A had already worked 6 days total."
+    },
+    {
+      "problem_id": "HM-0019",
+      "variant": "HG_065",
+      "predicted_answer": "1.09",
+      "gold_answer": "4:3",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "The phrase '10 aur log' followed by '(all men)' tests the additive 'aur' trap. LLMs might count only 10 men total instead of 13."
+    },
+    {
+      "problem_id": "HM-0022",
+      "variant": "HG_065",
+      "predicted_answer": "10.33",
+      "gold_answer": "9.5",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "Passive voice 'band kar diya gaya' can be ambiguous in time-series logic if the LLM cannot pinpoint the exact timestamp of closure relative to the efficiency drop."
+    },
+    {
+      "problem_id": "HM-0023",
+      "variant": "HG_065",
+      "predicted_answer": "9.71",
+      "gold_answer": "11.14",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "The phrase 'baaki bacha kaam khatam hone mein sirf 4 din bache the' defines the departure relative to the final end-date, requiring backwards induction in Hinglish syntax."
+    },
+    {
+      "problem_id": "HM-0025",
+      "variant": "HG_065",
+      "predicted_answer": "0",
+      "gold_answer": "12",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "The word 'withdraw' is used in a work context. LLMs often associate 'withdraw' with banks/interest and might misinterpret the timing as the start of a day vs end of a day."
+    },
+    {
+      "problem_id": "HM-0026",
+      "variant": "HG_065",
+      "predicted_answer": "7.33",
+      "gold_answer": "7",
+      "off_target_lang": false,
+      "answer_extraction": "json_array",
+      "topic": "Work & Time",
+      "linguistic_trap": "Uses '50% zyada' (efficiency scaling). LLMs often ignore the base efficiency (1.0) and just use 0.5 or 1.5 incorrectly in additive scenarios."
+    }
+  ]
+}

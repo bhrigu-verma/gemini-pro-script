@@ -1,0 +1,50 @@
+  [09:23:04.119] · Attaching to Chrome on debug port 9222
+  [09:23:04.119] · Attaching to Chrome on localhost:9222 …
+  [09:23:04.120] › Trying webdriver-manager …
+  [09:24:42.790] › webdriver-manager failed: Message: session not created: cannot connect to chrome at 127.0.0.1:9222
+from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+0   chromedriver                        0x0000000101506a80 cxxbridge1$str$ptr + 3158700
+1   chromedriver                        0x00000001014feb08 cxxbridge1$str$ptr + 3126068
+2   chromedriver                        0x0000000100fd3528 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74528
+3   chromedriver                        0x0000000100fc1454 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 588
+4   chromedriver                        0x000000010100d3c4 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 311740
+5   chromedriver                        0x00000001010047a8 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 275872
+6   chromedriver                        0x000000010104980c _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 558596
+7   chromedriver                        0x000000010104923c _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 557108
+8   chromedriver                        0x0000000101010fc8 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 327104
+9   chromedriver                        0x00000001014c529c cxxbridge1$str$ptr + 2890440
+10  chromedriver                        0x00000001014c898c cxxbridge1$str$ptr + 2904504
+11  chromedriver                        0x00000001014aa648 cxxbridge1$str$ptr + 2780788
+12  chromedriver                        0x00000001014c9210 cxxbridge1$str$ptr + 2906684
+13  chromedriver                        0x000000010149b04c cxxbridge1$str$ptr + 2717816
+14  chromedriver                        0x00000001014edc78 cxxbridge1$str$ptr + 3056804
+15  chromedriver                        0x00000001014eddf4 cxxbridge1$str$ptr + 3057184
+16  chromedriver                        0x00000001014fe760 cxxbridge1$str$ptr + 3125132
+17  libsystem_pthread.dylib             0x000000018b093c08 _pthread_start + 136
+18  libsystem_pthread.dylib             0x000000018b08eba8 thread_start + 8
+
+  [09:24:42.792] › Trying system chromedriver …
+  [09:25:48.400] › System chromedriver failed: Message: session not created: cannot connect to chrome at 127.0.0.1:9222
+from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+0   chromedriver                        0x0000000104b6aa80 cxxbridge1$str$ptr + 3158700
+1   chromedriver                        0x0000000104b62b08 cxxbridge1$str$ptr + 3126068
+2   chromedriver                        0x0000000104637528 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74528
+3   chromedriver                        0x0000000104625454 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 588
+4   chromedriver                        0x00000001046713c4 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 311740
+5   chromedriver                        0x00000001046687a8 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 275872
+6   chromedriver                        0x00000001046ad80c _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 558596
+7   chromedriver                        0x00000001046ad23c _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 557108
+8   chromedriver                        0x0000000104674fc8 _RNvCskE0kXQ3GIWk_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 327104
+9   chromedriver                        0x0000000104b2929c cxxbridge1$str$ptr + 2890440
+10  chromedriver                        0x0000000104b2c98c cxxbridge1$str$ptr + 2904504
+11  chromedriver                        0x0000000104b0e648 cxxbridge1$str$ptr + 2780788
+12  chromedriver                        0x0000000104b2d210 cxxbridge1$str$ptr + 2906684
+13  chromedriver                        0x0000000104aff04c cxxbridge1$str$ptr + 2717816
+14  chromedriver                        0x0000000104b51c78 cxxbridge1$str$ptr + 3056804
+15  chromedriver                        0x0000000104b51df4 cxxbridge1$str$ptr + 3057184
+16  chromedriver                        0x0000000104b62760 cxxbridge1$str$ptr + 3125132
+17  libsystem_pthread.dylib             0x000000018b093c08 _pthread_start + 136
+18  libsystem_pthread.dylib             0x000000018b08eba8 thread_start + 8
+

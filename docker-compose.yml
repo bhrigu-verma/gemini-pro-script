@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  gemini-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - GEMINI_HEADLESS=1
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+    volumes:
+      - ./:/app
+      - ./job_completion_output:/app/job_completion_output
+      - ./research_loop_output:/app/research_loop_output
+    shm_size: "2gb"
+    command: >-
+      bash -lc
+      "Xvfb :99 -screen 0 1920x1080x24 >/tmp/xvfb.log 2>&1 &
+      ./run_job_completion.sh --runtime-mode ui --headless --non-interactive"

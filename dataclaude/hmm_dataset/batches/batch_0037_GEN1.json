@@ -1,0 +1,378 @@
+[
+  {
+    "problem_en": "An item is marked at 50,000. A dealer allows two successive discounts of 20% and 10%. He then spends 2,000 on repairs and sells the item for a profit of 15%. Find the final selling price.",
+    "problem_hi": "एक वस्तु का अंकित मूल्य 50,000 है। एक डीलर 20% और 10% की दो क्रमिक छूट देता है। फिर वह मरम्मत पर 2,000 खर्च करता है और वस्तु को 15% के लाभ पर बेचता है। अंतिम विक्रय मूल्य ज्ञात कीजिए।",
+    "problem_hg_030": "Item ka Marked Price 50,000 hai. Dealer allows two successive discounts of 20% aur 10%. Phir woh repairs par 2,000 spend karta hai aur 15% profit par sell karta hai. Final Selling Price find karo.",
+    "problem_hg_065": "MP 50,000 hai. Pehle 20% discount diya, phir 10% discount. Phir repair pe 2,000 kharch kiya. Ab calculation pehle karo phir 15% profit add karke final SP batao.",
+    "gold_answer": "43700",
+    "gold_answer_num": 43700.0,
+    "unit": "rupees",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: Price after first discount = 50,000 * 0.8 = 40,000.",
+      "Step 2: Price after second discount = 40,000 * 0.9 = 36,000.",
+      "Step 3: Total Cost Price (CP) = 36,000 + 2,000 = 38,000.",
+      "Step 4: Selling Price (SP) = 38,000 * 1.15 = 43,700.",
+      "Final: answer = 43700"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir; sequence matters; LLM may apply the 15% profit before adding the repair cost of 2,000.",
+    "why_hard": "Combines successive percentage decreases with a fixed overhead addition before a final percentage increase.",
+    "tags": [
+      "successive-discount",
+      "overhead-cost"
+    ]
+  },
+  {
+    "problem_en": "A wholesaler offers a scheme of 'Buy 3 Get 2 Free' which is equivalent to a single discount. If an additional 10% discount is given on the resulting price, and the final cost to the customer is 5,400, find the original marked price of the 5 items.",
+    "problem_hi": "एक थोक विक्रेता '3 खरीदें 2 मुफ्त पाएं' की योजना प्रदान करता है जो एकल छूट के बराबर है। यदि परिणामी कीमत पर अतिरिक्त 10% की छूट दी जाती है, और ग्राहक के लिए अंतिम लागत 5,400 है, तो 5 वस्तुओं का मूल अंकित मूल्य ज्ञात कीजिए।",
+    "problem_hg_030": "Wholesaler 'Buy 3 Get 2 Free' ka scheme deta hai. Agar additional 10% discount resultant price par mile, aur customer final price 5,400 pay kare, toh 5 items ka original MP find karo.",
+    "problem_hg_065": "Scheme hai Buy 3 Get 2 Free. Iske upar 10% extra discount hai. Final price 5,400 hai. MP kitna tha? Isme baaki calculation dhyan se karna.",
+    "gold_answer": "10000",
+    "gold_answer_num": 10000.0,
+    "unit": "rupees",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: Buy 3 Get 2 Free means 5 items for the price of 3. Discount % = (2/5) * 100 = 40%.",
+      "Step 2: Effective multiplier after first discount = 0.6.",
+      "Step 3: Multiplier after second 10% discount = 0.6 * 0.9 = 0.54.",
+      "Step 4: Let MP be X. 0.54 * X = 5,400 => X = 5,400 / 0.54 = 10,000.",
+      "Final: answer = 10000"
+    ],
+    "linguistic_trap_in_hg065": "baaki; explicit remainder; LLM might interpret 'baaki' as applying the 10% only to the remaining value in a way that excludes the free items' value incorrectly.",
+    "why_hard": "Requires converting a quantity-based promotion into a percentage discount before applying successive logic.",
+    "tags": [
+      "quantity-discount",
+      "reverse-calculation"
+    ]
+  },
+  {
+    "problem_en": "A laptop is sold for 43,200 after two successive discounts of 20% and 10%. If the shopkeeper still made a 20% profit, find the cost price of the laptop.",
+    "problem_hi": "एक लैपटॉप 20% और 10% की दो क्रमिक छूटों के बाद 43,200 में बेचा जाता है। यदि दुकानदार ने फिर भी 20% का लाभ कमाया, तो लैपटॉप का क्रय मूल्य ज्ञात कीजिए।",
+    "problem_hg_030": "Laptop 43,200 mein sell kiya after two successive discounts of 20% aur 10%. Agar shopkeeper ko still 20% profit hua, laptop ka CP find karo.",
+    "problem_hg_065": "Selling price 43,200 hai after 20% and 10% successive discounts. Shopkeeper ko profit CP se 20% zyada hua. CP calculate karo.",
+    "gold_answer": "36000",
+    "gold_answer_num": 36000.0,
+    "unit": "rupees",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: The discounts are applied to the Marked Price (MP), but the SP is already given as 43,200.",
+      "Step 2: Profit is 20%, so SP = CP * 1.2.",
+      "Step 3: 43,200 = CP * 1.2.",
+      "Step 4: CP = 43,200 / 1.2 = 36,000.",
+      "Final: answer = 36000"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada; which base? LLM may try to use the discounts to find MP first, or misinterpret 'CP se 20% zyada' as SP = CP + 20% of SP.",
+    "why_hard": "Provides distracting information (successive discounts on MP) that is not needed to find CP if SP and Profit % are known.",
+    "tags": [
+      "distractor-info",
+      "profit-calculation"
+    ]
+  },
+  {
+    "problem_en": "The marked price of an article is 80,000. Three successive discounts of 10%, 5%, and 2% are offered. What is the net discount in rupees?",
+    "problem_hi": "एक वस्तु का अंकित मूल्य 80,000 है। 10%, 5%, और 2% की तीन क्रमिक छूट दी जाती है। रुपयों में शुद्ध छूट क्या है?",
+    "problem_hg_030": "Article ka MP 80,000 hai. Three successive discounts of 10%, 5%, aur 2% offer kiye gaye. Net discount rupees mein kitna hai?",
+    "problem_hg_065": "MP 80,000 hai. Discounts 10%, 5% aur 2% hain. Total kitna kam hua, calculation mein dono ko (all three) saath lekar net discount in Rs batao.",
+    "gold_answer": "12968",
+    "gold_answer_num": 12968.0,
+    "unit": "rupees",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: Price after 1st discount = 80,000 * 0.9 = 72,000.",
+      "Step 2: Price after 2nd discount = 72,000 * 0.95 = 68,400.",
+      "Step 3: Price after 3rd discount = 68,400 * 0.98 = 67,032.",
+      "Step 4: Net discount = Original MP - Final SP = 80,000 - 67,032 = 12,968.",
+      "Final: answer = 12968"
+    ],
+    "linguistic_trap_in_hg065": "dono ko; means BOTH together; LLM may only apply two discounts or sum the percentages (10+5+2=17%) instead of successive application.",
+    "why_hard": "Requires precision in calculating three levels of sequential percentage reductions.",
+    "tags": [
+      "triple-discount",
+      "net-discount"
+    ]
+  },
+  {
+    "problem_en": "A refrigerator is listed at 1,50,000. After a 20% discount, a further cash discount of 5% is given. If 10 aur log (10 more units) were purchased, the total discount would increase by 2% of the total list price. Find the SP of a single unit under the original 20% and 5% scheme.",
+    "problem_hi": "एक रेफ्रिजरेटर 1,50,000 पर सूचीबद्ध है। 20% की छूट के बाद, 5% की नकद छूट दी जाती है। यदि 10 और इकाइयाँ खरीदी जातीं, तो कुल छूट कुल सूची मूल्य के 2% तक बढ़ जाती। मूल 20% और 5% योजना के तहत एक इकाई का विक्रय मूल्य ज्ञात कीजिए।",
+    "problem_hg_030": "Refrigerator 1,50,000 list price par hai. 20% discount ke baad 5% cash discount milta hai. Agar 10 aur log units kharidte, toh discount 2% badh jata. Single unit ka SP nikalo original scheme mein.",
+    "problem_hg_065": "List price 1,50,000 hai. Pehle 20% phir 5% discount. Agar 10 aur log aaye units lene toh discount conditions change hoti, but aap simply single unit ka SP batao.",
+    "gold_answer": "114000",
+    "gold_answer_num": 114000.0,
+    "unit": "rupees",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: List Price = 1,50,000.",
+      "Step 2: Price after 20% discount = 1,50,000 * 0.8 = 1,20,000.",
+      "Step 3: Price after 5% cash discount = 1,20,000 * 0.95 = 1,14,000.",
+      "Step 4: The '10 aur log' is a distractor for the single unit calculation.",
+      "Final: answer = 114000"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye; means 10 MORE people joined; LLM may try to incorporate '10' or '2%' into the single unit SP calculation.",
+    "why_hard": "Uses a conditional distractor that mimics complex JEE word problems but requires isolation of the relevant variables.",
+    "tags": [
+      "distractor",
+      "cash-discount"
+    ]
+  },
+  {
+    "problem_en": "Find a single discount equivalent to three successive discounts of 25%, 20%, and 10%. If the final price of an object is 3,75,000 after these discounts, find the original price.",
+    "problem_hi": "25%, 20%, और 10% की तीन क्रमिक छूटों के बराबर एकल छूट ज्ञात कीजिए। यदि इन छूटों के बाद किसी वस्तु की अंतिम कीमत 3,75,000 है, तो मूल कीमत ज्ञात कीजिए।",
+    "problem_hg_030": "25%, 20%, aur 10% ke successive discounts ke equivalent single discount find karo. Agar final price 3,75,000 hai, toh original price kya tha?",
+    "problem_hg_065": "Successive discounts 25%, 20%, 10% hain. Final price 3 lakh 75 hazaar notation ke hisaab se di gayi hai. Original price kitna tha?",
+    "gold_answer": "833333.33",
+    "gold_answer_num": 833333.33,
+    "unit": "rupees",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: Combined multiplier = 0.75 * 0.80 * 0.90 = 0.54.",
+      "Step 2: Let original price be X.",
+      "Step 3: 0.54 * X = 375,000.",
+      "Step 4: X = 375,000 / 0.54 = 694,444.44. Wait, recalculating: 0.75 * 0.8 = 0.6. 0.6 * 0.9 = 0.54. 375000 / 0.54 = 694444.44.",
+      "Final: answer = 694444.44"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar; notation trap; LLM might parse 375000 as 300075 or 3,750.",
+    "why_hard": "Requires handling of large numbers and multi-stage percentage reversals.",
+    "tags": [
+      "equivalent-discount",
+      "notation"
+    ]
+  },
+  {
+    "problem_en": "A machine's value depreciates by 10% every 6 months. If the original cost was 2,00,000, find the value of the machine after 1 year. If it is sold at this value, what is the total loss percentage?",
+    "problem_hi": "एक मशीन का मूल्य हर 6 महीने में 10% कम हो जाता है। यदि मूल लागत 2,00,000 थी, तो 1 वर्ष के बाद मशीन का मूल्य ज्ञात कीजिए। यदि इसे इस मूल्य पर बेचा जाता है, तो कुल हानि प्रतिशत क्या है?",
+    "problem_hg_030": "Machine ki value 10% depreciate hoti hai every 6 months. Original cost 2,00,000 thi. 1 year baad value find karo aur total loss percentage batao.",
+    "problem_hg_065": "Cost 2,00,000 hai. Value 10% ghat-ti hai 6 mahine baad. 1 saal baad total loss % kya hoga?",
+    "gold_answer": "19",
+    "gold_answer_num": 19.0,
+    "unit": "percent",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: Depreciation happens twice in a year (every 6 months).",
+      "Step 2: Value after 6 months = 2,00,000 * 0.9 = 1,80,000.",
+      "Step 3: Value after 12 months = 1,80,000 * 0.9 = 1,62,000.",
+      "Step 4: Total Loss % = ((200,000 - 162,000) / 200,000) * 100 = 19%.",
+      "Final: answer = 19"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad; annual rate problem; LLM may use 10% once for the whole year instead of twice.",
+    "why_hard": "Mistaking the time period for depreciation leads to a linear rather than compound reduction calculation.",
+    "tags": [
+      "depreciation",
+      "time-period"
+    ]
+  },
+  {
+    "problem_en": "A shopkeeper marks his goods 40% above the cost price and allows a discount of 25%. If he also charges a 10% tax on the discounted price, find his net profit or loss percentage.",
+    "problem_hi": "एक दुकानदार अपने माल पर क्रय मूल्य से 40% अधिक अंकित करता है और 25% की छूट देता है। यदि वह छूट वाली कीमत पर 10% कर भी लगाता है, तो उसका शुद्ध लाभ या हानि प्रतिशत ज्ञात कीजिए।",
+    "problem_hg_030": "Shopkeeper goods ko CP se 40% up mark karta hai aur 25% discount deta hai. Agar woh discounted price par 10% tax bhi charge kare, net profit/loss % find karo.",
+    "problem_hg_065": "CP se price 40% up mark kiya. Phir 25% discount diya. Baaki price par 10% tax lagaya. Net result kya raha?",
+    "gold_answer": "15.5 profit",
+    "gold_answer_num": 15.5,
+    "unit": "percent",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: Let CP = 100. MP = 140.",
+      "Step 2: Price after 25% discount = 140 * 0.75 = 105.",
+      "Step 3: Price after 10% tax = 105 * 1.1 = 115.5.",
+      "Step 4: Net profit = 115.5 - 100 = 15.5%.",
+      "Final: answer = 15.5 profit"
+    ],
+    "linguistic_trap_in_hg065": "baaki; explicit remainder; LLM might forget to add the tax or apply it to the wrong base.",
+    "why_hard": "Sequencing increases (markup), decreases (discount), and increases (tax) on a changing base.",
+    "tags": [
+      "markup",
+      "tax",
+      "profit"
+    ]
+  },
+  {
+    "problem_en": "A dealer buys an article for 10,000. He marks it up by 50% and then gives two successive discounts of 20% and 10%. If he has to pay a commission of 5% on the final selling price, find his net profit.",
+    "problem_hi": "एक डीलर 10,000 में एक वस्तु खरीदता है। वह इसे 50% तक अंकित करता है और फिर 20% और 10% की दो क्रमिक छूट देता है। यदि उसे अंतिम विक्रय मूल्य पर 5% का कमीशन देना है, तो उसका शुद्ध लाभ ज्ञात कीजिए।",
+    "problem_hg_030": "Dealer article 10,000 mein buy karta hai. Mark up 50% karke two successive discounts of 20% aur 10% deta hai. Agar final SP par 5% commission dena pade, net profit find karo.",
+    "problem_hg_065": "10,000 CP hai. 50% markup kiya. Phir 20% and 10% discounts. Final SP se withdraw kar liya 5% commission ke naam par. Profit kitna bacha?",
+    "gold_answer": "260",
+    "gold_answer_num": 260.0,
+    "unit": "rupees",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: CP = 10,000. MP = 10,000 * 1.5 = 15,000.",
+      "Step 2: SP after discounts = 15,000 * 0.8 * 0.9 = 10,800.",
+      "Step 3: Commission = 10,800 * 0.05 = 540.",
+      "Step 4: Net SP = 10,800 - 540 = 10,260. Profit = 10,260 - 10,000 = 260.",
+      "Final: answer = 260"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad; timing trap; LLM might think the commission is time-dependent or applied to CP.",
+    "why_hard": "Multiple successive operations with a final deduction that affects the net profit calculation.",
+    "tags": [
+      "commission",
+      "net-profit"
+    ]
+  },
+  {
+    "problem_en": "A company gives a 20% discount on the marked price of 60,000 and another 5% for early payment. If the production cost is na X se na Y se divisible (not relevant) but specifically 40,000, find the profit percentage.",
+    "problem_hi": "एक कंपनी 60,000 के अंकित मूल्य पर 20% की छूट देती है और जल्दी भुगतान के लिए 5% की और छूट देती है। यदि उत्पादन लागत 40,000 है, तो लाभ प्रतिशत ज्ञात कीजिए।",
+    "problem_hg_030": "Company 60,000 MP par 20% discount deti hai aur 5% cash discount. Agar cost 40,000 hai, toh profit % find karo.",
+    "problem_hg_065": "MP 60,000 hai. Successive discounts 20% aur 5%. Cost 40,000 hai jo na 3 se na 7 se divisible hai. Profit % batao.",
+    "gold_answer": "14",
+    "gold_answer_num": 14.0,
+    "unit": "percent",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: MP = 60,000.",
+      "Step 2: Price after 20% discount = 48,000.",
+      "Step 3: Price after 5% discount = 48,000 * 0.95 = 45,600.",
+      "Step 4: Profit = 45,600 - 40,000 = 5,600. Profit % = (5,600 / 40,000) * 100 = 14%.",
+      "Final: answer = 14"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible; neither X nor Y; LLM might get distracted trying to verify the divisibility of 40,000 instead of solving the profit logic.",
+    "why_hard": "Uses a number-theory distractor to break the focus on chain percentage calculations.",
+    "tags": [
+      "distractor",
+      "profit-percent"
+    ]
+  },
+  {
+    "problem_en": "Successive discounts of 10% and x% are equivalent to a single discount of 19%. Find the value of x. If the marked price is 1,00,000, find the final SP.",
+    "problem_hi": "10% और x% की क्रमिक छूट 19% की एकल छूट के बराबर है। x का मान ज्ञात कीजिए। यदि अंकित मूल्य 1,00,000 है, तो अंतिम विक्रय मूल्य ज्ञात कीजिए।",
+    "problem_hg_030": "10% aur x% successive discounts 19% single discount ke barabar hain. x find karo. Agar MP 1,00,000 hai, toh SP kya hoga?",
+    "problem_hg_065": "Discounts 10% aur x% equivalent to 19% hain. Pehle x nikalo phir final SP 1,00,000 par calculate karo.",
+    "gold_answer": "81000",
+    "gold_answer_num": 81000.0,
+    "unit": "rupees",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: (1 - 0.10)(1 - x/100) = (1 - 0.19).",
+      "Step 2: 0.9 * (1 - x/100) = 0.81.",
+      "Step 3: 1 - x/100 = 0.81 / 0.9 = 0.9 => x = 10.",
+      "Step 4: SP = 100,000 * 0.81 = 81,000.",
+      "Final: answer = 81000"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir; sequence matters; LLM may try to calculate SP using only 10% or 19% without finding x.",
+    "why_hard": "Requires solving for an unknown intermediate percentage before applying it to a final value.",
+    "tags": [
+      "unknown-percentage",
+      "equivalent-discount"
+    ]
+  },
+  {
+    "problem_en": "A dealer gives two successive discounts of 15% and 10% on an article marked at 20,000. If he makes a profit of 20%, find the cost price.",
+    "problem_hi": "एक डीलर 20,000 अंकित वस्तु पर 15% और 10% की दो क्रमिक छूट देता है। यदि वह 20% का लाभ कमाता है, तो क्रय मूल्य ज्ञात कीजिए।",
+    "problem_hg_030": "Dealer two successive discounts of 15% aur 10% deta hai 20,000 MP par. Agar profit 20% ho, toh CP kya hai?",
+    "problem_hg_065": "MP 20,000 hai. Discounts 15% aur 10% hain. SP se profit CP se 20% zyada hai. CP find karo.",
+    "gold_answer": "12750",
+    "gold_answer_num": 12750.0,
+    "unit": "rupees",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: SP = 20,000 * 0.85 * 0.9 = 15,300.",
+      "Step 2: SP = CP * 1.2.",
+      "Step 3: 15,300 = CP * 1.2.",
+      "Step 4: CP = 15,300 / 1.2 = 12,750.",
+      "Final: answer = 12750"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada; which base? LLM may calculate profit as 20% of SP instead of 20% of CP.",
+    "why_hard": "Involves multiple steps of reduction from MP to SP and then a division to find the CP.",
+    "tags": [
+      "MP-to-CP",
+      "profit-base"
+    ]
+  },
+  {
+    "problem_en": "A shopkeeper sells an item at 2,400 after two successive discounts of 20% and 25%. If a single discount of 40% was given instead, what would be the selling price?",
+    "problem_hi": "एक दुकानदार 20% और 25% की दो क्रमिक छूटों के बाद एक वस्तु को 2,400 में बेचता है। यदि इसके बजाय 40% की एकल छूट दी गई होती, तो विक्रय मूल्य क्या होता?",
+    "problem_hg_030": "Item 2,400 mein sell hota hai after 20% aur 25% successive discounts. Agar 40% single discount hota, SP kya hota?",
+    "problem_hg_065": "SP 2,400 hai after 20% and 25% discounts. Dono ko milakar (successive) agar sirf 40% discount hota, toh SP kya hota?",
+    "gold_answer": "2400",
+    "gold_answer_num": 2400.0,
+    "unit": "rupees",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: Effective multiplier for 20% and 25% = 0.8 * 0.75 = 0.6.",
+      "Step 2: 0.6 * MP = 2,400 => MP = 4,000.",
+      "Step 3: New SP with 40% discount = 4,000 * 0.6 = 2,400.",
+      "Step 4: In this unique case, both outcomes are the same.",
+      "Final: answer = 2400"
+    ],
+    "linguistic_trap_in_hg065": "dono ko; means BOTH together; LLM may mistakenly add 20+25=45% and compare that to 40%.",
+    "why_hard": "Tests the ability to calculate MP from a final SP and then re-apply a different discount model.",
+    "tags": [
+      "comparison",
+      "equivalent-discount"
+    ]
+  },
+  {
+    "problem_en": "Marked price of a watch is 10,000. Dealer allows a discount of 10% and 5% respectively. He then adds 400 for a leather strap. Find the SP if he wants 10% profit on his total cost.",
+    "problem_hi": "एक घड़ी का अंकित मूल्य 10,000 है। डीलर क्रमशः 10% और 5% की छूट देता है। फिर वह लेदर स्ट्रैप के लिए 400 जोड़ता है। यदि वह अपनी कुल लागत पर 10% लाभ चाहता है, तो विक्रय मूल्य ज्ञात कीजिए।",
+    "problem_hg_030": "Watch MP 10,000 hai. Discounts 10% aur 5% hain. 400 leather strap ke add kiye. Agar 10% profit chahiye total cost par, SP find karo.",
+    "problem_hg_065": "MP 10,000. 10% and 5% discounts. Baaki 400 strap cost add karo. Total cost pe 10% profit add karke SP batao.",
+    "gold_answer": "9845",
+    "gold_answer_num": 9845.0,
+    "unit": "rupees",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: Price after discounts = 10,000 * 0.9 * 0.95 = 8,550.",
+      "Step 2: Total cost for dealer = 8,550 + 400 = 8,950.",
+      "Step 3: Profit = 8,950 * 0.1 = 895.",
+      "Step 4: SP = 8,950 + 895 = 9,845.",
+      "Final: answer = 9845"
+    ],
+    "linguistic_trap_in_hg065": "baaki; explicit remainder; LLM may apply the 5% discount after adding the 400 strap cost.",
+    "why_hard": "Mixing percentage discounts on a base and then adding a constant before applying a profit percentage.",
+    "tags": [
+      "overhead",
+      "compound-percentage"
+    ]
+  },
+  {
+    "problem_en": "A sofa set marked at 20,000 is sold at two successive discounts of 10% and 5%. If the seller had given a single discount of 15%, how much more or less would he have received?",
+    "problem_hi": "20,000 अंकित एक सोफा सेट 10% और 5% की दो क्रमिक छूटों पर बेचा जाता है। यदि विक्रेता ने 15% की एकल छूट दी होती, तो उसे कितना अधिक या कम प्राप्त होता?",
+    "problem_hg_030": "Sofa set MP 20,000 hai, discounts 10% aur 5% hain. Agar single 15% discount hota, toh kitna difference hota SP mein?",
+    "problem_hg_065": "MP 20,000. Discounts 10% and 5%. Agar 15% single discount hota, toh seller ko kitna zyada/kam milta? Pehle karo calculation SP1 ki, phir SP2.",
+    "gold_answer": "100",
+    "gold_answer_num": 100.0,
+    "unit": "rupees",
+    "topic": "Profit & Loss",
+    "difficulty": "Grade-12",
+    "source_type": "successive_discount",
+    "solution_steps_en": [
+      "Step 1: SP1 (Successive) = 20,000 * 0.9 * 0.95 = 17,100.",
+      "Step 2: SP2 (Single 15%) = 20,000 * 0.85 = 17,000.",
+      "Step 3: Difference = 17,100 - 17,000 = 100.",
+      "Step 4: Seller receives 100 more in SP1.",
+      "Final: answer = 100"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir; sequence matters; LLM may confuse the two SP values or simply state '0' assuming 10+5=15.",
+    "why_hard": "Requires exact calculation to find the small difference between successive and additive percentages.",
+    "tags": [
+      "comparison",
+      "difference"
+    ]
+  }
+]

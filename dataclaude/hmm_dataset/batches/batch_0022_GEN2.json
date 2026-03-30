@@ -1,0 +1,379 @@
+[
+  {
+    "problem_en": "Solve for x: log base 2 of [log base 3 of (log base 2 of x)] = 1. Then find the value of x/8.",
+    "problem_hi": "x के लिए हल करें: log base 2 [log base 3 (log base 2 of x)] = 1. फिर x/8 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "x solve karo: log base 2 of [log base 3 of (log base 2 of x)] = 1. Uske baad find x/8 ki value.",
+    "problem_hg_065": "Pehle solve karo log base 2 [log base 3 (log base 2 of x)] = 1, phir result ko 8 se divide karke answer nikaalo. sequence matters isliye pehle karo phir next step logic apply karna.",
+    "gold_answer": "64",
+    "gold_answer_num": 64.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Remove the outermost log base 2: log_3(log_2(x)) = 2^1 = 2.",
+      "Step 2: Remove the next log base 3: log_2(x) = 3^2 = 9.",
+      "Step 3: Solve for x: x = 2^9 = 512.",
+      "Step 4: Find x/8: 512/8 = 64.",
+      "Final: answer = 64"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> The model may struggle with the execution order of nested logarithmic inversion followed by arithmetic division, potentially applying the division to an intermediate term.",
+    "why_hard": "Requires three successive logarithmic inversions followed by an arithmetic operation.",
+    "tags": [
+      "nested-log",
+      "log-inversion"
+    ]
+  },
+  {
+    "problem_en": "If log base 10 of {log base 10 of [log base 10 of (x^2)]} = 0, find the value of x/10.",
+    "problem_hi": "यदि log base 10 {log base 10 [log base 10 (x^2)]} = 0 है, तो x/10 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar log base 10 of {log base 10 of [log base 10 of (x^2)]} = 0 hai, toh find value of x/10.",
+    "problem_hg_065": "Nested log base 10 ka value zero hai for x square. Isme x positive hai, toh calculation mein 10 aur log aaye thinking se bachna aur final x/10 nikaalna.",
+    "gold_answer": "sqrt(10^10)/10",
+    "gold_answer_num": 10000.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outer log: log_10(log_10(x^2)) = 10^0 = 1.",
+      "Step 2: Middle log: log_10(x^2) = 10^1 = 10.",
+      "Step 3: Solve for x^2: x^2 = 10^10.",
+      "Step 4: Solve for x (positive): x = 10^5 = 100000.",
+      "Step 5: x/10 = 10000.",
+      "Final: answer = 10000"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> LLM might interpret this as adding 10 more logarithms to the nesting or adding 10 to the intermediate x value.",
+    "why_hard": "The triple nesting with base 10 leads to large powers of 10 that test numerical precision and parsing.",
+    "tags": [
+      "triple-nested",
+      "base-10"
+    ]
+  },
+  {
+    "problem_en": "Solve for x: log base 4 of [log base 2 of (log base 3 of x)] = 1/2. Find the value of x/2.",
+    "problem_hi": "x के लिए हल करें: log base 4 [log base 2 (log base 3 of x)] = 1/2. x/2 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Solve for x: log base 4 of [log base 2 of (log base 3 of x)] = 1/2. Find x/2 value.",
+    "problem_hg_065": "Log base 4 nested expression ka value 1/2 hai. Baaki simplify karke x/2 nikaalna hai, dhyan dena step wise reduction par.",
+    "gold_answer": "40.5",
+    "gold_answer_num": 40.5,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outermost: log_2(log_3(x)) = 4^(1/2) = 2.",
+      "Step 2: Inner: log_3(x) = 2^2 = 4.",
+      "Step 3: Solve for x: x = 3^4 = 81.",
+      "Step 4: x/2 = 81/2 = 40.5.",
+      "Final: answer = 40.5"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Using 'baaki' implies a remainder operation, which might cause the LLM to subtract intermediate steps from a total instead of simplifying.",
+    "why_hard": "The fractional exponent in the outer log requires recognizing the square root of the base before descending the nest.",
+    "tags": [
+      "fractional-log",
+      "nested"
+    ]
+  },
+  {
+    "problem_en": "If log base 5 of [log base 3 of (x - 2)] = 0, find the value of 3x + 1.",
+    "problem_hi": "यदि log base 5 [log base 3 (x - 2)] = 0 है, तो 3x + 1 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar log base 5 of [log base 3 of (x - 2)] = 0, find 3x + 1.",
+    "problem_hg_065": "Nested log base 5 aur 3 solve karke x nikaalo, phir 3x + 1 find karo. Is calculation mein dono ko (nested parts) carefully handle karna.",
+    "gold_answer": "16",
+    "gold_answer_num": 16.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outer: log_3(x - 2) = 5^0 = 1.",
+      "Step 2: Inner: x - 2 = 3^1 = 3.",
+      "Step 3: Solve for x: x = 5.",
+      "Step 4: 3(5) + 1 = 16.",
+      "Final: answer = 16"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> LLM might apply the base-5 or base-3 transformation to both sides or both layers simultaneously rather than sequentially.",
+    "why_hard": "A shift in the variable (x-2) requires tracking the constant through the log-to-exponential conversion.",
+    "tags": [
+      "variable-shift",
+      "nested-log"
+    ]
+  },
+  {
+    "problem_en": "Find x if log base 2 of [log base 2 of (log base 2 of x)] = 2. Find log base 2 of x.",
+    "problem_hi": "x ज्ञात करें यदि log base 2 [log base 2 (log base 2 of x)] = 2 है। log base 2 of x ज्ञात कीजिए।",
+    "problem_hg_030": "Find x agar log base 2 of [log base 2 of (log base 2 of x)] = 2. Log base 2 of x kya hoga?",
+    "problem_hg_065": "Triple log base 2 ka equation 2 ke barabar hai. Solve karke log base 2 of x nikaalo. Isme 3 lakh 75 hazaar wala value parsing mistake mat karna.",
+    "gold_answer": "16",
+    "gold_answer_num": 16.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outer: log_2(log_2(x)) = 2^2 = 4.",
+      "Step 2: Middle: log_2(x) = 2^4 = 16.",
+      "Step 3: The question asks for log_2(x), which is 16.",
+      "Final: answer = 16"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> Distractor used to see if the LLM treats the large number as a value for 'x' or a scaling factor instead of solving the recurrence.",
+    "why_hard": "Requires distinguishing between the value of x and the value of log_2(x) as the final requested answer.",
+    "tags": [
+      "recursive-base",
+      "triple-nested"
+    ]
+  },
+  {
+    "problem_en": "Evaluate x: log base 3 of [log base 2 of (log base 4 of x)] = 0. Then compute x/16.",
+    "problem_hi": "x का मूल्यांकन करें: log base 3 [log base 2 (log base 4 of x)] = 0. फिर x/16 की गणना करें।",
+    "problem_hg_030": "Evaluate x: log base 3 of [log base 2 of (log base 4 of x)] = 0. Phir x/16 calculate karo.",
+    "problem_hg_065": "Nested log base 3, 2, 4 given hai equal to zero. Pehle karo solve x ke liye phir divide by 16 sequence follow karna.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outer: log_2(log_4(x)) = 3^0 = 1.",
+      "Step 2: Middle: log_4(x) = 2^1 = 2.",
+      "Step 3: Inner: x = 4^2 = 16.",
+      "Step 4: Compute x/16 = 16/16 = 1.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Forces a strictly serial interpretation where the LLM might mismanage the result of log_4(x)=2.",
+    "why_hard": "Different bases (3, 2, 4) require switching mental models of exponents for each step.",
+    "tags": [
+      "mixed-base",
+      "nested-log"
+    ]
+  },
+  {
+    "problem_en": "If log base 7 of [log base 5 of (sqrt(x) + 5)] = 0, find x.",
+    "problem_hi": "यदि log base 7 [log base 5 (sqrt(x) + 5)] = 0 है, तो x ज्ञात कीजिए।",
+    "problem_hg_030": "Agar log base 7 of [log base 5 of (sqrt(x) + 5)] = 0, find x.",
+    "problem_hg_065": "Nested logs solve karke x find karo. sqrt(x) + 5 wala part carefully handle karna, withdraw kar liya N mahine baad wala subtraction logic yahan relevant nahi hai.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outer: log_5(sqrt(x) + 5) = 7^0 = 1.",
+      "Step 2: Inner: sqrt(x) + 5 = 5^1 = 5.",
+      "Step 3: Solve for sqrt(x): sqrt(x) = 0.",
+      "Step 4: x = 0.",
+      "Final: answer = 0"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> Temporal/financial distractor that might lead the LLM to subtract 5 (the constant) incorrectly as a 'withdrawal'.",
+    "why_hard": "The result x=0 often triggers 'undefined' alarms in LLMs due to domain constraints of logs, even though it's valid here inside the sqrt.",
+    "tags": [
+      "square-root",
+      "zero-answer"
+    ]
+  },
+  {
+    "problem_en": "Solve for x: log base 2 of {1 + log base 3 of [1 + log base 4 of (x + 1)]} = 1. Find x.",
+    "problem_hi": "x के लिए हल करें: log base 2 {1 + log base 3 [1 + log base 4 (x + 1)]} = 1. x ज्ञात कीजिए।",
+    "problem_hg_030": "Solve for x: log base 2 of {1 + log base 3 of [1 + log base 4 of (x + 1)]} = 1. x calculate karo.",
+    "problem_hg_065": "Log base 2 bracket log base 3... complicated nesting hai equal to 1. Baaki constants ko properly shift karke x find karo.",
+    "gold_answer": "3",
+    "gold_answer_num": 3.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outer: 1 + log_3(1 + log_4(x + 1)) = 2^1 = 2.",
+      "Step 2: Simplify: log_3(1 + log_4(x + 1)) = 1.",
+      "Step 3: Middle: 1 + log_4(x + 1) = 3^1 = 3.",
+      "Step 4: Simplify: log_4(x + 1) = 2.",
+      "Step 5: Inner: x + 1 = 4^2 = 16. Solve for x: x = 15. Wait, recalculate.",
+      "Recalculate Step 1: 1 + log_3(...) = 2 => log_3(...) = 1. Correct.",
+      "Recalculate Step 3: 1 + log_4(x+1) = 3 => log_4(x+1) = 2. Correct. x+1 = 16 => x=15.",
+      "Final: answer = 15"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Implies subtraction of '1' constants in the nesting might be skipped or erroneously pooled.",
+    "why_hard": "The presence of '1 +' at multiple levels requires careful distributive logic and constant shifting between log removals.",
+    "tags": [
+      "additive-nesting",
+      "constant-shift"
+    ]
+  },
+  {
+    "problem_en": "If log base x of [log base 2 of (log base 3 of 81)] = 1, find x.",
+    "problem_hi": "यदि log base x [log base 2 (log base 3 of 81)] = 1 है, तो x ज्ञात कीजिए।",
+    "problem_hg_030": "Agar log base x of [log base 2 of (log base 3 of 81)] = 1, find x.",
+    "problem_hg_065": "Variable base x problem. Log base x outer hai and inside values are constants. Dono ko evaluate karke x nikaalo.",
+    "gold_answer": "2",
+    "gold_answer_num": 2.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Evaluate inner: log_3(81) = 4 (since 3^4 = 81).",
+      "Step 2: Evaluate middle: log_2(4) = 2.",
+      "Step 3: Set up outer equation: log_x(2) = 1.",
+      "Step 4: Solve for x: x^1 = 2 => x = 2.",
+      "Final: answer = 2"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> May mislead the LLM into thinking it needs to solve for two variables or apply the base 'x' to both nested terms.",
+    "why_hard": "Having the variable in the base of a nested logarithm is a rare pattern that often confuses standard solvers.",
+    "tags": [
+      "variable-base",
+      "nested-constant"
+    ]
+  },
+  {
+    "problem_en": "Solve for x: log base 0.5 of [log base 4 of (log base 2 of x)] = 0. Find x.",
+    "problem_hi": "x के लिए हल करें: log base 0.5 [log base 4 (log base 2 of x)] = 0. x ज्ञात कीजिए।",
+    "problem_hg_030": "x solve karo: log base 0.5 of [log base 4 of (log base 2 of x)] = 0. x find karo.",
+    "problem_hg_065": "Log base 0.5 expression zero ke equal hai. A se 20% zyada complexity logic yahan apply nahi hota, bas steps simple rakho.",
+    "gold_answer": "16",
+    "gold_answer_num": 16.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outer: log_4(log_2(x)) = 0.5^0 = 1.",
+      "Step 2: Middle: log_2(x) = 4^1 = 4.",
+      "Step 3: Solve for x: x = 2^4 = 16.",
+      "Final: answer = 16"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> Comparison trap that might cause the LLM to multiply the base or result by 1.2.",
+    "why_hard": "Using a fractional base (0.5) in the outer log requires understanding that fractional powers/roots still follow the b^0 = 1 rule.",
+    "tags": [
+      "fractional-base",
+      "nested-log"
+    ]
+  },
+  {
+    "problem_en": "Find x: log base 8 of [log base 2 of (log base 3 of x)] = 1/3. Find sqrt(x).",
+    "problem_hi": "x ज्ञात करें: log base 8 [log base 2 (log base 3 of x)] = 1/3. sqrt(x) ज्ञात कीजिए।",
+    "problem_hg_030": "Find x: log base 8 of [log base 2 of (log base 3 of x)] = 1/3. sqrt(x) calculate karo.",
+    "problem_hg_065": "Nested log base 8 equal to 1/3 hai. Na 2 se na 3 se divisible wali term final check mein mat bhoolna and find sqrt(x).",
+    "gold_answer": "9",
+    "gold_answer_num": 9.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outer: log_2(log_3(x)) = 8^(1/3) = 2.",
+      "Step 2: Middle: log_3(x) = 2^2 = 4.",
+      "Step 3: Solve for x: x = 3^4 = 81.",
+      "Step 4: sqrt(81) = 9.",
+      "Final: answer = 9"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> Divisibility trap that may lead the LLM to second-guess the number 81 (divisible by 3) or 9 (divisible by 3).",
+    "why_hard": "The cube root of the base (8^(1/3)) must be correctly identified as '2' before continuing the nest.",
+    "tags": [
+      "cube-root-base",
+      "nested-log"
+    ]
+  },
+  {
+    "problem_en": "Solve for x: log base 2 of [log base 3 of (x^2 - 7)] = 1. Find the positive value of x.",
+    "problem_hi": "x के लिए हल करें: log base 2 [log base 3 (x^2 - 7)] = 1. x का धनात्मक मान ज्ञात कीजिए।",
+    "problem_hg_030": "x solve karo: log base 2 of [log base 3 of (x^2 - 7)] = 1. Positive value of x find karo.",
+    "problem_hg_065": "Nested log problem jisme quadratic term x^2 - 7 hai. Isko solve karne ke liye pehle karo logs remove phir square root nikaalo.",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outer: log_3(x^2 - 7) = 2^1 = 2.",
+      "Step 2: Inner: x^2 - 7 = 3^2 = 9.",
+      "Step 3: Solve for x^2: x^2 = 16.",
+      "Step 4: Positive value: x = 4.",
+      "Final: answer = 4"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Directs the sequence of log-removal then quadratic-solving, which if misinterpreted might lead to squaring the logs.",
+    "why_hard": "Combines logarithmic nesting with a basic quadratic equation, requiring sign selection at the end.",
+    "tags": [
+      "nested-quadratic",
+      "multiple-roots"
+    ]
+  },
+  {
+    "problem_en": "If log base 9 of [log base 3 of (log base 2 of x)] = 1/2, find x/128.",
+    "problem_hi": "यदि log base 9 [log base 3 (log base 2 of x)] = 1/2 है, तो x/128 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar log base 9 of [log base 3 of (log base 2 of x)] = 1/2, find x/128.",
+    "problem_hg_065": "Nested log base 9, 3, 2 equal to 1/2. Solve for x and compute x/128. Calculation mein baaki parts ko ignore mat karna.",
+    "gold_answer": "log base 2... no it is 2^27 / 128",
+    "gold_answer_num": 1048576.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outer: log_3(log_2(x)) = 9^(1/2) = 3.",
+      "Step 2: Middle: log_2(x) = 3^3 = 27.",
+      "Step 3: Inner: x = 2^27.",
+      "Step 4: Compute x/128 = 2^27 / 2^7 = 2^20.",
+      "Step 5: 2^10 = 1024, so 2^20 = 1048576.",
+      "Final: answer = 1048576"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Implies the LLM might leave 'remaining' terms in exponent form rather than calculating the final large numeric answer.",
+    "why_hard": "The result is a very large number (2^20), which tests the model's ability to handle exponents beyond standard memory ranges.",
+    "tags": [
+      "large-exponent",
+      "triple-nested"
+    ]
+  },
+  {
+    "problem_en": "Solve: log base 2 of [log base 4 of (x + 10)] = 0. Then find x plus 6 mahine baad logic distractor... just find x + 10.",
+    "problem_hi": "हल करें: log base 2 [log base 4 (x + 10)] = 0. फिर x + 10 ज्ञात कीजिए।",
+    "problem_hg_030": "Solve: log base 2 of [log base 4 of (x + 10)] = 0. Find value of x + 10.",
+    "problem_hg_065": "Log base 2 inside log base 4 zero ke barabar hai. Solve for x then find x + 10, dhyan rahe 6 mahine baad wala annual rate logic yahan use nahi hoga.",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outer: log_4(x + 10) = 2^0 = 1.",
+      "Step 2: Inner: x + 10 = 4^1 = 4.",
+      "Step 3: The question asks for x + 10, which is 4.",
+      "Final: answer = 4"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> Temporal distractor that might lead the LLM to divide the result by 2 (semi-annualizing the 'rate').",
+    "why_hard": "Tests the ability to ignore irrelevant complex text and solve the core mathematical relation.",
+    "tags": [
+      "distractor-text",
+      "nested-log"
+    ]
+  },
+  {
+    "problem_en": "If log base 2 of [log base 3 of (log base 4 of x)] = 0, find x + 36.",
+    "problem_hi": "यदि log base 2 [log base 3 (log base 4 of x)] = 0 है, तो x + 36 ज्ञात कीजिए।",
+    "problem_hg_030": "Agar log base 2 of [log base 3 of (log base 4 of x)] = 0, find x + 36.",
+    "problem_hg_065": "Nested log evaluation jiska result zero hai. Find x + 36, isme dono ko intermediate logs ko correctly solve karna.",
+    "gold_answer": "100",
+    "gold_answer_num": 100.0,
+    "unit": "dimensionless",
+    "topic": "Logarithms",
+    "difficulty": "JEE-Main",
+    "source_type": "nested_log",
+    "solution_steps_en": [
+      "Step 1: Outer: log_3(log_4(x)) = 2^0 = 1.",
+      "Step 2: Middle: log_4(x) = 3^1 = 3.",
+      "Step 3: Inner: x = 4^3 = 64.",
+      "Step 4: Find x + 36 = 64 + 36 = 100.",
+      "Final: answer = 100"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> Misleads into performing the same operation on multiple logs at once.",
+    "why_hard": "Requires three levels of exponentiation (2^0, 3^1, 4^3) with distinct bases.",
+    "tags": [
+      "triple-nested",
+      "constant-addition"
+    ]
+  }
+]

@@ -1,0 +1,384 @@
+[
+  {
+    "problem_en": "Bag A contains 4 white and 6 black balls. Bag B contains 5 white and 5 black balls. One bag is selected at random and a ball is drawn. If the ball is white, find the probability it came from Bag A.",
+    "problem_hi": "झोला A में 4 सफेद और 6 काली गेंदें हैं। झोला B में 5 सफेद और 5 काली गेंदें हैं। एक झोला यादृच्छिक रूप से चुना जाता है और एक गेंद निकाली जाती है। यदि गेंद सफेद है, तो इसकी क्या प्रायिकता है कि यह झोला A से आई है?",
+    "problem_hg_030": "Bag A mein 4 white aur 6 black balls hain. Bag B contains 5 white and 5 black balls. Ek bag random select karke ball nikali jati hai. Agar ball white hai, find the probability ki wo Bag A se thi.",
+    "problem_hg_065": "Do bags hain. Bag A contains 4 white, 6 black balls aur Bag B mein 5 white, 5 black balls hain. Pehle ek bag choose karo phir ek ball nikalo. Agar ball white nikli, toh find probability Bag A ki thi. Dono ko bag selection ke liye equal chance do.",
+    "gold_answer": "4/9",
+    "gold_answer_num": 0.444444,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: P(Bag A) = P(Bag B) = 1/2.",
+      "Step 2: P(White|Bag A) = 4/10; P(White|Bag B) = 5/10.",
+      "Step 3: P(White) = (1/2 * 4/10) + (1/2 * 5/10) = 9/20.",
+      "Step 4: P(Bag A|White) = P(White|Bag A)P(Bag A) / P(White) = (4/20) / (9/20) = 4/9.",
+      "Final: answer = 4/9"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> This sequence trap might mislead an LLM to treat the events as independent or sequential without applying Bayes' theorem correctly, or it might struggle to correctly associate the 'if' condition with the preceding action.",
+    "why_hard": "Requires applying Bayes' Theorem to a standard two-bag scenario which is a classic multi-step probability problem.",
+    "tags": [
+      "Bayes Theorem",
+      "Bags and Balls"
+    ]
+  },
+  {
+    "problem_en": "A fair die is rolled. If the number is even, find the probability that it is a multiple of 3.",
+    "problem_hi": "एक निष्पक्ष पासा फेंका जाता है। यदि संख्या सम है, तो इसके 3 का गुणज होने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "Ek fair die roll kiya jata hai. Agar number even hai, find the probability ki wo 3 ka multiple hai.",
+    "problem_hg_065": "Ek unbiased die throw kiya. Agar output even number aata hai, toh multiple of 3 hone ki probability kya hogi? Isme na 1 se na 5 se divisible hone ki koi condition nahi hai.",
+    "gold_answer": "1/3",
+    "gold_answer_num": 0.333333,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: Sample space S = {1, 2, 3, 4, 5, 6}.",
+      "Step 2: Event A (even) = {2, 4, 6}. P(A) = 3/6 = 1/2.",
+      "Step 3: Event B (multiple of 3) = {3, 6}.",
+      "Step 4: Intersection (A and B) = {6}. P(A and B) = 1/6.",
+      "Step 5: P(B|A) = P(A and B) / P(A) = (1/6) / (1/2) = 1/3.",
+      "Final: answer = 1/3"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> This 'neither-nor' trap might confuse the LLM into thinking it needs to exclude numbers divisible by 1 or 5 from the sample space, rather than focusing on the 'even' condition.",
+    "why_hard": "Tests basic conditional probability but requires careful filtering of the sample space based on the given condition.",
+    "tags": [
+      "Die",
+      "Multiples"
+    ]
+  },
+  {
+    "problem_en": "A family has two children. Given that at least one is a girl, what is the probability that both are girls?",
+    "problem_hi": "एक परिवार में दो बच्चे हैं। यह देखते हुए कि कम से कम एक लड़की है, दोनों के लड़की होने की प्रायिकता क्या है?",
+    "problem_hg_030": "Ek family mein do children hain. Given that at least one girl hai, dono girls hone ki probability kya hai?",
+    "problem_hg_065": "Ek family mein 2 kids hain. Hume pata hai ki kam se kam ek toh girl hai hi. Toh dono girls hone ki probability find karo. Baaki combinations ko ignore karke condition apply karo.",
+    "gold_answer": "1/3",
+    "gold_answer_num": 0.333333,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: Total sample space for 2 children = {BB, BG, GB, GG}.",
+      "Step 2: Condition 'at least one girl' = {BG, GB, GG}. Total 3 outcomes.",
+      "Step 3: Favorable outcome 'both girls' = {GG}. Total 1 outcome.",
+      "Step 4: Probability = 1/3.",
+      "Final: answer = 1/3"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Using 'baaki' (the rest/remainder) may lead the LLM to misinterpret the sample space reduction or subtract outcomes incorrectly from the total.",
+    "why_hard": "A classic probability puzzle that tests the 'at least' condition versus 'ordered' outcomes.",
+    "tags": [
+      "Children",
+      "Sample Space"
+    ]
+  },
+  {
+    "problem_en": "An instructor has a question bank of 300 easy True/False, 200 difficult True/False, 500 easy MCQ, and 400 difficult MCQ questions. If a question is selected at random, find the probability that it is an easy question given it is an MCQ.",
+    "problem_hi": "एक प्रशिक्षक के पास 300 आसान सही/गलत, 200 कठिन सही/गलत, 500 आसान MCQ और 400 कठिन MCQ प्रश्नों का बैंक है। यदि एक प्रश्न यादृच्छिक रूप से चुना जाता है, तो इसके आसान होने की प्रायिकता ज्ञात कीजिए यदि यह एक MCQ है।",
+    "problem_hg_030": "Question bank mein 300 easy T/F, 200 difficult T/F, 500 easy MCQ, aur 400 difficult MCQ hain. Agar ek question select karein, find the probability ki wo easy hai given it is an MCQ.",
+    "problem_hg_065": "Ek teacher ke paas total bank mein 300 easy T/F aur 200 hard T/F hain. Phir 500 easy MCQ and 400 difficult MCQ add huye. Agar MCQ question pick kiya, toh easy hone ka chance nikaalo. Dono ko correctly categorise karna.",
+    "gold_answer": "5/9",
+    "gold_answer_num": 0.555556,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: Total MCQs = 500 (easy) + 400 (difficult) = 900.",
+      "Step 2: Condition: Question is an MCQ.",
+      "Step 3: Favorable: Question is an easy MCQ = 500.",
+      "Step 4: P(Easy | MCQ) = 500 / 900 = 5/9.",
+      "Final: answer = 5/9"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> The use of 'dono ko' (both together) might lead the LLM to sum categories incorrectly or apply the condition to both T/F and MCQ simultaneously when they should be partitioned.",
+    "why_hard": "Requires extracting data from a multi-attribute table and applying a simple conditional probability ratio.",
+    "tags": [
+      "Tabular Data",
+      "Ratios"
+    ]
+  },
+  {
+    "problem_en": "Three coins are tossed. Find the probability of getting at least two heads given that at least one head occurred.",
+    "problem_hi": "तीन सिक्के उछाले जाते हैं। कम से कम दो चित (heads) आने की प्रायिकता ज्ञात कीजिए, यह देखते हुए कि कम से कम एक चित आया है।",
+    "problem_hg_030": "3 coins toss hote hain. Kam se kam 2 heads aane ki probability find karo given that at least one head aaya hai.",
+    "problem_hg_065": "3 coins ko toss kiya. Hume pata chala ki at least one head toh pakka aaya hai. Ab check karo probability ki kam se kam 2 heads aaye honge. Isme 10 aur log aaye logic mat lagana.",
+    "gold_answer": "4/7",
+    "gold_answer_num": 0.571429,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: Sample space S = {HHH, HHT, HTH, THH, HTT, THT, TTH, TTT}. Total = 8.",
+      "Step 2: Event A (at least 1 head) = S - {TTT} = 7 outcomes.",
+      "Step 3: Event B (at least 2 heads) = {HHH, HHT, HTH, THH} = 4 outcomes.",
+      "Step 4: Since B is a subset of A, Intersection (A and B) = B = 4 outcomes.",
+      "Step 5: P(B|A) = 4/7.",
+      "Final: answer = 4/7"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> This 'additive' trap might cause the LLM to add 10 to the total outcomes or to the numerator, misinterpreting the conversational filler as numerical input.",
+    "why_hard": "Involves two different 'at least' conditions which requires careful subsetting of the sample space.",
+    "tags": [
+      "Coins",
+      "Subsets"
+    ]
+  },
+  {
+    "problem_en": "Two cards are drawn from a pack of 52 cards without replacement. What is the probability that both are aces given that at least one is an ace?",
+    "problem_hi": "52 ताश के पत्तों की एक गड्डी से बिना प्रतिस्थापन के दो कार्ड निकाले जाते हैं। दोनों के इक्का होने की प्रायिकता क्या है यदि कम से कम एक इक्का है?",
+    "problem_hg_030": "52 cards ki pack se 2 cards bina replacement ke nikale. Dono aces hone ki probability kya hai given that kam se kam ek ace hai?",
+    "problem_hg_065": "Deck se 2 cards withdraw kar liya N mahine baad... nahi, cards withdraw kiye replacement ke bina. Agar ek toh ace hai hi, toh dono aces hone ka chance kya hai?",
+    "gold_answer": "1/33",
+    "gold_answer_num": 0.030303,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: Total ways to pick 2 cards = 52C2 = (5251)/2 = 1326.",
+      "Step 2: Ways to pick 0 aces = 48C2 = (4847)/2 = 1128.",
+      "Step 3: Ways to pick at least one ace = 1326 - 1128 = 198.",
+      "Step 4: Ways to pick exactly two aces = 4C2 = 6.",
+      "Step 5: P(Both Aces | At least one Ace) = 6 / 198 = 1/33.",
+      "Final: answer = 1/33"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> The 'timing' trap might confuse the LLM into thinking time is a factor in the probability or that 'N' represents a missing variable, despite it being a distractor.",
+    "why_hard": "Involves combination calculations for large sample spaces and a specific condition.",
+    "tags": [
+      "Cards",
+      "Combinations"
+    ]
+  },
+  {
+    "problem_en": "A box contains 10 coins, one is two-headed and the others are fair. A coin is chosen at random and tossed. If it shows heads, what is the probability that it is the two-headed coin?",
+    "problem_hi": "एक बक्से में 10 सिक्के हैं, एक के दोनों तरफ चित (heads) है और बाकी निष्पक्ष हैं। एक सिक्का यादृच्छिक रूप से चुना जाता है और उछाला जाता है। यदि यह चित दिखाता है, तो इसकी क्या प्रायिकता है कि यह दो-सिर वाला सिक्का है?",
+    "problem_hg_030": "Box mein 10 coins hain, ek two-headed hai aur baaki fair. Ek coin toss kiya aur heads aaya, toh probability find karo ki wo two-headed coin tha.",
+    "problem_hg_065": "Ek box mein 10 सिक्के हैं. Ek coin 2-headed hai aur baaki normal. Random toss pe heads aaya. Check karo probability ki wahi 2-headed wala tha. Baaki fair coins ka impact consider karna.",
+    "gold_answer": "2/11",
+    "gold_answer_num": 0.181818,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: P(2H) = 1/10; P(Fair) = 9/10.",
+      "Step 2: P(H | 2H) = 1; P(H | Fair) = 1/2.",
+      "Step 3: P(H) = (1/10 * 1) + (9/10 * 1/2) = 1/10 + 9/20 = 11/20.",
+      "Step 4: P(2H | H) = (1/10 * 1) / (11/20) = (1/10) / (11/20) = 2/11.",
+      "Final: answer = 2/11"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Using 'baaki' here to describe fair coins might lead the LLM to focus on the remainder (9/10) incorrectly in the ratio or ignore the subtraction from the total set.",
+    "why_hard": "Standard Bayes' theorem problem with asymmetric likelihoods.",
+    "tags": [
+      "Coins",
+      "Bayes Theorem"
+    ]
+  },
+  {
+    "problem_en": "A student takes a test consisting of multiple choice questions. For a question, he either knows the answer or guesses. The probability he knows the answer is 3/4 and the probability he guesses is 1/4. Assuming that a student who guesses has a probability of 1/4 of answering correctly. What is the probability that the student knows the answer given that he answered correctly?",
+    "problem_hi": "एक छात्र एक बहुविकल्पीय परीक्षा देता है। एक प्रश्न के लिए, या तो वह उत्तर जानता है या अनुमान लगाता है। उत्तर जानने की प्रायिकता 3/4 है और अनुमान लगाने की प्रायिकता 1/4 है। यह मानते हुए कि अनुमान लगाने वाले छात्र के सही उत्तर देने की प्रायिकता 1/4 है। यदि उसने सही उत्तर दिया है, तो छात्र को उत्तर पता होने की प्रायिकता क्या है?",
+    "problem_hg_030": "Student knows answer (3/4) or guesses (1/4). Agar wo guess karta hai, correct answer ki probability 1/4 hai. Find probability he knows the answer given he answered correctly.",
+    "problem_hg_065": "Test mein student ko answer pata hone ka chance 3/4 hai. Agar nahi pata toh guess karega (1/4). Guess pe correct hone ka chance standard se A se 20% zyada toh nahi par 1/4 hai. Agar answer sahi nikla, knowledge ki probability kya hogi?",
+    "gold_answer": "12/13",
+    "gold_answer_num": 0.923077,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: P(Know) = 3/4; P(Guess) = 1/4.",
+      "Step 2: P(Correct | Know) = 1; P(Correct | Guess) = 1/4.",
+      "Step 3: P(Correct) = (3/4 * 1) + (1/4 * 1/4) = 3/4 + 1/16 = 13/16.",
+      "Step 4: P(Know | Correct) = (3/4 * 1) / (13/16) = (12/16) / (13/16) = 12/13.",
+      "Final: answer = 12/13"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> The LLM might try to calculate 20% of 1/4 or 3/4, adding a layer of unnecessary calculation that deviates from the provided numbers.",
+    "why_hard": "A classic example of Bayes' Theorem with high knowledge probability versus low guessing success.",
+    "tags": [
+      "Bayes Theorem",
+      "Education"
+    ]
+  },
+  {
+    "problem_en": "In a factory, machines A and B produce 60% and 40% of the total output. 2% of the output of machine A and 1% of machine B is defective. If an item is chosen at random and found to be defective, what is the probability it was produced by machine B?",
+    "problem_hi": "एक कारखाने में, मशीनें A और B कुल उत्पादन का 60% और 40% उत्पादन करती हैं। मशीन A का 2% और मशीन B का 1% दोषपूर्ण है। यदि एक आइटम यादृच्छिक रूप से चुना जाता है और दोषपूर्ण पाया जाता है, तो इसकी क्या प्रायिकता है कि यह मशीन B द्वारा बनाया गया था?",
+    "problem_hg_030": "Factory mein Machine A 60% aur B 40% produce karti hai. A ke 2% defective aur B ke 1% defective hain. Agar item defective hai, probability find karo ki wo B se tha.",
+    "problem_hg_065": "Factory mein output total 3 lakh 75 hazaar ho ya kuch bhi, Machine A 60% aur B 40% produce karti hai. Defective rate A ka 2% aur B ka 1% hai. Picked item defective mila, toh B machine se hone ki probability kya hai?",
+    "gold_answer": "1/4",
+    "gold_answer_num": 0.25,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: P(A) = 0.6; P(B) = 0.4.",
+      "Step 2: P(D | A) = 0.02; P(D | B) = 0.01.",
+      "Step 3: P(D) = (0.6 * 0.02) + (0.4 * 0.01) = 0.012 + 0.004 = 0.016.",
+      "Step 4: P(B | D) = (0.4 * 0.01) / 0.016 = 0.004 / 0.016 = 1/4.",
+      "Final: answer = 1/4"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> The LLM might try to use this large number as the total production volume, which might lead to rounding errors or unnecessary large-number arithmetic.",
+    "why_hard": "Requires percentage-to-decimal conversion and careful application of Bayes' Theorem.",
+    "tags": [
+      "Factory",
+      "Defectives"
+    ]
+  },
+  {
+    "problem_en": "A card from a pack of 52 cards is lost. From the remaining cards, two cards are drawn and found to be hearts. Find the probability that the lost card was a heart.",
+    "problem_hi": "52 ताश के पत्तों की एक गड्डी से एक कार्ड खो गया है। शेष पत्तों में से, दो कार्ड निकाले जाते हैं और वे पान के (hearts) पाए जाते हैं। इसकी प्रायिकता ज्ञात कीजिए कि खोया हुआ कार्ड पान का था।",
+    "problem_hg_030": "52 cards mein se ek lost ho gaya. Baaki mein se 2 hearts nikle. Find the probability ki lost card heart tha.",
+    "problem_hg_065": "52 cards ki deck se ek card gum ho gaya. Ab baaki jo cards bache, unme se 2 cards nikale aur dono hearts nikle. Probability batao ki jo lost card tha, wahi heart tha.",
+    "gold_answer": "11/50",
+    "gold_answer_num": 0.22,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: Let E1 = Lost card is heart (P(E1) = 13/52 = 1/4); E2 = Lost card is not heart (P(E2) = 39/52 = 3/4).",
+      "Step 2: Let A = Drawing 2 hearts from remaining 51 cards.",
+      "Step 3: P(A | E1) = 12C2 / 51C2 = (1211)/(5150) = 132 / 2550.",
+      "Step 4: P(A | E2) = 13C2 / 51C2 = (1312)/(51*50) = 156 / 2550.",
+      "Step 5: P(E1 | A) = (1/4 * 132/2550) / [(1/4 * 132/2550) + (3/4 * 156/2550)] = 132 / (132 + 468) = 132 / 600 = 11/50.",
+      "Final: answer = 11/50"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Using 'baaki' twice (remaining cards and remainder of logic) might lead the LLM to miscount the available hearts after the loss.",
+    "why_hard": "A complex problem where the 'event' depends on an unknown 'lost' parameter, requiring a large ratio calculation.",
+    "tags": [
+      "Cards",
+      "Lost Item"
+    ]
+  },
+  {
+    "problem_en": "Two people A and B throw a pair of dice alternately until one gets a total of 7 and wins the game. If A starts the game, find the probability that A wins.",
+    "problem_hi": "दो लोग A और B पासे के एक जोड़े को बारी-बारी से तब तक फेंकते हैं जब तक कि किसी को कुल 7 न मिल जाए और वह खेल जीत न जाए। यदि A खेल शुरू करता है, तो A के जीतने की प्रायिकता ज्ञात कीजिए।",
+    "problem_hg_030": "A aur B pair of dice alternately throw karte hain till one gets 7. If A starts, find probability ki A wins.",
+    "problem_hg_065": "A and B alternate turn pe pair of dice throw kar rahe hain. Jiska pehle sum 7 aaya wo win karega. A ne start kiya. Probability nikaalo A ki winning ki. 6 mahine baad result ka wait nahi karna, sequence check karo.",
+    "gold_answer": "6/11",
+    "gold_answer_num": 0.545455,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: Probability of getting 7 (S=7) is 6/36 = 1/6 (Events: 1-6, 2-5, 3-4, 4-3, 5-2, 6-1).",
+      "Step 2: P(win in one turn) p = 1/6; P(not win) q = 5/6.",
+      "Step 3: A can win on 1st, 3rd, 5th... turn. P(A wins) = p + q^2p + q^4p + ...",
+      "Step 4: This is an infinite GP with a = 1/6 and r = q^2 = 25/36. Sum = (1/6) / (1 - 25/36) = (1/6) / (11/36) = 6/11.",
+      "Final: answer = 6/11"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> The 'annual rate' vs 'time' trap might suggest a temporal decay or an interest calculation instead of an infinite geometric series.",
+    "why_hard": "Requires setting up and summing an infinite geometric progression within a probability framework.",
+    "tags": [
+      "Dice",
+      "Infinite Series"
+    ]
+  },
+  {
+    "problem_en": "A man is known to speak truth 3 out of 4 times. He throws a die and reports that it is a six. Find the probability that it is actually a six.",
+    "problem_hi": "एक आदमी के बारे में जाना जाता है कि वह 4 में से 3 बार सच बोलता है। वह एक पासा फेंकता है और रिपोर्ट करता है कि यह छह है। इसकी प्रायिकता ज्ञात कीजिए कि यह वास्तव में छह है।",
+    "problem_hg_030": "Ek man 4 mein se 3 baar sach bolta hai. Usne die throw kiya aur bola '6 aaya'. Probability kya hai ki actually 6 hi tha?",
+    "problem_hg_065": "Insaan 4 out of 3 times truth bolta hai... wait, 3 out of 4 times truth bolta hai. Usne kaha ki die pe 6 aaya hai. Probability find karo ki sach mein 6 hi hai. Dono cases (Sach aur Jhoot) consider karo.",
+    "gold_answer": "3/8",
+    "gold_answer_num": 0.375,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: P(Truth) = 3/4; P(Lie) = 1/4.",
+      "Step 2: P(Reports 6 | Actually 6) = 3/4; P(Reports 6 | Not 6) = 1/4 * 1/5 = 1/20. Wait, if he lies, he must report 6 when it is NOT 6. Probability it is NOT 6 is 5/6. If it is not 6, and he reports 6, it is a specific lie.",
+      "Step 3: Correct Bayes: P(Actually 6 | Reports 6) = P(R6|A6)P(A6) / [P(R6|A6)P(A6) + P(R6|Not6)P(Not6)].",
+      "Step 4: P(A6) = 1/6; P(Not6) = 5/6. P(R6|A6) = 3/4. P(R6|Not6) = 1/4 (because if it's not 6 and he lies, he says it is 6).",
+      "Step 5: Probability = (3/4 * 1/6) / [(3/4 * 1/6) + (1/4 * 5/6)] = (3/24) / (3/24 + 5/24) = 3/8.",
+      "Final: answer = 3/8"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> The LLM might apply the '3 out of 4' probability to both outcomes (6 and not 6) in a way that violates the complement rule or fails to weight them by the die's probabilities.",
+    "why_hard": "Often misleads students into forgetting the base rate of the die itself (1/6).",
+    "tags": [
+      "Truth/Lie",
+      "Die"
+    ]
+  },
+  {
+    "problem_en": "Suppose 5% of men and 0.25% of women have grey hair. A grey haired person is selected at random. What is the probability of this person being male? Assume there are equal number of males and females.",
+    "problem_hi": "मान लीजिए कि 5% पुरुषों और 0.25% महिलाओं के बाल सफेद (grey) हैं। एक सफेद बालों वाले व्यक्ति को यादृच्छिक रूप से चुना जाता है। इस व्यक्ति के पुरुष होने की प्रायिकता क्या है? मान लीजिए कि पुरुषों और महिलाओं की संख्या समान है।",
+    "problem_hg_030": "Suppose 5% men and 0.25% women have grey hair. Grey haired person select kiya. Probability find karo ki wo male hai. Men and women equal number mein hain.",
+    "problem_hg_065": "Population mein 5% men aur 0.25% women ke baal grey hain. Ek grey-haired person pick kiya. Male hone ka chance batao. Pehle karo gender distribution check phir logic apply karo.",
+    "gold_answer": "20/21",
+    "gold_answer_num": 0.952381,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: P(Male) = P(Female) = 0.5.",
+      "Step 2: P(Grey | Male) = 0.05; P(Grey | Female) = 0.0025.",
+      "Step 3: P(Grey) = (0.5 * 0.05) + (0.5 * 0.0025) = 0.025 + 0.00125 = 0.02625.",
+      "Step 4: P(Male | Grey) = 0.025 / 0.02625 = 2500 / 2625 = 20/21.",
+      "Final: answer = 20/21"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> This might cause the LLM to calculate the gender probability separately and fail to integrate them into the joint probability required for Bayes.",
+    "why_hard": "Requires handling small decimal percentages (0.25%) and equal prior probabilities correctly.",
+    "tags": [
+      "Demographics",
+      "Percentages"
+    ]
+  },
+  {
+    "problem_en": "If A and B are two events such that P(A) = 1/2, P(B) = 1/3 and P(A ∩ B) = 1/4, find P(A'|B').",
+    "problem_hi": "यदि A और B दो घटनाएँ ऐसी हैं कि P(A) = 1/2, P(B) = 1/3 और P(A ∩ B) = 1/4 है, तो P(A'|B') ज्ञात कीजिए।",
+    "problem_hg_030": "Agar A aur B events hain with P(A) = 1/2, P(B) = 1/3 and P(A ∩ B) = 1/4, find P(A'|B').",
+    "problem_hg_065": "Events A aur B ke liye P(A)=1/2, P(B)=1/3, P(A ∩ B)=1/4 diya hai. Find P(A'|B'). Isme na intersection se na union se divisible hone ka check nahi hai, direct formula lagao.",
+    "gold_answer": "5/8",
+    "gold_answer_num": 0.625,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: P(A' | B') = P(A' ∩ B') / P(B').",
+      "Step 2: P(B') = 1 - P(B) = 1 - 1/3 = 2/3.",
+      "Step 3: P(A' ∩ B') = P((A ∪ B)') = 1 - P(A ∪ B).",
+      "Step 4: P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 1/2 + 1/3 - 1/4 = 6/12 + 4/12 - 3/12 = 7/12.",
+      "Step 5: P(A' ∩ B') = 1 - 7/12 = 5/12.",
+      "Step 6: P(A' | B') = (5/12) / (2/3) = (5/12) * (3/2) = 5/8.",
+      "Final: answer = 5/8"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> The LLM might mistakenly look for divisibility patterns in the fractions or think A' ∩ B' means 'not divisible by A or B' in a number-theoretic sense.",
+    "why_hard": "Requires applying De Morgan's Laws and conditional probability identities together.",
+    "tags": [
+      "De Morgan's Laws",
+      "Identities"
+    ]
+  },
+  {
+    "problem_en": "A bag contains 3 red and 7 black balls. Two balls are drawn at random without replacement. If the second ball is red, what is the probability that the first ball is also red?",
+    "problem_hi": "एक झोले में 3 लाल और 7 काली गेंदें हैं। बिना प्रतिस्थापन के दो गेंदें यादृच्छिक रूप से निकाली जाती हैं। यदि दूसरी गेंद लाल है, तो इसकी क्या प्रायिकता है कि पहली गेंद भी लाल थी?",
+    "problem_hg_030": "Bag mein 3 red aur 7 black balls hain. 2 balls randomly withdraw kiye without replacement. Agar second ball red hai, toh first ball red hone ki probability find karo.",
+    "problem_hg_065": "Bag mein 3 red aur 7 black balls hain. Bina replacement ke 2 balls withdraw kar liya N mahine baad... nahi, just 2 balls nikali. Agar second ball red dikhi, toh probability nikaalo ki first one also red thi.",
+    "gold_answer": "2/9",
+    "gold_answer_num": 0.222222,
+    "unit": "dimensionless",
+    "topic": "Probability",
+    "difficulty": "JEE-Main",
+    "source_type": "conditional_probability",
+    "solution_steps_en": [
+      "Step 1: P(R1) = 3/10; P(B1) = 7/10.",
+      "Step 2: P(R2 | R1) = 2/9; P(R2 | B1) = 3/9.",
+      "Step 3: P(R2) = (3/10 * 2/9) + (7/10 * 3/9) = 6/90 + 21/90 = 27/90 = 3/10.",
+      "Step 4: P(R1 | R2) = (3/10 * 2/9) / (3/10) = 2/9.",
+      "Final: answer = 2/9"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> A distractor suggesting a rate-based problem which might lead the LLM to apply a decay function or ignore the 'without replacement' constraint.",
+    "why_hard": "Requires Bayes' theorem where the 'evidence' is the second draw, which is counter-intuitive for some models.",
+    "tags": [
+      "Bags and Balls",
+      "Bayes Theorem"
+    ]
+  }
+]

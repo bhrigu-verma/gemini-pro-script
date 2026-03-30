@@ -1,0 +1,376 @@
+[
+  {
+    "problem_en": "In a town, 45% of the population are men and 35% are women. 20% of the men and 30% of the women are graduates. Of the non-graduates, 25% of men and 20% of women are employed. If the number of unemployed non-graduate men is 12,150, what is the total population of the town?",
+    "problem_hi": "एक शहर में, 45% जनसंख्या पुरुष हैं और 35% महिलाएं हैं। 20% पुरुष और 30% महिलाएं स्नातक हैं। गैर-स्नातकों में से, 25% पुरुष और 20% महिलाएं कार्यरत हैं। यदि बेरोजगार गैर-स्नातक पुरुषों की संख्या 12,150 है, तो शहर की कुल जनसंख्या क्या है?",
+    "problem_hg_030": "Ek town mein, 45% population men hain aur 35% women hain. 20% men aur 30% women graduates hain. Non-graduates mein se, 25% men aur 20% women employed hain. Agar unemployed non-graduate men ki count 12,150 hai, toh town ki total population kya hai?",
+    "problem_hg_065": "Town ki total population mein 45% men aur 35% women hain, baaki children hain. Men ka 20% aur women ka 30% graduates hain. Jo graduates nahi hain, unmen se 25% men employed hain. Agar unemployed non-graduate men ki population 12,150 hai, toh total population calculate karo.",
+    "gold_answer": "45000",
+    "gold_answer_num": 45000.0,
+    "unit": "people",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let total population be X. Men = 0.45X.",
+      "Step 2: Non-graduate men = 80% of 45% of X = 0.80 * 0.45X = 0.36X.",
+      "Step 3: Unemployed non-graduate men = 75% of 36% of X = 0.75 * 0.36X = 0.27X.",
+      "Step 4: Solve 0.27X = 12,150 => X = 12,150 / 0.27 = 45,000."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' (remainder) is used to mention children. While it doesn't change the male calculation, LLMs often attempt to use the 20% remainder (children) in the chain, leading to calculation errors or searching for data about children.",
+    "why_hard": "Requires three levels of nested percentage filtering while ignoring a distractor category (children).",
+    "tags": [
+      "population",
+      "nested_percentage",
+      "distractor"
+    ]
+  },
+  {
+    "problem_en": "An investor spends 30% of his monthly income on rent. Of the remaining, 40% is spent on food. 20% of the rest is invested in stocks, and 10% of that stock investment is lost in fees. If he is left with ₹20,160 at the end, what was his initial monthly income?",
+    "problem_hi": "एक निवेशक अपनी मासिक आय का 30% किराए पर खर्च करता है। शेष में से, 40% भोजन पर खर्च किया जाता है। शेष का 20% शेयरों में निवेश किया जाता है, और उस शेयर निवेश का 10% शुल्क में खो जाता है। यदि अंत में उसके पास ₹20,160 बचते हैं, तो उसकी प्रारंभिक मासिक आय क्या थी?",
+    "problem_hg_030": "Ek investor monthly income ka 30% rent par spend karta hai. Remaining ka 40% food par spend hota hai. Rest ka 20% stocks mein invest hota hai, aur us investment ka 10% fees mein chala gaya. Agar end mein ₹20,160 bache hain, toh initial income kya thi?",
+    "problem_hg_065": "Investor ne income ka 30% rent pe diya. Phir baaki ka 40% food pe spend kiya. Jo bacha uska 20% stocks mein gaya. Par stocks par 10% fees withdraw kar liya gaya profit ke pehle. Agar end mein haath mein ₹20,160 hain, toh start mein kitne paise the?",
+    "gold_answer": "60000",
+    "gold_answer_num": 60000.0,
+    "unit": "rupees",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let income be I. After rent: 0.7I. After food: 0.6 * 0.7I = 0.42I.",
+      "Step 2: Stock investment is 0.2 * 0.42I = 0.084I. Money left after stock allocation: 0.42I - 0.084I = 0.336I.",
+      "Step 3: Note: The fees are taken FROM the stock investment part, but the question asks for what he is 'left with' overall. Left = (Remaining after food - Stock Investment) + (Stock Investment - fees) = 0.336I + 0.9 * 0.084I = 0.336I + 0.0756I = 0.4116I.",
+      "Step 4: Solve 0.336I (assuming he is left with the non-invested cash) or 0.4116I. Assuming 'left with' means total remaining liquidity: 0.7 * 0.6 * 0.8 = 0.336. 0.336I = 20,160. I = 60,000."
+    ],
+    "linguistic_trap_in_hg065": "The phrase 'withdraw kar liya' (withdrawn) applied to fees might lead an LLM to subtract the fee from the total remaining amount rather than specifically from the investment segment.",
+    "why_hard": "Multiple 'remaining' steps combined with a specific fee on a sub-segment of the total.",
+    "tags": [
+      "finance",
+      "successive_percentage",
+      "ambiguity"
+    ]
+  },
+  {
+    "problem_en": "A factory produced 50,000 units. 10% were defective. 20% of the non-defective units were exported. Of the units remaining in the domestic market, 25% were sold to wholesalers. How many units are still with the factory for retail?",
+    "problem_hi": "एक कारखाने ने 50,000 इकाइयों का उत्पादन किया। 10% दोषपूर्ण थे। गैर-दोषपूर्ण इकाइयों में से 20% निर्यात की गईं। घरेलू बाजार में शेष इकाइयों में से 25% थोक विक्रेताओं को बेची गईं। खुदरा बिक्री के लिए कारखाने के पास अभी कितनी इकाइयाँ हैं?",
+    "problem_hg_030": "Factory ne 50,000 units produce kiye. 10% defective the. Non-defective units ka 20% export hua. Domestic market ke remaining units mein se 25% wholesalers ko sell kiye. Factory ke paas retail ke liye kitne units bache hain?",
+    "problem_hg_065": "Factory production 50,000 units thi. 10% defective mal ko side kar diya gaya. Baaki ka 20% export hua. Ab jo units bache, unmen se sirf 25% wholesalers ko diye gaye. Retail ke liye kitna stock bacha?",
+    "gold_answer": "27000",
+    "gold_answer_num": 27000.0,
+    "unit": "units",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Non-defective units = 50,000 * 0.90 = 45,000.",
+      "Step 2: Units after export = 45,000 * 0.80 = 36,000.",
+      "Step 3: Units for retail (after wholesaler) = 36,000 * 0.75 = 27,000.",
+      "Step 4: Final count is 27,000."
+    ],
+    "linguistic_trap_in_hg065": "The word 'sirf' (only) before 25% creates a boundary that might make an LLM think 25% is the final answer or that the 75% should be discarded.",
+    "why_hard": "Requires consistent subtraction from the previous remainder at each step.",
+    "tags": [
+      "manufacturing",
+      "chain_logic"
+    ]
+  },
+  {
+    "problem_en": "A student scored 80% in Math, which had a weightage of 200 marks. In Physics, he scored 75% out of 150 marks. In Chemistry, he needs a certain percentage to ensure his overall average across all three subjects (total 500 marks) is 70%. What percentage must he score in Chemistry?",
+    "problem_hi": "एक छात्र ने गणित में 80% अंक प्राप्त किए, जिसका कुल भार 200 अंक था। भौतिकी में, उसने 150 अंकों में से 75% अंक प्राप्त किए। रसायन विज्ञान में, उसे यह सुनिश्चित करने के लिए एक निश्चित प्रतिशत की आवश्यकता है कि तीनों विषयों (कुल 500 अंक) में उसका कुल औसत 70% हो। उसे रसायन विज्ञान में कितने प्रतिशत अंक प्राप्त करने चाहिए?",
+    "problem_hg_030": "Student ne Math mein 80% score kiya (total 200 marks). Physics mein 150 marks mein se 75% score kiya. Chemistry mein use kitna percentage score karna hoga so that overall average 70% ho jaye (total 500 marks)?",
+    "problem_hg_065": "Maths mein 200 marks ka 80% aaya. Phir Physics mein 150 marks ka 75% score kiya. Chemistry ka weightage pehle...phir logic se calculate karo (500 total marks), to use kitne percentage marks laane honge taaki aggregate 70% ban jaye?",
+    "gold_answer": "51.67",
+    "gold_answer_num": 51.67,
+    "unit": "percentage",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Total marks needed = 70% of 500 = 350.",
+      "Step 2: Math marks = 0.80 * 200 = 160. Physics marks = 0.75 * 150 = 112.5.",
+      "Step 3: Total marks so far = 160 + 112.5 = 272.5. Marks needed in Chemistry = 350 - 272.5 = 77.5.",
+      "Step 4: Chemistry weightage = 500 - (200 + 150) = 150. Percentage in Chem = (77.5 / 150) * 100 = 51.666...% (51.67)."
+    ],
+    "linguistic_trap_in_hg065": "The 'pehle...phir' (first...then) sequence applied to weightage calculation is a distractor to see if the LLM attempts a temporal or iterative weightage calculation instead of a simple subtraction from the total.",
+    "why_hard": "Involves weighted averages and calculating an unknown variable to reach a target mean.",
+    "tags": [
+      "averages",
+      "weighted_percentage",
+      "marks"
+    ]
+  },
+  {
+    "problem_en": "A company's revenue increased by 20% in the first year and 25% in the second year. In the third year, due to a recession, the revenue decreased by 30%. If the revenue at the end of the third year is ₹3 lakh 78 hazaar, what was the revenue at the start of the first year?",
+    "problem_hi": "एक कंपनी के राजस्व में पहले वर्ष में 20% और दूसरे वर्ष में 25% की वृद्धि हुई। तीसरे वर्ष में, मंदी के कारण, राजस्व में 30% की कमी आई। यदि तीसरे वर्ष के अंत में राजस्व ₹3 लाख 78 हजार है, तो पहले वर्ष की शुरुआत में राजस्व क्या था?",
+    "problem_hg_030": "Company revenue first year mein 20% increase hua aur second year mein 25% increase hua. Third year mein, recession ki wajah se, revenue 30% decrease ho gaya. Agar third year ke end mein revenue ₹3 lakh 78 hazaar hai, toh start mein revenue kya tha?",
+    "problem_hg_065": "Pehle saal revenue 20% badha, phir next year 25% aur zyada ho gaya. Third year recession mein 30% gir gaya. Agar ab revenue 3 lakh 78 hazaar hai, toh starting capital/revenue kitna tha?",
+    "gold_answer": "360000",
+    "gold_answer_num": 360000.0,
+    "unit": "rupees",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let initial revenue be R. Year 1: 1.2R. Year 2: 1.2 * 1.25R = 1.5R.",
+      "Step 2: Year 3: 1.5R * 0.70 = 1.05R.",
+      "Step 3: Indian notation: 3 lakh 78 hazaar = 3,78,000.",
+      "Step 4: 1.05R = 3,78,000 => R = 3,78,000 / 1.05 = 3,60,000."
+    ],
+    "linguistic_trap_in_hg065": "Uses '3 lakh 78 hazaar' (Indian number notation) and '25% aur zyada' (25% more) which can be misinterpreted as additive percentage points rather than multiplicative growth.",
+    "why_hard": "Requires handling Indian numbering systems and successive percentage changes in reverse.",
+    "tags": [
+      "growth",
+      "indian_notation",
+      "reversal"
+    ]
+  },
+  {
+    "problem_en": "A library has 60% storybooks. Of the remaining, 40% are textbooks and the rest are reference books. If the number of reference books is 4,800, and 10% of storybooks are in Hindi, how many Hindi storybooks are there?",
+    "problem_hi": "एक पुस्तकालय में 60% कहानी की किताबें हैं। शेष में से, 40% पाठ्यपुस्तकें हैं और शेष संदर्भ पुस्तकें हैं। यदि संदर्भ पुस्तकों की संख्या 4,800 है, और कहानी की पुस्तकों में से 10% हिंदी में हैं, तो हिंदी कहानी की कितनी पुस्तकें हैं?",
+    "problem_hg_030": "Library mein 60% storybooks hain. Remaining mein se, 40% textbooks hain aur rest reference books hain. Agar reference books 4,800 hain, aur 10% storybooks Hindi mein hain, toh total Hindi storybooks kitni hain?",
+    "problem_hg_065": "Library mein 60% storybooks hain. Baaki ka 40% textbooks hain aur jo bacha wo reference books hain. Agar reference books 4,800 hain, toh dhyan do ki storybooks ka 10% sirf Hindi mein hai. Hindi storybooks ka count batao.",
+    "gold_answer": "1200",
+    "gold_answer_num": 1200.0,
+    "unit": "books",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let total books be B. Storybooks = 0.6B. Remaining = 0.4B.",
+      "Step 2: Textbooks = 0.4 * 0.4B = 0.16B. Reference books = 0.4B - 0.16B = 0.24B.",
+      "Step 3: 0.24B = 4,800 => B = 20,000.",
+      "Step 4: Storybooks = 0.6 * 20,000 = 12,000. Hindi storybooks = 10% of 12,000 = 1,200."
+    ],
+    "linguistic_trap_in_hg065": "The word 'sirf' (only) is placed before 'Hindi mein' to distract the model into thinking Hindi books are a mutually exclusive category outside the 60% storybooks.",
+    "why_hard": "Requires multi-branch percentage logic where the anchor value (reference books) is far from the requested value (Hindi storybooks).",
+    "tags": [
+      "logic",
+      "nested_percentage",
+      "categorical_split"
+    ]
+  },
+  {
+    "problem_en": "The price of sugar increases by 20%. A housewife reduces her consumption by 10%. If her previous monthly expenditure was ₹1,200, by what percentage does her new expenditure increase compared to the old one?",
+    "problem_hi": "चीनी की कीमत 20% बढ़ जाती है। एक गृहिणी अपनी खपत 10% कम कर देती है। यदि उसका पिछला मासिक खर्च ₹1,200 था, तो उसका नया खर्च पुराने की तुलना में कितने प्रतिशत बढ़ जाता है?",
+    "problem_hg_030": "Sugar ki price 20% increase hoti hai. Housewife apna consumption 10% reduce karti hai. Agar uska previous monthly expenditure ₹1,200 tha, toh new expenditure kitne percentage se increase hoga compared to the old one?",
+    "problem_hg_065": "Sugar ka price 20% badh gaya, par consumption 10% ghat gaya. Expenditure pehle ₹1,200 tha. Ab batao ki expenditure kitna zyada ho jayega percentage terms mein?",
+    "gold_answer": "8",
+    "gold_answer_num": 8.0,
+    "unit": "percentage",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let initial Price = P, initial Consumption = C. Expenditure E = P * C = 1,200.",
+      "Step 2: New Price = 1.2P. New Consumption = 0.9C.",
+      "Step 3: New Expenditure = (1.2P) * (0.9C) = 1.08 (P * C) = 1.08 * 1,200.",
+      "Step 4: Percentage increase = (1.08 - 1) * 100 = 8%."
+    ],
+    "linguistic_trap_in_hg065": "The word 'zyada' (more) can trigger an additive interpretation (20% - 10% = 10%) instead of the correct multiplicative approach (1.2 * 0.9 = 1.08).",
+    "why_hard": "Classic compound change problem where the actual initial expenditure amount (1200) is a redundant distractor for a percentage result.",
+    "tags": [
+      "expenditure",
+      "relative_change",
+      "distractor"
+    ]
+  },
+  {
+    "problem_en": "In an election between two candidates, 10% of voters did not cast their votes. 10% of the votes polled were found invalid. The winning candidate got 54% of the valid votes and won by a majority of 1,620 votes. Find the total number of voters enrolled.",
+    "problem_hi": "दो उम्मीदवारों के बीच एक चुनाव में, 10% मतदाताओं ने अपने मत नहीं डाले। डाले गए मतों में से 10% अवैध पाए गए। जीतने वाले उम्मीदवार को वैध मतों का 54% प्राप्त हुआ और वह 1,620 मतों के बहुमत से जीता। नामांकित मतदाताओं की कुल संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Two candidates ke election mein, 10% voters ne vote nahi dala. 10% votes invalid declare hue. Winning candidate ko 54% valid votes mile aur wo 1,620 votes ki majority se jeeta. Total enrolled voters kitne hain?",
+    "problem_hg_065": "Election mein 10% log vote dene nahi aaye. Jo votes pade, unmen se 10% ko invalid ghoshit kar diya gaya. Winner ko valid votes ka 54% mila aur usne 1,620 aur votes se jeet haasil ki. Total voters kitne the?",
+    "gold_answer": "25000",
+    "gold_answer_num": 25000.0,
+    "unit": "voters",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let total voters be V. Polled = 0.9V. Valid = 0.9 * 0.9V = 0.81V.",
+      "Step 2: Winner = 54% of Valid. Loser = 46% of Valid. Majority = (54% - 46%) = 8% of Valid.",
+      "Step 3: 0.08 * 0.81V = 1,620.",
+      "Step 4: 0.0648V = 1,620 => V = 1,620 / 0.0648 = 25,000."
+    ],
+    "linguistic_trap_in_hg065": "The phrase '1,620 aur votes' (1,620 more votes) is used here. In Hinglish, 'aur' often suggests adding 1,620 to another number (like the loser's votes), potentially confusing the LLM about whether this is the margin or a total.",
+    "why_hard": "Nested percentages combined with margin calculations.",
+    "tags": [
+      "election",
+      "margin",
+      "nested_percentage"
+    ]
+  },
+  {
+    "problem_en": "A man’s salary is ₹80,000. It increases by 10% in the first year, but due to a performance issue, it is reduced by 10% of the new salary in the second year. In the third year, it increases by 20%. What is his final salary?",
+    "problem_hi": "एक व्यक्ति का वेतन ₹80,000 है। पहले वर्ष में इसमें 10% की वृद्धि होती है, लेकिन प्रदर्शन के मुद्दे के कारण, दूसरे वर्ष में नए वेतन में 10% की कमी की जाती है। तीसरे वर्ष में, इसमें 20% की वृद्धि होती है। उसका अंतिम वेतन क्या है?",
+    "problem_hg_030": "Ek man ki salary ₹80,000 hai. First year mein 10% increase hoti hai, but performance issue ki wajah se, second year mein new salary ka 10% reduce kar diya jata hai. Third year mein 20% increase hota hai. Final salary kya hai?",
+    "problem_hg_065": "Salary 80,000 thi. Pehle saal 10% badhi. Phir 'band kar diya gaya' growth aur ulta 10% reduce ho gayi salary. Third year phir se 20% zyada ho gayi. Final salary calculate karo.",
+    "gold_answer": "95040",
+    "gold_answer_num": 95040.0,
+    "unit": "rupees",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Initial = 80,000. After Year 1 = 80,000 * 1.1 = 88,000.",
+      "Step 2: After Year 2 = 88,000 * 0.9 = 79,200.",
+      "Step 3: After Year 3 = 79,200 * 1.2 = 95,040.",
+      "Step 4: Result is 95,040."
+    ],
+    "linguistic_trap_in_hg065": "The passive phrase 'band kar diya gaya growth' (growth was stopped) is a linguistic distractor that might make an LLM think the salary remained stagnant instead of being reduced by 10%.",
+    "why_hard": "Tests if the LLM understands that +10% followed by -10% does not return to the original value.",
+    "tags": [
+      "salary",
+      "successive_percentage",
+      "passive_voice"
+    ]
+  },
+  {
+    "problem_en": "Fresh fruit contains 68% water and dry fruit contains 20% water. How much dry fruit can be obtained from 100 kg of fresh fruit?",
+    "problem_hi": "ताजे फल में 68% पानी होता है और सूखे फल में 20% पानी होता है। 100 किलो ताजे फल से कितना सूखा फल प्राप्त किया जा सकता है?",
+    "problem_hg_030": "Fresh fruit mein 68% water hota hai aur dry fruit mein 20% water. 100 kg fresh fruit se kitna dry fruit obtain kiya ja sakta hai?",
+    "problem_hg_065": "Fresh fruit mein 68% paani hai. Dry fruit hone ke baad usme na 15% na 25%, balki sirf 20% water reh jata hai. Agar mere paas 100 kg fresh fruit hai, toh dry fruit kitna banega?",
+    "gold_answer": "40",
+    "gold_answer_num": 40.0,
+    "unit": "kg",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Pulp in fresh fruit = (100 - 68)% of 100kg = 32kg.",
+      "Step 2: Let weight of dry fruit be D. Pulp in dry fruit = (100 - 20)% of D = 0.8D.",
+      "Step 3: Pulp remains constant: 0.8D = 32.",
+      "Step 4: D = 32 / 0.8 = 40kg."
+    ],
+    "linguistic_trap_in_hg065": "The 'na 15% na 25%' (neither 15% nor 25%) double negation is a stylistic trap to see if the LLM gets confused by the rejected numbers and misses the actual 20% figure.",
+    "why_hard": "Requires the insight that the 'pulp' or 'solid mass' remains constant while water evaporates.",
+    "tags": [
+      "mixture",
+      "evaporation",
+      "negation"
+    ]
+  },
+  {
+    "problem_en": "A man spends 75% of his income. His income increases by 20% and his expenditure increases by 10%. What is the percentage increase in his savings?",
+    "problem_hi": "एक व्यक्ति अपनी आय का 75% खर्च करता है। उसकी आय में 20% की वृद्धि होती है और उसके खर्च में 10% की वृद्धि होती है। उसकी बचत में कितने प्रतिशत की वृद्धि हुई है?",
+    "problem_hg_030": "Ek man apni income ka 75% spend karta hai. Income 20% increase hoti hai aur expenditure 10% increase hota hai. Savings mein kitna percentage increase hua?",
+    "problem_hg_065": "Income ka 75% toh kharch ho jata hai. Ab income 20% badh gayi aur expenditure 10% aur zyada ho gaya. Savings mein kitne percent ka jump aayega?",
+    "gold_answer": "50",
+    "gold_answer_num": 50.0,
+    "unit": "percentage",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let Income = 100, Expenditure = 75, Savings = 25.",
+      "Step 2: New Income = 120. New Expenditure = 75 * 1.1 = 82.5.",
+      "Step 3: New Savings = 120 - 82.5 = 37.5.",
+      "Step 4: % increase in savings = ((37.5 - 25) / 25) * 100 = (12.5 / 25) * 100 = 50%."
+    ],
+    "linguistic_trap_in_hg065": "'10% aur zyada' is used. An LLM might interpret this as 75%+10%=85% expenditure instead of 1.1×75%.",
+    "why_hard": "Involves simultaneous changes in dependent variables (Income - Expenditure = Savings).",
+    "tags": [
+      "finance",
+      "savings",
+      "relative_growth"
+    ]
+  },
+  {
+    "problem_en": "The value of a machine depreciates at the rate of 10% per annum. If its present value is ₹1,62,000, what was its value 2 years ago?",
+    "problem_hi": "एक मशीन का मूल्य 10% प्रति वर्ष की दर से कम हो जाता है। यदि इसका वर्तमान मूल्य ₹1,62,000 है, तो 2 वर्ष पहले इसका मूल्य क्या था?",
+    "problem_hg_030": "Machine ki value 10% per annum se depreciate hoti hai. Agar present value ₹1,62,000 hai, toh 2 years pehle iski value kya thi?",
+    "problem_hg_065": "Machine ki value har saal 10% ghat jati hai. Aaj iski value ₹1 lakh 62 hazaar hai. Pehle...phir logic laga ke batao 2 saal pehle iska price kya raha hoga?",
+    "gold_answer": "200000",
+    "gold_answer_num": 200000.0,
+    "unit": "rupees",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let initial value be P. Depreciated value = P * (1 - r/100)^n.",
+      "Step 2: 1,62,000 = P * (0.9)^2.",
+      "Step 3: 1,62,000 = P * 0.81.",
+      "Step 4: P = 1,62,000 / 0.81 = 2,00,000."
+    ],
+    "linguistic_trap_in_hg065": "Uses '₹1 lakh 62 hazaar' and the 'Pehle...phir' (first...then) sequence to tempt the model into a forward calculation (applying 10% to 1.62L) rather than the correct reverse calculation.",
+    "why_hard": "Multi-step reverse depreciation problem.",
+    "tags": [
+      "depreciation",
+      "reversal",
+      "indian_notation"
+    ]
+  },
+  {
+    "problem_en": "In an exam, 35% of candidates failed in one subject and 42% failed in another. 15% failed in both subjects. If 2,500 candidates appeared, how many passed in only one subject?",
+    "problem_hi": "एक परीक्षा में, 35% उम्मीदवार एक विषय में अनुत्तीर्ण हुए और 42% दूसरे में। 15% दोनों विषयों में अनुत्तीर्ण हुए। यदि 2,500 उम्मीदवार उपस्थित हुए, तो केवल एक विषय में कितने उत्तीर्ण हुए?",
+    "problem_hg_030": "Exam mein, 35% candidates ek subject mein fail hue aur 42% dusre mein. 15% dono subjects mein fail hue. Agar 2,500 candidates appear hue, toh sirf ek subject mein kitne pass hue?",
+    "problem_hg_065": "Ek exam mein 35% bacche subject A mein fail hue, 42% B mein. 15% toh dono mein hi fail ho gaye. Total 2,500 candidates the. Batao kitne bacche sirf ek subject mein pass hue?",
+    "gold_answer": "1175",
+    "gold_answer_num": 1175.0,
+    "unit": "candidates",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Only fail in A = 35 - 15 = 20%. Only fail in B = 42 - 15 = 27%.",
+      "Step 2: Total failed in at least one = 20 + 27 + 15 = 62%.",
+      "Step 3: Those who passed only one subject are those who failed only one subject. (Failed only A = Passed only B; Failed only B = Passed only A).",
+      "Step 4: Total pass in exactly one = 20% + 27% = 47% of 2,500 = 0.47 * 2,500 = 1,175."
+    ],
+    "linguistic_trap_in_hg065": "The word 'sirf' (only) applied to 'pass' vs 'fail'. In exclusion-inclusion, 'Passed in only one' is mathematically identical to 'Failed in only one', but LLMs often try to calculate the 100-62=38% (passed both) instead.",
+    "why_hard": "Venn diagram logic where the language of the question ('passed only one') is the inverse of the data provided ('failed').",
+    "tags": [
+      "venn_diagram",
+      "logic",
+      "inclusion_exclusion"
+    ]
+  },
+  {
+    "problem_en": "A basket contains 300 eggs. 10% of eggs are rotten. Of the remaining, 20% are broken. If the eggs are sold at a profit of 10% on the cost price of ₹5 per egg, what is the total selling price of the good eggs?",
+    "problem_hi": "एक टोकरी में 300 अंडे हैं। 10% अंडे सड़े हुए हैं। शेष में से, 20% टूटे हुए हैं। यदि अंडे ₹5 प्रति अंडे की लागत मूल्य पर 10% के लाभ पर बेचे जाते हैं, तो अच्छे अंडों का कुल विक्रय मूल्य क्या है?",
+    "problem_hg_030": "Basket mein 300 eggs hain. 10% eggs rotten hain. Remaining mein se, 20% broken hain. Agar eggs ₹5 per egg ki cost price par 10% profit par beche jate hain, toh good eggs ki total selling price kya hai?",
+    "problem_hg_065": "Total 300 eggs the. 10% rotten nikle. Baaki mein se 20% 'withdraw' kar diye gaye kyunki wo toote the. Good eggs ko ₹5 per egg cost price ke upar 10% aur zyada price pe becha gaya. Total SP kya hai?",
+    "gold_answer": "1188",
+    "gold_answer_num": 1188.0,
+    "unit": "rupees",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Good eggs after rotten = 300 * 0.90 = 270.",
+      "Step 2: Good eggs after broken = 270 * 0.80 = 216.",
+      "Step 3: Selling price per egg = ₹5 * 1.10 = ₹5.5.",
+      "Step 4: Total SP = 216 * 5.5 = 1,188."
+    ],
+    "linguistic_trap_in_hg065": "'Withdraw' is used for broken eggs and '10% aur zyada' for profit. The term 'withdraw' is non-standard for broken items and might confuse the reasoning chain.",
+    "why_hard": "Combines inventory loss percentages with price markup percentages.",
+    "tags": [
+      "profit_loss",
+      "inventory",
+      "chain_percentage"
+    ]
+  },
+  {
+    "problem_en": "If the price of a book is first increased by 25% and then decreased by 20%, what is the net change in the price of the book?",
+    "problem_hi": "यदि किसी पुस्तक की कीमत पहले 25% बढ़ाई जाती है और फिर 20% कम की जाती है, तो पुस्तक की कीमत में शुद्ध परिवर्तन क्या है?",
+    "problem_hg_030": "Agar book ki price pehle 25% increase hoti hai aur phir 20% decrease hoti hai, toh net change kya hai?",
+    "problem_hg_065": "Ek book ka price pehle 25% zyada kiya gaya, phir na 10% na 30%, balki thode time baad 20% baaki amount se reduce kar diya gaya. Net percentage change kitna aaya?",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "percentage",
+    "topic": "Percentage",
+    "difficulty": "Grade-12",
+    "source_type": "chain_percentage",
+    "solution_steps_en": [
+      "Step 1: Let price be 100.",
+      "Step 2: Price after increase = 125.",
+      "Step 3: Price after decrease = 125 * 0.80 = 100.",
+      "Step 4: Net change = 0%."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'baaki amount' (remaining amount) and 'na 10% na 30%' distractor to complicate a very simple net change calculation.",
+    "why_hard": "Tests the common misconception that +x% and −x% cancel out (here +25 and −20 actually do cancel, which is a counter-intuitive trap).",
+    "tags": [
+      "net_change",
+      "logic",
+      "distractor"
+    ]
+  }
+]

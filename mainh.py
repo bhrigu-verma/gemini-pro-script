@@ -1,13 +1,15 @@
 r"""
-GEMINI SELF-IMPROVEMENT LOOP
-=============================
-Two Gemini tabs locked in an automatic Writer <-> Critic cycle.
+GEMINI SELF-IMPROVEMENT LOOP (HEADLESS ATTACH)
+==============================================
+Same Writer <-> Critic logic as main.py, but intended to attach to a
+headless Chrome debug instance.
 
 SETUP (do once, keep Chrome open):
   macOS:
     /Applications/Google Chrome.app/Contents/MacOS/Google Chrome \
       --remote-debugging-port=9222 \
-      --user-data-dir=/tmp/chrome-gemini
+            --user-data-dir=/tmp/chrome-gemini-headless \
+            --headless=new
 
   Windows PowerShell:
     & "C:\Program Files\Google\Chrome\Application\chrome.exe" `
@@ -15,13 +17,14 @@ SETUP (do once, keep Chrome open):
       --user-data-dir="C:\Temp\chrome-gemini"
 
   Linux:
-    google-chrome --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-gemini
+        google-chrome --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-gemini-headless --headless=new
 
-Then: python gemini_loop.py
+Then: python mainh.py
 """
 
 # ── stdlib ────────────────────────────────────────────────────────────────────
 import os, sys, time, json, shutil, textwrap, datetime, traceback, random, gc
+import shlex, socket, subprocess
 from pathlib import Path
 from typing  import Optional, List
 
@@ -55,6 +58,8 @@ except ImportError:
 DEBUG_PORT       = 9222
 GEMINI_URL       = "https://gemini.google.com/app"
 OUTPUT_DIR       = Path("gemini_loop_output")
+AUTO_LAUNCH_WAIT = int(os.environ.get("AUTO_LAUNCH_WAIT", "20"))
+CHROME_LOG_FILE  = Path(os.environ.get("CHROME_LOG_FILE", "/tmp/chrome-headless.log"))
 
 # How long to wait for Gemini to finish one response
 RESPONSE_TIMEOUT = 180   # seconds total
@@ -129,6 +134,107 @@ def hr(title: str = "", w: int = 72, c: str = "─") -> None:
         print(f"  {c*w}", flush=True)
 
 
+def _ask_yes_no(prompt: str) -> bool:
+    while True:
+        ans = input(prompt).strip().lower()
+        if ans in ("yes", "y"):
+            return True
+        if ans in ("no", "n"):
+            return False
+        print("  Please type yes or no.")
+
+
+def _debug_port_open(port: int, host: str = "127.0.0.1") -> bool:
+    try:
+        with socket.create_connection((host, port), timeout=0.8):
+            return True
+    except OSError:
+        return False
+
+
+def _chrome_launch_cmd(port: int) -> List[str]:
+    if sys.platform == "darwin":
+        chrome_bin = os.environ.get(
+            "CHROME_BIN",
+            "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        )
+        user_data = os.environ.get("CHROME_USER_DATA_DIR", "/tmp/chrome-gemini-headless")
+        return [
+            chrome_bin,
+            f"--remote-debugging-port={port}",
+            f"--user-data-dir={user_data}",
+            "--headless=new",
+        ]
+
+    if os.name == "nt":
+        chrome_bin = os.environ.get(
+            "CHROME_BIN",
+            r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+        )
+        user_data = os.environ.get("CHROME_USER_DATA_DIR", r"C:\Temp\chrome-gemini-headless")
+        return [
+            chrome_bin,
+            f"--remote-debugging-port={port}",
+            f"--user-data-dir={user_data}",
+            "--headless=new",
+        ]
+
+    chrome_bin = os.environ.get("CHROME_BIN", "google-chrome")
+    user_data = os.environ.get("CHROME_USER_DATA_DIR", "/tmp/chrome-gemini-headless")
+    return [
+        chrome_bin,
+        f"--remote-debugging-port={port}",
+        f"--user-data-dir={user_data}",
+        "--headless=new",
+    ]
+
+
+def maybe_launch_chrome(port: int) -> None:
+    if _debug_port_open(port):
+        log(f"Debug port {port} is already open. Using existing Chrome session.", "OK")
+        return
+
+    cmd = _chrome_launch_cmd(port)
+    log("Starting Chrome with remote-debugging flags…", "INFO")
+    dbg("Launch command: " + shlex.join(cmd))
+
+    CHROME_LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        with CHROME_LOG_FILE.open("a", encoding="utf-8") as out:
+            subprocess.Popen(
+                cmd,
+                stdout=out,
+                stderr=subprocess.STDOUT,
+                start_new_session=True,
+            )
+    except FileNotFoundError:
+        hr("CHROME LAUNCH FAILED", c="✗")
+        print(
+            "\n  Chrome executable not found.\n"
+            "  Set CHROME_BIN env var or start Chrome manually, then rerun.\n"
+        )
+        _chrome_instructions(port)
+        sys.exit(1)
+    except Exception as e:
+        hr("CHROME LAUNCH FAILED", c="✗")
+        print(f"\n  Failed to launch Chrome: {e}\n")
+        _chrome_instructions(port)
+        sys.exit(1)
+
+    deadline = time.time() + AUTO_LAUNCH_WAIT
+    while time.time() < deadline:
+        if _debug_port_open(port):
+            log(f"Chrome debug endpoint is ready on localhost:{port}", "OK")
+            return
+        time.sleep(0.5)
+
+    log(
+        f"Launch command executed, but localhost:{port} did not open within {AUTO_LAUNCH_WAIT}s.",
+        "WARN",
+    )
+    log("Will still attempt attach; if it fails, check the Chrome log file above.", "WARN")
+
+
 # ═════════════════════════════════════════════════════════════════════════════
 #  CHROME  — attach to already-running instance only
 # ═════════════════════════════════════════════════════════════════════════════
@@ -143,7 +249,8 @@ def _chrome_instructions(port: int) -> None:
      macOS:
        /Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome \\
          --remote-debugging-port={port} \\
-         --user-data-dir=/tmp/chrome-gemini
+                 --user-data-dir=/tmp/chrome-gemini-headless \\
+                 --headless=new
 
      Windows (PowerShell):
        & "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" `
@@ -152,11 +259,11 @@ def _chrome_instructions(port: int) -> None:
 
      Linux:
        google-chrome --remote-debugging-port={port} \\
-         --user-data-dir=/tmp/chrome-gemini
+                 --user-data-dir=/tmp/chrome-gemini-headless --headless=new
 
   3. Navigate to gemini.google.com and log in.
 
-  4. Re-run:  python gemini_loop.py
+    4. Re-run:  python mainh.py
 """)
 
 def attach_driver(port: int = DEBUG_PORT) -> webdriver.Chrome:
@@ -855,12 +962,21 @@ class GeminiLoop:
     # ── setup ─────────────────────────────────────────────────────────────
     def setup(self) -> None:
         hr("GEMINI SELF-IMPROVEMENT LOOP", c="=")
-        print("""
-  Needs:
-    * Chrome running with --remote-debugging-port=9222 --user-data-dir=...
-    * Logged into gemini.google.com in that window
+        print(f"""
+  What this script does:
+    1) Uses Chrome DevTools endpoint on localhost:{DEBUG_PORT}
+    2) Opens two Gemini tabs (Improver + Critic)
+    3) Runs iterative self-improvement rounds
+
+  If you answer yes, this script will auto-run Chrome with:
+    --remote-debugging-port={DEBUG_PORT}
+    --user-data-dir (headless profile)
+    --headless=new
 """)
-        input("  Press ENTER to connect … ")
+        if _ask_yes_no("  Launch Chrome automatically now? (yes/no): "):
+            maybe_launch_chrome(DEBUG_PORT)
+        else:
+            log("Auto-launch skipped. Expecting Chrome to already be running.", "INFO")
 
         self.driver = attach_driver(DEBUG_PORT)
 

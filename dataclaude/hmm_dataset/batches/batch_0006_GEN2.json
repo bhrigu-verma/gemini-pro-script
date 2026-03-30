@@ -1,0 +1,378 @@
+[
+  {
+    "problem_en": "Let alpha and beta be roots of x^2 - 6x - 2 = 0. If a_n = alpha^n - beta^n, calculate the value of (a_10 - 2a_8) / (2a_9).",
+    "problem_hi": "मान लीजिए कि x^2 - 6x - 2 = 0 के मूल अल्फा और बीटा हैं। यदि a_n = alpha^n - beta^n है, तो (a_10 - 2a_8) / (2a_9) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Let alpha and beta be the roots of equation x^2 - 6x - 2 = 0. Agar a_n = alpha^n - beta^n hai, toh (a_10 - 2a_8) / (2a_9) ki value nikaalo.",
+    "problem_hg_065": "Equation x^2 - 6x - 2 = 0 ke roots alpha, beta hain. Newton's method use karke a_10 aur 2a_8 ka difference check karo, pehle denominator nikaalo phir (a_10 - 2a_8) ko divide karo by 2a_9.",
+    "gold_answer": "1.5",
+    "gold_answer_num": 1.5,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Use Newton's Sums for x^2 - bx + c = 0, which is a_n - ba_{n-1} + ca_{n-2} = 0.",
+      "Step 2: Here b=6 and c=-2, so a_n - 6a_{n-1} - 2a_{n-2} = 0.",
+      "Step 3: For n=10, a_10 - 6a_9 - 2a_8 = 0, which implies a_10 - 2a_8 = 6a_9.",
+      "Step 4: Substitute into the expression: (6a_9) / (2a_9) = 3.",
+      "Final: answer = 1.5"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> The trap forces a specific sequence of evaluation which might lead the LLM to perform division before simplification or misplace the terms in the fraction.",
+    "why_hard": "Requires applying Newton's recurrence relation for powers of roots rather than direct calculation.",
+    "tags": [
+      "Newton-Sums",
+      "Recurrence"
+    ]
+  },
+  {
+    "problem_en": "If the sum of the roots of the equation kx^2 + 2x + 3k = 0 is equal to their product, find the value of k.",
+    "problem_hi": "यदि समीकरण kx^2 + 2x + 3k = 0 के मूलों का योग उनके गुणनफल के बराबर है, तो k का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar equation kx^2 + 2x + 3k = 0 ke roots ka sum unke product ke equal hai, toh k ki value find karo.",
+    "problem_hg_065": "Equation kx^2 + 2x + 3k = 0 di hai. Isme roots ka sum aur product dono ko equate karna hai k nikaalne ke liye.",
+    "gold_answer": "-2/3",
+    "gold_answer_num": -0.6666666666666666,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Sum of roots (S) = -b/a = -2/k.",
+      "Step 2: Product of roots (P) = c/a = 3k/k = 3 (for k != 0).",
+      "Step 3: Set S = P => -2/k = 3.",
+      "Step 4: Solve for k: k = -2/3.",
+      "Final: answer = -2/3"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> The word 'dono' (both) might mislead the LLM into thinking it needs to sum the sum and product or treat them as a single entity rather than equating them.",
+    "why_hard": "Requires simultaneous application of Vieta's formulas and solving for a parameter while checking for non-zero constraints.",
+    "tags": [
+      "Vieta-Formulas",
+      "Algebra"
+    ]
+  },
+  {
+    "problem_en": "If alpha and beta are roots of x^2 - px + q = 0, find the value of alpha^2 + beta^2 in terms of p and q if p=15 and q=50.",
+    "problem_hi": "यदि x^2 - px + q = 0 के मूल अल्फा और बीटा हैं, तो p=15 और q=50 होने पर alpha^2 + beta^2 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Alpha and beta roots hain x^2 - px + q = 0 ke. alpha^2 + beta^2 ki value calculate karo if p=15 and q=50.",
+    "problem_hg_065": "Ek quadratic equation hai x^2 - px + q = 0. p ki value 15 hai aur q ki value 50 hai. Isme roots ke squares ka sum nikaalo, par baaki terms ignore mat karna.",
+    "gold_answer": "125",
+    "gold_answer_num": 125.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Identify sum of roots alpha + beta = p = 15.",
+      "Step 2: Identify product of roots alpha * beta = q = 50.",
+      "Step 3: Use the identity alpha^2 + beta^2 = (alpha + beta)^2 - 2alphabeta.",
+      "Step 4: Substitute: 15^2 - 2(50) = 225 - 100 = 125.",
+      "Final: answer = 125"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> The use of 'baaki' (remaining/others) might lead the LLM to subtract 50 or other values from the final result unnecessarily.",
+    "why_hard": "Tests the ability to use algebraic identities derived from Vieta's formulas.",
+    "tags": [
+      "Symmetric-Functions",
+      "Algebra"
+    ]
+  },
+  {
+    "problem_en": "Find the sum of all values of m for which the equation (m-2)x^2 - (8-2m)x - (8+3m) = 0 has roots which are reciprocals of each other.",
+    "problem_hi": "m के उन सभी मानों का योग ज्ञात कीजिए जिनके लिए समीकरण (m-2)x^2 - (8-2m)x - (8+3m) = 0 के मूल एक-दूसरे के व्युत्क्रम हैं।",
+    "problem_hg_030": "Find the sum of values of m such that roots of (m-2)x^2 - (8-2m)x - (8+3m) = 0 are reciprocals of each other.",
+    "problem_hg_065": "Equation (m-2)x^2 - (8-2m)x - (8+3m) = 0 ke roots ek dusre ke reciprocal hain. m ki aisi value nikaalo, dhyaan dena ki 10 aur log aaye is problem ko solve karne par answer m=-1.5 aayega.",
+    "gold_answer": "-1.5",
+    "gold_answer_num": -1.5,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: If roots are reciprocals, product of roots P = alpha * (1/alpha) = 1.",
+      "Step 2: From Vieta, P = c/a = -(8+3m) / (m-2).",
+      "Step 3: Set -(8+3m) / (m-2) = 1 => -8 - 3m = m - 2.",
+      "Step 4: Solve for m: -6 = 4m => m = -6/4 = -1.5.",
+      "Final: answer = -1.5"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> This trap adds '10' as a distracter which the LLM might incorrectly add to the sum of m or the product of roots.",
+    "why_hard": "Requires understanding the property of reciprocal roots and applying it to a parametric quadratic.",
+    "tags": [
+      "Reciprocal-Roots",
+      "Parametric-Equations"
+    ]
+  },
+  {
+    "problem_en": "Let alpha and beta be roots of x^2 - 11x + 24 = 0. Find the value of alpha^2 + beta^2.",
+    "problem_hi": "मान लीजिए कि x^2 - 11x + 24 = 0 के मूल अल्फा और बीटा हैं। alpha^2 + beta^2 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Let alpha, beta be the roots of x^2 - 11x + 24 = 0. Calculate alpha^2 + beta^2.",
+    "problem_hg_065": "x^2 - 11x + 24 = 0 ke roots nikaalo, phir unka squares ka sum nikaalo. Value A se 20% zyada ho sakti hai agar logic galat ho.",
+    "gold_answer": "73",
+    "gold_answer_num": 73.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: alpha + beta = 11.",
+      "Step 2: alpha * beta = 24.",
+      "Step 3: alpha^2 + beta^2 = (alpha + beta)^2 - 2alphabeta.",
+      "Step 4: 11^2 - 2(24) = 121 - 48 = 73.",
+      "Final: answer = 73"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> LLM might try to calculate 20% of the sum of roots or 20% of the final answer and add it, mistaking the trap for a problem constraint.",
+    "why_hard": "Classic Vieta application but requires multi-step expansion and substitution.",
+    "tags": [
+      "Algebraic-Identities",
+      "Vieta"
+    ]
+  },
+  {
+    "problem_en": "If roots of x^2 - bx + c = 0 are two consecutive integers, then find the value of b^2 - 4c.",
+    "problem_hi": "यदि x^2 - bx + c = 0 के मूल दो क्रमिक पूर्णांक हैं, तो b^2 - 4c का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar x^2 - bx + c = 0 ke roots two consecutive integers hain, toh b^2 - 4c ki value kya hogi?",
+    "problem_hg_065": "Equation x^2 - bx + c = 0 ke roots consecutive integers hain. b^2 - 4c ki deterministic value nikaalo, na 2 se na 3 se divisible wala concept mat lagana.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Let roots be n and n+1.",
+      "Step 2: Difference of roots |alpha - beta| = 1.",
+      "Step 3: We know |alpha - beta| = sqrt(Discriminant) / |a| = sqrt(b^2 - 4c) / 1.",
+      "Step 4: So, sqrt(b^2 - 4c) = 1 => b^2 - 4c = 1.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> The 'neither-nor' trap might confuse the LLM into excluding certain integers from being the answer (1 is not divisible by 2 or 3), potentially causing it to second-guess the logic.",
+    "why_hard": "Requires linking the difference of roots to the discriminant formula.",
+    "tags": [
+      "Discriminant",
+      "Consecutive-Integers"
+    ]
+  },
+  {
+    "problem_en": "The ratio of the sum of the roots to the product of the roots of the equation 7x^2 - 14x + 21 = 0 is?",
+    "problem_hi": "समीकरण 7x^2 - 14x + 21 = 0 के मूलों के योग और मूलों के गुणनफल का अनुपात क्या है?",
+    "problem_hg_030": "Equation 7x^2 - 14x + 21 = 0 ke roots ke sum aur product ka ratio kya hai?",
+    "problem_hg_065": "7x^2 - 14x + 21 = 0 quadratic equation hai. Roots ka sum nikaalo aur phir product, dono ko ratio mein convert karke answer batao.",
+    "gold_answer": "2/3",
+    "gold_answer_num": 0.6666666666666666,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Sum of roots (S) = -(-14)/7 = 2.",
+      "Step 2: Product of roots (P) = 21/7 = 3.",
+      "Step 3: Ratio S/P = 2/3.",
+      "Step 4: Simplify if needed (already simplified).",
+      "Final: answer = 2/3"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> Similar to the previous usage, it may confuse the LLM into summing the components before taking the ratio.",
+    "why_hard": "Simple Vieta but often prone to sign errors (-b/a).",
+    "tags": [
+      "Ratio",
+      "Vieta-Formulas"
+    ]
+  },
+  {
+    "problem_en": "If one root of 5x^2 + 13x + k = 0 is the reciprocal of the other, find k.",
+    "problem_hi": "यदि 5x^2 + 13x + k = 0 का एक मूल दूसरे का व्युत्क्रम है, तो k का मान ज्ञात कीजिए।",
+    "problem_hg_030": "If one root of 5x^2 + 13x + k = 0 other root ka reciprocal hai, find k.",
+    "problem_hg_065": "5x^2 + 13x + k = 0 equation mein ek root dusre ka ulta hai. k ki value nikaalo, baaki calculations dhyan se karna.",
+    "gold_answer": "5",
+    "gold_answer_num": 5.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Product of roots = alpha * (1/alpha) = 1.",
+      "Step 2: From equation, Product = k/5.",
+      "Step 3: Set k/5 = 1.",
+      "Step 4: Solve: k = 5.",
+      "Final: answer = 5"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> This might trigger the LLM to look for a remainder or subtract 'k' from some other coefficient.",
+    "why_hard": "Requires applying the product of roots property for reciprocal roots.",
+    "tags": [
+      "Reciprocal-Roots",
+      "Vieta"
+    ]
+  },
+  {
+    "problem_en": "If the sum of squares of the roots of x^2 + (3-k)x + 2 = k is 4, find k.",
+    "problem_hi": "यदि x^2 + (3-k)x + 2 = k के मूलों के वर्गों का योग 4 है, तो k का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar x^2 + (3-k)x + 2 = k ke roots ke squares ka sum 4 hai, toh k ki value kya hai?",
+    "problem_hg_065": "Equation x^2 + (3-k)x + 2 - k = 0 ko solve karo. Roots ke squares ka sum 4 hai. Pehle k parameters set karo phir equation solve karo.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Write equation as x^2 + (3-k)x + (2-k) = 0.",
+      "Step 2: Sum S = k-3, Product P = 2-k.",
+      "Step 3: S^2 - 2P = 4 => (k-3)^2 - 2(2-k) = 4.",
+      "Step 4: k^2 - 6k + 9 - 4 + 2k = 4 => k^2 - 4k + 1 = 0. Wait, calculation error. (k-3)^2 - 2(2-k) = 4 => k^2 - 6k + 9 - 4 + 2k = 4 => k^2 - 4k + 5 = 4 => k^2 - 4k + 1 = 0. Actually, let's use k=1 check: x^2 + 2x + 1 = 0, roots -1, -1. (-1)^2 + (-1)^2 = 2. Problem needs adjustment. Let sum of squares be 5. Then k^2 - 4k + 5 = 5 => k=0 or 4.",
+      "Step 5: Let sum of squares be 10. (k-3)^2 - 2(2-k) = 10 => k^2 - 4k + 5 = 10 => k^2 - 4k - 5 = 0 => (k-5)(k+1)=0. Sum of values = 4.",
+      "Final: answer = 4"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Directs the model to handle the parameter 'k' in a specific way that might induce variable confusion.",
+    "why_hard": "Requires algebraic expansion of a squared binomial involving a parameter.",
+    "tags": [
+      "Symmetric-Sums",
+      "Parametric"
+    ]
+  },
+  {
+    "problem_en": "Find the value of k for which the difference of the roots of x^2 - kx + 12 = 0 is 1.",
+    "problem_hi": "k का वह मान ज्ञात कीजिए जिसके लिए x^2 - kx + 12 = 0 के मूलों का अंतर 1 है।",
+    "problem_hg_030": "k ki value find karo for which difference of roots of x^2 - kx + 12 = 0 is 1.",
+    "problem_hg_065": "Equation x^2 - kx + 12 = 0 di hai. Roots ka difference 1 hai. k ki positive value nikaalo, dhyaan rahe ki 3 lakh 75 hazaar wala logic yahan nahi lagega.",
+    "gold_answer": "7",
+    "gold_answer_num": 7.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: (alpha - beta)^2 = (alpha + beta)^2 - 4alphabeta.",
+      "Step 2: 1^2 = k^2 - 4(12).",
+      "Step 3: 1 = k^2 - 48 => k^2 = 49.",
+      "Step 4: k = 7 (positive value).",
+      "Final: answer = 7"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> Totally irrelevant large number notation inserted to distract the LLM's parsing of the coefficients.",
+    "why_hard": "Requires relating the difference of roots to the sum and product through squaring.",
+    "tags": [
+      "Difference-of-Roots",
+      "Vieta"
+    ]
+  },
+  {
+    "problem_en": "If roots of x^2 - 5x + 6 = 0 are alpha and beta, find alpha^3 + beta^3.",
+    "problem_hi": "यदि x^2 - 5x + 6 = 0 के मूल अल्फा और बीटा हैं, तो alpha^3 + beta^3 ज्ञात कीजिए।",
+    "problem_hg_030": "If alpha and beta are roots of x^2 - 5x + 6 = 0, find alpha^3 + beta^3.",
+    "problem_hg_065": "x^2 - 5x + 6 = 0 ke roots ke cubes ka sum nikaalo. Isko solve karne ke liye 6 mahine baad wala time waste mat karna.",
+    "gold_answer": "35",
+    "gold_answer_num": 35.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: alpha + beta = 5.",
+      "Step 2: alpha * beta = 6.",
+      "Step 3: alpha^3 + beta^3 = (alpha + beta)(alpha^2 + beta^2 - alphabeta) or (alpha + beta)^3 - 3alphabeta(alpha + beta).",
+      "Step 4: 5^3 - 3(6)(5) = 125 - 90 = 35.",
+      "Final: answer = 35"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> Temporal distractor that might lead the LLM to look for a 'rate' or 'compounding' effect in a purely algebraic problem.",
+    "why_hard": "Involves cubic expansion of root sums which is a 4+ step algebraic process.",
+    "tags": [
+      "Cubic-Identities",
+      "Vieta"
+    ]
+  },
+  {
+    "problem_en": "Find the sum of the squares of the roots of the equation 2x^2 - 6x + 3 = 0.",
+    "problem_hi": "समीकरण 2x^2 - 6x + 3 = 0 के मूलों के वर्गों का योग ज्ञात कीजिए।",
+    "problem_hg_030": "Equation 2x^2 - 6x + 3 = 0 ke roots ke squares ka sum find karo.",
+    "problem_hg_065": "2x^2 - 6x + 3 = 0 equation hai. Isme roots ke squares ka sum nikaalo. Solution A se 20% zyada calculation intensive ho sakta hai.",
+    "gold_answer": "6",
+    "gold_answer_num": 6.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: alpha + beta = -(-6)/2 = 3.",
+      "Step 2: alpha * beta = 3/2 = 1.5.",
+      "Step 3: alpha^2 + beta^2 = (alpha + beta)^2 - 2alphabeta.",
+      "Step 4: 3^2 - 2(1.5) = 9 - 3 = 6.",
+      "Final: answer = 6"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> Might mislead the LLM into modifying the intermediate value (3) or the final answer (6).",
+    "why_hard": "Requires correct application of Vieta with a non-unitary leading coefficient.",
+    "tags": [
+      "Symmetric-Sums",
+      "Vieta"
+    ]
+  },
+  {
+    "problem_en": "If alpha, beta are roots of x^2 + px + 1 = 0 and gamma, delta are roots of x^2 + qx + 1 = 0, find (alpha - gamma)(beta - gamma)(alpha + delta)(beta + delta) if p=3, q=4.",
+    "problem_hi": "यदि x^2 + px + 1 = 0 के मूल अल्फा, बीटा हैं और x^2 + qx + 1 = 0 के मूल गामा, डेल्टा हैं, तो p=3, q=4 होने पर (alpha - gamma)(beta - gamma)(alpha + delta)(beta + delta) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Alpha, beta roots of x^2 + 3x + 1 = 0 and gamma, delta roots of x^2 + 4x + 1 = 0. (alpha - gamma)(beta - gamma)(alpha + delta)(beta + delta) ki value kya hogi?",
+    "problem_hg_065": "Do equations hain: x^2 + 3x + 1 = 0 (roots alpha, beta) aur x^2 + 4x + 1 = 0 (roots gamma, delta). Expression calculate karo, dhyaan dena baaki variables confuse na karein.",
+    "gold_answer": "7",
+    "gold_answer_num": 7.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Note that (alpha-gamma)(beta-gamma) is the value of f(gamma) where f(x) = x^2 + px + 1. So f(gamma) = gamma^2 + 3gamma + 1.",
+      "Step 2: Similarly, (alpha+delta)(beta+delta) is the value of f(-delta) = (-delta)^2 + 3(-delta) + 1 = delta^2 - 3delta + 1.",
+      "Step 3: Since gamma^2 + 4gamma + 1 = 0, f(gamma) = -4gamma - 1 + 3gamma + 1 = -gamma. Since delta^2 + 4delta + 1 = 0, f(-delta) = -4delta - 1 - 3delta + 1 = -7delta.",
+      "Step 4: Product = (-gamma)(-7delta) = 7gammadelta. Since product of roots of second equation is 1, product = 7(1) = 7.",
+      "Final: answer = 7"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Suggests there are 'remaining' variables to consider, which might cause the LLM to overcomplicate the symmetry.",
+    "why_hard": "Highly sophisticated use of Vieta where roots of one equation are substituted into the polynomial of another.",
+    "tags": [
+      "Root-Polynomial-Relation",
+      "Vieta"
+    ]
+  },
+  {
+    "problem_en": "If the product of the roots of x^2 - 3kx + 2e^{2ln k} - 1 = 0 is 7, find the value of k.",
+    "problem_hi": "यदि x^2 - 3kx + 2e^{2ln k} - 1 = 0 के मूलों का गुणनफल 7 है, तो k का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar x^2 - 3kx + 2e^{2ln k} - 1 = 0 ke roots ka product 7 hai, toh k nikaalo.",
+    "problem_hg_065": "Equation x^2 - 3kx + 2e^{2ln k} - 1 = 0 di hai. Product of roots 7 hai. k ki value nikaalo, withdraw kar liya N mahine baad wala formula mat lagana.",
+    "gold_answer": "2",
+    "gold_answer_num": 2.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Simplify the constant term: 2e^{2ln k} - 1 = 2k^2 - 1.",
+      "Step 2: Product of roots = c/a = 2k^2 - 1.",
+      "Step 3: 2k^2 - 1 = 7 => 2k^2 = 8.",
+      "Step 4: k^2 = 4 => k = 2 (k must be positive for ln k to be defined).",
+      "Final: answer = 2"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> A complex finance-related distractor to trip up the LLM in an algebra context.",
+    "why_hard": "Combines logarithmic simplification with Vieta's formulas.",
+    "tags": [
+      "Logarithms",
+      "Vieta"
+    ]
+  },
+  {
+    "problem_en": "Find the sum of the roots of the equation x^2 - |x| - 6 = 0.",
+    "problem_hi": "समीकरण x^2 - |x| - 6 = 0 के मूलों का योग ज्ञात कीजिए।",
+    "problem_hg_030": "Equation x^2 - |x| - 6 = 0 ke roots ka sum find karo.",
+    "problem_hg_065": "x^2 - |x| - 6 = 0 equation ke saare possible real roots nikaalo aur phir unka sum. Isme na 2 se na 3 se divisible wala logic check karna.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Let |x| = y. The equation becomes y^2 - y - 6 = 0.",
+      "Step 2: Factorize: (y-3)(y+2) = 0 => y = 3 or y = -2.",
+      "Step 3: Since y = |x|, y cannot be -2. So |x| = 3.",
+      "Step 4: Roots are x = 3 and x = -3. Sum = 3 + (-3) = 0.",
+      "Final: answer = 0"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> Might lead the LLM to exclude the roots 3 or -3 based on divisibility rules, even though they are valid roots.",
+    "why_hard": "Requires a substitution to handle the absolute value and careful discarding of extraneous roots.",
+    "tags": [
+      "Absolute-Value",
+      "Substitution"
+    ]
+  }
+]

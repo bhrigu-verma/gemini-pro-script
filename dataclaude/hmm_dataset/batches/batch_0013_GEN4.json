@@ -1,0 +1,388 @@
+[
+  {
+    "problem_en": "Three alarm clocks ring at intervals of 24, 30, and 36 minutes respectively. If they all ring together at 8:00 AM, and 10 more people arrive to reset them, what is the total number of minutes that will pass before they all ring together again for the second time after 8:00 AM?",
+    "problem_hi": "तीन अलार्म घड़ियाँ क्रमशः 24, 30 और 36 मिनट के अंतराल पर बजती हैं। यदि वे सभी सुबह 8:00 बजे एक साथ बजती हैं, और उन्हें फिर से सेट करने के लिए 10 और लोग आते हैं, तो सुबह 8:00 बजे के बाद दूसरी बार उन सभी के एक साथ बजने से पहले कुल कितने मिनट बीत जाएंगे?",
+    "problem_hg_030": "Three alarm clocks 24, 30, aur 36 minutes ke intervals par ring karti hain. Agar wo subah 8:00 AM par saath baji, aur 10 more people arrive unhe reset karne ke liye, toh next 8:00 AM ke baad second time wo kab saath bajengi (total minutes count)?",
+    "problem_hg_065": "Teen clocks hain jo 24, 30, aur 36 minutes ke gap pe bajti hain. 8:00 baje ek saath bajne ke baad 10 aur log aaye clocks check karne. Batao 8:00 AM ke baad exactly second time jab sab saath bajengi toh kitne minutes ho chuke honge?",
+    "gold_answer": "720",
+    "gold_answer_num": 720.0,
+    "unit": "minutes",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find the prime factorization of the intervals: 24 = 2^3 * 3, 30 = 2 * 3 * 5, 36 = 2^2 * 3^2.",
+      "Step 2: Calculate the LCM of (24, 30, 36). LCM = 2^3 * 3^2 * 5 = 8 * 9 * 5 = 360 minutes.",
+      "Step 3: The clocks ring together every 360 minutes. The first time after 8:00 AM is 1 * 360 = 360 minutes.",
+      "Step 4: The second time after 8:00 AM is 2 * 360 = 720 minutes.",
+      "Final: answer = 720"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: This is an additive trap. The LLM might try to add 10 to the time, the minutes, or the frequency, even though the number of people is irrelevant to the math of the LCM.",
+    "why_hard": "Requires distinguishing between the first and second subsequent occurrences after the initial event while ignoring distractor numerical data.",
+    "tags": [
+      "lcm",
+      "time_intervals",
+      "distractor"
+    ]
+  },
+  {
+    "problem_en": "A rectangular floor measures 525 cm by 375 cm. It is to be tiled with the largest possible identical square tiles such that no space is left. After tiling, the owner finds that 3 lakh 75 hazaar tiles were already in stock. How many tiles are used for this floor?",
+    "problem_hi": "एक आयताकार फर्श की माप 525 सेमी गुणा 375 सेमी है। इसे सबसे बड़े संभावित समान वर्गाकार टाइलों से ढका जाना है ताकि कोई जगह न बचे। टाइलिंग के बाद, मालिक को पता चलता है कि 3 लाख 75 हज़ार टाइलें पहले से ही स्टॉक में थीं। इस फर्श के लिए कितनी टाइलों का उपयोग किया जाता है?",
+    "problem_hg_030": "Ek rectangular floor 525 cm by 375 cm ka hai. Ispe largest possible identical square tiles lagani hain without leaving space. Owner ke paas 3 lakh 75 hazaar tiles stock mein thi. Is floor ke liye kitne tiles use honge?",
+    "problem_hg_065": "Rectangular floor ki dimensions 525 cm aur 375 cm hain. Ispe sabse badi size ki same square tiles lagani hain. Stock mein pehle se 3 lakh 75 hazaar tiles padi hain. Batao floor cover karne mein total kitni tiles kharch hongi?",
+    "gold_answer": "35",
+    "gold_answer_num": 35.0,
+    "unit": "tiles",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: To find the largest square tile size, calculate the GCD of 525 and 375.",
+      "Step 2: 525 = 3 * 5^2 * 7; 375 = 3 * 5^3. GCD = 3 * 5^2 = 75 cm.",
+      "Step 3: Area of floor = 525 * 375. Area of one tile = 75 * 75.",
+      "Step 4: Number of tiles = (525 / 75) * (375 / 75) = 7 * 5 = 35.",
+      "Final: answer = 35"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar notation: The LLM may get confused by the large stock number written in Indian notation (375,000) and try to subtract the floor tiles from this or vice versa, or misparse it as 3 or 75,000.",
+    "why_hard": "The problem requires finding GCD for tiling but includes a large distractor in Indian numbering system notation.",
+    "tags": [
+      "gcd",
+      "area",
+      "tiling"
+    ]
+  },
+  {
+    "problem_en": "Two runners start together on a circular track. A completes a lap in 42 seconds, and B completes it in 63 seconds. However, for the first lap, pehle karo phir... wait, they must both complete at least one lap. How many seconds will pass until they meet at the starting point for the third time (including the start)?",
+    "problem_hi": "दो धावक एक वृत्ताकार पथ पर एक साथ शुरू करते हैं। A 42 सेकंड में एक चक्कर पूरा करता है, और B इसे 63 सेकंड में पूरा करता है। शुरू होने के समय को मिलाकर, तीसरी बार शुरुआती बिंदु पर मिलने तक कितने सेकंड बीतेंगे?",
+    "problem_hg_030": "Two runners circular track pe start karte hain. A lap complete karta hai 42 seconds mein, aur B 63 seconds mein. Starting point pe third time milne tak (start ko include karke) kitne seconds pass honge?",
+    "problem_hg_065": "A 42 sec aur B 63 sec mein lap lagate hain. Race start hone ke baad, pehle karo phir second aur phir third meeting calculate karo starting point pe. Start point pe 3rd time milne tak (0 sec ko 1st meeting maanke) kitne seconds lagenge?",
+    "gold_answer": "252",
+    "gold_answer_num": 252.0,
+    "unit": "seconds",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find the LCM of 42 and 63 to find the time for one meeting at the starting point.",
+      "Step 2: 42 = 2 * 3 * 7; 63 = 3^2 * 7. LCM = 2 * 3^2 * 7 = 126 seconds.",
+      "Step 3: Meetings occur at multiples of 126 seconds: 0s (1st), 126s (2nd), 252s (3rd).",
+      "Step 4: The question asks for the time at the 3rd meeting including the start.",
+      "Final: answer = 252"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: This sequence trap tries to force the LLM into a step-by-step logic that might lead it to miscount the meetings (starting from 1 instead of 0).",
+    "why_hard": "Requires precise counting of recurring events (periodic meetings) including the boundary condition (t=0).",
+    "tags": [
+      "lcm",
+      "circular_track",
+      "periodic_events"
+    ]
+  },
+  {
+    "problem_en": "A florist has 120 roses and 168 tulips. She wants to make bouquets with the same combination of flowers such that no flowers are left. She decides to give away baaki (remaining) flowers to a friend, but here there are none. What is the maximum number of bouquets she can make?",
+    "problem_hi": "एक फूलवाले के पास 120 गुलाब और 168 ट्यूलिप हैं। वह फूलों के समान संयोजन के साथ गुलदस्ते बनाना चाहती है ताकि कोई फूल न बचे। वह अधिकतम कितने गुलदस्ते बना सकती है?",
+    "problem_hg_030": "Florist ke paas 120 roses aur 168 tulips hain. Wo same combination ke bouquets banana chahti hai so that no flowers are left. Maximum kitne bouquets ban sakte hain?",
+    "problem_hg_065": "120 roses aur 168 tulips se bouquets banane hain. Har bouquet mein same ratio hona chahiye aur koi phool baaki nahi rehna chahiye. Max kitne bouquet banenge?",
+    "gold_answer": "24",
+    "gold_answer_num": 24.0,
+    "unit": "bouquets",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find the maximum number of bouquets by calculating the GCD of 120 and 168.",
+      "Step 2: Factorize 120: 2^3 * 3 * 5.",
+      "Step 3: Factorize 168: 2^3 * 3 * 7.",
+      "Step 4: GCD = 2^3 * 3 = 8 * 3 = 24.",
+      "Final: answer = 24"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The word 'baaki' usually implies a remainder/subtraction. The LLM might look for a 'remainder' to subtract from the total before calculating the GCD.",
+    "why_hard": "Classic GCD word problem hidden behind linguistic cues that suggest subtraction or remainder operations.",
+    "tags": [
+      "gcd",
+      "distribution",
+      "bouquets"
+    ]
+  },
+  {
+    "problem_en": "Two tankers contain 750 liters and 1050 liters of petrol respectively. Find the maximum capacity of a container which can measure the petrol of dono ko (both) tankers in exact number of times.",
+    "problem_hi": "दो टैंकरों में क्रमशः 750 लीटर और 1050 लीटर पेट्रोल है। एक कंटेनर की अधिकतम क्षमता ज्ञात कीजिए जो दोनों टैंकरों के पेट्रोल को सटीक संख्या में माप सके।",
+    "problem_hg_030": "Two tankers mein 750 liters aur 1050 liters petrol hai. Aise container ki maximum capacity find karo jo dono ko exactly measure kar sake.",
+    "problem_hg_065": "Tanker A mein 750L aur B mein 1050L petrol hai. Ek measurement box ki max capacity kya hogi jo petrol of dono ko... mera matlab dono tankers ko exact rounds mein naap le?",
+    "gold_answer": "150",
+    "gold_answer_num": 150.0,
+    "unit": "liters",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Calculate the GCD of 750 and 1050.",
+      "Step 2: 750 = 2 * 3 * 5^3.",
+      "Step 3: 1050 = 2 * 3 * 5^2 * 7.",
+      "Step 4: GCD = 2 * 3 * 5^2 = 6 * 25 = 150.",
+      "Final: answer = 150"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: 'Dono ko' means both, but LLMs sometimes interpret this as needing to sum the two quantities (750+1050) before finding the divisor, rather than finding the common divisor.",
+    "why_hard": "Standard GCD problem but the 'dono ko' phrasing can trigger an incorrect additive operation.",
+    "tags": [
+      "gcd",
+      "measurement",
+      "capacity"
+    ]
+  },
+  {
+    "problem_en": "Traffic lights at three different road crossings change after every 48, 72 and 108 seconds respectively. If they change simultaneously at 7:00 AM, and 6 mahine baad they are serviced, how many seconds after 7:00 AM will they next change simultaneously?",
+    "problem_hi": "तीन अलग-अलग सड़क चौराहों पर ट्रैफिक लाइटें क्रमशः प्रत्येक 48, 72 और 108 सेकंड के बाद बदलती हैं। यदि वे सुबह 7:00 बजे एक साथ बदलती हैं, तो सुबह 7:00 बजे के कितने सेकंड बाद वे अगली बार एक साथ बदलेंगी?",
+    "problem_hg_030": "Traffic lights 48, 72, aur 108 seconds ke baad change hoti hain. Agar wo 7:00 AM par saath mein change hui, aur unhe 6 mahine baad service kiya jana hai, toh kitne seconds baad wo firse simultaneously change hongi?",
+    "problem_hg_065": "48, 72, aur 108 seconds pe traffic lights change hoti hain. 7:00 AM pe change hone ke baad, 6 mahine baad ki servicing ko ignore karo, bas ye batao ki kitne seconds baad wo firse saath mein change hongi?",
+    "gold_answer": "432",
+    "gold_answer_num": 432.0,
+    "unit": "seconds",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find the LCM of 48, 72, and 108.",
+      "Step 2: 48 = 2^4 * 3; 72 = 2^3 * 3^2; 108 = 2^2 * 3^3.",
+      "Step 3: LCM = 2^4 * 3^3 = 16 * 27.",
+      "Step 4: 16 * 27 = 432.",
+      "Final: answer = 432"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad: This is a temporal distractor. The LLM might try to convert 6 months into seconds or use it in a rate-based calculation, even though it's irrelevant.",
+    "why_hard": "Requires isolating the core LCM problem from heavy distractor text about servicing intervals.",
+    "tags": [
+      "lcm",
+      "traffic_lights",
+      "distractor"
+    ]
+  },
+  {
+    "problem_en": "Three bells toll at intervals of 9, 12, and 15 minutes. If they start tolling together, and the volume is A se 20% zyada (20% more than A), what is the time in minutes when they will next toll together?",
+    "problem_hi": "तीन घंटियाँ 9, 12 और 15 मिनट के अंतराल पर बजती हैं। यदि वे एक साथ बजना शुरू करती हैं, तो वे अगली बार कितने समय (मिनटों में) बाद एक साथ बजेंगी?",
+    "problem_hg_030": "Three bells 9, 12, aur 15 minutes ke intervals par toll karti hain. Agar wo saath start karein, aur volume A se 20% zyada ho, toh kitne minutes baad wo firse saath bajengi?",
+    "problem_hg_065": "9, 12, 15 minutes ke gap pe bells bajti hain. Saath shuru hone ke baad, next time saath kab bajengi? Note: unki volume A se 20% zyada rakhi gayi hai.",
+    "gold_answer": "180",
+    "gold_answer_num": 180.0,
+    "unit": "minutes",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Calculate the LCM of 9, 12, and 15.",
+      "Step 2: 9 = 3^2; 12 = 2^2 * 3; 15 = 3 * 5.",
+      "Step 3: LCM = 2^2 * 3^2 * 5 = 4 * 9 * 5.",
+      "Step 4: 4 * 9 * 5 = 180.",
+      "Final: answer = 180"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: Percentage trap. The LLM might attempt to increase one of the intervals (like 15 or 9) by 20% or think the answer needs to be adjusted by 20%.",
+    "why_hard": "Combines a standard LCM problem with irrelevant percentage-based qualitative descriptors.",
+    "tags": [
+      "lcm",
+      "bells",
+      "percentage_distractor"
+    ]
+  },
+  {
+    "problem_en": "Find the least number of soldiers in a regiment such that they can be arranged in hollow squares of 15, 20 or 25 deep. If 10 aur log aaye (10 more people came) after the arrangement, we don't count them. What is the original least number?",
+    "problem_hi": "एक रेजिमेंट में सैनिकों की न्यूनतम संख्या ज्ञात कीजिए ताकि उन्हें 15, 20 या 25 की गहराई वाले खोखले वर्गों में व्यवस्थित किया जा सके।",
+    "problem_hg_030": "Regiment mein least number of soldiers find karo so that they can be arranged in hollow squares of 15, 20 or 25 deep. Agar 10 aur log aaye baad mein, unhe count nahi karna.",
+    "problem_hg_065": "Sainikon ki woh kam se kam ginti batao jo 15, 20 ya 25 ki rows mein fit ho sakein. Regiment banane ke liye 10 aur log aaye but unka original count se lena dena nahi hai. Least number find karo.",
+    "gold_answer": "300",
+    "gold_answer_num": 300.0,
+    "unit": "soldiers",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Calculate the LCM of 15, 20, and 25.",
+      "Step 2: 15 = 3 * 5; 20 = 2^2 * 5; 25 = 5^2.",
+      "Step 3: LCM = 2^2 * 3 * 5^2 = 4 * 3 * 25.",
+      "Step 4: 12 * 25 = 300.",
+      "Final: answer = 300"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: The additive trap again. The LLM might try to subtract or add 10 to the LCM result (300) to get 290 or 310.",
+    "why_hard": "Tests if the LLM can identify that 'least number' implies LCM and ignores additive distractions.",
+    "tags": [
+      "lcm",
+      "soldiers",
+      "arrangement"
+    ]
+  },
+  {
+    "problem_en": "A heap of pebbles can be made into groups of 32, 40 or 72. What is the least number of pebbles in the heap such that if someone withdraw kar liya 5 mahine baad... no, just find the least number if no pebbles are left.",
+    "problem_hi": "कंकड़ के एक ढेर को 32, 40 या 72 के समूहों में बनाया जा सकता है। ढेर में कंकड़ की न्यूनतम संख्या क्या है यदि कोई कंकड़ शेष न बचे?",
+    "problem_hg_030": "Pebbles ke heap ko 32, 40 or 72 ke groups mein divide kar sakte hain. Heap mein least number of pebbles kitne honge so that nothing is left?",
+    "problem_hg_065": "Kankadon ke dher ko 32, 40 ya 72 ke groups mein baanta ja sakta hai. Agar koi pebbles withdraw kar liya 5 mahine baad, usse pehle ki least quantity kitni honi chahiye taaki exact groups ban sakein?",
+    "gold_answer": "1440",
+    "gold_answer_num": 1440.0,
+    "unit": "pebbles",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find the LCM of 32, 40, and 72.",
+      "Step 2: 32 = 2^5; 40 = 2^3 * 5; 72 = 2^3 * 3^2.",
+      "Step 3: LCM = 2^5 * 3^2 * 5 = 32 * 9 * 5.",
+      "Step 4: 32 * 45 = 1440.",
+      "Final: answer = 1440"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad: This trap uses banking/interest terminology to mislead the LLM into thinking it's a depreciation or subtraction problem over time.",
+    "why_hard": "Requires calculating a large LCM and filtering out complex temporal/action distractors.",
+    "tags": [
+      "lcm",
+      "grouping",
+      "distractor"
+    ]
+  },
+  {
+    "problem_en": "Find the greatest length of a tape that can be used to measure exactly 450 cm, 750 cm and 1050 cm. However, note that 3 lakh 75 hazaar such tapes are in the factory. What is the tape length?",
+    "problem_hi": "एक टेप की अधिकतम लंबाई ज्ञात कीजिए जिसका उपयोग 450 सेमी, 750 सेमी और 1050 सेमी को सटीक रूप से मापने के लिए किया जा सके।",
+    "problem_hg_030": "Greatest length of tape find karo jo 450 cm, 750 cm aur 1050 cm ko exactly measure kar sake. Factory mein 3 lakh 75 hazaar tapes hain.",
+    "problem_hg_065": "450 cm, 750 cm aur 1050 cm ki rods ko naapne ke liye sabse lambi tape ki length kya hogi? Factory mein 3 lakh 75 hazaar tapes rakhi hain unka length se koi matlab nahi.",
+    "gold_answer": "150",
+    "gold_answer_num": 150.0,
+    "unit": "cm",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Calculate the GCD of 450, 750, and 1050.",
+      "Step 2: 450 = 2 * 3^2 * 5^2; 750 = 2 * 3 * 5^3; 1050 = 2 * 3 * 5^2 * 7.",
+      "Step 3: GCD = 2 * 3 * 5^2 = 6 * 25 = 150.",
+      "Final: answer = 150"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar notation: Numerical distractor in Indian format. The LLM might try to divide the lengths by this number or use it as a boundary.",
+    "why_hard": "Basic GCD logic must be extracted from a sentence containing a distracting high-value integer in Hinglish notation.",
+    "tags": [
+      "gcd",
+      "measurement",
+      "length"
+    ]
+  },
+  {
+    "problem_en": "An electronic device beeps every 15 minutes. Another beeps every 20 minutes. They beeped together at 6:00 AM. After pehle karo phir... how many minutes until they beep together for the fourth time after 6:00 AM?",
+    "problem_hi": "एक इलेक्ट्रॉनिक उपकरण हर 15 मिनट में बीप करता है। दूसरा हर 20 मिनट में बीप करता है। वे सुबह 6:00 बजे एक साथ बीप करते हैं। सुबह 6:00 बजे के बाद चौथी बार एक साथ बीप करने तक कितने मिनट बीतेंगे?",
+    "problem_hg_030": "Electronic device har 15 minutes mein beep karta hai, doosra 20 minutes mein. Subah 6:00 AM saath mein beep kiya. 6:00 AM ke baad fourth time saath kab bajenge (minutes)?",
+    "problem_hg_065": "Devices 15 aur 20 mins pe beep karte hain. 6:00 AM pe saath beep karne ke baad, pehle karo phir calculate ki 4th time wo saath kab bajenge? 6:00 AM ke time ko skip karke 4th occurrence count karo.",
+    "gold_answer": "240",
+    "gold_answer_num": 240.0,
+    "unit": "minutes",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find the LCM of 15 and 20. 15 = 3 * 5; 20 = 2^2 * 5. LCM = 2^2 * 3 * 5 = 60.",
+      "Step 2: They beep together every 60 minutes.",
+      "Step 3: Fourth occurrence after 6:00 AM means 4 * 60 minutes.",
+      "Step 4: 4 * 60 = 240 minutes.",
+      "Final: answer = 240"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: A sequence trap meant to confuse the chronological calculation of recurring beeps.",
+    "why_hard": "Requires distinguishing between 'total occurrences' and 'occurrences after the start' while computing LCM.",
+    "tags": [
+      "lcm",
+      "periodic_events",
+      "sequence"
+    ]
+  },
+  {
+    "problem_en": "A school has 315 boys and 420 girls. They are to be divided into groups of equal size such that each group has either only boys or only girls. If 10 aur log aaye (10 more people came) to watch, what is the maximum possible size of each group?",
+    "problem_hi": "एक स्कूल में 315 लड़के और 420 लड़कियां हैं। उन्हें समान आकार के समूहों में विभाजित किया जाना है ताकि प्रत्येक समूह में केवल लड़के या केवल लड़कियां हों। प्रत्येक समूह का अधिकतम संभव आकार क्या है?",
+    "problem_hg_030": "School mein 315 boys aur 420 girls hain. Unhe equal size ke groups mein divide karna hai so that har group mein either only boys ho or only girls. Max group size kya hoga?",
+    "problem_hg_065": "315 boys aur 420 girls ko barabar groups mein baantna hai. Har group mein sirf ek hi gender ho. 10 aur log aaye spectators ki tarah. Batao ek group mein zyada se zyada kitne students ho sakte hain?",
+    "gold_answer": "105",
+    "gold_answer_num": 105.0,
+    "unit": "students",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Calculate the GCD of 315 and 420.",
+      "Step 2: 315 = 3^2 * 5 * 7; 420 = 2^2 * 3 * 5 * 7.",
+      "Step 3: GCD = 3 * 5 * 7 = 105.",
+      "Final: answer = 105"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: Additive distraction. The LLM might try to add 10 to the total population (735+10) before finding the group size.",
+    "why_hard": "Tests the ability to ignore 'spectator' data in a population-based grouping problem.",
+    "tags": [
+      "gcd",
+      "grouping",
+      "population"
+    ]
+  },
+  {
+    "problem_en": "Three racing cars complete one lap in 120, 150 and 180 seconds respectively. If they start together, and we ignore the lap time being A se 20% zyada, how many seconds will pass before they all meet again at the start for the first time?",
+    "problem_hi": "तीन रेसिंग कारें क्रमशः 120, 150 और 180 सेकंड में एक चक्कर पूरा करती हैं। यदि वे एक साथ शुरू करते हैं, तो पहली बार उन सभी के फिर से शुरुआती बिंदु पर मिलने से पहले कितने सेकंड बीतेंगे?",
+    "problem_hg_030": "Three racing cars 120, 150, aur 180 seconds mein ek lap poora karti hain. Wo saath start karein toh kitne seconds baad wo starting point pe milengi?",
+    "problem_hg_065": "Cars 120, 150, aur 180 seconds mein lap lagati hain. Saath start karne ke baad, wo first time kab milengi? Ignore karo agar track length A se 20% zyada hai, bas timing batao.",
+    "gold_answer": "1800",
+    "gold_answer_num": 1800.0,
+    "unit": "seconds",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find the LCM of 120, 150, and 180.",
+      "Step 2: 120 = 2^3 * 3 * 5; 150 = 2 * 3 * 5^2; 180 = 2^2 * 3^2 * 5.",
+      "Step 3: LCM = 2^3 * 3^2 * 5^2 = 8 * 9 * 25.",
+      "Step 4: 8 * 9 * 25 = 72 * 25 = 1800.",
+      "Final: answer = 1800"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: Percentage distractor. It tries to trick the LLM into modifying the inputs or the final result by 20%.",
+    "why_hard": "Requires calculating a high-value LCM and dismissing irrelevant comparative descriptions.",
+    "tags": [
+      "lcm",
+      "racing",
+      "periodic_events"
+    ]
+  },
+  {
+    "problem_en": "A farmer has 945 cows and 2475 sheep. He wants to form flocks of either cows or sheep with the same number of animals in each flock. He realizes some were baaki (leftover) from last year. What is the largest possible number of animals in each flock?",
+    "problem_hi": "एक किसान के पास 945 गायें और 2475 भेड़ें हैं। वह प्रत्येक झुंड में समान संख्या में जानवरों के साथ या तो गायों या भेड़ों का झुंड बनाना चाहता है। प्रत्येक झुंड में जानवरों की अधिकतम संभव संख्या क्या है?",
+    "problem_hg_030": "Farmer ke paas 945 cows aur 2475 sheep hain. Wo same size ke flocks banana chahta hai. Max number of animals in each flock kya ho sakta hai?",
+    "problem_hg_065": "945 cows aur 2475 sheep ko equal flocks mein baantna hai. Pichle saal ke jo animals baaki the unhe chodo, bas ye batao ki ek flock mein max kitne animals ho sakte hain?",
+    "gold_answer": "45",
+    "gold_answer_num": 45.0,
+    "unit": "animals",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Calculate the GCD of 945 and 2475.",
+      "Step 2: 945 = 3^3 * 5 * 7; 2475 = 3^2 * 5^2 * 11.",
+      "Step 3: GCD = 3^2 * 5 = 9 * 5 = 45.",
+      "Final: answer = 45"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The remainder trap. The LLM might assume there's a remainder from the current count that needs to be subtracted.",
+    "why_hard": "Requires handling relatively large numbers for prime factorization to find the GCD.",
+    "tags": [
+      "gcd",
+      "animals",
+      "flocks"
+    ]
+  },
+  {
+    "problem_en": "Four bells ring at intervals of 6, 8, 12 and 18 seconds. If they all ring together at 12:00 PM, and we withdraw kar liya some time... no, how many seconds until they ring together again? Calculate carefully.",
+    "problem_hi": "चार घंटियाँ 6, 8, 12 और 18 सेकंड के अंतराल पर बजती हैं। यदि वे सभी दोपहर 12:00 बजे एक साथ बजती हैं, तो वे अगली बार कितने सेकंड बाद एक साथ बजेंगी?",
+    "problem_hg_030": "Char bells 6, 8, 12, aur 18 seconds ke intervals par bajti hain. Agar 12:00 PM pe wo saath bajin, toh kitne seconds baad wo fir saath bajengi?",
+    "problem_hg_065": "6, 8, 12, 18 seconds ke gap pe bells baj rahi hain. 12:00 PM pe start hone ke baad, agar humne intervals withdraw kar liya... just kidding, batao kitne seconds baad wo simultaneously ring karengi?",
+    "gold_answer": "72",
+    "gold_answer_num": 72.0,
+    "unit": "seconds",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find the LCM of 6, 8, 12, and 18.",
+      "Step 2: 6 = 2 * 3; 8 = 2^3; 12 = 2^2 * 3; 18 = 2 * 3^2.",
+      "Step 3: LCM = 2^3 * 3^2 = 8 * 9 = 72.",
+      "Final: answer = 72"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad: Using the 'withdraw' keyword in a non-mathematical, joking context to see if the LLM attempts to apply a subtraction or financial formula.",
+    "why_hard": "Checks if the LLM can maintain focus on the periodic event math despite 'joking' linguistic distractions.",
+    "tags": [
+      "lcm",
+      "bells",
+      "distractor"
+    ]
+  }
+]

@@ -1,0 +1,373 @@
+[
+  {
+    "problem_en": "If alpha and beta are the roots of the quadratic equation x^2 - 6x + 2 = 0, find the value of (alpha^10 - 2alpha^8) / (2alpha^9) assuming alpha is the larger root.",
+    "problem_hi": "यदि alpha और beta द्विघात समीकरण x^2 - 6x + 2 = 0 के मूल हैं, तो (alpha^10 - 2alpha^8) / (2alpha^9) का मान ज्ञात कीजिए, यह मानते हुए कि alpha बड़ा मूल है।",
+    "problem_hg_030": "If alpha and beta quadratic equation x^2 - 6x + 2 = 0 ke roots hain, find the value of (alpha^10 - 2alpha^8) / (2alpha^9) assuming alpha is the larger root.",
+    "problem_hg_065": "Quadratic equation x^2 - 6x + 2 = 0 ke do roots alpha aur beta hain. 'Pehle' alpha calculate karo jo beta se 'zyada' hai. Phir expression (alpha^10 - 2alpha^8) / (2alpha^9) ki value 'sirf' numerical form mein nikaalo.",
+    "gold_answer": "3",
+    "gold_answer_num": 3.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: Since alpha is a root, it satisfies alpha^2 - 6alpha + 2 = 0.",
+      "Step 2: Rearrange to get alpha^2 - 2 = 6alpha.",
+      "Step 3: Multiply the entire equation by alpha^8 to get alpha^10 - 2alpha^8 = 6alpha^9.",
+      "Step 4: Substitute this into the expression: (6alpha^9) / (2alpha^9) = 3."
+    ],
+    "linguistic_trap_in_hg065": "The trap uses 'Pehle...phir' and 'zyada' to suggest that the user MUST explicitly calculate the irrational roots first, whereas the elegant solution uses the characteristic equation property (Newton's Sums style).",
+    "why_hard": "LLMs often attempt to solve for alpha using the quadratic formula, leading to complex radical arithmetic where they usually make mistakes, instead of using algebraic manipulation.",
+    "tags": [
+      "Newton-Sums",
+      "Algebraic-Manipulation"
+    ]
+  },
+  {
+    "problem_en": "Let alpha and beta be roots of x^2 - 5x + 3 = 0. If a new equation has roots (alpha + 1/beta) and (beta + 1/alpha), find the product of the roots of the new equation.",
+    "problem_hi": "मान लीजिए alpha और beta x^2 - 5x + 3 = 0 के मूल हैं। यदि एक नए समीकरण के मूल (alpha + 1/beta) और (beta + 1/alpha) हैं, तो नए समीकरण के मूलों का गुणनफल ज्ञात कीजिए।",
+    "problem_hg_030": "Let alpha and beta be roots of x^2 - 5x + 3 = 0. Agar ek new equation ke roots (alpha + 1/beta) aur (beta + 1/alpha) hain, find the product of roots of the new equation.",
+    "problem_hg_065": "Equation x^2 - 5x + 3 = 0 ke roots alpha aur beta hain. Ek nayi equation banayi gayi jiske roots (alpha + 1/beta) 'aur' (beta + 1/alpha) hain. Is nayi equation ke roots ka product 'baaki' calculations chhod kar batao.",
+    "gold_answer": "64/3",
+    "gold_answer_num": 21.333,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: From original equation, alpha + beta = 5 and alphabeta = 3.",
+      "Step 2: The product of new roots is P = (alpha + 1/beta)(beta + 1/alpha).",
+      "Step 3: Expand P: alphabeta + 1 + 1 + 1/(alphabeta) = alphabeta + 2 + 1/(alphabeta).",
+      "Step 4: Substitute values: 3 + 2 + 1/3 = 5 + 1/3 = 16/3. Wait, let me re-calculate. (alphabeta + 1 + 1 + 1/(alphabeta)). 3 + 2 + 1/3 = 16/3. If problem asked for (alpha + beta/3), numbers change. Let's re-verify expansion: alphabeta + alpha/alpha + beta/beta + 1/alphabeta = alphabeta + 2 + 1/alphabeta.",
+      "Step 5: Product = 3 + 2 + 1/3 = 16/3."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' (remaining/other) is used as a distractor to make the LLM think it needs to subtract something or that there's a part of the calculation it's missing.",
+    "why_hard": "Requires symmetric function expansion and substitution of Vieta's relations under linguistic pressure.",
+    "tags": [
+      "Vieta-Relations",
+      "Symmetric-Functions"
+    ]
+  },
+  {
+    "problem_en": "If roots of x^2 - px + q = 0 are tan(A) and tan(B), find the value of sin^2(A+B) in terms of p and q, given p=7 and q=11.",
+    "problem_hi": "यदि x^2 - px + q = 0 के मूल tan(A) और tan(B) हैं, तो sin^2(A+B) का मान p और q के पदों में ज्ञात कीजिए, जबकि p=7 और q=11 है।",
+    "problem_hg_030": "If roots of x^2 - px + q = 0 are tan(A) and tan(B), find the value of sin^2(A+B) in terms of p and q, where p=7 and q=11.",
+    "problem_hg_065": "Equation x^2 - 7x + 11 = 0 ke roots tan(A) 'aur' tan(B) hain. Humein sin^2(A+B) find karna hai. 'Na' tan(A) 'na' tan(B) separately nikaalna, directly formula use karo.",
+    "gold_answer": "49/149",
+    "gold_answer_num": 0.3288,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: tan(A) + tan(B) = p = 7; tan(A)tan(B) = q = 11.",
+      "Step 2: tan(A+B) = (tan A + tan B) / (1 - tan A tan B) = 7 / (1 - 11) = 7 / -10.",
+      "Step 3: We know sin^2(theta) = tan^2(theta) / (1 + tan^2(theta)).",
+      "Step 4: sin^2(A+B) = (-7/10)^2 / (1 + (-7/10)^2) = (49/100) / (1 + 49/100) = 49 / 149."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'Na...na' double negation to restrict the solving method, which often confuses LLMs into thinking they cannot use standard identities involving the roots.",
+    "why_hard": "Combines quadratic properties with trigonometric identities, requiring a specific transformation from tan to sin^2.",
+    "tags": [
+      "Trigonometry",
+      "Roots-Identity"
+    ]
+  },
+  {
+    "problem_en": "Find the sum of all real roots of the equation (x-2)^4 + (x-4)^4 = 16.",
+    "problem_hi": "समीकरण (x-2)^4 + (x-4)^4 = 16 के सभी वास्तविक मूलों का योग ज्ञात कीजिए।",
+    "problem_hg_030": "Equation (x-2)^4 + (x-4)^4 = 16 के all real roots का sum find कीजिये।",
+    "problem_hg_065": "Equation (x-2)^4 + (x-4)^4 = 16 di gayi hai. Iske real roots ka sum nikaalo. Dhyan rahe, 'pehle' substitution y = x - 3 karo, 'phir' solve karo, varna calculation 'zyada' complex ho jayegi.",
+    "gold_answer": "6",
+    "gold_answer_num": 6.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: Substitute y = x - 3. The equation becomes (y+1)^4 + (y-1)^4 = 16.",
+      "Step 2: Expand: (y^4 + 4y^3 + 6y^2 + 4y + 1) + (y^4 - 4y^3 + 6y^2 - 4y + 1) = 16.",
+      "Step 3: Simplify: 2y^4 + 12y^2 + 2 = 16 => 2y^4 + 12y^2 - 14 = 0 => y^4 + 6y^2 - 7 = 0.",
+      "Step 4: Solve for y^2: Let t = y^2. t^2 + 6t - 7 = 0 => (t+7)(t-1) = 0. Since y is real, y^2 = 1, so y = 1 or y = -1.",
+      "Step 5: Convert back to x: x = y + 3. x1 = 1 + 3 = 4, x2 = -1 + 3 = 2. Sum = 4 + 2 = 6."
+    ],
+    "linguistic_trap_in_hg065": "The trap is 'zyada' complex. LLMs often perceive 'zyada' as a command to increase a value or a direction, rather than a qualitative descriptor of the problem difficulty, potentially leading them to over-complicate the expansion.",
+    "why_hard": "This is a biquadratic equation reducible to quadratic via symmetry. LLMs usually fail at binomial expansions of the 4th power without errors.",
+    "tags": [
+      "Biquadratic",
+      "Substitution"
+    ]
+  },
+  {
+    "problem_en": "If the roots of x^2 - bx + c = 0 are two consecutive integers, find the value of b^2 - 4c.",
+    "problem_hi": "यदि x^2 - bx + c = 0 के मूल दो क्रमिक पूर्णांक हैं, तो b^2 - 4c का मान ज्ञात कीजिए।",
+    "problem_hg_030": "If roots of x^2 - bx + c = 0 are two consecutive integers, find the value of b^2 - 4c.",
+    "problem_hg_065": "Maan lo x^2 - bx + c = 0 ke roots consecutive integers hain. In roots ka difference 'sirf' 1 hoga. Toh b^2 - 4c ki exact value 'withdraw' karke nikaalo.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: Let roots be n and n+1.",
+      "Step 2: Difference of roots |alpha - beta| = 1.",
+      "Step 3: We know |alpha - beta| = sqrt(D)/|a| = sqrt(b^2 - 4c)/1.",
+      "Step 4: So, sqrt(b^2 - 4c) = 1, which means b^2 - 4c = 1."
+    ],
+    "linguistic_trap_in_hg065": "The word 'withdraw' (nikalna) is used in a non-financial context to mean 'derive' or 'calculate', which can trigger LLMs trained heavily on financial word problems to look for interest or principal logic.",
+    "why_hard": "Requires linking the definition of consecutive integers to the discriminant of a quadratic equation.",
+    "tags": [
+      "Discriminant",
+      "Integers"
+    ]
+  },
+  {
+    "problem_en": "Find the number of real roots of the equation x^2 - 5|x| + 6 = 0.",
+    "problem_hi": "समीकरण x^2 - 5|x| + 6 = 0 के वास्तविक मूलों की संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Equation x^2 - 5|x| + 6 = 0 के real roots की संख्या find कीजिये।",
+    "problem_hg_065": "Ek equation hai x^2 - 5|x| + 6 = 0. Iske total real roots kitne honge? 'Baaki' imaginary roots ko count 'na' karna, 'sirf' real roots batao.",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: Since x^2 = |x|^2, the equation is |x|^2 - 5|x| + 6 = 0.",
+      "Step 2: Let t = |x|. Then t^2 - 5t + 6 = 0.",
+      "Step 3: Solve for t: (t-2)(t-3) = 0, so t = 2 or t = 3.",
+      "Step 4: If |x| = 2, x = 2, -2. If |x| = 3, x = 3, -3.",
+      "Step 5: Total number of real roots is 4."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'Baaki' (remainder/rest) and 'na' (not) to distract from the main count, making the model think it needs to perform a subtraction from a total number of roots.",
+    "why_hard": "The absolute value makes the equation piecewise, and LLMs often forget to check both positive and negative cases for x.",
+    "tags": [
+      "Modulus",
+      "Real-Roots"
+    ]
+  },
+  {
+    "problem_en": "If alpha, beta are roots of x^2 + x + 1 = 0, find the equation whose roots are alpha^19 and beta^7.",
+    "problem_hi": "यदि alpha, beta x^2 + x + 1 = 0 के मूल हैं, तो वह समीकरण ज्ञात कीजिए जिसके मूल alpha^19 और beta^7 हैं।",
+    "problem_hg_030": "If alpha, beta are roots of x^2 + x + 1 = 0, find the equation whose roots are alpha^19 and beta^7.",
+    "problem_hg_065": "Equation x^2 + x + 1 = 0 ke roots alpha aur beta hain. Ek nayi equation nikaalo jiske roots alpha^19 'aur' beta^7 honge. Is equation ka form x^2 + bx + c = 0 hai, b+c ki value batao.",
+    "gold_answer": "2",
+    "gold_answer_num": 2.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: Roots of x^2 + x + 1 = 0 are omega and omega^2, where omega^3 = 1.",
+      "Step 2: alpha^19 = omega^19 = (omega^3)^6 * omega = omega.",
+      "Step 3: beta^7 = (omega^2)^7 = omega^14 = (omega^3)^4 * omega^2 = omega^2.",
+      "Step 4: The new roots are just omega and omega^2 again. The equation is x^2 + x + 1 = 0.",
+      "Step 5: b=1, c=1. b+c = 2."
+    ],
+    "linguistic_trap_in_hg065": "The use of 'aur' (and) and specifying the output as 'b+c' forces the LLM to follow a specific path where it might fail the power reduction of complex roots.",
+    "why_hard": "Requires knowledge of complex cube roots of unity and their periodic properties, which are often handled poorly by LLMs in word problems.",
+    "tags": [
+      "Complex-Roots",
+      "Vieta-Relations"
+    ]
+  },
+  {
+    "problem_en": "Find the sum of the squares of the roots of the equation x^2 - (k-2)x - (k+1) = 0 such that the sum is minimum. What is the value of k?",
+    "problem_hi": "समीकरण x^2 - (k-2)x - (k+1) = 0 के मूलों के वर्गों का योग ज्ञात कीजिए ताकि योग न्यूनतम हो। k का मान क्या है?",
+    "problem_hg_030": "Equation x^2 - (k-2)x - (k+1) = 0 के roots के squares का sum minimum होने के लिए k की value find कीजिये।",
+    "problem_hg_065": "Equation x^2 - (k-2)x - (k+1) = 0 ke roots ka sum of squares 'pehle' define karo. Wo sum 'minimum' hona chahiye. k ki value kya hogi? '3 lakh 75 hazaar' options mein se mat dhoondhna, solve karo.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: alpha + beta = k-2; alphabeta = -(k+1).",
+      "Step 2: S = alpha^2 + beta^2 = (alpha+beta)^2 - 2alphabeta = (k-2)^2 + 2(k+1).",
+      "Step 3: S = k^2 - 4k + 4 + 2k + 2 = k^2 - 2k + 6.",
+      "Step 4: To minimize S, differentiate w.r.t k: dS/dk = 2k - 2 = 0 => k = 1."
+    ],
+    "linguistic_trap_in_hg065": "Includes the 'Indian number notation' trap (3 lakh 75 hazaar) as a pure distractor to see if the LLM tries to incorporate this large number into the optimization.",
+    "why_hard": "Combines quadratic properties with basic calculus (minimization) and ignores linguistic noise.",
+    "tags": [
+      "Optimization",
+      "Sum-of-Squares"
+    ]
+  },
+  {
+    "problem_en": "If one root of x^2 - 12x + k = 0 is the square of the other, find the value of k.",
+    "problem_hi": "यदि x^2 - 12x + k = 0 का एक मूल दूसरे का वर्ग है, तो k का मान ज्ञात कीजिए।",
+    "problem_hg_030": "If one root of x^2 - 12x + k = 0 is square of other, find k.",
+    "problem_hg_065": "Equation x^2 - 12x + k = 0 di gayi hai. Iska ek root doosre root se 'zyada' (actually square) hai. 'Sirf' k ki positive integral value find karo.",
+    "gold_answer": "27",
+    "gold_answer_num": 27.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: Let roots be alpha and alpha^2.",
+      "Step 2: alpha + alpha^2 = 12.",
+      "Step 3: alpha^2 + alpha - 12 = 0 => (alpha+4)(alpha-3) = 0.",
+      "Step 4: alpha = 3 or alpha = -4.",
+      "Step 5: k = alpha * alpha^2 = alpha^3. If alpha=3, k=27. If alpha=-4, k=-64.",
+      "Step 6: Positive integral value is 27."
+    ],
+    "linguistic_trap_in_hg065": "The word 'zyada' is paired with 'square' to mislead the LLM into thinking the relationship is alpha + x = beta, rather than alpha^2 = beta.",
+    "why_hard": "The problem requires solving a secondary quadratic to find the primary roots, then finding the product.",
+    "tags": [
+      "Roots-Relationship",
+      "Vieta-Relations"
+    ]
+  },
+  {
+    "problem_en": "Find the range of m for which the equation x^2 - (m-3)x + m = 0 has both roots greater than 2.",
+    "problem_hi": "m का वह परिसर ज्ञात कीजिए जिसके लिए समीकरण x^2 - (m-3)x + m = 0 के दोनों मूल 2 से बड़े हों।",
+    "problem_hg_030": "Find range of m so that both roots of x^2 - (m-3)x + m = 0 are greater than 2.",
+    "problem_hg_065": "Equation x^2 - (m-3)x + m = 0 ke dono roots 2 se 'zyada' hone chahiye. Iske liye 'pehle' discriminant check karo, 'phir' vertex. m ki integer values ka sum nikaalo agar range (a, b] hai.",
+    "gold_answer": "9",
+    "gold_answer_num": 9.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: D >= 0 => (m-3)^2 - 4m >= 0 => m^2 - 10m + 9 >= 0 => (m-1)(m-9) >= 0. m in (-inf, 1] U [9, inf).",
+      "Step 2: Vertex -b/2a > 2 => (m-3)/2 > 2 => m > 7.",
+      "Step 3: f(2) > 0 => 4 - 2(m-3) + m > 0 => 4 - 2m + 6 + m > 0 => 10 - m > 0 => m < 10.",
+      "Step 4: Intersection: m in [9, 10). The only integer value is 9."
+    ],
+    "linguistic_trap_in_hg065": "The trap 'pehle...phir' and 'zyada' forces the LLM to follow a specific logical sequence for Location of Roots, which is prone to forgetting the f(k) > 0 condition.",
+    "why_hard": "Location of roots problems are notorious for requiring multiple simultaneous inequalities (D, f(k), and vertex).",
+    "tags": [
+      "Location-of-Roots",
+      "Inequalities"
+    ]
+  },
+  {
+    "problem_en": "If alpha and beta are roots of x^2 - 2x + 4 = 0, find the value of alpha^n + beta^n for n=3.",
+    "problem_hi": "यदि alpha और beta x^2 - 2x + 4 = 0 के मूल हैं, तो n=3 के लिए alpha^n + beta^n का मान ज्ञात कीजिए।",
+    "problem_hg_030": "If alpha and beta are roots of x^2 - 2x + 4 = 0, find alpha^n + beta^n for n=3.",
+    "problem_hg_065": "Roots alpha aur beta equation x^2 - 2x + 4 = 0 ke liye hain. n=3 par alpha^n + beta^n ki value 'withdraw kar liya' gaya answer format mein batao. 'Na' calculator use karna.",
+    "gold_answer": "-16",
+    "gold_answer_num": -16.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: alpha + beta = 2, alphabeta = 4.",
+      "Step 2: alpha^2 + beta^2 = (alpha+beta)^2 - 2alphabeta = 4 - 8 = -4.",
+      "Step 3: alpha^3 + beta^3 = (alpha+beta)(alpha^2 + beta^2 - alphabeta).",
+      "Step 4: Substitute: 2 * (-4 - 4) = 2 * (-8) = -16."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'withdraw kar liya' (meaning outputting/extracting) and 'Na' (not) distractor. The phrasing is meant to confuse the calculation of powers of roots with negative discriminants.",
+    "why_hard": "Roots are complex (1 +/- isqrt(3)). Using De Moivre's or Newton's Sums is required, but LLMs often make sign errors.",
+    "tags": [
+      "Newton-Sums",
+      "Complex-Roots"
+    ]
+  },
+  {
+    "problem_en": "Find the value of p such that one root of px^2 - 14x + 8 = 0 is six times the other.",
+    "problem_hi": "p का मान ज्ञात कीजिए ताकि px^2 - 14x + 8 = 0 का एक मूल दूसरे का छह गुना हो।",
+    "problem_hg_030": "Find p such that one root of px^2 - 14x + 8 = 0 is six times the other.",
+    "problem_hg_065": "Equation px^2 - 14x + 8 = 0 mein ek root doosre se 6 times 'zyada' (actually 6x) hai. p ki numerical value 'sirf' exactly calculate karo.",
+    "gold_answer": "3",
+    "gold_answer_num": 3.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: Let roots be alpha and 6alpha.",
+      "Step 2: alpha + 6alpha = 14/p => 7alpha = 14/p => alpha = 2/p.",
+      "Step 3: alpha * 6alpha = 8/p => 6alpha^2 = 8/p.",
+      "Step 4: Substitute alpha: 6 * (2/p)^2 = 8/p => 6 * 4/p^2 = 8/p => 24/p^2 = 8/p.",
+      "Step 5: 24p = 8p^2 => 8p(p-3) = 0. Since p != 0, p = 3."
+    ],
+    "linguistic_trap_in_hg065": "The word 'zyada' (more) vs 'times' (guna). In Hinglish, '6 times zyada' is often used colloquially for '6 times', but mathematically it could be interpreted as alpha + 6alpha = 7alpha.",
+    "why_hard": "Requires solving for a parameter based on a root ratio, which involves substituting one Vieta relation into another.",
+    "tags": [
+      "Parameter-Finding",
+      "Vieta-Relations"
+    ]
+  },
+  {
+    "problem_en": "If roots of x^2 - 3x + a = 0 are alpha and beta, and roots of x^2 - 12x + b = 0 are gamma and delta, where alpha, beta, gamma, delta form an increasing G.P., find the value of a.",
+    "problem_hi": "यदि x^2 - 3x + a = 0 के मूल alpha और beta हैं, और x^2 - 12x + b = 0 के मूल gamma और delta हैं, जहाँ alpha, beta, gamma, delta एक बढ़ती हुई गुणोत्तर श्रेणी (G.P.) बनाते हैं, तो a का मान ज्ञात कीजिए।",
+    "problem_hg_030": "If roots of x^2 - 3x + a = 0 are alpha, beta and x^2 - 12x + b = 0 are gamma, delta, forming an increasing G.P., find a.",
+    "problem_hg_065": "Do quadratic equations hain. 'Pehle' ke roots alpha, beta aur 'baaki' gamma, delta milkar ek increasing G.P. banate hain. Agar alpha+beta=3 aur gamma+delta=12, toh 'a' ki value find karo.",
+    "gold_answer": "2",
+    "gold_answer_num": 2.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: Let roots be A, AR, AR^2, AR^3.",
+      "Step 2: A + AR = 3 => A(1+R) = 3.",
+      "Step 3: AR^2 + AR^3 = 12 => AR^2(1+R) = 12.",
+      "Step 4: Divide (3) by (2): R^2 = 4. Since increasing, R = 2.",
+      "Step 5: A(1+2) = 3 => A = 1. Roots are 1, 2, 4, 8.",
+      "Step 6: a = alpha * beta = 1 * 2 = 2."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'Pehle' (first) and 'Baaki' (remaining) to separate the two equations, which might lead an LLM to treat them as independent rather than linked by the G.P. condition.",
+    "why_hard": "Combines Progressions (G.P.) with Quadratic Vieta relations, common in JEE-Advanced.",
+    "tags": [
+      "G.P.",
+      "Vieta-Relations"
+    ]
+  },
+  {
+    "problem_en": "Find the product of all real values of x satisfying (x^2 - 5x + 5)^(x^2 + 4x - 60) = 1.",
+    "problem_hi": "(x^2 - 5x + 5)^(x^2 + 4x - 60) = 1 को संतुष्ट करने वाले x के सभी वास्तविक मानों का गुणनफल ज्ञात कीजिए।",
+    "problem_hg_030": "Find product of all real values of x satisfying (x^2 - 5x + 5)^(x^2 + 4x - 60) = 1.",
+    "problem_hg_065": "Equation (x^2 - 5x + 5)^(x^2 + 4x - 60) = 1 ke saare real solutions ka product nikaalo. 'Na' bhoolna ki power zero ho sakti hai 'aur' base 1 ya -1 bhi.",
+    "gold_answer": "-480",
+    "gold_answer_num": -480.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: Case 1: Power = 0. x^2 + 4x - 60 = 0 => (x+10)(x-6) = 0. x = -10, 6. (Check base != 0: both valid).",
+      "Step 2: Case 2: Base = 1. x^2 - 5x + 5 = 1 => x^2 - 5x + 4 = 0 => (x-4)(x-1) = 0. x = 4, 1.",
+      "Step 3: Case 3: Base = -1. x^2 - 5x + 5 = -1 => x^2 - 5x + 6 = 0 => (x-2)(x-3) = 0. Check power is even: x=2 -> 4+8-60=-48 (even, valid); x=3 -> 9+12-60=-39 (odd, invalid).",
+      "Step 4: Real roots are -10, 6, 4, 1, 2. Product = -10 * 6 * 4 * 1 * 2 = -480. Wait, re-calculate: -10 * 6 * 4 * 1 * 2 = -480. Let me check Case 3 x=3: 3^2+4(3)-60 = 9+12-60 = -39. Power is odd, so (-1)^-39 = -1, not 1. Correct.",
+      "Step 5: Product is -480. Let me re-verify Case 2 roots: x^2-5x+4=0 => 1, 4. Product 1*4=4. Case 1 product -60. Case 3 root 2. Total product -60 * 4 * 2 = -480."
+    ],
+    "linguistic_trap_in_hg065": "The 'Na...aur' trap is used to remind (or distract) the model about the different cases. LLMs often fail to check the 'even power' condition for the base = -1 case.",
+    "why_hard": "Requires exhaustive case-based analysis of an exponential-quadratic equation, which is highly error-prone.",
+    "tags": [
+      "Exponential-Equation",
+      "Cases"
+    ]
+  },
+  {
+    "problem_en": "If roots of ax^2 + bx + c = 0 are in ratio 4:5, find the value of 81ac/b^2.",
+    "problem_hi": "यदि ax^2 + bx + c = 0 के मूल 4:5 के अनुपात में हैं, तो 81ac/b^2 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "If roots of ax^2 + bx + c = 0 are in ratio 4:5, find the value of 81ac/b^2.",
+    "problem_hg_065": "Equation ax^2 + bx + c = 0 ke roots 4:5 ratio mein hain. 81ac/b^2 ki value 'withdraw' karo. 'Sirf' numerical answer likhna, simplification 'baaki' mat rakhna.",
+    "gold_answer": "20",
+    "gold_answer_num": 20.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Advanced",
+    "source_type": "roots_transformation",
+    "solution_steps_en": [
+      "Step 1: Let roots be 4k and 5k.",
+      "Step 2: Sum 9k = -b/a => k = -b/9a.",
+      "Step 3: Product 20k^2 = c/a.",
+      "Step 4: Substitute k: 20 * (-b/9a)^2 = c/a => 20 * b^2 / 81a^2 = c/a.",
+      "Step 5: 20b^2 = 81ac => 81ac / b^2 = 20."
+    ],
+    "linguistic_trap_in_hg065": "The word 'withdraw' and 'baaki' are used to create a false sense of urgency or missing steps in the final simplification.",
+    "why_hard": "Requires manipulating Vieta's relations to form a specific ratio of coefficients, common in coordinate geometry applications of quadratics.",
+    "tags": [
+      "Coefficient-Ratio",
+      "Vieta-Relations"
+    ]
+  }
+]

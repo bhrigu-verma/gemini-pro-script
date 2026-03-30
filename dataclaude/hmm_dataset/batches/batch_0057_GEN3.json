@@ -1,0 +1,393 @@
+[
+  {
+    "problem_en": "Three bells toll at intervals of 12, 15, and 18 minutes respectively. If they toll together at 10:00 AM, find the total number of times they will toll together before 10:01 PM on the same day, excluding the first toll.",
+    "problem_hi": "तीन घंटियाँ क्रमशः 12, 15 और 18 मिनट के अंतराल पर बजती हैं। यदि वे सुबह 10:00 बजे एक साथ बजती हैं, तो उसी दिन रात 10:01 बजे से पहले वे कुल कितनी बार एक साथ बजेंगी, पहली बार को छोड़कर।",
+    "problem_hg_030": "Three bells 12, 15, and 18 minutes ke intervals par toll karti hain. Agar wo 10:00 AM par saath toll karein, toh calculate total number of times they toll together before 10:01 PM on the same day, excluding the start.",
+    "problem_hg_065": "Bells toll hoti hain 12, 15, aur 18 minutes par. 10:00 AM start time hai. Iske baad 10 aur log aaye... nahi, iske baad total kitni baar wo saath bajengi 10:01 PM tak? Pehla wala count nahi karna.",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find the LCM of 12, 15, and 18. 12=2^23, 15=35, 18=23^2. LCM = 2^2 * 3^2 * 5 = 180 minutes.",
+      "Step 2: Convert LCM to hours: 180 / 60 = 3 hours.",
+      "Step 3: Calculate the duration from 10:00 AM to 10:01 PM. This is 12 hours and 1 minute.",
+      "Step 4: Divide duration by interval: 12 hours / 3 hours = 4. The extra 1 minute does not add another toll.",
+      "Final: answer = 4"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: The phrase '10 aur log aaye' is a distractor that an LLM might interpret as adding 10 to the frequency, the starting time, or the final count, whereas it is semantically irrelevant to the math.",
+    "why_hard": "Requires multi-step conversion (LCM -> Hours -> Time Duration) and careful boundary handling for the 'excluding first' condition.",
+    "tags": [
+      "lcm",
+      "time_calculation",
+      "boundary_conditions"
+    ]
+  },
+  {
+    "problem_en": "A circular track is 720 meters long. Three runners start together from the same point with speeds of 40 m/min, 48 m/min, and 60 m/min. Find the time taken in minutes for them to meet at the starting point for the first time.",
+    "problem_hi": "एक वृत्ताकार ट्रैक 720 मीटर लंबा है। तीन धावक एक ही बिंदु से 40 मीटर/मिनट, 48 मीटर/मिनट और 60 मीटर/मिनट की गति से एक साथ शुरू करते हैं। पहली बार शुरुआती बिंदु पर मिलने में उन्हें लगने वाला समय मिनटों में ज्ञात कीजिए।",
+    "problem_hg_030": "Circular track 720m long hai. Runners ki speed 40, 48, and 60 m/min hai. Same point se start karke, find the time in minutes when they meet at the starting point again.",
+    "problem_hg_065": "Track 720m ka hai. Runners 40, 48, aur 60 ki speed se daudte hain. Sab saath nikle par dono ko starting point par hi milna hai. Pehli baar kitne minutes baad milenge?",
+    "gold_answer": "60",
+    "gold_answer_num": 60.0,
+    "unit": "minutes",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Calculate time taken by each runner for one lap. T1 = 720/40 = 18 min, T2 = 720/48 = 15 min, T3 = 720/60 = 12 min.",
+      "Step 2: To meet at the starting point, we need the LCM of their individual lap times.",
+      "Step 3: Find LCM(18, 15, 12). 18=23^2, 15=35, 12=2^23. LCM = 2^2 * 3^2 * 5 = 180.",
+      "Step 4: Note: 180 is the correct LCM. Let's re-verify: 180/18=10, 180/15=12, 180/12=15.",
+      "Final: answer = 180"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: 'Dono ko' usually means 'both of them' (implying 2), but the problem defines three runners. An LLM might ignore the third runner or try to find the meeting time for only two.",
+    "why_hard": "Requires calculating individual lap times first before applying the LCM concept, unlike direct LCM problems.",
+    "tags": [
+      "circular_motion",
+      "speed_time",
+      "lcm"
+    ]
+  },
+  {
+    "problem_en": "Find the smallest number of soldiers in a regiment such that they can be arranged in hollow squares of 15, 20, or 25 deep, and also in a solid square. The result must be a perfect square.",
+    "problem_hi": "एक रेजिमेंट में सैनिकों की न्यूनतम संख्या ज्ञात कीजिए ताकि उन्हें 15, 20, या 25 की गहराई वाले खोखले वर्गों में व्यवस्थित किया जा सके, और एक ठोस वर्ग में भी। परिणाम एक पूर्ण वर्ग होना चाहिए।",
+    "problem_hg_030": "Regiment mein smallest number of soldiers find karo so they can be arranged in squares of 15, 20, or 25 deep, and also in a solid square. Result perfect square hona chahiye.",
+    "problem_hg_065": "Smallest soldiers count nikalna hai jo 15, 20, aur 25 ke groups mein fit ho sakein. Pehle karo LCM calculate phir ensure karo ki result ek perfect square solid square ban jaye.",
+    "gold_answer": "900",
+    "gold_answer_num": 900.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(15, 20, 25). 15=35, 20=2^25, 25=5^2. LCM = 2^2 * 3 * 5^2 = 300.",
+      "Step 2: To be a solid square, the number of soldiers must be a perfect square.",
+      "Step 3: Factorize 300 = 2^2 * 3^1 * 5^2. To make it a perfect square, multiply by the missing factor of 3.",
+      "Step 4: 300 * 3 = 900. 900 is a perfect square (30^2).",
+      "Final: answer = 900"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: 'Pehle karo phir' (First do X then Y) implies a strict sequence. An LLM might get stuck on the LCM and forget to check the perfect square condition if the prompt structure distracts it.",
+    "why_hard": "Combines the concept of LCM with the property of perfect squares (prime factor exponents must be even).",
+    "tags": [
+      "lcm",
+      "perfect_square",
+      "prime_factorization"
+    ]
+  },
+  {
+    "problem_en": "Three electronic devices beep after every 30, 45, and 75 seconds respectively. They beeped together at 9:00 AM. What is the next time they will beep together in minutes and seconds past 9:00 AM?",
+    "problem_hi": "तीन इलेक्ट्रॉनिक उपकरण क्रमशः प्रत्येक 30, 45 और 75 सेकंड के बाद बीप करते हैं। वे सुबह 9:00 बजे एक साथ बीप करते हैं। अगली बार वे 9:00 बजे के कितने मिनट और सेकंड बाद एक साथ बीप करेंगे?",
+    "problem_hg_030": "Three devices 30, 45, aur 75 seconds par beep karte hain. 9:00 AM par saath beep kiya. Next time kab saath beep karenge in minutes and seconds?",
+    "problem_hg_065": "Devices beep hote hain 30, 45, aur 75 seconds par. 9:00 baje saath baje. Calculation ke baad jo baaki bache wo minutes aur seconds mein batao next interval ke liye.",
+    "gold_answer": "7:30",
+    "gold_answer_num": 7.5,
+    "unit": "minutes",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(30, 45, 75). 30=235, 45=3^25, 75=35^2. LCM = 2 * 3^2 * 5^2 = 2 * 9 * 25 = 450 seconds.",
+      "Step 2: Convert 450 seconds into minutes and seconds.",
+      "Step 3: 450 / 60 = 7 minutes with a remainder of 30 seconds.",
+      "Final: answer = 7:30"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The word 'baaki' (remainder) might lead the LLM to only report the remainder seconds (30) or perform a subtraction from a previous step instead of a standard division/modulo.",
+    "why_hard": "Requires precision in calculating LCM of three numbers and then correctly formatting it into a time-based remainder (MM:SS).",
+    "tags": [
+      "lcm",
+      "time_conversion",
+      "units"
+    ]
+  },
+  {
+    "problem_en": "A rectangular courtyard is 18 meters 72 cm long and 13 meters 20 cm broad. It is to be paved with square tiles of the same size. Find the least possible number of such tiles.",
+    "problem_hi": "एक आयताकार प्रांगण 18 मीटर 72 सेमी लंबा और 13 मीटर 20 सेमी चौड़ा है। इसे एक ही आकार की चौकोर टाइलों से पक्का किया जाना है। ऐसी टाइलों की न्यूनतम संभव संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Courtyard 18m 72cm long aur 13m 20cm broad hai. Square tiles se pave karna hai. Least possible number of tiles find karo.",
+    "problem_hg_065": "Dimensions 18m 72cm aur 13m 20cm hain. Hume square tiles lagani hain. Na length se na width se extra space bachni chahiye. Minimum kitni tiles lagengi?",
+    "gold_answer": "4290",
+    "gold_answer_num": 4290.0,
+    "unit": "tiles",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Convert dimensions to cm: L = 1872 cm, B = 1320 cm.",
+      "Step 2: Find the side of the largest possible square tile by calculating HCF(1872, 1320).",
+      "Step 3: HCF calculation: 1872 = 1320 * 1 + 552; 1320 = 552 * 2 + 216; 552 = 216 * 2 + 120; 216 = 120 * 1 + 96; 120 = 96 * 1 + 24; 96 = 24 * 4 + 0. HCF = 24 cm.",
+      "Step 4: Number of tiles = (Area of courtyard) / (Area of one tile) = (1872 * 1320) / (24 * 24).",
+      "Step 5: (1872/24) * (1320/24) = 78 * 55 = 4290.",
+      "Final: answer = 4290"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: The phrase 'na length se na width se extra space bachni chahiye' (no extra space from length or width) uses the 'na... na' trap which might confuse the LLM into thinking it should subtract values instead of finding the HCF.",
+    "why_hard": "Requires finding HCF first and then performing area division, testing if the model understands HCF is the 'side' and the 'least number' comes from 'largest HCF'.",
+    "tags": [
+      "hcf",
+      "area_division",
+      "conversion"
+    ]
+  },
+  {
+    "problem_en": "Three persons begin to walk together around a circular path 11 km long. Their speeds are 4 km/hr, 5.5 km/hr, and 8 km/hr. When will they all come together at the starting point?",
+    "problem_hi": "तीन व्यक्ति 11 किमी लंबे वृत्ताकार पथ पर एक साथ चलना शुरू करते हैं। उनकी गति 4 किमी/घंटा, 5.5 किमी/घंटा और 8 किमी/घंटा है। वे सभी शुरुआती बिंदु पर एक साथ कब आएंगे?",
+    "problem_hg_030": "Three persons 11 km long circular path par walk karte hain. Speeds 4, 5.5, and 8 km/hr hain. Starting point par wo sab kab milenge?",
+    "problem_hg_065": "Path 11 km hai. Speeds 4, 5.5, aur 8 km/hr hain. Teeno saath nikle. Start point par milne ka time batana hai, aur calculate karo timing A se 20% zyada speed mat assume kar lena.",
+    "gold_answer": "22",
+    "gold_answer_num": 22.0,
+    "unit": "hours",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Calculate time for one lap: T1 = 11/4, T2 = 11/5.5 = 110/55 = 2, T3 = 11/8.",
+      "Step 2: Meeting time at starting point = LCM of (11/4, 2/1, 11/8).",
+      "Step 3: LCM of fractions = LCM(numerators) / HCF(denominators).",
+      "Step 4: Numerators: 11, 2, 11. LCM(11, 2, 11) = 22. Denominators: 4, 1, 8. HCF(4, 1, 8) = 1.",
+      "Step 5: LCM = 22 / 1 = 22 hours.",
+      "Final: answer = 22"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: This distractor ('A se 20% zyada speed mat assume kar lena') might trick the LLM into trying to adjust one of the speeds by 20% before starting the LCM calculation.",
+    "why_hard": "Involves LCM of fractions and converting decimal speeds into workable fractions (5.5 = 11/2).",
+    "tags": [
+      "lcm_of_fractions",
+      "circular_motion",
+      "speed"
+    ]
+  },
+  {
+    "problem_en": "Six bells commence tolling together and toll at intervals of 2, 4, 6, 8, 10, and 12 seconds respectively. In 30 minutes, how many times do they toll together, including the first one?",
+    "problem_hi": "छह घंटियां एक साथ बजना शुरू होती हैं और क्रमशः 2, 4, 6, 8, 10 और 12 सेकंड के अंतराल पर बजती हैं। 30 मिनट में वे कितनी बार एक साथ बजती हैं, जिसमें पहली बार भी शामिल है?",
+    "problem_hg_030": "Six bells start tolling together at intervals of 2, 4, 6, 8, 10, and 12 seconds. 30 minutes mein wo kitni baar saath toll karengi, counting the first one?",
+    "problem_hg_065": "6 bells 2, 4, 6, 8, 10, aur 12 seconds ke gap par bajti hain. 30 minutes total time hai. In 30 minutes mein kitni baar saath bajengi? Isme starting toll dono ko mila kar count karna.",
+    "gold_answer": "16",
+    "gold_answer_num": 16.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(2, 4, 6, 8, 10, 12). 2=2, 4=2^2, 6=23, 8=2^3, 10=25, 12=2^23. LCM = 2^3 * 3 * 5 = 120 seconds.",
+      "Step 2: Convert LCM to minutes: 120 seconds = 2 minutes.",
+      "Step 3: Total interval = 30 minutes. Number of tolls in 30 mins = 30 / 2 = 15.",
+      "Step 4: Since the first toll is included, add 1: 15 + 1 = 16.",
+      "Final: answer = 16"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: 'Dono ko mila kar' (including both) is used here vaguely. It might mislead the LLM into thinking it needs to add 2 instead of 1, or that it should count the first and last tolls differently.",
+    "why_hard": "The classic '+1' error at the end of interval problems is exacerbated by the multi-variable LCM calculation.",
+    "tags": [
+      "lcm",
+      "interval_counting",
+      "boundary_conditions"
+    ]
+  },
+  {
+    "problem_en": "What is the smallest number which when divided by 20, 25, 35, and 40 leaves remainders of 14, 19, 29, and 34 respectively?",
+    "problem_hi": "वह छोटी से छोटी संख्या क्या है जिसे 20, 25, 35 और 40 से विभाजित करने पर क्रमशः 14, 19, 29 और 34 शेषफल प्राप्त होता है?",
+    "problem_hg_030": "What is the smallest number which when divided by 20, 25, 35, and 40 leaves remainders of 14, 19, 29, and 34 respectively?",
+    "problem_hg_065": "Sabse chota number dhoondo jise 20, 25, 35, aur 40 se divide karne par 14, 19, 29, aur 34 shesh bache. Hint: baaki gap sabme common hai.",
+    "gold_answer": "1394",
+    "gold_answer_num": 1394.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Check the difference between divisor and remainder: 20-14=6, 25-19=6, 35-29=6, 40-34=6. The common difference k = 6.",
+      "Step 2: Find LCM(20, 25, 35, 40). 20=2^25, 25=5^2, 35=57, 40=2^35. LCM = 2^3 * 5^2 * 7 = 8 * 25 * 7 = 1400.",
+      "Step 3: The required number is (LCM - common difference).",
+      "Step 4: 1400 - 6 = 1394.",
+      "Final: answer = 1394"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The word 'baaki' is used as 'remainder/difference' hint. If interpreted strictly as 'remaining', the LLM might try to apply the remainder as a positive addition rather than a negative subtraction from the LCM.",
+    "why_hard": "Requires identifying the common difference property between divisors and remainders before applying LCM.",
+    "tags": [
+      "lcm",
+      "remainders",
+      "common_difference"
+    ]
+  },
+  {
+    "problem_en": "Find the least number which when divided by 6, 7, 8, 9, and 12 leaves the same remainder 1 in each case.",
+    "problem_hi": "वह छोटी से छोटी संख्या ज्ञात कीजिए जिसे 6, 7, 8, 9 और 12 से विभाजित करने पर प्रत्येक स्थिति में समान शेषफल 1 प्राप्त हो।",
+    "problem_hg_030": "Least number find karo which when divided by 6, 7, 8, 9, and 12 leaves the same remainder 1 in each case.",
+    "problem_hg_065": "Least number dhoondna hai. 6, 7, 8, 9, aur 12 se divide karo toh har baar 1 shesh rehna chahiye. Par calculation se pehle 3 lakh 75 hazaar wala logic mat lagana.",
+    "gold_answer": "505",
+    "gold_answer_num": 505.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(6, 7, 8, 9, 12). 6=23, 7=7, 8=2^3, 9=3^2, 12=2^23. LCM = 2^3 * 3^2 * 7 = 8 * 9 * 7 = 504.",
+      "Step 2: To leave a remainder of 1, add 1 to the LCM.",
+      "Step 3: 504 + 1 = 505.",
+      "Final: answer = 505"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar: Using the 'lakh' notation distractor might lead the LLM to parse a large number or change its magnitude of the search space for the 'least number'.",
+    "why_hard": "Tests basic LCM with a positive remainder addition, ensuring the model doesn't confuse it with common difference subtraction.",
+    "tags": [
+      "lcm",
+      "remainders"
+    ]
+  },
+  {
+    "problem_en": "Three tanker ships carry 403, 434, and 465 liters of diesel respectively. Find the maximum capacity of a container that can measure the diesel of all three tankers in an exact number of times.",
+    "problem_hi": "तीन टैंकर जहाजों में क्रमशः 403, 434 और 465 लीटर डीजल होता है। उस कंटेनर की अधिकतम क्षमता ज्ञात कीजिए जो तीनों टैंकरों के डीजल को सटीक संख्या में माप सके।",
+    "problem_hg_030": "Three tankers carry 403, 434, and 465 liters diesel. Container ki maximum capacity find karo that measures all tankers in exact number of times.",
+    "problem_hg_065": "Tankers ki capacity 403, 434, aur 465 liters hai. Maximum container measure nikalne ke liye HCF chahiye. Pehle karo calculation dhyan se.",
+    "gold_answer": "31",
+    "gold_answer_num": 31.0,
+    "unit": "liters",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: To find the maximum capacity that measures exactly, calculate HCF(403, 434, 465).",
+      "Step 2: 434 - 403 = 31. 465 - 434 = 31.",
+      "Step 3: Check if 31 divides all: 403 / 31 = 13, 434 / 31 = 14, 465 / 31 = 15.",
+      "Step 4: Since 31 divides all and the differences are 31, the HCF is 31.",
+      "Final: answer = 31"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: The 'pehle karo' instruction is used simply to lead the model, but it tests if the 'Code-mixed' context reduces its precision in factoring prime-heavy numbers like 403 (1331).",
+    "why_hard": "Identifying that 403 is not prime and finding its factors (13 and 31) is computationally harder for models without a direct calculator.",
+    "tags": [
+      "hcf",
+      "prime_factorization",
+      "tanker_problem"
+    ]
+  },
+  {
+    "problem_en": "Find the least number of five digits which is exactly divisible by 12, 15, and 18.",
+    "problem_hi": "पाँच अंकों की वह छोटी से छोटी संख्या ज्ञात कीजिए जो 12, 15 और 18 से पूर्णतः विभाज्य हो।",
+    "problem_hg_030": "Five digits ki least number find karo jo 12, 15, and 18 se exactly divisible ho.",
+    "problem_hg_065": "5 digits ki least number chahiye jo 12, 15, aur 18 se kat jaye. Withdraw kar liya 0 logic mat lagana, bas accurate small count batao.",
+    "gold_answer": "10080",
+    "gold_answer_num": 10080.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(12, 15, 18). 12=2^23, 15=35, 18=23^2. LCM = 2^2 * 3^2 * 5 = 180.",
+      "Step 2: Smallest 5-digit number is 10000.",
+      "Step 3: Divide 10000 by 180 to find the remainder: 10000 / 180 = 55.55... remainder is 100.",
+      "Step 4: The next divisible number is 10000 + (180 - 100) = 10080.",
+      "Final: answer = 10080"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad: Using 'withdraw kar liya 0' as a nonsense phrase might make the LLM doubt the 'smallest 5-digit number' (10000) starting point.",
+    "why_hard": "Requires scaling an LCM up to a specific magnitude (5 digits), which involves division and adjustment.",
+    "tags": [
+      "lcm",
+      "digit_constraints"
+    ]
+  },
+  {
+    "problem_en": "Three ropes of lengths 48m, 80m, and 96m are cut into pieces of equal length. Find the least number of pieces obtained.",
+    "problem_hi": "48 मीटर, 80 मीटर और 96 मीटर लंबाई की तीन रस्सियों को समान लंबाई के टुकड़ों में काटा जाता है। प्राप्त टुकड़ों की न्यूनतम संख्या ज्ञात कीजिए।",
+    "problem_hg_030": "Three ropes 48m, 80m, and 96m lengths ki hain. Equal length pieces mein kaatna hai. Least number of pieces find karo.",
+    "problem_hg_065": "Ropes 48m, 80m, aur 96m ki hain. Inhe barabar pieces mein divide karna hai. Baaki koi extra rope nahi bachni chahiye. Minimum kitne pieces milenge?",
+    "gold_answer": "14",
+    "gold_answer_num": 14.0,
+    "unit": "pieces",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: To get the least number of pieces, the length of each piece must be the HCF(48, 80, 96).",
+      "Step 2: 48=2^43, 80=2^45, 96=2^53. HCF = 2^4 = 16 meters.",
+      "Step 3: Calculate pieces from each rope: P1 = 48/16 = 3, P2 = 80/16 = 5, P3 = 96/16 = 6.",
+      "Step 4: Total pieces = 3 + 5 + 6 = 14.",
+      "Final: answer = 14"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The use of 'baaki' (remainder/leftover) suggests there might be a remainder, potentially confusing the LLM into doing a modulo operation instead of summing up HCF divisions.",
+    "why_hard": "Tests the inverse relationship between HCF (maximum size) and minimum quantity (least number of pieces).",
+    "tags": [
+      "hcf",
+      "division"
+    ]
+  },
+  {
+    "problem_en": "Find the smallest number which when divided by 15, 20, and 30 leaves a remainder of 5 in each case, but when divided by 11 leaves no remainder.",
+    "problem_hi": "वह छोटी से छोटी संख्या ज्ञात कीजिए जिसे 15, 20 और 30 से विभाजित करने पर प्रत्येक स्थिति में 5 शेषफल प्राप्त होता है, लेकिन 11 से विभाजित करने पर कोई शेषफल नहीं बचता है।",
+    "problem_hg_030": "Smallest number find karo which when divided by 15, 20, and 30 leaves remainder 5, but divided by 11 leaves 0 remainder.",
+    "problem_hg_065": "Wo smallest number nikalna hai jo 15, 20, aur 30 se divide hoke 5 shesh de. Par check karna ki 11 se divisible ho. Calculation mein 6 mahine baad wala interest mat lagana.",
+    "gold_answer": "65",
+    "gold_answer_num": 65.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(15, 20, 30) = 60.",
+      "Step 2: The number must be of the form (60k + 5).",
+      "Step 3: Test values for k such that (60k + 5) is divisible by 11.",
+      "Step 4: k=1: 65. 65 / 11 leaves remainder 10. k=2: 125. 125 / 11 leaves remainder 4. k=3: 185. 185/11 rem 9. k=4: 245. k=5: 305. Wait, 65/11 is 511+10. Check k=1 again.",
+      "Step 5: Let's test again: k=1: 65. k=2: 125. k=3: 185. k=4: 245. k=5: 305. k=6: 365. k=7: 425. k=8: 485. k=9: 545. k=10: 605.",
+      "Step 6: 605 / 11 = 55. It is divisible.",
+      "Final: answer = 605"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad: This temporal distractor ('6 months later') might lead the LLM to search for a solution involving rates or time, deviating from pure modular arithmetic.",
+    "why_hard": "Requires iterating through a linear congruence (60k + 5 ≡ 0 mod 11).",
+    "tags": [
+      "lcm",
+      "linear_congruence",
+      "remainders"
+    ]
+  },
+  {
+    "problem_en": "The HCF and LCM of two numbers are 13 and 455 respectively. If one of the numbers lies between 75 and 125, find the sum of the digits of that number.",
+    "problem_hi": "दो संख्याओं का HCF और LCM क्रमशः 13 और 455 है। यदि उनमें से एक संख्या 75 और 125 के बीच स्थित है, तो उस संख्या के अंकों का योग ज्ञात कीजिए।",
+    "problem_hg_030": "Two numbers ka HCF 13 and LCM 455 hai. Agar one number 75 to 125 ke beech hai, find the sum of digits of that number.",
+    "problem_hg_065": "HCF 13 aur LCM 455 hai. Ek number 75 aur 125 ke beech mein hai. A se 20% zyada logic mat sochna, bas us number ke digits ka sum batao.",
+    "gold_answer": "10",
+    "gold_answer_num": 10.0,
+    "unit": "dimensionless",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Product of numbers = HCF * LCM = 13 * 455.",
+      "Step 2: Let numbers be 13a and 13b where HCF(a, b) = 1.",
+      "Step 3: 13a * 13b = 13 * 455 => 13 * ab = 455 => ab = 35.",
+      "Step 4: Possible pairs (a, b) are (1, 35) or (5, 7).",
+      "Step 5: Numbers: (131, 1335) = (13, 455) or (135, 137) = (65, 91).",
+      "Step 6: The number between 75 and 125 is 91. Sum of digits of 91 = 9 + 1 = 10.",
+      "Final: answer = 10"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: Distracts the LLM by suggesting a percentage-based scaling relationship between the two numbers, which doesn't exist.",
+    "why_hard": "Requires applying the HCFLCM product property and then testing coprime factor pairs to meet a range constraint.",
+    "tags": [
+      "hcf_lcm_relation",
+      "range_constraint",
+      "sum_of_digits"
+    ]
+  },
+  {
+    "problem_en": "Traffic lights at three different road crossings change after every 48, 72, and 108 seconds respectively. If they all change simultaneously at 8:20:00 hours, what is the next time they will change simultaneously?",
+    "problem_hi": "तीन अलग-अलग सड़क चौराहों पर ट्रैफिक लाइट क्रमशः प्रत्येक 48, 72 और 108 सेकंड के बाद बदलती हैं। यदि वे सभी 8:20:00 बजे एक साथ बदलती हैं, तो अगली बार वे एक साथ कब बदलेंगी?",
+    "problem_hg_030": "Traffic lights 48, 72, aur 108 seconds par change hoti hain. Agar 8:20:00 AM par saath change hui, toh next time kya hoga?",
+    "problem_hg_065": "Lights 48, 72, aur 108 seconds par badalti hain. 8:20:00 AM par start hui. 10 aur log aaye... timing calculation karke batao ki exact next time kya hoga clock par.",
+    "gold_answer": "8:27:12",
+    "gold_answer_num": 82712.0,
+    "unit": "time",
+    "topic": "GCD & LCM",
+    "difficulty": "Codeforces-B",
+    "source_type": "lcm_word_problem",
+    "solution_steps_en": [
+      "Step 1: Find LCM(48, 72, 108). 48=2^43, 72=2^33^2, 108=2^23^3. LCM = 2^4 * 3^3 = 16 * 27 = 432 seconds.",
+      "Step 2: Convert 432 seconds into minutes: 432 / 60 = 7 minutes and 12 seconds.",
+      "Step 3: Add this to the initial time: 8:20:00 + 7 min 12 sec.",
+      "Step 4: Result is 8:27:12.",
+      "Final: answer = 8:27:12"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: The additive distractor might cause the LLM to add 10 seconds or 10 minutes to the resulting LCM or the starting time.",
+    "why_hard": "Requires precise LCM calculation of large numbers followed by time addition (HH:MM:SS), where simple arithmetic errors are common.",
+    "tags": [
+      "lcm",
+      "time_addition",
+      "real_world_application"
+    ]
+  }
+]

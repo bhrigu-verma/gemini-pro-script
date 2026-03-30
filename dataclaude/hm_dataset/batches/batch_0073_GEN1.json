@@ -1,0 +1,373 @@
+[
+  {
+    "problem_en": "In how many ways can 6 people be seated around a circular table if 2 particular people must not sit next to each other?",
+    "problem_hi": "6 लोगों को एक गोल मेज के चारों ओर कितने तरीकों से बैठाया जा सकता है यदि 2 विशिष्ट व्यक्ति एक-दूसरे के बगल में न बैठें?",
+    "problem_hg_030": "In how many ways can 6 people be seated around a circular table agar 2 particular people ek saath na baithein?",
+    "problem_hg_065": "Circular table ke chaaro taraf 6 members ko bithana hai. Shart yeh hai ki 2 specific log 'na' ek doosre ke left mein hon 'na' right mein. Total arrangements kitne honge?",
+    "gold_answer": "72",
+    "gold_answer_num": 72.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: Total ways to seat 6 people in a circle is (6-1)! = 5! = 120.",
+      "Step 2: Let the 2 particular people who must not sit together be A and B. Treat (AB) as one unit.",
+      "Step 3: Total units now are 5 (the AB unit + 4 other people). Ways to seat 5 units in a circle is (5-1)! = 4! = 24.",
+      "Step 4: A and B can permute among themselves in 2! ways. So, ways where they sit together = 24 * 2 = 48.",
+      "Step 5: Required ways = Total ways - Together ways = 120 - 48 = 72."
+    ],
+    "linguistic_trap_in_hg065": "The use of 'na...na' double negation specifically applied to 'left' and 'right' positions might mislead the LLM into thinking it needs to calculate specific left/right exclusions separately rather than the standard 'together' complement method.",
+    "why_hard": "LLMs often struggle with complement counting in circular permutations when the exclusion is phrased via nested negation.",
+    "tags": [
+      "circular-permutations",
+      "complement-counting"
+    ]
+  },
+  {
+    "problem_en": "7 different flowers are used to make a necklace. How many distinct necklaces can be formed such that 3 specific flowers are always together?",
+    "problem_hi": "एक हार बनाने के लिए 7 अलग-अलग फूलों का उपयोग किया जाता है। कितने अलग-अलग हार बनाए जा सकते हैं ताकि 3 विशिष्ट फूल हमेशा एक साथ रहें?",
+    "problem_hg_030": "7 different flowers se ek necklace banana hai. How many distinct necklaces are possible agar 3 specific flowers always together rahein?",
+    "problem_hg_065": "7 unique flowers se ek necklace banaya gaya. 'Baaki' flowers ko chhod kar 3 specific flowers ko hamesha ek group mein rakha gaya hai. Kitne unique patterns possible hain?",
+    "gold_answer": "72",
+    "gold_answer_num": 72.0,
+    "unit": "necklaces",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: In a necklace, clockwise and anti-clockwise arrangements are the same. Formula is (n-1)! / 2.",
+      "Step 2: Treat the 3 specific flowers as one bundle. Total items to arrange = (7 - 3 + 1) = 5.",
+      "Step 3: Arrange 5 items in a circle: (5-1)! = 4! = 24.",
+      "Step 4: The 3 flowers in the bundle can be arranged in 3! = 6 ways.",
+      "Step 5: Total ways = (24 * 6) / 2 = 144 / 2 = 72."
+    ],
+    "linguistic_trap_in_hg065": "The word 'Baaki' (remainder/others) is used as a distractor to shift focus away from the group of 3 flowers, potentially causing the model to miscount the remaining entities or the total set.",
+    "why_hard": "The model must account for the 1/2 factor in necklaces (3D circular permutation) and the grouping logic simultaneously.",
+    "tags": [
+      "necklaces",
+      "grouping-method"
+    ]
+  },
+  {
+    "problem_en": "5 boys and 5 girls are to be seated around a circular table. In how many ways can they be seated if no two girls sit together?",
+    "problem_hi": "5 लड़कों और 5 लड़कियों को एक गोल मेज के चारों ओर बैठाया जाना है। उन्हें कितने तरीकों से बैठाया जा सकता है यदि कोई भी दो लड़कियाँ एक साथ न बैठें?",
+    "problem_hg_030": "5 boys and 5 girls circular table ke around baithne hain. How many ways possible agar no two girls sit together?",
+    "problem_hg_065": "Ek round table par 5 boys ko 'pehle' bitha diya gaya, 'phir' 5 girls ko aise bithaana hai ki koi bhi do girls hamesha door rahein. Total possibilities calculate kijiye.",
+    "gold_answer": "2880",
+    "gold_answer_num": 2880.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: First, seat the 5 boys in a circle. Ways = (5-1)! = 4! = 24.",
+      "Step 2: There are 5 gaps created between the boys in the circular arrangement.",
+      "Step 3: 5 girls can be seated in these 5 gaps in 5! ways = 120.",
+      "Step 4: Total ways = 24 * 120 = 2880."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' (first...then) structure in Hinglish can sometimes lead an LLM to treat the steps as independent linear events rather than a single combinatorial arrangement, potentially causing it to use (n-1)! for both boys and girls.",
+    "why_hard": "Models often double-apply the circular (n-1)! rule to both sets of people instead of just the first set.",
+    "tags": [
+      "gap-method",
+      "circular-table"
+    ]
+  },
+  {
+    "problem_en": "A committee of 8 people includes a President and a Vice-President. How many circular seating arrangements exist where the President and Vice-President sit exactly opposite each other?",
+    "problem_hi": "8 लोगों की एक समिति में एक अध्यक्ष और एक उपाध्यक्ष शामिल हैं। कितने गोलाकार बैठने की व्यवस्थाएँ मौजूद हैं जहाँ अध्यक्ष और उपाध्यक्ष एक-दूसरे के ठीक सामने बैठते हैं?",
+    "problem_hg_030": "8 people ki committee mein President and Vice-President hain. How many circular arrangements possible jahan dono exactly opposite baithein?",
+    "problem_hg_065": "8 members ki committee mein President 'aur' Vice-President ko hamesha face-to-face (opposite) bithana hai circular table par. Kitni aisi seating schemes possible hain?",
+    "gold_answer": "720",
+    "gold_answer_num": 720.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: Fix the President at any one position. In a circle, this can be done in only 1 way.",
+      "Step 2: The position exactly opposite the President is now fixed for the Vice-President. This is also 1 way.",
+      "Step 3: The remaining 6 people can be seated in the remaining 6 spots in 6! ways.",
+      "Step 4: 6! = 720."
+    ],
+    "linguistic_trap_in_hg065": "The word 'aur' here is simple, but the 'exactly opposite' constraint in Hinglish often triggers a '2 * (n-2)!' response because models assume the pair can swap, forgetting that in a circular fixed-frame, one is relative to the other.",
+    "why_hard": "Determining relative vs. absolute positioning in circular arrangements with fixed-relative constraints is a common failure point.",
+    "tags": [
+      "relative-position",
+      "circular-table"
+    ]
+  },
+  {
+    "problem_en": "How many ways can 4 men and 4 women sit around a circular table such that they sit alternately, and one specific man always sits next to one specific woman?",
+    "problem_hi": "4 पुरुष और 4 महिलाएँ एक गोल मेज के चारों ओर कितने तरीकों से बैठ सकते हैं ताकि वे बारी-बारी से बैठें, और एक विशिष्ट पुरुष हमेशा एक विशिष्ट महिला के बगल में बैठे?",
+    "problem_hg_030": "How many ways can 4 men and 4 women sit around a circular table alternate positions mein, and one specific man specific woman ke side mein baithe?",
+    "problem_hg_065": "4 men aur 4 women alternate baithne hain circle mein. 'Sirf' ek specific pair (M1, W1) ko hamesha padosi (neighbors) rehna hai. Is shart par arrangements find kijiye.",
+    "gold_answer": "72",
+    "gold_answer_num": 72.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: For alternate seating with 4M and 4W, first seat men: (4-1)! = 6 ways. Women then occupy 4 gaps in 4! = 24 ways. Total alternate = 6 * 24 = 144. No, that's total alternate.",
+      "Step 2: To keep M1 and W1 together: Fix M1. W1 must be in one of the 2 adjacent seats. But wait, it's alternate, so W1 must be in one of the 2 adjacent seats which are reserved for women.",
+      "Step 3: Case A: W1 is to the immediate right of M1. Men (M2, M3, M4) can arrange in 3! ways. Women (W2, W3, W4) can arrange in 3! ways. Ways = 6 * 6 = 36.",
+      "Step 4: Case B: W1 is to the immediate left of M1. Similarly, 3! * 3! = 36 ways.",
+      "Step 5: Total = 36 + 36 = 72. Wait, the gold answer for 4M/4W alternate is usually calculated as: Fix M1 (1 way). W1 has 2 choices. Remaining 3M in 3! and 3W in 3!. 2 * 6 * 6 = 72. Re-evaluating... 4 men, 4 women. (4-1)! * 4! = 144 total alternate. Let's re-calculate logic.",
+      "Step 6: Total alternate ways = 3! * 4! = 144. In how many of these are M1 and W1 together? Fix M1. W1 must be in one of the 2 adjacent gaps. For each gap, other 3 men in 3! and 3 women in 3!. Total = 2 * 6 * 6 = 72. Let's adjust gold answer or problem."
+    ],
+    "linguistic_trap_in_hg065": "The word 'Sirf' (only) here is used to emphasize that ONLY that pair must be together, which might confuse an LLM into applying inclusion-exclusion for other pairs unnecessarily.",
+    "why_hard": "Combines alternate constraint with specific adjacency constraint, requiring careful fixing of the first element.",
+    "tags": [
+      "alternate-seating",
+      "specific-adjacency"
+    ]
+  },
+  {
+    "problem_en": "10 distinct beads are arranged to form a bracelet. How many arrangements are possible if 2 particular beads must never be together?",
+    "problem_hi": "एक कंगन बनाने के लिए 10 अलग-अलग मोतियों को व्यवस्थित किया जाता है। यदि 2 विशिष्ट मोती कभी एक साथ नहीं होने चाहिए, तो कितनी व्यवस्थाएं संभव हैं?",
+    "problem_hg_030": "10 distinct beads se ek bracelet banana hai. Agar 2 particular beads hamesha separate rahein, toh total ways kitne honge?",
+    "problem_hg_065": "10 unique beads ko ek bracelet mein piroya gaya hai. '3 lakh 75 hazaar' patterns ki jagah 'sirf' woh arrangements batayein jahan 2 specific beads 'baaki' sabse alag hon par hamesha door rahein.",
+    "gold_answer": "141120",
+    "gold_answer_num": 141120.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: Total circular arrangements for a bracelet = (n-1)! / 2 = (10-1)! / 2 = 9! / 2 = 362880 / 2 = 181440.",
+      "Step 2: Arrangements where 2 specific beads are together: Treat as 1 unit. Total items = 9. Circular arrangements = (9-1)! / 2 = 8! / 2 = 40320 / 2 = 20160. Multiply by 2! for internal swap = 20160 * 2 = 40320.",
+      "Step 3: Required = Total - Together = 181440 - 40320 = 141120."
+    ],
+    "linguistic_trap_in_hg065": "Includes 'Indian number notation' (3 lakh 75 hazaar) and 'baaki' as semantic noise. The trap is identifying that a bracelet (like a necklace) requires dividing by 2 for symmetry.",
+    "why_hard": "LLMs often miss the clockwise/anti-clockwise identicality in bracelets/necklaces, and the large distractor number increases the chance of arithmetic distraction.",
+    "tags": [
+      "bracelet-permutation",
+      "exclusion-principle"
+    ]
+  },
+  {
+    "problem_en": "6 Indians and 6 Americans sit around a round table. In how many ways can they be seated so that no two Indians are together?",
+    "problem_hi": "6 भारतीय और 6 अमेरिकी एक गोल मेज के चारों ओर बैठते हैं। उन्हें कितने तरीकों से बैठाया जा सकता है ताकि कोई भी दो भारतीय एक साथ न हों?",
+    "problem_hg_030": "6 Indians and 6 Americans round table par baithte hain. In how many ways seating possible so that no two Indians sit together?",
+    "problem_hg_065": "6 Indian 'aur' 6 American ek round table par baithe hain. Indian members ko 'zyada' door rakhte hue, koi bhi do Indians ek saath 'na' baithein, aise total kitne ways honge?",
+    "gold_answer": "86400",
+    "gold_answer_num": 86400.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: Seat the 6 Americans first. Ways = (6-1)! = 5! = 120.",
+      "Step 2: There are 6 gaps between the Americans.",
+      "Step 3: Seat the 6 Indians in these 6 gaps. Ways = 6! = 720.",
+      "Step 4: Total ways = 120 * 720 = 86400. Wait, let's re-calculate. 5! is 120. 6! is 720. 120 * 720 = 86400.",
+      "Step 5: Let me double check 120 * 720. 12 * 72 = 864. So 86400. Yes."
+    ],
+    "linguistic_trap_in_hg065": "The word 'zyada' (more) is used as an intensifier for 'door' (far), which might lead the model to think it's an optimization or distance-based problem rather than a standard gap-method permutation.",
+    "why_hard": "Gap method in circular permutations is a high-error area for models, especially when 'no two together' is used.",
+    "tags": [
+      "gap-method",
+      "circular-table"
+    ]
+  },
+  {
+    "problem_en": "Find the number of ways to arrange 8 different people on a circular table such that 3 particular people A, B, and C are always together in the order ABC.",
+    "problem_hi": "8 अलग-अलग लोगों को एक गोल मेज पर व्यवस्थित करने के तरीकों की संख्या ज्ञात कीजिए ताकि 3 विशिष्ट व्यक्ति A, B, और C हमेशा ABC के क्रम में एक साथ हों।",
+    "problem_hg_030": "8 different people ko circular table par kitne ways mein arrange kar sakte hain agar 3 particular people A, B, C hamesha ABC order mein saath rahein?",
+    "problem_hg_065": "8 log ek circular table par baithne wale hain. 'Pehle' ABC ko ek unit maan lo, lekin dhyaan rahe ki unka order 'sirf' ABC hi hona chahiye. 'Baaki' arrangements kitne honge?",
+    "gold_answer": "120",
+    "gold_answer_num": 120.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: Treat (ABC) as one single unit because they must be together in a fixed order.",
+      "Step 2: Total units = (8 - 3 + 1) = 6 units.",
+      "Step 3: Arrange 6 units in a circle = (6-1)! = 5! ways.",
+      "Step 4: Since the order ABC is fixed, there is only 1 way to arrange them inside the unit.",
+      "Step 5: 5! = 120."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' structure combined with 'sirf' for a fixed order is a trap. Models often calculate (n-1)! and then multiply by 3! because they see 'together' and ignore 'fixed order'.",
+    "why_hard": "Models tend to default to the 'bundle method' and multiply by internal permutations (r!) even when the text explicitly restricts the order.",
+    "tags": [
+      "fixed-order",
+      "bundle-method"
+    ]
+  },
+  {
+    "problem_en": "How many circular arrangements of 9 different things are possible if 4 specific things are never all together?",
+    "problem_hi": "9 अलग-अलग चीजों के कितने गोलाकार विन्यास संभव हैं यदि 4 विशिष्ट चीजें कभी भी एक साथ न हों?",
+    "problem_hg_030": "How many circular arrangements of 9 things are possible agar 4 specific things hamesha ek saath na aayein?",
+    "problem_hg_065": "9 different objects ko circle mein rakhna hai. 'Baaki' combinations mein se woh minus kar do jahan 4 specific cheezein 'sab ki sab' ek saath 'na' ho payein.",
+    "gold_answer": "37440",
+    "gold_answer_num": 37440.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: Total circular arrangements of 9 things = (9-1)! = 8! = 40320.",
+      "Step 2: Arrangements where 4 specific things are all together: Treat them as 1 unit. Total items = (9-4+1) = 6.",
+      "Step 3: Circular arrangements of 6 items = (6-1)! = 5! = 120.",
+      "Step 4: Internal permutations of the 4 specific things = 4! = 24.",
+      "Step 5: Together ways = 120 * 24 = 2880.",
+      "Step 6: Required ways (not all together) = Total - Together = 40320 - 2880 = 37440. Wait, let me re-check 8! - 5!4!. 8! is 40320. 5! is 120. 4! is 24. 12024=2880. 40320-2880=37440."
+    ],
+    "linguistic_trap_in_hg065": "The phrase 'sab ki sab' (all of them) followed by 'na' (not) is a subtle linguistic cue for 'at least one is separate' vs 'none are together'. LLMs often confuse these logic gates.",
+    "why_hard": "Subtraction logic (Total - All Together) is often confused with 'no two together' (Gap Method).",
+    "tags": [
+      "complement-counting",
+      "circular-table"
+    ]
+  },
+  {
+    "problem_en": "In a round table meeting of 5 Ministers and 5 Governors, how many ways can they sit so that no two Ministers sit together?",
+    "problem_hi": "5 मंत्रियों और 5 राज्यपालों की एक गोल मेज बैठक में, वे कितने तरीकों से बैठ सकते हैं ताकि कोई भी दो मंत्री एक साथ न बैठें?",
+    "problem_hg_030": "5 Ministers aur 5 Governors ki meeting mein round table par kitne arrangements honge agar no two Ministers sit together?",
+    "problem_hg_065": "Round table meeting mein 5 Ministers 'aur' 5 Governors baithe hain. Kisi bhi do Ministers ko ek saath 'na' baithne diya gaya. Total seating ways calculate kijiye.",
+    "gold_answer": "2880",
+    "gold_answer_num": 2880.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: Seat the 5 Governors in a circle: (5-1)! = 4! = 24.",
+      "Step 2: This creates 5 gaps between the Governors.",
+      "Step 3: Seat the 5 Ministers in these 5 gaps: 5! = 120 ways.",
+      "Step 4: Total ways = 24 * 120 = 2880."
+    ],
+    "linguistic_trap_in_hg065": "The passive voice 'baithne diya gaya' (allowed to sit) can distract the model into looking for constraints that aren't there, or misinterpreting the 'no two' rule.",
+    "why_hard": "A fundamental circular gap method problem, but models frequently use (n-1)! for both groups in error.",
+    "tags": [
+      "gap-method",
+      "circular-table"
+    ]
+  },
+  {
+    "problem_en": "A group of 12 people is sitting in a circle. There are 3 specific friends who want to sit together. In how many ways can this happen?",
+    "problem_hi": "12 लोगों का एक समूह एक घेरे में बैठा है। 3 विशिष्ट मित्र हैं जो एक साथ बैठना चाहते हैं। यह कितने तरीकों से हो सकता है?",
+    "problem_hg_030": "12 people circular arrangement mein hain. 3 specific friends hamesha together baithna chahte hain. Kitne ways possible hain?",
+    "problem_hg_065": "12 log ek ghere mein baithe hain. Unme se 3 pakke dost 'sirf' ek saath hi baithenge. 'Baaki' logon ki positions ko consider karte hue total arrangements bataiye.",
+    "gold_answer": "21772800",
+    "gold_answer_num": 21772800.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: Treat the 3 friends as a single unit.",
+      "Step 2: Total entities = (12 - 3 + 1) = 10 units.",
+      "Step 3: Arrange 10 units in a circle = (10 - 1)! = 9! ways.",
+      "Step 4: The 3 friends can arrange themselves in 3! ways.",
+      "Step 5: Total ways = 9! * 3! = 362880 * 6 = 21772800."
+    ],
+    "linguistic_trap_in_hg065": "The word 'pakke' (firm/best) is a colloquialism for 'specific/close', and 'baaki' is a distractor. The trap is the massive number result which tests the LLM's computational persistence in Hinglish.",
+    "why_hard": "Large factorial calculations are already difficult for LLMs; embedding them in code-mixed logic increases the chance of a timeout or estimation error.",
+    "tags": [
+      "bundle-method",
+      "circular-table"
+    ]
+  },
+  {
+    "problem_en": "How many ways can 5 keys be arranged on a circular key ring?",
+    "problem_hi": "5 चाबियों को एक गोलाकार चाबी के छल्ले (key ring) पर कितने तरीकों से व्यवस्थित किया जा सकता है?",
+    "problem_hg_030": "5 keys ko ek circular key ring par kitne ways mein arrange kiya ja sakta hai?",
+    "problem_hg_065": "Ek key ring par 5 different keys tangi hui hain. In keys ko kitne tarikon se set kiya ja sakta hai? 'Pehle' circular rule lagao aur 'phir' flip symmetry ka dhyaan rakho.",
+    "gold_answer": "12",
+    "gold_answer_num": 12.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: For a key ring, clockwise and anti-clockwise arrangements are indistinguishable.",
+      "Step 2: The formula for circular arrangement with flip symmetry is (n-1)! / 2.",
+      "Step 3: n = 5, so (5-1)! / 2 = 4! / 2.",
+      "Step 4: 4! = 24, 24 / 2 = 12."
+    ],
+    "linguistic_trap_in_hg065": "The instruction 'Pehle...phir' specifically tells the model to apply a sequence. If the model incorrectly applies (n-1)! first and forgets the 'phir' part or miscalculates the division, it fails.",
+    "why_hard": "Models often forget the 1/2 factor for key rings and necklaces unless explicitly prompted, and Hinglish makes the prompt more 'noisy'.",
+    "tags": [
+      "key-ring",
+      "flip-symmetry"
+    ]
+  },
+  {
+    "problem_en": "8 people are sitting around a table. 2 people are married and must sit together. 2 other people are enemies and must not sit together. How many ways can they sit?",
+    "problem_hi": "8 लोग एक मेज के चारों ओर बैठे हैं। 2 लोग विवाहित हैं और उन्हें एक साथ बैठना चाहिए। 2 अन्य लोग दुश्मन हैं और उन्हें एक साथ नहीं बैठना चाहिए। वे कितने तरीकों से बैठ सकते हैं?",
+    "problem_hg_030": "8 people table ke around hain. 2 married hain aur together baithenge. 2 enemies hain aur together nahi baithenge. How many ways?",
+    "problem_hg_065": "8 log ek round table par hain. Married couple 'aur' unke 2 enemies bhi wahan hain. Couple hamesha saath baithega par enemies ek saath 'na' baithein, yeh 'baaki' log kaise arrange honge?",
+    "gold_answer": "960",
+    "gold_answer_num": 960.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: Treat the married couple as 1 unit. Total people = 8 - 2 + 1 = 7 units.",
+      "Step 2: Total ways the couple sits together in a circle = (7-1)! * 2! = 6! * 2 = 720 * 2 = 1440.",
+      "Step 3: Now subtract cases where couple is together AND enemies are together. Treat couple as 1 unit, enemies as 1 unit. Total units = 8 - 2 - 2 + 1 + 1 = 6 units.",
+      "Step 4: Ways both together in circle = (6-1)! * 2! * 2! = 5! * 2 * 2 = 120 * 4 = 480.",
+      "Step 5: Required ways = 1440 - 480 = 960."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'aur' and 'na' together in a multi-constraint problem. The trap is correctly identifying the 'couple together' as the new 'total' universe before excluding 'enemies together'.",
+    "why_hard": "Multi-constraint circular permutations require several logical layers (Bundle Method + Complement Method).",
+    "tags": [
+      "multi-constraint",
+      "circular-table"
+    ]
+  },
+  {
+    "problem_en": "In how many ways can 11 people sit around a circular table if 2 particular people must not sit together and 3 other people must always sit together?",
+    "problem_hi": "11 लोग एक गोल मेज के चारों ओर कितने तरीकों से बैठ सकते हैं यदि 2 विशिष्ट व्यक्ति एक साथ न बैठें और 3 अन्य लोग हमेशा एक साथ बैठें?",
+    "problem_hg_030": "11 people circular table ke around hain. Agar 2 people hamesha door rahein and 3 others always together rahein, toh ways kitne honge?",
+    "problem_hg_065": "11 log round table par hain. 3 friends hamesha ek group mein baithenge, 'baaki' 2 log jo dushman hain woh 'na' kabhi padosi banein. Is logic se seating kitni hogi?",
+    "gold_answer": "181440",
+    "gold_answer_num": 181440.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: Treat the 3-person group as 1 unit. Total units = 11 - 3 + 1 = 9 units.",
+      "Step 2: In these 9 units, we have the 2 enemies. First, find total ways for the group: (9-1)! * 3! = 8! * 6 = 40320 * 6 = 241920.",
+      "Step 3: Subtract ways where the 3-group is together AND the 2 enemies are also together. Treat 2 enemies as 1 unit. Total units = 9 - 2 + 1 = 8.",
+      "Step 4: Ways both groups together = (8-1)! * 3! * 2! = 7! * 6 * 2 = 5040 * 12 = 60480.",
+      "Step 5: Required = 241920 - 60480 = 181440."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' is used to define the second group of 2 people. LLMs might think 'baaki' refers to ALL remaining 8 people (11-3) rather than the specific 2 mentioned afterwards.",
+    "why_hard": "Combining the group method with exclusion on a circular scale is computationally and logically intensive.",
+    "tags": [
+      "multi-grouping",
+      "exclusion-principle"
+    ]
+  },
+  {
+    "problem_en": "How many ways can 6 men and 6 women sit around a circular table if men and women sit alternately and the host (a man) and the hostess (a woman) must hamesha sit together?",
+    "problem_hi": "6 पुरुष और 6 महिलाएँ एक गोल मेज के चारों ओर कितने तरीकों से बैठ सकते हैं यदि पुरुष और महिलाएँ बारी-बारी से बैठें और मेजबान (एक पुरुष) और मेजबानिन (एक महिला) हमेशा एक साथ बैठें?",
+    "problem_hg_030": "6 men and 6 women circular table par hain alternate positions mein. Agar host aur hostess hamesha together baithein, toh ways kitne honge?",
+    "problem_hg_065": "6 men aur 6 women alternate baithne hain. 'Pehle' host aur hostess ki seating fix kijiye kyunki woh hamesha saath 'sirf' padosi ki tarah hi baithenge. Total combinations bataiye.",
+    "gold_answer": "28800",
+    "gold_answer_num": 28800.0,
+    "unit": "ways",
+    "topic": "Permutations",
+    "difficulty": "JEE-Main",
+    "source_type": "circular_arrangement",
+    "solution_steps_en": [
+      "Step 1: To sit host and hostess together while alternating gender, host (M1) must be fixed. Hostess (W1) must sit either to his left or his right. But wait, in alternating, if M is in a spot, adjacent spots are for W. So W1 can be in one of the 2 adjacent spots.",
+      "Step 2: Case 1: Hostess is to the right of Host. Remaining 5 men can be seated in the 5 male spots in 5! ways. Remaining 5 women can be seated in the 5 female spots in 5! ways. Ways = 120 * 120 = 14400.",
+      "Step 3: Case 2: Hostess is to the left of Host. Similarly, 5! * 5! = 14400.",
+      "Step 4: Wait, is Host fixed? In a circle, fixing the first person defines the relative positions. So 1 * 5! * 5! is for one side. For both sides = 2 * 14400 = 28800. Let's re-verify.",
+      "Step 5: Fix Host (1 way). Hostess has 2 adjacent spots (2 ways). Remaining 5 Men in 5! and 5 Women in 5!. Total = 2 * 120 * 120 = 28800."
+    ],
+    "linguistic_trap_in_hg065": "The word 'Pehle' (first) suggests a priority seating. 'Sirf' (only) padosi (neighbors) reinforces together. The trap is whether the model sums the two cases (left/right) or just calculates one.",
+    "why_hard": "Circular symmetry + alternating constraint + specific pair adjacency. High complexity for state-space searching models.",
+    "tags": [
+      "alternate-seating",
+      "circular-table"
+    ]
+  }
+]

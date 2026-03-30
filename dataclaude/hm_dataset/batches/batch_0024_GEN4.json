@@ -1,0 +1,377 @@
+[
+  {
+    "problem_en": "How many 4-digit numbers are there that are divisible by 4 or 6 but not divisible by 12?",
+    "problem_hi": "ऐसी कितनी 4-अंकों वाली संख्याएँ हैं जो 4 या 6 से विभाज्य हैं लेकिन 12 से विभाज्य नहीं हैं?",
+    "problem_hg_030": "Kitne 4-digit numbers hain jo divisible by 4 ya 6 hain but 12 se divisible nahi hain?",
+    "problem_hg_065": "Total 4-digit numbers find karo jo 4 se divisible hon ya 6 se, par dhyan rahe ki woh na 12 se divisible hon. Sirf wahi numbers count karna jo is condition ko satisfy karein.",
+    "gold_answer": "1500",
+    "gold_answer_num": 1500.0,
+    "unit": "numbers",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Find the count of 4-digit numbers divisible by 4. First is 1000, last is 9996. n(A) = (9996-1000)/4 + 1 = 2250.",
+      "Step 2: Find the count of 4-digit numbers divisible by 6. First is 1002, last is 9996. n(B) = (9996-1002)/6 + 1 = 1500.",
+      "Step 3: Find the intersection (divisible by LCM(4,6)=12). First is 1008, last is 9996. n(A ∩ B) = (9996-1008)/12 + 1 = 750.",
+      "Step 4: Use Principle of Inclusion-Exclusion for (A ∪ B) - (A ∩ B) since we exclude those divisible by 12. Result = n(A) + n(B) - 2n(A ∩ B) = 2250 + 1500 - 2(750) = 1500."
+    ],
+    "linguistic_trap_in_hg065": "The 'Sirf' trap combined with 'na...na' style negation. 'Sirf' usually implies a strict subset, and the phrasing 'na 12 se' might lead an LLM to subtract the intersection once (Inclusion-Exclusion) instead of realizing they need to remove the entire overlapping set of 12s from both 4s and 6s.",
+    "why_hard": "LLMs often struggle with the logic of 'A or B but not both' vs 'A or B but not C', especially when C is the LCM of A and B.",
+    "tags": [
+      "number_theory",
+      "PIE",
+      "logic"
+    ]
+  },
+  {
+    "problem_en": "A group of 100 students were asked about their preferences. 45 like Mathematics, 40 like Physics, and 35 like Chemistry. 20 like Math and Physics, 15 like Physics and Chemistry, and 10 like Math and Chemistry. If 5 students like all three, how many students like exactly two subjects?",
+    "problem_hi": "100 छात्रों के एक समूह से उनकी पसंद के बारे में पूछा गया। 45 को गणित, 40 को भौतिकी और 35 को रसायन विज्ञान पसंद है। 20 को गणित और भौतिकी, 15 को भौतिकी और रसायन विज्ञान, और 10 को गणित और रसायन विज्ञान पसंद है। यदि 5 छात्रों को तीनों पसंद हैं, तो कितने छात्रों को ठीक दो विषय पसंद हैं?",
+    "problem_hg_030": "100 students ke group mein, 45 like Math, 40 like Physics, aur 35 like Chemistry. 20 Math aur Physics like karte hain, 15 Physics aur Chemistry, aur 10 Math aur Chemistry. Agar 5 students teeno subjects like karte hain, toh kitne students ko exactly two subjects pasand hain?",
+    "problem_hg_065": "100 bacchon mein se 45 ko Math pasand hai, 40 ko Physics aur 35 ko Chemistry. 20 ko Math-Physics dono, 15 ko Physics-Chemistry aur 10 ko Math-Chemistry pasand hai. Agar 5 bacche aise hain jinko teeno pasand hain, toh kitno ko sirf 2 subjects pasand honge?",
+    "gold_answer": "30",
+    "gold_answer_num": 30.0,
+    "unit": "students",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Let M, P, C be sets. n(M∩P) = 20, n(P∩C) = 15, n(M∩C) = 10, n(M∩P∩C) = 5.",
+      "Step 2: Number of students liking exactly Math and Physics = n(M∩P) - n(M∩P∩C) = 20 - 5 = 15.",
+      "Step 3: Number of students liking exactly Physics and Chemistry = 15 - 5 = 10; Exactly Math and Chemistry = 10 - 5 = 5.",
+      "Step 4: Sum of 'exactly two' = 15 + 10 + 5 = 30."
+    ],
+    "linguistic_trap_in_hg065": "The 'Sirf' trap. In Hinglish, 'Sirf 2 subjects' means 'exactly two'. LLMs often confuse 'exactly two' with the intersections (Math and Physics) which include those who like all three.",
+    "why_hard": "Requires precise partitioning of a Venn diagram; the Hinglish 'sirf' is a strong modifier that models often skip when processing multiple numeric constraints.",
+    "tags": [
+      "set_theory",
+      "Venn_diagram",
+      "partitioning"
+    ]
+  },
+  {
+    "problem_en": "In a library, there are 120 books. 70 are in English, 50 are Hardcovers, and 40 are Mathematics books. 30 are English Hardcovers, 25 are English Math, and 20 are Hardcover Math books. 10 books are English Hardcover Math. How many books are neither English, nor Hardcover, nor Math?",
+    "problem_hi": "एक पुस्तकालय में 120 पुस्तकें हैं। 70 अंग्रेजी में हैं, 50 हार्डकवर हैं, और 40 गणित की पुस्तकें हैं। 30 अंग्रेजी हार्डकवर हैं, 25 अंग्रेजी गणित हैं, और 20 हार्डकवर गणित की पुस्तकें हैं। 10 पुस्तकें अंग्रेजी हार्डकवर गणित की हैं। कितनी पुस्तकें ना तो अंग्रेजी हैं, ना हार्डकवर और ना ही गणित की?",
+    "problem_hg_030": "Ek library mein 120 books hain. 70 English hain, 50 Hardcovers hain, aur 40 Math books hain. 30 English Hardcovers, 25 English Math, aur 20 Hardcover Math books hain. 10 books teeno categories mein aati hain. Kitni books aisi hain jo na English hain, na Hardcover, na Math?",
+    "problem_hg_065": "Library mein total 120 kitabein hain. Inme se 70 English ki hain, 50 Hardcover aur 40 Math ki. 30 English-Hardcover mixed hain, 25 English-Math aur 20 Hardcover-Math. 10 kitabein aisi hain jo teeno qualities rakhti hain. Bataiye kitni kitabein aisi hain jo na English hain, na Hardcover, na Math?",
+    "gold_answer": "25",
+    "gold_answer_num": 25.0,
+    "unit": "books",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Use PIE to find the union: n(E ∪ H ∪ M) = n(E) + n(H) + n(M) - [n(E∩H) + n(E∩M) + n(H∩M)] + n(E∩H∩M).",
+      "Step 2: n(Union) = 70 + 50 + 40 - [30 + 25 + 20] + 10 = 160 - 75 + 10 = 95.",
+      "Step 3: Total books = 120. Neither = Total - Union.",
+      "Step 4: 120 - 95 = 25."
+    ],
+    "linguistic_trap_in_hg065": "The 'na...na...na' triple negation trap. This structure in Hinglish can be interpreted as 'not (A and B and C)' instead of 'not A and not B and not C' by some parsers.",
+    "why_hard": "Standard 3-set PIE, but the negation in Hinglish often leads models to miscalculate the final subtraction step or misinterpret the union.",
+    "tags": [
+      "PIE",
+      "negation",
+      "set_theory"
+    ]
+  },
+  {
+    "problem_en": "How many permutations of the string '12345' are there such that no digit 'i' is in its natural position 'i'?",
+    "problem_hi": "स्ट्रिंग '12345' के ऐसे कितने क्रमचय (permutations) हैं जिनमें कोई भी अंक 'i' अपने प्राकृतिक स्थान 'i' पर नहीं है?",
+    "problem_hg_030": "'12345' ke kitne permutations hain jisme koi bhi digit 'i' apni natural position 'i' par nahi hai?",
+    "problem_hg_065": "Sequence '12345' ke total kitne arrangements banenge jisme koi bhi number apni sahi jagah par na ho? Yani ki '1' first place par na ho, '2' second par na ho, aur isi tarah baaki bhi apni position par na hon.",
+    "gold_answer": "44",
+    "gold_answer_num": 44.0,
+    "unit": "permutations",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: This is a derangement problem for n = 5.",
+      "Step 2: Use the derangement formula D(n) = n! * [1 - 1/1! + 1/2! - 1/3! + 1/4! - 1/5!].",
+      "Step 3: D(5) = 120 * [1 - 1 + 1/2 - 1/6 + 1/24 - 1/120].",
+      "Step 4: D(5) = 60 - 20 + 5 - 1 = 44."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' trap. 'Baaki bhi apni position par na hon' (others also shouldn't be in their position) is an implicit universal constraint. LLMs sometimes only apply the constraint to the explicitly mentioned '1' and '2'.",
+    "why_hard": "Derangements (sub-factorials) are a specific application of PIE that requires careful calculation of the alternating series.",
+    "tags": [
+      "derangements",
+      "PIE",
+      "permutations"
+    ]
+  },
+  {
+    "problem_en": "Find the number of integers from 1 to 500 which are divisible by 3 or 5 or 7.",
+    "problem_hi": "1 से 500 तक के उन पूर्णांकों की संख्या ज्ञात कीजिए जो 3 या 5 या 7 से विभाज्य हैं।",
+    "problem_hg_030": "1 se 500 tak kitne integers hain jo 3, 5, ya 7 se divisible hain?",
+    "problem_hg_065": "1 se lekar 500 tak aise kitne numbers honge jo ya toh 3 se, ya 5 se, ya phir 7 se divide ho sakein? Humein total count chahiye jo inme se kisi bhi ek se divisible hon.",
+    "gold_answer": "271",
+    "gold_answer_num": 271.0,
+    "unit": "integers",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: n(3) = floor(500/3) = 166; n(5) = floor(500/5) = 100; n(7) = floor(500/7) = 71.",
+      "Step 2: n(3∩5) = floor(500/15) = 33; n(5∩7) = floor(500/35) = 14; n(3∩7) = floor(500/21) = 23.",
+      "Step 3: n(3∩5∩7) = floor(500/105) = 4.",
+      "Step 4: n(3∪5∪7) = (166+100+71) - (33+14+23) + 4 = 337 - 70 + 4 = 271."
+    ],
+    "linguistic_trap_in_hg065": "The 'Ya phir' ambiguity. In heavy Hinglish, 'ya... ya... ya phir' can sometimes be mistaken for exclusive OR (XOR) by models trained on strict logical structures, leading them to subtract double and triple counted items incorrectly.",
+    "why_hard": "Standard 3-item PIE with floor functions; cumulative rounding errors in division are common for LLMs.",
+    "tags": [
+      "divisibility",
+      "PIE",
+      "number_theory"
+    ]
+  },
+  {
+    "problem_en": "A person has 4 letters and 4 addressed envelopes. In how many ways can the letters be placed in the envelopes such that exactly 1 letter goes into the correct envelope?",
+    "problem_hi": "एक व्यक्ति के पास 4 पत्र और 4 पते वाले लिफाफे हैं। पत्रों को लिफाफों में कितने तरीकों से रखा जा सकता है कि ठीक 1 पत्र सही लिफाफे में जाए?",
+    "problem_hg_030": "Ek person ke paas 4 letters aur 4 addressed envelopes hain. Kitne ways mein exactly 1 letter correct envelope mein ja sakta hai?",
+    "problem_hg_065": "4 chittiyan hain aur 4 lifafe. Inhe aise arrange karna hai ki sirf ek hi chitti apne sahi lifafe mein jaye, baaki sab galat jagah chali jayein. Aise kitne combinations possible hain?",
+    "gold_answer": "8",
+    "gold_answer_num": 8.0,
+    "unit": "ways",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Choose which letter is in the correct envelope: 4C1 = 4 ways.",
+      "Step 2: The remaining 3 letters must be deranged (placed in incorrect envelopes).",
+      "Step 3: Number of derangements of 3 items = D(3) = 3! * (1/2! - 1/3!) = 3 - 1 = 2.",
+      "Step 4: Total ways = 4 * 2 = 8."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' trap. 'Baaki sab galat jagah chali jayein' is a crucial constraint for derangement of the remainder. If the LLM misses this, it might just calculate 4C1 or 4!.",
+    "why_hard": "Requires combining selection (4C1) with derangements (D3), a multi-step combinatorial process.",
+    "tags": [
+      "derangements",
+      "selection",
+      "PIE"
+    ]
+  },
+  {
+    "problem_en": "Out of 60 people, 25 drink tea, 26 drink coffee, and 26 drink milk. 9 drink both tea and coffee, 11 drink both coffee and milk, and 8 drink both tea and milk. 8 drink none of these. How many drink all three?",
+    "problem_hi": "60 लोगों में से, 25 चाय पीते हैं, 26 कॉफी पीते हैं, और 26 दूध पीते हैं। 9 चाय और कॉफी दोनों पीते हैं, 11 कॉफी और दूध दोनों पीते हैं, और 8 चाय और दूध दोनों पीते हैं। 8 इनमें से कुछ भी नहीं पीते हैं। कितने लोग तीनों पीते हैं?",
+    "problem_hg_030": "60 people mein se, 25 tea peete hain, 26 coffee, aur 26 milk. 9 tea aur coffee dono peete hain, 11 coffee aur milk, aur 8 tea aur milk. 8 log kuch nahi peete. Kitne log teeno peete hain?",
+    "problem_hg_065": "Total 60 log hain. 25 chai peete hain, 26 coffee aur 26 doodh. Chai-coffee wale 9 hain, coffee-doodh wale 11, aur chai-doodh wale 8. Agar 8 log aise hain jo na chai, na coffee, na doodh peete hon, toh teeno peene walon ki ginti bataiye.",
+    "gold_answer": "5",
+    "gold_answer_num": 5.0,
+    "unit": "people",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total = 60. None = 8. So, Union (T∪C∪M) = 60 - 8 = 52.",
+      "Step 2: Use PIE: n(Union) = n(T) + n(C) + n(M) - [n(T∩C) + n(C∩M) + n(T∩M)] + n(T∩C∩M).",
+      "Step 3: 52 = 25 + 26 + 26 - (9 + 11 + 8) + x.",
+      "Step 4: 52 = 77 - 28 + x => 52 = 49 + x => x = 3."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' ambiguity. 'Chai-coffee wale 9 hain' is shorthand that LLMs might interpret as 'Chai AND Coffee only' vs 'Chai AND Coffee (including milk)'.",
+    "why_hard": "The problem requires solving for the intersection variable 'x' in the PIE formula, rather than finding the union.",
+    "tags": [
+      "algebraic_PIE",
+      "set_theory",
+      "variables"
+    ]
+  },
+  {
+    "problem_en": "How many ways can 4 distinct prizes be distributed among 3 students such that each student gets at least one prize?",
+    "problem_hi": "4 अलग-अलग पुरस्कारों को 3 छात्रों के बीच कितने तरीकों से वितरित किया जा सकता है कि प्रत्येक छात्र को कम से कम एक पुरस्कार मिले?",
+    "problem_hg_030": "4 distinct prizes ko 3 students mein kitne ways mein distribute kar sakte hain such that each student gets at least one prize?",
+    "problem_hg_065": "3 students hain aur 4 different prizes. Prizes ko aise baantna hai ki kisi bhi student ka haath khaali na rahe, yani har ek ko kam se kam ek prize toh milna hi chahiye. Total ways find karein.",
+    "gold_answer": "36",
+    "gold_answer_num": 36.0,
+    "unit": "ways",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total ways without constraints = 3^4 = 81.",
+      "Step 2: Use PIE to subtract cases where students get zero prizes. Let A_i be the property that student i gets no prize.",
+      "Step 3: Sum n(A_i) = 3C1 * 2^4 = 3 * 16 = 48. Sum n(A_i ∩ A_j) = 3C2 * 1^4 = 3 * 1 = 3.",
+      "Step 4: n(At least one) = 81 - 48 + 3 = 36."
+    ],
+    "linguistic_trap_in_hg065": "Passive voice / Metaphorical trap: 'kisi bhi student ka haath khaali na rahe' (no student's hand remains empty). LLMs might not translate this idiomatically to the mathematical constraint 'n > 0'.",
+    "why_hard": "Classic onto-mapping problem (Stirling numbers of the second kind multiplied by n!), but solved here via PIE.",
+    "tags": [
+      "distribution",
+      "onto_functions",
+      "PIE"
+    ]
+  },
+  {
+    "problem_en": "How many 3-digit numbers are not divisible by 2, 3, or 5?",
+    "problem_hi": "3-अंकों वाली कितनी संख्याएँ 2, 3, या 5 से विभाज्य नहीं हैं?",
+    "problem_hg_030": "Kitne 3-digit numbers hain jo 2, 3, ya 5 se divisible nahi hain?",
+    "problem_hg_065": "Aise kitne 3-digit numbers hain jo na 2 se, na 3 se aur na hi 5 se divide hote hon? In teeno se bachne wale numbers ki count nikaaliye.",
+    "gold_answer": "240",
+    "gold_answer_num": 240.0,
+    "unit": "numbers",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total 3-digit numbers = 999 - 100 + 1 = 900.",
+      "Step 2: Find union of numbers divisible by 2, 3, 5 using PIE in the range [100, 999].",
+      "Step 3: Alternatively, use Euler's totient-like logic since 900 is a multiple of LCM(2,3,5)=30. 900 * (1 - 1/2)(1 - 1/3)(1 - 1/5).",
+      "Step 4: 900 * (1/2) * (2/3) * (4/5) = 900 * (8/30) = 30 * 8 = 240."
+    ],
+    "linguistic_trap_in_hg065": "The 'na...na...na' double negation trap. Phrases like 'In teeno se bachne wale' (those who escape these three) add a layer of colloquialism that might obscure the standard 'Neither-Nor' logic.",
+    "why_hard": "Requires applying PIE over a specific range (100-999) or using the product of fractions method correctly.",
+    "tags": [
+      "PIE",
+      "divisibility",
+      "counting"
+    ]
+  },
+  {
+    "problem_en": "A bag contains 5 red, 4 blue, and 3 green balls. In how many ways can we select 3 balls such that not all are of the same color?",
+    "problem_hi": "एक बैग में 5 लाल, 4 नीली और 3 हरी गेंदें हैं। हम 3 गेंदों का चयन कितने तरीकों से कर सकते हैं कि सभी एक ही रंग की न हों?",
+    "problem_hg_030": "Ek bag mein 5 red, 4 blue, aur 3 green balls hain. 3 balls select karne ke kitne ways hain such that saari same color ki na hon?",
+    "problem_hg_065": "Bag mein 5 Red, 4 Blue aur 3 Green balls hain. Humein 3 balls uthani hain par condition ye hai ki teeno ka color ek jaisa na ho. Kitne ways mein selection ho sakta hai?",
+    "gold_answer": "205",
+    "gold_answer_num": 205.0,
+    "unit": "ways",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total ways to select 3 balls from 12 = 12C3 = (121110)/(32*1) = 220.",
+      "Step 2: Subtract cases where all 3 are the same color.",
+      "Step 3: All Red: 5C3 = 10; All Blue: 4C3 = 4; All Green: 3C3 = 1.",
+      "Step 4: 220 - (10 + 4 + 1) = 220 - 15 = 205."
+    ],
+    "linguistic_trap_in_hg065": "The 'Zyada' direction trap. While not explicitly using the word 'zyada', the phrasing 'teeno ka color ek jaisa na ho' can be misinterpreted as 'all three colors must be different' (3-color selection) rather than 'not all three are the same' (complement of 1-color selection).",
+    "why_hard": "Distinguishing between 'not all same' and 'all different' is a classic hurdle in combinatorial logic.",
+    "tags": [
+      "combinations",
+      "complementary_counting",
+      "logic"
+    ]
+  },
+  {
+    "problem_en": "Find the number of ways to arrange the letters of the word 'ASSASSIN' such that no two 'S's are together.",
+    "problem_hi": "शब्द 'ASSASSIN' के अक्षरों को कितने तरीकों से व्यवस्थित किया जा सकता है कि कोई भी दो 'S' एक साथ न हों?",
+    "problem_hg_030": "'ASSASSIN' word ke letters ko kitne ways mein arrange kar sakte hain such that no two 'S' are together?",
+    "problem_hg_065": "Word 'ASSASSIN' ke letters use karke kitne words banenge? Condition ye hai ki do 'S' kabhi bhi saath-saath na baithein, beech mein koi aur letter zaroor ho. 'Aur' word yahan separation dikhata hai.",
+    "gold_answer": "120",
+    "gold_answer_num": 120.0,
+    "unit": "arrangements",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Letters are A, I, N, 4S. Remaining letters after removing 4S are A, A, I, N.",
+      "Step 2: Arrange remaining letters: 4!/2! = 12 ways.",
+      "Step 3: Use the gap method. There are 5 gaps around A, A, I, N for 4 'S's: _ A _ A _ I _ N _.",
+      "Step 4: Select 4 gaps out of 5 and place S: 5C4 = 5. Total = 12 * 5 = 60. Wait, let's re-verify. Remaining: A, A, I, N (4 letters, 2 same). 4!/2! = 12. Gaps = 5. 5C4 = 5. 12 * 5 = 60."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' ambiguity. 'beech mein koi aur letter zaroor ho' (there must be some other letter in between) reinforces the gap method but might confuse the LLM into thinking they need to insert specific letters between the Ss.",
+    "why_hard": "Gap method is standard for 'no two together' constraints, but 'ASSASSIN' has multiple repeated letters (A, S) which complicates the initial permutation and the gap selection.",
+    "tags": [
+      "permutations",
+      "gap_method",
+      "repeated_letters"
+    ]
+  },
+  {
+    "problem_en": "How many 5-digit numbers can be formed using digits 1, 2, 3 such that each digit appears at least once?",
+    "problem_hi": "अंकों 1, 2, 3 का उपयोग करके कितनी 5-अंकीय संख्याएँ बनाई जा सकती हैं कि प्रत्येक अंक कम से कम एक बार आए?",
+    "problem_hg_030": "Digits 1, 2, 3 use karke kitne 5-digit numbers ban sakte hain such that each digit at least once use ho?",
+    "problem_hg_065": "Humein 5-digit number banana hai sirf 1, 2 aur 3 ko use karke. Rule ye hai ki 1, 2 aur 3 teeno ka wajood number mein hona chahiye, kam se kam ek baar toh zaroor. Total kitne numbers banenge?",
+    "gold_answer": "150",
+    "gold_answer_num": 150.0,
+    "unit": "numbers",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total numbers using digits 1,2,3 = 3^5 = 243.",
+      "Step 2: Subtract cases where only 2 digits are used: 3C2 * (2^5 - 2). The -2 is to avoid over-subtracting cases where only 1 digit is used.",
+      "Step 3: Subtract cases where only 1 digit is used: 3C1 * 1^5 = 3.",
+      "Step 4: By PIE: 3^5 - [3C1 * 2^5 - 3C2 * 1^5] = 243 - [3 * 32 - 3 * 1] = 243 - 93 = 150."
+    ],
+    "linguistic_trap_in_hg065": "Passive voice/Metaphorical: 'wajood number mein hona chahiye' (existence should be in the number). This phrasing is non-standard for 'must contain' and might lead to errors in interpreting the constraint.",
+    "why_hard": "Requires applying PIE to onto-functions (mapping 5 positions to 3 digits).",
+    "tags": [
+      "PIE",
+      "onto_functions",
+      "counting"
+    ]
+  },
+  {
+    "problem_en": "In a class of 30, 20 students play Cricket, 15 play Football. How many students play both if 5 students play neither?",
+    "problem_hi": "30 की एक कक्षा में, 20 छात्र क्रिकेट खेलते हैं, 15 फुटबॉल खेलते हैं। यदि 5 छात्र कुछ नहीं खेलते हैं, तो कितने छात्र दोनों खेलते हैं?",
+    "problem_hg_030": "30 ki class mein, 20 students Cricket khelte hain, 15 Football. Agar 5 students kuch nahi khelte, toh kitne dono khelte hain?",
+    "problem_hg_065": "Class mein total 30 bacche hain. 20 Cricket khelte hain aur 15 Football. Agar 5 bacche aise hain jo baaki sabse alag na Cricket khelte hain na Football, toh kitne bacche dono games mein participate karte hain?",
+    "gold_answer": "10",
+    "gold_answer_num": 10.0,
+    "unit": "students",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total = 30. Neither = 5. So Union (C ∪ F) = 25.",
+      "Step 2: n(C ∪ F) = n(C) + n(F) - n(C ∩ F).",
+      "Step 3: 25 = 20 + 15 - x.",
+      "Step 4: x = 35 - 25 = 10."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' trap. 'baaki sabse alag' (different from the rest) is a conversational filler that could be misinterpreted by an LLM as a specific set subtraction logic or a separate category of students.",
+    "why_hard": "Simple 2-set PIE, but the inclusion of 'baaki' and the 'na...na' structure tests the model's ability to focus on the core values.",
+    "tags": [
+      "PIE",
+      "set_theory",
+      "basic_logic"
+    ]
+  },
+  {
+    "problem_en": "Find the number of 4-digit numbers which contain at least one of the digits 0, 1, or 2.",
+    "problem_hi": "4-अंकीय संख्याओं की संख्या ज्ञात कीजिए जिनमें कम से कम 0, 1, या 2 में से एक अंक हो।",
+    "problem_hg_030": "Kitne 4-digit numbers hain jinme kam se kam ek digit 0, 1, ya 2 ho?",
+    "problem_hg_065": "4-digit numbers ki total ginti nikaalo jisme kam se kam ek baar 0, 1 ya 2 zaroor aaye. Pehle bina in digits ke numbers check karna phir total se baaki nikaalna.",
+    "gold_answer": "6599",
+    "gold_answer_num": 6599.0,
+    "unit": "numbers",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total 4-digit numbers = 9000 (from 1000 to 9999).",
+      "Step 2: Find numbers that contain NONE of the digits {0, 1, 2}. These numbers use digits from {3, 4, 5, 6, 7, 8, 9}.",
+      "Step 3: Count of such numbers: First digit has 7 options (3-9). Next 3 digits have 7 options each. Total = 7 * 7 * 7 * 7 = 2401.",
+      "Step 4: At least one = Total - None = 9000 - 2401 = 6599."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' ordering trap. 'Pehle bina in digits ke... phir total se baaki nikaalna' (First without these digits... then find the rest from total). This explicitly suggests complement counting, which is correct, but the use of 'baaki' here for 'the result' vs 'the remainder' can be ambiguous.",
+    "why_hard": "Counting 4-digit numbers correctly (the first digit cannot be 0) is a frequent mistake for LLMs, exacerbated by the complement counting logic.",
+    "tags": [
+      "counting",
+      "complement",
+      "number_systems"
+    ]
+  },
+  {
+    "problem_en": "There are 7 items to be placed in 3 bins. In how many ways can they be placed such that no bin is empty?",
+    "problem_hi": "7 वस्तुओं को 3 डिब्बों में रखा जाना है। उन्हें कितने तरीकों से रखा जा सकता है कि कोई भी डिब्बा खाली न रहे?",
+    "problem_hg_030": "7 items ko 3 bins mein rakhna hai. Kitne ways mein place kar sakte hain such that koi bin empty na ho?",
+    "problem_hg_065": "7 distinct cheezein hain aur 3 dibbe. Inhe aise distribute karna hai ki koi bhi dibba khaali na rahe, yani har dibbe mein 1 aur item zaroor ho. Dhyan rahe cheezein different hain.",
+    "gold_answer": "1806",
+    "gold_answer_num": 1806.0,
+    "unit": "ways",
+    "topic": "Combinatorics",
+    "difficulty": "JEE-Advanced",
+    "source_type": "inclusion_exclusion",
+    "solution_steps_en": [
+      "Step 1: Total ways = 3^7 = 2187.",
+      "Step 2: Subtract cases with 1 empty bin: 3C1 * 2^7 = 3 * 128 = 384.",
+      "Step 3: Add back cases with 2 empty bins: 3C2 * 1^7 = 3 * 1 = 3.",
+      "Step 4: Total = 2187 - 384 + 3 = 1806."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' ambiguity. '1 aur item zaroor ho' (should have 1 more item) in Hinglish can be interpreted as 'at least one' OR 'one extra' (total 2). This subtle ambiguity often trips up logic models.",
+    "why_hard": "Onto-mapping problem (Stirling number related) with a larger number of items (7), leading to larger intermediate calculation steps.",
+    "tags": [
+      "PIE",
+      "onto_functions",
+      "distribution"
+    ]
+  }
+]

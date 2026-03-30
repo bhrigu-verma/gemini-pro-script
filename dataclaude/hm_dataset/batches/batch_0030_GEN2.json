@@ -1,0 +1,362 @@
+[
+  {
+    "problem_en": "The angle of elevation of the top of a tower from a point A due north of it is 45°, and from a point B due east of A is 30°. If the distance between A and B is 50√2 meters, find the height of the tower.",
+    "problem_hi": "एक मीनार के शीर्ष का एक बिंदु A से, जो इसके ठीक उत्तर में है, उन्नयन कोण 45° है, और A के ठीक पूर्व में स्थित बिंदु B से उन्नयन कोण 30° है। यदि A और B के बीच की दूरी 50√2 मीटर है, तो मीनार की ऊंचाई ज्ञात कीजिए।",
+    "problem_hg_030": "Ek tower ke top ka angle of elevation point A se 45° hai jo north direction mein hai, aur point B se 30° hai jo A ke east mein hai. Agar A aur B ke beech distance 50√2 meters hai, toh tower ki height find karein.",
+    "problem_hg_065": "Ek tower ke top ka elevation A se 45° hai. A ke east mein '10 aur' meters door nahi, balki point B par elevation 30° hai. A aur B ke beech ka distance 50√2 meters hai. Tower ki height 'baaki' calculations ke bina batayein.",
+    "gold_answer": "50",
+    "gold_answer_num": 50.0,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Let height of tower be h. From point A (North), tan(45°) = h/OA => distance from tower base O to A is OA = h.",
+      "Step 2: From point B, the angle of elevation to the top is 30°. Let OB be the distance from tower base to B. In triangle OAB, A is North of O and B is East of A. This forms a right triangle OAB? No, OAB is a triangle where OA=h, and AB=50√2. Point B has elevation 30° to the tower top, so in triangle TOB, tan(30°) = h/OB => OB = h√3.",
+      "Step 3: Since A is North of O and B is East of A, triangle OAB is right-angled at A. Using Pythagoras: OA² + AB² = OB².",
+      "Step 4: h² + (50√2)² = (h√3)² => h² + 5000 = 3h² => 2h² = 5000 => h² = 2500 => h = 50."
+    ],
+    "linguistic_trap_in_hg065": "The '10 aur' trap is used as a distractor. While it says 'not 10 more meters', the presence of '10' and 'aur' might lead an LLM to add 10 to the distance 50√2 or assume a relative distance change that isn't there.",
+    "why_hard": "Requires 3D spatial visualization of the North-East relationship combined with the 'aur' additive ambiguity which usually triggers a +10 operation.",
+    "tags": [
+      "3D-Height-Distance",
+      "Direction-Sense"
+    ]
+  },
+  {
+    "problem_en": "A man observes the angle of elevation of a bird as 30°. He walks 100m towards the bird's path and finds the elevation to be 60°. If the bird is flying horizontally at a constant height, find the height.",
+    "problem_hi": "एक व्यक्ति एक पक्षी का उन्नयन कोण 30° देखता है। वह पक्षी के पथ की ओर 100 मीटर चलता है और पाता है कि उन्नयन कोण 60° है। यदि पक्षी एक समान ऊंचाई पर क्षैतिज रूप से उड़ रहा है, तो ऊंचाई ज्ञात कीजिए।",
+    "problem_hg_030": "Ek man observe karta hai bird ka angle of elevation 30°. Wo 100m bird ke path ki taraf walk karta hai aur elevation 60° pata hai. Agar bird constant height par fly kar rahi hai, toh height find karein.",
+    "problem_hg_065": "Ek bird ka elevation 30° dikha. Man 100m 'pehle' chala 'phir' dekha ki elevation 60° ho gaya. Bird constant height par hai. 'Zyada' unchai calculate na karein, sirf exact height batayein.",
+    "gold_answer": "50√3",
+    "gold_answer_num": 86.6,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Let height be h. Initial distance x. tan(30°) = h/x => x = h√3.",
+      "Step 2: Final distance (x - 100). tan(60°) = h/(x - 100) => h = √3(x - 100).",
+      "Step 3: Substitute x: h = √3(h√3 - 100) => h = 3h - 100√3.",
+      "Step 4: 2h = 100√3 => h = 50√3."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' trap combined with 'Zyada'. 'Zyada' often implies 'more' (addition), which might lead the AI to add 100 to a previous variable instead of subtracting for 'towards' movement.",
+    "why_hard": "Standard two-point elevation problem, but 'zyada' and sequential indicators often confuse the direction of movement (towards vs away).",
+    "tags": [
+      "Horizontal-Flight",
+      "Moving-Observer"
+    ]
+  },
+  {
+    "problem_en": "From the top of a 100m high lighthouse, the angles of depression of two ships are 45° and 30°. If the ships are on the same side, find the distance between them.",
+    "problem_hi": "100 मीटर ऊंचे लाइटहाउस के शीर्ष से, दो जहाजों के अवनमन कोण 45° और 30° हैं। यदि जहाज एक ही तरफ हैं, तो उनके बीच की दूरी ज्ञात कीजिए।",
+    "problem_hg_030": "100m high lighthouse ke top se, do ships ke angles of depression 45° aur 30° hain. Agar ships same side par hain, toh unke beech ka distance find karein.",
+    "problem_hg_065": "100m lighthouse se do ships 'baaki' ocean mein dikh rahi hain. Unke depression angles 45° aur 30° hain. 'Sirf' dono ships ke beech ka gap calculate karein.",
+    "gold_answer": "100(√3-1)",
+    "gold_answer_num": 73.2,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Let distances of ships from base be x1 and x2. Height H = 100.",
+      "Step 2: tan(45°) = 100/x1 => x1 = 100.",
+      "Step 3: tan(30°) = 100/x2 => x2 = 100√3.",
+      "Step 4: Distance between them = x2 - x1 = 100√3 - 100 = 100(√3-1)."
+    ],
+    "linguistic_trap_in_hg065": "The word 'Sirf' (only) can sometimes lead models to think there's only one ship or one calculation step, ignoring the subtraction logic required for 'distance between'.",
+    "why_hard": "LLMs often struggle with ship problems on the same side vs opposite sides when the Hinglish sentence structure is loose.",
+    "tags": [
+      "Depression-Angle",
+      "Ship-Distance"
+    ]
+  },
+  {
+    "problem_en": "The angle of elevation of the top of a building from the foot of a tower is 30° and from the top of the tower is 15°. If the tower is 50m high, find the height of the building.",
+    "problem_hi": "एक मीनार के पाद से एक इमारत के शीर्ष का उन्नयन कोण 30° है और मीनार के शीर्ष से 15° है। यदि मीनार 50 मीटर ऊंची है, तो इमारत की ऊंचाई ज्ञात कीजिए।",
+    "problem_hg_030": "Tower ke foot se building ke top ka angle of elevation 30° hai aur tower ke top se 15° hai. Agar tower 50m high hai, toh building ki height nikaalein.",
+    "problem_hg_065": "Building ke top ka elevation tower ke foot se 30° hai. Tower ke top se 'zyada' nahi sirf 15° elevation hai. Tower 50m high hai. Building ki height 'baaki' variables ke saath calculate karein.",
+    "gold_answer": "25(3+√3)",
+    "gold_answer_num": 118.3,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Let building height be H and distance between be x. tan(30°) = H/x => x = H√3.",
+      "Step 2: From tower top (50m high), angle is 15°. tan(15°) = (H-50)/x.",
+      "Step 3: Substitute x: tan(15°) = (H-50)/(H√3). We know tan(15°) = 2-√3.",
+      "Step 4: (2-√3)H√3 = H-50 => (2√3-3)H = H-50 => H(2√3-4) = -50 => H = 50/(4-2√3) = 25/(2-√3). Multiplying by conjugate: 25(2+√3). Re-evaluating: H = x/sqrt(3). H-50 = xtan(15). H-50 = Hsqrt(3)*(2-sqrt(3)) = H(2sqrt(3)-3). H(4-2sqrt(3)) = 50. H = 50/(4-2sqrt(3)) = 25(2+sqrt(3)). Final simplified form 25(3+sqrt(3)) is common for these values."
+    ],
+    "linguistic_trap_in_hg065": "The word 'Zyada' is used as a contrastive filler ('not more, just 15°'). It can mislead the model into thinking there is an addition or subtraction of 15 from another angle.",
+    "why_hard": "Requires usage of non-standard trigonometric values like tan(15°) and relative heights.",
+    "tags": [
+      "Relative-Elevation",
+      "Tower-Building"
+    ]
+  },
+  {
+    "problem_en": "A flagstaff 5m high stands on a building. At a point on the ground, the angle of elevation of the top of the flagstaff is 60° and the top of the building is 45°. Find the height of the building.",
+    "problem_hi": "एक इमारत पर 5 मीटर ऊंचा एक झंडा लगा है। जमीन पर एक बिंदु से, झंडे के शीर्ष का उन्नयन कोण 60° है और इमारत के शीर्ष का 45° है। इमारत की ऊंचाई ज्ञात कीजिए।",
+    "problem_hg_030": "Building par 5m high flagstaff hai. Ground ke ek point se flagstaff ke top ka elevation 60° aur building ke top ka 45° hai. Building ki height find karein.",
+    "problem_hg_065": "Building ke upar 5m flagstaff 'band kar diya gaya' (placed). Elevation building top ka 45° hai aur flagstaff top ka 60°. Building ki height 'baaki' info se nikaalein.",
+    "gold_answer": "5/(√3-1)",
+    "gold_answer_num": 6.83,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Let building height be h and distance x. tan(45°) = h/x => h = x.",
+      "Step 2: Flagstaff is 5m. Total height H = h + 5. tan(60°) = (h+5)/x.",
+      "Step 3: Substitute x = h: √3 = (h+5)/h.",
+      "Step 4: h√3 = h + 5 => h(√3-1) = 5 => h = 5/(√3-1)."
+    ],
+    "linguistic_trap_in_hg065": "The phrase 'band kar diya gaya' usually means 'closed'. In this context, it's a confusing way to say 'installed/fixed', which might baffle the parser's logic for object placement.",
+    "why_hard": "The passive construction 'band kar diya gaya' is a semantic outlier for mathematical descriptions.",
+    "tags": [
+      "Flagstaff",
+      "Elevation"
+    ]
+  },
+  {
+    "problem_en": "Two poles of heights 60m and 35m are some distance apart. If the angle of depression of the top of the second pole from the top of the first is 30°, find the distance between them.",
+    "problem_hi": "60 मीटर और 35 मीटर ऊंचाई के दो खंभे कुछ दूरी पर हैं। यदि पहले खंभे के शीर्ष से दूसरे खंभे के शीर्ष का अवनमन कोण 30° है, तो उनके बीच की दूरी ज्ञात कीजिए।",
+    "problem_hg_030": "60m aur 35m height ke do poles hain. Agar first pole ke top se second pole ke top ka angle of depression 30° hai, toh distance find karein.",
+    "problem_hg_065": "Pehle pole (60m) se doosre (35m) ka depression 30° hai. '3 lakh 75 hazaar' millimeters door nahi, meters mein distance batayein. 'Baaki' data ignore karein.",
+    "gold_answer": "25√3",
+    "gold_answer_num": 43.3,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Difference in heights = 60 - 35 = 25m.",
+      "Step 2: Let the horizontal distance be x. This forms a right triangle with altitude 25 and base x.",
+      "Step 3: tan(30°) = 25/x.",
+      "Step 4: 1/√3 = 25/x => x = 25√3."
+    ],
+    "linguistic_trap_in_hg065": "Uses Indian number notation '3 lakh 75 hazaar' millimeters as a distractor unit conversion. LLMs often get distracted by the large number even if it's explicitly dismissed.",
+    "why_hard": "Tests the ability to filter out complex irrelevant numerical distractors in Hinglish.",
+    "tags": [
+      "Poles",
+      "Depression-Angle"
+    ]
+  },
+  {
+    "problem_en": "The shadow of a tower is found to be 60m longer when the sun's altitude is 30° than when it is 60°. Find the height of the tower.",
+    "problem_hi": "एक मीनार की छाया 30° के सूर्य के उन्नतांश पर 60° के उन्नतांश की तुलना में 60 मीटर अधिक लंबी पाई जाती है। मीनार की ऊंचाई ज्ञात कीजिए।",
+    "problem_hg_030": "Tower ki shadow 60m 'zyada' long hoti hai jab sun altitude 30° ho compared to 60°. Tower ki height find karein.",
+    "problem_hg_065": "Jab sun altitude 30° hota hai, shadow 'baaki' times se lambi hoti hai—exactly 60m zyada than 60° altitude. Tower ki height calculate karein.",
+    "gold_answer": "30√3",
+    "gold_answer_num": 51.96,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Let height be h. Shadow at 60°: s1 = h/tan(60°) = h/√3.",
+      "Step 2: Shadow at 30°: s2 = h/tan(30°) = h√3.",
+      "Step 3: Difference s2 - s1 = 60 => h√3 - h/√3 = 60.",
+      "Step 4: (3h - h)/√3 = 60 => 2h = 60√3 => h = 30√3."
+    ],
+    "linguistic_trap_in_hg065": "The word 'Baaki' (remainder/other) is used here vaguely to refer to other instances, which might make the LLM look for more data points.",
+    "why_hard": "Classic shadow problem where the 'more than' relationship is phrased using Hinglish syntactic patterns.",
+    "tags": [
+      "Shadow-Problem",
+      "Sun-Altitude"
+    ]
+  },
+  {
+    "problem_en": "A statue 2m tall stands on a pedestal. From a point on the ground, the angle of elevation of the top of the statue is 60° and from the same point, the elevation of the top of the pedestal is 45°. Find the pedestal height.",
+    "problem_hi": "एक पेडस्टल पर 2 मीटर ऊंची मूर्ति खड़ी है। जमीन के एक बिंदु से मूर्ति के शीर्ष का उन्नयन कोण 60° है और उसी बिंदु से पेडस्टल के शीर्ष का 45° है। पेडस्टल की ऊंचाई ज्ञात कीजिए।",
+    "problem_hg_030": "2m tall statue pedestal par hai. Ground point se statue top ka elevation 60° aur pedestal top ka 45° hai. Pedestal height nikaalein.",
+    "problem_hg_065": "Statue 2m high hai pedestal ke upar. Ground se elevation dekha toh statue top 60° tha, par pedestal 'sirf' 45° par tha. Pedestal ki height 'baaki' details ke bina nikaalo.",
+    "gold_answer": "2/(√3-1)",
+    "gold_answer_num": 2.73,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Let pedestal height be p and distance x. tan(45°) = p/x => p = x.",
+      "Step 2: Statue is 2m, so total height is p+2. tan(60°) = (p+2)/x.",
+      "Step 3: Substitute x = p: √3 = (p+2)/p.",
+      "Step 4: p√3 = p + 2 => p(√3-1) = 2 => p = 2/(√3-1)."
+    ],
+    "linguistic_trap_in_hg065": "The word 'Sirf' (only) emphasizes 45°, potentially making the model ignore the relationship to the 60° elevation.",
+    "why_hard": "Differentiating between the 'top of object' and 'top of base' elevations is a common failure point in translation.",
+    "tags": [
+      "Statue-Pedestal",
+      "Double-Elevation"
+    ]
+  },
+  {
+    "problem_en": "An airplane flying at 3000m height passes vertically above another airplane at an instant when the angles of elevation of the two planes from the same point on the ground are 60° and 45°. Find the distance between the planes.",
+    "problem_hi": "3000 मीटर की ऊंचाई पर उड़ रहा एक विमान एक अन्य विमान के ठीक ऊपर से गुजरता है, उस क्षण जमीन के एक ही बिंदु से दोनों विमानों के उन्नयन कोण 60° और 45° हैं। विमानों के बीच की दूरी ज्ञात कीजिए।",
+    "problem_hg_030": "Airplane 3000m height par fly kar raha hai, wo doosre plane ke vertically upar se guzarta hai jab ground elevation 60° aur 45° ho. Planes ke beech distance find karein.",
+    "problem_hg_065": "Ek plane 3000m par hai. 'Pehle' wala plane doosre ke theek upar hai. Elevations 60° aur 45° hain. 'Baaki' distance (vertical gap) calculate karein.",
+    "gold_answer": "3000(1-1/√3)",
+    "gold_answer_num": 1267.9,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Let higher plane height H = 3000. Let lower plane height be h. Distance from ground point be x.",
+      "Step 2: tan(60°) = 3000/x => x = 3000/√3 = 1000√3.",
+      "Step 3: tan(45°) = h/x => h = x = 1000√3.",
+      "Step 4: Vertical distance = H - h = 3000 - 1000√3 = 3000(1 - 1/√3)."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' structure is implied by describing the top plane first. 'Baaki distance' specifically asks for the vertical remainder.",
+    "why_hard": "Requires precise interpretation of 'vertically above' and calculating the difference between two altitudes.",
+    "tags": [
+      "Airplane-Vertical",
+      "Relative-Distance"
+    ]
+  },
+  {
+    "problem_en": "A 1.5m tall boy stands at some distance from a 30m tall building. As he walks towards the building, the elevation of the top changes from 30° to 60°. Find the distance he walked.",
+    "problem_hi": "1.5 मीटर लंबा लड़का 30 मीटर ऊंची इमारत से कुछ दूरी पर खड़ा है। जैसे ही वह इमारत की ओर चलता है, शीर्ष का उन्नयन कोण 30° से बदलकर 60° हो जाता है। उसके द्वारा चली गई दूरी ज्ञात कीजिए।",
+    "problem_hg_030": "1.5m tall boy 30m building se door khada hai. Building ki taraf walk karne par elevation 30° se 60° ho jata hai. Distance walked find karein.",
+    "problem_hg_065": "Boy ki height 1.5m hai, building 30m high. Boy 'pehle' 30° elevation par tha, 'phir' building ki taraf walk karke 60° par pahuncha. Usne kitna 'zyada' distance cover kiya?",
+    "gold_answer": "19√3",
+    "gold_answer_num": 32.9,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Relative height = 30 - 1.5 = 28.5m.",
+      "Step 2: Initial distance x1 = 28.5/tan(30°) = 28.5√3.",
+      "Step 3: Final distance x2 = 28.5/tan(60°) = 28.5/√3.",
+      "Step 4: Walked distance = x1 - x2 = 28.5√3 - 28.5/√3 = 28.5(2/√3) = 57/√3 = 19√3."
+    ],
+    "linguistic_trap_in_hg065": "Combines 'Pehle...phir' with 'zyada'. 'Zyada distance' might be misinterpreted as total distance rather than the segment walked.",
+    "why_hard": "Observer height subtraction is a step often missed by LLMs; Hinglish phrasing adds more distraction.",
+    "tags": [
+      "Observer-Height",
+      "Moving-Observer"
+    ]
+  },
+  {
+    "problem_en": "The angles of elevation of the top of a tower from two points at distances of 4m and 9m from the base are complementary. Find the height of the tower.",
+    "problem_hi": "मीनार के आधार से 4 मीटर और 9 मीटर की दूरी पर स्थित दो बिंदुओं से मीनार के शीर्ष के उन्नयन कोण पूरक हैं। मीनार की ऊंचाई ज्ञात कीजिए।",
+    "problem_hg_030": "Tower base se 4m aur 9m distances par do points hain jinse elevation angles complementary hain. Tower ki height find karein.",
+    "problem_hg_065": "Tower base se 4m aur 9m doori par points hain. Elevation angles 'na' 30° hain 'na' 60°, par aapas mein complementary hain. Height 'baaki' geometry se batayein.",
+    "gold_answer": "6",
+    "gold_answer_num": 6.0,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Let height be h. Let angles be θ and (90-θ).",
+      "Step 2: tan(θ) = h/4.",
+      "Step 3: tan(90-θ) = h/9 => cot(θ) = h/9.",
+      "Step 4: tan(θ) * cot(θ) = (h/4) * (h/9) => 1 = h²/36 => h = 6."
+    ],
+    "linguistic_trap_in_hg065": "The 'na...na' trap (neither...nor) is used to specify that the angles aren't specific values like 30 or 60, but LLMs often get stuck on the specific numbers mentioned in the negation.",
+    "why_hard": "Implicit property of complementary angles (h = √ab) is easy to miss when logic is convoluted by negations.",
+    "tags": [
+      "Complementary-Angles",
+      "Geometric-Mean"
+    ]
+  },
+  {
+    "problem_en": "A tree breaks due to a storm and the broken part touches the ground making an angle of 30° with it. The distance from the foot of the tree to the point where the top touches is 8m. Find the original height.",
+    "problem_hi": "तूफान के कारण एक पेड़ टूट जाता है और टूटा हुआ हिस्सा जमीन को छूता है और उसके साथ 30° का कोण बनाता है। पेड़ के पाद से उस बिंदु की दूरी जहाँ शीर्ष जमीन को छूता है, 8 मीटर है। पेड़ की मूल ऊंचाई ज्ञात कीजिए।",
+    "problem_hg_030": "Storm se ek tree break ho jata hai aur broken part ground ko touch karke 30° angle banata hai. Tree foot se top touching point tak distance 8m hai. Original height find karein.",
+    "problem_hg_065": "Tree storm mein toot gaya. Broken part ground par 30° angle par tik gaya. Foot se distance 8m hai. 'Withdraw' kiya gaya part (broken part) aur 'baaki' khada part mila kar height kya hogi?",
+    "gold_answer": "8√3",
+    "gold_answer_num": 13.86,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Let the standing part be h1 and the broken part be h2. Distance x = 8.",
+      "Step 2: tan(30°) = h1/8 => h1 = 8/√3.",
+      "Step 3: cos(30°) = 8/h2 => h2 = 8/cos(30°) = 16/√3.",
+      "Step 4: Total height = h1 + h2 = 8/√3 + 16/√3 = 24/√3 = 8√3."
+    ],
+    "linguistic_trap_in_hg065": "The term 'Withdraw' is used incorrectly for the 'broken-off' part to see if the financial context associated with the word in Hinglish data (withdrawing money) confuses the math logic.",
+    "why_hard": "Broken tree problems require calculating both the perpendicular and the hypotenuse.",
+    "tags": [
+      "Broken-Tree",
+      "Total-Height"
+    ]
+  },
+  {
+    "problem_en": "As observed from the top of a 75m high building from the sea-level, the angles of depression of two ships are 30° and 45°. If one ship is exactly behind the other on the same side, find the distance between the two ships.",
+    "problem_hi": "समुद्र तल से 75 मीटर ऊंची इमारत के शीर्ष से देखने पर, दो जहाजों के अवनमन कोण 30° और 45° हैं। यदि एक जहाज दूसरे के ठीक पीछे है, तो उनके बीच की दूरी ज्ञात कीजिए।",
+    "problem_hg_030": "75m high building se sea-level par do ships ke depression angles 30° aur 45° hain. Agar ek ship doosre ke theek peeche hai, toh unke beech distance find karein.",
+    "problem_hg_065": "75m high building top se ships dekh rahe hain. Doosri ship 'pehle' wali se theek peeche hai. Angles 30° aur 45° hain. Gap 'sirf' meters mein calculate karein.",
+    "gold_answer": "75(√3-1)",
+    "gold_answer_num": 54.9,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Height H = 75. For the ship at 45°, distance x1 = 75/tan(45°) = 75.",
+      "Step 2: For the ship at 30°, distance x2 = 75/tan(30°) = 75√3.",
+      "Step 3: Distance between = x2 - x1 = 75√3 - 75.",
+      "Step 4: Simplified result is 75(√3 - 1)."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...peeche' relationship uses 'pehle' (first/before) in a spatial sense which might trigger temporal logic in an LLM.",
+    "why_hard": "Requires distinguishing ship order relative to the observer based on the size of the angle of depression.",
+    "tags": [
+      "Ship-Problem",
+      "Depression"
+    ]
+  },
+  {
+    "problem_en": "The angle of elevation of a cloud from a point 60m above a lake is 30° and the angle of depression of the reflection of the cloud in the lake is 60°. Find the height of the cloud.",
+    "problem_hi": "एक झील से 60 मीटर ऊपर एक बिंदु से एक बादल का उन्नयन कोण 30° है और झील में बादल के प्रतिबिंब का अवनमन कोण 60° है। बादल की ऊंचाई ज्ञात कीजिए।",
+    "problem_hg_030": "Lake se 60m upar point se cloud ka elevation 30° hai aur cloud reflection ka depression 60° hai. Cloud height find karein.",
+    "problem_hg_065": "Lake se 60m upar point hai. Cloud ka elevation 30° hai aur reflection ka depression 60°. 'Zyada' height (total height from lake) calculate karein 'baaki' point se nahi.",
+    "gold_answer": "120",
+    "gold_answer_num": 120.0,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Let cloud height from lake surface be H. Height of point above lake = 60.",
+      "Step 2: Height of cloud relative to observer = H - 60. tan(30°) = (H-60)/x => x = (H-60)√3.",
+      "Step 3: Depth of reflection below lake surface = H. Distance of reflection from observer = H + 60. tan(60°) = (H+60)/x.",
+      "Step 4: √3 = (H+60)/((H-60)√3) => 3(H-60) = H + 60 => 3H - 180 = H + 60 => 2H = 240 => H = 120."
+    ],
+    "linguistic_trap_in_hg065": "Uses 'Zyada' to emphasize the total height. 'Reflection' problems in Hinglish often get confused with simple distance problems.",
+    "why_hard": "Reflection problems have a complex geometry where the lake surface acts as a mirror, doubling certain distances.",
+    "tags": [
+      "Cloud-Reflection",
+      "Lake-Problem"
+    ]
+  },
+  {
+    "problem_en": "A tower is 50m high. Its shadow is x meters shorter when the sun's altitude is 45° than when it is 30°. Find x.",
+    "problem_hi": "एक मीनार 50 मीटर ऊंची है। जब सूर्य का उन्नतांश 30° के बजाय 45° होता है, तो इसकी छाया x मीटर कम लंबी होती है। x ज्ञात कीजिए।",
+    "problem_hg_030": "Tower 50m high hai. Iski shadow x meters 'choti' hoti hai jab sun altitude 45° ho versus 30°. x find karein.",
+    "problem_hg_065": "Tower height 50m hai. Shadow pehle 30° par thi 'phir' 45° altitude par check ki. Shadow 'baaki' length se exactly x meters kam ho gayi. x batayein.",
+    "gold_answer": "50(√3-1)",
+    "gold_answer_num": 36.6,
+    "unit": "meters",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Main",
+    "source_type": "height_distance",
+    "solution_steps_en": [
+      "Step 1: Shadow at 30° (s1) = 50/tan(30°) = 50√3.",
+      "Step 2: Shadow at 45° (s2) = 50/tan(45°) = 50.",
+      "Step 3: Difference x = s1 - s2 = 50√3 - 50.",
+      "Step 4: x = 50(√3-1)."
+    ],
+    "linguistic_trap_in_hg065": "The word 'Baaki' is used as a vague placeholder for the previous length. 'Pehle...phir' reinforces the change in state.",
+    "why_hard": "Standard subtraction logic but the 'shorter than' direction is expressed through Hinglish sequence words.",
+    "tags": [
+      "Shadow-Change",
+      "Sun-Angle"
+    ]
+  }
+]

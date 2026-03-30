@@ -21,7 +21,7 @@ Then: python gemini_loop.py
 """
 
 # ── stdlib ────────────────────────────────────────────────────────────────────
-import os, sys, time, json, shutil, textwrap, datetime, traceback, random, gc
+import os, sys, time, json, shutil, textwrap, datetime, traceback
 from pathlib import Path
 from typing  import Optional, List
 
@@ -60,20 +60,6 @@ OUTPUT_DIR       = Path("gemini_loop_output")
 RESPONSE_TIMEOUT = 180   # seconds total
 STABLE_CHECKS    = 4     # identical snapshots needed to declare "done"
 STABLE_INTERVAL  = 2.5   # seconds between snapshots
-
-# Long-run hardening (env-overridable)
-INTER_ROUND_SLEEP_MIN = int(os.environ.get("INTER_ROUND_SLEEP_MIN", "45"))
-INTER_ROUND_SLEEP_MAX = int(os.environ.get("INTER_ROUND_SLEEP_MAX", "90"))
-RATE_LIMIT_BACKOFF = [
-    int(v.strip())
-    for v in os.environ.get("RATE_LIMIT_BACKOFF", "60,120,300").split(",")
-    if v.strip()
-]
-CONTEXT_RESET_INTERVAL = int(os.environ.get("CONTEXT_RESET_INTERVAL", "15"))
-SCREENSHOT_INTERVAL = int(os.environ.get("SCREENSHOT_INTERVAL", "10"))
-SCREENSHOT_ON_ERROR = os.environ.get("SCREENSHOT_ON_ERROR", "1") == "1"
-MEMORY_CLEAN_INTERVAL = int(os.environ.get("MEMORY_CLEAN_INTERVAL", "20"))
-AUTO_MAX_ROUNDS = int(os.environ.get("AUTO_MAX_ROUNDS", "0"))
 
 CRITIC_PROMPT = """\
 You are a brutally honest world-class editor. Evaluate the following content \
@@ -300,9 +286,9 @@ def open_tab(driver: webdriver.Chrome, url: str, label: str) -> str:
 
 # Input box
 INPUT_SELS = [
-    "div[contenteditable='true'][data-placeholder]",
     "rich-textarea div[contenteditable='true']",
     "rich-textarea p",
+    "div[contenteditable='true'][data-placeholder]",
     "div[contenteditable='true']",
     ".ql-editor",
     "textarea",
@@ -321,7 +307,6 @@ SEND_SELS = [
 STOP_SELS = [
     "button[aria-label='Stop response']",
     "button[aria-label='Stop generating']",
-    "button[aria-label='Stop']",
     "button[jsname='k9Ysde']",
     "button[data-testid='stop-button']",
     ".stop-button",
@@ -331,9 +316,6 @@ RESP_SELS = [
     "model-response .markdown",
     "model-response response-text",
     "model-response",
-    "message-content",
-    "[data-turn-role='model']",
-    "[data-message-author-role='model']",
     "message-content .markdown",
     ".response-content .markdown",
     ".response-content",
@@ -383,9 +365,7 @@ class GeminiTab:
     # ── focus ────────────────────────────────────────────────────────────
     def focus(self) -> None:
         try:
-            # Avoid redundant tab activation calls that can steal OS focus.
-            if self.driver.current_window_handle != self.handle:
-                self.driver.switch_to.window(self.handle)
+            self.driver.switch_to.window(self.handle)
         except WebDriverException as e:
             log(f"Lost session: {e}", "ERR", self.name)
             raise
@@ -397,50 +377,7 @@ class GeminiTab:
     # ── find first matching element ───────────────────────────────────────
     def _find(self, sels: List[str], timeout: int = 12,
               what: str = "element"):
-        if what == "input box":
-            # Gemini frequently renders multiple contenteditable nodes.
-            # Prefer a visible, non-zero sized element to avoid typing into
-            # hidden/ghost editors that lead to no-op sends.
-            deadline = time.time() + timeout
-            while time.time() < deadline:
-                for s in sels:
-                    try:
-                        els = self.driver.find_elements(By.CSS_SELECTOR, s)
-                    except Exception:
-                        continue
-
-                    if not els:
-                        continue
-
-                    visible = []
-                    for el in els:
-                        try:
-                            sz = el.size or {}
-                            if (
-                                el.is_displayed()
-                                and sz.get("width", 0) > 0
-                                and sz.get("height", 0) > 0
-                            ):
-                                visible.append(el)
-                        except StaleElementReferenceException:
-                            continue
-                        except Exception:
-                            continue
-
-                    if visible:
-                        picked = visible[-1]
-                        dbg(
-                            f"Found {what} via: {s} (visible {len(visible)}/{len(els)})",
-                            tab=self.name,
-                        )
-                        return picked
-
-                time.sleep(0.2)
-
-            raise TimeoutException(
-                f"[{self.name}] Nothing matched for '{what}': {sels}"
-            )
-
+        self.focus()
         for s in sels:
             try:
                 el = WebDriverWait(self.driver, timeout).until(
@@ -494,6 +431,7 @@ class GeminiTab:
 
     # ── click send button ─────────────────────────────────────────────────
     def _click_send(self) -> bool:
+        self.focus()
         for s in SEND_SELS:
             els = self.driver.find_elements(By.CSS_SELECTOR, s)
             if not els:
@@ -520,6 +458,7 @@ class GeminiTab:
 
     # ── is Gemini still streaming? ────────────────────────────────────────
     def _streaming(self) -> bool:
+        self.focus()
         for s in STOP_SELS:
             try:
                 if self.driver.find_element(By.CSS_SELECTOR, s).is_displayed():
@@ -530,6 +469,7 @@ class GeminiTab:
 
     # ── extract text of the last response block ───────────────────────────
     def _last_text(self) -> str:
+        self.focus()
         for s in RESP_SELS:
             try:
                 els = self.driver.find_elements(By.CSS_SELECTOR, s)
@@ -554,108 +494,15 @@ class GeminiTab:
                 return t.strip()
         except Exception as e:
             dbg(f"JS text fallback error: {e}", tab=self.name)
-
-        # Deep fallback for modern Gemini layouts where chat content lives
-        # in nested custom elements / shadow roots.
-        try:
-            t = self.driver.execute_script("""
-                function visible(el) {
-                    if (!el) return false;
-                    const r = el.getBoundingClientRect();
-                    if (r.width <= 0 || r.height <= 0) return false;
-                    const style = window.getComputedStyle(el);
-                    return style && style.display !== 'none' && style.visibility !== 'hidden';
-                }
-
-                function roots() {
-                    const out = [document];
-                    const stack = [document.documentElement];
-                    while (stack.length) {
-                        const n = stack.pop();
-                        if (!n) continue;
-                        if (n.shadowRoot) {
-                            out.push(n.shadowRoot);
-                            stack.push(n.shadowRoot);
-                        }
-                        const kids = n.children || [];
-                        for (let i = 0; i < kids.length; i++) stack.push(kids[i]);
-                    }
-                    return out;
-                }
-
-                const bad = /(send message|new chat|gemini can make mistakes)/i;
-                const cand = [];
-                for (const root of roots()) {
-                    const nodes = root.querySelectorAll(
-                        'model-response, message-content, [data-turn-role="model"], [data-message-author-role="model"], [role="article"], .response-content, .markdown'
-                    );
-                    for (const n of nodes) {
-                        if (!visible(n)) continue;
-                        const txt = (n.innerText || '').trim();
-                        if (txt.length < 8) continue;
-                        if (bad.test(txt) && txt.length < 120) continue;
-                        const y = n.getBoundingClientRect().top;
-                        cand.push({ y, len: txt.length, txt });
-                    }
-                }
-
-                if (!cand.length) return '';
-                cand.sort((a, b) => (a.y - b.y) || (a.len - b.len));
-                return cand[cand.length - 1].txt || '';
-            """)
-            if t and t.strip():
-                dbg("Text captured via deep shadow fallback.", tab=self.name)
-                return t.strip()
-        except Exception as e:
-            dbg(f"Deep fallback error: {e}", tab=self.name)
         return ""
 
     # ── count response blocks (used to detect new response) ───────────────
     def _resp_count(self) -> int:
+        self.focus()
         for s in RESP_SELS:
             n = len(self.driver.find_elements(By.CSS_SELECTOR, s))
             if n:
                 return n
-
-        # Shadow-root aware fallback for modern Gemini chat trees.
-        try:
-            n = self.driver.execute_script("""
-                function roots() {
-                    const out = [document];
-                    const stack = [document.documentElement];
-                    while (stack.length) {
-                        const n = stack.pop();
-                        if (!n) continue;
-                        if (n.shadowRoot) {
-                            out.push(n.shadowRoot);
-                            stack.push(n.shadowRoot);
-                        }
-                        const kids = n.children || [];
-                        for (let i = 0; i < kids.length; i++) stack.push(kids[i]);
-                    }
-                    return out;
-                }
-
-                const sels = [
-                    'model-response',
-                    'message-content',
-                    '[data-turn-role="model"]',
-                    '[data-message-author-role="model"]',
-                    '.response-content'
-                ];
-
-                let count = 0;
-                for (const root of roots()) {
-                    for (const s of sels) {
-                        count += root.querySelectorAll(s).length;
-                    }
-                }
-                return count;
-            """)
-            if n:
-                return int(n)
-        except Exception:
-            pass
         return 0
 
     # ─────────────────────────────────────────────────────────────────────
@@ -735,13 +582,6 @@ class GeminiTab:
                 last_text = cur
 
         log("Timed out — returning best capture.", "WARN", self.name)
-        if SCREENSHOT_ON_ERROR and not last_text:
-            try:
-                ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-                self.screenshot(str(OUTPUT_DIR / f"timeout_{self.name.lower()}_{ts}.png"))
-                self.dump_dom(f"timeout_{self.name.lower()}")
-            except Exception as e:
-                dbg(f"Timeout diagnostics capture failed: {e}", tab=self.name)
         return last_text or "[RESPONSE TIMED OUT]"
 
     # ── screenshot ────────────────────────────────────────────────────────
@@ -781,76 +621,6 @@ class GeminiLoop:
         self.improver: Optional[GeminiTab]        = None
         self.critic:   Optional[GeminiTab]        = None
         self.history:  List[dict]                 = []
-
-    @staticmethod
-    def _is_rate_limit_error(exc: Exception) -> bool:
-        text = str(exc).lower()
-        return (
-            "429" in text
-            or "rate limit" in text
-            or "quota" in text
-            or "too many requests" in text
-            or "resource_exhausted" in text
-        )
-
-    def _sleep_with_jitter(self) -> None:
-        if INTER_ROUND_SLEEP_MAX <= 0:
-            return
-        lower = max(0, INTER_ROUND_SLEEP_MIN)
-        upper = max(lower, INTER_ROUND_SLEEP_MAX)
-        delay = random.randint(lower, upper)
-        log(f"Cooling down {delay}s before next round.", "INFO")
-        time.sleep(delay)
-
-    def _ensure_logged_in(self, tab: GeminiTab) -> bool:
-        try:
-            tab.focus()
-            url = (self.driver.current_url or "").lower()
-            if "gemini.google.com" not in url:
-                return False
-            tab._find(INPUT_SELS, timeout=2, what="input box")
-            return True
-        except Exception:
-            return False
-
-    def _pause_for_relogin(self, tab: GeminiTab) -> None:
-        hr("SESSION HEALTH CHECK", c="!")
-        print(f"  [{tab.name}] session appears expired or input not ready.")
-        print("  Re-login in Chrome, then press ENTER to continue.\n")
-        input()
-
-    def _new_tab_client(self, label: str) -> GeminiTab:
-        handle = open_tab(self.driver, GEMINI_URL, label)
-        time.sleep(4)
-        tab = GeminiTab(self.driver, handle, label)
-        tab.probe()
-        return tab
-
-    def _context_reset(self, best_version: str, rnd: int) -> None:
-        if CONTEXT_RESET_INTERVAL <= 0 or rnd % CONTEXT_RESET_INTERVAL != 0:
-            return
-        log(f"Context reset at round {rnd}: reopening Gemini tabs.", "INFO")
-        self.improver = self._new_tab_client("IMPROVER")
-        self.critic = self._new_tab_client("CRITIC")
-        seed = (
-            "Here is the current best version:\n\n"
-            f"{best_version}\n\n"
-            "Continue improving from this baseline."
-        )
-        try:
-            self.improver.send(seed)
-            _ = self.improver.recv()
-        except Exception as e:
-            log(f"Context reseed failed: {e}", "WARN")
-
-    def _memory_cleanup(self, rnd: int) -> None:
-        if MEMORY_CLEAN_INTERVAL <= 0 or rnd % MEMORY_CLEAN_INTERVAL != 0:
-            return
-        try:
-            self.driver.execute_script("window.gc && window.gc()")
-        except Exception:
-            pass
-        gc.collect()
 
     # ── setup ─────────────────────────────────────────────────────────────
     def setup(self) -> None:
@@ -911,9 +681,8 @@ class GeminiLoop:
     # ── save round ────────────────────────────────────────────────────────
     def _save(self, rnd: int, version: str, critique: str) -> None:
         ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        if SCREENSHOT_INTERVAL > 0 and rnd % SCREENSHOT_INTERVAL == 0:
-            self.improver.screenshot(str(OUTPUT_DIR / f"r{rnd:02d}_improver_{ts}.png"))
-            self.critic.screenshot(str(OUTPUT_DIR / f"r{rnd:02d}_critic_{ts}.png"))
+        self.improver.screenshot(str(OUTPUT_DIR / f"r{rnd:02d}_improver_{ts}.png"))
+        self.critic.screenshot(str(OUTPUT_DIR / f"r{rnd:02d}_critic_{ts}.png"))
         self.history.append({"round": rnd, "ts": ts,
                              "version": version, "critique": critique})
         (OUTPUT_DIR / "history.json").write_text(
@@ -965,66 +734,32 @@ class GeminiLoop:
         rnd = 1
         while True:
             hr(f"ROUND {rnd}", c="─")
-            if AUTO_MAX_ROUNDS > 0:
-                if rnd > AUTO_MAX_ROUNDS:
-                    log(f"AUTO_MAX_ROUNDS reached ({AUTO_MAX_ROUNDS}).", "OK")
-                    break
-            else:
-                print(f"  ENTER = run round {rnd}   |   'stop' = finish\n")
-                if input("  > ").strip().lower() in ("stop","quit","q","done","exit"):
-                    break
-
-            for tab in (self.improver, self.critic):
-                if not self._ensure_logged_in(tab):
-                    self._pause_for_relogin(tab)
-
-            self._context_reset(version, rnd)
+            print(f"  ENTER = run round {rnd}   |   'stop' = finish\n")
+            if input("  > ").strip().lower() in ("stop","quit","q","done","exit"):
+                break
 
             # critique
-            critique = ""
-            for idx, backoff in enumerate([0] + RATE_LIMIT_BACKOFF):
-                try:
-                    if backoff:
-                        log(f"Rate-limit backoff before critic retry: {backoff}s", "WARN")
-                        time.sleep(backoff)
-                    self.critic.send(CRITIC_PROMPT + version)
-                    critique = self.critic.recv()
-                    break
-                except Exception as e:
-                    if self._is_rate_limit_error(e) and idx < len(RATE_LIMIT_BACKOFF):
-                        continue
-                    log(f"Critic crashed: {e}", "ERR")
-                    if SCREENSHOT_ON_ERROR:
-                        ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-                        self.critic.screenshot(str(OUTPUT_DIR / f"err_r{rnd:02d}_critic_{ts}.png"))
-                    self.critic.dump_dom(f"crash_r{rnd}_critic")
-                    traceback.print_exc()
-                    return
+            try:
+                self.critic.send(CRITIC_PROMPT + version)
+                critique = self.critic.recv()
+            except Exception as e:
+                log(f"Critic crashed: {e}", "ERR")
+                self.critic.dump_dom(f"crash_r{rnd}_critic")
+                traceback.print_exc()
+                break
             self._show(f"CRITIQUE round {rnd}", critique)
 
             # improve
-            for idx, backoff in enumerate([0] + RATE_LIMIT_BACKOFF):
-                try:
-                    if backoff:
-                        log(f"Rate-limit backoff before improver retry: {backoff}s", "WARN")
-                        time.sleep(backoff)
-                    self.improver.send(IMPROVE_PROMPT_PREFIX + critique + IMPROVE_PROMPT_SUFFIX)
-                    version = self.improver.recv()
-                    break
-                except Exception as e:
-                    if self._is_rate_limit_error(e) and idx < len(RATE_LIMIT_BACKOFF):
-                        continue
-                    log(f"Improver crashed: {e}", "ERR")
-                    if SCREENSHOT_ON_ERROR:
-                        ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-                        self.improver.screenshot(str(OUTPUT_DIR / f"err_r{rnd:02d}_improver_{ts}.png"))
-                    self.improver.dump_dom(f"crash_r{rnd}_improver")
-                    traceback.print_exc()
-                    return
+            try:
+                self.improver.send(IMPROVE_PROMPT_PREFIX + critique + IMPROVE_PROMPT_SUFFIX)
+                version = self.improver.recv()
+            except Exception as e:
+                log(f"Improver crashed: {e}", "ERR")
+                self.improver.dump_dom(f"crash_r{rnd}_improver")
+                traceback.print_exc()
+                break
             self._show(f"VERSION {rnd}", version)
             self._save(rnd, version, critique)
-            self._memory_cleanup(rnd)
-            self._sleep_with_jitter()
             rnd += 1
 
         hr("DONE", c="=")

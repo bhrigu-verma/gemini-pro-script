@@ -1,0 +1,377 @@
+[
+  {
+    "problem_en": "If alpha and beta are the roots of the quadratic equation x^2 - 6x + 2 = 0, find the value of (alpha^4 * beta^3 + alpha^3 * beta^4) plus '10 more'.",
+    "problem_hi": "यदि alpha और beta द्विघात समीकरण x^2 - 6x + 2 = 0 के मूल हैं, तो (alpha^4 * beta^3 + alpha^3 * beta^4) में '10 और' जोड़कर मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar alpha aur beta quadratic equation x^2 - 6x + 2 = 0 ke roots hain, toh (alpha^4 * beta^3 + alpha^3 * beta^4) ki value mein '10 aur' add karke result batayein.",
+    "problem_hg_065": "Quadratic equation x^2 - 6x + 2 = 0 ke roots alpha, beta hain. Pehle (alpha^4 * beta^3 + alpha^3 * beta^4) calculate karo, phir usme '10 aur' mila do. Final answer kya hoga?",
+    "gold_answer": "58",
+    "gold_answer_num": 58.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: From Vieta's formulas, alpha + beta = 6 and alpha * beta = 2.",
+      "Step 2: Simplify the expression: alpha^3 * beta^3 * (alpha + beta).",
+      "Step 3: Substitute values: (alpha * beta)^3 * (alpha + beta) = 2^3 * 6 = 8 * 6 = 48.",
+      "Step 4: Handle the trap '10 aur' (10 more): 48 + 10 = 58."
+    ],
+    "linguistic_trap_in_hg065": "The phrase '10 aur' (10 more) is an additive trap. In a mathematical context, an LLM might misinterpret 'aur' as a logical 'AND' or a separator for a different part of the problem rather than an arithmetic addition.",
+    "why_hard": "Requires factoring the expression to use Vieta's roots and correctly identifying a colloquial addition instruction.",
+    "tags": [
+      "vieta",
+      "algebraic-manipulation",
+      "additive-trap"
+    ]
+  },
+  {
+    "problem_en": "Let alpha and beta be roots of x^2 - 5x + 3 = 0. Find the value of alpha^2 + beta^2 given that the constant term is '3 lakh' divided by 100,000.",
+    "problem_hi": "मान लीजिए alpha और beta समीकरण x^2 - 5x + 3 = 0 के मूल हैं। alpha^2 + beta^2 का मान ज्ञात कीजिए, यह देखते हुए कि अचर पद '3 लाख' को 100,000 से विभाजित करने पर प्राप्त होता है।",
+    "problem_hg_030": "Let alpha and beta be roots of x^2 - 5x + 3 = 0. alpha^2 + beta^2 ki value find karein, given that constant term '3 lakh' divided by 1,00,000 hai.",
+    "problem_hg_065": "Equation x^2 - 5x + k = 0 ke roots alpha, beta hain. Yahan k ki value '3 lakh' divided by 1,00,000 hai. Toh alpha^2 + beta^2 ki value kya hogi?",
+    "gold_answer": "19",
+    "gold_answer_num": 19.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Parse '3 lakh' as 3,00,000. Divide by 1,00,000 to get k = 3.",
+      "Step 2: From Vieta's, sum S = 5 and product P = 3.",
+      "Step 3: Use identity alpha^2 + beta^2 = (alpha + beta)^2 - 2(alpha * beta).",
+      "Step 4: Substitute: 5^2 - 2(3) = 25 - 6 = 19."
+    ],
+    "linguistic_trap_in_hg065": "Uses Indian number notation '3 lakh'. LLMs trained primarily on Western corpora often struggle with non-standardized comma placement or words like 'lakh' and 'crore' when embedded in technical tasks.",
+    "why_hard": "Forces the model to perform a number system conversion before applying algebraic identities.",
+    "tags": [
+      "indian-notation",
+      "vieta",
+      "identities"
+    ]
+  },
+  {
+    "problem_en": "If roots of x^2 - (k+1)x + 12 = 0 are alpha and beta such that alpha - beta = 1, find k considering k is positive and 'sirf' the positive root of the resulting k-equation is needed.",
+    "problem_hi": "यदि x^2 - (k+1)x + 12 = 0 के मूल alpha और beta हैं जैसे कि alpha - beta = 1, तो k ज्ञात कीजिए, यह मानते हुए कि k धनात्मक है और परिणामी k-समीकरण के 'सिर्फ' धनात्मक मूल की आवश्यकता है।",
+    "problem_hg_030": "Agar x^2 - (k+1)x + 12 = 0 ke roots alpha aur beta hain such that alpha - beta = 1, k find karein assuming k is positive and 'sirf' positive root of k-equation count hoga.",
+    "problem_hg_065": "Equation x^2 - (k+1)x + 12 = 0 ke roots ke beech ka difference 1 hai. K find karne ke liye quadratic solve karo but 'sirf' positive value hi select karna. Final answer kya hai?",
+    "gold_answer": "6",
+    "gold_answer_num": 6.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: sum = k+1, product = 12. Use (alpha-beta)^2 = (alpha+beta)^2 - 4(alphabeta).",
+      "Step 2: 1^2 = (k+1)^2 - 4(12) => 1 = (k+1)^2 - 48.",
+      "Step 3: (k+1)^2 = 49 => k+1 = 7 or k+1 = -7.",
+      "Step 4: k = 6 or k = -8. 'Sirf' (Only) positive value is 6."
+    ],
+    "linguistic_trap_in_hg065": "The word 'sirf' (only) modifies the selection criteria of the solution set. LLMs often overlook such focus particles and provide all possible mathematical solutions rather than the filtered subset.",
+    "why_hard": "Requires solving a secondary quadratic in k and applying a linguistically-defined filter.",
+    "tags": [
+      "vieta",
+      "root-difference",
+      "sirf-trap"
+    ]
+  },
+  {
+    "problem_en": "Find the value of k in x^2 - 11x + k = 0 if roots alpha and beta satisfy alpha = beta + 1, where alpha is 'zyada' than beta.",
+    "problem_hi": "x^2 - 11x + k = 0 में k का मान ज्ञात कीजिए यदि मूल alpha और beta, alpha = beta + 1 को संतुष्ट करते हैं, जहाँ alpha, beta से 'ज्यादा' है।",
+    "problem_hg_030": "Find k in x^2 - 11x + k = 0 if roots alpha and beta satisfy alpha = beta + 1, jahan alpha beta se 'zyada' hai.",
+    "problem_hg_065": "Samiikaran x^2 - 11x + k = 0 ke do roots hain alpha aur beta. Alpha ki value beta se '1 zyada' hai. K ka exact value kya hoga?",
+    "gold_answer": "30",
+    "gold_answer_num": 30.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Sum alpha + beta = 11. Given alpha = beta + 1.",
+      "Step 2: (beta + 1) + beta = 11 => 2beta = 10 => beta = 5.",
+      "Step 3: alpha = 6.",
+      "Step 4: k = product alpha * beta = 6 * 5 = 30."
+    ],
+    "linguistic_trap_in_hg065": "The 'zyada' (more) direction trap. While '1 zyada' clearly means +1, in complex code-mixing, 'zyada' can sometimes be confused as a ratio (like 1% more) or lead to sign errors (beta = alpha + 1).",
+    "why_hard": "Relies on translating a comparative Hindi term into a precise linear equation between roots.",
+    "tags": [
+      "vieta",
+      "comparative-trap",
+      "linear-system"
+    ]
+  },
+  {
+    "problem_en": "Roots of 2x^2 - 10x + c = 0 are alpha and beta. Find c if alpha^2 + beta^2 = 17, but only after c was 'withdraw kar liya' and replaced by its absolute value.",
+    "problem_hi": "2x^2 - 10x + c = 0 के मूल alpha और beta हैं। यदि alpha^2 + beta^2 = 17 है, तो c ज्ञात कीजिए, लेकिन c को उसके पूर्ण मान (absolute value) से बदल दिए जाने के बाद।",
+    "problem_hg_030": "Roots of 2x^2 - 10x + c = 0 are alpha and beta. c find karein if alpha^2 + beta^2 = 17, but c 'withdraw kar liya' gaya aur replace hua absolute value se.",
+    "problem_hg_065": "Quadratic 2x^2 - 10x + c = 0 mein sum of squares of roots 17 hai. C ki value equation se 'withdraw kar liya' gaya tha, toh uski magnitude batayein.",
+    "gold_answer": "8",
+    "gold_answer_num": 8.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: alpha + beta = 5, alpha * beta = c/2.",
+      "Step 2: alpha^2 + beta^2 = (alpha+beta)^2 - 2(alphabeta) = 25 - c = 17.",
+      "Step 3: 25 - c = 17 => c = 8.",
+      "Step 4: Magnitude remains 8."
+    ],
+    "linguistic_trap_in_hg065": "'Withdraw kar liya' (withdrawn) is usually used in bank interest problems. Applying it to a variable in an equation can confuse an LLM into thinking the term was removed (set to 0) or changed temporally.",
+    "why_hard": "Uses domain-shifting vocabulary to describe a simple variable search.",
+    "tags": [
+      "vieta",
+      "withdraw-trap",
+      "magnitude"
+    ]
+  },
+  {
+    "problem_en": "If roots of x^2 + bx + 45 = 0 are alpha and beta such that (alpha - beta)^2 = 144, find the value of b given b is 'na positive na neutral'.",
+    "problem_hi": "यदि x^2 + bx + 45 = 0 के मूल alpha और beta ऐसे हैं कि (alpha - beta)^2 = 144 है, तो b का मान ज्ञात कीजिए, यह देखते हुए कि b 'न सकारात्मक है न ही तटस्थ' (na positive na neutral) है।",
+    "problem_hg_030": "Agar x^2 + bx + 45 = 0 के roots alpha aur beta such that (alpha - beta)^2 = 144, find b given b is 'na positive na neutral'.",
+    "problem_hg_065": "Samiikaran x^2 + bx + 45 = 0 ke roots ka squared difference 144 hai. B ki value find karo assuming b 'na positive hai na neutral'.",
+    "gold_answer": "-18",
+    "gold_answer_num": -18.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: (alpha - beta)^2 = (alpha + beta)^2 - 4(alpha * beta).",
+      "Step 2: 144 = (-b)^2 - 4(45) => 144 = b^2 - 180.",
+      "Step 3: b^2 = 324 => b = 18 or b = -18.",
+      "Step 4: 'Na positive na neutral' (neither positive nor neutral/zero) means b is negative. So, b = -18."
+    ],
+    "linguistic_trap_in_hg065": "Double negation 'na...na' (neither...nor). LLMs often struggle with nested negation or non-standard terms like 'neutral' for zero in a code-mixed context.",
+    "why_hard": "The problem hinges on a double-negated condition to select the correct sign for a square root.",
+    "tags": [
+      "vieta",
+      "negation-trap",
+      "squared-difference"
+    ]
+  },
+  {
+    "problem_en": "If roots of x^2 - px + 8 = 0 differ by 2, find p^2 using 'pehle' sum of roots 'phir' product rules.",
+    "problem_hi": "यदि x^2 - px + 8 = 0 के मूल 2 के अंतर पर हैं, तो 'पहले' मूलों के योग और 'फिर' गुणन नियमों का उपयोग करके p^2 ज्ञात कीजिए।",
+    "problem_hg_030": "Agar x^2 - px + 8 = 0 ke roots differ by 2, find p^2 using 'pehle' sum of roots 'phir' product rules.",
+    "problem_hg_065": "x^2 - px + 8 = 0 ke roots mein 2 ka difference hai. 'Pehle' sum of roots dekho 'phir' product, aur p^2 ki value nikalo.",
+    "gold_answer": "36",
+    "gold_answer_num": 36.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Let roots be r and r-2. Sum = p = 2r - 2. Product = 8 = r(r-2).",
+      "Step 2: Solve r^2 - 2r - 8 = 0 => (r-4)(r+2) = 0. Roots are 4 and -2.",
+      "Step 3: If r=4, roots are 4, 2. Sum p = 6. p^2 = 36. If r=-2, roots are -2, -4. Sum p = -6. p^2 = 36.",
+      "Step 4: Final answer 36."
+    ],
+    "linguistic_trap_in_hg065": "Sequence trap 'pehle...phir' (first...then). Sometimes used to imply a dependency or order that might not be strictly necessary mathematically but can lead an LLM to hallucinate a procedural requirement.",
+    "why_hard": "Standard Vieta problem made complex by introducing specific procedural constraints in the prompt.",
+    "tags": [
+      "vieta",
+      "sequential-trap",
+      "root-difference"
+    ]
+  },
+  {
+    "problem_en": "For 3x^2 - 12x + m = 0, find m if one root is '3 times' the other. Note: 'baaki' calculations should be precise.",
+    "problem_hi": "3x^2 - 12x + m = 0 के लिए, m ज्ञात कीजिए यदि एक मूल दूसरे का '3 गुना' है। नोट: 'बाकी' गणना सटीक होनी चाहिए।",
+    "problem_hg_030": "3x^2 - 12x + m = 0 ke liye, m find karein agar ek root doosre ka '3 times' hai. Note: 'baaki' calculations precise honi chahiye.",
+    "problem_hg_065": "Samiikaran 3x^2 - 12x + m = 0 mein ek root doosre ka triple hai. 'Baaki' saari conditions Vieta's se solve karke m ki value batao.",
+    "gold_answer": "9",
+    "gold_answer_num": 9.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Let roots be a and 3a. Sum 4a = 12/3 = 4.",
+      "Step 2: 4a = 4 => a = 1. Roots are 1 and 3.",
+      "Step 3: Product P = m/3 = 1 * 3 = 3.",
+      "Step 4: m = 3 * 3 = 9."
+    ],
+    "linguistic_trap_in_hg065": "The word 'Baaki' (remainder/the rest). In this context, it refers to the remaining steps, but an LLM might look for a 'remainder' in a division sense or ignore the instruction as noise.",
+    "why_hard": "Requires root ratio logic combined with understanding colloquial transition words.",
+    "tags": [
+      "vieta",
+      "root-ratio",
+      "baaki-trap"
+    ]
+  },
+  {
+    "problem_en": "In x^2 + 7x + q = 0, roots alpha and beta are such that alpha^2 + beta^2 = 25. What is q? This was 'band kar diya gaya' after finding only integers.",
+    "problem_hi": "x^2 + 7x + q = 0 में, मूल alpha और beta ऐसे हैं कि alpha^2 + beta^2 = 25 है। q क्या है? केवल पूर्णांकों को खोजने के बाद इसे 'बंद कर दिया गया' था।",
+    "problem_hg_030": "x^2 + 7x + q = 0 mein, roots alpha and beta satisfy alpha^2 + beta^2 = 25. q kya hai? Integer milne ke baad solution 'band kar diya gaya'.",
+    "problem_hg_065": "Equation x^2 + 7x + q = 0 ke roots ka squares ka sum 25 hai. Q ki value kya hogi? Dhyan rahe, logic 'band kar diya gaya' integer results par.",
+    "gold_answer": "12",
+    "gold_answer_num": 12.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Sum alpha + beta = -7, alpha * beta = q.",
+      "Step 2: alpha^2 + beta^2 = (-7)^2 - 2q = 49 - 2q.",
+      "Step 3: 49 - 2q = 25 => 2q = 24 => q = 12.",
+      "Step 4: q is an integer, so the 'band kar diya' constraint is satisfied."
+    ],
+    "linguistic_trap_in_hg065": "Passive voice trap 'band kar diya gaya' (was closed/stopped). This implies a constraint on the solution process or result set that might be misinterpreted as a terminating condition for an algorithm.",
+    "why_hard": "The model might terminate reasoning early or misinterpret the phrase as a mathematical operation.",
+    "tags": [
+      "vieta",
+      "identities",
+      "passive-voice"
+    ]
+  },
+  {
+    "problem_en": "Roots of x^2 - mx + 24 = 0 have a difference of 2. Find m^2. The value is 'na 100 se zyada na 50 se kam'.",
+    "problem_hi": "x^2 - mx + 24 = 0 के मूलों का अंतर 2 है। m^2 ज्ञात कीजिए। मान 'न 100 से ज्यादा है न 50 से कम' है।",
+    "problem_hg_030": "Roots of x^2 - mx + 24 = 0 have a difference of 2. m^2 find karein. Value 'na 100 se zyada na 50 se kam' hai.",
+    "problem_hg_065": "Equation x^2 - mx + 24 = 0 ke roots differ by 2. m^2 ki aisi value nikalo jo 'na 100 se zyada ho na 50 se kam'.",
+    "gold_answer": "100",
+    "gold_answer_num": 100.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: (diff)^2 = m^2 - 4(24) = 4.",
+      "Step 2: m^2 - 96 = 4 => m^2 = 100.",
+      "Step 3: 100 is not 'greater than 100' (it is equal) and not 'less than 50'.",
+      "Step 4: m^2 = 100."
+    ],
+    "linguistic_trap_in_hg065": "Double negation combined with boundary logic ('na 100 se zyada' - not more than 100). LLMs often confuse strictly greater than (>) with greater than or equal to (>=) in linguistic descriptions.",
+    "why_hard": "Tests the ability to handle strict vs. non-strict inequalities in a code-mixed setting.",
+    "tags": [
+      "vieta",
+      "boundary-logic",
+      "root-difference"
+    ]
+  },
+  {
+    "problem_en": "If alpha and beta are roots of x^2 - 4x + 1 = 0, find alpha^3 + beta^3. The calculation involves '6 mahine' of steps if done by hand.",
+    "problem_hi": "यदि alpha और beta समीकरण x^2 - 4x + 1 = 0 के मूल हैं, तो alpha^3 + beta^3 ज्ञात कीजिए। यदि हाथ से किया जाए तो गणना में '6 महीने' के चरण शामिल होते हैं।",
+    "problem_hg_030": "Agar alpha aur beta roots of x^2 - 4x + 1 = 0, find alpha^3 + beta^3. Isme '6 mahine' jitne steps lag sakte hain.",
+    "problem_hg_065": "Quadratic x^2 - 4x + 1 = 0 ke liye alpha^3 + beta^3 ki value nikaaliye. Is calculation ko '6 mahine' lagne wale standard formula se karein.",
+    "gold_answer": "52",
+    "gold_answer_num": 52.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Sum S = 4, Product P = 1.",
+      "Step 2: alpha^3 + beta^3 = (alpha+beta)(alpha^2 - alphabeta + beta^2).",
+      "Step 3: alpha^2 + beta^2 = S^2 - 2P = 16 - 2 = 14.",
+      "Step 4: alpha^3 + beta^3 = 4 * (14 - 1) = 4 * 13 = 52."
+    ],
+    "linguistic_trap_in_hg065": "Implicit unit/Time trap '6 mahine' (6 months). Here it's an idiom for 'a long time', but an LLM might try to incorporate the number 6 into the mathematical calculation as a variable or a multiplier.",
+    "why_hard": "Uses hyperbolic time expressions that an LLM might literalize into the equation.",
+    "tags": [
+      "vieta",
+      "idiomatic-trap",
+      "cubes-sum"
+    ]
+  },
+  {
+    "problem_en": "If roots of x^2 - 8x + k = 0 are in ratio 3:1, find k. Ensure 'na arithmetic na logic' error occurs.",
+    "problem_hi": "यदि x^2 - 8x + k = 0 के मूल 3:1 के अनुपात में हैं, तो k ज्ञात कीजिए। सुनिश्चित करें कि 'न अंकगणित न ही तर्क' (na arithmetic na logic) त्रुटि हो।",
+    "problem_hg_030": "If roots of x^2 - 8x + k = 0 are in ratio 3:1, find k. Ensure 'na arithmetic na logic' error ho.",
+    "problem_hg_065": "Equation x^2 - 8x + k = 0 ke roots 3:1 ratio mein hain. K ki value aisi ho jisme 'na arithmetic na logic' ki galti ho. Final value?",
+    "gold_answer": "12",
+    "gold_answer_num": 12.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Let roots be 3a and a. Sum 4a = 8 => a = 2.",
+      "Step 2: Roots are 6 and 2.",
+      "Step 3: Product k = 6 * 2 = 12.",
+      "Step 4: k = 12."
+    ],
+    "linguistic_trap_in_hg065": "Double negation 'na...na' used as a meta-instruction. This can interfere with the model's self-correction mechanisms or instruction-following weights.",
+    "why_hard": "Standard ratio problem with confusing meta-linguistic constraints.",
+    "tags": [
+      "vieta",
+      "root-ratio",
+      "meta-trap"
+    ]
+  },
+  {
+    "problem_en": "Roots of x^2 - 12x + 32 = 0 are alpha and beta. Find (alpha + 1)(beta + 1) using 'baaki' terms.",
+    "problem_hi": "x^2 - 12x + 32 = 0 के मूल alpha और beta हैं। 'बाकी' पदों का उपयोग करके (alpha + 1)(beta + 1) ज्ञात कीजिए।",
+    "problem_hg_030": "Roots of x^2 - 12x + 32 = 0 are alpha and beta. Find (alpha + 1)(beta + 1) using 'baaki' terms.",
+    "problem_hg_065": "Samiikaran x^2 - 12x + 32 = 0 ke roots alpha, beta hain. (alpha + 1)(beta + 1) solve karo aur 'baaki' constants ko sahi se multiply karo.",
+    "gold_answer": "45",
+    "gold_answer_num": 45.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: alpha + beta = 12, alpha * beta = 32.",
+      "Step 2: Expand (alpha + 1)(beta + 1) = alphabeta + (alpha + beta) + 1.",
+      "Step 3: Substitute: 32 + 12 + 1 = 45.",
+      "Step 4: Final answer 45."
+    ],
+    "linguistic_trap_in_hg065": "Use of 'baaki' (the rest/remaining). LLMs often misinterpret this as a subtraction command or a specific remainder in algebraic problems.",
+    "why_hard": "Simple expansion made confusing by the use of vague Hinglish transitional terms.",
+    "tags": [
+      "vieta",
+      "expansion",
+      "baaki-trap"
+    ]
+  },
+  {
+    "problem_en": "If roots of x^2 - kx + 10 = 0 have sum 7, find k^2 plus '3 lakh' divided by 300,000.",
+    "problem_hi": "यदि x^2 - kx + 10 = 0 के मूलों का योग 7 है, तो k^2 और '3 लाख' को 300,000 से विभाजित करने पर प्राप्त मान का योग ज्ञात कीजिए।",
+    "problem_hg_030": "Agar x^2 - kx + 10 = 0 ke roots ka sum 7 hai, find k^2 plus '3 lakh' divided by 3,00,000.",
+    "problem_hg_065": "Quadratic x^2 - kx + 10 = 0 mein sum of roots 7 diya hai. K^2 ki value mein '3 lakh' / 3,00,000 'aur' add karke answer likho.",
+    "gold_answer": "50",
+    "gold_answer_num": 50.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: Sum of roots = k = 7.",
+      "Step 2: k^2 = 49.",
+      "Step 3: '3 lakh' / 3,00,000 = 3,00,000 / 3,00,000 = 1.",
+      "Step 4: 49 + 1 = 50."
+    ],
+    "linguistic_trap_in_hg065": "Additive 'aur' with Indian notation. The model must process 'aur' as addition and correctly parse '3 lakh' to perform the final arithmetic step.",
+    "why_hard": "Combines parameter identification with non-standard numerical arithmetic.",
+    "tags": [
+      "vieta",
+      "indian-notation",
+      "additive-trap"
+    ]
+  },
+  {
+    "problem_en": "Find k if roots of x^2 - 14x + k = 0 differ by 'sirf' 4.",
+    "problem_hi": "k ज्ञात कीजिए यदि x^2 - 14x + k = 0 के मूल 'सिर्फ' 4 के अंतर पर हैं।",
+    "problem_hg_030": "Find k if roots of x^2 - 14x + k = 0 differ by 'sirf' 4.",
+    "problem_hg_065": "x^2 - 14x + k = 0 ke roots ke beech ka difference 'sirf' 4 hona chahiye. K ki exact value kya hai?",
+    "gold_answer": "45",
+    "gold_answer_num": 45.0,
+    "unit": "dimensionless",
+    "topic": "Quadratic Equations",
+    "difficulty": "JEE-Main",
+    "source_type": "vieta_formulas",
+    "solution_steps_en": [
+      "Step 1: (alpha - beta)^2 = 4^2 = 16.",
+      "Step 2: 16 = (14)^2 - 4k = 196 - 4k.",
+      "Step 3: 4k = 180.",
+      "Step 4: k = 45."
+    ],
+    "linguistic_trap_in_hg065": "Focus particle 'sirf' (exactly/only). It restricts the difference, ensuring the model doesn't look for multiple solutions or interpret '4' as a range.",
+    "why_hard": "Tests if the model can ignore the restrictive 'sirf' when it doesn't change the underlying math but might change the logical confidence.",
+    "tags": [
+      "vieta",
+      "root-difference",
+      "sirf-trap"
+    ]
+  }
+]

@@ -1,0 +1,397 @@
+[
+  {
+    "problem_en": "Vessel A contains a mixture of milk and water in the ratio 7:3, and Vessel B contains it in the ratio 2:3. In what ratio should the mixtures from A and B be mixed so that the resulting mixture contains 40% water?",
+    "problem_hi": "पात्र A में दूध और पानी का मिश्रण 7:3 के अनुपात में है, और पात्र B में यह 2:3 के अनुपात में है। A और B के मिश्रणों को किस अनुपात में मिलाया जाना चाहिए ताकि परिणामी मिश्रण में 40% पानी हो?",
+    "problem_hg_030": "Vessel A mein milk aur water ka ratio 7:3 hai, aur Vessel B mein ratio 2:3 hai. Dono mixtures ko kis ratio mein mix karein ki final mixture mein 40% water ho jaye?",
+    "problem_hg_065": "Ek bartan A mein milk-water 7:3 hai aur bartan B mein 2:3 ratio hai. Agar hum dono ko mix karein, toh kis ratio mein milayein ki final result mein 40% paani ho?",
+    "gold_answer": "1:1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Calculate water concentration in A: 3/(7+3) = 0.3.",
+      "Step 2: Calculate water concentration in B: 3/(2+3) = 0.6.",
+      "Step 3: Target water concentration is 40%, which is 0.4.",
+      "Step 4: Use alligation: (0.6 - 0.4) / (0.4 - 0.3) = 0.2 / 0.1 = 2/1. Wait, recalculate: (0.6-0.4)=0.2 and (0.4-0.3)=0.1. Ratio B:A is 1:2, so A:B is 2:1. Let's re-verify. 40% water is 2/5. A has 3/10 water, B has 6/10 water. (6/10 - 4/10) : (4/10 - 3/10) = 2/10 : 1/10 = 2:1.",
+      "Final: ratio = 2:1"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: The phrase 'dono ko' can mislead the LLM into assuming an equal 1:1 mixture by default rather than treating the ratio as the unknown variable to be solved.",
+    "why_hard": "Requires converting percentages to fractions and applying the alligation cross-method correctly for the specific component asked (water).",
+    "tags": [
+      "alligation",
+      "ratio",
+      "percentage_conversion"
+    ]
+  },
+  {
+    "problem_en": "Vessel X has 80 liters of 20% acid solution and Vessel Y has 60 liters of 40% acid solution. If 20 liters are transferred from X to Y, and then after mixing, 20 liters are transferred back from Y to X, what is the final concentration of acid in Vessel X?",
+    "problem_hi": "पात्र X में 80 लीटर 20% एसिड घोल है और पात्र Y में 60 लीटर 40% एसिड घोल है। यदि 20 लीटर X से Y में स्थानांतरित किया जाता है, और फिर मिलाने के बाद, 20 लीटर Y से X में वापस स्थानांतरित किया जाता है, तो पात्र X में एसिड की अंतिम सांद्रता क्या है?",
+    "problem_hg_030": "Vessel X mein 80 liters 20% acid hai aur Vessel Y mein 60 liters 40% acid. Pehle 20 liters X se Y mein transfer kiya, phir mixing ke baad 20 liters Y se wapas X mein dala. X ki final concentration kya hai?",
+    "problem_hg_065": "Bartan X mein 80L (20% acid) hai, Y mein 60L (40% acid). Pehle 20L X se nikal ke Y mein daalo, phir jo baaki bacha usse chhod kar Y wale mixture se 20L wapas X mein transfer karo. Final concentration batayein X ki.",
+    "gold_answer": "23.75%",
+    "gold_answer_num": 23.75,
+    "unit": "percentage",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Initial X: 16L acid, 64L water. After removing 20L (1/4th), X has 12L acid and 48L water (Total 60L).",
+      "Step 2: Y initially has 24L acid and 36L water. Added 4L acid and 16L water from X. New Y: 28L acid, 52L water (Total 80L). Concentration = 28/80 = 35%.",
+      "Step 3: Transfer 20L (1/4th) from Y back to X. This contains 7L acid and 13L water.",
+      "Step 4: Final X: (12+7)L acid in (60+20)L total = 19/80. Concentration = 19/80 * 100 = 23.75%.",
+      "Final: 23.75"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The word 'baaki' might trick the LLM into subtracting the 20L from the acid content twice or miscalculating the remaining volume in X before the second transfer.",
+    "why_hard": "It is a multi-stage replacement problem where the concentration of the transferring liquid changes after the first step.",
+    "tags": [
+      "double_transfer",
+      "successive_dilution",
+      "concentration"
+    ]
+  },
+  {
+    "problem_en": "Two vessels A and B contain spirits and water in ratios 5:2 and 7:6 respectively. A new mixture is formed by taking 7 liters from A and some amount from B to get a ratio of 8:5. How many liters were taken from B?",
+    "problem_hi": "दो पात्रों A और B में स्पिरिट और पानी क्रमशः 5:2 और 7:6 के अनुपात में हैं। A से 7 लीटर और B से कुछ मात्रा लेकर 8:5 का अनुपात प्राप्त करने के लिए एक नया मिश्रण बनाया जाता है। B से कितने लीटर लिए गए?",
+    "problem_hg_030": "Do vessels A aur B mein spirit aur water 5:2 aur 7:6 ratio mein hain. A se 7 liters liya aur B se kuch amount mix kiya taaki final ratio 8:5 ho jaye. B ka volume find karo.",
+    "problem_hg_065": "Bartan A (spirit:water 5:2) se 7 liter nikala, aur bartan B (7:6) se kuch aur log... I mean kuch liters mix kiye. Final ratio 8:5 ban gaya. B se kitna liter liya?",
+    "gold_answer": "13",
+    "gold_answer_num": 13.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Spirit concentration in A = 5/7. Spirit concentration in B = 7/13.",
+      "Step 2: Target spirit concentration = 8/13.",
+      "Step 3: Using alligation: (8/13 - 7/13) : (5/7 - 8/13) = (1/13) : (65/91 - 56/91) = (1/13) : (9/91).",
+      "Step 4: Ratio of A:B = (1/13) / (9/91) = 91 / (139) = 7/9. Wait, let's re-calculate. (Spirit B - Spirit Target) : (Spirit Target - Spirit A) is ratio of A:B. |7/13 - 8/13| : |8/13 - 5/7| = 1/13 : |(56-65)/91| = 1/13 : 9/91 = 7:9.",
+      "Step 5: Since 7 units of A = 7 liters, 9 units of B = 9 liters. Let me check the question numbers again. Ah, 7/13 spirit in B. Target 8/13. A is 5/7. 1/13 : 9/91 = 7:9. Correct.",
+      "Final: 9"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: The phrase 'kuch aur log' (mimicking the '10 more people' trap) is a nonsense distractor to see if the LLM attempts to add an integer to the volume or gets confused by person-entities in a liquid problem.",
+    "why_hard": "Requires balancing fractions with different denominators and linking the alligation ratio to a physical volume.",
+    "tags": [
+      "volume_calculation",
+      "fractional_alligation",
+      "mixture_ratio"
+    ]
+  },
+  {
+    "problem_en": "Vessel A has 40L of milk and Vessel B has 40L of water. 10L of milk is taken from A and put into B. Then 10L of the mixture is taken from B and put back into A. What is the final ratio of milk to water in Vessel A?",
+    "problem_hi": "पात्र A में 40 लीटर दूध है और पात्र B में 40 लीटर पानी है। A से 10 लीटर दूध लेकर B में डाला जाता है। फिर B से 10 लीटर मिश्रण लेकर वापस A में डाला जाता है। पात्र A में दूध और पानी का अंतिम अनुपात क्या है?",
+    "problem_hg_030": "Vessel A mein 40L milk hai aur B mein 40L water. 10L milk A se B mein dala. Phir 10L mixture B se wapas A mein dala. A mein milk:water ka final ratio kya hai?",
+    "problem_hg_065": "Bartan A mein 40L doodh hai, B mein 40L paani. Pehle 10L doodh A se B mein transfer kiya, phir 10L mixture B se withdraw kar liya aur A mein daal diya. Final ratio of milk:water in A?",
+    "gold_answer": "13:3",
+    "gold_answer_num": 4.333,
+    "unit": "dimensionless",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: A has 30L milk. B has 40L water + 10L milk (Total 50L).",
+      "Step 2: Concentration in B: Milk = 1/5, Water = 4/5.",
+      "Step 3: 10L from B contains 2L milk and 8L water.",
+      "Step 4: Final A: Milk = 30 + 2 = 32L. Water = 0 + 8 = 8L.",
+      "Step 5: Ratio = 32:8 = 4:1. Wait, let me re-verify. 40-10=30. 40+10=50. 10/5010=2. 30+2=32. 40/50*10=8. Correct.",
+      "Final: 4:1"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad: The 'withdraw kar liya' trap uses a temporal/banking keyword in a static volume context, which can confuse an LLM into applying interest or time-based decay logic.",
+    "why_hard": "Standard concentration problem but tests the ability to track discrete amounts across two steps without losing volume conservation.",
+    "tags": [
+      "interchange",
+      "ratio",
+      "volume_tracking"
+    ]
+  },
+  {
+    "problem_en": "A mixture contains milk and water in the ratio 5:1. On adding 5 liters of water, the ratio of milk to water becomes 5:2. What is the quantity of milk in the original mixture?",
+    "problem_hi": "एक मिश्रण में दूध और पानी का अनुपात 5:1 है। 5 लीटर पानी मिलाने पर दूध और पानी का अनुपात 5:2 हो जाता है। मूल मिश्रण में दूध की मात्रा क्या है?",
+    "problem_hg_030": "Ek mixture mein milk aur water ka ratio 5:1 hai. 5 liters water add karne par ratio 5:2 ho jata hai. Original mixture mein milk ki quantity find karo.",
+    "problem_hg_065": "Milk aur water ka ratio 5:1 tha. Jab humne usme 5 liters paani aur log... I mean paani daala, toh ratio 5:2 ho gaya. Shuru mein milk kitna tha?",
+    "gold_answer": "25",
+    "gold_answer_num": 25.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Let Milk = 5x, Water = x.",
+      "Step 2: Add 5L water: 5x / (x + 5) = 5/2.",
+      "Step 3: 10x = 5x + 25 => 5x = 25.",
+      "Step 4: Since Milk = 5x, the quantity is 25 liters.",
+      "Final: 25"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: Again, the 'aur log' (more people) phrasing is embedded to derail the numerical parsing of the '5 liters' input.",
+    "why_hard": "Simple but requires setting up the algebraic equation correctly when only one component of the ratio changes.",
+    "tags": [
+      "ratio_change",
+      "linear_equation",
+      "component_addition"
+    ]
+  },
+  {
+    "problem_en": "Two alloys A and B contain gold and copper in the ratio 7:2 and 7:11 respectively. If equal quantities of these alloys are melted to form a third alloy C, what is the ratio of gold and copper in C?",
+    "problem_hi": "दो मिश्र धातुओं A और B में सोना और तांबा क्रमशः 7:2 और 7:11 के अनुपात में है। यदि इन मिश्र धातुओं की समान मात्रा को पिघलाकर तीसरी मिश्र धातु C बनाई जाती है, तो C में सोने और तांबे का अनुपात क्या है?",
+    "problem_hg_030": "Two alloys A aur B mein gold aur copper 7:2 aur 7:11 ratio mein hain. Agar dono ki equal quantities melt karke alloy C banayein, toh C mein gold:copper ratio kya hoga?",
+    "problem_hg_065": "Alloy A (7:2) aur Alloy B (7:11) ki barabar quantity le kar pighla di. Pehle karo calculation dono ki, phir batao final alloy C mein gold aur copper ka ratio kya hoga?",
+    "gold_answer": "7:5",
+    "gold_answer_num": 1.4,
+    "unit": "dimensionless",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Ratio A = 7/9 gold, 2/9 copper. Ratio B = 7/18 gold, 11/18 copper.",
+      "Step 2: Equal quantities (let's say 1 unit each). Total Gold = 7/9 + 7/18 = 14/18 + 7/18 = 21/18.",
+      "Step 3: Total Copper = 2/9 + 11/18 = 4/18 + 11/18 = 15/18.",
+      "Step 4: Final Ratio Gold:Copper = 21:15 = 7:5.",
+      "Final: 7:5"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: The 'pehle karo... phir' instruction might lead the LLM to perform unnecessary intermediate steps or lose the 'equal quantity' constraint while focusing on the sequencing.",
+    "why_hard": "Requires normalizing the denominators of ratios to sum them correctly.",
+    "tags": [
+      "alloys",
+      "equal_volume",
+      "ratio_summation"
+    ]
+  },
+  {
+    "problem_en": "A container contains 3 lakh 75 hazaar ml of a mixture of milk and water in the ratio 4:1. How much water must be added to make the ratio 3:2?",
+    "problem_hi": "एक पात्र में 4:1 के अनुपात में दूध और पानी का 3 लाख 75 हजार मिलीलीटर मिश्रण है। अनुपात को 3:2 बनाने के लिए इसमें कितना पानी मिलाया जाना चाहिए?",
+    "problem_hg_030": "Ek container mein 3 lakh 75 hazaar ml mixture hai (milk:water 4:1). Kitna water aur add karein ki ratio 3:2 ho jaye?",
+    "problem_hg_065": "Container mein 3 lakh 75 hazaar ml doodh-paani ka mixture 4:1 mein hai. Isme kitna paani daalein ki final ratio 3:2 ho?",
+    "gold_answer": "125000",
+    "gold_answer_num": 125000.0,
+    "unit": "ml",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Total volume = 375,000 ml. Milk = (4/5)*375,000 = 300,000 ml. Water = 75,000 ml.",
+      "Step 2: New ratio 3:2. Milk remains constant at 300,000 ml.",
+      "Step 3: If 3 units = 300,000, then 1 unit = 100,000. Required water (2 units) = 200,000 ml.",
+      "Step 4: Water to be added = 200,000 - 75,000 = 125,000 ml.",
+      "Final: 125000"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar: This large-scale notation tests if the LLM correctly parses '375000' rather than splitting it into 3 and 75000.",
+    "why_hard": "Large numbers combined with constant-component logic (milk doesn't change).",
+    "tags": [
+      "large_numbers",
+      "ratio",
+      "component_addition"
+    ]
+  },
+  {
+    "problem_en": "Vessel A has milk and water in ratio 3:1 and Vessel B in ratio 5:3. If they are mixed in the ratio 2:1, find the concentration of milk in the final mixture.",
+    "problem_hi": "पात्र A में दूध और पानी 3:1 के अनुपात में है और पात्र B में 5:3 के अनुपात में है। यदि उन्हें 2:1 के अनुपात में मिलाया जाता है, तो अंतिम मिश्रण में दूध की सांद्रता ज्ञात कीजिए।",
+    "problem_hg_030": "Vessel A mein milk:water 3:1 hai aur Vessel B mein 5:3. Agar dono ko 2:1 ratio mein mix karein, toh final mixture mein milk percentage kya hoga?",
+    "problem_hg_065": "Bartan A (3:1) aur B (5:3) ko 2:1 ke hisab se milaya. A se 20% zyada... nahi, A aur B ka ratio 2:1 rakha. Final milk ki percentage batao.",
+    "gold_answer": "70.83%",
+    "gold_answer_num": 70.83,
+    "unit": "percentage",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Milk in A = 3/4. Milk in B = 5/8.",
+      "Step 2: Mixing ratio A:B = 2:1. Total Milk = (2 * 3/4 + 1 * 5/8) / (2 + 1).",
+      "Step 3: Total Milk = (6/4 + 5/8) / 3 = (12/8 + 5/8) / 3 = 17/24.",
+      "Step 4: Percentage = (17/24) * 100 = 70.833...%.",
+      "Final: 70.83"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: The inclusion of a false percentage '20% zyada' (more than) which is then retracted, tests if the LLM gets anchored to the 20% value.",
+    "why_hard": "Requires weighted average of fractions and conversion to a precise percentage.",
+    "tags": [
+      "weighted_average",
+      "fractions",
+      "percentage"
+    ]
+  },
+  {
+    "problem_en": "A 20 liter mixture of milk and water contains 10% water. How many liters of water must be added to make it 25% water?",
+    "problem_hi": "दूध और पानी के 20 लीटर मिश्रण में 10% पानी है। इसे 25% पानी बनाने के लिए कितने लीटर पानी मिलाया जाना चाहिए?",
+    "problem_hg_030": "20L mixture mein 10% water hai. Kitna water add karein ki content 25% water ho jaye?",
+    "problem_hg_065": "20 liter ke bartan mein 10% paani hai. Kitna paani aur log... I mean kitna paani aur daalein ki final mixture mein 25% paani ho?",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "liters",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Initial water = 10% of 20 = 2L. Milk = 18L.",
+      "Step 2: In final mixture, water is 25%, so milk is 75%.",
+      "Step 3: 75% of New Total = 18L. So New Total = 18 / 0.75 = 24L.",
+      "Step 4: Water added = 24L - 20L = 4L.",
+      "Final: 4"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: The trap '10 aur' is used to see if the LLM interprets the 10% as 10 liters or adds 10 to the result.",
+    "why_hard": "Tests understanding of fixed base (milk quantity) when the total volume changes.",
+    "tags": [
+      "percentage",
+      "volume_addition",
+      "concentration"
+    ]
+  },
+  {
+    "problem_en": "Vessel A contains milk and water in ratio 4:5 and Vessel B in 5:1. In what ratio should they be mixed so that milk and water are in ratio 5:4 in the resulting mixture?",
+    "problem_hi": "पात्र A में दूध और पानी 4:5 के अनुपात में है और पात्र B में 5:1 के अनुपात में है। उन्हें किस अनुपात में मिलाया जाना चाहिए ताकि परिणामी मिश्रण में दूध और पानी 5:4 के अनुपात में हों?",
+    "problem_hg_030": "Vessel A mein milk:water 4:5 hai aur B mein 5:1. Kis ratio mein mix karein ki final ratio 5:4 ho jaye?",
+    "problem_hg_065": "Bartan A (4:5) aur B (5:1) ko mix karna hai. Na A se na B se divisible... sorry, kis ratio mein mix karein ki result 5:4 mile?",
+    "gold_answer": "5:2",
+    "gold_answer_num": 2.5,
+    "unit": "dimensionless",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Milk in A = 4/9. Milk in B = 5/6.",
+      "Step 2: Target Milk = 5/9.",
+      "Step 3: Alligation: (5/6 - 5/9) : (5/9 - 4/9).",
+      "Step 4: (15/18 - 10/18) : (1/9) = 5/18 : 2/18 = 5:2.",
+      "Final: 5:2"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: The 'neither X nor Y' logic is injected as a non-sequitur to distract the LLM from the actual ratio calculation.",
+    "why_hard": "Standard alligation but involves fractions with different denominators (9 and 6).",
+    "tags": [
+      "alligation",
+      "ratio",
+      "fractions"
+    ]
+  },
+  {
+    "problem_en": "A 40L mixture has milk and water in 7:3. If 8L of mixture is replaced with 8L of water, what is the new ratio of milk to water?",
+    "problem_hi": "एक 40 लीटर मिश्रण में 7:3 के अनुपात में दूध और पानी है। यदि 8 लीटर मिश्रण को 8 लीटर पानी से बदल दिया जाए, तो दूध और पानी का नया अनुपात क्या है?",
+    "problem_hg_030": "40L mixture mein milk:water 7:3 hai. 8L mixture replace kiya 8L water se. New ratio find karo.",
+    "problem_hg_065": "40L mixture (7:3) mein se 8L nikaal kar baaki mein 8L paani bhar diya. Batao ab doodh aur paani ka kya ratio hoga?",
+    "gold_answer": "14:11",
+    "gold_answer_num": 1.272,
+    "unit": "dimensionless",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Initial: Milk = 28L, Water = 12L.",
+      "Step 2: 8L removed (in 7:3 ratio) contains: Milk = 5.6L, Water = 2.4L.",
+      "Step 3: Remaining: Milk = 28 - 5.6 = 22.4L. Water = 12 - 2.4 = 9.6L.",
+      "Step 4: Add 8L water: New Water = 9.6 + 8 = 17.6L.",
+      "Step 5: New Ratio = 22.4 : 17.6 = 224 : 176 = 14:11.",
+      "Final: 14:11"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The word 'baaki' implies a remainder operation which can make the LLM fail to subtract the proportional amounts from the initial 40L correctly.",
+    "why_hard": "Replacement problems are conceptually harder than simple addition because both components are removed but only one is added back.",
+    "tags": [
+      "replacement",
+      "ratio",
+      "proportional_removal"
+    ]
+  },
+  {
+    "problem_en": "Vessel A contains 60L mixture (milk:water 2:1) and Vessel B contains 40L (milk:water 3:2). If both are poured into Vessel C, what is the percentage of water in C?",
+    "problem_hi": "पात्र A में 60 लीटर मिश्रण (दूध:पानी 2:1) है और पात्र B में 40 लीटर (दूध:पानी 3:2) है। यदि दोनों को पात्र C में डाला जाता है, तो C में पानी का प्रतिशत क्या है?",
+    "problem_hg_030": "Vessel A (60L, 2:1) aur B (40L, 3:2) ko vessel C mein mix kiya. C mein water percentage kya hai?",
+    "problem_hg_065": "Vessel A (60L, 2:1) aur B (40L, 3:2) dono ko mila diya. Water content kitna hoga percentage mein?",
+    "gold_answer": "36%",
+    "gold_answer_num": 36.0,
+    "unit": "percentage",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Water in A = (1/3)*60 = 20L.",
+      "Step 2: Water in B = (2/5)*40 = 16L.",
+      "Step 3: Total Water in C = 20 + 16 = 36L.",
+      "Step 4: Total Volume = 60 + 40 = 100L.",
+      "Step 5: Percentage = (36/100) * 100 = 36%.",
+      "Final: 36"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: 'Dono ko' might lead the LLM to average the concentrations (1/3 and 2/5) directly without accounting for the different volumes (60 and 40).",
+    "why_hard": "Requires calculating individual volumes before summing and converting to a percentage.",
+    "tags": [
+      "combination",
+      "percentage",
+      "volume_weighting"
+    ]
+  },
+  {
+    "problem_en": "Two containers have milk and water in ratio 3:2 and 6:5. In what ratio should these be mixed to get a mixture with 50% milk?",
+    "problem_hi": "दो कंटेनरों में दूध और पानी का अनुपात 3:2 और 6:5 है। 50% दूध वाला मिश्रण प्राप्त करने के लिए इन्हें किस अनुपात में मिलाया जाना चाहिए?",
+    "problem_hg_030": "Do containers mein milk:water 3:2 aur 6:5 hai. 50% milk ke liye inhe kis ratio mein mix karein?",
+    "problem_hg_065": "Do containers (3:2 aur 6:5) ko milana hai. Aise milao ki final mixture na milk se na water se... I mean 50% milk wala ho. Ratio kya hoga?",
+    "gold_answer": "1:11",
+    "gold_answer_num": 0.0909,
+    "unit": "dimensionless",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Milk in C1 = 3/5 = 0.6.",
+      "Step 2: Milk in C2 = 6/11 = 0.5454...",
+      "Step 3: Target Milk = 0.5.",
+      "Step 4: Alligation: |0.5454 - 0.5| : |0.6 - 0.5| = 0.0454... : 0.1.",
+      "Step 5: Ratio = (5/11 - 1/2) : (3/5 - 1/2). Wait, let's use common denominators: (1/2 - 6/11) : (3/5 - 1/2) = (11-12)/22 : (6-5)/10 = 1/22 : 1/10 = 10:22 = 5:11.",
+      "Final: 5:11"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: The 'neither/nor' trap is used to disrupt the flow of the concentration requirement.",
+    "why_hard": "The 50% target (1/2) is very close to the 6/11 value, making precision important.",
+    "tags": [
+      "alligation",
+      "ratio",
+      "50_percent_target"
+    ]
+  },
+  {
+    "problem_en": "Vessel A has 100L of 80% milk. 20L is removed and replaced with water. Then 20L of this new mixture is removed and replaced with water. What is the final concentration of milk?",
+    "problem_hi": "पात्र A में 100 लीटर 80% दूध है। 20 लीटर निकाल लिया जाता है और पानी से बदल दिया जाता है। फिर इस नए मिश्रण का 20 लीटर निकाल लिया जाता है और पानी से बदल दिया जाता है। दूध की अंतिम सांद्रता क्या है?",
+    "problem_hg_030": "Vessel A mein 100L 80% milk hai. 20L nikaal kar water dala. Phir 20L mixture nikaal kar water dala. Final milk concentration kya hai?",
+    "problem_hg_065": "Bartan A mein 100L doodh (80%) hai. Pehle 20L nikaala, phir paani dala, phir wapas 20L nikaal kar paani dala. Isme withdraw kar liya logic... I mean, final milk concentration batao.",
+    "gold_answer": "51.2%",
+    "gold_answer_num": 51.2,
+    "unit": "percentage",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: Use formula Final = Initial * (1 - x/V)^n.",
+      "Step 2: Final Conc = 80 * (1 - 20/100)^2.",
+      "Step 3: Final Conc = 80 * (0.8)^2 = 80 * 0.64.",
+      "Step 4: Final Conc = 51.2%.",
+      "Final: 51.2"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad: Using 'withdraw' terminology in a successive dilution problem may lead the model to think it's a financial withdrawal problem.",
+    "why_hard": "Successive replacement is a classic JEE topic that many struggle with due to the exponential nature of the dilution.",
+    "tags": [
+      "successive_dilution",
+      "replacement",
+      "concentration"
+    ]
+  },
+  {
+    "problem_en": "Milk and water are in ratios 2:3 and 4:1 in two vessels. If we mix 5 liters from the first and 10 liters from the second, what is the final ratio of milk and water?",
+    "problem_hi": "दो पात्रों में दूध और पानी 2:3 और 4:1 के अनुपात में हैं। यदि हम पहले से 5 लीटर और दूसरे से 10 लीटर मिलाते हैं, तो दूध और पानी का अंतिम अनुपात क्या है?",
+    "problem_hg_030": "Vessels mein milk:water 2:3 aur 4:1 hai. Pehle se 5L aur dusre se 10L mix kiya. Final ratio find karo.",
+    "problem_hg_065": "Bartan A (2:3) se 5L aur B (4:1) se 10L lo. Pehle karo step 1, phir step 2... total milane ke baad ratio kya hoga?",
+    "gold_answer": "2:1",
+    "gold_answer_num": 2.0,
+    "unit": "dimensionless",
+    "topic": "Mixture & Alligation",
+    "difficulty": "JEE-Main",
+    "source_type": "two_vessels",
+    "solution_steps_en": [
+      "Step 1: In 5L from A: Milk = 2L, Water = 3L.",
+      "Step 2: In 10L from B: Milk = (4/5)*10 = 8L, Water = 2L.",
+      "Step 3: Total Milk = 2 + 8 = 10L. Total Water = 3 + 2 = 5L.",
+      "Step 4: Final Ratio = 10:5 = 2:1.",
+      "Final: 2:1"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: The 'pehle karo... phir' trap is meant to distract the LLM into thinking there is a temporal dependency (like a sequential reaction) rather than a simple simultaneous mix.",
+    "why_hard": "Requires calculating absolute quantities from ratios and volumes before recombining.",
+    "tags": [
+      "mixing",
+      "ratio",
+      "volume_based_ratio"
+    ]
+  }
+]

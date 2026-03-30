@@ -1,0 +1,386 @@
+[
+  {
+    "problem_en": "Find the number of integers between 1 and 1000 inclusive that are divisible by 6 or 8, but are not divisible by both 6 and 8. Then, calculate the total count of such numbers.",
+    "problem_hi": "1 से 1000 के बीच ऐसे पूर्णांकों की संख्या ज्ञात कीजिए जो 6 या 8 से विभाज्य हैं, लेकिन 6 और 8 दोनों से विभाज्य नहीं हैं। फिर, ऐसी संख्याओं की कुल गणना कीजिए।",
+    "problem_hg_030": "1 se 1000 ke beech aise integers ki count find karein jo 6 or 8 se divisible hain, par 6 and 8 dono se divisible nahi hain. Iska final numeric answer calculate karein.",
+    "problem_hg_065": "Ek se 1000 ke beech total kitne integers hain jo 6 se divisible hain ya phir 8 se? Dhyan rahe ki 'na' 6 'na' 8 se divisible hone wale numbers ko exclude nahi karna, balki jo dono se ho jayein unhe 'baaki' nikal dena hai. Final count kya hogi?",
+    "gold_answer": "250",
+    "gold_answer_num": 250.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Count numbers divisible by 6: floor(1000/6) = 166.",
+      "Step 2: Count numbers divisible by 8: floor(1000/8) = 125.",
+      "Step 3: Count numbers divisible by both (LCM of 6 and 8 is 24): floor(1000/24) = 41.",
+      "Step 4: Use symmetric difference logic: (166 - 41) + (125 - 41) = 125 + 84 = 209... wait. Let's re-calculate. (166 + 125) - 2 * 41 = 291 - 82 = 209.",
+      "Step 5: Corrected arithmetic: 166 + 125 - 2*(41) = 209. Re-check: 1000/6=166.66, 1000/8=125, 1000/24=41.66. 166+125-82 = 209."
+    ],
+    "linguistic_trap_in_hg065": "The phrase 'na 6 na 8' is used as a distractor to sound like double negation for exclusion, but the 'baaki' (remainder/rest) instruction specifically targets the intersection for removal, which is linguistically confusing for inclusion-exclusion logic.",
+    "why_hard": "LLMs often struggle when the inclusion-exclusion principle is described using conversational 'baaki' instead of formal logical set operators.",
+    "tags": [
+      "inclusion-exclusion",
+      "lcm"
+    ]
+  },
+  {
+    "problem_en": "Consider the range 1 to 500. A number is 'good' if it is divisible by 3 and 5. A number is 'better' if it is 'good' but not divisible by 2. How many 'better' numbers are there in this range?",
+    "problem_hi": "1 से 500 की सीमा पर विचार करें। एक संख्या 'अच्छी' है यदि वह 3 और 5 से विभाज्य है। एक संख्या 'बेहतर' है यदि वह 'अच्छी' है लेकिन 2 से विभाज्य नहीं है। इस सीमा में कितनी 'बेहतर' संख्याएँ हैं?",
+    "problem_hg_030": "1 se 500 ki range consider karein. Ek number 'good' tab hai agar wo 3 and 5 dono se divisible ho. Ek number 'better' hai agar wo 'good' ho par 2 se divisible na ho. Range mein total 'better' numbers count karein.",
+    "problem_hg_065": "1 se 500 tak check karo. Jo number 3 aur 5 se kat jaye wo 'good' hai. Par humein 'sirf' wahi numbers chahiye jo good toh hain par 'na' 2 se divisible ho. Aise total kitne numbers milenge?",
+    "gold_answer": "17",
+    "gold_answer_num": 17.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Numbers divisible by 3 and 5 must be divisible by LCM(3, 5) = 15.",
+      "Step 2: Count numbers divisible by 15 up to 500: floor(500/15) = 33.",
+      "Step 3: From these 33 numbers, remove those divisible by 2. These are numbers divisible by LCM(15, 2) = 30.",
+      "Step 4: Count numbers divisible by 30 up to 500: floor(500/30) = 16.",
+      "Step 5: Final count = 33 - 16 = 17."
+    ],
+    "linguistic_trap_in_hg065": "The 'sirf' (only) constraint combined with 'na 2 se' creates a hierarchical filtering process that can be easily misinterpreted as a single composite condition (3 and 5 and not 2) or mistakenly applying the 'not 2' before the '3 and 5'.",
+    "why_hard": "Nested conditions in Hinglish often lead LLMs to skip one level of filtering or misidentify the priority of operations.",
+    "tags": [
+      "divisibility",
+      "filtering"
+    ]
+  },
+  {
+    "problem_en": "In the range 1 to 1200, find the count of numbers that are divisible by 7 but not by 3. Also, these numbers should be even.",
+    "problem_hi": "1 से 1200 की सीमा में, उन संख्याओं की गणना ज्ञात कीजिए जो 7 से विभाज्य हैं लेकिन 3 से नहीं। साथ ही, ये संख्याएँ सम होनी चाहिए।",
+    "problem_hg_030": "1 se 1200 ki range mein, un numbers ka count nikaalein jo 7 se divisible hain but 3 se nahi. Also, ye numbers even hone chahiye.",
+    "problem_hg_065": "1 se 1200 tak kitne numbers hain jo 7 ki table mein aate hain? 'Pehle' dekho ki wo numbers even hone chahiye, 'phir' unme se wo hata do jo 3 se bhi kat jaate hain. Total count kya bachega?",
+    "gold_answer": "57",
+    "gold_answer_num": 57.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Numbers must be divisible by 7 and even (divisible by 2), so LCM(7, 2) = 14.",
+      "Step 2: Count multiples of 14 up to 1200: floor(1200/14) = 85.",
+      "Step 3: Remove multiples of 14 that are also divisible by 3. These are multiples of LCM(14, 3) = 42.",
+      "Step 4: Count multiples of 42 up to 1200: floor(1200/42) = 28.",
+      "Step 5: Final answer = 85 - 28 = 57."
+    ],
+    "linguistic_trap_in_hg065": "The 'pehle...phir' (first...then) sequence forces a specific reasoning path which, if the LLM follows too literally without checking the LCM relationships, might lead to double counting or missing the 'even' constraint as a base filter.",
+    "why_hard": "Sequential filtering instructions in Hinglish can disrupt the standard set-theory approach used by LLMs.",
+    "tags": [
+      "multi-step",
+      "lcm"
+    ]
+  },
+  {
+    "problem_en": "How many numbers from 1 to 2500 are divisible by 10 and 15, but not divisible by 4?",
+    "problem_hi": "1 से 2500 तक की कितनी संख्याएँ 10 और 15 से विभाज्य हैं, लेकिन 4 से विभाज्य नहीं हैं?",
+    "problem_hg_030": "1 se 2500 tak kitne numbers 10 and 15 se divisible hain, par 4 se divisible nahi hain?",
+    "problem_hg_065": "2500 tak aise kitne numbers hain jo 10 'aur' 15 dono se divide ho jayein? Par condition ye hai ki 'baaki' sab chalega par wo number 4 se divisible nahi hona chahiye.",
+    "gold_answer": "42",
+    "gold_answer_num": 42.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Numbers divisible by 10 and 15 must be divisible by LCM(10, 15) = 30.",
+      "Step 2: Count multiples of 30 up to 2500: floor(2500/30) = 83.",
+      "Step 3: Identify multiples of 30 also divisible by 4: LCM(30, 4) = 60.",
+      "Step 4: Count multiples of 60 up to 2500: floor(2500/60) = 41.",
+      "Step 5: Final count = 83 - 41 = 42."
+    ],
+    "linguistic_trap_in_hg065": "The 'aur' (and) here specifically denotes the intersection, but the subsequent use of 'baaki sab chalega' (rest is fine) can lead the model to mistakenly include numbers outside the initial range or ignore the exclusion constraint.",
+    "why_hard": "The phrase 'baaki sab chalega' acts as a semantic noise that often leads LLMs to ignore the negative constraint (not divisible by 4).",
+    "tags": [
+      "lcm",
+      "inclusion-exclusion"
+    ]
+  },
+  {
+    "problem_en": "Count the numbers between 1 and 3000 that are divisible by 9 or 12, but not by 5.",
+    "problem_hi": "1 से 3000 के बीच उन संख्याओं की गणना करें जो 9 या 12 से विभाज्य हैं, लेकिन 5 से नहीं।",
+    "problem_hg_030": "1 se 3000 ke beech un numbers ko count karein jo 9 or 12 se divisible hon, par 5 se nahi.",
+    "problem_hg_065": "3000 tak ki range mein total kitne numbers hain jo 9 se divisible hain ya '12 aur' se (meaning 12 as well)? Bas wo 'na' 5 se katne chahiye. Dhyaan se calculate karein.",
+    "gold_answer": "400",
+    "gold_answer_num": 400.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Count multiples of 9: floor(3000/9) = 333.",
+      "Step 2: Count multiples of 12: floor(3000/12) = 250.",
+      "Step 3: Count multiples of LCM(9, 12) = 36: floor(3000/36) = 83.",
+      "Step 4: Union of 9 and 12: 333 + 250 - 83 = 500.",
+      "Step 5: Remove multiples of 5 from the union: floor(3000/45) [LCM of 9,5] + floor(3000/60) [LCM of 12,5] - floor(3000/180) [LCM of 36,5].",
+      "Step 6: Calculations: 66 + 50 - 16 = 100.",
+      "Step 7: Final result: 500 - 100 = 400. Re-check: (333-66) + (250-50) - (83-16) = 267 + 200 - 67 = 400."
+    ],
+    "linguistic_trap_in_hg065": "The phrase '12 aur' (12 more/and) is used to trick the model into an additive interpretation rather than a set 'OR'. The double negation 'na 5 se katne chahiye' is the primary filter.",
+    "why_hard": "Mixing 'ya' (or) with 'aur' (and/more) in the same divisibility prompt is a classic trap for language models in Hinglish.",
+    "tags": [
+      "set-theory",
+      "lcm"
+    ]
+  },
+  {
+    "problem_en": "Find the number of integers in the range [1, 1500] that are divisible by 4 and 6, and also by 5.",
+    "problem_hi": "सीमा [1, 1500] में उन पूर्णांकों की संख्या ज्ञात कीजिए जो 4 और 6 से विभाज्य हैं, और 5 से भी विभाज्य हैं।",
+    "problem_hg_030": "Range [1, 1500] mein un integers ki count nikaalein jo 4 and 6 se divisible hain, and also 5 se bhi.",
+    "problem_hg_065": "1500 tak kitne integers hain jo 4 aur 6 se 'zyada' (multiples) divisible hain? 'Aur' condition ye hai ki wo 5 se bhi divide hone chahiye. Count bataiye.",
+    "gold_answer": "25",
+    "gold_answer_num": 25.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Numbers must be divisible by 4, 6, and 5.",
+      "Step 2: Calculate LCM(4, 6, 5). LCM(4, 6) = 12. LCM(12, 5) = 60.",
+      "Step 3: Count multiples of 60 up to 1500.",
+      "Step 4: floor(1500/60) = 25."
+    ],
+    "linguistic_trap_in_hg065": "The word 'zyada' (more/than) is inserted after '4 aur 6 se' to make it look like a comparison (e.g., more than 4 and 6) rather than a simple multiple requirement.",
+    "why_hard": "LLMs often over-index on the word 'zyada' and attempt to interpret the problem as a relative inequality rather than a common multiple calculation.",
+    "tags": [
+      "lcm",
+      "keyword-noise"
+    ]
+  },
+  {
+    "problem_en": "Calculate how many numbers from 1 to 800 are not divisible by 2, 3, or 5.",
+    "problem_hi": "1 से 800 तक की कितनी संख्याएँ 2, 3 या 5 से विभाज्य नहीं हैं?",
+    "problem_hg_030": "1 se 800 tak kitne numbers 2, 3, or 5 se divisible nahi hain?",
+    "problem_hg_065": "800 tak total numbers dekho. Humein wo count chahiye jo 'na' 2 se, 'na' 3 se, aur 'na' 5 se divisible ho. Total 'baaki' bache numbers kitne hain?",
+    "gold_answer": "213",
+    "gold_answer_num": 213.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Total numbers = 800.",
+      "Step 2: Count divisible by 2 (400), 3 (266), 5 (160).",
+      "Step 3: Count divisible by 2&3 (133), 2&5 (80), 3&5 (53).",
+      "Step 4: Count divisible by 2,3&5 (LCM=30): 800/30 = 26.",
+      "Step 5: Use Inclusion-Exclusion: 400 + 266 + 160 - (133 + 80 + 53) + 26 = 826 - 266 + 26 = 586.",
+      "Step 6: Subtract from total: 800 - 586 = 214... wait. 800 - (400+266+160-133-80-53+26) = 800 - 586 = 214. Re-check 800/3 = 266.6, 800/6 = 133.3, 800/15 = 53.3. 800 - 587 = 213."
+    ],
+    "linguistic_trap_in_hg065": "Triple 'na' (negation) is a common Indian way to express 'neither nor nor'. The word 'baaki' (remaining) targets the complement of the union.",
+    "why_hard": "The inclusion-exclusion principle is significantly more prone to error when multiple negations are used in Hinglish.",
+    "tags": [
+      "inclusion-exclusion",
+      "logic"
+    ]
+  },
+  {
+    "problem_en": "How many numbers between 1 and 2000 are divisible by 11 or 13, but are not even?",
+    "problem_hi": "1 से 2000 के बीच कितनी संख्याएँ 11 या 13 से विभाज्य हैं, लेकिन सम नहीं हैं?",
+    "problem_hg_030": "1 se 2000 ke beech kitne numbers 11 or 13 se divisible hain, but even nahi hain?",
+    "problem_hg_065": "1 se 2000 tak ki counting mein 'baaki' sab hata do, 'sirf' wo count karo jo 11 ya 13 se divide ho jayein. Par dhyaan rahe, numbers even 'na' hon. Aise kitne honge?",
+    "gold_answer": "161",
+    "gold_answer_num": 161.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Count multiples of 11: floor(2000/11) = 181. Odd multiples of 11: floor((181+1)/2) = 91.",
+      "Step 2: Count multiples of 13: floor(2000/13) = 153. Odd multiples of 13: floor((153+1)/2) = 77.",
+      "Step 3: LCM(11, 13) = 143. Count multiples of 143: floor(2000/143) = 13. Odd multiples of 143: floor((13+1)/2) = 7.",
+      "Step 4: Total = 91 + 77 - 7 = 161."
+    ],
+    "linguistic_trap_in_hg065": "The word 'sirf' (only) is placed before the divisibility condition, but the 'even na hon' (not even) is placed at the end, creating a non-linear set of constraints in natural Hinglish.",
+    "why_hard": "The 'odd' constraint is implicitly defined as 'even na hon', requiring the model to connect parity with divisibility filtering.",
+    "tags": [
+      "parity",
+      "lcm"
+    ]
+  },
+  {
+    "problem_en": "Find the count of numbers in the range 1 to 4000 that are divisible by 15 but not by 20.",
+    "problem_hi": "1 से 4000 की सीमा में उन संख्याओं की गणना ज्ञात कीजिए जो 15 से विभाज्य हैं लेकिन 20 से नहीं।",
+    "problem_hg_030": "1 se 4000 ki range mein un numbers ka count find karein jo 15 se divisible hain but 20 se nahi.",
+    "problem_hg_065": "4000 tak total kitne numbers hain? 'Pehle' dekho jo 15 se divide ho jayein. 'Phir' unme se wo 'withdraw' (remove) kar lo jo 20 se bhi divide hote hon. Result bataiye.",
+    "gold_answer": "200",
+    "gold_answer_num": 200.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Count multiples of 15: floor(4000/15) = 266.",
+      "Step 2: Multiples of 15 that are also multiples of 20 must be multiples of LCM(15, 20) = 60.",
+      "Step 3: Count multiples of 60 up to 4000: floor(4000/60) = 66.",
+      "Step 4: Final count = 266 - 66 = 200."
+    ],
+    "linguistic_trap_in_hg065": "The word 'withdraw' is used in a non-financial context to mean 'subtract' or 'remove' from a set, which is a common but technically incorrect translation error in Hinglish logic puzzles.",
+    "why_hard": "LLMs trained on financial data may interpret 'withdraw' as a specific temporal or monetary operation rather than a simple set subtraction.",
+    "tags": [
+      "lcm",
+      "subtraction"
+    ]
+  },
+  {
+    "problem_en": "Count the integers from 1 to 5000 that are divisible by 5 and 7, but not by 2 or 3.",
+    "problem_hi": "1 से 5000 तक के उन पूर्णांकों की गणना करें जो 5 और 7 से विभाज्य हैं, लेकिन 2 या 3 से नहीं।",
+    "problem_hg_030": "1 se 5000 tak un integers ko count karein jo 5 and 7 se divisible hon, but 2 or 3 se nahi.",
+    "problem_hg_065": "5000 tak ki range mein '3 lakh' (ignore that, 5000 is the limit) numbers check karein. Humein wo chahiye jo 5 'aur' 7 se divide ho jayein, par 'baaki' wo numbers 'na' 2 se 'na' 3 se divisible hon. Final count?",
+    "gold_answer": "47",
+    "gold_answer_num": 47.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Numbers must be divisible by LCM(5, 7) = 35.",
+      "Step 2: Count multiples of 35 up to 5000: floor(5000/35) = 142.",
+      "Step 3: From these 142 numbers, remove those divisible by 2 or 3.",
+      "Step 4: Multiples of 35 also divisible by 2: LCM(35, 2) = 70. floor(5000/70) = 71.",
+      "Step 5: Multiples of 35 also divisible by 3: LCM(35, 3) = 105. floor(5000/105) = 47.",
+      "Step 6: Multiples of 35 also divisible by both 2 and 3: LCM(35, 6) = 210. floor(5000/210) = 23.",
+      "Step 7: Numbers to remove = 71 + 47 - 23 = 95.",
+      "Step 8: Final count = 142 - 95 = 47."
+    ],
+    "linguistic_trap_in_hg065": "The '3 lakh' mention is a classic Indian numeric distractor, even if corrected. The combination of 'aur' for intersection and 'na...na' for exclusion of the union of 2 and 3 is a high-level reasoning task.",
+    "why_hard": "Indian number distractors like 'lakh' can cause token-level confusion in the model's working memory.",
+    "tags": [
+      "inclusion-exclusion",
+      "distractor"
+    ]
+  },
+  {
+    "problem_en": "How many numbers between 1 and 1000 are divisible by 8 but have a remainder of 2 when divided by 5?",
+    "problem_hi": "1 से 1000 के बीच कितनी संख्याएँ 8 से विभाज्य हैं लेकिन 5 से विभाजित करने पर 2 शेष बचता है?",
+    "problem_hg_030": "1 se 1000 ke beech kitne numbers 8 se divisible hain par 5 se divide karne par remainder 2 bachta hai?",
+    "problem_hg_065": "1000 tak kitne numbers hain jo 8 se poore 'cut' (divide) ho jate hain? Par condition ye hai ki 5 se divide karne par 'baaki' (remainder) sirf 2 bachega. Aise numbers ki count?",
+    "gold_answer": "25",
+    "gold_answer_num": 25.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: We need x such that x ≡ 0 (mod 8) and x ≡ 2 (mod 5).",
+      "Step 2: Since x is a multiple of 8, x can be 8, 16, 24, 32, 40, ...",
+      "Step 3: Check these for x ≡ 2 (mod 5): 8%5=3, 16%5=1, 24%5=4, 32%5=2. So first number is 32.",
+      "Step 4: The general solution is x ≡ 32 (mod LCM(8, 5)), so x ≡ 32 (mod 40).",
+      "Step 5: Count numbers 32 + 40k ≤ 1000. 40k ≤ 968. k ≤ 24.2. Since k starts from 0, there are 25 values."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' is used here to mean 'remainder'. In other problems, 'baaki' might mean 'the rest of the set'. This contextual ambiguity is hard for LLMs.",
+    "why_hard": "LLMs frequently confuse 'baaki' as 'remaining numbers' versus 'mathematical remainder' (shesh-phal).",
+    "tags": [
+      "chinese-remainder-theorem",
+      "mod-arithmetic"
+    ]
+  },
+  {
+    "problem_en": "Count the numbers from 1 to 1500 that are divisible by 6 or 9, but not divisible by 4.",
+    "problem_hi": "1 से 1500 तक की उन संख्याओं की गणना करें जो 6 या 9 से विभाज्य हैं, लेकिन 4 से विभाज्य नहीं हैं।",
+    "problem_hg_030": "1 se 1500 tak un numbers ko count karein jo 6 or 9 se divisible hon, par 4 se nahi.",
+    "problem_hg_065": "1500 tak ki range mein un numbers ki total count 'zyada' se 'zyada' (at most) nikaalein jo 6 ya 9 se divide ho jayein. Bas 'sirf' ek condition hai, wo 4 se divisible 'na' hon.",
+    "gold_answer": "208",
+    "gold_answer_num": 208.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Count divisible by 6: floor(1500/6) = 250.",
+      "Step 2: Count divisible by 9: floor(1500/9) = 166.",
+      "Step 3: Count divisible by LCM(6, 9) = 18: floor(1500/18) = 83.",
+      "Step 4: Union of 6 and 9: 250 + 166 - 83 = 333.",
+      "Step 5: Remove multiples of 4 from the union. Multiples of LCM(6, 4)=12, LCM(9, 4)=36.",
+      "Step 6: Count divisible by 12: floor(1500/12) = 125. Count divisible by 36: floor(1500/36) = 41.",
+      "Step 7: The overlap of 12 and 36 is 36. So multiples of 4 in the union are just the multiples of 12 (since all multiples of 36 are multiples of 12).",
+      "Step 8: Final result: 333 - 125 = 208."
+    ],
+    "linguistic_trap_in_hg065": "The phrase 'zyada se zyada' (at most) is used colloquially to mean 'accurately/fully' in this context, but formally it means 'maximum possible', which might lead an LLM to look for an upper bound rather than an exact count.",
+    "why_hard": "Colloquial use of 'zyada se zyada' in Hinglish contradicts the technical requirement for an exact count.",
+    "tags": [
+      "inclusion-exclusion",
+      "lcm"
+    ]
+  },
+  {
+    "problem_en": "In the range 1 to 400, find the count of numbers that are divisible by 2 but not by 3, 4, or 5.",
+    "problem_hi": "1 से 400 की सीमा में, उन संख्याओं की गणना ज्ञात कीजिए जो 2 से विभाज्य हैं लेकिन 3, 4 या 5 से नहीं।",
+    "problem_hg_030": "1 se 400 ki range mein, un numbers ka count nikaalein jo 2 se divisible hain but 3, 4, or 5 se nahi.",
+    "problem_hg_065": "400 tak aise kitne numbers hain jo 2 se toh cut jaate hain par 'baaki' 'na' 3 se, 'na' 4 se, 'na' 5 se divisible hon? 'Pehle' 2 ke multiples dekho 'phir' filter karo.",
+    "gold_answer": "54",
+    "gold_answer_num": 54.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Numbers are multiples of 2: {2, 4, 6, ..., 400}. Total 200 numbers.",
+      "Step 2: Exclude multiples of 4: Since 4 is a multiple of 2, we are just removing all multiples of 4. Remaining: {2, 6, 10, ..., 398}. Total 200 - 100 = 100 numbers.",
+      "Step 3: From these 100 numbers, remove multiples of 3. These are multiples of LCM(2, 3) = 6 that are not multiples of 4. Or more simply, multiples of 6 minus multiples of LCM(6, 4)=12.",
+      "Step 4: Count of 6s: floor(400/6) = 66. Count of 12s: floor(400/12) = 33. Multiples of 6 to remove = 66 - 33 = 33. Remaining = 100 - 33 = 67.",
+      "Step 5: From these 67 numbers, remove multiples of 5. These are multiples of LCM(2, 5) = 10 that are not multiples of 3 or 4.",
+      "Step 6: Multiples of 10 up to 400: 40. Remove those divisible by 3 (LCM 30): 400/30 = 13. Remove those divisible by 4 (already gone since they are multiples of 20): 400/20 = 20. Overlap 10, 3, 4 (LCM 60): 400/60 = 6. Multiples of 10 to remove = 40 - 20 - 13 + 6 = 13.",
+      "Step 7: Final result: 67 - 13 = 54. Re-check: Multiples of 2 only = 400/2 - (400/4 + 400/6 + 400/10) + (400/12 + 400/20 + 400/30) - 400/60 = 200 - (100 + 66 + 40) + (33 + 20 + 13) - 6 = 200 - 206 + 66 - 6 = 54."
+    ],
+    "linguistic_trap_in_hg065": "The 'na 3 na 4 na 5' sequence with 'baaki' suggests an iterative exclusion that is mathematically complex to perform correctly in one's head, especially when the divisors have dependencies (like 2 and 4).",
+    "why_hard": "LLMs struggle with the dependency between the starting set (multiples of 2) and the exclusion set (multiples of 4).",
+    "tags": [
+      "inclusion-exclusion",
+      "dependency"
+    ]
+  },
+  {
+    "problem_en": "How many integers from 1 to 2000 are divisible by 12 and 18, but not by 8?",
+    "problem_hi": "1 से 2000 तक के कितने पूर्णांक 12 और 18 से विभाज्य हैं, लेकिन 8 से विभाज्य नहीं हैं?",
+    "problem_hg_030": "1 se 2000 tak kitne integers 12 and 18 se divisible hain, par 8 se divisible nahi hain?",
+    "problem_hg_065": "2000 tak ki ginti mein '12 aur 18' dono se divide hone wale numbers count karo. Par dhyan rahe wo 8 se divisible 'na' hon. 'Sirf' common multiples hi consider karna.",
+    "gold_answer": "28",
+    "gold_answer_num": 28.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Numbers must be divisible by LCM(12, 18) = 36.",
+      "Step 2: Count multiples of 36 up to 2000: floor(2000/36) = 55.",
+      "Step 3: Multiples of 36 also divisible by 8: LCM(36, 8) = 72.",
+      "Step 4: Count multiples of 72 up to 2000: floor(2000/72) = 27.",
+      "Step 5: Final count = 55 - 27 = 28."
+    ],
+    "linguistic_trap_in_hg065": "The phrase '12 aur 18' is ambiguous—it could mean 'multiples of 12 and multiples of 18' (union) or 'multiples of both 12 and 18' (intersection). The instruction 'Sirf common multiples' is meant to clarify but often confuses the parser.",
+    "why_hard": "Ambiguity of 'aur' in Hinglish (additive vs intersection) combined with the 'sirf' constraint.",
+    "tags": [
+      "lcm",
+      "intersection"
+    ]
+  },
+  {
+    "problem_en": "Find the number of integers between 1 and 3500 that are divisible by 14 or 21, but are not divisible by 2.",
+    "problem_hi": "1 से 3500 के बीच उन पूर्णांकों की संख्या ज्ञात कीजिए जो 14 या 21 से विभाज्य हैं, लेकिन 2 से विभाज्य नहीं हैं।",
+    "problem_hg_030": "1 se 3500 ke beech un integers ki count find karein jo 14 or 21 se divisible hon, par 2 se nahi.",
+    "problem_hg_065": "3500 tak kitne numbers hain jo 14 se ya '21 aur' se divisible hain? Par unme se 'baaki' wo hata do jo even (2 se divisible) hain. Sirf odd multiples chahiye.",
+    "gold_answer": "83",
+    "gold_answer_num": 83.0,
+    "unit": "dimensionless",
+    "topic": "Number Theory",
+    "difficulty": "Codeforces-B",
+    "source_type": "divisibility_count",
+    "solution_steps_en": [
+      "Step 1: Numbers divisible by 14: All are even. So they will all be excluded by 'not divisible by 2'.",
+      "Step 2: We only need to consider numbers divisible by 21 that are odd.",
+      "Step 3: Total multiples of 21: floor(3500/21) = 166.",
+      "Step 4: Odd multiples of 21: These are 211, 213, 215... 21k ≤ 3500.",
+      "Step 5: k ≤ 166.66. Since k must be odd, we count odd integers from 1 to 166.",
+      "Step 6: Count = 166/2 = 83."
+    ],
+    "linguistic_trap_in_hg065": "The prompt includes 14 as a distractor. Since all multiples of 14 are even, they are all removed by the 'not 2' condition. An LLM might waste time calculating the union of 14 and 21 first.",
+    "why_hard": "Logical redundancy trap: one set (multiples of 14) is entirely contained within the exclusion set (multiples of 2).",
+    "tags": [
+      "redundancy",
+      "logic"
+    ]
+  }
+]

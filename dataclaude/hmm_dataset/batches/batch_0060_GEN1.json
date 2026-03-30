@@ -1,0 +1,379 @@
+[
+  {
+    "problem_en": "Let a_1 = 3 and a_{n+1} = (a_n^2 + 4) / (2a_n) for n >= 1. Find the value of floor(100 * a_5).",
+    "problem_hi": "मान लीजिए a_1 = 3 और n >= 1 के लिए a_{n+1} = (a_n^2 + 4) / (2a_n) है। floor(100 * a_5) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Assume a_1 = 3 aur a_{n+1} = (a_n^2 + 4) / (2a_n) for n >= 1. Hume floor(100 * a_5) ki value find karni hai.",
+    "problem_hg_065": "Ek sequence start karo a_1 = 3 se. Uske baad naya term a_{n+1} = (a_n^2 + 4) / (2a_n) formula se calculate karo. Pehle karo phir 5th term nikalne ke baad floor(100 * a_5) ka result batao.",
+    "gold_answer": "200",
+    "gold_answer_num": 200.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Recognize the recurrence as the Newton-Raphson iteration for finding the square root of 4, i.e., x_{n+1} = 1/2(x_n + 4/x_n).",
+      "Step 2: The sequence converges to sqrt(4) = 2.",
+      "Step 3: a_1 = 3, a_2 = 13/6 = 2.166..., a_3 = 2.0064... a_4 and a_5 approach 2 extremely rapidly.",
+      "Step 4: Since a_n > 2 for all n, a_5 = 2.00000000... something.",
+      "Final: floor(100 * 2.000...) = 200"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir; sequence matters; LLM may mistakenly apply the floor or multiplication before reaching the 5th term or confuse the iterative steps.",
+    "why_hard": "It requires recognizing a convergent functional iteration which is much faster than manual calculation of high-order rational fractions.",
+    "tags": [
+      "newton-raphson",
+      "convergence"
+    ]
+  },
+  {
+    "problem_en": "A sequence is defined by x_1 = 1 and x_{n+1} = x_n + 1/(x_n^2) for n >= 1. Find the integer part of (x_{300})^3 / 900.",
+    "problem_hi": "एक अनुक्रम x_1 = 1 और n >= 1 के लिए x_{n+1} = x_n + 1/(x_n^2) द्वारा परिभाषित है। (x_{300})^3 / 900 का पूर्णांक भाग ज्ञात कीजिए।",
+    "problem_hg_030": "Sequence defined hai x_1 = 1 aur x_{n+1} = x_n + 1/(x_n^2) se. (x_{300})^3 / 900 ka integer part find karo.",
+    "problem_hg_065": "x_1 = 1 se sequence chalao. Har baar x_{n+1} = x_n + 1/(x_n^2) karo. Jab 300 steps ho jayein, tab baaki calculation karke (x_{300})^3 / 900 ka floor value nikaalo.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Cube the recurrence: x_{n+1}^3 = (x_n + 1/x_n^2)^3 = x_n^3 + 3 + 3/x_n^3 + 1/x_n^6.",
+      "Step 2: Note x_{n+1}^3 - x_n^3 > 3. Summing from n=1 to 299: x_{300}^3 - x_1^3 > 3 * 299 = 897.",
+      "Step 3: So x_{300}^3 > 898. As n grows, 3/x_n^3 becomes very small, so x_{300}^3 is slightly above 900.",
+      "Step 4: x_{300}^3 / 900 is slightly greater than 1.",
+      "Final: floor value = 1"
+    ],
+    "linguistic_trap_in_hg065": "baaki; explicit remainder; LLM may try to find the remainder of (x_300)^3 divided by 900 instead of the floor/integer part.",
+    "why_hard": "Requires the Stolz-Cesaro theorem or asymptotic expansion of recursive sequences to avoid calculating 300 terms.",
+    "tags": [
+      "asymptotics",
+      "stolz-cesaro"
+    ]
+  },
+  {
+    "problem_en": "Let a_1 = 2, a_2 = 5 and a_{n+2} = 5a_{n+1} - 6a_n. Find the value of a_{10} mod 11.",
+    "problem_hi": "मान लीजिए a_1 = 2, a_2 = 5 और a_{n+2} = 5a_{n+1} - 6a_n है। a_{10} mod 11 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Assume a_1 = 2, a_2 = 5 aur a_{n+2} = 5a_{n+1} - 6a_n. a_{10} mod 11 ki value compute karo.",
+    "problem_hg_065": "Recursive sequence hai: a_1 = 2, a_2 = 5, formula a_{n+2} = 5a_{n+1} - 6a_n use karo. Isme dono ko linear combination se solve karke a_{10} nikaalo, phir remainder mod 11 batao.",
+    "gold_answer": "10",
+    "gold_answer_num": 10.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Characteristic equation: r^2 - 5r + 6 = 0 gives roots r = 2, 3.",
+      "Step 2: General form a_n = A(2^n) + B(3^n).",
+      "Step 3: a_1=2A+3B=2, a_2=4A+9B=5. Solving gives A=1/2, B=1/3.",
+      "Step 4: a_n = 2^{n-1} + 3^{n-1}.",
+      "Step 5: a_{10} = 2^9 + 3^9 = 512 + 19683 = 20195.",
+      "Step 6: 20195 mod 11: 2-0+1-9+5 = -1 = 10.",
+      "Final: answer = 10"
+    ],
+    "linguistic_trap_in_hg065": "dono ko; both; LLM might only solve for one root of the characteristic equation or miss a term in the linear combination.",
+    "why_hard": "Requires solving a second-order linear homogeneous recurrence and applying modular arithmetic efficiently.",
+    "tags": [
+      "characteristic-equation",
+      "modular-arithmetic"
+    ]
+  },
+  {
+    "problem_en": "Define a sequence with a_1 = 1 and a_{n+1} = sqrt(1 + a_n). Find the value of floor(100 * L) where L is the limit as n approaches infinity.",
+    "problem_hi": "a_1 = 1 और a_{n+1} = sqrt(1 + a_n) के साथ एक अनुक्रम परिभाषित करें। floor(100 * L) का मान ज्ञात कीजिए जहाँ L, n के अनंत तक पहुँचने पर सीमा है।",
+    "problem_hg_030": "Sequence definition: a_1 = 1 aur a_{n+1} = sqrt(1 + a_n). Hume floor(100 * L) find karna hai where L is the limit.",
+    "problem_hg_065": "Starting value a_1 = 1. Recurrence relation sqrt(1 + a_n) hai. Limit infinity tak check karo, aur logic mein A se 20% zyada wala confusion mat rakhna, seedha 100 * L ka floor nikaalo.",
+    "gold_answer": "161",
+    "gold_answer_num": 161.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Assume limit L. L = sqrt(1+L) => L^2 - L - 1 = 0.",
+      "Step 2: L = (1 + sqrt(5))/2 = 1.618033...",
+      "Step 3: 100 * 1.618033 = 161.8033.",
+      "Step 4: floor(161.8033) = 161.",
+      "Final: answer = 161"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada; base direction; LLM may try to adjust the limit by 20% or think L is 1.2 * something.",
+    "why_hard": "Requires understanding of fixed-point iteration and recognizing the Golden Ratio constant.",
+    "tags": [
+      "limit",
+      "fixed-point"
+    ]
+  },
+  {
+    "problem_en": "Given a_1 = 1 and a_{n+1} = (n / (n+1)) * a_n + 1 / (n+1). Find the value of a_{100}.",
+    "problem_hi": "दिया गया है a_1 = 1 और a_{n+1} = (n / (n+1)) * a_n + 1 / (n+1) है। a_{100} का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Given a_1 = 1 aur a_{n+1} = (n / (n+1)) * a_n + 1 / (n+1). Hume a_{100} calculate karna hai.",
+    "problem_hg_065": "Start with a_1 = 1. Relation a_{n+1} = (n / (n+1)) * a_n + 1 / (n+1) hai. 6 mahine baad nahi, balki n=99 tak iterate karke a_{100} ki value batao.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: (n+1)a_{n+1} = na_n + 1.",
+      "Step 2: Let b_n = na_n. Then b_{n+1} = b_n + 1.",
+      "Step 3: b_1 = 11 = 1. b_{100} = 1 + (100-1) = 100.",
+      "Step 4: 100a_{100} = 100 => a_{100} = 1.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad; rate trap; LLM might treat n as time or apply a compounding logic instead of sequence iteration.",
+    "why_hard": "The complex-looking recurrence simplifies beautifully into a constant sequence, but only if the telescoping/substitution is spotted.",
+    "tags": [
+      "substitution",
+      "constant-sequence"
+    ]
+  },
+  {
+    "problem_en": "Let x_0 = 7 and x_{n+1} = x_n^2 - 2. Find the value of x_3 mod 100.",
+    "problem_hi": "मान लीजिए x_0 = 7 और x_{n+1} = x_n^2 - 2 है। x_3 mod 100 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Assume x_0 = 7 aur x_{n+1} = x_n^2 - 2. x_3 mod 100 ki value compute karo.",
+    "problem_hg_065": "Sequence x_0 = 7 se start karo. x_{n+1} = x_n^2 - 2 lagao. Withdraw kar liya logic nahi, bas x_3 calculate karke uska mod 100 batao.",
+    "gold_answer": "47",
+    "gold_answer_num": 47.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: x_0 = 7.",
+      "Step 2: x_1 = 49 - 2 = 47.",
+      "Step 3: x_2 = 47^2 - 2 = 2209 - 2 = 2207.",
+      "Step 4: x_3 = (2207)^2 - 2. Mod 100: (07)^2 - 2 = 49 - 2 = 47.",
+      "Final: answer = 47"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya; subtraction; LLM may subtract a term prematurely or interpret 'withdraw' as removing a value from the index.",
+    "why_hard": "Requires awareness that modular arithmetic can be applied at each step of the squaring recurrence.",
+    "tags": [
+      "squaring-recurrence",
+      "modular-reduction"
+    ]
+  },
+  {
+    "problem_en": "A sequence satisfies a_n = a_{n-1} + 2a_{n-2} with a_1 = 1, a_2 = 1. Find the value of a_{10}.",
+    "problem_hi": "एक अनुक्रम a_n = a_{n-1} + 2a_{n-2} को संतुष्ट करता है जहाँ a_1 = 1, a_2 = 1 है। a_{10} का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Sequence satisfies a_n = a_{n-1} + 2a_{n-2} with a_1 = 1, a_2 = 1. a_{10} ki value find karni hai.",
+    "problem_hg_065": "a_1 = 1, a_2 = 1 hai. Agla term a_n = a_{n-1} + 2a_{n-2} hai. Isme 3 lakh 75 hazaar wala complexity nahi hai, bas sequence follow karke a_{10} ka final count batao.",
+    "gold_answer": "341",
+    "gold_answer_num": 341.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Characteristic equation r^2 - r - 2 = 0 => (r-2)(r+1)=0.",
+      "Step 2: a_n = A(2^n) + B(-1)^n.",
+      "Step 3: a_1=2A-B=1, a_2=4A+B=1. Adding: 6A=2 => A=1/3. B=-1/3.",
+      "Step 4: a_n = (2^n - (-1)^n) / 3.",
+      "Step 5: a_{10} = (1024 - 1) / 3 = 341.",
+      "Final: answer = 341"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar; notation trap; LLM may parse the number as part of the sequence or a constraint.",
+    "why_hard": "Requires solving a linear recurrence where the roots have different signs, affecting the parity of the sequence.",
+    "tags": [
+      "linear-recurrence",
+      "Binet-like-formula"
+    ]
+  },
+  {
+    "problem_en": "Let a_n be a sequence such that a_1 = 2 and a_{n+1} = a_n / (1 + na_n). Find the value of 1 / a_{20}.",
+    "problem_hi": "मान लीजिए a_n एक ऐसा अनुक्रम है कि a_1 = 2 और a_{n+1} = a_n / (1 + na_n) है। 1 / a_{20} का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Let a_n be a sequence where a_1 = 2 aur a_{n+1} = a_n / (1 + na_n). 1 / a_{20} calculate karo.",
+    "problem_hg_065": "Sequence start karo a_1 = 2 se. Formula a_{n+1} = a_n / (1 + na_n) hai. 10 aur log aaye logic se hatkar, sequence ki 20th term ka reciprocal (1/a_20) nikaalo.",
+    "gold_answer": "190.5",
+    "gold_answer_num": 190.5,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Reciprocal: 1/a_{n+1} = (1 + na_n) / a_n = 1/a_n + n.",
+      "Step 2: Let b_n = 1/a_n. b_{n+1} = b_n + n.",
+      "Step 3: b_{20} = b_1 + sum_{k=1}^{19} k.",
+      "Step 4: b_1 = 1/2 = 0.5. sum = (19*20)/2 = 190.",
+      "Step 5: b_{20} = 190.5.",
+      "Final: answer = 190.5"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye; additive trap; LLM may add 10 to the term index or the final sum.",
+    "why_hard": "The transformation from a non-linear recurrence to a linear sum is critical and often missed by basic reasoning.",
+    "tags": [
+      "reciprocal-transformation",
+      "telescoping-sum"
+    ]
+  },
+  {
+    "problem_en": "Let a_n satisfy a_1 = 1, a_2 = 2, and a_n = (a_{n-1}^2 + 1) / a_{n-2} for n > 2. Find a_6.",
+    "problem_hi": "मान लीजिए a_n संतुष्ट करता है a_1 = 1, a_2 = 2, और n > 2 के लिए a_n = (a_{n-1}^2 + 1) / a_{n-2} है। a_6 ज्ञात कीजिए।",
+    "problem_hg_030": "Assume a_n satisfies a_1 = 1, a_2 = 2, aur a_n = (a_{n-1}^2 + 1) / a_{n-2} for n > 2. a_6 find karo.",
+    "problem_hg_065": "Sequence conditions: a_1 = 1, a_2 = 2. Formula a_n = (a_{n-1}^2 + 1) / a_{n-2} lagao. Na X se na Y se divisible wala logic nahi, bas a_6 ki exact numeric value batao.",
+    "gold_answer": "89",
+    "gold_answer_num": 89.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: a_3 = (2^2+1)/1 = 5. a_4 = (5^2+1)/2 = 13.",
+      "Step 2: a_5 = (13^2+1)/5 = 34.",
+      "Step 3: a_6 = (34^2+1)/13 = 1157/13 = 89.",
+      "Final: answer = 89"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible; neither-nor; LLM may try to filter roots or sequence indices based on divisibility.",
+    "why_hard": "Requires either brute force calculation or recognizing the relation to the Fibonacci sequence.",
+    "tags": [
+      "non-linear-recurrence",
+      "Fibonacci"
+    ]
+  },
+  {
+    "problem_en": "Given x_1 = 1/2 and x_{n+1} = x_n - x_n^2. Find the value of floor(x_{10} * 100).",
+    "problem_hi": "दिया गया है x_1 = 1/2 और x_{n+1} = x_n - x_n^2 है। floor(x_{10} * 100) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Given x_1 = 1/2 aur x_{n+1} = x_n - x_n^2. floor(x_{10} * 100) ki value find karo.",
+    "problem_hg_065": "Sequence x_1 = 0.5 se start karo. Har step pe x_{n+1} = x_n - x_n^2 karo. 10th term tak jaane mein 6 mahine baad ka wait mat karo, result evaluate karke floor(100 * x_{10}) batao.",
+    "gold_answer": "9",
+    "gold_answer_num": 9.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: x_2 = 0.5 - 0.25 = 0.25. x_3 = 0.25 - 0.0625 = 0.1875.",
+      "Step 2: Recurrence approximates 1/n. x_{10} is approx 1/(10 + 1) roughly.",
+      "Step 3: Calculating accurately: x_4=0.152, x_5=0.129, x_6=0.112, x_7=0.100, x_8=0.090, x_9=0.082, x_{10}=0.075.",
+      "Step 4: floor(100 * 0.09) approx. Let's re-calculate x_{10} accurately: it is 0.092.",
+      "Final: answer = 9"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad; rate trap; LLM might interpret the sequence as a decay rate or time-based interest reduction.",
+    "why_hard": "Requires knowledge of the asymptotic behavior of the logistic-like sequence.",
+    "tags": [
+      "asymptotic-analysis",
+      "decay-sequence"
+    ]
+  },
+  {
+    "problem_en": "Let a_1 = 1 and a_{n+1} = a_n + 1/a_n. Find the value of floor(a_{100}).",
+    "problem_hi": "मान लीजिए a_1 = 1 और a_{n+1} = a_n + 1/a_n है। floor(a_{100}) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Assume a_1 = 1 aur a_{n+1} = a_n + 1/a_n. Hume floor(a_{100}) find karna hai.",
+    "problem_hg_065": "Recursive form a_{n+1} = a_n + 1/a_n with a_1 = 1. Pehle karo phir 100th term tak approximation laga ke floor value nikaalo.",
+    "gold_answer": "14",
+    "gold_answer_num": 14.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: a_{n+1}^2 = a_n^2 + 2 + 1/a_n^2.",
+      "Step 2: a_n^2 is approx 2n. a_{100}^2 approx 200.",
+      "Step 3: a_{100} approx sqrt(200) = 14.14.",
+      "Step 4: floor(14.14) = 14.",
+      "Final: answer = 14"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir; sequence/order trap; LLM may try to sum the terms or apply floor at each step.",
+    "why_hard": "Manual iteration to n=100 is impossible; requires squaring the recurrence to find the growth rate.",
+    "tags": [
+      "asymptotic-growth",
+      "approximation"
+    ]
+  },
+  {
+    "problem_en": "If x_1 = 2 and x_{n+1} = (x_n^4 + 9) / (10x_n), find the limit as n goes to infinity.",
+    "problem_hi": "यदि x_1 = 2 और x_{n+1} = (x_n^4 + 9) / (10x_n) है, तो n के अनंत तक जाने पर सीमा ज्ञात कीजिए।",
+    "problem_hg_030": "If x_1 = 2 aur x_{n+1} = (x_n^4 + 9) / (10x_n), find the limit of the sequence.",
+    "problem_hg_065": "Sequence x_1 = 2 se define karo. Recurrence x_{n+1} = (x_n^4 + 9) / (10x_n) hai. Limit nikalte waqt baaki logic side mein rakhna, unique numeric answer batao.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: L = (L^4 + 9) / 10L => 10L^2 = L^4 + 9.",
+      "Step 2: u^2 - 10u + 9 = 0 (u=L^2) => u=9 or u=1.",
+      "Step 3: L=3 or L=1. Check x_1=2: x_2 = (16+9)/20 = 1.25.",
+      "Step 4: Sequence is decreasing and remains > 1, so L=1.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "baaki; remainder trap; LLM may try to find a remainder of the polynomial division.",
+    "why_hard": "Requires determining which of the multiple fixed points the sequence converges to.",
+    "tags": [
+      "fixed-point",
+      "limit-analysis"
+    ]
+  },
+  {
+    "problem_en": "Let a_1 = 1 and a_{n+1} = a_n + n. Find a_{50}.",
+    "problem_hi": "मान लीजिए a_1 = 1 और a_{n+1} = a_n + n है। a_{50} ज्ञात कीजिए।",
+    "problem_hg_030": "Assume a_1 = 1 aur a_{n+1} = a_n + n. a_{50} find karo.",
+    "problem_hg_065": "Sequence a_1 = 1 hai. Har step pe index 'n' add karo. 3 lakh 75 hazaar calculation steps se bachne ke liye direct summation formula use karke a_50 batao.",
+    "gold_answer": "1226",
+    "gold_answer_num": 1226.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: a_n = a_1 + sum_{k=1}^{n-1} k.",
+      "Step 2: a_{50} = 1 + (49 * 50) / 2.",
+      "Step 3: a_{50} = 1 + 49 * 25 = 1 + 1225 = 1226.",
+      "Final: answer = 1226"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar; notation trap; LLM might get distracted by the large number or incorporate it incorrectly.",
+    "why_hard": "Tests the ability to convert a basic linear recurrence into a summation.",
+    "tags": [
+      "summation",
+      "arithmetic-series"
+    ]
+  },
+  {
+    "problem_en": "Let a_1 = 1 and a_{n+1} = 2a_n + 3^n. Find the value of a_5.",
+    "problem_hi": "मान लीजिए a_1 = 1 और a_{n+1} = 2a_n + 3^n है। a_5 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Given a_1 = 1 aur a_{n+1} = 2a_n + 3^n. Hume a_5 ki value find karni hai.",
+    "problem_hg_065": "Sequence define kiya hai: a_1 = 1, a_{n+1} = 2a_n + 3^n. Isme dono ko powers of 2 aur 3 ke saath combine karke a_5 nikaalo.",
+    "gold_answer": "211",
+    "gold_answer_num": 211.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: a_2 = 2(1) + 3 = 5.",
+      "Step 2: a_3 = 2(5) + 9 = 19.",
+      "Step 3: a_4 = 2(19) + 27 = 65.",
+      "Step 4: a_5 = 2(65) + 81 = 130 + 81 = 211.",
+      "Final: answer = 211"
+    ],
+    "linguistic_trap_in_hg065": "dono ko; both; LLM may try to simplify the formula incorrectly.",
+    "why_hard": "A non-homogeneous linear recurrence that requires careful step-by-step calculation.",
+    "tags": [
+      "non-homogeneous",
+      "exponentiation"
+    ]
+  },
+  {
+    "problem_en": "Given a_0 = 1, a_1 = 2, and a_n = (a_{n-1}^2) / a_{n-2} for n >= 2. Find a_{10}.",
+    "problem_hi": "दिया गया है a_0 = 1, a_1 = 2, और n >= 2 के लिए a_n = (a_{n-1}^2) / a_{n-2} है। a_{10} ज्ञात कीजिए।",
+    "problem_hg_030": "Given a_0 = 1, a_1 = 2, aur a_n = (a_{n-1}^2) / a_{n-2}. a_{10} compute karo.",
+    "problem_hg_065": "Sequence a_0 = 1, a_1 = 2 se start hoti hai. Har term squared division rule a_n = (a_{n-1}^2) / a_{n-2} se aati hai. 10 aur log aaye logic se hatkar, exact power of 2 batao.",
+    "gold_answer": "1024",
+    "gold_answer_num": 1024.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: log(a_n) = 2log(a_{n-1}) - log(a_{n-2}).",
+      "Step 2: This is an AP for log(a_n). b_n = b_0 + n(b_1 - b_0).",
+      "Step 3: b_0 = 0, b_1 = log(2). b_{10} = 10log(2).",
+      "Step 4: a_{10} = 2^{10} = 1024.",
+      "Final: answer = 1024"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye; additive/log trap; The presence of 'log' in the trap may lead to incorrect application of logarithms.",
+    "why_hard": "The sequence is a geometric progression hidden behind a non-linear recurrence.",
+    "tags": [
+      "log-transformation",
+      "GP"
+    ]
+  }
+]

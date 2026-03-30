@@ -1,0 +1,399 @@
+[
+  {
+    "problem_en": "Find the area of the region bounded by the curves y = x^2 and y = |2 - x^2|. Round the result to the nearest integer.",
+    "problem_hi": "वक्रों y = x^2 और y = |2 - x^2| द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए। परिणाम को निकटतम पूर्णांक तक पूर्णांकित करें।",
+    "problem_hg_030": "Curves y = x^2 aur y = |2 - x^2| ke beech ka area find karo. Result ko nearest integer tak round off kijiye.",
+    "problem_hg_065": "y = x^2 aur y = |2 - x^2| curves ke beech ka area nikaalo, par pehle karo intersection points identify phir integrate karna. Result nearest integer mein do.",
+    "gold_answer": "3",
+    "gold_answer_num": 3.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Identify intersection points by setting x^2 = |2 - x^2|. Case 1: x^2 = 2 - x^2 => 2x^2 = 2 => x = ±1. Case 2: x^2 = x^2 - 2 => no solution.",
+      "Step 2: Analyze the functions on interval [-1, 1]. In this range, x^2 is between 0 and 1, so 2 - x^2 is positive. Thus |2 - x^2| = 2 - x^2.",
+      "Step 3: Setup the integral for area: Integral from -1 to 1 of [(2 - x^2) - x^2] dx = Integral from -1 to 1 of (2 - 2x^2) dx.",
+      "Step 4: Compute the integral: [2x - (2/3)x^3] from -1 to 1 = (2 - 2/3) - (-2 + 2/3) = 4/3 + 4/3 = 8/3 ≈ 2.66.",
+      "Final: answer = 3"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Explicit sequencing trap. It forces the LLM to follow a rigid order which might lead it to misinterpret the piecewise nature of the absolute value if it focuses too much on 'identifying' before 'understanding' the graph.",
+    "why_hard": "Requires handling an absolute value function within the integral and correctly identifying which curve is upper versus lower.",
+    "tags": [
+      "absolute_value",
+      "definite_integral",
+      "intersection"
+    ]
+  },
+  {
+    "problem_en": "Calculate the area of the finite region enclosed by the parabola y^2 = 8x and the line x = 2.",
+    "problem_hi": "परवलय y^2 = 8x और रेखा x = 2 द्वारा घिरे परिमित क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "Parabola y^2 = 8x aur line x = 2 ke beech enclose hone wala area calculate karo.",
+    "problem_hg_065": "Area nikaalo parabola y^2 = 8x aur line x = 2 ke beech ka. 10 aur log aaye calculation check karne ke liye total area batana.",
+    "gold_answer": "64/3",
+    "gold_answer_num": 21.33,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Identify the curve y = ±sqrt(8x) = ±2sqrt(2x).",
+      "Step 2: Setup the integral for the upper half from x=0 to x=2: Integral of 2sqrt(2)x^(1/2) dx.",
+      "Step 3: Integrate: 2sqrt(2) * [ (x^1.5) / 1.5 ] from 0 to 2 = 2sqrt(2) * (2/3) * (2sqrt(2)) = 32/3.",
+      "Step 4: Double the area for the symmetric lower half: 2 * (32/3) = 64/3.",
+      "Final: answer = 64/3"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> Additive trap. The LLM might interpret this as adding 10 to the area result or treating it as a variable in the integral.",
+    "why_hard": "Requires symmetry observation and correct integration of a square root function.",
+    "tags": [
+      "parabola",
+      "symmetry",
+      "vertical_line"
+    ]
+  },
+  {
+    "problem_en": "Find the area of the region bounded by y = sin x, y = cos x, and the y-axis in the first quadrant.",
+    "problem_hi": "प्रथम चतुर्थांश में y = sin x, y = cos x, और y-अक्ष द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "First quadrant mein y = sin x, y = cos x aur y-axis se bounded region ka area find karo.",
+    "problem_hg_065": "First quadrant mein y = sin x aur y = cos x ke beech ka area, starting from y-axis, calculate karo. Isme dono ko boundary maan kar integrate karna.",
+    "gold_answer": "sqrt(2)-1",
+    "gold_answer_num": 0.414,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Find the intersection of y = sin x and y = cos x in the first quadrant: sin x = cos x => tan x = 1 => x = π/4.",
+      "Step 2: Identify the upper curve from x = 0 to x = π/4. At x=0, cos(0)=1 and sin(0)=0, so cos x is upper.",
+      "Step 3: Setup the integral: Integral from 0 to π/4 of (cos x - sin x) dx.",
+      "Step 4: Evaluate: [sin x + cos x] from 0 to π/4 = (sin π/4 + cos π/4) - (sin 0 + cos 0) = (1/√2 + 1/√2) - (0 + 1) = √2 - 1.",
+      "Final: answer = sqrt(2)-1"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> Ambiguity trap. 'Dono ko boundary maan kar' might lead the LLM to sum the individual areas under both curves instead of the area between them.",
+    "why_hard": "Requires determining the intersection point and the relative order of trigonometric functions in a specific interval.",
+    "tags": [
+      "trigonometry",
+      "first_quadrant",
+      "intersection"
+    ]
+  },
+  {
+    "problem_en": "Find the area of the region bounded by the curves y = ln x, y = 0, and x = e.",
+    "problem_hi": "वक्रों y = ln x, y = 0, और x = e द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "Curves y = ln x, y = 0, aur x = e se bounded area evaluate karo.",
+    "problem_hg_065": "y = ln x aur x-axis ke beech ka area x = e tak nikaalo. Calculation mein na 2 se na 3 se divisible hone wala logic use mat karna.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Identify the bounds. ln x = 0 at x = 1. So the area is between x = 1 and x = e.",
+      "Step 2: Setup integral: Integral from 1 to e of (ln x) dx.",
+      "Step 3: Use integration by parts: x ln x - x evaluated from 1 to e.",
+      "Step 4: (e ln e - e) - (1 ln 1 - 1) = (e - e) - (0 - 1) = 0 + 1 = 1.",
+      "Final: answer = 1"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible -> Neither-nor trap. This distractor might cause the LLM to incorrectly filter out the correct numerical answer if it thinks it must satisfy a divisibility rule.",
+    "why_hard": "Requires integration by parts and identifying the lower bound where the log function hits the x-axis.",
+    "tags": [
+      "logarithm",
+      "integration_by_parts",
+      "x-intercept"
+    ]
+  },
+  {
+    "problem_en": "Determine the area of the region bounded by y = 4 - x^2 and y = 3x.",
+    "problem_hi": "y = 4 - x^2 और y = 3x द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "y = 4 - x^2 aur y = 3x se bounded region ka area determine kijiye.",
+    "problem_hg_065": "Parabola y = 4 - x^2 aur line y = 3x ka enclosed area find karo, par baaki portion subtract karna mat bhoolna.",
+    "gold_answer": "125/6",
+    "gold_answer_num": 20.83,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Set 4 - x^2 = 3x to find intersection points. x^2 + 3x - 4 = 0 => (x+4)(x-1) = 0. Points are x = -4 and x = 1.",
+      "Step 2: Check which curve is higher. For x=0, 4-0^2 = 4 and 3(0) = 0. So y = 4-x^2 is higher.",
+      "Step 3: Setup integral: Integral from -4 to 1 of [(4 - x^2) - 3x] dx.",
+      "Step 4: Integrate: [4x - x^3/3 - 3x^2/2] from -4 to 1.",
+      "Step 5: Upper: 4(1) - 1/3 - 3/2 = 4 - 0.33 - 1.5 = 2.166. Lower: 4(-4) - (-64/3) - 3(16/2) = -16 + 21.33 - 24 = -18.666.",
+      "Step 6: Total: 2.166 - (-18.666) = 20.833 = 125/6.",
+      "Final: answer = 125/6"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Subtraction trap. The phrase 'baaki portion subtract karna' (don't forget to subtract the rest) implies a multi-part area subtraction that doesn't actually exist, potentially leading the LLM to subtract a section of the area twice.",
+    "why_hard": "Standard quadratic-linear intersection but requires careful evaluation of fractional arithmetic with negative bounds.",
+    "tags": [
+      "quadratic",
+      "linear_intersection",
+      "definite_integral"
+    ]
+  },
+  {
+    "problem_en": "The area bounded by y = x^3, y = 8, and x = 0 is rotated. However, just find the area of the region in the first quadrant.",
+    "problem_hi": "y = x^3, y = 8, और x = 0 द्वारा घिरे क्षेत्र का क्षेत्रफल प्रथम चतुर्थांश में ज्ञात कीजिए।",
+    "problem_hg_030": "y = x^3, y = 8, aur x = 0 se bounded first quadrant area calculate karo.",
+    "problem_hg_065": "Region y = x^3, y = 8 aur x = 0 ka area nikaalo, par withdraw kar liya 3 units baad wala logic mat lagana.",
+    "gold_answer": "12",
+    "gold_answer_num": 12.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Intersection of y = x^3 and y = 8 gives x = 2.",
+      "Step 2: We can integrate with respect to x or y. With respect to x: Integral from 0 to 2 of (8 - x^3) dx.",
+      "Step 3: [8x - x^4/4] from 0 to 2 = (16 - 16/4) - 0 = 16 - 4 = 12.",
+      "Step 4: Alternatively, wrt y: Integral from 0 to 8 of y^(1/3) dy = [3/4 * y^(4/3)] from 0 to 8 = 3/4 * 16 = 12.",
+      "Final: answer = 12"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya N mahine baad -> Timing trap. The word 'withdraw' might confuse the LLM into thinking it needs to remove a part of the integration range (like x=3) or treat it as a financial calculus problem.",
+    "why_hard": "Choosing the easier axis for integration (y-axis is often faster) and finding the correct intersection.",
+    "tags": [
+      "cubic_curve",
+      "integration_wrt_y",
+      "boundary"
+    ]
+  },
+  {
+    "problem_en": "Find the area bounded by y = x and y = x^3 in the first quadrant.",
+    "problem_hi": "प्रथम चतुर्थांश में y = x और y = x^3 द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "First quadrant mein curves y = x aur y = x^3 ke beech ka area nikaalo.",
+    "problem_hg_065": "y = x aur y = x^3 ke beech ka area first quadrant mein nikaalo. A se 20% zyada value mat le lena limits ki.",
+    "gold_answer": "1/4",
+    "gold_answer_num": 0.25,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Find intersections in the first quadrant: x = x^3 => x(x^2 - 1) = 0. x = 0 and x = 1.",
+      "Step 2: Compare functions on (0, 1). For x = 0.5, x = 0.5 and x^3 = 0.125. Thus x > x^3.",
+      "Step 3: Setup integral: Integral from 0 to 1 of (x - x^3) dx.",
+      "Step 4: Integrate: [x^2/2 - x^4/4] from 0 to 1 = (1/2 - 1/4) = 1/4.",
+      "Final: answer = 1/4"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> Percentage trap. The LLM might try to increase the upper limit of integration from 1 to 1.2 or increase the final result by 20%.",
+    "why_hard": "Requires identifying which power function is dominant in the (0,1) interval versus (1, infinity).",
+    "tags": [
+      "polynomial",
+      "unit_interval",
+      "first_quadrant"
+    ]
+  },
+  {
+    "problem_en": "Find the area of the region bounded by y = e^x, y = e^-x, and the line x = 1.",
+    "problem_hi": "वक्रों y = e^x, y = e^-x, और रेखा x = 1 द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "y = e^x, y = e^-x aur line x = 1 se bounded area evaluate karo.",
+    "problem_hg_065": "Curves y = e^x aur y = e^-x ke beech ka area x = 1 tak find karo. Isme 3 lakh 75 hazaar decimal places ki zaroorat nahi, exact answer e mein do.",
+    "gold_answer": "e + 1/e - 2",
+    "gold_answer_num": 1.086,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Intersection of y = e^x and y = e^-x: e^x = e^-x => e^(2x) = 1 => x = 0.",
+      "Step 2: Bounds are from x = 0 to x = 1. Compare: e^x is always greater than e^-x for x > 0.",
+      "Step 3: Setup integral: Integral from 0 to 1 of (e^x - e^-x) dx.",
+      "Step 4: Integrate: [e^x + e^-x] from 0 to 1 = (e^1 + e^-1) - (e^0 + e^0) = e + 1/e - (1 + 1) = e + 1/e - 2.",
+      "Final: answer = e + 1/e - 2"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar -> Notation trap. This large number distractor is meant to confuse the LLM into thinking it needs to scale the result or that the answer involves a large coefficient.",
+    "why_hard": "Involves transcendental functions and requires recognizing the lower bound as the intersection point.",
+    "tags": [
+      "exponential",
+      "intersection",
+      "transcendental"
+    ]
+  },
+  {
+    "problem_en": "Calculate the area of the loop of the curve y^2 = x^2(2 - x).",
+    "problem_hi": "वक्र y^2 = x^2(2 - x) के लूप (loop) का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "Curve y^2 = x^2(2 - x) ke loop ka area calculate kijiye.",
+    "problem_hg_065": "y^2 = x^2(2 - x) curve ka loop nikaalo. 6 mahine baad waali calculation mat karna, pura loop cover karna.",
+    "gold_answer": "(16sqrt(2))/15",
+    "gold_answer_num": 1.508,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Loop occurs where y is defined: x^2(2-x) >= 0. Since x^2 is always positive, 2-x >= 0 => x <= 2. Loop is between x=0 and x=2.",
+      "Step 2: Solve for y: y = ±xsqrt(2-x). Total area is twice the upper half.",
+      "Step 3: Setup integral: Area = 2 * Integral from 0 to 2 of xsqrt(2-x) dx.",
+      "Step 4: Substitution: Let u = 2 - x, du = -dx. When x=0, u=2. When x=2, u=0. x = 2 - u.",
+      "Step 5: Area = 2 * Integral from 0 to 2 of (2-u)u^(1/2) du = 2 * Integral from 0 to 2 (2u^0.5 - u^1.5) du.",
+      "Step 6: [2 * (2 * u^1.5/1.5 - u^2.5/2.5)] from 0 to 2 = 2 * (4/3 * 2^1.5 - 2/5 * 2^2.5) = 2 * (8sqrt(2)/3 - 8sqrt(2)/5) = 2 * (16sqrt(2)/15) = 32sqrt(2)/15. Wait, checking steps. 2*(8sqrt(2)/3 - 8sqrt(2)/5) = 2*(40-24)sqrt(2)/15 = 32sqrt(2)/15.",
+      "Final: answer = 32sqrt(2)/15"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad -> Timing trap. This phrasing (typical of interest rate problems) may mislead the LLM into thinking there's a periodic or time-decay factor involved in the area.",
+    "why_hard": "Requires identifying loop boundaries from a square function and performing a non-trivial substitution integral.",
+    "tags": [
+      "loop_area",
+      "substitution",
+      "curve_sketching"
+    ]
+  },
+  {
+    "problem_en": "Determine the area of the region bounded by y = x^2 and y = 2/(1 + x^2).",
+    "problem_hi": "y = x^2 और y = 2/(1 + x^2) द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "Curves y = x^2 aur y = 2/(1 + x^2) se bounded region ka area determine karo.",
+    "problem_hg_065": "y = x^2 aur y = 2/(1 + x^2) curves ke beech ka area nikaalo. Pehle karo points determine phir integrate, aur result exact ratio mein dena.",
+    "gold_answer": "pi - 2/3",
+    "gold_answer_num": 2.474,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Find intersections: x^2 = 2/(1 + x^2) => x^2(1 + x^2) = 2 => x^4 + x^2 - 2 = 0.",
+      "Step 2: Solve quadratic in x^2: (x^2 + 2)(x^2 - 1) = 0. Real solutions: x^2 = 1 => x = ±1.",
+      "Step 3: Setup integral: Integral from -1 to 1 of [2/(1 + x^2) - x^2] dx.",
+      "Step 4: Integrate: [2arctan(x) - x^3/3] from -1 to 1.",
+      "Step 5: (2arctan(1) - 1/3) - (2arctan(-1) - (-1)/3) = (2π/4 - 1/3) - (-2π/4 + 1/3) = (π/2 - 1/3) + (π/2 - 1/3) = π - 2/3.",
+      "Final: answer = pi - 2/3"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Sequencing trap. Forces the model into a pattern where it might miss the symmetry of the integral which could simplify the calculation.",
+    "why_hard": "Requires solving a quartic equation for intersection and integrating an inverse trigonometric form.",
+    "tags": [
+      "quartic_intersection",
+      "arctan_integral",
+      "symmetry"
+    ]
+  },
+  {
+    "problem_en": "Find the area bounded by the ellipse x^2/4 + y^2/9 = 1 and the line 3x + 2y = 6 in the first quadrant.",
+    "problem_hi": "प्रथम चतुर्थांश में दीर्घवृत्त x^2/4 + y^2/9 = 1 और रेखा 3x + 2y = 6 द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "First quadrant mein ellipse x^2/4 + y^2/9 = 1 aur line 3x + 2y = 6 ke beech ka area find karo.",
+    "problem_hg_065": "Ellipse x^2/4 + y^2/9 = 1 aur line 3x + 2y = 6 ke beech ka area first quadrant mein nikaalo. Dono ko boundaries maan kar integration check karna.",
+    "gold_answer": "1.5pi - 3",
+    "gold_answer_num": 1.712,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Ellipse intercepts are (2,0) and (0,3). Line 3x+2y=6 also passes through (2,0) and (0,3).",
+      "Step 2: Area in first quadrant of ellipse = (1/4) * π * a * b = (1/4) * π * 2 * 3 = 1.5π.",
+      "Step 3: Area of triangle formed by line and axes = (1/2) * base * height = (1/2) * 2 * 3 = 3.",
+      "Step 4: Enclosed area = Area of ellipse quadrant - Area of triangle = 1.5π - 3.",
+      "Final: answer = 1.5pi - 3"
+    ],
+    "linguistic_trap_in_hg065": "dono ko -> Ambiguity trap. 'Dono ko boundaries maan kar' might lead the LLM to try a complex double integral or incorrectly add areas instead of subtracting the triangle from the ellipse.",
+    "why_hard": "Geometric shortcut exists but an LLM might attempt raw integration which is significantly more error-prone.",
+    "tags": [
+      "ellipse",
+      "geometry_shortcut",
+      "linear_boundary"
+    ]
+  },
+  {
+    "problem_en": "Find the area of the region bounded by y = x^2 - 1 and y = 1 - x^2.",
+    "problem_hi": "y = x^2 - 1 और y = 1 - x^2 द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "Curves y = x^2 - 1 aur y = 1 - x^2 ke beech bounded area calculate karo.",
+    "problem_hg_065": "Dono parabolas y = x^2 - 1 aur y = 1 - x^2 ke beech enclose hone wala total area find karo. 10 aur log result verify karne ke liye integration limit check kar rahe hain.",
+    "gold_answer": "8/3",
+    "gold_answer_num": 2.666,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Intersections: x^2 - 1 = 1 - x^2 => 2x^2 = 2 => x = ±1.",
+      "Step 2: Identify upper curve: For x=0, 1-x^2 = 1 and x^2-1 = -1. So y = 1-x^2 is upper.",
+      "Step 3: Setup integral: Integral from -1 to 1 of [(1 - x^2) - (x^2 - 1)] dx = Integral from -1 to 1 of (2 - 2x^2) dx.",
+      "Step 4: Integrate: [2x - 2x^3/3] from -1 to 1 = (2 - 2/3) - (-2 + 2/3) = 4/3 + 4/3 = 8/3.",
+      "Final: answer = 8/3"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye -> Additive trap. Distracts the LLM into potentially adding 10 to the answer or modifying the integration range by 10 units.",
+    "why_hard": "Symmetric parabolas require careful handling of negative area components if not using the 'top-minus-bottom' rule correctly.",
+    "tags": [
+      "parabola",
+      "symmetry",
+      "vertical_shift"
+    ]
+  },
+  {
+    "problem_en": "Determine the area enclosed by y = x^2 and y = x + 2.",
+    "problem_hi": "y = x^2 और y = x + 2 द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "y = x^2 aur y = x + 2 se enclose hone wala area determine kijiye.",
+    "problem_hg_065": "y = x^2 aur line y = x + 2 ka intersection nikaal kar area find karo. A se 20% zyada line ki slope mat samajh lena.",
+    "gold_answer": "4.5",
+    "gold_answer_num": 4.5,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Intersections: x^2 = x + 2 => x^2 - x - 2 = 0 => (x-2)(x+1) = 0. x = -1, 2.",
+      "Step 2: Upper curve: For x=0, x+2=2 and x^2=0. Line is upper.",
+      "Step 3: Setup integral: Integral from -1 to 2 of (x + 2 - x^2) dx.",
+      "Step 4: Integrate: [x^2/2 + 2x - x^3/3] from -1 to 2.",
+      "Step 5: Upper: (2 + 4 - 8/3) = 6 - 2.66 = 3.33. Lower: (1/2 - 2 - (-1/3)) = 0.5 - 2 + 0.33 = -1.166.",
+      "Step 6: Total: 3.33 - (-1.166) = 4.5.",
+      "Final: answer = 4.5"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada -> Percentage trap. 'A se 20% zyada slope' might cause the LLM to change the line equation to y = 1.2x + 2, resulting in a wrong intersection calculation.",
+    "why_hard": "Classic integration problem but the trap tests the LLM's adherence to the literal problem statement versus the linguistic distractor.",
+    "tags": [
+      "parabola",
+      "linear",
+      "intersection"
+    ]
+  },
+  {
+    "problem_en": "Find the area bounded by y = sqrt(x) and y = x^2.",
+    "problem_hi": "y = sqrt(x) और y = x^2 द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "Curves y = sqrt(x) aur y = x^2 ke beech ka area calculate karo.",
+    "problem_hg_065": "y = sqrt(x) aur y = x^2 ke beech ka area nikaalo, par baaki portion subtract karna zaroori hai step 2 ke baad.",
+    "gold_answer": "1/3",
+    "gold_answer_num": 0.333,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Intersections: sqrt(x) = x^2 => x = x^4 => x(x^3 - 1) = 0. x = 0, 1.",
+      "Step 2: Upper curve: On (0, 1), sqrt(x) > x^2.",
+      "Step 3: Setup integral: Integral from 0 to 1 of (x^0.5 - x^2) dx.",
+      "Step 4: Integrate: [x^1.5 / 1.5 - x^3/3] from 0 to 1 = (2/3 - 1/3) = 1/3.",
+      "Final: answer = 1/3"
+    ],
+    "linguistic_trap_in_hg065": "baaki -> Remainder trap. Similar to problem 5, this forces the LLM to look for a non-existent subtraction, potentially creating a phantom step.",
+    "why_hard": "Requires comparing radical and power functions and careful fractional arithmetic.",
+    "tags": [
+      "radical",
+      "power_function",
+      "intersection"
+    ]
+  },
+  {
+    "problem_en": "Find the area bounded by the curve y = cos x and the x-axis from x = 0 to x = pi.",
+    "problem_hi": "x = 0 से x = pi तक वक्र y = cos x और x-अक्ष द्वारा घिरे क्षेत्र का क्षेत्रफल ज्ञात कीजिए।",
+    "problem_hg_030": "y = cos x aur x-axis ke beech ka area x = 0 se x = pi tak calculate kijiye.",
+    "problem_hg_065": "x = 0 se x = pi tak y = cos x ka area nikaalo. Pehle karo signs check phir integrate, kyunki negative portion subtract nahi add hona chahiye area mein.",
+    "gold_answer": "2",
+    "gold_answer_num": 2.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Integ",
+    "difficulty": "JEE-Advanced",
+    "source_type": "area_between_curves",
+    "solution_steps_en": [
+      "Step 1: Recognize cos x crosses x-axis at x = π/2.",
+      "Step 2: Area from 0 to π/2: Integral of cos x dx = [sin x] from 0 to π/2 = 1.",
+      "Step 3: Area from π/2 to π: Integral of |cos x| dx = Integral of -cos x dx = [-sin x] from π/2 to π = 0 - (-1) = 1.",
+      "Step 4: Total area = 1 + 1 = 2.",
+      "Final: answer = 2"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir -> Sequencing trap. Specifically emphasizes 'signs check', which is correct mathematically, but 'subtract nahi add' might confuse the logic of absolute value vs simple integration.",
+    "why_hard": "Requires splitting the integral to account for the area below the x-axis to prevent it from summing to zero.",
+    "tags": [
+      "trigonometry",
+      "split_integral",
+      "absolute_area"
+    ]
+  }
+]

@@ -1,0 +1,351 @@
+[23:37:51] [INFO] === CHATGPT PIPELINE START ===
+[23:37:51] [INFO] Enqueued 180 work items
+[23:38:52] [WARN] [TAB1] Tab probe timed out — may still work
+[23:38:52] [OK  ] [TAB1] Worker started
+[23:39:31] [WARN] [TAB2] Tab probe timed out — may still work
+[23:39:31] [OK  ] [TAB2] Worker started
+[23:40:02] [ERR ] [TAB1] Gen error cycle=1: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:40:09] [WARN] [TAB3] Tab probe timed out — may still work
+[23:40:09] [OK  ] [TAB3] Worker started
+[23:40:39] [ERR ] [TAB2] Gen error cycle=1: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:40:46] [WARN] [TAB4] Tab probe timed out — may still work
+[23:40:46] [OK  ] [TAB4] Worker started
+[23:41:17] [ERR ] [TAB3] Gen error cycle=1: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:41:21] [ERR ] [TAB1] Gen error cycle=1: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:41:23] [WARN] [TAB5] Tab probe timed out — may still work
+[23:41:23] [OK  ] [TAB5] Worker started
+[23:41:54] [ERR ] [TAB4] Gen error cycle=1: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:42:01] [WARN] [TAB6] Tab probe timed out — may still work
+[23:42:01] [OK  ] [TAB6] Worker started
+[23:42:03] [INFO] solved=0 | queue=175
+[23:42:04] [ERR ] [TAB2] Gen error cycle=1: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:42:23] [INFO] solved=0 | queue=174
+[23:42:31] [ERR ] [TAB5] Gen error cycle=2: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:42:37] [ERR ] [TAB3] Gen error cycle=2: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:42:41] [ERR ] [TAB1] Gen error cycle=2: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:42:43] [INFO] solved=0 | queue=176
+[23:43:03] [INFO] solved=0 | queue=174
+[23:43:08] [ERR ] [TAB6] Gen error cycle=2: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:43:22] [ERR ] [TAB4] Gen error cycle=2: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:43:23] [INFO] solved=0 | queue=176
+[23:43:24] [ERR ] [TAB2] Gen error cycle=2: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:43:43] [INFO] solved=0 | queue=174
+[23:43:50] [ERR ] [TAB5] Gen error cycle=3: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:43:59] [ERR ] [TAB3] Gen error cycle=3: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:44:03] [INFO] solved=0 | queue=176
+[23:44:07] [ERR ] [TAB1] Gen error cycle=3: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:44:23] [INFO] solved=0 | queue=174
+[23:44:35] [ERR ] [TAB6] Gen error cycle=3: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:44:43] [INFO] solved=0 | queue=175
+[23:44:43] [ERR ] [TAB4] Gen error cycle=3: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:44:46] [ERR ] [TAB2] Gen error cycle=3: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:45:03] [INFO] solved=0 | queue=175
+[23:45:14] [ERR ] [TAB5] Gen error cycle=4: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:45:23] [INFO] solved=0 | queue=175
+[23:45:25] [ERR ] [TAB3] Gen error cycle=4: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:45:27] [ERR ] [TAB1] Gen error cycle=4: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:45:43] [INFO] solved=0 | queue=175
+[23:46:01] [ERR ] [TAB6] Gen error cycle=4: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:46:03] [INFO] solved=0 | queue=175
+[23:46:05] [ERR ] [TAB4] Gen error cycle=4: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:46:10] [ERR ] [TAB2] Gen error cycle=4: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:46:23] [INFO] solved=0 | queue=175
+[23:46:38] [ERR ] [TAB5] Gen error cycle=5: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:46:43] [INFO] solved=0 | queue=175
+[23:46:46] [ERR ] [TAB3] Gen error cycle=5: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:46:54] [ERR ] [TAB1] Gen error cycle=5: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:47:03] [INFO] solved=0 | queue=175
+[23:47:21] [ERR ] [TAB6] Gen error cycle=5: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:47:23] [INFO] solved=0 | queue=175
+[23:47:27] [ERR ] [TAB2] Gen error cycle=5: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:47:34] [ERR ] [TAB4] Gen error cycle=5: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:47:43] [INFO] solved=0 | queue=175
+[23:48:03] [INFO] solved=0 | queue=174
+[23:48:03] [ERR ] [TAB5] Gen error cycle=6: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:48:06] [ERR ] [TAB3] Gen error cycle=6: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:48:15] [ERR ] [TAB1] Gen error cycle=6: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:48:23] [INFO] solved=0 | queue=176
+[23:48:43] [INFO] solved=0 | queue=174
+[23:48:47] [ERR ] [TAB6] Gen error cycle=6: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:48:48] [ERR ] [TAB2] Gen error cycle=6: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:48:52] [ERR ] [TAB4] Gen error cycle=6: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:49:03] [INFO] solved=0 | queue=177
+[23:49:23] [INFO] solved=0 | queue=174
+[23:49:26] [ERR ] [TAB5] Gen error cycle=7: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:49:30] [ERR ] [TAB3] Gen error cycle=7: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:49:35] [ERR ] [TAB1] Gen error cycle=7: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:49:43] [INFO] solved=0 | queue=176
+[23:50:03] [INFO] solved=0 | queue=174
+[23:50:10] [ERR ] [TAB6] Gen error cycle=7: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:50:14] [ERR ] [TAB2] Gen error cycle=7: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:50:15] [ERR ] [TAB4] Gen error cycle=7: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:50:23] [INFO] solved=0 | queue=177
+[23:50:43] [INFO] solved=0 | queue=174
+[23:50:51] [ERR ] [TAB3] Gen error cycle=8: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:50:51] [ERR ] [TAB5] Gen error cycle=8: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:50:54] [ERR ] [TAB1] Gen error cycle=8: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:51:03] [INFO] solved=0 | queue=177
+[23:51:23] [INFO] solved=0 | queue=174
+[23:51:38] [ERR ] [TAB6] Gen error cycle=8: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:51:39] [ERR ] [TAB4] Gen error cycle=8: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:51:39] [ERR ] [TAB2] Gen error cycle=8: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:51:43] [INFO] solved=0 | queue=177
+[23:52:03] [INFO] solved=0 | queue=174
+[23:52:13] [ERR ] [TAB5] Gen error cycle=9: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:52:15] [ERR ] [TAB3] Gen error cycle=9: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:52:20] [ERR ] [TAB1] Gen error cycle=9: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:52:23] [INFO] solved=0 | queue=177
+[23:52:43] [INFO] solved=0 | queue=174
+[23:52:56] [ERR ] [TAB6] Gen error cycle=9: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:53:03] [INFO] solved=0 | queue=175
+[23:53:05] [ERR ] [TAB4] Gen error cycle=9: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:53:05] [ERR ] [TAB2] Gen error cycle=9: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:53:23] [INFO] solved=0 | queue=174
+[23:53:31] [ERR ] [TAB5] Gen error cycle=10: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:53:38] [ERR ] [TAB1] Gen error cycle=10: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:53:38] [ERR ] [TAB3] Gen error cycle=10: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:53:43] [INFO] solved=0 | queue=177
+[23:54:03] [INFO] solved=0 | queue=174
+[23:54:23] [INFO] solved=0 | queue=174
+[23:54:24] [ERR ] [TAB6] Gen error cycle=10: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:54:24] [ERR ] [TAB4] Gen error cycle=10: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:54:27] [ERR ] [TAB2] Gen error cycle=10: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:54:43] [INFO] solved=0 | queue=174
+[23:54:58] [ERR ] [TAB5] Gen error cycle=11: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:55:00] [ERR ] [TAB3] Gen error cycle=11: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:55:03] [INFO] solved=0 | queue=176
+[23:55:04] [ERR ] [TAB1] Gen error cycle=11: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:55:23] [INFO] solved=0 | queue=174
+[23:55:41] [ERR ] [TAB6] Gen error cycle=11: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:55:43] [INFO] solved=0 | queue=175
+[23:55:45] [ERR ] [TAB4] Gen error cycle=11: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:55:49] [ERR ] [TAB2] Gen error cycle=11: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:56:03] [INFO] solved=0 | queue=175
+[23:56:18] [ERR ] [TAB3] Gen error cycle=12: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:56:20] [ERR ] [TAB5] Gen error cycle=12: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:56:23] [ERR ] [TAB1] Gen error cycle=12: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:56:23] [INFO] solved=0 | queue=177
+[23:56:43] [INFO] solved=0 | queue=174
+[23:57:02] [ERR ] [TAB6] Gen error cycle=12: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:57:03] [INFO] solved=0 | queue=175
+[23:57:10] [ERR ] [TAB4] Gen error cycle=12: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:57:10] [ERR ] [TAB2] Gen error cycle=12: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:57:23] [INFO] solved=0 | queue=175
+[23:57:40] [ERR ] [TAB3] Gen error cycle=13: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:57:43] [INFO] solved=0 | queue=175
+[23:57:45] [ERR ] [TAB5] Gen error cycle=13: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:57:46] [ERR ] [TAB1] Gen error cycle=13: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:58:03] [INFO] solved=0 | queue=174
+[23:58:23] [INFO] solved=0 | queue=174
+[23:58:24] [ERR ] [TAB6] Gen error cycle=13: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:58:27] [ERR ] [TAB2] Gen error cycle=13: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:58:37] [ERR ] [TAB4] Gen error cycle=13: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:58:43] [INFO] solved=0 | queue=175
+[23:58:57] [ERR ] [TAB3] Gen error cycle=14: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:59:03] [INFO] solved=0 | queue=175
+[23:59:05] [ERR ] [TAB5] Gen error cycle=14: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:59:06] [ERR ] [TAB1] Gen error cycle=14: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:59:23] [INFO] solved=0 | queue=174
+[23:59:41] [ERR ] [TAB6] Gen error cycle=14: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[23:59:43] [INFO] solved=0 | queue=175
+[23:59:47] [ERR ] [TAB2] Gen error cycle=14: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:00:01] [ERR ] [TAB4] Gen error cycle=14: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:00:03] [INFO] solved=0 | queue=175
+[00:00:20] [ERR ] [TAB3] Gen error cycle=15: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:00:23] [INFO] solved=0 | queue=175
+[00:00:26] [ERR ] [TAB1] Gen error cycle=15: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:00:27] [ERR ] [TAB5] Gen error cycle=15: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:00:43] [INFO] solved=0 | queue=175
+[00:01:03] [INFO] solved=0 | queue=174
+[00:01:05] [ERR ] [TAB2] Gen error cycle=15: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:01:05] [ERR ] [TAB6] Gen error cycle=15: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:01:22] [ERR ] [TAB4] Gen error cycle=15: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:01:23] [INFO] solved=0 | queue=176
+[00:01:37] [ERR ] [TAB3] Gen error cycle=16: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:01:43] [INFO] solved=0 | queue=175
+[00:01:48] [ERR ] [TAB1] Gen error cycle=16: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:01:55] [ERR ] [TAB5] Gen error cycle=16: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:02:03] [INFO] solved=0 | queue=176
+[00:02:23] [INFO] solved=0 | queue=174
+[00:02:28] [ERR ] [TAB6] Gen error cycle=16: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:02:30] [ERR ] [TAB2] Gen error cycle=16: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:02:43] [INFO] solved=0 | queue=174
+[00:02:46] [ERR ] [TAB4] Gen error cycle=16: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:02:58] [ERR ] [TAB3] Gen error cycle=17: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:03:03] [INFO] solved=0 | queue=176
+[00:03:16] [ERR ] [TAB1] Gen error cycle=17: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:03:18] [ERR ] [TAB5] Gen error cycle=17: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:03:23] [INFO] solved=0 | queue=176
+[00:03:43] [INFO] solved=0 | queue=174
+[00:03:49] [ERR ] [TAB6] Gen error cycle=17: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:03:49] [ERR ] [TAB2] Gen error cycle=17: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:04:03] [INFO] solved=0 | queue=175
+[00:04:13] [ERR ] [TAB4] Gen error cycle=17: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:04:16] [ERR ] [TAB3] Gen error cycle=18: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:04:23] [INFO] solved=0 | queue=175
+[00:04:36] [ERR ] [TAB1] Gen error cycle=18: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:04:41] [ERR ] [TAB5] Gen error cycle=18: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:04:43] [INFO] solved=0 | queue=176
+[00:05:03] [INFO] solved=0 | queue=174
+[00:05:09] [ERR ] [TAB6] Gen error cycle=18: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:05:15] [ERR ] [TAB2] Gen error cycle=18: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:05:23] [INFO] solved=0 | queue=175
+[00:05:29] [ERR ] [TAB4] Gen error cycle=18: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:05:33] [ERR ] [TAB3] Gen error cycle=19: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:05:43] [INFO] solved=0 | queue=176
+[00:05:59] [ERR ] [TAB1] Gen error cycle=19: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:06:03] [INFO] solved=0 | queue=175
+[00:06:04] [ERR ] [TAB5] Gen error cycle=19: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:06:23] [INFO] solved=0 | queue=174
+[00:06:29] [ERR ] [TAB6] Gen error cycle=19: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:06:36] [ERR ] [TAB2] Gen error cycle=19: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:06:43] [INFO] solved=0 | queue=176
+[00:06:55] [ERR ] [TAB4] Gen error cycle=19: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:06:55] [ERR ] [TAB3] Gen error cycle=20: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:07:03] [INFO] solved=0 | queue=176
+[00:07:21] [ERR ] [TAB1] Gen error cycle=20: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:07:23] [INFO] solved=0 | queue=175
+[00:07:27] [ERR ] [TAB5] Gen error cycle=20: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:07:43] [INFO] solved=0 | queue=175
+[00:07:52] [ERR ] [TAB6] Gen error cycle=20: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:07:54] [ERR ] [TAB2] Gen error cycle=20: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:08:03] [INFO] solved=0 | queue=176
+[00:08:18] [ERR ] [TAB4] Gen error cycle=20: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:08:20] [ERR ] [TAB3] Gen error cycle=21: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:08:23] [INFO] solved=0 | queue=176
+[00:08:43] [INFO] solved=0 | queue=174
+[00:08:49] [ERR ] [TAB1] Gen error cycle=21: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:08:54] [ERR ] [TAB5] Gen error cycle=21: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:09:03] [INFO] solved=0 | queue=176
+[00:09:16] [ERR ] [TAB6] Gen error cycle=21: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:09:23] [INFO] solved=0 | queue=175
+[00:09:23] [ERR ] [TAB2] Gen error cycle=21: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:09:41] [ERR ] [TAB3] Gen error cycle=21: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:09:43] [INFO] solved=0 | queue=175
+[00:09:44] [ERR ] [TAB4] Gen error cycle=22: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:10:03] [INFO] solved=0 | queue=174
+[00:10:16] [ERR ] [TAB1] Gen error cycle=22: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:10:16] [ERR ] [TAB5] Gen error cycle=22: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:10:23] [INFO] solved=0 | queue=176
+[00:10:41] [ERR ] [TAB6] Gen error cycle=22: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:10:43] [INFO] solved=0 | queue=175
+[00:10:44] [ERR ] [TAB2] Gen error cycle=22: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:10:59] [ERR ] [TAB3] Gen error cycle=22: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:11:03] [ERR ] [TAB4] Gen error cycle=23: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:11:03] [INFO] solved=0 | queue=176
+[00:11:23] [INFO] solved=0 | queue=174
+[00:11:36] [ERR ] [TAB5] Gen error cycle=23: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:11:42] [ERR ] [TAB1] Gen error cycle=23: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:11:43] [INFO] solved=0 | queue=176
+[00:12:03] [INFO] solved=0 | queue=174
+[00:12:08] [ERR ] [TAB2] Gen error cycle=23: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:12:09] [ERR ] [TAB6] Gen error cycle=23: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:12:18] [ERR ] [TAB3] Gen error cycle=23: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:12:23] [INFO] solved=0 | queue=177
+[00:12:27] [ERR ] [TAB4] Gen error cycle=24: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:12:43] [INFO] solved=0 | queue=174
+[00:12:59] [ERR ] [TAB5] Gen error cycle=24: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:13:03] [INFO] solved=0 | queue=175
+[00:13:04] [ERR ] [TAB1] Gen error cycle=24: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:13:23] [INFO] solved=0 | queue=174
+[00:13:32] [ERR ] [TAB2] Gen error cycle=24: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:13:35] [ERR ] [TAB6] Gen error cycle=24: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:13:40] [ERR ] [TAB3] Gen error cycle=24: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:13:43] [INFO] solved=0 | queue=177
+[00:13:48] [ERR ] [TAB4] Gen error cycle=25: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:14:03] [INFO] solved=0 | queue=174
+[00:14:21] [ERR ] [TAB5] Gen error cycle=25: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:14:23] [INFO] solved=0 | queue=175
+[00:14:27] [ERR ] [TAB1] Gen error cycle=25: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:14:43] [INFO] solved=0 | queue=174
+[00:14:49] [ERR ] [TAB2] Gen error cycle=25: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:14:57] [ERR ] [TAB6] Gen error cycle=25: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:15:03] [INFO] solved=0 | queue=175
+[00:15:08] [ERR ] [TAB3] Gen error cycle=25: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:15:09] [ERR ] [TAB4] Gen error cycle=26: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:15:23] [INFO] solved=0 | queue=175
+[00:15:40] [ERR ] [TAB5] Gen error cycle=26: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:15:43] [INFO] solved=0 | queue=175
+[00:15:51] [ERR ] [TAB1] Gen error cycle=26: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:16:03] [INFO] solved=0 | queue=175
+[00:16:11] [ERR ] [TAB2] Gen error cycle=26: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:16:16] [ERR ] [TAB6] Gen error cycle=26: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:16:23] [INFO] solved=0 | queue=175
+[00:16:27] [ERR ] [TAB3] Gen error cycle=26: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:16:36] [ERR ] [TAB4] Gen error cycle=27: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:16:43] [INFO] solved=0 | queue=175
+[00:17:01] [ERR ] [TAB5] Gen error cycle=27: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:17:03] [INFO] solved=0 | queue=175
+[00:17:17] [ERR ] [TAB1] Gen error cycle=27: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:17:23] [INFO] solved=0 | queue=175
+[00:17:29] [ERR ] [TAB2] Gen error cycle=27: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:17:36] [ERR ] [TAB6] Gen error cycle=27: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:17:43] [INFO] solved=0 | queue=176
+[00:17:51] [ERR ] [TAB3] Gen error cycle=27: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:17:57] [ERR ] [TAB4] Gen error cycle=28: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:18:03] [INFO] solved=0 | queue=176
+[00:18:23] [INFO] solved=0 | queue=174
+[00:18:24] [ERR ] [TAB5] Gen error cycle=28: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:18:36] [ERR ] [TAB1] Gen error cycle=28: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:18:43] [INFO] solved=0 | queue=175
+[00:18:56] [ERR ] [TAB2] Gen error cycle=28: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:18:59] [ERR ] [TAB6] Gen error cycle=28: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:19:04] [INFO] solved=0 | queue=176
+[00:19:17] [ERR ] [TAB4] Gen error cycle=28: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:19:17] [ERR ] [TAB3] Gen error cycle=29: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:19:24] [INFO] solved=0 | queue=176
+[00:19:44] [INFO] solved=0 | queue=174
+[00:19:44] [ERR ] [TAB5] Gen error cycle=29: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:19:58] [ERR ] [TAB1] Gen error cycle=29: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:20:04] [INFO] solved=0 | queue=175
+[00:20:22] [ERR ] [TAB6] Gen error cycle=29: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:20:24] [INFO] solved=0 | queue=175
+[00:20:24] [ERR ] [TAB2] Gen error cycle=29: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:20:38] [ERR ] [TAB4] Gen error cycle=29: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:20:44] [INFO] solved=0 | queue=175
+[00:20:44] [ERR ] [TAB3] Gen error cycle=30: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:21:04] [INFO] solved=0 | queue=174
+[00:21:11] [ERR ] [TAB5] Gen error cycle=30: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:21:23] [ERR ] [TAB1] Gen error cycle=30: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:21:24] [INFO] solved=0 | queue=176
+[00:21:43] [ERR ] [TAB6] Gen error cycle=30: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:21:44] [INFO] solved=0 | queue=175
+[00:21:49] [ERR ] [TAB2] Gen error cycle=30: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:21:55] [ERR ] [TAB4] Gen error cycle=30: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:22:04] [INFO] solved=0 | queue=175
+[00:22:07] [ERR ] [TAB3] Gen error cycle=1: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:22:24] [INFO] solved=0 | queue=175
+[00:22:36] [ERR ] [TAB5] Gen error cycle=1: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:22:44] [INFO] solved=0 | queue=175
+[00:22:47] [ERR ] [TAB1] Gen error cycle=1: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:23:04] [INFO] solved=0 | queue=175
+[00:23:05] [ERR ] [TAB6] Gen error cycle=1: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:23:06] [ERR ] [TAB2] Gen error cycle=1: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:23:24] [INFO] solved=0 | queue=175
+[00:23:25] [ERR ] [TAB4] Gen error cycle=1: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:23:36] [ERR ] [TAB3] Gen error cycle=2: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:23:44] [INFO] solved=0 | queue=175
+[00:24:04] [INFO] solved=0 | queue=174
+[00:24:07] [ERR ] [TAB5] Gen error cycle=2: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:24:16] [ERR ] [TAB1] Gen error cycle=2: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:24:24] [INFO] solved=0 | queue=175
+[00:24:38] [ERR ] [TAB2] Gen error cycle=2: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:24:38] [ERR ] [TAB6] Gen error cycle=2: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:24:44] [INFO] solved=0 | queue=176
+[00:24:51] [ERR ] [TAB4] Gen error cycle=2: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:25:03] [ERR ] [TAB3] Gen error cycle=3: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:25:04] [INFO] solved=0 | queue=176
+[00:25:24] [INFO] solved=0 | queue=174
+[00:25:29] [ERR ] [TAB5] Gen error cycle=3: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:25:37] [ERR ] [TAB1] Gen error cycle=3: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:25:44] [INFO] solved=0 | queue=176
+[00:25:59] [ERR ] [TAB6] Gen error cycle=3: [TAB6] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:26:04] [INFO] solved=0 | queue=175
+[00:26:04] [ERR ] [TAB2] Gen error cycle=3: [TAB2] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:26:16] [ERR ] [TAB4] Gen error cycle=3: [TAB4] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:26:24] [INFO] solved=0 | queue=175
+[00:26:28] [ERR ] [TAB3] Gen error cycle=4: [TAB3] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:26:44] [INFO] solved=0 | queue=174
+[00:26:56] [ERR ] [TAB5] Gen error cycle=4: [TAB5] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:26:56] [ERR ] [TAB1] Gen error cycle=4: [TAB1] None of selectors found: ["div#prompt-textarea[contenteditable='true']", "div[contenteditable='true'][data-id='prompt-textarea']", "div[contenteditable='true']"]
+[00:27:04] [INFO] solved=0 | queue=176

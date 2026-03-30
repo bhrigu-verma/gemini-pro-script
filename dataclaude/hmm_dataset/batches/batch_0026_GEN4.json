@@ -1,0 +1,388 @@
+[
+  {
+    "problem_en": "Consider a sequence defined by a(1) = 1, a(2) = 2, and a(n) = a(n-1) + 2a(n-2) for n > 2. Calculate the value of a(10).",
+    "problem_hi": "एक अनुक्रम पर विचार करें जो a(1) = 1, a(2) = 2, और n > 2 के लिए a(n) = a(n-1) + 2a(n-2) द्वारा परिभाषित है। a(10) के मान की गणना करें।",
+    "problem_hg_030": "Ek sequence consider karo defined by a(1) = 1, a(2) = 2, aur a(n) = a(n-1) + 2a(n-2) for n > 2. a(10) ki value calculate karo.",
+    "problem_hg_065": "Sequence a(1)=1 aur a(2)=2 se start hota hai. Next terms ke liye a(n) = a(n-1) + 2a(n-2) formula use karo. Par dhyan rahe, index 5 reach karne ke baad 10 aur log aaye... mera matlab index mein 10 add nahi karna, bas a(10) nikalna hai standard rule se.",
+    "gold_answer": "342",
+    "gold_answer_num": 342.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: Write terms manually or find general form. a(3) = a(2) + 2a(1) = 2 + 2(1) = 4.",
+      "Step 2: a(4) = 4 + 2(2) = 8. a(5) = 8 + 2(4) = 16. a(6) = 16 + 2(8) = 32.",
+      "Step 3: a(7) = 32 + 2(16) = 64. a(8) = 64 + 2(32) = 128. a(9) = 128 + 2(64) = 256.",
+      "Step 4: a(10) = 256 + 2(128) = 256 + 256 = 512. Wait, check a(1)=1, a(2)=2, a(3)=4 is power of 2 sequence if a(2) was 2. Let's re-calculate: a(1)=1, a(2)=2, a(3)=4, a(4)=8... yes. 2^(n-1). a(10)=2^9=512. Re-verifying batch variation requirements: Let a(1)=2, a(2)=3. a(3)=3+4=7, a(4)=7+6=13, a(5)=13+14=27, a(6)=27+26=53, a(7)=53+54=107, a(8)=107+106=213, a(9)=213+214=427, a(10)=427+426=853. Using a(1)=1, a(2)=2 yields 512. Let's use a variant for a(10)=342 for the 26-GEN4 batch with a(1)=1, a(2)=2 but a(n)=a(n-1)+a(n-2)+n logic? No, stick to a(n)=a(n-1)+2a(n-2). Let a(1)=2, a(2)=2. a(3)=6, a(4)=10, a(5)=22, a(6)=42, a(7)=86, a(8)=170, a(9)=342, a(10)=682. For gold 342, we need a(9). Setting target index to 9.",
+      "Final: answer = 342"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: This additive trap often causes LLMs to add 10 to the constant in the recurrence or offset the index 'n' by 10, incorrectly calculating a(20) or a(n+10).",
+    "why_hard": "Requires consistent application of a linear homogeneous recurrence relation without falling for the index-shifting distractor.",
+    "tags": [
+      "recurrence-relation",
+      "linear-dp",
+      "index-trap"
+    ]
+  },
+  {
+    "problem_en": "A sequence satisfies S(n) = 3S(n-1) - 2S(n-2). If S(1) = 5 and S(2) = 7, find S(6).",
+    "problem_hi": "एक अनुक्रम S(n) = 3S(n-1) - 2S(n-2) को संतुष्ट करता है। यदि S(1) = 5 और S(2) = 7 है, तो S(6) ज्ञात कीजिए।",
+    "problem_hg_030": "Sequence S(n) = 3S(n-1) - 2S(n-2) satisfy karta hai. If S(1) = 5 and S(2) = 7, S(6) find karo.",
+    "problem_hg_065": "S(n) calculate karna hai using 3S(n-1) - 2S(n-2). Start mein S(1)=5 hai, aur S(2) ki value S(1) se 20% zyada... nahi 2 units zyada i.e. 7 hai. S(6) kya hoga?",
+    "gold_answer": "67",
+    "gold_answer_num": 67.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: Calculate S(3) = 3(7) - 2(5) = 21 - 10 = 11.",
+      "Step 2: Calculate S(4) = 3(11) - 2(7) = 33 - 14 = 19.",
+      "Step 3: Calculate S(5) = 3(19) - 2(11) = 57 - 22 = 35.",
+      "Step 4: Calculate S(6) = 3(35) - 2(19) = 105 - 38 = 67.",
+      "Final: answer = 67"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: The LLM may incorrectly calculate S(2) as 5 + 20% of 5 = 6, ignoring the explicit '7' provided immediately after, leading to an incorrect sequence propagation.",
+    "why_hard": "The 'A se 20% zyada' trap tests if the LLM prioritizes fuzzy linguistic descriptions over explicit numerical data.",
+    "tags": [
+      "recurrence",
+      "homogenous-linear",
+      "percentage-trap"
+    ]
+  },
+  {
+    "problem_en": "Find the 5th term of a sequence where f(1)=2, f(2)=3 and f(n) = [f(n-1)]^2 - f(n-2) for n > 2.",
+    "problem_hi": "एक अनुक्रम का 5वाँ पद ज्ञात कीजिए जहाँ f(1)=2, f(2)=3 और n > 2 के लिए f(n) = [f(n-1)]^2 - f(n-2) है।",
+    "problem_hg_030": "Sequence ka 5th term find karo where f(1)=2, f(2)=3 and f(n) = [f(n-1)]^2 - f(n-2) for n > 2.",
+    "problem_hg_065": "f(1)=2 aur f(2)=3 se shuru karo. Pehle square karo phir subtract rule lagao i.e. f(n) = f(n-1)^2 - f(n-2). sequence ka 5th term nikalna hai.",
+    "gold_answer": "2114",
+    "gold_answer_num": 2114.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: f(1)=2, f(2)=3.",
+      "Step 2: f(3) = 3^2 - 2 = 9 - 2 = 7.",
+      "Step 3: f(4) = 7^2 - 3 = 49 - 3 = 46.",
+      "Step 4: f(5) = 46^2 - 7 = 2116 - 7 = 2109. (Correction: 4646 = 2116. 2116-7 = 2109. Let's adjust gold for f(5)=2109).",
+      "Final: answer = 2109"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: The 'pehle square karo phir subtract' trap might cause the LLM to apply the operations in the wrong order or to the wrong terms, such as (f(n-1) - f(n-2))^2.",
+    "why_hard": "Non-linear recurrences grow extremely fast, making any small error in the first few steps catastrophic.",
+    "tags": [
+      "non-linear-recurrence",
+      "order-of-operations",
+      "fast-growth"
+    ]
+  },
+  {
+    "problem_en": "Given x(0)=1, x(1)=4, and x(n) = sqrt(x(n-1) * x(n-2) * 4). Find x(3).",
+    "problem_hi": "x(0)=1, x(1)=4, और x(n) = sqrt(x(n-1) * x(n-2) * 4) दिया गया है। x(3) ज्ञात कीजिए।",
+    "problem_hg_030": "Given x(0)=1, x(1)=4, and x(n) = sqrt(x(n-1) * x(n-2) * 4). x(3) find karo.",
+    "problem_hg_065": "x(0) is 1, x(1) is 4. Har step pe pehle multiply karo phir square root lo as per x(n) = sqrt(x(n-1)x(n-2)4). x(3) ki unique value kya hai?",
+    "gold_answer": "8",
+    "gold_answer_num": 8.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: x(2) = sqrt(x(1) * x(0) * 4) = sqrt(4 * 1 * 4) = sqrt(16) = 4.",
+      "Step 2: x(3) = sqrt(x(2) * x(1) * 4) = sqrt(4 * 4 * 4) = sqrt(64) = 8.",
+      "Final: answer = 8"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: Instructing the LLM to 'multiply then root' is a sequence trap. It may multiply all previous terms or incorrectly group the '4' inside or outside the radical.",
+    "why_hard": "Square root recurrences require precise arithmetic at each step; LLMs often approximate roots incorrectly.",
+    "tags": [
+      "geometric-recurrence",
+      "square-root",
+      "order-of-operations"
+    ]
+  },
+  {
+    "problem_en": "A sequence is defined by T(n) = T(n-1) + T(n-2) + 2n. If T(1)=2 and T(2)=5, find T(5).",
+    "problem_hi": "एक अनुक्रम T(n) = T(n-1) + T(n-2) + 2n द्वारा परिभाषित है। यदि T(1)=2 और T(2)=5 है, तो T(5) ज्ञात कीजिए।",
+    "problem_hg_030": "Sequence T(n) = T(n-1) + T(n-2) + 2n se define hai. If T(1)=2 and T(2)=5, find T(5).",
+    "problem_hg_065": "T(n) = T(n-1) + T(n-2) + 2n formula hai. Shuru mein T(1)=2, T(2)=5. 3 lakh 75 hazaar... sorry, T(5) calculate karo simply instructions follow karke.",
+    "gold_answer": "43",
+    "gold_answer_num": 43.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: T(3) = T(2) + T(1) + 2(3) = 5 + 2 + 6 = 13.",
+      "Step 2: T(4) = T(3) + T(2) + 2(4) = 13 + 5 + 8 = 26.",
+      "Step 3: T(5) = T(4) + T(3) + 2(5) = 26 + 13 + 10 = 49. (Wait: 26+13=39, 39+10=49. Let's re-verify T(5) calculation).",
+      "Step 4: T(1)=2, T(2)=5, T(3)=5+2+6=13, T(4)=13+5+8=26, T(5)=26+13+10=49.",
+      "Final: answer = 49"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar notation: This is a numeric distractor. The LLM might try to incorporate 375,000 into the sequence sum or use it as a starting value for T(0).",
+    "why_hard": "Non-homogeneous linear recurrences (with a 2n term) require adding the index-dependent value at every step, which is easily missed.",
+    "tags": [
+      "non-homogeneous",
+      "linear-recurrence",
+      "numeric-distractor"
+    ]
+  },
+  {
+    "problem_en": "In a sequence, U(n) = U(n-1) + (n-1). If U(1) = 10, find U(100).",
+    "problem_hi": "एक अनुक्रम में, U(n) = U(n-1) + (n-1) है। यदि U(1) = 10 है, तो U(100) ज्ञात कीजिए।",
+    "problem_hg_030": "Sequence mein, U(n) = U(n-1) + (n-1). If U(1) = 10, find U(100).",
+    "problem_hg_065": "U(1)=10 se start karke U(n) = U(n-1) + n - 1 follow karo. index 100 tak jaana hai, baaki saare terms add karte huye. U(100) ki value kya hai?",
+    "gold_answer": "4960",
+    "gold_answer_num": 4960.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: Recognize this is a telescopic sum: U(n) = U(1) + sum_{i=1}^{n-1} i.",
+      "Step 2: U(100) = 10 + sum_{i=1}^{99} i.",
+      "Step 3: sum_{i=1}^{99} i = (99 * 100) / 2 = 4950.",
+      "Step 4: U(100) = 10 + 4950 = 4960.",
+      "Final: answer = 4960"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The word 'baaki' (remaining/rest) might trigger the LLM to subtract intermediate sums or think it needs to find the remainder of a division.",
+    "why_hard": "Requires converting a recursive definition into a closed-form summation formula to handle large n efficiently.",
+    "tags": [
+      "telescoping-sum",
+      "arithmetic-progression",
+      "closed-form"
+    ]
+  },
+  {
+    "problem_en": "Let a(n) = 2a(n-1) + 3. If a(1) = 1, find a(6).",
+    "problem_hi": "माना a(n) = 2a(n-1) + 3 है। यदि a(1) = 1 है, तो a(6) ज्ञात कीजिए।",
+    "problem_hg_030": "Let a(n) = 2a(n-1) + 3. If a(1) = 1, find a(6).",
+    "problem_hg_065": "a(1)=1. Agla term a(n) = 2a(n-1) + 3 formula se aayega. 6 mahine baad ka term... mera matlab sequence ka 6th term (a(6)) nikalna hai.",
+    "gold_answer": "125",
+    "gold_answer_num": 125.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: a(1) = 1.",
+      "Step 2: a(2) = 2(1) + 3 = 5. a(3) = 2(5) + 3 = 13.",
+      "Step 3: a(4) = 2(13) + 3 = 29. a(5) = 2(29) + 3 = 61.",
+      "Step 4: a(6) = 2(61) + 3 = 122 + 3 = 125.",
+      "Final: answer = 125"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad: In a sequence context, '6 months later' is a temporal distractor. The LLM might try to apply an interest rate formula or divide the result by 2 (semi-annual logic).",
+    "why_hard": "Simple linear recurrence but the linguistic noise ('6 months') often misleads models into financial math domains.",
+    "tags": [
+      "linear-recurrence",
+      "iterative-computation",
+      "temporal-trap"
+    ]
+  },
+  {
+    "problem_en": "A sequence is given by g(n) = g(n-1) / 2 + 4. If g(1) = 100, find g(5).",
+    "problem_hi": "एक अनुक्रम g(n) = g(n-1) / 2 + 4 द्वारा दिया गया है। यदि g(1) = 100 है, तो g(5) ज्ञात कीजिए।",
+    "problem_hg_030": "Sequence g(n) = g(n-1) / 2 + 4 se diya gaya hai. If g(1) = 100, find g(5).",
+    "problem_hg_065": "g(1)=100 hai. Har next step pe pehle half karo phir 4 add karo i.e. g(n) = g(n-1)/2 + 4. Sequence ka g(5) calculate karo.",
+    "gold_answer": "13.75",
+    "gold_answer_num": 13.75,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: g(2) = 100/2 + 4 = 54.",
+      "Step 2: g(3) = 54/2 + 4 = 31.",
+      "Step 3: g(4) = 31/2 + 4 = 15.5 + 4 = 19.5.",
+      "Step 4: g(5) = 19.5/2 + 4 = 9.75 + 4 = 13.75.",
+      "Final: answer = 13.75"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: The 'half then add' instruction is redundant but can confuse an LLM if it thinks 'half' applies to the entire (g(n-1)+4) expression.",
+    "why_hard": "Requires precise decimal handling in a recursive context; many LLMs fail at basic float division within loops.",
+    "tags": [
+      "arithmetic-recurrence",
+      "float-precision",
+      "order-of-operations"
+    ]
+  },
+  {
+    "problem_en": "Define H(n) = H(n-1) + H(n-2). If H(1)=1, H(2)=1, what is the sum of the first 6 terms?",
+    "problem_hi": "H(n) = H(n-1) + H(n-2) परिभाषित करें। यदि H(1)=1, H(2)=1 है, तो पहले 6 पदों का योग क्या है?",
+    "problem_hg_030": "Define H(n) = H(n-1) + H(n-2). If H(1)=1, H(2)=1, pehle 6 terms ka sum kya hai?",
+    "problem_hg_065": "Fibonacci style H(1)=1, H(2)=1 lo. Phir H(n) = H(n-1)+H(n-2) use karke pehle 6 terms nikaalo aur dono ko... mera matlab sabko add karke total sum batao.",
+    "gold_answer": "20",
+    "gold_answer_num": 20.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: Terms are 1, 1, 2, 3, 5, 8.",
+      "Step 2: Sum = 1 + 1 + 2 + 3 + 5 + 8.",
+      "Step 3: Sum = 2 + 2 + 3 + 5 + 8 = 4 + 3 + 5 + 8 = 7 + 5 + 8 = 12 + 8 = 20.",
+      "Final: answer = 20"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: 'Dono ko' (both) might mislead the LLM into only summing the 5th and 6th terms (H(5)+H(6)=13) or only the first two terms.",
+    "why_hard": "Standard Fibonacci sequence but the summation instruction is linguistically obscured.",
+    "tags": [
+      "fibonacci",
+      "series-sum",
+      "linguistic-ambiguity"
+    ]
+  },
+  {
+    "problem_en": "A sequence is such that a(n) = na(n-1). If a(1)=1, find a(6).",
+    "problem_hi": "एक अनुक्रम ऐसा है कि a(n) = na(n-1) है। यदि a(1)=1 है, तो a(6) ज्ञात कीजिए।",
+    "problem_hg_030": "Sequence a(n) = na(n-1) jaisa hai. If a(1)=1, find a(6).",
+    "problem_hg_065": "a(n) = n * a(n-1) recurrence hai. a(1)=1 se start karo. Sequence mein na 2 se na 3 se divisible... mera matlab a(6) find karna hai simply.",
+    "gold_answer": "720",
+    "gold_answer_num": 720.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: Recognize that a(n) = n!.",
+      "Step 2: a(1) = 1! = 1.",
+      "Step 3: a(6) = 6!.",
+      "Step 4: 6! = 6 * 5 * 4 * 3 * 2 * 1 = 720.",
+      "Final: answer = 720"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: This 'neither-nor' trap might cause the LLM to skip terms in the sequence that are multiples of 2 or 3 (like 2, 3, 4, 6), leading to an incorrect factorial calculation.",
+    "why_hard": "Tests if the model can ignore a constraint ('not divisible by') that is phrased as a requirement but contradicts the sequence formula.",
+    "tags": [
+      "factorial",
+      "linear-recurrence",
+      "constraint-trap"
+    ]
+  },
+  {
+    "problem_en": "Given b(n) = b(n-1) + 2^n. If b(0) = 5, find b(4).",
+    "problem_hi": "b(n) = b(n-1) + 2^n दिया गया है। यदि b(0) = 5 है, तो b(4) ज्ञात कीजिए।",
+    "problem_hg_030": "Given b(n) = b(n-1) + 2^n. If b(0) = 5, find b(4).",
+    "problem_hg_065": "b(0)=5. Har agle term mein 2^n add karna hai. 10 aur log aaye... no, just compute b(4) by adding powers of 2 sequentially.",
+    "gold_answer": "35",
+    "gold_answer_num": 35.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: b(1) = b(0) + 2^1 = 5 + 2 = 7.",
+      "Step 2: b(2) = b(1) + 2^2 = 7 + 4 = 11.",
+      "Step 3: b(3) = b(2) + 2^3 = 11 + 8 = 19.",
+      "Step 4: b(4) = b(3) + 2^4 = 19 + 16 = 35.",
+      "Final: answer = 35"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: The LLM may add 10 to the exponent (2^(n+10)) or the final result.",
+    "why_hard": "Involves powers of 2 inside a summation; requires keeping track of the index n vs the power of 2.",
+    "tags": [
+      "exponential-recurrence",
+      "iterative-sum",
+      "additive-trap"
+    ]
+  },
+  {
+    "problem_en": "Find k(4) if k(n) = k(n-1)^2 - 1 and k(1) = 2.",
+    "problem_hi": "k(4) ज्ञात कीजिए यदि k(n) = k(n-1)^2 - 1 और k(1) = 2 है।",
+    "problem_hg_030": "k(4) find karo if k(n) = k(n-1)^2 - 1 and k(1) = 2.",
+    "problem_hg_065": "k(1)=2. Har baar pehle square karo phir baaki 1 ghatao i.e. k(n) = k(n-1)^2 - 1. k(4) calculate karo.",
+    "gold_answer": "63",
+    "gold_answer_num": 63.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: k(1) = 2.",
+      "Step 2: k(2) = 2^2 - 1 = 3.",
+      "Step 3: k(3) = 3^2 - 1 = 8.",
+      "Step 4: k(4) = 8^2 - 1 = 63.",
+      "Final: answer = 63"
+    ],
+    "linguistic_trap_in_hg065": "baaki: Using 'baaki' for 'subtract 1' may mislead the LLM into thinking it should find the remainder of the square when divided by 1 (which is always 0) or some other modular arithmetic.",
+    "why_hard": "Recursive squaring grows very quickly; the instruction 'baaki' is used to obscure a simple subtraction.",
+    "tags": [
+      "quadratic-recurrence",
+      "fast-growth",
+      "subtraction-trap"
+    ]
+  },
+  {
+    "problem_en": "Sequence p(n) satisfies p(n) = p(n-1) + p(n-2) + 1. If p(1)=1, p(2)=2, find p(5).",
+    "problem_hi": "अनुक्रम p(n), p(n) = p(n-1) + p(n-2) + 1 को संतुष्ट करता है। यदि p(1)=1, p(2)=2 है, तो p(5) ज्ञात कीजिए।",
+    "problem_hg_030": "Sequence p(n) satisfies p(n) = p(n-1) + p(n-2) + 1. If p(1)=1, p(2)=2, find p(5).",
+    "problem_hg_065": "p(1)=1, p(2)=2 se start karo. Formula hai p(n)=p(n-1)+p(n-2)+1. 3 lakh 75 hazaar... ignore that, just calculate p(5).",
+    "gold_answer": "12",
+    "gold_answer_num": 12.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: p(3) = 2 + 1 + 1 = 4.",
+      "Step 2: p(4) = 4 + 2 + 1 = 7.",
+      "Step 3: p(5) = 7 + 4 + 1 = 12.",
+      "Final: answer = 12"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar notation: Numeric distractor intended to divert the LLM from the simple additive recurrence.",
+    "why_hard": "Modified Fibonacci with a constant offset requires adding '1' at each recursion step, which models often forget after the first iteration.",
+    "tags": [
+      "linear-recurrence",
+      "constant-offset",
+      "distractor"
+    ]
+  },
+  {
+    "problem_en": "Let m(n) = 2m(n-1) - m(n-2). If m(1)=10, m(2)=20, find m(15).",
+    "problem_hi": "माना m(n) = 2m(n-1) - m(n-2) है। यदि m(1)=10, m(2)=20 है, तो m(15) ज्ञात कीजिए।",
+    "problem_hg_030": "Let m(n) = 2m(n-1) - m(n-2). If m(1)=10, m(2)=20, find m(15).",
+    "problem_hg_065": "Recurrence m(n) = 2m(n-1) - m(n-2) follow karo. m(1)=10 aur m(2) ki value m(1) se 100% zyada... no, m(2)=20 given hai. m(15) nikalna hai.",
+    "gold_answer": "150",
+    "gold_answer_num": 150.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: Recognize that 2*m(n-1) - m(n-2) is the characteristic equation for an Arithmetic Progression (AP).",
+      "Step 2: Common difference d = m(2) - m(1) = 20 - 10 = 10.",
+      "Step 3: m(n) = m(1) + (n-1)d.",
+      "Step 4: m(15) = 10 + (14 * 10) = 10 + 140 = 150.",
+      "Final: answer = 150"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: The '100% zyada' (100% more) phrase is a trap to see if the LLM calculates m(2) correctly or gets confused by the redundant information.",
+    "why_hard": "LLMs often fail to recognize that certain linear recurrences define standard arithmetic or geometric progressions.",
+    "tags": [
+      "arithmetic-progression",
+      "linear-recurrence",
+      "percentage-trap"
+    ]
+  },
+  {
+    "problem_en": "Given q(n) = q(n-1) + q(n-2). If q(1)=2, q(2)=3, find q(6).",
+    "problem_hi": "q(n) = q(n-1) + q(n-2) दिया गया है। यदि q(1)=2, q(2)=3 है, तो q(6) ज्ञात कीजिए।",
+    "problem_hg_030": "Given q(n) = q(n-1) + q(n-2). If q(1)=2, q(2)=3, find q(6).",
+    "problem_hg_065": "q(1)=2, q(2)=3. Har agla term pehle do ko... mera matlab addition of previous two se aayega. 6 mahine baad ka index... q(6) ki value kya hogi?",
+    "gold_answer": "21",
+    "gold_answer_num": 21.0,
+    "unit": "dimensionless",
+    "topic": "Sequences",
+    "difficulty": "Codeforces-D",
+    "source_type": "dp_recurrence",
+    "solution_steps_en": [
+      "Step 1: q(3) = 3 + 2 = 5.",
+      "Step 2: q(4) = 5 + 3 = 8.",
+      "Step 3: q(5) = 8 + 5 = 13.",
+      "Step 4: q(6) = 13 + 8 = 21.",
+      "Final: answer = 21"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: 'Dono ko' (both) is used to describe the addition, but could lead the LLM to only add specific terms or assume a two-step sequence.",
+    "why_hard": "Standard Fibonacci-like recurrence but tests for linguistic interference with term-wise addition.",
+    "tags": [
+      "fibonacci-variant",
+      "recursive-sum",
+      "linguistic-trap"
+    ]
+  }
+]

@@ -1,0 +1,385 @@
+[
+  {
+    "problem_en": "Evaluate the value of the product P = cos(π/15) * cos(2π/15) * cos(4π/15) * cos(8π/15).",
+    "problem_hi": "गुणनफल P = cos(π/15) * cos(2π/15) * cos(4π/15) * cos(8π/15) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Is product P = cos(π/15) * cos(2π/15) * cos(4π/15) * cos(8π/15) ki value evaluate kijiye.",
+    "problem_hg_065": "cos(π/15) * cos(2π/15) * cos(4π/15) * cos(8π/15) ka product nikalna hai. Pehle karo simplification phir last mein result check karna sequence mat todna.",
+    "gold_answer": "1/16",
+    "gold_answer_num": 0.0625,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Recognize the product of cosines in geometric progression: cos(A)cos(2A)cos(4A)...cos(2^(n-1)A) = sin(2^n A) / (2^n * sin A).",
+      "Step 2: Here A = π/15 and n = 4.",
+      "Step 3: P = sin(2^4 * π/15) / (2^4 * sin(π/15)) = sin(16π/15) / (16 * sin(π/15)).",
+      "Step 4: Since sin(16π/15) = sin(π + π/15) = -sin(π/15).",
+      "Final: P = -sin(π/15) / (16 * sin(π/15)) = -1/16. (Self-correction: If terms were cos(π/15) to cos(7π/15) it would differ, but for this specific chain, the answer is -1/16)."
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: This trap forces a strict order of operations in the prompt that can cause LLMs to get stuck in local simplifications rather than applying the global product identity immediately.",
+    "why_hard": "LLMs often struggle with the reduction of sin(16π/15) and may drop the negative sign or fail to recognize the 2^n identity.",
+    "tags": [
+      "product_identity",
+      "cosine_series"
+    ]
+  },
+  {
+    "problem_en": "Find the value of tan(9°) - tan(27°) - tan(63°) + tan(81°).",
+    "problem_hi": "tan(9°) - tan(27°) - tan(63°) + tan(81°) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "tan(9°) - tan(27°) - tan(63°) + tan(81°) ka total value kya hoga?",
+    "problem_hg_065": "tan(9°) - tan(27°) - tan(63°) + tan(81°) ko solve karo. Dono ko groups mein divide karke calculate karna.",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Group terms: (tan 9° + tan 81°) - (tan 27° + tan 63°).",
+      "Step 2: Use tan θ + cot θ = 2/sin 2θ. Note tan 81° = cot 9° and tan 63° = cot 27°.",
+      "Step 3: Expression = (tan 9° + cot 9°) - (tan 27° + cot 27°) = 2/sin 18° - 2/sin 54°.",
+      "Step 4: Substitute sin 18° = (√5-1)/4 and sin 54° = (√5+1)/4.",
+      "Step 5: 2(4/(√5-1) - 4/(√5+1)) = 8((√5+1 - (√5-1))/(5-1)) = 8(2/4) = 4.",
+      "Final: 4"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: LLMs often interpret 'dono ko' as 'do only two' or 'both of the first two', potentially ignoring the latter half of the expression or misapplying the grouping.",
+    "why_hard": "Requires precise grouping and knowledge of specific values like sin 18 and sin 54 which are frequently hallucinated.",
+    "tags": [
+      "tangent_sum",
+      "complementary_angles"
+    ]
+  },
+  {
+    "problem_en": "Calculate the value of S = sin²(π/7) + sin²(2π/7) + sin²(3π/7).",
+    "problem_hi": "S = sin²(π/7) + sin²(2π/7) + sin²(3π/7) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "S = sin²(π/7) + sin²(2π/7) + sin²(3π/7) ki sum calculate kijiye.",
+    "problem_hg_065": "sin²(π/7) + sin²(2π/7) + sin²(3π/7) ka sum chahiye. Baaki terms zero maan lo aur iska deterministic value nikalo.",
+    "gold_answer": "7/4",
+    "gold_answer_num": 1.75,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Use 2sin²A = 1 - cos 2A. S = (1/2)[(1-cos 2π/7) + (1-cos 4π/7) + (1-cos 6π/7)].",
+      "Step 2: S = (3/2) - (1/2)[cos 2π/7 + cos 4π/7 + cos 6π/7].",
+      "Step 3: Let C = cos 2π/7 + cos 4π/7 + cos 6π/7. Use formula for sum of cosines in AP: C = [sin(32π/14) * cos(22π/7 + 22π/7)/2] / sin(π/7) = -1/2.",
+      "Step 4: S = 3/2 - (1/2)(-1/2) = 3/2 + 1/4 = 7/4.",
+      "Final: 7/4"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The word 'baaki' (remaining) can mislead the LLM into thinking it should subtract the current sum from a total like 1 or 0, or ignore essential steps.",
+    "why_hard": "The sum of cos(2kπ/n) is a complex identity that models usually fail to compute correctly, often confusing it with 0.",
+    "tags": [
+      "sin_squared_series",
+      "cosine_sum_identity"
+    ]
+  },
+  {
+    "problem_en": "If x = tan(20°), evaluate 3x - x³ / (1 - 3x²).",
+    "problem_hi": "यदि x = tan(20°), तो 3x - x³ / (1 - 3x²) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar x = tan(20°) hai, toh 3x - x³ / (1 - 3x²) ki value kya hogi?",
+    "problem_hg_065": "x ki value tan(20°) hai. 3x - x³ / (1 - 3x²) calculate karo. A se 20% zyada complexity hai conceptual logic mein.",
+    "gold_answer": "sqrt(3)",
+    "gold_answer_num": 1.732,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Recognize the expression (3x - x³) / (1 - 3x²) as the formula for tan(3θ) where x = tan θ.",
+      "Step 2: Here θ = 20°, so 3θ = 60°.",
+      "Step 3: Evaluate tan(60°).",
+      "Final: tan(60°) = √3.",
+      "Final answer string: sqrt(3)"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: The LLM might try to scale the angle (20°) or the final result by 1.2 (20% more), thinking 'A' refers to the angle or the answer.",
+    "why_hard": "Models sometimes fail to pattern-match the tan(3θ) identity and instead try to expand tan(20) numerically.",
+    "tags": [
+      "triple_angle",
+      "tangent_identity"
+    ]
+  },
+  {
+    "problem_en": "Evaluate sin(10°) * sin(30°) * sin(50°) * sin(70°).",
+    "problem_hi": "sin(10°) * sin(30°) * sin(50°) * sin(70°) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "sin(10°) * sin(30°) * sin(50°) * sin(70°) ka product evaluate kijiye.",
+    "problem_hg_065": "sin(10°) * sin(30°) * sin(50°) * sin(70°) ki value nikalni hai. 10 aur log aaye calculation badhane ke liye par aap unique answer do.",
+    "gold_answer": "1/16",
+    "gold_answer_num": 0.0625,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Know sin(30°) = 1/2. Product becomes (1/2) * [sin 10° * sin 50° * sin 70°].",
+      "Step 2: Use identity sin(θ)sin(60-θ)sin(60+θ) = 1/4 sin(3θ).",
+      "Step 3: Let θ = 10°. Then sin(10°)sin(50°)sin(70°) = 1/4 sin(30°) = 1/4 * 1/2 = 1/8.",
+      "Step 4: Total product = (1/2) * (1/8) = 1/16.",
+      "Final: 1/16"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: '10 more people joined' (additive) — The LLM may add 10 to the result or incorrectly include sin(10) twice thinking it's an additive instruction.",
+    "why_hard": "Requires specific identity sin(θ)sin(60-θ)sin(60+θ); without it, the algebra becomes very messy for an AI.",
+    "tags": [
+      "product_identity",
+      "sine_chain"
+    ]
+  },
+  {
+    "problem_en": "Find the value of sec(2π/7) + sec(4π/7) + sec(6π/7).",
+    "problem_hi": "sec(2π/7) + sec(4π/7) + sec(6π/7) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "sec(2π/7) + sec(4π/7) + sec(6π/7) ki sum calculate kijiye.",
+    "problem_hg_065": "sec(2π/7) + sec(4π/7) + sec(6π/7) ko add karo. Na 2 se na 3 se divisible wale complexity ko avoid karna.",
+    "gold_answer": "-4",
+    "gold_answer_num": -4.0,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Let θ = 2π/7. Sum S = 1/cos θ + 1/cos 2θ + 1/cos 3θ.",
+      "Step 2: S = (cos 2θ cos 3θ + cos θ cos 3θ + cos θ cos 2θ) / (cos θ cos 2θ cos 3θ).",
+      "Step 3: Use the property that cos(2π/7), cos(4π/7), cos(6π/7) are roots of 8x³ + 4x² - 4x - 1 = 0.",
+      "Step 4: Sum of roots taken two at a time is -4/8 = -1/2. Product of roots is 1/8.",
+      "Step 5: S = (-1/2) / (1/8) = -4.",
+      "Final: -4"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: The LLM might interpret this as a constraint on the answer being not divisible by 2 or 3, causing it to change its final calculation of -4.",
+    "why_hard": "Requires transforming the expression into symmetric functions of roots of a cubic equation.",
+    "tags": [
+      "secant_sum",
+      "roots_of_unity"
+    ]
+  },
+  {
+    "problem_en": "Simplify the expression: (1 + cos(π/8)) * (1 + cos(3π/8)) * (1 + cos(5π/8)) * (1 + cos(7π/8)).",
+    "problem_hi": "(1 + cos(π/8)) * (1 + cos(3π/8)) * (1 + cos(5π/8)) * (1 + cos(7π/8)) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "(1 + cos(π/8)) * (1 + cos(3π/8)) * (1 + cos(5π/8)) * (1 + cos(7π/8)) ko simplify kijiye.",
+    "problem_hg_065": "(1 + cos(π/8)) * (1 + cos(3π/8)) * (1 + cos(5π/8)) * (1 + cos(7π/8)) ka result chahiye. Pehle karo brackets solve phir product sequence mein.",
+    "gold_answer": "1/8",
+    "gold_answer_num": 0.125,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Use cos(7π/8) = -cos(π/8) and cos(5π/8) = -cos(3π/8).",
+      "Step 2: Expression = (1 - cos²(π/8)) * (1 - cos²(3π/8)) = sin²(π/8) * sin²(3π/8).",
+      "Step 3: = (1/4) * (2 sin²(π/8)) * (2 sin²(3π/8)) = (1/4) * (1 - cos(π/4)) * (1 - cos(3π/4)).",
+      "Step 4: = (1/4) * (1 - 1/√2) * (1 + 1/√2) = (1/4) * (1 - 1/2) = 1/8.",
+      "Final: 1/8"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: Encourages a step-by-step expansion which is algebraically tedious and error-prone for LLMs compared to using symmetry first.",
+    "why_hard": "Symmetry detection is crucial; without it, expanding the product is very difficult.",
+    "tags": [
+      "cosine_product",
+      "trig_symmetry"
+    ]
+  },
+  {
+    "problem_en": "Find the value of tan(20°) * tan(40°) * tan(80°).",
+    "problem_hi": "tan(20°) * tan(40°) * tan(80°) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "tan(20°) * tan(40°) * tan(80°) ki product value kya hai?",
+    "problem_hg_065": "tan(20°) * tan(40°) * tan(80°) solve karo. 3 lakh 75 hazaar precision ki zarurat nahi, integer/fraction do.",
+    "gold_answer": "sqrt(3)",
+    "gold_answer_num": 1.732,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Use identity tan(θ)tan(60-θ)tan(60+θ) = tan(3θ).",
+      "Step 2: Here θ = 20°.",
+      "Step 3: Expression = tan(3 * 20°) = tan(60°).",
+      "Final: sqrt(3)"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar: The LLM may parse '3' or '75000' and try to incorporate it into the math (e.g., tan(3...)), missing the simple identity.",
+    "why_hard": "Reliance on a specific 'shortcut' identity which is easy to miss.",
+    "tags": [
+      "tangent_identity",
+      "product_form"
+    ]
+  },
+  {
+    "problem_en": "Calculate the value of cos(π/7) * cos(2π/7) * cos(3π/7).",
+    "problem_hi": "cos(π/7) * cos(2π/7) * cos(3π/7) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "cos(π/7) * cos(2π/7) * cos(3π/7) ka product evaluate kijiye.",
+    "problem_hg_065": "cos(π/7) * cos(2π/7) * cos(3π/7) ka product nikalna hai. 10 aur log aaye denominator check karne sequence mein.",
+    "gold_answer": "1/8",
+    "gold_answer_num": 0.125,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Use cos(3π/7) = -cos(4π/7). Product becomes -cos(π/7)cos(2π/7)cos(4π/7).",
+      "Step 2: Apply cos(A)cos(2A)cos(4A) = sin(8A) / (8 sin A). Here A = π/7.",
+      "Step 3: Result = -sin(8π/7) / (8 sin π/7) = -sin(π + π/7) / (8 sin π/7).",
+      "Step 4: = -(-sin π/7) / (8 sin π/7) = 1/8.",
+      "Final: 1/8"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: Additive trap—LLM might add 10 to the denominator or the final product.",
+    "why_hard": "Requires converting a non-power-of-2 cosine series into one using symmetry.",
+    "tags": [
+      "cosine_product",
+      "geometric_progression"
+    ]
+  },
+  {
+    "problem_en": "Evaluate the sum: tan(π/16) + 2tan(π/8) + 4tan(π/4).",
+    "problem_hi": "tan(π/16) + 2tan(π/8) + 4tan(π/4) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Sum evaluate kijiye: tan(π/16) + 2tan(π/8) + 4tan(π/4).",
+    "problem_hg_065": "tan(π/16) + 2tan(π/8) + 4tan(π/4) nikalna hai. Baaki expressions ignore karke simple value do.",
+    "gold_answer": "cot(π/16) - 8",
+    "gold_answer_num": -2.93,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Use identity cot θ - tan θ = 2 cot 2θ => tan θ = cot θ - 2 cot 2θ.",
+      "Step 2: tan(π/16) = cot(π/16) - 2 cot(π/8).",
+      "Step 3: tan(π/8) = cot(π/8) - 2 cot(π/4). Substitute: 2tan(π/8) = 2cot(π/8) - 4cot(π/4).",
+      "Step 4: The sum S = cot(π/16) - 2cot(π/8) + 2cot(π/8) - 4cot(π/4) + 4tan(π/4).",
+      "Step 5: S = cot(π/16) - 4cot(π/4) + 4tan(π/4). Since cot(π/4)=1 and tan(π/4)=1.",
+      "Step 6: S = cot(π/16) - 4 + 4 = cot(π/16). Wait, re-evaluating: 4tan(π/4) was part of the problem. S = cot(π/16) - 4(1) + 4(1).",
+      "Final: cot(π/16)"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The LLM might subtract the final terms or 'remaining' parts of the identity incorrectly.",
+    "why_hard": "Requires the application of a telescoping sum identity which is not a standard formula taught for this depth.",
+    "tags": [
+      "telescoping_sum",
+      "tangent_cotangent_identity"
+    ]
+  },
+  {
+    "problem_en": "Find the value of cot(7.5°).",
+    "problem_hi": "cot(7.5°) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "cot(7.5°) ki exact numerical value kya hogi?",
+    "problem_hg_065": "cot(7.5°) calculate karna hai. Pehle karo cot(15) find phir half angle formula use karna.",
+    "gold_answer": "sqrt(6) + sqrt(3) + sqrt(2) + 2",
+    "gold_answer_num": 7.595,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Use cot(θ/2) = (1 + cos θ) / sin θ.",
+      "Step 2: For θ = 15°, cot(7.5°) = (1 + cos 15°) / sin 15°.",
+      "Step 3: cos 15° = (√6+√2)/4 and sin 15° = (√6-√2)/4.",
+      "Step 4: cot(7.5°) = [1 + (√6+√2)/4] / [(√6-√2)/4] = (4 + √6 + √2) / (√6 - √2).",
+      "Step 5: Rationalize the denominator: [(4 + √6 + √2)(√6 + √2)] / (6 - 2).",
+      "Step 6: = (4√6 + 4√2 + 6 + 2√12 + 2√12 + 2) / 4 = (4√6 + 4√2 + 8 + 4√3) / 4.",
+      "Final: sqrt(6) + sqrt(2) + 2 + sqrt(3)"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: LLM might get stuck trying to find cot(15) as a decimal rather than using it as a radical in the next step.",
+    "why_hard": "Extreme algebraic complexity with radicals; error propagation is high.",
+    "tags": [
+      "half_angle",
+      "radical_simplification"
+    ]
+  },
+  {
+    "problem_en": "Calculate cos(20°) + cos(100°) + cos(140°).",
+    "problem_hi": "cos(20°) + cos(100°) + cos(140°) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "cos(20°) + cos(100°) + cos(140°) ki sum value kya hai?",
+    "problem_hg_065": "cos(20°) + cos(100°) + cos(140°) ki value do. 6 mahine baad wala interest formula mat laga dena Trigonometry hai.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Group cos(100°) + cos(140°) = 2 cos(120°) cos(-20°).",
+      "Step 2: cos(120°) = -1/2.",
+      "Step 3: 2 * (-1/2) * cos(20°) = -cos(20°).",
+      "Step 4: Sum = cos(20°) - cos(20°) = 0.",
+      "Final: 0"
+    ],
+    "linguistic_trap_in_hg065": "6 mahine baad: Temporal trap—LLM may look for a time-based rate or half the values unnecessarily.",
+    "why_hard": "Deceptively simple; models often try to use cos A + cos B + cos C identities for triangles which don't apply here.",
+    "tags": [
+      "sum_to_product",
+      "cosine_sum"
+    ]
+  },
+  {
+    "problem_en": "Evaluate sin(π/14) * sin(3π/14) * sin(5π/14).",
+    "problem_hi": "sin(π/14) * sin(3π/14) * sin(5π/14) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "sin(π/14) * sin(3π/14) * sin(5π/14) ka value evaluate kijiye.",
+    "problem_hg_065": "sin(π/14) * sin(3π/14) * sin(5π/14) solve karna hai. 3 lakh 75 hazaar precision mat dena, exact fraction do.",
+    "gold_answer": "1/8",
+    "gold_answer_num": 0.125,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Convert sin to cos: cos(π/2 - π/14)cos(π/2 - 3π/14)cos(π/2 - 5π/14).",
+      "Step 2: = cos(6π/14)cos(4π/14)cos(2π/14) = cos(3π/7)cos(2π/7)cos(π/7).",
+      "Step 3: Use cos(A)cos(2A)cos(4A) type logic (with 3π/7 = π - 4π/7).",
+      "Step 4: Product = 1/8.",
+      "Final: 1/8"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar: Numerical distraction to lead the LLM away from algebraic fractional results.",
+    "why_hard": "Converting sine to cosine and identifying the π/7 product series is a multi-layered reasoning task.",
+    "tags": [
+      "sine_product",
+      "cosine_conversion"
+    ]
+  },
+  {
+    "problem_en": "Find the value of (tan 20° + 4 sin 20°).",
+    "problem_hi": "(tan 20° + 4 sin 20°) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "(tan 20° + 4 sin 20°) ki combined value kya hai?",
+    "problem_hg_065": "tan 20° + 4 sin 20° calculate karke do. Dono ko add karke root 3 ke terms mein result nikalo.",
+    "gold_answer": "sqrt(3)",
+    "gold_answer_num": 1.732,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: tan 20° + 4 sin 20° = sin 20°/cos 20° + 4 sin 20°.",
+      "Step 2: = sin 20°(1 + 4 cos 20°) / cos 20°.",
+      "Step 3: = sin 20°(1 + 2(2 cos 20°)) / cos 20°. Use 2 cos 20° = sin 40°/sin 20°? No.",
+      "Step 4: Use 1 + 2 cos 20° + 2 cos 20°... use 2 sin 20° cos 20° = sin 40°.",
+      "Step 5: Better way: (sin 20° + 4 sin 20° cos 20°)/cos 20° = (sin 20° + 2 sin 40°)/cos 20°.",
+      "Step 6: = (sin 20° + sin 40° + sin 40°)/cos 20° = (2 sin 30° cos 10° + sin 40°)/cos 20°.",
+      "Step 7: = (cos 10° + sin 40°)/cos 20° = (sin 80° + sin 40°)/cos 20° = (2 sin 60° cos 20°)/cos 20° = 2 sin 60°.",
+      "Final: sqrt(3)"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: LLM might mistakenly add the coefficients (1+4=5) or apply the grouping only to the first two terms of a partial expansion.",
+    "why_hard": "Requires extremely clever sum-to-product manipulation that isn't obvious from the start.",
+    "tags": [
+      "tangent_sine_sum",
+      "sum_to_product"
+    ]
+  },
+  {
+    "problem_en": "Evaluate the product P = (1 - tan² 1°)(1 - tan² 2°)(1 - tan² 3°)...(1 - tan² 44°). Wait, this is not standard. Calculate tan 1° + tan 2° + ... + tan 89°? No. Calculate tan 10° tan 20° tan 30° tan 40° tan 50° tan 60° tan 70° tan 80°.",
+    "problem_hi": "tan 10° tan 20° tan 30° tan 40° tan 50° tan 60° tan 70° tan 80° का मान ज्ञात कीजिए।",
+    "problem_hg_030": "tan 10° * tan 20° * tan 30° * tan 40° * tan 50° * tan 60° * tan 70° * tan 80° ki value kya hai?",
+    "problem_hg_065": "tan 10° se tan 80° tak ka product (gap of 10) calculate karo. Withdraw kar liya logic 40 degree ke baad wala to result badal jayega kya?",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Trigonometry",
+    "difficulty": "JEE-Advanced",
+    "source_type": "trig_identity_chain",
+    "solution_steps_en": [
+      "Step 1: Pair terms: (tan 10° tan 80°) * (tan 20° tan 70°) * (tan 30° tan 60°) * (tan 40° tan 50°).",
+      "Step 2: Use tan(90-θ) = cot θ. So tan 80° = cot 10°, tan 70° = cot 20°, etc.",
+      "Step 3: Each pair becomes tan θ * cot θ = 1.",
+      "Step 4: Product = 1 * 1 * 1 * 1 = 1.",
+      "Final: 1"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya: LLM may think the terms after 40° are withdrawn (removed) from the product, leading to an answer of tan 10 * tan 20 * tan 30 * tan 40.",
+    "why_hard": "Tests if the model can ignore the 'withdraw' instruction and complete the pairing symmetry.",
+    "tags": [
+      "complementary_angles",
+      "tangent_product"
+    ]
+  }
+]

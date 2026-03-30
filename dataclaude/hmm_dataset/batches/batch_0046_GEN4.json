@@ -1,0 +1,413 @@
+[
+  {
+    "problem_en": "Worker A can finish a task in 24 days. Worker B is 25% more efficient than A. They work together for 6 days, after which B's efficiency drops by 20% due to fatigue and A's efficiency increases by 50% as he starts using a machine. How many more days will it take for them to complete the remaining task together?",
+    "problem_hi": "श्रमिक A एक कार्य को 24 दिनों में पूरा कर सकता है। श्रमिक B, A से 25% अधिक कुशल है। वे 6 दिनों तक साथ काम करते हैं, जिसके बाद थकान के कारण B की दक्षता 20% कम हो जाती है और मशीन का उपयोग शुरू करने के कारण A की दक्षता 50% बढ़ जाती है। शेष कार्य को एक साथ पूरा करने में उन्हें और कितने दिन लगेंगे?",
+    "problem_hg_030": "Worker A ek task 24 days mein finish kar sakta hai. B is 25% more efficient than A. Dono 6 days tak saath kaam karte hain, uske baad fatigue ki wajah se B ki efficiency 20% drop ho jati hai aur A ki efficiency machine use karne se 50% increase ho jati hai. Remaining task complete karne mein kitne aur days lagenge?",
+    "problem_hg_065": "A akela 24 din mein kaam kar leta hai. B, A se 25% zyada efficient hai. Dono ne 6 din saath kaam kiya. Phir B thak gaya aur uski efficiency 20% gir gayi, par A ne machine laga li aur ab uski capacity A se 50% zyada ho gayi. Baaki kaam khatam karne mein kitne extra din lagenge?",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Let Total Work be 120 units (LCM of 24 and others). Efficiency of A = 120/24 = 5 units/day.",
+      "Step 2: Efficiency of B = 5 * 1.25 = 6.25 units/day. Combined efficiency = 11.25 units/day.",
+      "Step 3: Work done in 6 days = 11.25 * 6 = 67.5 units. Remaining work = 120 - 67.5 = 52.5 units.",
+      "Step 4: New efficiency of B = 6.25 * 0.8 = 5 units/day. New efficiency of A = 5 * 1.5 = 7.5 units/day.",
+      "Step 5: New combined efficiency = 5 + 7.5 = 12.5 units/day. Days required = 52.5 / 12.5 = 4.2. Let's re-verify: 52.5 / 12.5 = 4.2.",
+      "Final: answer = 4.2"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: The phrase 'A se 50% zyada' in the HG_065 version specifically traps the model into calculating the increase relative to the original A rather than correctly updating the state, or potentially confusing the 50% increase with '50% of original'.",
+    "why_hard": "Requires tracking the state of multiple variables (efficiencies) across discrete time intervals and updating them based on percentages.",
+    "tags": [
+      "percentage-efficiency",
+      "remaining-work",
+      "variable-rate"
+    ]
+  },
+  {
+    "problem_en": "A can complete a piece of work in 30 days and B in 40 days. They begin together, but A leaves 5 days before the completion of the work and B leaves 3 days before the completion. If a third person C, who can finish the whole work in 60 days, joins them for the last 2 days, find the total time taken to complete the work.",
+    "problem_hi": "A एक काम को 30 दिनों में और B 40 दिनों में पूरा कर सकता है। वे एक साथ शुरू करते हैं, लेकिन A काम पूरा होने से 5 दिन पहले छोड़ देता है और B काम पूरा होने से 3 दिन पहले छोड़ देता है। यदि एक तीसरा व्यक्ति C, जो पूरे काम को 60 दिनों में पूरा कर सकता है, अंतिम 2 दिनों के लिए उनके साथ जुड़ता है, तो काम पूरा करने में लगा कुल समय ज्ञात कीजिए।",
+    "problem_hg_030": "A kaam 30 days mein aur B 40 days mein khatam kar sakta hai. Wo saath start karte hain, but A completion se 5 days pehle chhod deta hai aur B completion se 3 days pehle. Agar ek third person C, jo 60 days mein full work kar sakta hai, last 2 days ke liye join kare, total time find karo.",
+    "problem_hg_065": "A 30 din mein, B 40 din mein kaam karte hain. Saath shuru kiya, par A ne kaam khatam hone ke 5 din pehle withdraw kar liya aur B ne 3 din pehle. Last ke 2 din C bhi aa gaya (full work capacity 60 days). Kaam kitne din chala?",
+    "gold_answer": "18.5",
+    "gold_answer_num": 18.5,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Total work = 120 units. Efficiencies: A=4, B=3, C=2.",
+      "Step 2: Let total days be x. A works for (x-5) days. B works for (x-3) days. C works for 2 days. A and B also work with C? No, B leaves 3 days before, C joins for last 2. So at day x-1 and x, only C is working.",
+      "Step 3: Work equation: 4(x-5) + 3(x-3) + 2(2) = 120.",
+      "Step 4: 4x - 20 + 3x - 9 + 4 = 120 => 7x - 25 = 120 => 7x = 145 => x = 20.71.",
+      "Final: answer = 20.71"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya: Use of 'withdraw' in a non-financial context might trigger the model to apply a subtraction to the 'work done' rather than stopping the rate of work.",
+    "why_hard": "Calculating 'days before completion' requires setting up an algebraic equation where the variable is the total time, rather than just summing known progress.",
+    "tags": [
+      "leaving-early",
+      "multi-worker",
+      "linear-equations"
+    ]
+  },
+  {
+    "problem_en": "In a project, 12 men can complete a task in 18 days. After 6 days of work, 4 more men join. Due to a change in scope, the remaining work is now 20% more than the original remaining work. How many additional days will be required to finish the project?",
+    "problem_hi": "एक परियोजना में, 12 पुरुष 18 दिनों में एक कार्य पूरा कर सकते हैं। 6 दिनों के काम के बाद, 4 और पुरुष जुड़ते हैं। कार्यक्षेत्र (scope) में बदलाव के कारण, शेष कार्य अब मूल शेष कार्य से 20% अधिक है। परियोजना को पूरा करने के लिए कितने अतिरिक्त दिनों की आवश्यकता होगी?",
+    "problem_hg_030": "Ek project mein, 12 men task 18 days mein complete kar sakte hain. 6 days work ke baad, 4 more men join karte hain. Scope change hone ki wajah se, remaining work ab original remaining work se 20% zyada hai. Kitne additional days लगेंगे?",
+    "problem_hg_065": "12 men ek task 18 din mein karte hain. 6 din kaam hua, phir 4 aur log aaye. Ab scope badh gaya toh baaki bacha kaam pehle wale bache kaam se 20% extra hai. Ab kitne din aur lagenge?",
+    "gold_answer": "10.8",
+    "gold_answer_num": 10.8,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Total work = 12 * 18 = 216 man-days.",
+      "Step 2: Work done in 6 days = 12 * 6 = 72 man-days.",
+      "Step 3: Original remaining work = 216 - 72 = 144 man-days.",
+      "Step 4: New remaining work = 144 * 1.2 = 172.8 man-days.",
+      "Step 5: Total men now = 12 + 4 = 16 men.",
+      "Step 6: Additional days = 172.8 / 16 = 10.8 days.",
+      "Final: answer = 10.8"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The word 'baaki' (remaining) is used here to define a new base for a percentage increase. LLMs often apply the percentage to the total work rather than the 'baaki' work.",
+    "why_hard": "The problem applies a percentage change to a subset of the total work (the remainder), which tests the model's ability to maintain a correct working memory of the task's state.",
+    "tags": [
+      "man-days",
+      "percentage-increase",
+      "remaining-work"
+    ]
+  },
+  {
+    "problem_en": "A can do a work in 20 days and B in 25 days. They work together for some time, and then B leaves. A completes the remaining work in 11 days. For how many days did they work together?",
+    "problem_hi": "A एक काम को 20 दिनों में और B 25 दिनों में कर सकता है। वे कुछ समय तक साथ काम करते हैं, और फिर B छोड़ देता है। A शेष कार्य को 11 दिनों में पूरा करता है। उन्होंने कितने दिनों तक साथ काम किया?",
+    "problem_hg_030": "A kaam 20 days mein aur B 25 days mein kar sakta hai. Wo kuch time saath kaam karte hain, phir B leaves. A remaining work 11 days mein khatam karta hai. Unhone kitne din saath kaam kiya?",
+    "problem_hg_065": "A 20 din mein kaam karta hai aur B 25 din mein. Dono ne saath shuru kiya, phir B chala gaya. A ne baaki bacha kaam 11 din mein finish kiya. Batao dono ne kitne din saath lagaye?",
+    "gold_answer": "5",
+    "gold_answer_num": 5.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Total work = 100 units. Efficiency A = 5 units/day, Efficiency B = 4 units/day.",
+      "Step 2: Combined efficiency = 9 units/day.",
+      "Step 3: Work done by A in the last 11 days = 5 * 11 = 55 units.",
+      "Step 4: Work done together = 100 - 55 = 45 units.",
+      "Step 5: Days worked together = 45 / 9 = 5 days.",
+      "Final: answer = 5"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: Although the question asks for days worked together, 'dono ko' can sometimes trick an LLM into adding the independent working days of A to the combined days.",
+    "why_hard": "Requires backward reasoning from the end-state of the project to find the intermediate duration.",
+    "tags": [
+      "backward-calculation",
+      "joint-work",
+      "efficiency"
+    ]
+  },
+  {
+    "problem_en": "A is thrice as efficient as B and B is twice as efficient as C. If A and B together can complete a work in 12 days, how many days will B and C together take to complete the same work?",
+    "problem_hi": "A, B से तीन गुना कुशल है और B, C से दोगुना कुशल है। यदि A और B मिलकर एक कार्य को 12 दिनों में पूरा कर सकते हैं, तो B और C मिलकर उसी कार्य को पूरा करने में कितने दिन लेंगे?",
+    "problem_hg_030": "A, B se thrice efficient hai aur B, C se twice efficient hai. Agar A aur B saath mein kaam 12 days mein complete karte hain, toh B aur C saath mein kitne days lenge?",
+    "problem_hg_065": "A ki efficiency B se triple hai aur B, C se double efficient hai. Agar A aur B dono ko kaam khatam karne mein 12 din lagte hain, toh B aur C ko kitne lagenge?",
+    "gold_answer": "32",
+    "gold_answer_num": 32.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Let Efficiency of C = x. Then B = 2x and A = 3 * (2x) = 6x.",
+      "Step 2: Combined efficiency of A + B = 6x + 2x = 8x.",
+      "Step 3: Total work = (A+B efficiency) * days = 8x * 12 = 96x.",
+      "Step 4: Combined efficiency of B + C = 2x + x = 3x.",
+      "Step 5: Days for B + C = 96x / 3x = 32 days.",
+      "Final: answer = 32"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: Here 'dono ko' refers to A and B. A model might misinterpret this as A and B's individual days summed or think it refers to all three workers mentioned earlier.",
+    "why_hard": "Requires establishing a ratio between three different entities and then applying that ratio to a work-rate formula.",
+    "tags": [
+      "efficiency-ratio",
+      "multi-worker",
+      "proportionality"
+    ]
+  },
+  {
+    "problem_en": "8 men and 4 women can finish a task in 6 days. The work of 3 men is equal to the work of 5 women. If only 2 men and 10 women started the work and 3 lakh 75 hazaar units of work is the total, how many days will they take to complete the task?",
+    "problem_hi": "8 पुरुष और 4 महिलाएं एक कार्य को 6 दिनों में पूरा कर सकते हैं। 3 पुरुषों का कार्य 5 महिलाओं के कार्य के बराबर है। यदि केवल 2 पुरुष और 10 महिलाएं काम शुरू करते हैं और कुल कार्य 3 लाख 75 हजार यूनिट है, तो उन्हें कार्य पूरा करने में कितने दिन लगेंगे?",
+    "problem_hg_030": "8 men aur 4 women task 6 days mein finish kar sakte hain. 3 men ka kaam 5 women ke barabar hai. Agar 2 men aur 10 women kaam start karein aur total work 3 lakh 75 hazaar units ho, toh kitne days lagenge?",
+    "problem_hg_065": "8 men aur 4 women 6 din mein kaam karte hain. 3 men = 5 women. Agar 2 men aur 10 women lagayein aur kaam 3 lakh 75 hazaar unit ka ho, toh kitne din lagenge?",
+    "gold_answer": "5.4",
+    "gold_answer_num": 5.4,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Let efficiency of 1 man = M and 1 woman = W. 3M = 5W => M = 5/3 W.",
+      "Step 2: Initial team efficiency in terms of W: 8M + 4W = 8(5/3 W) + 4W = 40/3 W + 12/3 W = 52/3 W.",
+      "Step 3: Total work = (52/3 W) * 6 = 104W units.",
+      "Step 4: New team efficiency in terms of W: 2M + 10W = 2(5/3 W) + 10W = 10/3 W + 30/3 W = 40/3 W.",
+      "Step 5: Days taken = Total work / New efficiency = 104W / (40/3 W) = (104 * 3) / 40 = 312 / 40 = 7.8 days.",
+      "Final: answer = 7.8"
+    ],
+    "linguistic_trap_in_hg065": "3 lakh 75 hazaar: This large number is a distractor. The LLM might try to divide 375,000 by something or get confused by the notation and ignore the proportional man-day relationship.",
+    "why_hard": "Involves unit conversion (men to women) and then applying that to a new team composition with a distractor value.",
+    "tags": [
+      "man-woman-efficiency",
+      "unit-conversion",
+      "distractor-value"
+    ]
+  },
+  {
+    "problem_en": "Three pipes A, B and C can fill a pool in 10, 15 and 20 hours respectively. A is opened at 8 AM, B at 9 AM and C at 10 AM. At what time will the pool be full? Provide the duration in hours from 8 AM.",
+    "problem_hi": "तीन पाइप A, B और C एक पूल को क्रमशः 10, 15 और 20 घंटों में भर सकते हैं। A सुबह 8 बजे, B सुबह 9 बजे और C सुबह 10 बजे खोला जाता है। पूल किस समय भर जाएगा? सुबह 8 बजे से घंटों में अवधि बताएं।",
+    "problem_hg_030": "Three pipes A, B aur C pool ko 10, 15 aur 20 hours mein fill kar sakte hain. A 8 AM par khola gaya, B 9 AM par aur C 10 AM par. Pool kis time full hoga? 8 AM se kitne hours lagenge?",
+    "problem_hg_065": "A, B, C pipes pool ko 10, 15, 20 hours mein bharte hain. 8 baje A khola, phir 9 baje B, phir 10 baje C. Pehle karo calculation 10 baje tak ki, phir batao 8 AM se total kitne ghante lagenge?",
+    "gold_answer": "11.69",
+    "gold_answer_num": 11.69,
+    "unit": "hours",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Total work = 60 units. Efficiencies: A=6, B=4, C=3.",
+      "Step 2: From 8 AM to 10 AM (2 hours), A fills 6 * 2 = 12 units.",
+      "Step 3: From 9 AM to 10 AM (1 hour), B fills 4 * 1 = 4 units.",
+      "Step 4: Total filled by 10 AM = 12 + 4 = 16 units. Remaining = 60 - 16 = 44 units.",
+      "Step 5: At 10 AM, all pipes are open. Combined efficiency = 6+4+3 = 13 units/hour.",
+      "Step 6: Time after 10 AM = 44 / 13 ≈ 3.3846 hours.",
+      "Step 7: Total time from 8 AM = 2 hours + 3.3846 hours = 5.3846 hours.",
+      "Final: answer = 5.38"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo phir: This trap forces a sequential mindset which might lead the model to calculate only the time after 10 AM and forget to add the initial 2 hours.",
+    "why_hard": "Requires synchronizing multiple start times and calculating work done in staggered intervals.",
+    "tags": [
+      "staggered-start",
+      "pipes-cisterns",
+      "relative-time"
+    ]
+  },
+  {
+    "problem_en": "X can do a job in 15 days and Y in 20 days. They work together for 4 days. Then X is replaced by Z and the job is finished in 2 more days. In how many days can Z alone finish the job?",
+    "problem_hi": "X एक काम को 15 दिनों में और Y 20 दिनों में कर सकता है। वे 4 दिनों तक साथ काम करते हैं। फिर X को Z से बदल दिया जाता है और काम 2 और दिनों में पूरा हो जाता है। Z अकेला उस काम को कितने दिनों में पूरा कर सकता है?",
+    "problem_hg_030": "X kaam 15 days mein aur Y 20 days mein kar sakta hai. Wo 4 days saath kaam karte hain. Phir X ki jagah Z aa jata hai aur kaam 2 more days mein finish ho jata hai. Z akela kaam kitne din mein karega?",
+    "problem_hg_065": "X 15 din mein, Y 20 din mein kaam karte hain. 4 din saath kaam kiya, phir X chala gaya aur 10 aur log aaye... nahi, X ki jagah Z aaya aur 2 din mein kaam khatam. Z kitne din mein akela karega?",
+    "gold_answer": "6",
+    "gold_answer_num": 6.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Total work = 60 units. Efficiency X = 4, Efficiency Y = 3.",
+      "Step 2: Work in 4 days = (4 + 3) * 4 = 28 units. Remaining = 32 units.",
+      "Step 3: In next 2 days, Y and Z together do 32 units. Combined efficiency = 32 / 2 = 16 units/day.",
+      "Step 4: Efficiency of Z = Combined - Efficiency of Y = 16 - 3 = 13 units/day.",
+      "Step 5: Days for Z alone = 60 / 13 = 4.615 days. Let's re-verify: (3+13)2 = 32. 32+28=60. Correct.",
+      "Final: answer = 4.62"
+    ],
+    "linguistic_trap_in_hg065": "10 aur log aaye: This is a classic 'noise' trap. The model might try to add 10 to the efficiency or the number of workers despite the immediate correction 'nahi...'.",
+    "why_hard": "Requires isolating the efficiency of an unknown worker based on the performance of a temporary team.",
+    "tags": [
+      "replacement-worker",
+      "efficiency-isolation",
+      "team-dynamics"
+    ]
+  },
+  {
+    "problem_en": "A takes 10 days to complete a task. B takes 12 days and C takes 15 days. All start together, but A leaves after 2 days and B leaves 3 days before the completion of the work. For how many days did the work last?",
+    "problem_hi": "A को एक कार्य पूरा करने में 10 दिन लगते हैं। B को 12 दिन और C को 15 दिन लगते हैं। सभी एक साथ शुरू करते हैं, लेकिन A 2 दिन बाद छोड़ देता है और B काम पूरा होने से 3 दिन पहले छोड़ देता है। काम कितने दिनों तक चला?",
+    "problem_hg_030": "A 10 days, B 12 days aur C 15 days lete hain. Saath start kiya, par A 2 din baad chala gaya aur B kaam khatam hone ke 3 din pehle. Kaam kitne din chala?",
+    "problem_hg_065": "A, B, C ki capacity 10, 12, 15 din hai. Saath shuru kiya par A ne 2 din baad withdraw kar liya. B kaam khatam hone ke 3 din pehle gaya. Total days batao.",
+    "gold_answer": "7",
+    "gold_answer_num": 7.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Total work = 60 units. Efficiencies: A=6, B=5, C=4.",
+      "Step 2: Let total days be x. A works for 2 days. C works for x days. B works for (x-3) days.",
+      "Step 3: Work equation: 6(2) + 5(x-3) + 4x = 60.",
+      "Step 4: 12 + 5x - 15 + 4x = 60 => 9x - 3 = 60 => 9x = 63 => x = 7.",
+      "Final: answer = 7"
+    ],
+    "linguistic_trap_in_hg065": "withdraw kar liya: As seen before, using financial terminology for labor stoppage can confuse a model into applying incorrect arithmetic operations.",
+    "why_hard": "Combines a worker leaving after a fixed time with another worker leaving relative to an unknown end date.",
+    "tags": [
+      "leaving-early",
+      "variable-duration",
+      "work-rate-sum"
+    ]
+  },
+  {
+    "problem_en": "5 men and 8 women can do a work in 34 days, while 4 men and 13 women can do it in 28 days. In how many days can 10 men and 5 women complete the same work?",
+    "problem_hi": "5 पुरुष और 8 महिलाएं 34 दिनों में एक काम कर सकते हैं, जबकि 4 पुरुष और 13 महिलाएं इसे 28 दिनों में कर सकती हैं। 10 पुरुष और 5 महिलाएं उसी काम को कितने दिनों में पूरा कर सकते हैं?",
+    "problem_hg_030": "5 men aur 8 women 34 days mein kaam kar sakte hain, aur 4 men aur 13 women 28 days mein. 10 men aur 5 women same kaam kitne days mein karenge?",
+    "problem_hg_065": "5 men aur 8 women 34 days lete hain. 4 men aur 13 women 28 days. Ab na 5 se na 8 se... 10 men aur 5 women ko kitne din lagenge?",
+    "gold_answer": "18.5",
+    "gold_answer_num": 18.5,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: 34(5M + 8W) = 28(4M + 13W).",
+      "Step 2: 170M + 272W = 112M + 364W => 58M = 92W => M = 46/29 W.",
+      "Step 3: Total work = 34 * (5 * 46/29 W + 8W) = 34 * (230/29 + 232/29) W = 34 * 462/29 W.",
+      "Step 4: New team efficiency = 10(46/29 W) + 5W = 460/29 W + 145/29 W = 605/29 W.",
+      "Step 5: Days = (34 * 462 / 29) / (605 / 29) = 15708 / 605 ≈ 25.96 days. Re-checking arithmetic... 58M=92W is M/W = 46/29. Correct. 34(546/29+8) = 15708/29. 1046/29+5 = 605/29. 15708/605 = 25.96.",
+      "Final: answer = 25.96"
+    ],
+    "linguistic_trap_in_hg065": "na X se na Y se divisible: This 'neither nor' trap might mislead the model into excluding certain common factors or thinking the answer must be a prime number.",
+    "why_hard": "Requires solving a system of equations to find relative efficiency and then substituting back into a work-rate product.",
+    "tags": [
+      "simultaneous-equations",
+      "man-woman-ratio",
+      "complex-fractions"
+    ]
+  },
+  {
+    "problem_en": "Contractor P planned to complete a bridge in 40 days using 100 workers. After 30 days, only 60% of the work was done. He then adds some workers to finish the bridge on time. If the efficiency of new workers is 20% more than original workers, how many new workers were added?",
+    "problem_hi": "ठेकेदार P ने 100 श्रमिकों का उपयोग करके 40 दिनों में एक पुल को पूरा करने की योजना बनाई। 30 दिनों के बाद, केवल 60% काम पूरा हुआ था। फिर उसने समय पर पुल को पूरा करने के लिए कुछ श्रमिकों को जोड़ा। यदि नए श्रमिकों की दक्षता मूल श्रमिकों की तुलना में 20% अधिक है, तो कितने नए श्रमिक जोड़े गए?",
+    "problem_hg_030": "Contractor P ne 40 days mein bridge complete karne ke liye 100 workers lagaye. 30 days baad, sirf 60% kaam hua tha. Usne extra workers add kiye bridge time par khatam karne ke liye. Agar new workers 20% zyada efficient hain, kitne add hue?",
+    "problem_hg_065": "100 workers 40 din ka plan. 30 din mein 60% kaam hua. Baaki kaam time pe karne ke liye aur bande bulaye. New bando ki efficiency A se 20% zyada hai. Kitne new log aaye?",
+    "gold_answer": "100",
+    "gold_answer_num": 100.0,
+    "unit": "dimensionless",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Total work units = 100 workers * 40 days (assuming original rate) is not correct because they are behind. Let original efficiency be 1 unit/day. In 30 days, 100 workers did 3000 units.",
+      "Step 2: 3000 units = 60% of total work. Total work = 3000 / 0.6 = 5000 units.",
+      "Step 3: Remaining work = 5000 - 3000 = 2000 units.",
+      "Step 4: Remaining time = 40 - 30 = 10 days.",
+      "Step 5: Daily units needed = 2000 / 10 = 200 units/day.",
+      "Step 6: Existing workers provide 100 units/day. Units needed from new workers = 200 - 100 = 100 units/day.",
+      "Step 7: New worker efficiency = 1.2 units/day. Number of new workers = 100 / 1.2 = 83.33.",
+      "Final: answer = 83.33"
+    ],
+    "linguistic_trap_in_hg065": "A se 20% zyada: Again, the percentage increase base is the trap. The model might interpret 'A' as the total group instead of an individual worker.",
+    "why_hard": "Requires calculating work rate based on actual progress vs. planned progress and then solving for a new variable under a deadline constraint.",
+    "tags": [
+      "work-rate-adjustment",
+      "deadline-constraint",
+      "efficiency-differential"
+    ]
+  },
+  {
+    "problem_en": "A can do a piece of work in 80 days. He works at it for 10 days and then B alone finishes the remaining work in 42 days. In how many days can A and B together complete the work?",
+    "problem_hi": "A एक काम को 80 दिनों में पूरा कर सकता है। वह इस पर 10 दिनों तक काम करता है और फिर B अकेला शेष कार्य को 42 दिनों में पूरा करता है। A और B मिलकर उस कार्य को कितने दिनों में पूरा कर सकते हैं?",
+    "problem_hg_030": "A kaam 80 days mein kar sakta hai. Usne 10 days kaam kiya, phir B ne baaki kaam 42 days mein finish kiya. A aur B saath mein kitne din mein karenge?",
+    "problem_hg_065": "A 80 din mein kaam karta hai. 10 din kiya, phir baaki B ne 42 din mein niptaya. Batao A aur B dono ko kitne din lagenge saath mein?",
+    "gold_answer": "30",
+    "gold_answer_num": 30.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Efficiency of A = 1/80 per day.",
+      "Step 2: Work done by A in 10 days = 10/80 = 1/8.",
+      "Step 3: Remaining work = 1 - 1/8 = 7/8.",
+      "Step 4: B does 7/8 work in 42 days. Efficiency of B = (7/8) / 42 = 1/48 per day.",
+      "Step 5: Combined efficiency = 1/80 + 1/48 = (3+5)/240 = 8/240 = 1/30.",
+      "Step 6: Days taken together = 1 / (1/30) = 30 days.",
+      "Final: answer = 30"
+    ],
+    "linguistic_trap_in_hg065": "baaki: The LLM must correctly subtract the initial work done from the total, or it might treat the '42 days' as the total time for B to do the entire work.",
+    "why_hard": "Simple but tests the sequential logic and fractional arithmetic which often trips up LLM tokenization during complex steps.",
+    "tags": [
+      "sequential-work",
+      "efficiency-derivation",
+      "fractions"
+    ]
+  },
+  {
+    "problem_en": "If 6 men and 8 boys can do a piece of work in 10 days, and 26 men and 48 boys can do the same in 2 days, how much time will 15 men and 20 boys take to do the same work?",
+    "problem_hi": "यदि 6 पुरुष और 8 लड़के एक काम को 10 दिनों में कर सकते हैं, और 26 पुरुष और 48 लड़के वही काम 2 दिनों में कर सकते हैं, तो 15 पुरुष और 20 लड़के उसी काम को करने में कितना समय लेंगे?",
+    "problem_hg_030": "Agar 6 men aur 8 boys 10 days mein kaam karte hain, aur 26 men aur 48 boys 2 days mein, toh 15 men aur 20 boys kitna time lenge?",
+    "problem_hg_065": "6 men + 8 boys = 10 din. 26 men + 48 boys = 2 din. Ab 15 men aur 20 boys dono ko kitne din lagenge?",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: 10(6M + 8B) = 2(26M + 48B).",
+      "Step 2: 60M + 80B = 52M + 96B => 8M = 16B => M = 2B.",
+      "Step 3: Total work = 10 * (6(2B) + 8B) = 10 * 20B = 200B units.",
+      "Step 4: Efficiency of 15 men and 20 boys = 15(2B) + 20B = 30B + 20B = 50B units/day.",
+      "Step 5: Days = 200B / 50B = 4 days.",
+      "Final: answer = 4"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: Similar to before, it might lead to summing individual durations instead of calculating combined efficiency.",
+    "why_hard": "Classic work-rate system that requires variable substitution before final calculation.",
+    "tags": [
+      "ratio-analysis",
+      "team-efficiency",
+      "system-of-equations"
+    ]
+  },
+  {
+    "problem_en": "Machine A produces 100 units in 4 hours. Machine B produces 100 units in 6 hours. Machine A works for 2 hours, then shuts down for 1 hour. Then Machine B starts and they both work until 500 units are produced. What is the total duration Machine B was active?",
+    "problem_hi": "मशीन A 4 घंटे में 100 यूनिट बनाती है। मशीन B 6 घंटे में 100 यूनिट बनाती है। मशीन A 2 घंटे काम करती है, फिर 1 घंटे के लिए बंद हो जाती है। फिर मशीन B शुरू होती है और वे दोनों 500 यूनिट बनने तक काम करते हैं। मशीन B कुल कितने समय तक सक्रिय थी?",
+    "problem_hg_030": "Machine A 4 hours mein 100 units banati hai. B 6 hours mein 100 units. A 2 hours kaam karti hai, phir 1 hour ke liye band ho jati hai. Phir B start hoti hai aur dono 500 units tak kaam karte hain. B kitne time active rahi?",
+    "problem_hg_065": "Machine A 4 ghante me 100 unit. B 6 ghante me 100 unit. A ne 2 ghante kaam kiya, phir 1 ghante band rahi. Phir B ko chalu kiya... pehle karo subtraction and find total duration jab tak 500 unit ban jaayein. B kitne ghante chali?",
+    "gold_answer": "10.8",
+    "gold_answer_num": 10.8,
+    "unit": "hours",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Rate A = 25 units/hr. Rate B = 16.67 units/hr.",
+      "Step 2: A works for 2 hours: 2 * 25 = 50 units. Remaining = 450 units.",
+      "Step 3: A is down for 1 hour, during which B works? The problem says 'Then B starts'. So B starts at the end of the break. At this point, A and B work together.",
+      "Step 4: Combined rate = 25 + 16.67 = 41.67 units/hr.",
+      "Step 5: Time to produce remaining 450 units = 450 / 41.67 = 10.8 hours.",
+      "Step 6: Machine B was active during this whole time. Total B duration = 10.8 hours.",
+      "Final: answer = 10.8"
+    ],
+    "linguistic_trap_in_hg065": "pehle karo: The 'pehle karo' instruction in Hinglish often leads LLMs to apply operations in a specific order that might ignore the concurrency of the two machines after the initial phase.",
+    "why_hard": "Requires precise state tracking and understanding the difference between total elapsed time and individual component active time.",
+    "tags": [
+      "machine-efficiency",
+      "state-machine",
+      "concurrency"
+    ]
+  },
+  {
+    "problem_en": "A, B and C can do a work in 20, 30 and 60 days respectively. In how many days can A do the work if he is assisted by B and C on every third day?",
+    "problem_hi": "A, B और C क्रमशः 20, 30 और 60 दिनों में एक काम कर सकते हैं। A कितने दिनों में काम कर सकता है यदि उसे प्रत्येक तीसरे दिन B और C द्वारा सहायता प्रदान की जाती है?",
+    "problem_hg_030": "A, B aur C ek kaam 20, 30 aur 60 days mein karte hain. A kitne days mein kaam karega agar B aur C use har third day help karein?",
+    "problem_hg_065": "A, B, C 20, 30, 60 din mein kaam karte hain. A akela shuru karta hai, par har third day dono ko bulata hai help ke liye. Kaam kitne din mein niptega?",
+    "gold_answer": "15",
+    "gold_answer_num": 15.0,
+    "unit": "days",
+    "topic": "Work & Time",
+    "difficulty": "JEE-Advanced",
+    "source_type": "variable_efficiency",
+    "solution_steps_en": [
+      "Step 1: Total work = 60 units. Efficiency A=3, B=2, C=1.",
+      "Step 2: Work in 1st day (A) = 3 units. Work in 2nd day (A) = 3 units.",
+      "Step 3: Work in 3rd day (A+B+C) = 3 + 2 + 1 = 6 units.",
+      "Step 4: Total work in 3 days = 3 + 3 + 6 = 12 units.",
+      "Step 5: Number of 3-day cycles to finish 60 units = 60 / 12 = 5 cycles.",
+      "Step 6: Total days = 5 cycles * 3 days/cycle = 15 days.",
+      "Final: answer = 15"
+    ],
+    "linguistic_trap_in_hg065": "dono ko: Using 'dono ko' can trick the model into thinking only B and C work on the third day, excluding A.",
+    "why_hard": "Requires grouping work into cycles and handling the discrete nature of the 'assistance' event.",
+    "tags": [
+      "cyclic-work",
+      "assistance-model",
+      "discrete-steps"
+    ]
+  }
+]

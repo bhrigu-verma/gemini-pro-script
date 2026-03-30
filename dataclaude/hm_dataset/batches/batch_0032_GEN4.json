@@ -1,0 +1,365 @@
+[
+  {
+    "problem_en": "If f(x) = sqrt(sin(x^2 + 1)), find the value of the derivative f'(x) at x = sqrt(pi/2 - 1).",
+    "problem_hi": "यदि f(x) = sqrt(sin(x^2 + 1)) है, तो x = sqrt(pi/2 - 1) पर अवकलज f'(x) का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Agar f(x) = sqrt(sin(x^2 + 1)) hai, toh derivative f'(x) ki value x = sqrt(pi/2 - 1) par find karein.",
+    "problem_hg_065": "Maan lo f(x) function sqrt(sin(x^2 + 1)) hai. Humein iska derivative nikalna hai. 'Pehle' outer function solve karo 'phir' andar ka x^2 + 1 part. Humein f'(x) ki value x = sqrt(pi/2 - 1) par chahiye.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: Apply chain rule: f'(x) = [1 / (2 * sqrt(sin(x^2 + 1)))] * cos(x^2 + 1) * 2x.",
+      "Step 2: Simplify the expression: f'(x) = [x * cos(x^2 + 1)] / sqrt(sin(x^2 + 1)).",
+      "Step 3: Substitute x = sqrt(pi/2 - 1). Then x^2 + 1 = pi/2.",
+      "Step 4: Evaluate at pi/2: cos(pi/2) = 0. Since the denominator sqrt(sin(pi/2)) = 1 is non-zero, f'(x) = 0."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' ordering trap. By explicitly instructing the LLM to solve the outer function 'first' and then the 'inner x^2+1 part', it might skip the middle layer (the trigonometric sin/cos transformation) or misorder the product in the chain rule application.",
+    "why_hard": "Requires three layers of chain rule; the specific evaluation point makes the derivative zero, which often exposes calculation slips.",
+    "tags": [
+      "chain_rule",
+      "trigonometry",
+      "evaluation"
+    ]
+  },
+  {
+    "problem_en": "Let y = ln(tan(e^x)). Calculate the value of dy/dx when x = 0. Express your answer in terms of e.",
+    "problem_hi": "मान लीजिए y = ln(tan(e^x))। जब x = 0 हो, तो dy/dx का मान ज्ञात कीजिए। अपना उत्तर e के पदों में व्यक्त करें।",
+    "problem_hg_030": "Let y = ln(tan(e^x)). dy/dx ki value calculate karein jab x = 0 ho.",
+    "problem_hg_065": "Function y = ln(tan(e^x)) diya gaya hai. Iska derivative nikalte waqt dhyan rakhein ki chain rule 'sirf' valid points par apply ho. Humein dy/dx ki exact value x = 0 par bataiye.",
+    "gold_answer": "2e / sin(2)",
+    "gold_answer_num": 2.98,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: Differentiate ln(u): (1/tan(e^x)) * d/dx(tan(e^x)).",
+      "Step 2: Differentiate tan(v): (1/tan(e^x)) * sec^2(e^x) * d/dx(e^x).",
+      "Step 3: Complete derivative: dy/dx = [sec^2(e^x) * e^x] / tan(e^x) = e^x / [sin(e^x)cos(e^x)] = 2e^x / sin(2e^x).",
+      "Step 4: Substitute x = 0: 2e^0 / sin(2e^0) = 2/sin(2)."
+    ],
+    "linguistic_trap_in_hg065": "The 'Sirf' trap. The instruction 'chain rule sirf valid points par apply ho' (apply chain rule only on valid points) can trigger unnecessary domain checking or 'over-caution' logic in LLMs, leading them to hallucinate that x=0 might be undefined for this composite function.",
+    "why_hard": "Composite function with three levels (log, trig, exp). Simplification to the double angle formula is required for a clean answer.",
+    "tags": [
+      "chain_rule",
+      "logarithm",
+      "exponential"
+    ]
+  },
+  {
+    "problem_en": "Find the derivative of f(x) = (3x^2 + 5)^4 at x = 1.",
+    "problem_hi": "x = 1 पर f(x) = (3x^2 + 5)^4 के अवकलज का मान ज्ञात कीजिए।",
+    "problem_hg_030": "f(x) = (3x^2 + 5)^4 ka derivative x = 1 par find karein.",
+    "problem_hg_065": "Humein f(x) = (3x^2 + 5)^4 ka rate of change nikalna hai. f'(x) ki value kya hogi jab x ki value 1 ho? Calculation mein coefficient ko '3 lakh' jitna bada mat samajhna, ye simple 3 hi hai.",
+    "gold_answer": "12288",
+    "gold_answer_num": 12288.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: Apply chain rule: f'(x) = 4(3x^2 + 5)^3 * d/dx(3x^2 + 5).",
+      "Step 2: Differentiate the inner part: d/dx(3x^2 + 5) = 6x.",
+      "Step 3: Combine: f'(x) = 4(3x^2 + 5)^3 * 6x = 24x(3x^2 + 5)^3.",
+      "Step 4: Substitute x = 1: 24(1)(3(1)^2 + 5)^3 = 24 * (8)^3 = 24 * 512 = 12288."
+    ],
+    "linguistic_trap_in_hg065": "Indian number notation trap. By mentioning '3 lakh' (3,00,000) as a distractor for the coefficient '3', the model might misinterpret the scale of the function or get confused by the unrelated large number reference.",
+    "why_hard": "The mental distraction of the '3 lakh' mention often causes LLMs to ignore the actual constant or misplace it in the power rule.",
+    "tags": [
+      "power_rule",
+      "distractor"
+    ]
+  },
+  {
+    "problem_en": "If y = cos^3(4x), find dy/dx at x = pi/12.",
+    "problem_hi": "यदि y = cos^3(4x) है, तो x = pi/12 पर dy/dx ज्ञात कीजिए।",
+    "problem_hg_030": "If y = cos^3(4x), find dy/dx at x = pi/12.",
+    "problem_hg_065": "y ki value cos^3(4x) di gayi hai. dy/dx calculate kijiye jab x exactly pi/12 ho. 'Baaki' terms ko ignore karke differentiate karein.",
+    "gold_answer": "-1.5 * sqrt(3)",
+    "gold_answer_num": -2.598,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: Use chain rule on power: 3 * cos^2(4x) * d/dx(cos(4x)).",
+      "Step 2: Differentiate cos(4x): -sin(4x) * 4.",
+      "Step 3: Combine: dy/dx = -12 * cos^2(4x) * sin(4x).",
+      "Step 4: Substitute x = pi/12: 4x = pi/3. So, -12 * (cos(pi/3))^2 * sin(pi/3) = -12 * (1/2)^2 * (sqrt(3)/2) = -12 * (1/4) * (sqrt(3)/2) = -3 * sqrt(3) / 2."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' trap. 'Baaki terms ko ignore karke' (ignoring the rest of the terms) is misleading here because in a chain rule product, every term is essential. The LLM might ignore the 4 (from 4x) or the 3 (from the power).",
+    "why_hard": "Requires precise execution of chain rule with two nested components and trigonometric evaluation.",
+    "tags": [
+      "chain_rule",
+      "trigonometry"
+    ]
+  },
+  {
+    "problem_en": "Calculate the derivative of f(x) = sin(ln(x^2)) at x = e.",
+    "problem_hi": "x = e पर f(x) = sin(ln(x^2)) के अवकलज की गणना कीजिए।",
+    "problem_hg_030": "f(x) = sin(ln(x^2)) ka derivative calculate karein jab x = e ho.",
+    "problem_hg_065": "Function f(x) = sin(ln(x^2)) ka derivative find karna hai. x ki value e rakhne par answer kya aayega? Ismein x^2 'aur' ln ka combination dhyan se dekhein.",
+    "gold_answer": "2cos(2)/e",
+    "gold_answer_num": -0.306,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: Differentiate outer function: cos(ln(x^2)).",
+      "Step 2: Differentiate middle function: (1/x^2).",
+      "Step 3: Differentiate inner function: 2x.",
+      "Step 4: Combine and substitute x = e: cos(ln(e^2)) * (1/e^2) * 2e = cos(2) * (2/e)."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' ambiguity. 'x^2 aur ln ka combination' (combination of x^2 and ln) might be interpreted as an addition or a separate product rather than a composition.",
+    "why_hard": "Triple chain rule. LLMs often fail at the 2x part or simplify ln(x^2) incorrectly before differentiating.",
+    "tags": [
+      "chain_rule",
+      "logarithm"
+    ]
+  },
+  {
+    "problem_en": "Find dy/dx if y = exp(sin^2(x)) at x = pi/4.",
+    "problem_hi": "यदि y = exp(sin^2(x)) है, तो x = pi/4 पर dy/dx ज्ञात कीजिए।",
+    "problem_hg_030": "dy/dx find karein agar y = exp(sin^2(x)) ho x = pi/4 par.",
+    "problem_hg_065": "y = e^(sin^2(x)) function ka derivative nikaalo. Value check karo jab x = pi/4 ho. Is process ko 'band kar diya gaya' nahi keh sakte, complete calculation chahiye.",
+    "gold_answer": "sqrt(e)",
+    "gold_answer_num": 1.648,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: Derivative of exp(u) is exp(u) * u'.",
+      "Step 2: Derivative of sin^2(x) is 2sin(x)cos(x) = sin(2x).",
+      "Step 3: Combine: dy/dx = e^(sin^2(x)) * sin(2x).",
+      "Step 4: At x = pi/4: e^(sin^2(pi/4)) * sin(pi/2) = e^(1/2) * 1 = sqrt(e)."
+    ],
+    "linguistic_trap_in_hg065": "Passive voice trap. 'Is process ko band kar diya gaya nahi keh sakte' (One cannot say the process has been closed/stopped) is an irrelevant passive construction that distracts from the mathematical flow.",
+    "why_hard": "Common error in chain rule for exp(sin^2(x)) is missing the 2sin(x)cos(x) step.",
+    "tags": [
+      "chain_rule",
+      "exponential"
+    ]
+  },
+  {
+    "problem_en": "Find the derivative of f(x) = tan(sqrt(x)) at x = pi^2/16.",
+    "problem_hi": "x = pi^2/16 पर f(x) = tan(sqrt(x)) के अवकलज का मान ज्ञात कीजिए।",
+    "problem_hg_030": "f(x) = tan(sqrt(x)) ka derivative x = pi^2/16 par find karein.",
+    "problem_hg_065": "x ki value pi^2/16 hone par f(x) = tan(sqrt(x)) ka differentiation kya hoga? Slope nikalte waqt 'zyada' complex calculation se bachein.",
+    "gold_answer": "4/pi",
+    "gold_answer_num": 1.273,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: f'(x) = sec^2(sqrt(x)) * d/dx(sqrt(x)).",
+      "Step 2: d/dx(sqrt(x)) = 1 / (2 * sqrt(x)).",
+      "Step 3: Substitute x = pi^2/16: sqrt(x) = pi/4.",
+      "Step 4: Evaluate: sec^2(pi/4) * (1 / (2 * (pi/4))) = (sqrt(2))^2 * (2/pi) = 2 * (2/pi) = 4/pi."
+    ],
+    "linguistic_trap_in_hg065": "The 'Zyada' direction trap. 'Zyada complex calculation se bachein' (Avoid more/excessively complex calculation) might cause the LLM to oversimplify the chain rule or skip the reciprocal derivative of sqrt(x).",
+    "why_hard": "Evaluation with pi^2/16 requires the model to correctly square root the constant before trigonometric evaluation.",
+    "tags": [
+      "chain_rule",
+      "trigonometry"
+    ]
+  },
+  {
+    "problem_en": "Given y = (x^3 + 2x)^5, find the value of dy/dx at x = 0.",
+    "problem_hi": "y = (x^3 + 2x)^5 के लिए x = 0 पर dy/dx का मान ज्ञात कीजिए।",
+    "problem_hg_030": "y = (x^3 + 2x)^5 diya gaya hai, dy/dx ki value x = 0 par nikalein.",
+    "problem_hg_065": "Function y = (x^3 + 2x)^5 hai. Iska derivative nikaalte waqt 'pehle' power rule use karein 'phir' bracket ke andar ka part. x = 0 par result kya hai?",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: dy/dx = 5(x^3 + 2x)^4 * (3x^2 + 2).",
+      "Step 2: Substitute x = 0 into the derivative.",
+      "Step 3: 5(0^3 + 20)^4 * (30^2 + 2) = 5(0)^4 * 2.",
+      "Step 4: 0 * 2 = 0."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' ordering trap. Explicitly defining the order can sometimes cause models to treat the operations as separate additive steps rather than a composite product (dy/du * du/dx).",
+    "why_hard": "The result is 0, but the existence of the (3x^2+2) term often makes LLMs calculate a non-zero value if they fail the power-of-zero rule.",
+    "tags": [
+      "power_rule",
+      "chain_rule"
+    ]
+  },
+  {
+    "problem_en": "Differentiate f(x) = ln(cos(e^x)) at x = ln(pi/4).",
+    "problem_hi": "x = ln(pi/4) पर f(x) = ln(cos(e^x)) का अवकलन करें।",
+    "problem_hg_030": "f(x) = ln(cos(e^x)) ko differentiate karein x = ln(pi/4) par.",
+    "problem_hg_065": "f(x) = ln(cos(e^x)) ka derivative chahiye. x = ln(pi/4) ki value par answer kya hai? Calculation mein steps 'na' bhulein 'na' skip karein.",
+    "gold_answer": "-pi/4",
+    "gold_answer_num": -0.785,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: f'(x) = [1/cos(e^x)] * [-sin(e^x)] * e^x.",
+      "Step 2: Simplify: f'(x) = -tan(e^x) * e^x.",
+      "Step 3: Substitute x = ln(pi/4). Then e^x = pi/4.",
+      "Step 4: Evaluate: -tan(pi/4) * (pi/4) = -1 * pi/4 = -pi/4."
+    ],
+    "linguistic_trap_in_hg065": "The 'Na...na' double negation trap. 'Na bhulein na skip karein' (Neither forget nor skip) is a standard instruction but the double 'na' structure in Hinglish can sometimes be parsed incorrectly by models as a negative instruction for the following math step.",
+    "why_hard": "Triple chain rule with nested functions and exponential-logarithmic cancellation at evaluation.",
+    "tags": [
+      "chain_rule",
+      "logarithm",
+      "exponential"
+    ]
+  },
+  {
+    "problem_en": "If f(x) = arctan(x^2), find f'(1).",
+    "problem_hi": "यदि f(x) = arctan(x^2) है, तो f'(1) ज्ञात कीजिए।",
+    "problem_hg_030": "Agar f(x) = arctan(x^2) ho, toh f'(1) ki value kya hogi?",
+    "problem_hg_065": "f(x) = arctan(x^2) ka derivative nikaaliye. x = 1 par value kya aayegi? 'Sirf' positive value hi compute karna.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: d/dx(arctan(u)) = 1 / (1 + u^2) * u'.",
+      "Step 2: f'(x) = [1 / (1 + (x^2)^2)] * 2x = 2x / (1 + x^4).",
+      "Step 3: Substitute x = 1: 2(1) / (1 + 1^4).",
+      "Step 4: 2 / 2 = 1."
+    ],
+    "linguistic_trap_in_hg065": "The 'Sirf' trap. 'Sirf positive value' (Only positive value) might imply to an LLM that there are multiple values (like in an inverse trig or sqrt function) when the derivative of arctan is actually a single-valued function.",
+    "why_hard": "Simple chain rule but requires correct memory of the inverse trigonometric derivative formula.",
+    "tags": [
+      "inverse_trig",
+      "chain_rule"
+    ]
+  },
+  {
+    "problem_en": "Find the derivative of y = ln(sqrt(1+x^2)) at x = 1.",
+    "problem_hi": "x = 1 पर y = ln(sqrt(1+x^2)) का अवकलज ज्ञात कीजिए।",
+    "problem_hg_030": "y = ln(sqrt(1+x^2)) ka derivative x = 1 par find karein.",
+    "problem_hg_065": "Function y = ln(sqrt(1+x^2)) ka differentiation karna hai. Jab x ki value 1 ho tab derivative kya hoga? Calculation 'baaki' na reh jaye.",
+    "gold_answer": "1/2",
+    "gold_answer_num": 0.5,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: Simplify y using log properties: y = 1/2 * ln(1+x^2).",
+      "Step 2: Differentiate: dy/dx = 1/2 * [1/(1+x^2)] * 2x.",
+      "Step 3: Simplify: dy/dx = x / (1+x^2).",
+      "Step 4: At x = 1: 1 / (1+1) = 1/2."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' trap. 'Calculation baaki na reh jaye' (The calculation should not remain/be left over) is an idiomatic way to say 'complete it', but 'baaki' often means remainder, which could mislead an LLM to look for a remainder term.",
+    "why_hard": "Two levels of chain rule unless simplified by log properties first; LLMs often fail if they don't simplify.",
+    "tags": [
+      "chain_rule",
+      "logarithm"
+    ]
+  },
+  {
+    "problem_en": "If f(x) = (sin x + cos x)^2, find f'(pi/4).",
+    "problem_hi": "यदि f(x) = (sin x + cos x)^2 है, तो f'(pi/4) ज्ञात कीजिए।",
+    "problem_hg_030": "Agar f(x) = (sin x + cos x)^2 hai, toh f'(pi/4) calculate karein.",
+    "problem_hg_065": "f(x) = (sin x + cos x)^2 ka derivative x = pi/4 par nikaalo. Angle pi/4 par trigonometric values check karna 'baaki' hai.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: f'(x) = 2(sin x + cos x) * (cos x - sin x).",
+      "Step 2: Use identity: 2(cos^2 x - sin^2 x) = 2cos(2x).",
+      "Step 3: Substitute x = pi/4.",
+      "Step 4: 2cos(pi/2) = 0."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' trap. 'Check karna baaki hai' (Checking is remaining) suggests an incomplete state, which might cause the LLM to output a procedural response rather than the final numeric answer.",
+    "why_hard": "Can be solved via expansion or chain rule; the evaluation at pi/4 makes cos(x) - sin(x) zero.",
+    "tags": [
+      "trigonometry",
+      "chain_rule"
+    ]
+  },
+  {
+    "problem_en": "Find the derivative of y = exp(x^2 + 2x) at x = -1.",
+    "problem_hi": "x = -1 पर y = exp(x^2 + 2x) का अवकलज ज्ञात कीजिए।",
+    "problem_hg_030": "y = exp(x^2 + 2x) ka derivative x = -1 par find karein.",
+    "problem_hg_065": "y = e^(x^2 + 2x) function diya gaya hai. Iska derivative nikaalo aur x = -1 put karo. Answer mein exponent 'aur' constant ka dhyan rakhein.",
+    "gold_answer": "0",
+    "gold_answer_num": 0.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: dy/dx = e^(x^2 + 2x) * d/dx(x^2 + 2x).",
+      "Step 2: dy/dx = e^(x^2 + 2x) * (2x + 2).",
+      "Step 3: Substitute x = -1.",
+      "Step 4: e^(1 - 2) * (2(-1) + 2) = e^-1 * 0 = 0."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' ambiguity. 'Exponent aur constant ka dhyan rakhein' (Keep in mind the exponent and constant) can be read as an instruction to sum them or treat them as a combined term.",
+    "why_hard": "The 2x+2 term becomes zero at x=-1, testing if the LLM correctly applies the chain rule factor.",
+    "tags": [
+      "exponential",
+      "chain_rule"
+    ]
+  },
+  {
+    "problem_en": "Determine f'(0) if f(x) = sin(sin x).",
+    "problem_hi": "f'(0) का मान ज्ञात कीजिए यदि f(x) = sin(sin x) है।",
+    "problem_hg_030": "f'(0) determine karein agar f(x) = sin(sin x) ho.",
+    "problem_hg_065": "Function f(x) = sin(sin x) ka derivative solve karna hai. x ki value 0 hone par output kya aayega? 'Sirf' ek bar sin assume mat karna.",
+    "gold_answer": "1",
+    "gold_answer_num": 1.0,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: f'(x) = cos(sin x) * cos x.",
+      "Step 2: Substitute x = 0.",
+      "Step 3: cos(sin 0) * cos 0 = cos(0) * 1.",
+      "Step 4: 1 * 1 = 1."
+    ],
+    "linguistic_trap_in_hg065": "The 'Sirf' trap. 'Sirf ek bar sin assume mat karna' (Don't assume sin just once) is a hint about chain rule, but 'sirf' could also be interpreted as a constraint on the answer value.",
+    "why_hard": "Nested trigonometric functions are a classic point of failure for LLMs when applying chain rule.",
+    "tags": [
+      "chain_rule",
+      "trigonometry"
+    ]
+  },
+  {
+    "problem_en": "Find the derivative of f(x) = ln(x^3 + 1) at x = 1.",
+    "problem_hi": "x = 1 पर f(x) = ln(x^3 + 1) के अवकलज का मान ज्ञात कीजिए।",
+    "problem_hg_030": "f(x) = ln(x^3 + 1) ka derivative x = 1 par nikaalein.",
+    "problem_hg_065": "f(x) = ln(x^3 + 1) ka differential solve karein. x = 1 par iski kya value hogi? 'Zyada' simple chain rule logic se kaam chal jayega.",
+    "gold_answer": "3/2",
+    "gold_answer_num": 1.5,
+    "unit": "dimensionless",
+    "topic": "Calculus - Diff",
+    "difficulty": "JEE-Main",
+    "source_type": "chain_rule",
+    "solution_steps_en": [
+      "Step 1: f'(x) = 1/(x^3 + 1) * d/dx(x^3 + 1).",
+      "Step 2: f'(x) = 3x^2 / (x^3 + 1).",
+      "Step 3: Substitute x = 1.",
+      "Step 4: 3(1)^2 / (1^3 + 1) = 3/2."
+    ],
+    "linguistic_trap_in_hg065": "The 'Zyada' direction trap. 'Zyada simple chain rule logic' (Excessively simple chain rule logic) might mislead the model into thinking it can bypass the actual formal differentiation steps or that the answer is just a simple constant.",
+    "why_hard": "Basic chain rule with logarithmic and polynomial functions, but the phrasing 'zyada simple' targets the model's tendency to over-simplify when prompted.",
+    "tags": [
+      "logarithm",
+      "chain_rule"
+    ]
+  }
+]

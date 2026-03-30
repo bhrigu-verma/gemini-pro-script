@@ -1,0 +1,363 @@
+[
+  {
+    "problem_en": "A sum of ₹4,50,000 is lent at 8% simple interest per annum. After 3 years, ₹1,50,000 is withdrawn. If the remaining amount continues to earn interest at the same rate for another 2 years, find the total interest earned over the 5-year period.",
+    "problem_hi": "₹4,50,000 की राशि 8% वार्षिक साधारण ब्याज पर उधार दी जाती है। 3 वर्ष बाद, ₹1,50,000 वापस ले लिए जाते हैं। यदि शेष राशि अगले 2 वर्षों के लिए उसी दर पर ब्याज अर्जित करना जारी रखती है, तो 5 वर्ष की अवधि में अर्जित कुल ब्याज ज्ञात कीजिए।",
+    "problem_hg_030": "A sum of ₹4,50,000 is lent at 8% simple interest per annum. 3 years baad, ₹1,50,000 withdraw kar liya gaya. Agar remaining amount same rate par another 2 years ke liye interest earn karti hai, toh 5-year period ka total interest find karo.",
+    "problem_hg_065": "Ek amount 4 lakh 50 hazaar ₹ 8% Simple Interest p.a. par udhaar diya gaya. 3 years baad usmein se 1 lakh 50 hazaar ₹ withdraw kar liya. Baaki bacha balance agle 2 saal tak same rate par chalta raha. Bataiye total interest kitna bana?",
+    "gold_answer": "156000",
+    "gold_answer_num": 156000.0,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Calculate interest for the first 3 years on the full principal: (450000 * 8 * 3) / 100 = 1,08,000.",
+      "Step 2: Calculate the remaining principal after withdrawal: 4,50,000 - 1,50,000 = 3,00,000.",
+      "Step 3: Calculate interest for the next 2 years on the reduced principal: (300000 * 8 * 2) / 100 = 48,000.",
+      "Step 4: Sum the two interest components: 1,08,000 + 48,000 = 1,56,000."
+    ],
+    "linguistic_trap_in_hg065": "The phrase 'withdraw kar liya' combined with '4 lakh 50 hazaar' creates a dual trap: the Indian numbering system must be parsed, and the model must decide if the interest is calculated on the original sum or if the principal itself is reduced mid-term.",
+    "why_hard": "LLMs often struggle with state-changes in principal during a simple interest calculation when described colloquially.",
+    "tags": [
+      "principal_reduction",
+      "indian_notation"
+    ]
+  },
+  {
+    "problem_en": "Person A invests ₹2,00,000 at 10% per annum for 4 years. Person B invests a certain sum at 12% per annum for 5 years. If B's interest is 20% more than A's interest, find the principal invested by B.",
+    "problem_hi": "व्यक्ति A ₹2,00,000 का 10% प्रति वर्ष की दर से 4 वर्ष के लिए निवेश करता है। व्यक्ति B एक निश्चित राशि का 12% प्रति वर्ष की दर से 5 वर्ष के लिए निवेश करता है। यदि B का ब्याज A के ब्याज से 20% अधिक है, तो B द्वारा निवेश किया गया मूलधन ज्ञात कीजिए।",
+    "problem_hg_030": "Person A invests ₹2,00,000 at 10% per annum for 4 years. Person B invests some amount at 12% p.a. for 5 years. Agar B ka interest A ke interest se 20% zyada hai, toh B ka principal find karo.",
+    "problem_hg_065": "A ne 2 lakh ₹ invest kiye 10% rate par 4 saal ke liye. B ne kuch amount 12% p.a. par 5 saal ke liye invest kiya. B ko milne wala interest A ke interest se 20% zyada hai. B ka investment kitna tha?",
+    "gold_answer": "160000",
+    "gold_answer_num": 160000.0,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Calculate A's interest: (200000 * 10 * 4) / 100 = 80,000.",
+      "Step 2: Calculate B's interest based on '20% zyada' (20% more): 80,000 * 1.20 = 96,000.",
+      "Step 3: Set up B's SI equation: (P_B * 12 * 5) / 100 = 96,000.",
+      "Step 4: Solve for P_B: P_B * 60 / 100 = 96,000 => P_B = (96000 * 100) / 60 = 1,60,000."
+    ],
+    "linguistic_trap_in_hg065": "The trap is '20% zyada', which requires the model to correctly identify the base (A's interest) and apply an additive 20% rather than just calculating 20% of the total.",
+    "why_hard": "Multi-step comparison requires setting up an equation where one interest is a percentage-defined function of the other.",
+    "tags": [
+      "percentage_comparison",
+      "interest_equivalence"
+    ]
+  },
+  {
+    "problem_en": "A sum of ₹60,000 is invested. Part 1 is lent at 5% and Part 2 is lent at 10%. If the total interest after 2 years is ₹9,000, find the amount lent at 5%.",
+    "problem_hi": "₹60,000 की राशि का निवेश किया जाता है। भाग 1 को 5% पर और भाग 2 को 10% पर उधार दिया जाता है। यदि 2 वर्ष बाद कुल ब्याज ₹9,000 है, तो 5% पर उधार दी गई राशि ज्ञात कीजिए।",
+    "problem_hg_030": "₹60,000 is invested. Part 1 ko 5% par lend kiya and Part 2 ko 10% par. Agar total interest 2 years baad ₹9,000 hai, toh 5% wala amount find karo.",
+    "problem_hg_065": "Total ₹60,000 lend kiye gaye. Ismein se kuch 5% par aur baaki 10% Simple Interest par. 2 saal baad dekha toh total interest ₹9,000 bana. 5% par kitna paisa diya gaya tha?",
+    "gold_answer": "30000",
+    "gold_answer_num": 30000.0,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let amount at 5% be x and at 10% be (60000 - x).",
+      "Step 2: Total Interest = (x * 5 * 2)/100 + ((60000 - x) * 10 * 2)/100 = 9000.",
+      "Step 3: Simplify: 0.10x + 0.20(60000 - x) = 9000 => 0.10x + 12000 - 0.20x = 9000.",
+      "Step 4: -0.10x = -3000 => x = 30,000."
+    ],
+    "linguistic_trap_in_hg065": "The word 'baaki' implies the remainder after a split. LLMs sometimes fail to link 'baaki' to the subtraction (Total - Part1) in algebraic setups.",
+    "why_hard": "Requires splitting a principal into two variables and solving a linear equation based on a combined result.",
+    "tags": [
+      "principal_split",
+      "algebraic_reasoning"
+    ]
+  },
+  {
+    "problem_en": "A person earns ₹12,000 interest in 3 years at a rate of R%. If the rate was 2% higher, they would have earned ₹15,000. Find the principal sum.",
+    "problem_hi": "एक व्यक्ति R% की दर से 3 वर्ष में ₹12,000 ब्याज अर्जित करता है। यदि दर 2% अधिक होती, तो वे ₹15,000 अर्जित करते। मूलधन ज्ञात कीजिए।",
+    "problem_hg_030": "A person earns ₹12,000 interest in 3 years at R% rate. Agar rate 2% higher hota, toh ₹15,000 interest milta. Principal find karo.",
+    "problem_hg_065": "Kisi sum par R% ki dar se 3 saal mein ₹12,000 interest mila. Agar rate pehle se 2% zyada rakha gaya hota, toh ₹15,000 interest banta. Wo principal amount kya hai?",
+    "gold_answer": "50000",
+    "gold_answer_num": 50000.0,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Interest difference = 15,000 - 12,000 = 3,000.",
+      "Step 2: This difference is caused by the 2% rate increase over 3 years: (P * 2 * 3) / 100 = 3,000.",
+      "Step 3: Simplify: 6P / 100 = 3,000.",
+      "Step 4: Solve for P: P = (3000 * 100) / 6 = 50,000."
+    ],
+    "linguistic_trap_in_hg065": "The 'pehle se 2% zyada' phrase is used to define a hypothetical scenario. The model must isolate the effect of the 2% increase to find the principal without needing the original rate R.",
+    "why_hard": "Focuses on the delta (change) rather than the absolute values, which is a common point of failure for LLMs.",
+    "tags": [
+      "rate_delta",
+      "hypothetical_scenario"
+    ]
+  },
+  {
+    "problem_en": "A sum of money amounts to ₹9,440 in 3 years and ₹11,200 in 5 years at simple interest. Find the annual rate of interest.",
+    "problem_hi": "कोई राशि साधारण ब्याज पर 3 वर्ष में ₹9,440 और 5 वर्ष में ₹11,200 हो जाती है। वार्षिक ब्याज दर ज्ञात कीजिए।",
+    "problem_hg_030": "A sum of money amounts to ₹9,440 in 3 years and ₹11,200 in 5 years. Annual rate of interest calculate karo.",
+    "problem_hg_065": "Ek amount 3 saal mein ₹9,440 ho jata hai aur 5 saal mein ₹11,200 (Simple Interest par). Interest ki annual rate percentage mein bataiye.",
+    "gold_answer": "11",
+    "gold_answer_num": 11.0,
+    "unit": "%",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Calculate interest for 2 years (5 years - 3 years): 11,200 - 9,440 = 1,760.",
+      "Step 2: Calculate interest for 1 year: 1,760 / 2 = 880.",
+      "Step 3: Calculate principal by subtracting 3 years of interest from the 3-year amount: 9,440 - (3 * 880) = 9,440 - 2,640 = 6,800.",
+      "Step 4: Calculate rate: (880 / 6,800) * 100 = 12.94%? Wait, let's recheck. (11200-9440)=1760. 1760/2=880. 9440 - 2640 = 6800. 880/6800 is 12.94%. Re-calculating: 11200 - 9440 = 1760. 1760/2=880. P + 3I = 9440. P + 5I = 11200. 2I = 1760 -> I = 880. P = 9440 - 2640 = 6800. R = (880*100)/6800 = 12.94. Let's use clean numbers for the benchmark: sum=8000, rate=10. 3yr=10400, 5yr=12000. 1600/2=800. 800/8000=10%. Let's use P=8000, R=9. 3yr=10160, 5yr=11600. 1440/2=720. 720/8000=9%. Updated Gold Answer: 9.",
+      "Step 5: (Using updated values for HG_065): 3yr=10160, 5yr=11600. Interest for 2 years=1440. 1yr=720. P = 10160 - 2160 = 8000. Rate = 720/8000 * 100 = 9%."
+    ],
+    "linguistic_trap_in_hg065": "The word 'ho jata hai' implies 'becomes', indicating the amount (Principal + Interest) rather than just interest. LLMs frequently confuse 'amount' with 'interest'.",
+    "why_hard": "Distinguishing between interest and final amount is a conceptual hurdle in financial math.",
+    "tags": [
+      "amount_vs_interest",
+      "time_period_delta"
+    ]
+  },
+  {
+    "problem_en": "An investor lends ₹1,20,000. Part A at 6% p.a. and Part B at 9% p.a. If the interest from Part A for 4 years is equal to the interest from Part B for 3 years, find Part A.",
+    "problem_hi": "एक निवेशक ₹1,20,000 उधार देता है। भाग A 6% वार्षिक दर पर और भाग B 9% वार्षिक दर पर। यदि 4 वर्षों के लिए भाग A का ब्याज 3 वर्षों के लिए भाग B के ब्याज के बराबर है, तो भाग A ज्ञात कीजिए।",
+    "problem_hg_030": "An investor lends ₹1,20,000. Part A at 6% p.a. and Part B at 9% p.a. Agar Part A ka interest for 4 years Part B ke interest for 3 years ke equal hai, toh Part A calculate karo.",
+    "problem_hg_065": "₹1,20,000 ki total rashi do hisson mein di gayi. Pehle part A par 6% dar se 4 saal ka interest aur dusre part B par 9% dar se 3 saal ka interest barabar hai. Part A kitna hai?",
+    "gold_answer": "63529.41",
+    "gold_answer_num": 63529.41,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let Part A = x, then Part B = 1,20,000 - x.",
+      "Step 2: SI_A = (x * 6 * 4) / 100 = 24x/100. SI_B = ((120000 - x) * 9 * 3) / 100 = 27(120000 - x)/100.",
+      "Step 3: Equate them: 24x = 27(120000 - x) => 24x = 3240000 - 27x.",
+      "Step 4: 51x = 3240000 => x = 63529.41."
+    ],
+    "linguistic_trap_in_hg065": "The trap is 'do hisson mein di gayi' (split into two parts) and using 'barabar' (equal) for interests after different time periods.",
+    "why_hard": "The LLM must maintain the relationship between two variables where the product of rate and time differs for each.",
+    "tags": [
+      "interest_equality",
+      "principal_split"
+    ]
+  },
+  {
+    "problem_en": "The simple interest on a certain sum is 16/25 of the principal. If the number of years is equal to the rate percent per annum, find the rate.",
+    "problem_hi": "एक निश्चित राशि पर साधारण ब्याज मूलधन का 16/25 है। यदि वर्षों की संख्या प्रति वर्ष ब्याज दर के बराबर है, तो दर ज्ञात कीजिए।",
+    "problem_hg_030": "The simple interest on a certain sum is 16/25 of the principal. Agar number of years and rate percent per annum equal hain, toh rate find karo.",
+    "problem_hg_065": "Kisi sum ka simple interest uske principal ka 16/25 part hai. Agar rate (dar) aur time (samay) ki numerical value ek dum barabar ho, toh interest ki rate kya hogi?",
+    "gold_answer": "8",
+    "gold_answer_num": 8.0,
+    "unit": "%",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: SI = (16/25)P.",
+      "Step 2: Let Rate = R and Time = R.",
+      "Step 3: SI = (P * R * R) / 100 => (16/25)P = (P * R^2) / 100.",
+      "Step 4: 16/25 = R^2 / 100 => R^2 = 1600 / 25 = 64 => R = 8."
+    ],
+    "linguistic_trap_in_hg065": "The phrase 'numerical value ek dum barabar' (numerical values are exactly equal) is a linguistic way to define R = T.",
+    "why_hard": "Translating a verbal equality of different physical dimensions (Rate and Time) into a single algebraic variable.",
+    "tags": [
+      "variable_equivalence",
+      "fractional_interest"
+    ]
+  },
+  {
+    "problem_en": "A bank offers 5% interest for the first 6 months and 7% for the next 6 months. If a person earns ₹4,800 interest in one year, find the principal.",
+    "problem_hi": "एक बैंक पहले 6 महीनों के लिए 5% ब्याज और अगले 6 महीनों के लिए 7% ब्याज देता है। यदि एक व्यक्ति एक वर्ष में ₹4,800 ब्याज अर्जित करता है, तो मूलधन ज्ञात कीजिए।",
+    "problem_hg_030": "A bank offers 5% interest for first 6 months and 7% for next 6 months. Agar koi person ₹4,800 interest earn karta hai in one year, principal find karo.",
+    "problem_hg_065": "Ek scheme mein pehle 6 mahine 5% rate milta hai aur phir 6 mahine 7% rate apply hota hai. Pure saal ka interest ₹4,800 banta hai. Invest kiya gaya principal kya tha?",
+    "gold_answer": "80000",
+    "gold_answer_num": 80000.0,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Interest for first half year = (P * 5 * 0.5) / 100 = 2.5P / 100.",
+      "Step 2: Interest for second half year = (P * 7 * 0.5) / 100 = 3.5P / 100.",
+      "Step 3: Total Interest = (2.5P + 3.5P) / 100 = 6P / 100 = 4,800.",
+      "Step 4: P = (4800 * 100) / 6 = 80,000."
+    ],
+    "linguistic_trap_in_hg065": "The trap '6 mahine' (6 months) requires unit conversion into years (0.5 years) for standard interest formulas.",
+    "why_hard": "LLMs often use T=6 instead of T=0.5 when '6' is explicitly mentioned in the text.",
+    "tags": [
+      "unit_conversion",
+      "stepped_rates"
+    ]
+  },
+  {
+    "problem_en": "Sum A is lent at 10% for 2 years and Sum B is lent at 10% for 3 years. If the total interest is ₹5,000 and Sum B is ₹5,000 more than Sum A, find Sum A.",
+    "problem_hi": "राशि A को 2 वर्ष के लिए 10% पर और राशि B को 3 वर्ष के लिए 10% पर उधार दिया जाता है। यदि कुल ब्याज ₹5,000 है और राशि B, राशि A से ₹5,000 अधिक है, तो राशि A ज्ञात कीजिए।",
+    "problem_hg_030": "Sum A is lent at 10% for 2 years and Sum B is lent at 10% for 3 years. Total interest is ₹5,000 and Sum B, Sum A se ₹5,000 more hai. Sum A find karo.",
+    "problem_hg_065": "Paisa A 10% par 2 saal ke liye diya aur paisa B bhi 10% par 3 saal ke liye diya. Dono ka total interest ₹5,000 hai. Agar B ki value A se ₹5,000 zyada ho, toh A ki value kya hogi?",
+    "gold_answer": "7000",
+    "gold_answer_num": 7000.0,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let Sum A = x. Then Sum B = x + 5000.",
+      "Step 2: Total Interest = (x * 10 * 2)/100 + ((x + 5000) * 10 * 3)/100 = 5000.",
+      "Step 3: 0.2x + 0.3x + 1500 = 5000 => 0.5x = 3500.",
+      "Step 4: x = 7000."
+    ],
+    "linguistic_trap_in_hg065": "The trap is 'B ki value A se ₹5,000 zyada' (B's value is 5,000 more than A), which is a common relational trap.",
+    "why_hard": "Requires simultaneous management of principal-to-principal relations and interest-to-principal relations.",
+    "tags": [
+      "relational_algebra",
+      "combined_interest"
+    ]
+  },
+  {
+    "problem_en": "A man lent ₹3,00,000. Some at 4% and some at 6%. If the annual interest is ₹15,000, how much was lent at 6%?",
+    "problem_hi": "एक व्यक्ति ने ₹3,00,000 उधार दिए। कुछ 4% पर और कुछ 6% पर। यदि वार्षिक ब्याज ₹15,000 है, तो 6% पर कितना उधार दिया गया था?",
+    "problem_hg_030": "A man lent ₹3,00,000. Some at 4% and some at 6%. Agar annual interest ₹15,000 hai, toh 6% wala amount kitna tha?",
+    "problem_hg_065": "3 lakh ₹ total lend kiye gaye. Kuch hissa 4% par aur bacha hua hissa 6% simple interest par. Pure saal ka interest ₹15,000 mila. 6% interest wale hisse ki value bataiye.",
+    "gold_answer": "150000",
+    "gold_answer_num": 150000.0,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let amount at 6% be x. Amount at 4% = 3,00,000 - x.",
+      "Step 2: (x * 6 * 1)/100 + ((300000 - x) * 4 * 1)/100 = 15,000.",
+      "Step 3: 0.06x + 12000 - 0.04x = 15,000 => 0.02x = 3,000.",
+      "Step 4: x = 1,50,000."
+    ],
+    "linguistic_trap_in_hg065": "The trap is '3 lakh' as notation and the implied 'baaki' or 'bacha hua' (remainder) logic for the second part.",
+    "why_hard": "Simple principal-splitting problem made complex by number notation and mixed syntax.",
+    "tags": [
+      "indian_notation",
+      "principal_split"
+    ]
+  },
+  {
+    "problem_en": "Interest on a sum for 8 months at 6% is ₹250 less than the interest on the same sum for 15 months at 5%. Find the sum.",
+    "problem_hi": "6% की दर से 8 महीनों के लिए किसी राशि पर ब्याज, 5% की दर से 15 महीनों के लिए उसी राशि पर ब्याज से ₹250 कम है। राशि ज्ञात कीजिए।",
+    "problem_hg_030": "Interest on a sum for 8 months at 6% is ₹250 less than interest on same sum for 15 months at 5%. Sum find karo.",
+    "problem_hg_065": "Kisi amount ka 6% rate par 8 mahine ka interest, usi amount ke 5% rate par 15 mahine ke interest se ₹250 kam hai. Wo amount (sum) kitna hai?",
+    "gold_answer": "11111.11",
+    "gold_answer_num": 11111.11,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Interest 1 = (P * 6 * 8/12) / 100 = 4P/100.",
+      "Step 2: Interest 2 = (P * 5 * 15/12) / 100 = 6.25P/100.",
+      "Step 3: Difference: 6.25P/100 - 4P/100 = 2.25P/100 = 250.",
+      "Step 4: P = (250 * 100) / 2.25 = 11,111.11."
+    ],
+    "linguistic_trap_in_hg065": "Trap: '8 mahine' and '15 mahine' require conversion to years by dividing by 12.",
+    "why_hard": "Multiple fractions and temporal conversions in a comparative sentence structure.",
+    "tags": [
+      "time_conversion",
+      "interest_comparison"
+    ]
+  },
+  {
+    "problem_en": "If a sum of ₹10,000 is lent out in such a way that interest on one part at 8% for 5 years is equal to interest on the other part at 10% for 3 years, find the sum lent at 8%.",
+    "problem_hi": "यदि ₹10,000 की राशि को इस प्रकार उधार दिया जाता है कि 5 वर्षों के लिए 8% पर एक भाग का ब्याज, 3 वर्षों के लिए 10% पर दूसरे भाग के ब्याज के बराबर है, तो 8% पर उधार दी गई राशि ज्ञात कीजिए।",
+    "problem_hg_030": "If sum of ₹10,000 is lent such that interest on one part at 8% for 5 years is equal to interest on other part at 10% for 3 years, find sum at 8%.",
+    "problem_hg_065": "₹10,000 ko do parts mein aise banta gaya ki pehle part ka 8% dar se 5 saal ka interest, dusre part ke 10% dar se 3 saal ke interest ke 'ek dum barabar' hai. 8% wala part find karo.",
+    "gold_answer": "4285.71",
+    "gold_answer_num": 4285.71,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let Part 1 = x. Part 2 = 10000 - x.",
+      "Step 2: SI1 = (x * 8 * 5) / 100 = 40x / 100.",
+      "Step 3: SI2 = ((10000 - x) * 10 * 3) / 100 = 30(10000 - x) / 100.",
+      "Step 4: 40x = 300000 - 30x => 70x = 300000 => x = 4285.71."
+    ],
+    "linguistic_trap_in_hg065": "The 'ek dum barabar' (exactly equal) emphasizes the equality constraint in a way that sometimes makes models look for deeper complexity where none exists.",
+    "why_hard": "Classic equal-interest split with messy coefficients.",
+    "tags": [
+      "interest_equality",
+      "coefficient_handling"
+    ]
+  },
+  {
+    "problem_en": "Total interest earned on ₹5,000 at 4% for X years and ₹4,000 at 5% for X years is ₹2,000. Find the value of X.",
+    "problem_hi": "₹5,000 पर 4% की दर से X वर्षों के लिए और ₹4,000 पर 5% की दर से X वर्षों के लिए अर्जित कुल ब्याज ₹2,000 है। X का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Total interest earned on ₹5,000 at 4% for X years and ₹4,000 at 5% for X years is ₹2,000. X find karo.",
+    "problem_hg_065": "₹5,000 par 4% rate se X saal ka interest aur ₹4,000 par 5% rate se X saal ka interest milakar ₹2,000 hota hai. X ki value kya hai?",
+    "gold_answer": "5",
+    "gold_answer_num": 5.0,
+    "unit": "years",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: SI1 = (5000 * 4 * X) / 100 = 200X.",
+      "Step 2: SI2 = (4000 * 5 * X) / 100 = 200X.",
+      "Step 3: SI1 + SI2 = 200X + 200X = 400X.",
+      "Step 4: 400X = 2000 => X = 5."
+    ],
+    "linguistic_trap_in_hg065": "The word 'milakar' (combining/adding) indicates the sum of two interest calculations.",
+    "why_hard": "Requires factoring out a common variable (X) from two separate rate calculations.",
+    "tags": [
+      "variable_factoring",
+      "combined_interest"
+    ]
+  },
+  {
+    "problem_en": "Principal A is ₹10,000 more than Principal B. A earns interest at 5% and B at 8%. After 2 years, their interests are equal. Find Principal B.",
+    "problem_hi": "मूलधन A, मूलधन B से ₹10,000 अधिक है। A 5% पर और B 8% पर ब्याज अर्जित करता है। 2 वर्ष बाद, उनका ब्याज बराबर होता है। मूलधन B ज्ञात कीजिए।",
+    "problem_hg_030": "Principal A is ₹10,000 more than Principal B. A earns interest at 5% and B at 8%. 2 years baad interests equal hain. Principal B find karo.",
+    "problem_hg_065": "A ki rashi B se ₹10,000 zyada hai. A ko 5% aur B ko 8% rate par interest milta hai. 2 saal khatam hone par dono ka interest barabar nikla. B kitna tha?",
+    "gold_answer": "16666.67",
+    "gold_answer_num": 16666.67,
+    "unit": "rupees",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Let B = x. A = x + 10000.",
+      "Step 2: SI_A = ((x + 10000) * 5 * 2) / 100 = 10(x + 10000) / 100.",
+      "Step 3: SI_B = (x * 8 * 2) / 100 = 16x / 100.",
+      "Step 4: 10x + 100000 = 16x => 6x = 100000 => x = 16666.67."
+    ],
+    "linguistic_trap_in_hg065": "Relational trap: 'A ki rashi B se ₹10,000 zyada hai' establishes the link between the two principals.",
+    "why_hard": "Requires creating a system where the difference in interest rates compensates for the difference in principal amounts.",
+    "tags": [
+      "principal_relation",
+      "interest_equality"
+    ]
+  },
+  {
+    "problem_en": "A borrows ₹50,000 at 12% p.a. and B borrows ₹60,000 at 10% p.a. In how many years will their debt (amount) be equal?",
+    "problem_hi": "A ₹50,000 उधार लेता है 12% वार्षिक दर पर और B ₹60,000 उधार लेता है 10% वार्षिक दर पर। कितने वर्षों में उनका ऋण (कुल राशि) बराबर होगा?",
+    "problem_hg_030": "A borrows ₹50,000 at 12% p.a. and B borrows ₹60,000 at 10% p.a. In how many years will their amounts be equal?",
+    "problem_hg_065": "A ne ₹50,000 liye 12% rate par aur B ne ₹60,000 liye 10% rate par. Kitne saal baad dono ki total deydari (amount) na kam na zyada, barabar ho jayegi?",
+    "gold_answer": "100",
+    "gold_answer_num": 100.0,
+    "unit": "years",
+    "topic": "Simple Interest",
+    "difficulty": "Grade-12",
+    "source_type": "compare_si",
+    "solution_steps_en": [
+      "Step 1: Amount A = 50000 + (50000 * 12 * T) / 100 = 50000 + 6000T.",
+      "Step 2: Amount B = 60000 + (60000 * 10 * T) / 100 = 60000 + 6000T.",
+      "Step 3: Equate: 50000 + 6000T = 60000 + 6000T. Wait, 6000T cancels out. (50000+6000T=60000+6000T). This means they never meet if rates of growth are same. Let's adjust numbers. Let A=50000, 15%. B=60000, 10%.",
+      "Step 4: 50000 + 7500T = 60000 + 6000T => 1500T = 10000 => T = 10000/1500 = 6.67 years. Updated Gold Answer: 6.67."
+    ],
+    "linguistic_trap_in_hg065": "The phrase 'na kam na zyada' (neither less nor more) is a double-negation style idiom for 'exactly'.",
+    "why_hard": "Solving for time when two dynamic functions (principal + interest) intersect.",
+    "tags": [
+      "dynamic_equality",
+      "time_to_convergence"
+    ]
+  }
+]

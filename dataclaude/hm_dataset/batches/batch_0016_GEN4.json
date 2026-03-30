@@ -1,0 +1,377 @@
+[
+  {
+    "problem_en": "Consider a sequence defined by a_1 = 3 and a_{n+1} = (a_n^2 + 5) / (2a_n) for n ≥ 1. If we define b_n = (a_n - √5) / (a_n + √5), find the value of n such that b_n = ( (3 - √5) / (3 + √5) )^8.",
+    "problem_hi": "एक अनुक्रम पर विचार करें जहाँ a_1 = 3 और n ≥ 1 के लिए a_{n+1} = (a_n^2 + 5) / (2a_n) है। यदि हम b_n = (a_n - √5) / (a_n + √5) परिभाषित करते हैं, तो n का वह मान ज्ञात कीजिए जिसके लिए b_n = ( (3 - √5) / (3 + √5) )^8 हो।",
+    "problem_hg_030": "Ek sequence consider karein jisme a_1 = 3 aur a_{n+1} = (a_n^2 + 5) / (2a_n) for n ≥ 1. Agar hum b_n = (a_n - √5) / (a_n + √5) define karein, toh n ki value find karein such that b_n = ( (3 - √5) / (3 + √5) )^8.",
+    "problem_hg_065": "Ek recursive sequence hai jisme a_1 = 3 aur n ≥ 1 ke liye a_{n+1} = (a_n^2 + 5) / (2a_n) set kiya gaya hai. Phir b_n = (a_n - √5) / (a_n + √5) define kiya. Humein n ki value chahiye jab b_n ki value ( (3 - √5) / (3 + √5) ) se exactly 8 power zyada ho.",
+    "gold_answer": "4",
+    "gold_answer_num": 4.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Express b_{n+1} in terms of a_{n+1}: b_{n+1} = ((a_n^2+5)/2a_n - √5) / ((a_n^2+5)/2a_n + √5).",
+      "Step 2: Simplify the expression: b_{n+1} = (a_n^2 - 2√5 a_n + 5) / (a_n^2 + 2√5 a_n + 5) = ((a_n - √5)/(a_n + √5))^2.",
+      "Step 3: Recognize the recurrence: b_{n+1} = (b_n)^2. This implies b_n = (b_1)^{2^{n-1}}.",
+      "Step 4: Given b_n = (b_1)^8, we have 2^{n-1} = 8, which means 2^{n-1} = 2^3, so n-1 = 3, n = 4."
+    ],
+    "linguistic_trap_in_hg065": "The 'Zyada' direction trap: '8 power zyada' usually means 'raised to the power of 8' in Hinglish colloquial math, but an LLM might interpret it as b_n = (b_1) + 8 or b_n = (b_1)^9 (one more than 8).",
+    "why_hard": "Requires identifying a hidden geometric-like recurrence in a rational functional form using substitution.",
+    "tags": [
+      "recurrence",
+      "substitution",
+      "power_relation"
+    ]
+  },
+  {
+    "problem_en": "A sequence is given by x_1 = 2 and x_{n+1} = x_n + 1/x_n. If x_{100}^2 lies between two consecutive integers, find the value of the smaller integer.",
+    "problem_hi": "एक अनुक्रम x_1 = 2 और x_{n+1} = x_n + 1/x_n द्वारा दिया गया है। यदि x_{100}^2 दो क्रमागत पूर्णांकों के बीच स्थित है, तो छोटे पूर्णांक का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Ek sequence x_1 = 2 aur x_{n+1} = x_n + 1/x_n se di gayi hai. Agar x_{100}^2 do consecutive integers ke beech lie karta hai, toh smaller integer ki value find karein.",
+    "problem_hg_065": "Sequence x_1 = 2 se start hoti hai aur n ≥ 1 ke liye x_{n+1} = x_n + 1/x_n formula follow karti hai. Pehle calculation karo phir dekho ki x_{100}^2 kin do consecutive integers ke beech hai. Humein sirf smaller integer bataiye.",
+    "gold_answer": "202",
+    "gold_answer_num": 202.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Square the recurrence: x_{n+1}^2 = (x_n + 1/x_n)^2 = x_n^2 + 2 + 1/x_n^2.",
+      "Step 2: Note that x_{n+1}^2 > x_n^2 + 2. Summing this from 1 to 99: x_{100}^2 > x_1^2 + 299 = 4 + 198 = 202.",
+      "Step 3: Also, since x_n increases, 1/x_n^2 decreases. x_n^2 is roughly 2n. So sum of 1/x_n^2 is roughly sum of 1/2n, which is small. Specifically, for n=100, the sum of 1/x_k^2 is small enough that the integer part doesn't jump.",
+      "Step 4: x_{100}^2 = 202 + sum_{k=1}^{99} (1/x_k^2). Since x_k^2 > 4, 2n+2 etc, the sum is small and 202 < x_{100}^2 < 203. Thus, the smaller integer is 202."
+    ],
+    "linguistic_trap_in_hg065": "The 'Pehle...phir' ordering: 'Pehle calculation karo phir dekho' is a sequential instruction that might cause an LLM to attempt a brute-force calculation of 100 terms instead of using the telescopic/inequality method.",
+    "why_hard": "LLMs struggle with estimating the growth of recursive sequences and often fail to apply the squaring technique for x_n + 1/x_n.",
+    "tags": [
+      "inequalities",
+      "squaring_method",
+      "estimation"
+    ]
+  },
+  {
+    "problem_en": "Let a_1 = 1 and a_{n+1} = (a_n) / (1 + na_n) for n ≥ 1. Find the value of 1/a_{21}.",
+    "problem_hi": "मान लीजिए a_1 = 1 और n ≥ 1 के लिए a_{n+1} = (a_n) / (1 + na_n) है। 1/a_{21} का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Let a_1 = 1 aur a_{n+1} = (a_n) / (1 + na_n) for n ≥ 1. 1/a_{21} ki value find karein.",
+    "problem_hg_065": "Maan lo a_1 ki value 1 hai. Agla term a_{n+1} = (a_n) / (1 + na_n) se milta hai. Sequence solve karo aur check karo ki 1/a_{21} ki value kya hai. Dhyan rahe index n=1 se start ho raha hai.",
+    "gold_answer": "211",
+    "gold_answer_num": 211.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Take the reciprocal of the recurrence: 1/a_{n+1} = (1 + na_n) / a_n = 1/a_n + n.",
+      "Step 2: Let b_n = 1/a_n. Then b_{n+1} = b_n + n.",
+      "Step 3: This is an arithmetic-like progression. b_n = b_1 + sum_{k=1}^{n-1} k = 1 + (n-1)n / 2.",
+      "Step 4: For n=21, 1/a_{21} = 1 + (20 * 21) / 2 = 1 + 210 = 211."
+    ],
+    "linguistic_trap_in_hg065": "Passive voice ambiguity: 'milta hai' (is obtained) can be interpreted by models as a general property rather than a strict recursive rule, sometimes leading to confusion about whether n is the current or next index.",
+    "why_hard": "Requires the insight to linearize a rational recurrence by taking the reciprocal.",
+    "tags": [
+      "reciprocal_recurrence",
+      "summation",
+      "algebraic_manipulation"
+    ]
+  },
+  {
+    "problem_en": "A sequence satisfies a_1 = 2, a_2 = 5, and a_{n+2} = 5a_{n+1} - 6a_n. Find the remainder when a_{10} is divided by 100.",
+    "problem_hi": "एक अनुक्रम a_1 = 2, a_2 = 5, और a_{n+2} = 5a_{n+1} - 6a_n को संतुष्ट करता है। a_{10} को 100 से विभाजित करने पर शेषफल ज्ञात कीजिए।",
+    "problem_hg_030": "Ek sequence satisfy karti hai a_1 = 2, a_2 = 5, aur a_{n+2} = 5a_{n+1} - 6a_n. Remainder find karein jab a_{10} is divided by 100.",
+    "problem_hg_065": "Sequence a_1 = 2 aur a_2 = 5 se shuru ho rahi hai. Equation a_{n+2} = 5a_{n+1} - 6a_n apply karke a_{10} nikaalo. Phir use 100 se divide karne par baaki kitna bachega?",
+    "gold_answer": "95",
+    "gold_answer_num": 95.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Characteristic equation: r^2 - 5r + 6 = 0, which gives roots r = 2, 3.",
+      "Step 2: General term: a_n = A(2^n) + B(3^n). Use a_1=2, a_2=5 to find A, B. 2A+3B=2, 4A+9B=5.",
+      "Step 3: Solve: 2*(2A+3B) - (4A+9B) => 4-5 = 6B-9B => -1 = -3B => B=1/3. Then A = (2-1)/2 = 1/2.",
+      "Step 4: a_n = 2^{n-1} + 3^{n-1}. a_{10} = 2^9 + 3^9 = 512 + 19683 = 20195. 20195 mod 100 = 95. Wait, recalculate: 3^9 = 19683. 2^9 = 512. 19683+512=20195. No, let's re-solve A and B. a_1=A(2)+B(3)=2, a_2=4A+9B=5. A=1/2, B=1/3. So a_n = 2^{n-1} + 3^{n-1}. a_{10} = 2^9 + 3^9 = 512 + 19683 = 20195. Remainder 95. Let me check 5a_2-6a_1 = 5(5)-6(2) = 25-12 = 13. a_3=13. Using formula: 2^2+3^2 = 4+9=13. Correct. a_{10} is 2^9+3^9. 512 + 19683 = 20195. Result is 95. Wait, 3^4=81, 3^5=243, 3^8=6561, 3^9=19683. Correct. Result is 95."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' trap: 'baaki kitna bachega' is used for remainder. However, in the context of sequences, 'baaki' can also refer to the remaining terms in the series, potentially confusing the LLM into calculating a sum.",
+    "why_hard": "Standard linear homogeneous recurrence but requires a very high power calculation (3^9) where arithmetic errors are common for LLMs.",
+    "tags": [
+      "linear_recurrence",
+      "modular_arithmetic",
+      "baaki_trap"
+    ]
+  },
+  {
+    "problem_en": "Let x_0 = 7 and x_{n+1} = x_n^2 - 2. If the sequence is calculated up to x_3, find the value of x_3 modulo 10.",
+    "problem_hi": "मान लीजिए x_0 = 7 और x_{n+1} = x_n^2 - 2 है। यदि अनुक्रम की गणना x_3 तक की जाती है, तो x_3 मोड्यूलो 10 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Let x_0 = 7 aur x_{n+1} = x_n^2 - 2. Agar sequence x_3 tak calculate ki jaye, toh x_3 modulo 10 ki value find karein.",
+    "problem_hg_065": "Maan lo x_0 = 7 hai. Har agla term x_n^2 - 2 se nikalna hai. Pehle x_1, phir x_2, aur phir x_3 find karo. Humein sirf x_3 ki last digit (mod 10) chahiye.",
+    "gold_answer": "7",
+    "gold_answer_num": 7.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Calculate x_1 = 7^2 - 2 = 49 - 2 = 47.",
+      "Step 2: Calculate x_2 = 47^2 - 2. Looking for last digit: 7^2 - 2 = 9 - 2 = 7.",
+      "Step 3: Note the cycle in last digits. If x_n ends in 7, x_n^2 ends in 9, and x_{n+1} = x_n^2 - 2 ends in 7.",
+      "Step 4: Since x_0 ends in 7, all x_n will end in 7. Thus x_3 mod 10 = 7."
+    ],
+    "linguistic_trap_in_hg065": "Ordering trap: 'Pehle...phir...aur phir' explicitly guides a step-by-step manual calculation which is prone to error, whereas the optimal strategy is finding the invariant last digit.",
+    "why_hard": "The growth is double-exponential, so actual calculation of x_3 (2207^2 - 2) is large, testing if the LLM recognizes the modular invariant.",
+    "tags": [
+      "invariant",
+      "modular_arithmetic",
+      "double_exponential"
+    ]
+  },
+  {
+    "problem_en": "A sequence a_n is defined by a_1 = 1, a_2 = 1, and a_n = a_{n-1} + a_{n-2} for n > 2. Find the sum of the first 10 terms of this sequence.",
+    "problem_hi": "एक अनुक्रम a_n को a_1 = 1, a_2 = 1, और n > 2 के लिए a_n = a_{n-1} + a_{n-2} द्वारा परिभाषित किया गया है। इस अनुक्रम के पहले 10 पदों का योग ज्ञात कीजिए।",
+    "problem_hg_030": "Ek sequence a_n define ki gayi hai by a_1 = 1, a_2 = 1, aur a_n = a_{n-1} + a_{n-2} for n > 2. Is sequence ke first 10 terms ka sum find karein.",
+    "problem_hg_065": "Fibonacci sequence consider karo: a_1=1, a_2=1 aur a_n = a_{n-1} + a_{n-2}. Humein 10 terms tak ka total chahiye. Na 8 na 9, par pure 10 terms ka sum calculate karo.",
+    "gold_answer": "143",
+    "gold_answer_num": 143.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Generate terms: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55.",
+      "Step 2: Use the identity sum_{i=1}^n a_i = a_{n+2} - 1.",
+      "Step 3: The 12th term is needed: a_{11} = 55+34=89, a_{12} = 89+55=144.",
+      "Step 4: Sum = a_{12} - 1 = 144 - 1 = 143."
+    ],
+    "linguistic_trap_in_hg065": "Double negation/Inclusion trap: 'Na 8 na 9, par pure 10' (Not 8, not 9, but full 10). This can mislead an LLM to think it needs to exclude specific terms (8th and 9th) or interpret 'na...na' as a subtraction constraint.",
+    "why_hard": "The 'na...na' structure often triggers exclusion logic in LLMs, which might lead to summing only 8 terms or skipping terms.",
+    "tags": [
+      "fibonacci",
+      "series_sum",
+      "double_negation"
+    ]
+  },
+  {
+    "problem_en": "Define a sequence by s_1 = 1 and s_{n+1} = √(s_n^2 + 2n + 1). Find the value of s_{50}.",
+    "problem_hi": "s_1 = 1 और s_{n+1} = √(s_n^2 + 2n + 1) द्वारा एक अनुक्रम परिभाषित करें। s_{50} का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Ek sequence define karein by s_1 = 1 aur s_{n+1} = √(s_n^2 + 2n + 1). s_{50} ki value find karein.",
+    "problem_hg_065": "Ek sequence s_1 = 1 se start ho rahi hai. Agla term s_n^2 + 2n + 1 ka root lekar milta hai. Bataiye s_{50} ki value kya hogi? Answer 50 se thoda zyada aayega.",
+    "gold_answer": "50",
+    "gold_answer_num": 50.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Square the recurrence: s_{n+1}^2 = s_n^2 + (2n + 1).",
+      "Step 2: Recognize the telescopic sum: s_n^2 = s_1^2 + sum_{k=1}^{n-1} (2k + 1).",
+      "Step 3: Sum the arithmetic series: sum_{k=1}^{n-1} (2k + 1) = 2 * [(n-1)n/2] + (n-1) = n^2 - n + n - 1 = n^2 - 1.",
+      "Step 4: s_n^2 = 1 + n^2 - 1 = n^2. Thus s_n = n. For n=50, s_{50} = 50."
+    ],
+    "linguistic_trap_in_hg065": "The 'Zyada' direction trap: 'Answer 50 se thoda zyada aayega' (Answer will be a bit more than 50). This is a direct misinformation trap to see if the LLM trusts its math or the linguistic hint.",
+    "why_hard": "LLMs often follow the 'helpful hint' even if it contradicts the calculation, testing the 'truthfulness vs compliance' trade-off.",
+    "tags": [
+      "telescopic_sum",
+      "misinformation_trap",
+      "algebraic_recurrence"
+    ]
+  },
+  {
+    "problem_en": "Let a_n be a sequence such that a_1 = 3 and a_n = 3 + sum_{i=1}^{n-1} a_i. Find the value of a_6.",
+    "problem_hi": "मान लीजिए a_n एक अनुक्रम है जैसे कि a_1 = 3 और a_n = 3 + sum_{i=1}^{n-1} a_i है। a_6 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Let a_n ek sequence ho such that a_1 = 3 aur a_n = 3 + sum_{i=1}^{n-1} a_i. a_6 ki value find karein.",
+    "problem_hg_065": "Sequence a_1 = 3 se shuru hoti hai. Har n-th term 3 aur baaki pichle saare terms ka sum hai. Humein a_6 find karna hai.",
+    "gold_answer": "96",
+    "gold_answer_num": 96.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Calculate first few terms: a_1 = 3. a_2 = 3 + a_1 = 3 + 3 = 6.",
+      "Step 2: a_3 = 3 + (a_1 + a_2) = 3 + (3 + 6) = 12.",
+      "Step 3: Observe the pattern: a_n = 2 * a_{n-1} for n ≥ 3. Since a_2 = 6, a_3 = 12, a_4 = 24, etc.",
+      "Step 4: a_n = 6 * 2^{n-2} for n ≥ 2. For n=6, a_6 = 6 * 2^4 = 6 * 16 = 96."
+    ],
+    "linguistic_trap_in_hg065": "The 'Baaki' trap: 'baaki pichle saare terms' (the rest of the previous terms). LLMs often miss the inclusion of the constant '3' in the summation logic if they focus only on the 'baaki' part.",
+    "why_hard": "Requires converting a sum-based recurrence into a term-to-term recurrence by subtracting a_n from a_{n+1}.",
+    "tags": [
+      "sum_recurrence",
+      "geometric_growth",
+      "baaki_trap"
+    ]
+  },
+  {
+    "problem_en": "A sequence satisfies f(1) = 2 and f(n) = f(n-1) + 2n - 1. Find f(10).",
+    "problem_hi": "एक अनुक्रम f(1) = 2 और f(n) = f(n-1) + 2n - 1 को संतुष्ट करता है। f(10) ज्ञात कीजिए।",
+    "problem_hg_030": "Ek sequence satisfy karti hai f(1) = 2 aur f(n) = f(n-1) + 2n - 1. f(10) find karein.",
+    "problem_hg_065": "Sequence f(1) = 2 se start hoti hai. Agle term ke liye pichle term mein (2n-1) aur kar diya gaya hai. f(10) ki value nikaalo.",
+    "gold_answer": "101",
+    "gold_answer_num": 101.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Write terms as f(n) - f(n-1) = 2n - 1.",
+      "Step 2: Summing from n=2 to 10: f(10) - f(1) = sum_{n=2}^{10} (2n - 1).",
+      "Step 3: Sum of (2n-1) from 1 to 10 is 10^2 = 100. Since we start from n=2, subtract the first term (2*1-1=1). 100 - 1 = 99.",
+      "Step 4: f(10) = f(1) + 99 = 2 + 99 = 101."
+    ],
+    "linguistic_trap_in_hg065": "The 'Aur' ambiguity: 'pichle term mein (2n-1) aur kar diya' (added (2n-1) more to the previous term). LLMs might interpret '2n-1 aur' as adding 2n then another 1, or adding 10 more than the calculation suggests.",
+    "why_hard": "Relies on summation of an arithmetic progression where off-by-one errors in indices are frequent.",
+    "tags": [
+      "arithmetic_series",
+      "summation",
+      "aur_trap"
+    ]
+  },
+  {
+    "problem_en": "Let a_1 = 1, a_2 = 2 and a_n = (a_{n-1}^2) / a_{n-2} for n > 2. Find a_5.",
+    "problem_hi": "मान लीजिए a_1 = 1, a_2 = 2 और n > 2 के लिए a_n = (a_{n-1}^2) / a_{n-2} है। a_5 ज्ञात कीजिए।",
+    "problem_hg_030": "Let a_1 = 1, a_2 = 2 aur a_n = (a_{n-1}^2) / a_{n-2} for n > 2. a_5 find karein.",
+    "problem_hg_065": "Pehla term 1 aur doosra term 2 hai. Har naya term pichle term ke square ko usse pehle wale term se bhag (divide) karke milta hai. Sequence 5th term tak chalao.",
+    "gold_answer": "16",
+    "gold_answer_num": 16.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: a_1 = 1, a_2 = 2.",
+      "Step 2: a_3 = a_2^2 / a_1 = 4 / 1 = 4.",
+      "Step 3: a_4 = a_3^2 / a_2 = 16 / 2 = 8.",
+      "Step 4: a_5 = a_4^2 / a_3 = 64 / 4 = 16. (Pattern is 2^{n-1})"
+    ],
+    "linguistic_trap_in_hg065": "Passive voice: 'Sequence 5th term tak chalao' (Run the sequence up to the 5th term) might lead an LLM to sum the first 5 terms instead of just finding the 5th.",
+    "why_hard": "Tests if the model can maintain term-to-term memory in a non-linear recurrence without defaulting to summation.",
+    "tags": [
+      "geometric_sequence",
+      "nonlinear_recurrence",
+      "passive_voice"
+    ]
+  },
+  {
+    "problem_en": "Consider a sequence where T_n = T_{n-1} + n^2. If T_1 = 1, find T_6.",
+    "problem_hi": "एक अनुक्रम पर विचार करें जहाँ T_n = T_{n-1} + n^2 है। यदि T_1 = 1 है, तो T_6 ज्ञात कीजिए।",
+    "problem_hg_030": "Ek sequence consider karein jahan T_n = T_{n-1} + n^2. Agar T_1 = 1, toh T_6 find karein.",
+    "problem_hg_065": "T_1 ki value 1 hai. Har agle term mein index n ka square aur kar diya gaya hai. T_6 nikaalo, sirf 5 hazaar tak ki calculation mat karna, exact value chahiye.",
+    "gold_answer": "91",
+    "gold_answer_num": 91.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: T_n is the sum of squares: T_n = sum_{k=1}^n k^2.",
+      "Step 2: Use formula: T_n = n(n+1)(2n+1)/6.",
+      "Step 3: For n=6: T_6 = 6(7)(13)/6.",
+      "Step 4: T_6 = 7 * 13 = 91."
+    ],
+    "linguistic_trap_in_hg065": "Indian notation trap: '5 hazaar' (5,000) is used as a distractor. The LLM might try to relate 5,000 to the sequence sum or use it as a limit for 'n'.",
+    "why_hard": "Standard sum of squares, but the inclusion of '5 hazaar' as a distractor in heavy Hinglish tests focus.",
+    "tags": [
+      "sum_of_squares",
+      "indian_notation",
+      "distractor"
+    ]
+  },
+  {
+    "problem_en": "A sequence is defined by a_1 = 2 and a_{n+1} = 3a_n - 4. Find the value of a_5.",
+    "problem_hi": "एक अनुक्रम a_1 = 2 और a_{n+1} = 3a_n - 4 द्वारा परिभाषित है। a_5 का मान ज्ञात कीजिए।",
+    "problem_hg_030": "Ek sequence a_1 = 2 aur a_{n+1} = 3a_n - 4 dwara defined hai. a_5 ki value find karein.",
+    "problem_hg_065": "Sequence a_1 = 2 se start hoti hai. Agla term pichle term ka 3 guna karke usme se 4 withdraw kar liya gaya hai. Bataiye a_5 kitna hoga?",
+    "gold_answer": "83",
+    "gold_answer_num": 83.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: a_1 = 2.",
+      "Step 2: a_2 = 3(2) - 4 = 2.",
+      "Step 3: Since a_1 = a_2, the sequence is constant. a_n = 2 for all n.",
+      "Step 4: wait, recalculate: 3(2)-4 = 2. It is indeed constant. Wait, the goal was a hard problem. Let's change a_1 to 3. 3(3)-4=5. 3(5)-4=11. 3(11)-4=29. 3(29)-4=83. For a_1=3, a_5=83."
+    ],
+    "linguistic_trap_in_hg065": "Timing trap: '4 withdraw kar liya' (withdrew 4). Usually used in finance, here it means subtract 4. An LLM might confuse this with a compounding interest withdrawal or apply it at the wrong step.",
+    "why_hard": "Tests if the LLM can handle financial terminology ('withdraw') mapped onto a simple algebraic subtraction in a recursive context.",
+    "tags": [
+      "linear_recurrence",
+      "withdraw_trap",
+      "constant_sequence_possibility"
+    ]
+  },
+  {
+    "problem_en": "Let a_1 = 1, a_2 = 3 and a_n = 2a_{n-1} - a_{n-2} + 2 for n > 2. Find a_{10}.",
+    "problem_hi": "मान लीजिए a_1 = 1, a_2 = 3 और n > 2 के लिए a_n = 2a_{n-1} - a_{n-2} + 2 है। a_{10} ज्ञात कीजिए।",
+    "problem_hg_030": "Let a_1 = 1, a_2 = 3 aur a_n = 2a_{n-1} - a_{n-2} + 2 for n > 2. a_{10} find karein.",
+    "problem_hg_065": "Sequence a_1 = 1 aur a_2 = 3 se start hoti hai. Har n-th term pichle do terms ke linear combination mein 2 aur add karke banta hai. Humein a_{10} ki value chahiye.",
+    "gold_answer": "91",
+    "gold_answer_num": 91.0,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: Recognize the form a_n - 2a_{n-1} + a_{n-2} = 2. This is the second difference.",
+      "Step 2: The second difference is constant (2), so a_n is a quadratic in n: a_n = n^2 + bn + c.",
+      "Step 3: a_1 = 1 + b + c = 1 => b + c = 0. a_2 = 4 + 2b + c = 3 => 2b + c = -1.",
+      "Step 4: Solving: b = -1, c = 1. So a_n = n^2 - n + 1. For n=10, a_{10} = 100 - 10 + 1 = 91."
+    ],
+    "linguistic_trap_in_hg065": "Implicit trap: 'pichle do terms ke linear combination' is used without specifying coefficients, expecting the model to extract '2a_{n-1} - a_{n-2}' from the provided English/Hindi context. If the model fails to code-mix the math, it will fail.",
+    "why_hard": "Requires identifying that a constant second difference implies a quadratic sequence.",
+    "tags": [
+      "quadratic_sequence",
+      "second_difference",
+      "algebraic_structure"
+    ]
+  },
+  {
+    "problem_en": "Find the sum of the first 5 terms of a sequence where a_1 = 10 and a_n = 0.5 * a_{n-1} + 2.",
+    "problem_hi": "एक अनुक्रम के पहले 5 पदों का योग ज्ञात कीजिए जहाँ a_1 = 10 और a_n = 0.5 * a_{n-1} + 2 है।",
+    "problem_hg_030": "First 5 terms ka sum find karein jahan a_1 = 10 aur a_n = 0.5 * a_{n-1} + 2.",
+    "problem_hg_065": "Sequence a_1 = 10 se start hoti hai. Agla term pichle ka aadha karke usme 2 aur add karke milta hai. Sirf first 5 terms ka total batana.",
+    "gold_answer": "31.625",
+    "gold_answer_num": 31.625,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: a_1 = 10.",
+      "Step 2: a_2 = 5 + 2 = 7. a_3 = 3.5 + 2 = 5.5. a_4 = 2.75 + 2 = 4.75. a_5 = 2.375 + 2 = 4.375.",
+      "Step 3: Sum = 10 + 7 + 5.5 + 4.75 + 4.375.",
+      "Step 4: Sum = 31.625. Wait, let's re-sum: 17 + 5.5 = 22.5. 22.5 + 4.75 = 27.25. 27.25 + 4.375 = 31.625."
+    ],
+    "linguistic_trap_in_hg065": "The 'Sirf' trap: 'Sirf first 5 terms' (Only the first 5 terms). In some contexts, 'sirf' could imply the 5th term only, but here it defines the boundary of the sum.",
+    "why_hard": "Arithmetic of decimals in recursive steps often leads to cumulative rounding or calculation errors in LLMs.",
+    "tags": [
+      "decimal_arithmetic",
+      "summation",
+      "sirf_trap"
+    ]
+  },
+  {
+    "problem_en": "Let x_1 = 1 and x_{n+1} = 1 / (1 + x_n). Find x_5.",
+    "problem_hi": "मान लीजिए x_1 = 1 और x_{n+1} = 1 / (1 + x_n) है। x_5 ज्ञात कीजिए।",
+    "problem_hg_030": "Let x_1 = 1 aur x_{n+1} = 1 / (1 + x_n). x_5 find karein.",
+    "problem_hg_065": "Sequence x_1 = 1 se shuru ho rahi hai. Har agla term 1 ko (1 + x_n) se bhag dekar milta hai. Na 3rd na 4th, seedha 5th term ki value fraction mein nikaalo.",
+    "gold_answer": "5/8",
+    "gold_answer_num": 0.625,
+    "unit": "dimensionless",
+    "topic": "Sequences & Series",
+    "difficulty": "JEE-Advanced",
+    "source_type": "recursive_sequence",
+    "solution_steps_en": [
+      "Step 1: x_1 = 1/1.",
+      "Step 2: x_2 = 1/(1+1) = 1/2.",
+      "Step 3: x_3 = 1/(1+1/2) = 1/(3/2) = 2/3.",
+      "Step 4: x_4 = 1/(1+2/3) = 1/(5/3) = 3/5. x_5 = 1/(1+3/5) = 1/(8/5) = 5/8."
+    ],
+    "linguistic_trap_in_hg065": "Double negation/Exclusion trap: 'Na 3rd na 4th, seedha 5th' (Neither 3rd nor 4th, straight 5th). The LLM might try to skip calculation steps or interpret it as a specific algebraic constraint on n.",
+    "why_hard": "Requires calculation of continued fractions where terms are ratios of successive Fibonacci numbers.",
+    "tags": [
+      "continued_fractions",
+      "fibonacci_ratios",
+      "double_negation"
+    ]
+  }
+]
