@@ -362,3 +362,5 @@ Shared runtime support:
   - runtime mode (ui/api) usage and outputs
 
 - 2026-03-30 note 02: refine workflow for maintainability and team handoff.
+
+- 2026-03-30 note 08: annotate observations for maintainability and team handoff.
