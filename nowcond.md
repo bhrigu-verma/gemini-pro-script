@@ -78,3 +78,4 @@ ls -lah mainhh_output
 - Commit note 07 on 2026-03-30: minor documentation touch.
 - Commit note 08 on 2026-03-30: minor documentation touch.
 - Commit note 09 on 2026-03-30: minor documentation touch.
+- Commit note 10 on 2026-03-30: minor documentation touch.
