@@ -64,12 +64,40 @@ STOP_SELS = [
     ".stop-button",
 ]
 
-# Response selectors
+# Model response blocks
 RESP_SELS = [
     "model-response .markdown",
     "model-response response-text",
     "model-response",
+    "message-content",
+    "[data-turn-role='model']",
+    "[data-message-author-role='model']",
     "message-content .markdown",
     ".response-content .markdown",
     ".response-content",
 ]
+
+# Prompt Templates
+CRITIC_PROMPT = """\
+You are a brutally honest world-class editor. Evaluate the following content \
+with zero mercy. Your critique must follow this exact structure:
+
+1. FACTUAL ERRORS / GAPS      – list every one
+2. LOGICAL WEAKNESSES         – list every one
+3. VAGUE / FLUFFY / PADDED    – quote the phrase, explain why
+4. CONCRETE FIXES             – numbered, specific, actionable
+5. SCORE: X/10  +  one-line verdict
+
+--- CONTENT TO CRITIQUE ---
+"""
+
+IMPROVE_PROMPT_PREFIX = """\
+A professional editor critiqued your last response. Rewrite the ENTIRE thing \
+from scratch fixing every point. Make it substantially better.
+
+--- CRITIQUE ---
+"""
+IMPROVE_PROMPT_SUFFIX = """
+--- END CRITIQUE ---
+
+Now write the fully improved version:"""
